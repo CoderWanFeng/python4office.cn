@@ -56,7 +56,8 @@ tags: 微信群
 
 如果你需要一个Python学习环境，也可以扫码加入下方的免费交流群：和**同学们**交流~
 微信群主要用来**领取学习资料 + 和同学们交流**，多谢理解。
-> 如果你需要 - 联系我来沟通学习问题，请联系[我的微博（免费）](http://www.python4office.cn/weibo-qaq/)，或者点击👉[获取我的微信](https://mp.weixin.qq.com/s/SlG0Bh3dxD3NEc9p7PQLJg)，（微信是付费的，1元，交个朋友）如果你觉得我一文不值，没必要单独找我，真的。因为👉[我这个互联网乞丐，胃不好，不喜欢割韭菜](https://www.bilibili.com/video/BV1nF411T7AV)
+> 如果你需要 - 联系我来沟通学习问题，请联系[我的微博（免费）](http://www.python4office.cn/weibo-qaq/)，或者点击👉[获取我的微信](https://mp.weixin.qq.com/s/SlG0Bh3dxD3NEc9p7PQLJg)（微信是付费的，1元）
+如果你觉得我一文不值或者你问不出有价值的问题，真的没必要单独找我，大家时间都很宝贵。而且👉[我这个互联网乞丐，胃不好，不喜欢割韭菜](https://www.bilibili.com/video/BV1nF411T7AV)
 
 
 <!-- more -->
