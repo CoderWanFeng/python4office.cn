@@ -109,7 +109,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
     - PDF 加水印：[代码](https://mp.weixin.qq.com/s/yJDs5RoytRL5hl-ybXkZOA)
     - 合并2个PDF：[代码](https://mp.weixin.qq.com/s/9erh3W3WCD36Axj70pRvog)
     - PDF转Word：[代码](https://mp.weixin.qq.com/s/O0pJOs9stD1prENP4N8QYg)
-    
+
 
 - PPT
     - PPT 批量转成 PDF：[代码](https://mp.weixin.qq.com/s/T31F-U5AdDd3D-61b_K5Qg)
@@ -119,6 +119,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
 
 - Files
     - 批量重命名 文件/文件夹：[代码](https://mp.weixin.qq.com/s/4Pt0YWakkPhfEWVMHwXe8g)
+    - 通过内容，查找文件的位置：[代码](https://blog.csdn.net/weixin_64843653/article/details/125000915?spm=1001.2014.3001.5502)
 
 - Video
     - 从视频里提取音频：[代码](https://mp.weixin.qq.com/s/4Pt0YWakkPhfEWVMHwXe8g)
@@ -127,6 +128,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
     - 生成二维码：[代码](https://mp.weixin.qq.com/s/4Pt0YWakkPhfEWVMHwXe8g)
     - 翻译：[代码](https://mp.weixin.qq.com/s/4Pt0YWakkPhfEWVMHwXe8g)
     - 密码生成器：[代码](https://gitee.com/CoderWanFeng/python-office/blob/master/office/tools.py)
+    - 查询天气：[代码](https://mp.weixin.qq.com/s/cImgWuTWbILLYT_kTnjQLA)
 
 ## 2、视频版
 - [官网发布：python-office，专为自动化办公而生](https://www.bilibili.com/video/BV1pT4y1k7FH?spm_id_from=333.999.0.0)
@@ -172,6 +174,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
 | 0.0.21  | add：消除图像背景色、merg2pdf | 2022-5-17 |
 | 0.0.22  | add：pdf2docx | 2022-5-17 |
 | 0.0.23  | add：查询天气 | 2022-5-23 |
+| 0.0.26  | add：通过内容，查找文件 | 2022-5-23 |
 
 
 > 关于版本更新，如有疑问，请私信微博@[程序员晚枫](http://www.python4office.cn/weibo-qaq/)
