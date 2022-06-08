@@ -57,7 +57,7 @@ tags: 微信群
 如果你需要一个Python学习环境，也可以扫码加入下方的免费交流群：和**同学们**交流~
 微信群主要用来**领取学习资料 + 和同学们交流**，多谢理解。
 > 如果你需要 - 联系我来沟通学习问题，请联系[我的微博（免费）](http://www.python4office.cn/weibo-qaq/)，或者点击👉[获取我的微信](https://mp.weixin.qq.com/s/KVaOcfrDiZI5KWscuxtpQg)（微信是付费的，18元，长期有效）
-如果你觉得我一文不值 或者 你的问题不值得自己付费，真的没必要单独找我，大家时间都很宝贵。而且👉[我这个互联网乞丐，胃不好，不喜欢割韭菜](https://www.bilibili.com/video/BV1nF411T7AV)
+如果你觉得我一文不值 或者 你的问题不值得自己付费，真的没必要单独找我，我自己也是个普通打工人，不想被随意白嫖时间，多谢理解。👉[我这个互联网乞丐，胃不好，不喜欢割韭菜](https://www.bilibili.com/video/BV1nF411T7AV)
 
 
 <!-- more -->
@@ -88,14 +88,7 @@ tags: 微信群
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我收集的办公黑科技软件，免费赠送](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MjU3ODYyNA==&action=getalbum&album_id=2186546268016017410&scene=173&from_msgid=2247485082&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 
-### 重庆行业交流会
-- 如果你对线下的行业交流会感兴趣，
-- 想认识从事 各行各业的小伙伴，
-- 或者想求职、转行，交朋友
-``扫码下图👇参加活动~``
-`重庆读书会`
 
-![CoderWanFeng](/images/4-cq-group.jpg)
 
 
 ## 推荐课程
