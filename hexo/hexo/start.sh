@@ -3,4 +3,4 @@ npm install
 hexo clean
 hexo g
 # hexo s 
-hexo s -p 80
+hexo s -p 18001
