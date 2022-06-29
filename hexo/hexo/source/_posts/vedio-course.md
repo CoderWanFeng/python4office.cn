@@ -86,4 +86,4 @@ tags:
 | [推荐系统及算法实践十八式](https://t7.lagounews.com/rRD6R5RDsr403) | 前阿里巴巴算法专家 |
 | [大数据技术基础 22 讲](https://t5.lagounews.com/rRE7R8RCsr72E) |  |
 
-![](/images/CoderWanFeng.jpg)
+![](https://www.python-office.com/api/img-cdn/qrcode.jpg)

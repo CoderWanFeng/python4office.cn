@@ -17,7 +17,7 @@ tags: 联系我
 
 ![CoderWanFeng](/images/程序员晚枫-个人微信.jpg)
 
-### 粉丝群👉[点击加入](https://mp.weixin.qq.com/s/KVaOcfrDiZI5KWscuxtpQg)（粉丝群提供技术答疑，是付费的18元，长期有效）
+### 粉丝群👉[点击加入](http://www.python4office.cn/wechat-group/)
 
 - 我从法学院毕业后，已经干了``3``年Python程序员（2019-2022），业余时间做 [自媒体](https://mp.weixin.qq.com/s/CmuopIUWCWP-YZRaBnKNNg) 也已经``3``年，正在100w+粉丝的路上~现在关注:[传送门](https://weibo.com/u/7726957925)，你就是老粉啦。
 - 今年5.1录制的热门视频，期待你的点赞 + 评论🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)

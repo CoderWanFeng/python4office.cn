@@ -8,7 +8,7 @@ tags: 微信群
 
 <p align="center">
     <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license"/>
+    <img src="https://www.python-office.com/api/img-cdn/github-nav.jpg" alt="github license"/>
     </a>   
 </p>
 <p align="center">
@@ -54,20 +54,16 @@ tags: 微信群
 
 ##　联系我
 > 如果你需要联系我 1V1 沟通解决学习问题，
-可以点击👉[获取我的微信](https://mp.weixin.qq.com/s/KVaOcfrDiZI5KWscuxtpQg)，（微信是付费的，18元，长期有效）
-如果你觉得 我的答疑一文不值 或者 你的问题不值得自己付费，真的没必要单独找我，
-我自己也是个普通打工人，不想被随意白嫖时间，多谢理解。
-👉[我这个互联网乞丐，胃不好，不喜欢割韭菜](https://www.bilibili.com/video/BV1nF411T7AV)
+可以点击👉[添加我的微信](http://python4office.cn/wechat-qrcode/)，
+添加后，请直接发送你的问题，不要问：在吗？年轻一直在😂
 ## 微信群
 
 如果你需要一个Python学习环境，也可以扫码加入下方的免费交流群：和**同学们**交流~
 微信群主要用来**领取学习资料 + 和同学们交流**，多谢理解。
 
-
-
 <!-- more -->
 
-![CoderWanFeng](/images/2-free-group.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/2-free-group.jpg)
 
 ## QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447

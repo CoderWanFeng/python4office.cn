@@ -21,5 +21,5 @@ tags: pandas
 
 
 ## 关于作者：程序员晚枫
-- 💬 ``如果你需要 - 联系我来沟通学习问题，请点击添加``👉[我的微信](/images/qrcode-personal.jpg)
+- 💬 ``如果你需要 - 联系我来沟通学习问题，请点击添加``👉[我的微信](https://www.python-office.com/api/img-cdn/qrcode.jpg)
 - 🎁 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)

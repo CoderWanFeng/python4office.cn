@@ -17,4 +17,4 @@ Python自动化办公（2021最新版！有源代码 ，适合小白~）
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我收集的办公黑科技软件，免费赠送](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MjU3ODYyNA==&action=getalbum&album_id=2186546268016017410&scene=173&from_msgid=2247485082&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 
-![CoderWanFeng](/images/qrcode-personal.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/qrcode.jpg)

@@ -7,7 +7,7 @@ tags: 黑科技
 ### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CmuopIUWCWP-YZRaBnKNNg)
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)
-- 💬 我的微信，点击添加👉[CoderWanFeng](/images/qrcode-personal.jpg)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://www.python-office.com/api/img-cdn/qrcode.jpg)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我收集的办公黑科技软件，免费赠送](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MjU3ODYyNA==&action=getalbum&album_id=2186546268016017410&scene=173&from_msgid=2247485082&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 
@@ -34,4 +34,4 @@ tags: 黑科技
 | 🚦[PDF Drive - Search and download PDF files for free.](https://www.pdfdrive.com/) |
 | 🚦[28个黑科技软件](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MjU3ODYyNA==&action=getalbum&album_id=2186546268016017410&scene=173&from_msgid=2247485723&from_itemidx=1&count=3&nolastread=1#wechat_redirect) |
 
-![CoderWanFeng](/images/2-free-group.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/2-free-group.jpg)

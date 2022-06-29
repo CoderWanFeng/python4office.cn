@@ -20,7 +20,7 @@ pycharm的[官网下载地址](https://www.jetbrains.com/pycharm/download)
 
 #### 3. 免费Python教程：[全套都给你](https://mp.weixin.qq.com/s/sO6hbVqORy7JpN-5TlaKvQ)
 
-[CoderWanFeng](/images/2-free-group.jpg)
+[CoderWanFeng](https://www.python-office.com/api/img-cdn/2-free-group.jpg)
 
 ## 二、关于我这个程序员
 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CmuopIUWCWP-YZRaBnKNNg)，感谢你看我的视频和文章

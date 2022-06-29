@@ -439,4 +439,4 @@ t.done()
 ```
 
 ### 答疑与交流
-![CoderWanFeng](/images/qrcode-personal.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/qrcode.jpg)
