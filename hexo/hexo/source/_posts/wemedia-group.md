@@ -16,7 +16,7 @@ tags: 自媒体
 `1.交流群`
 欢迎加入 晚枫的自媒体同行 交流群，添加方式：``扫码下图👇``
 
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/1-wemedia-group.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/1-wemedia-group.jpg)
 
 ### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CmuopIUWCWP-YZRaBnKNNg)
 - 🐧 编程知识博主

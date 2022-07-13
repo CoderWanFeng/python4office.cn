@@ -55,7 +55,7 @@ tags: 微信群
 ##　联系我
 > 如果你需要联系我 1V1 沟通解决学习问题，
 可以点击👉[添加我的微信](http://python4office.cn/wechat-qrcode/)，
-添加后，请直接发送你的问题，不要问：在吗？年轻一直在😂
+添加后，请直接发送你的问题，尽量不要问：在吗？这种无意义的话，还年轻一直在：[法学院毕业后，我是怎么成为Python程序员的？](https://mp.weixin.qq.com/s/h1G3EFdBsJUoc6S_a9LDdA)
 ## 微信群
 
 如果你需要一个Python学习环境，也可以扫码加入下方的免费交流群：和**同学们**交流~
@@ -63,7 +63,7 @@ tags: 微信群
 
 <!-- more -->
 
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/2-free-group.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
 
 ## QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447

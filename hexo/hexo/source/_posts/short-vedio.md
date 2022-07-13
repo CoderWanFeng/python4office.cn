@@ -157,3 +157,12 @@ fastgithub - linux安装
 - 流畅的python学习
 - 开源项目+功能：pdf转图片
 - 研究好的视频、文章
+
+信用卡：分类
+装饰器
+算法、数据结构
+pandas
+flask
+正则表达式
+
+雅思

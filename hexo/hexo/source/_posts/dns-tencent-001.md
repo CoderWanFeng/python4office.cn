@@ -11,6 +11,8 @@ tags: [DNS,腾讯云,GitHub]
 我自己使用【腾讯云DNS解析 + GitHub Pages】，免费创建了一个个人网站：[www.python-office.com](http://www.python-office.com)
 今天我就给大家分享一下，我的具体操作步骤，小白也能看得懂~
 
+<!-- more -->
+
 ## 打开Github仓库的Pages功能
 
 

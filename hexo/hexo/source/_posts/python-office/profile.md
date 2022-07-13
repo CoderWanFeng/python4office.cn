@@ -180,7 +180,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
 
 > 关于版本更新，如有疑问，请私信微博@[程序员晚枫](http://www.python4office.cn/weibo-qaq/)
 >
-> 或者，欢迎有学习/定制功能/加入项目需求的同学，直接加入我们的项目交流群👉[点我直达](https://www.python-office.com/api/img-cdn/2-free-group.jpg)
+> 或者，欢迎有学习/定制功能/加入项目需求的同学，直接加入我们的项目交流群👉[点我直达](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
 
 ## 参考资料 
 - 教材：

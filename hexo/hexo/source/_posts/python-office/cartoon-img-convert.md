@@ -16,6 +16,8 @@ tags: python-office
 
 听说某宝需要50块钱一张？别再去交智商税了！
 
+<!-- more -->
+
 ## 1. 安装python-office
 安装很简单，在有python环境的电脑上，只需要执行下面这一行命令。
 > 如果你之前使用过python-office这个库，也需要执行一下，可以下载到最新版本~

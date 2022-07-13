@@ -91,4 +91,4 @@ tags: [办公黑科技,高效办公]
 - 😺 视频：[B站 『 Python自动化办公社区 』](https://space.bilibili.com/259649365)
 - 💬 微信：[CoderWanFeng](https://mp.weixin.qq.com/s/brapCp8aZxIOjgE8qLWs3A)
 
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/2-free-group.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
