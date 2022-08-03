@@ -5,7 +5,7 @@ tags: [办公黑科技,高效办公]
 ---
 
 
-你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CmuopIUWCWP-YZRaBnKNNg)， 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/brapCp8aZxIOjgE8qLWs3A)
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CbzWmDDRmQ-qD8mdcPeskQ)， 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/brapCp8aZxIOjgE8qLWs3A)
 
 > 点击以下蓝色字体，可以直达资源
 >高效办公软件 · 分享交流群：[点我加入](http://www.python4office.cn/wechat-group/)
@@ -15,13 +15,13 @@ tags: [办公黑科技,高效办公]
 
 | 软件                                                         | 功能                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Win11自动更新](https://mp.weixin.qq.com/s/Qfa__YqA5msHBWZLZBlBaA) | 官方软件，帮你从Win10更新到Win11，不影响已有软件的使用       |
-| [✨Excel工具箱](https://mp.weixin.qq.com/s/gG99UtvfiGUsdM2xpoURtA) | 支持WPS和OFFICE，200多个功能，表格达人必备！       |
-| [PDF编辑器](https://mp.weixin.qq.com/s/pcNgttKxJ8J4II8X9v0BXw) | 你能想到的PDF操作，它都能做，而且还免费！                    |
-| [🍀文件夹管理](https://mp.weixin.qq.com/s/IoTcorxmioGBZcXBRFXJwQ) | 超赞！像使用浏览器一样管理你的文件夹                    |
-| [👀文件搜索](https://mp.weixin.qq.com/s/09BLTfT78ReCLDX5PDdB1A) | 搜索神器 Everything，你把它的潜力用到极致了吗？ |
-| [办公插件工具箱](https://mp.weixin.qq.com/s/FMLw4RhStTvjgX0pXaDUNw) | 这才是办公工具，本来的样子 |
-| 🖊[杀毒软件](https://mp.weixin.qq.com/s/Wzgky6M93FiqiIFCcXe0wQ) | 秒杀360 ： 无弹窗、不变卡，是我的基本原则。 |
+| [Win11自动更新](https://mp.weixin.qq.com/s/0cM3HAKGGcVn9FL6XnNGaw) | 官方软件，帮你从Win10更新到Win11，不影响已有软件的使用       |
+| [✨Excel工具箱](https://mp.weixin.qq.com/s/35LnS2VklTeGrw4rjpArtw) | 支持WPS和OFFICE，200多个功能，表格达人必备！       |
+| [PDF编辑器](https://mp.weixin.qq.com/s/dFfnpufWHbU_U_H2EuFL3A) | 你能想到的PDF操作，它都能做，而且还免费！                    |
+| [🍀文件夹管理](https://mp.weixin.qq.com/s/LmOIunbVOeH0kR-YVlGLfA) | 超赞！像使用浏览器一样管理你的文件夹                    |
+| [👀文件搜索](https://mp.weixin.qq.com/s/VPz3jRo6Na_O4kVl9WMJtQ) | 搜索神器 Everything，你把它的潜力用到极致了吗？ |
+| [办公插件工具箱](https://mp.weixin.qq.com/s/sHqUNh5_vcp_Gv4wKAGUkQ) | 这才是办公工具，本来的样子 |
+| 🖊[杀毒软件](https://mp.weixin.qq.com/s/OZS53f_3jjLjBz8uGLTdkw) | 秒杀360 ： 无弹窗、不变卡，是我的基本原则。 |
 
 
 <!-- more -->
@@ -31,27 +31,27 @@ tags: [办公黑科技,高效办公]
 
 | 软件                                                         | 功能                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [免费听音乐](https://mp.weixin.qq.com/s/Ax23bndL-8BHpcF3Z-wJ8A) | 🎵全网音乐免费下载，一个全搞定，支持在线收听、支持无损，白嫖的快乐 |
-| [动态时钟桌面](https://mp.weixin.qq.com/s/IqQJPJVt8ViyjkhuJEgCwQ) | ⌚黑白时钟，动态翻页；在保护隐私的同时，把科技感拉满！ |
-| [不限速的网盘](https://mp.weixin.qq.com/s/tWs0X1AN8CEU5DCP_Eb9Kg) | 早用这款不限速的黑科技，就没百度网盘什么事了！       |
-| [表白神器](https://mp.weixin.qq.com/s/0NQ4I61-abAXTkNGZAOhAQ) | 我写了个土味情话小程序！句句走心，无法拒绝~       |
-| [Chrome灵魂插件](https://mp.weixin.qq.com/s/E4upfgugVQmY7S6Pl_9wvQ) | 里面的很多插件都是工具插件，用上让你的你工作效率、心情提高1倍。 |
-| [免费的录屏软件](https://mp.weixin.qq.com/s/gUAn34h-LyDQR8v2-NhMjg) | 你想要的录屏功能，它都有，而且免费！Windows、Mac、Linux都能用。 |
-| [远程办公](https://mp.weixin.qq.com/s/tFCmM6yz8KReQhAejAkpNQ) | 我愿意称之为国产软件之光！ |
-| [🔥截图](https://mp.weixin.qq.com/s/WQePeVg0v3CEov2gMTi2yQ) | 截图神器：Snipaste，它功能强大，你用过一次就忘不了。 |
-| [🎯不限速的下载工具](https://mp.weixin.qq.com/s/eZjhM9qsw2WzpYYGBtNmvg) | 比百度网盘和迅雷，更好用的下载工具，免费 + 不限速哦！ |
-| [百度去广告](https://mp.weixin.qq.com/s/neQg6MGSaDSMckAZXhYT0w) | 原来百度还可以这样用！！！ |
+| [免费听音乐](https://mp.weixin.qq.com/s/Z6E9kRUBCEEod9vdm3m7wQ) | 🎵全网音乐免费下载，一个全搞定，支持在线收听、支持无损，白嫖的快乐 |
+| [动态时钟桌面](https://mp.weixin.qq.com/s/S5hM04T4qfuTWddWtIehQQ) | ⌚黑白时钟，动态翻页；在保护隐私的同时，把科技感拉满！ |
+| [不限速的网盘](https://mp.weixin.qq.com/s/7cRfmIMbZjAGOL2FX5aqRA) | 早用这款不限速的黑科技，就没百度网盘什么事了！       |
+| [表白神器](https://mp.weixin.qq.com/s/GZyWcrc8tbJjMVb-ndh37A) | 我写了个土味情话小程序！句句走心，无法拒绝~       |
+| [Chrome灵魂插件](https://mp.weixin.qq.com/s/l6ibLG5hDGzmKKpedhKB-Q) | 里面的很多插件都是工具插件，用上让你的你工作效率、心情提高1倍。 |
+| [免费的录屏软件](https://mp.weixin.qq.com/s/ksIES8O1TlyuFI7-dw2ojQ) | 你想要的录屏功能，它都有，而且免费！Windows、Mac、Linux都能用。 |
+| [远程办公](https://mp.weixin.qq.com/s/erDt7vUw5ISr7FB2xf-aog) | 我愿意称之为国产软件之光！ |
+| [🔥截图](https://mp.weixin.qq.com/s/cp1_CEbxedmac7LDJnhMFQ) | 截图神器：Snipaste，它功能强大，你用过一次就忘不了。 |
+| [🎯不限速的下载工具](https://mp.weixin.qq.com/s/uXQN_A_wpCA7rKhSP4Gs8A) | 比百度网盘和迅雷，更好用的下载工具，免费 + 不限速哦！ |
+| [百度去广告](https://mp.weixin.qq.com/s/6XprY9pc6ohi2DxpAFcskA) | 原来百度还可以这样用！！！ |
 
 ## 生活学习类
 
 | 软件                                                         | 功能                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [渣男语录 - 说话的艺术](https://mp.weixin.qq.com/s/H4r3CKx-bt0IvHjtTv5lTQ) | ⚡我在留言板里，偷偷说过我爱你  |
-| [微信多开](https://mp.weixin.qq.com/s/8Erlvz1x09DlKoIFg60AAg) | 要想实现微信多开，送你3个方法！电脑、安卓、苹果都包含！ |
-| [专业白嫖网站](https://mp.weixin.qq.com/s/N4Sp1uHrRE16yTWfo9XfKA) | 💰年底白嫖攻略：这10个网站，让你彻底告别付费资源！                    |
+| [微信多开](https://mp.weixin.qq.com/s/MwbYUIVtthnw4_65v5dkMw) | 要想实现微信多开，送你3个方法！电脑、安卓、苹果都包含！ |
+| [专业白嫖网站](https://mp.weixin.qq.com/s/VIWAbAHrK4_X2U9t6OkXEA) | 💰年底白嫖攻略：这10个网站，让你彻底告别付费资源！                    |
 | [无影云电脑](https://mp.weixin.qq.com/s/ZaG3TJFa-KSZEIHGk9mM8A) | 来，0元 体验一把阿里云“无影”云电脑！                         |
 | [春节抢票软件](https://www.bilibili.com/video/BV13Z4y137BA) | 黄牛到底是用什么软件抢到火车票的？免费送给你！ |
-| 📚[读书笔记](https://mp.weixin.qq.com/s/m_qlME8lshK0FlQsh8OVEA) | 全新的读书笔记：记忆卡片 + 复习工具 |
+| 📚[读书笔记](https://mp.weixin.qq.com/s/zVzWfXTKzfVk6zjNJVbIgQ) | 全新的读书笔记：记忆卡片 + 复习工具 |
  
 
 

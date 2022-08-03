@@ -17,12 +17,18 @@ tags: 联系我
 
 ![CoderWanFeng](/images/程序员晚枫-个人微信.jpg)
 
-### 粉丝群👉[点击加入](http://www.python4office.cn/wechat-group/)
+### 我的1对1答疑服务
 
-- 我从法学院毕业后，已经干了``3``年Python程序员（2019-2022），业余时间做 [自媒体](https://mp.weixin.qq.com/s/CmuopIUWCWP-YZRaBnKNNg) 也已经``3``年，正在100w+粉丝的路上~现在关注:[传送门](https://weibo.com/u/7726957925)，你就是老粉啦。
-- 今年5.1录制的热门视频，期待你的点赞 + 评论🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
-    - 在 [公众号：程序员晚枫](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMzIwOTgzMA==&action=getalbum&album_id=1901129955141353473&scene=173&from_msgid=2247485215&from_itemidx=1&count=3&nolastread=1#wechat_redirect) 的后台发送命令：``【黑科技】``，可以领取30个自动化办公软件哦~
 
+你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/brapCp8aZxIOjgE8qLWs3A)
+- [法学院毕业后，我是如何转行Python程序员的？](https://www.bilibili.com/video/BV1Nr4y1B76X?spm_id_from=333.999.0.0)
+- 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
+
+> ⭐今年我推出了陪你学习1年的知识星球：[Python读者圈](https://mp.weixin.qq.com/s/imM2aQzrMVfVwC_770QUUw)。
+- 星球365元，我为你服务1年，我不会做优惠活动，以后会涨价。
+- 提供：**定制学习计划 + 推荐配套教程 + 有问必答。**适合0-3年的Python学习者，不论你是爱好者还是程序员，我们一起打牢基础，进阶Python。
+- **每月**最少语音沟通一次学习计划的执行情况，根据进度做相应的调整。
+- 1年之内，有问必答。我会的问题，从原理到应用，给你解释清楚；我不会的问题，我尽最大的努力去研究，回来和你分享。
 
 
 ### QQ群
@@ -30,9 +36,9 @@ tags: 联系我
 ![CoderWanFeng](/images/qq.jpg)
 
 
-### 免费知识星球
-我们用来沉淀知识的星球，内含丰富资料，可以免费加入
-![CoderWanFeng](/images/star.jpg)
+### 免费读者群
+我们用来交流Python知识的读者群，可以免费加入，广告勿扰
+👉[读者群](http://www.python4office.cn/wechat-group/)
 
 
 - 👇下面是这3年里，我录制的学习资料，拿走不谢！
