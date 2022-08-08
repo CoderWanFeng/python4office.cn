@@ -19,12 +19,18 @@ tags: spark
 
 ## 2、Python + 大数据开发
 
+大数据学习的路线图，见文章👉[路线图](https://mp.weixin.qq.com/s/1tdntLuWQ-1lx0TFAUFyew)
+
 > 以下是文章中提到的学习资料，也是我自己正在学习的内容，欢迎添加我的微信，和我交流~
 
-1. Mysql:https://www.bilibili.com/video/BV1iF411z7Pu
-2. Hadoop:https://www.bilibili.com/video/BV1CU4y1N7Sh
-3. Hive数仓项目：https://www.bilibili.com/video/BV1ef4y1B7KX?vd_source=ca20bb8763fcb18660aa74d7a87234fa
-4. python + spark
+- Mysql:https://www.bilibili.com/video/BV1iF411z7Pu
+- Hadoop:https://www.bilibili.com/video/BV1cW411r7c5
+- HBase：https://www.bilibili.com/video/BV1PZ4y1i7gZ
+- Kafka：https://www.bilibili.com/video/BV1vr4y1677k
+- Hive数仓项目：
+    - 基础：https://www.bilibili.com/video/BV1CU4y1N7Sh
+    - 项目：https://www.bilibili.com/video/BV1ef4y1B7KX
+-  python + spark
     - python入门：https://www.bilibili.com/video/BV1o4411M71o
     - python进阶：https://www.bilibili.com/video/BV1Ex411x7Xn
     - spark入门：https://www.bilibili.com/video/BV1Jq4y1z7VP
