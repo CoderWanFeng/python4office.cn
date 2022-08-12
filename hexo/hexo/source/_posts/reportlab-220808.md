@@ -8,7 +8,7 @@ tags: 自动化办公
 
 最近Python星球里的一位朋友私信我，想学习一下Python自动化生成数据分析报告。
 
-作为[有问必答的知识星球](https://mp.weixin.qq.com/s/vPGCFuYe2T_alY-rUB2UfA)，今天我们来一起学习一下~
+作为[有问必答的知识星球](https://mp.weixin.qq.com/s/cKPXrt2i_kcRZ4MP7nxSiQ)，今天我们来一起学习一下~
 > reportlab是Python的一个标准库，可以画图、画表格、编辑文字，最后可以输出PDF格式。它的逻辑和编辑一个word文档或者PPT很像。有两种方法：
 
 1. 建立一个空白文档，然后在上面写文字、画图等；

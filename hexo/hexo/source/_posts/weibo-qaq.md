@@ -4,7 +4,7 @@ date: 2022-04-20 15:29:23
 tags: 联系我
 ---
 
-你好呀，我是Python程序员晚枫，微信：[CoderWanFeng](https://mp.weixin.qq.com/s/brapCp8aZxIOjgE8qLWs3A)
+你好呀，我是Python程序员晚枫，微信：[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
 
 因为自己本职是打工人时间精力有限，所以提供有偿答疑学习服务，2种形式：
 

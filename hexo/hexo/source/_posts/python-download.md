@@ -23,7 +23,7 @@ pycharm的[官网下载地址](https://www.jetbrains.com/pycharm/download)
 [CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
 
 ## 二、关于我这个程序员
-你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CmuopIUWCWP-YZRaBnKNNg)，感谢你看我的视频和文章
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)，感谢你看我的视频和文章
 > 以下是关于我自己的介绍和联系方式
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)

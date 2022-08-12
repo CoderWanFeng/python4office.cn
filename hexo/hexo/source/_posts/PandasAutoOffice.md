@@ -57,16 +57,16 @@ tags: Pandas
 
 你好，这里是[B站账号：Pandas自动化办公](https://space.bilibili.com/1001504818)的代码仓库
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CmuopIUWCWP-YZRaBnKNNg)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/brapCp8aZxIOjgE8qLWs3A)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
 
 
 
 ###### 🉑B站所有课程都有源代码，每天下班整理中ing....
 
-> 如果下面还没及时公布出来，可以点击添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/brapCp8aZxIOjgE8qLWs3A)提醒我哟~
+> 如果下面还没及时公布出来，可以点击添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)提醒我哟~
 
 ------
 
@@ -84,7 +84,7 @@ tags: Pandas
 | 🔥[三大金融工具特训班——Wind、Excel、Python(完结)](https://www.bilibili.com/video/BV16U4y1g7mS) | 收藏之王：每3个人观看，就有1个人收藏~！                      | 👉[点我直达](https://gitee.com/zhaofeng092/PandasAutoOffice/blob/main/%E4%B8%89%E5%A4%A7%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7%E7%89%B9%E8%AE%AD%E7%8F%AD%E2%80%94%E2%80%94Wind%E3%80%81Excel%E3%80%81Python(%E5%AE%8C%E7%BB%93)/%E4%B8%89%E5%A4%A7%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7%E7%89%B9%E8%AE%AD%E7%8F%AD%E2%80%94%E2%80%94Wind%E3%80%81Excel%E3%80%81Python(%E5%AE%8C%E7%BB%93).md) |
 | [解读你身边的经济学](https://t9.lagounews.com/yRC1R0RJsDDD8) | 授课老师：韩秀云，清华大学经管学院教授✍                      | [点我直达](https://t9.lagounews.com/yRC1R0RJsDDD8)           |
 | [说透数字化转型](http://gk.link/a/10EfK)                     | IBM副合伙人，《银行数字化转型》作者                          | 📱[点我直达](http://gk.link/a/10EfK)                          |
-| [Anaconda数据分析&人工智能教程（100讲）](https://www.bilibili.com/video/BV1rU4y1u7og?spm_id_from=333.999.0.0) |                                                              | [点我直达](https://mp.weixin.qq.com/s/gYRBE6JCRnHb1TUycGkTLg) |
+| 🏠[Anaconda数据分析&人工智能教程（100讲）](https://www.bilibili.com/video/BV1rU4y1u7og) |   | [点我直达](http://www.python4office.cn/python-course/anaconda-100/) |
 | [【Python基础+量化进阶】基于Python的量化学习](https://www.bilibili.com/video/BV1mU4y1M78S) |                                                              | [点我直达](https://gitee.com/zhaofeng092/PandasAutoOffice/blob/main/%E3%80%90Python%E5%9F%BA%E7%A1%80+%E9%87%8F%E5%8C%96%E8%BF%9B%E9%98%B6%E3%80%91%E5%9F%BA%E4%BA%8EPython%E7%9A%84%E9%87%8F%E5%8C%96%E5%AD%A6%E4%B9%A0/file.md) |
 | [数据分析实战45讲](http://gk.link/a/10EfJ)                   | 授课老师：清华大学博士                                       | [点我直达](http://gk.link/a/10EfJ)                           |
 | [数据分析与可视化精讲](https://t6.lagounews.com/yREERlRJsD543) | 让数据更有价值的可视化分析技能                               | [点我直达](https://t6.lagounews.com/yREERlRJsD543)           |

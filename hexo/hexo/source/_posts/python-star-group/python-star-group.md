@@ -110,4 +110,4 @@ tags:
 
 > 另外，这个星球永远都不会做优惠活动，例如：提供60元门票优惠券什么的。如果你觉得我的定价高了，或者我的星球不够好，我再继续努力学习提高就是了，365元提供1年的服务，是我目前的底线。未来我的技术越来越好、星球服务越来越完善了，我会继续涨价。
 
-我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/brapCp8aZxIOjgE8qLWs3A)，希望接下来和你一起进步~
+我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)，希望接下来和你一起进步~
