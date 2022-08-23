@@ -31,4 +31,4 @@ pycharm的[官网下载地址](https://www.jetbrains.com/pycharm/download)
 
 #### 最后，送你两套福利吧~
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
-- 🎁 粉丝福利👉[我收集的办公黑科技软件，免费赠送](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MjU3ODYyNA==&action=getalbum&album_id=2186546268016017410&scene=173&from_msgid=2247485082&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
+- 🎁 粉丝福利👉[106本Python电子书，免费赠送](https://mp.weixin.qq.com/s/Wa27Or7SaChF5rCw7LLdVg)
