@@ -7,7 +7,7 @@ tags: spark
 
 ## 1、Python学习社区
 
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - [法学院毕业后，我是如何转行Python程序员的？](https://www.bilibili.com/video/BV1Nr4y1B76X?spm_id_from=333.999.0.0)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 

@@ -8,7 +8,7 @@ tags:
 
 如果你是已经学习过Python基础，但是没有建立起系统知识体系的朋友，你可以继续往下看👇这是提问者的定制化学习资料：[提问者的问题](https://mp.weixin.qq.com/s/mZqmri7uLjQmirqUa6pAog)
 
-> 如果觉得这份资料不适合你，你也可以私信晚枫，获取自己的定制化Python学习方案，微信：[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+> 如果觉得这份资料不适合你，你也可以私信晚枫，获取自己的定制化Python学习方案，微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 
 开始我们的教程学习
 ## 1、Python高级
@@ -40,7 +40,7 @@ tags:
 
 
 ##　我的1对1答疑服务
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - [法学院毕业后，我是如何转行Python程序员的？](https://www.bilibili.com/video/BV1Nr4y1B76X?spm_id_from=333.999.0.0)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 

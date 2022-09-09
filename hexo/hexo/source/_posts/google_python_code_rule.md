@@ -16,7 +16,7 @@ tags: [代码规范,开源项目]
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="http://www.python4office.cn/images/python-office.jpg">本开源项目的交流群</a> 👈
+	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
 </p>
 
 

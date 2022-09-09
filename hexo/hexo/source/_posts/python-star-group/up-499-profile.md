@@ -76,7 +76,7 @@ tags: 知识星球
 
 我自己分享了3年的编程知识，拿到过[阿里云博客专家、华为云享专家、51CTO博客红人](https://mp.weixin.qq.com/s/0kdEeIBk3MGF02YEXcp46Q)、[开源中国推荐项目:python-office](https://mp.weixin.qq.com/s/d2m7xYCLXF8QUlr-5sSuPA)。
 
-我的个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+我的个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 
 最近也建了个[知识星球](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)，原价365元/年，因为每位我都要1对1辅导学习，时间成本很大，现在建立1个月，已经加入30人了，决定今天涨价到499元/年，还会继续涨价。
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/fuwu/fuwu.jpg)

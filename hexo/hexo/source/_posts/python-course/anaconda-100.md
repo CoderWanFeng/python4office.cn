@@ -18,7 +18,7 @@ tags: Anaconda
 
 ## 🙋‍关于我
 
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - [法学院毕业后，我是如何转行Python程序员的？](https://www.bilibili.com/video/BV1Nr4y1B76X?spm_id_from=333.999.0.0)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
@@ -27,3 +27,4 @@ tags: Anaconda
 - 提供：**定制学习计划 + 推荐配套教程 + 有问必答。**适合0-3年的Python学习者，不论你是爱好者还是程序员，我们一起打牢基础，进阶Python。
 - **每月**最少语音沟通一次学习计划的执行情况，根据进度做相应的调整。
 - 1年之内，有问必答。我会的问题，从原理到应用，给你解释清楚；我不会的问题，我尽最大的努力去研究，回来和你分享。
+- 看到这里的朋友，记得加我哟，免费送你1套付费课程📕

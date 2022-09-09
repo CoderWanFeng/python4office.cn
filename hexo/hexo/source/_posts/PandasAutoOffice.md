@@ -15,7 +15,7 @@ tags: Pandas
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="http://www.python4office.cn/images/python-office.jpg">本开源项目的交流群</a> 👈
+	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -60,13 +60,13 @@ tags: Pandas
 ### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 
 
 
 ###### 🉑B站所有课程都有源代码，每天下班整理中ing....
 
-> 如果下面还没及时公布出来，可以点击添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)提醒我哟~
+> 如果下面还没及时公布出来，可以点击添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)提醒我哟~
 
 ------
 

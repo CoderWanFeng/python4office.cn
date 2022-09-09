@@ -5,7 +5,7 @@ tags: [办公黑科技,高效办公]
 ---
 
 
-你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CbzWmDDRmQ-qD8mdcPeskQ)， 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/CbzWmDDRmQ-qD8mdcPeskQ)， 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 
 > 点击以下蓝色字体，可以直达资源
 >高效办公软件 · 分享交流群：[点我加入](http://www.python4office.cn/wechat-group/)
@@ -16,7 +16,8 @@ tags: [办公黑科技,高效办公]
 | 软件                                                         | 功能                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Win11自动更新](https://mp.weixin.qq.com/s/0cM3HAKGGcVn9FL6XnNGaw) | 官方软件，帮你从Win10更新到Win11，不影响已有软件的使用       |
-| [✨Excel工具箱](https://mp.weixin.qq.com/s/35LnS2VklTeGrw4rjpArtw) | 支持WPS和OFFICE，200多个功能，表格达人必备！       |
+| [✨Excel工具箱](https://mp.weixin.qq.com/s/7E_BjzNSv4zMv6_I8mSzZQ) | 支持WPS和OFFICE，200多个功能，表格达人必备！       |
+| [💻PPT插件](https://mp.weixin.qq.com/s/aCUHkPKr-Y7gLlj0X5pm6g) | 它包含38个设计辅助功能，8大在线资源库，超 20 万专业 PPT 素材！       |
 | [PDF编辑器](https://mp.weixin.qq.com/s/dFfnpufWHbU_U_H2EuFL3A) | 你能想到的PDF操作，它都能做，而且还免费！                    |
 | [🍀文件夹管理](https://mp.weixin.qq.com/s/LmOIunbVOeH0kR-YVlGLfA) | 超赞！像使用浏览器一样管理你的文件夹                    |
 | [👀文件搜索](https://mp.weixin.qq.com/s/VPz3jRo6Na_O4kVl9WMJtQ) | 搜索神器 Everything，你把它的潜力用到极致了吗？ |
@@ -89,6 +90,6 @@ tags: [办公黑科技,高效办公]
 - 🌱 干货：[公众号『 Python自动化办公社区 』](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2Nzg5MjgyNg==&action=getalbum&album_id=1471181205869035521&scene=173&from_msgid=2247496010&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 
 - 😺 视频：[B站 『 Python自动化办公社区 』](https://space.bilibili.com/259649365)
-- 💬 微信：[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+- 💬 微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 
 ![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)

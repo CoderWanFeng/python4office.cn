@@ -87,5 +87,5 @@ tags:
 ## 4、心理分析的交流群
 
 👉扫码下图添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMzIwOTgzMA==&action=getalbum&album_id=2203509817615450117&scene=173&from_msgid=2247484925&from_itemidx=1&count=3&nolastread=1#wechat_redirect)，验证消息请填写：**心理分析**，即可加入群聊~
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/qrcode.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
 

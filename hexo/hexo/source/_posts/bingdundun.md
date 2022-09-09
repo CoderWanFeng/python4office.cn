@@ -7,9 +7,9 @@ tags: Turtle
 ### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/5eFJcon_yA0zdqjnxbSR1w)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](/wechat-group)
-
+- 看到这里的朋友，记得加我哟，免费送你1套付费课程📕
 ### 冰墩墩基础款代码
 
 > 温馨提示：本代码的运行，需要在电脑上，安装Python运行环境
@@ -439,4 +439,4 @@ t.done()
 ```
 
 ### 答疑与交流
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/qrcode.jpg)
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
