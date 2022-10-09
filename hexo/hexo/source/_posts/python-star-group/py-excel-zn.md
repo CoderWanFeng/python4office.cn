@@ -11,7 +11,7 @@ tags: 知识星球
 
 之前给大家分享过Python自动化办公的资源汇总。
 
-最近在[知识星球：Python读者圈](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)收到一个提问：
+最近在[知识星球：Python读者圈](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)收到一个提问：
 > python处理excel的第三方库，有没有中文文档？
 
 尽我所能地整理了一份资料，分享给大家。

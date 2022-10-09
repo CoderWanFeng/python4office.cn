@@ -4,9 +4,9 @@ date: 2022-03-15 14:43:11
 tags: 黑科技 
 ---
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)
+- 👨‍💻 我的经历，点击查看👉[Python程序员，在重庆](https://www.bilibili.com/video/BV14F41177tY)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)

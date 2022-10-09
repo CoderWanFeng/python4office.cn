@@ -78,7 +78,7 @@ tags: 知识星球
 
 我的个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 
-最近也建了个[知识星球](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)，原价365元/年，因为每位我都要1对1辅导学习，时间成本很大，现在建立1个月，已经加入30人了，决定今天涨价到499元/年，还会继续涨价。
+最近也建了个[知识星球](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)，原价365元/年，因为每位我都要1对1辅导学习，时间成本很大，现在建立1个月，已经加入30人了，决定今天涨价到499元/年，还会继续涨价。
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/fuwu/fuwu.jpg)
 
 

@@ -5,7 +5,7 @@ tags: 知识星球
 ---
 
 
-大家好，这里是Python程序员晚枫，[知识星球：Python读者圈](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)。
+大家好，这里是Python程序员晚枫，[知识星球：Python读者圈](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)。
 
 最近在星球收到一个提问，直击打工人的灵魂👇
 

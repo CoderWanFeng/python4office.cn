@@ -7,7 +7,7 @@ tags:
 
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/wenda/backend/cover.jpg)
 
-大家好，这里是程序员晚枫，[知识星球：Python读者圈](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)。
+大家好，这里是程序员晚枫，[知识星球：Python读者圈](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)。
 
 昨天收到一个我很有感触的星球提问，今天来详细回复一下。
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/wenda/backend/qa.jpg)

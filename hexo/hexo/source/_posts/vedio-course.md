@@ -3,9 +3,9 @@ title: 视频教程推荐
 date: 2022-02-09 13:08:33
 tags:
 ---
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)
+- 👨‍💻 我的经历，点击查看👉[Python程序员，在重庆](https://www.bilibili.com/video/BV14F41177tY)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](http://www.python4office.cn/wechat-group)
 
@@ -54,7 +54,7 @@ tags:
 | [手把手教你玩音乐](http://gk.link/a/118xk)                   |      |
 | [摄影入门课-希望人人都能拍出好照片](http://gk.link/a/118xn)  |      |
 | [如何讲好一堂课](http://gk.link/a/11970)  |   北京新东方教学经理，新东方互联网产品技术总监   |
-| [重庆有哪些YYDS的互联网公司？来重庆工作后，我悟了！](https://www.bilibili.com/video/BV1uT4y1i7J8?spm_id_from=333.999.0.0)  |      |
+| [重庆有哪些YYDS的互联网公司？来重庆工作后，我悟了！](https://www.bilibili.com/video/BV14F41177tY?spm_id_from=333.999.0.0)  |      |
 
 
 

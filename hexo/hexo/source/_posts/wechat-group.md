@@ -17,36 +17,19 @@ tags: 微信群
 
 
 
-<p align="center" name="'github">
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+<p align="center" name="gitee">
+  <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
     </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+	</a>
+        <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors"/>
     </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues"/>
-    </a>	
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license"/>
-    </a>   
-</p>
-
-<p align="center" name="gitee">
 	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office/'>
 		<img src='https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark' alt='gitee star'/>
-	</a>
-	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
 		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork"/>
 	</a>
-	<a href="http://www.python4office.cn/images/qq.jpg">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
 </p>
 
 
@@ -54,27 +37,30 @@ tags: 微信群
 
 
 
+你好，我是Python程序员晚枫，我干了4年编程博主了，我的最新视频：[学编程，搞副业？劝退！](https://v.kuaishou.com/vypMVh)
 ## 免费微信群
 
-如果你需要一个Python学习环境，也可以扫码加入下方的免费交流群：和**同学们**交流~
-这个微信群：主要用来**领取学习资料 + 和同学们交流**
+
+我提供的交流群有2个：
+
+- 其一，只需要 **1元** 的技术大群，长期有效，目前400+人的技术大群有5个了：⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/SlG0Bh3dxD3NEc9p7PQLJg)。
+**如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个1元群（广告勿扰），有技术问题发出来，咱们互相学习。**
+**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)。
+免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
+‍加了对你不能说是没用，只能说是一点用都没有。你可以扫码下图免费群，进去看看。
+
+
+- 其二，下面是免费的小白群，目前有67个了：想白嫖学习群的也可以扫码加入下方的免费交流群：和**白嫖的同学们**交流~
+这个微信群：主要用来**领取学习资料 + 和小白交流**，不会私信任何人，如果有广告，请私信群主移除。
+60套Python学习资料：[传送门](http://www.python4office.cn/%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86-1/)
+
+> 温馨提示：免费群里，请不要频繁@群主，免费群不答疑。群主只是个打工人，兼职做编程知识分享，不想被手机轰炸。
 
 
 <!-- more -->
 
 ![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
-![](https://www.python-office.com/api/img-cdn/python-office/find_excel_data/group.jpg)
 
-##　我的1对1答疑服务
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
-- [法学院毕业后，我是如何转行Python程序员的？](https://www.bilibili.com/video/BV1Nr4y1B76X?spm_id_from=333.999.0.0)
-- 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
-
-> ⭐今年我推出了陪你学习1年的知识星球：[Python读者圈](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)。
-- 星球已涨价到499元（2022.8.17），我为你服务1年，我不会做优惠活动，以后会涨价。
-- 提供：**定制学习计划 + 推荐配套教程 + 有问必答。**适合0-3年的Python学习者，不论你是爱好者还是程序员，我们一起打牢基础，进阶Python。
-- **每月**最少语音沟通一次学习计划的执行情况，根据进度做相应的调整。
-- 1年之内，有问必答。我会的问题，从原理到应用，给你解释清楚；我不会的问题，我尽最大的努力去研究，回来和你分享。
 
 ## QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
@@ -93,13 +79,13 @@ tags: 微信群
 ## 关于我
 
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)
+- 👨‍💻 我的经历，点击查看👉[Python程序员，在重庆](https://www.bilibili.com/video/BV14F41177tY)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
-
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
 
 
 

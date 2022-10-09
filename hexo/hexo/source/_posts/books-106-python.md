@@ -54,15 +54,15 @@ tags: [Python,电子书]
 
 
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[法学院毕业后转行Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1uT4y1i7J8)
+- 👨‍💻 我的经历，点击查看👉[Python程序员，在重庆](https://www.bilibili.com/video/BV14F41177tY)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利，点击使用👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
 
-
+![](https://www.python-office.com/api/img-cdn/group/0816.jpg)
 ------
 
 
@@ -77,14 +77,15 @@ tags: [Python,电子书]
 
 ### 1、小白入门
 
-1. 👀[《从Python开始学编程》](https://mp.weixin.qq.com/s/gJFdQ95dRksKU11MKqmbNg)
-2. [《Python学习手册》](https://mp.weixin.qq.com/s/NnVRK2AMU-B3rN5bgk6PEg)
+1. 👀[《从Python开始学编程》](https://mp.weixin.qq.com/s/cRyZKHMiWM4NEGQUUvoo7A)
+2. [《Python学习手册》](https://mp.weixin.qq.com/s/TFAbtN64fcZ2pGCVrgnr7Q)
 <!-- more -->
 3. [《Python3程序开发指南（第二版）》](https://mp.weixin.qq.com/s/R1zMqITWHC4FDCgJ43niHQ)
 4. [423页PDF：《Python编程初学者指南》](https://mp.weixin.qq.com/s/mwJ8AU9VbSTmhlzVGnMHuw)
    - 👉自动化办公
    - 🔥[超简单：用Python让Excel飞起来](https://mp.weixin.qq.com/s/2ftJGR-iQx3IbbuyGOvMMg)
-   - [409页PDF：《Python：让繁琐工作自动化》](https://mp.weixin.qq.com/s/MVMDMIF7-7tkm6a7EM8Zbw)
+   - [409页PDF：《Python：让繁琐工作自动化》](https://mp.weixin.qq.com/s/3ZRf8kO7z1Gd49NCqpln9Q)
+   - [《Python数据分析基础》](https://mp.weixin.qq.com/s/3qt5oMuc8RTpEcXYYJaZHQ)
    - [PyXLL库 | Excel与Python的完美结合（附使用文档）](https://mp.weixin.qq.com/s/akrlI19XuDlrmInLWWLelA)
    - [Python-Docx库 | Word与Python的完美结合（附使用文档）](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247491631&idx=1&sn=c169f107acfb03b2f37661a4b6f50587&chksm=eaf5411add82c80c59af213553db3020d0b5a439b84dcb21086258a6a9b2de2719df0390e32a#rd)
    - [如何用Python处理Excel？Pandas视频教程&官方文档来啦~](https://mp.weixin.qq.com/s/v8GdZ1YpVSy-bwRZyo2n1g)
@@ -116,7 +117,7 @@ tags: [Python,电子书]
   - [《Python金融大数据分析》](https://mp.weixin.qq.com/s/9Nmk2OfTiWaMsidR55uvLw)
   - [《量化投资以Python为工具》](https://mp.weixin.qq.com/s/Q34BDZUnVSMpmaktn3F7EQ)
 - 数据分析
-  - [《Python数据分析基础》](https://mp.weixin.qq.com/s/3qt5oMuc8RTpEcXYYJaZHQ)
+
   - [《Python数据处理》](https://mp.weixin.qq.com/s/gFsOgAUTXa6s9Z3MknOkPA)
   - [《Python数据科学手册》](https://mp.weixin.qq.com/s/WEZCqQdNY_KljGeXHgzdtA)
   
