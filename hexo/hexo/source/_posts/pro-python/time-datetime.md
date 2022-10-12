@@ -5,7 +5,7 @@ tags:
 ---
 ![](https://www.python-office.com/api/img-cdn/pro-python/time-datetime/cover.jpg)
 
-大家好，这里是程序员晚枫。知识星球：[Python读者圈](https://mp.weixin.qq.com/s/cKPXrt2i_kcRZ4MP7nxSiQ)
+大家好，这里是程序员晚枫。Python学习服务：[点我查看](https://mp.weixin.qq.com/s/cKPXrt2i_kcRZ4MP7nxSiQ)
 
 在Python中，表示时间的格式一共有3种：时间戳、结构化时间、格式化时间，2个模块：time、datetime。
 

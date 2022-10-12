@@ -26,7 +26,7 @@ pycharm的[官网下载地址](https://www.jetbrains.com/pycharm/download)
 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)，感谢你看我的视频和文章
 > 以下是关于我自己的介绍和联系方式
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[Python程序员，在重庆](https://www.bilibili.com/video/BV14F41177tY)
+- 👨‍💻 我的经历，点击查看👉[转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
 - 💬 我的微博，点击联系👉[程序员晚枫](https://weibo.com/u/7726957925)，B站也叫这个名，全网同名~
 
 #### 最后，送你两套福利吧~

@@ -37,8 +37,8 @@ tags: 微信群
 
 
 
-你好，我是Python程序员晚枫，我干了4年编程博主了，我的最新视频：[学编程，搞副业？劝退！](https://v.kuaishou.com/vypMVh)
-## 免费微信群
+你好，我是Python程序员晚枫，我干了3年编程博主了，我的最新视频：[转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+## 一、免费微信群
 
 
 我提供的交流群有2个：
@@ -62,7 +62,7 @@ tags: 微信群
 ![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
 
 
-## QQ群
+## 二、QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
 ![CoderWanFeng](/images/qq.jpg)
 
@@ -70,18 +70,17 @@ tags: 微信群
 
 
 
-## 免费知识星球
+## 三、免费知识星球
 我们用来沉淀知识的星球，内含丰富资料，可以免费加入
 ![CoderWanFeng](/images/star.jpg)
 
 
 
-## 关于我
+## 四、关于我
 
-
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[Python程序员，在重庆](https://www.bilibili.com/video/BV14F41177tY)
+- 👨‍💻 我的经历，点击查看👉[转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
@@ -89,25 +88,21 @@ tags: 微信群
 
 
 
-## 推荐课程
+## 五、推荐课程
 
-以下是一些可以快速学习的课程
+以下是一些可以快速学习的资料
 
-> [社区视频合集](http://www.python4office.cn/vedio-course/)
+- [100个Python实战项目](http://www.python4office.cn/python-project-list/)
 
-自动化办公：http://gk.link/a/10E3B
+- [106本Python电子书](http://www.python4office.cn/books-106-python/)
 
-爬虫：http://t.cn/A6qP0ZKE
+- [Python + Excel自动化办公 - 30讲](https://www.bilibili.com/video/BV1hk4y1C73S)
 
-玩转Python数据分析：http://t.cn/A6JI40OL
+- [Python数据分析 - 100讲](https://www.bilibili.com/video/BV1rU4y1u7og)
 
-网站开发：http://t.cn/A6JZW02d
+- [Python自动化办公 - 50讲](https://www.bilibili.com/video/BV1y54y1i78U)
 
-微信小程序开发：http://t.cn/A6JI4TEO
-
-办公黑科技：http://t.cn/A6JI4EIL
-
-Python应该怎么学？请看本群学习计划：http://t.cn/A6JhbkYy
+- [给非程序员的Python入门课](https://www.bilibili.com/video/BV18g411h7jJ)
 
 
 
