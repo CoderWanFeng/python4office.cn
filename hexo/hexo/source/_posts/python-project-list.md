@@ -49,13 +49,20 @@ tags: Python项目
 ## 2、爬虫项目
 - [逆天！5行Python代码爬取3000+ 上市公司的信息，我发现了股市的套路...](https://mp.weixin.qq.com/s/bJa_PHo2ijgzRVNUgU5F1w)
 
+- [行Python代码下载图片，百度看了都害怕，适合小白](https://mp.weixin.qq.com/s/P6pRm1VX8bGYepC8O4Bt4Q)
+
 
 ## 3、数据分析项目
 - [用Python爬了我的微信好友，他们是这样的...](https://mp.weixin.qq.com/s/-vsy85RdWyJL01yOGkZk9Q)
 
 ## 4、实用工具
-<!-- - []() -->
+- [语音转文字](https://mp.weixin.qq.com/s/Ug_IFSEQBzDshe7KuFckTQ)
+
 - [Python可以下载B站视频了？1行命令搞定，悄悄用](https://mp.weixin.qq.com/s/NaDDcn-X8aruVHBvWmHXUQ)
+
+- [我有一个500万的梦想，程序员是怎么买彩票的？](https://mp.weixin.qq.com/s/Q6JgW06hMUSik0DqGD0rOA)
+
+- [使用click创建完美的Python命令行程序！](https://mp.weixin.qq.com/s/63TeUrT_b4HaizlzkEoxlA)
 
 ## 5、机器人项目
 
@@ -69,5 +76,23 @@ tags: Python项目
 
 - [⌚005-24小时，后台运行](https://www.bilibili.com/video/BV11L411L7oi)
 
+
+## 6、游戏项目
+
+- [玩过自己开发的贪吃蛇吗？点这里，教你用Python写一个贪吃蛇小游戏！（附源代码）](https://mp.weixin.qq.com/s/Cd1iDcZq9nKxk-mV8phTpA)
+
+- [Python3+pygame实现的90坦克大战 代码完整 有演示效果](https://mp.weixin.qq.com/s/079HcgEuKnBbxKPedLg72Q)
+
+## 7、开源项目
+- [3年开发了5个私人项目：自动化办公、网站、机器人、小程序...免费开源，拿走不谢~](https://mp.weixin.qq.com/s/ndZC6m9CDepZ8PhREylfiw)
+
+- [开源中国推荐：python-office自动化办公，每个功能只需一行代码，做到了真正的开箱即用。](https://mp.weixin.qq.com/s/d2m7xYCLXF8QUlr-5sSuPA)
+
+## 8、网站项目
+
+- [给女朋友开发一个网站](https://www.bilibili.com/video/BV16M4y1c7GE)
+
+- [阿里云 + WordPress，自动生成个人网站](https://mp.weixin.qq.com/s/4O1DiFu5-PGG0UuJz3FI1Q)
+<!-- - []() -->
 # 三、联系方式
 ![](https://www.python-office.com/api/img-cdn/group/0816.jpg)

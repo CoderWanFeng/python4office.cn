@@ -41,18 +41,27 @@ tags: 微信群
 ## 一、免费微信群
 
 
-我提供的交流群有2个：
+我提供的交流群有3个：
 
+### 1、Python技术大群
 - 其一，只需要 **1元** 的技术大群，长期有效，目前400+人的技术大群有5个了：⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/SlG0Bh3dxD3NEc9p7PQLJg)。
 **如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个1元群（广告勿扰），有技术问题发出来，咱们互相学习。**
 **因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)。
-免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
-‍加了对你不能说是没用，只能说是一点用都没有。你可以扫码下图免费群，进去看看。
 
+
+
+![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/chat.jpg)
+
+
+> 免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
+加了对你不能说是没用，只能说是一点用都没有。你可以扫码下图免费群，进去看看。
+
+### 2、Python纯小白群
 
 - 其二，下面是免费的小白群，目前有67个了：想白嫖学习群的也可以扫码加入下方的免费交流群：和**白嫖的同学们**交流~
 这个微信群：主要用来**领取学习资料 + 和小白交流**，不会私信任何人，如果有广告，请私信群主移除。
-60套Python学习资料：[传送门](http://www.python4office.cn/%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86-1/)
+
+> 60套Python学习资料：[传送门](https://mp.weixin.qq.com/s/sO6hbVqORy7JpN-5TlaKvQ)
 
 > 温馨提示：免费群里，请不要频繁@群主，免费群不答疑。群主只是个打工人，兼职做编程知识分享，不想被手机轰炸。
 
@@ -62,6 +71,12 @@ tags: 微信群
 ![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
 
 
+### 3、Python学习指导
+
+转行程序员3年了，兼职做编程博主也3年了，我一直都提供付费答疑服务，时长1年，有问必答：
+- 🏠为什么要做付费答疑？👉[我的商单报价来到2w+，可我只想2点前睡觉](https://mp.weixin.qq.com/s/0kdEeIBk3MGF02YEXcp46Q)
+- 🙋‍**服务内容和价格**，见本文第4部分👉[转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+- 🌏付费后，**第一次语音沟通的内容**，见本文第2部分👉[星球来了一位台湾的小伙伴，他竟然这样说？我羡慕哭了~](https://mp.weixin.qq.com/s/cKPXrt2i_kcRZ4MP7nxSiQ)
 ## 二、QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
 ![CoderWanFeng](/images/qq.jpg)
