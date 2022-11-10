@@ -28,7 +28,7 @@ tags:
     - [童年阴影评估](http://www.urlort.cn/2Qbuge)
     - 😥[习惯性重复：你在重复家庭的伤害吗？](http://www.urlort.cn/2UJxt0)
     - [原生家庭影响评估](http://www.urlort.cn/2VT4Q3)
-    - [🙋发现你最突出的5项天赋](https://mp.weixin.qq.com/s/O75jkwzme78h9Y7EHJq_bA)
+    - [🙋发现你最突出的5项天赋](https://mp.weixin.qq.com/s/zblwUazPpVjTMapNCG2nhg)
 
 
 
@@ -71,21 +71,10 @@ tags:
     4. [越吵越亲密的哈佛亲密关系攻略](http://www.urlort.cn/2VSZD6)
     5. [人人必修的52堂犯罪心理学](http://url.newrank.cn/3ed0a9)
 
-## 3、心理图书的链接
-
-- 你是不是像[兆锋](https://mp.weixin.qq.com/s/XQwfM_CpeSiKyRS3P7zHKg)一样：听完武老师的课，学到了很多，但是还有困惑？
-```python
-👇下面是一些扩展的专项心理分析课程和图书，送给有需要的同学~
-```
 
 
+## 3、心理分析的交流群
 
-- [《武志红：为何家会伤人？》](https://mp.weixin.qq.com/s/p5ztd1x6diZG2JQXMO6aQw)
-- [《武志红：为何你总是会受伤？》](https://mp.weixin.qq.com/s/p5ztd1x6diZG2JQXMO6aQw)
-- [《武志红：拥有一个你说了算的人生](https://mp.weixin.qq.com/s/p5ztd1x6diZG2JQXMO6aQw)
-
-## 4、心理分析的交流群
-
-👉扫码下图添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMzIwOTgzMA==&action=getalbum&album_id=2203509817615450117&scene=173&from_msgid=2247484925&from_itemidx=1&count=3&nolastread=1#wechat_redirect)，验证消息请填写：**心理分析**，即可加入群聊~
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
+👉扫码下图添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)，验证消息请填写：**心理分析**，即可加入群聊~
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 

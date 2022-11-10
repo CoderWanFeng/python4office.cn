@@ -14,4 +14,4 @@ python-office的全套源代码
 
 ## python-office交流群
 
-![](https://www.python-office.com/api/img-cdn/group/python-office-qr.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office-qr.jpg)

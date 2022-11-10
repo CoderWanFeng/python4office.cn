@@ -65,7 +65,7 @@ tags: [办公黑科技,高效办公]
 | [👪给女朋友做个表白网站](https://mp.weixin.qq.com/s/SEZUfq_MhO41IE5xMZQjRQ) | 亲测有效                                                     |
 | [快速搭建个人网站](https://mp.weixin.qq.com/s/fl3d9meuJuha0211bZvr3A) | 腾讯给你一键自动化生成个人网站 |
 | [聊天机器人](https://mp.weixin.qq.com/s/ubJ1OhOFVKfFVT8sBNZ0pg) | 一个15分钟的视频，教你用Python创建自己的微信聊天机器人！文中赠送全部源代码 |
-| [Python抢茅台脚本](https://mp.weixin.qq.com/s/f_7FF-kb38AYFOqcKwE8gg) | 抢购是否成功通常在程序开始的一分钟内可见分晓！ |
+| [Python抢茅台脚本](https://mp.weixin.qq.com/s/wtuKEEewo9NQG8SbnKFC_g) | 抢购是否成功通常在程序开始的一分钟内可见分晓！ |
 | [微信小程序开发](https://mp.weixin.qq.com/s/ytnPz-egQPsuI5vg0L0upg) | 那些帮别人年入百万的小程序，背后有什么玄机？ |
 | [画一个‘冰墩墩’](https://mp.weixin.qq.com/s/8ktglsoN-Or8X5t6pJKtLw) | Python绘制冬奥吉祥物“冰墩墩”，源代码都给你，复制粘贴就可以运行！ |
 | [🌟PyCharm配置中文](https://mp.weixin.qq.com/s/2J6qszFoNlejheSuVAFpng) | 想学Python又看不懂英文 ？20秒教会你PyCharm如何设置中文 ！ |
@@ -81,7 +81,7 @@ tags: [办公黑科技,高效办公]
 
 <img align="" height="137px" src="https://github-readme-stats.vercel.app/api?username=heyWFeng&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&line_height=21&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn" />
 
-## 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+## 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)
 
 - 🐧 编程知识博主
 - 👨‍💻 经历：[关于我，法学院毕业的 Python程序员 ，我也和你一样，一直在努力中](https://www.bilibili.com/video/BV1Nr4y1B76X?spm_id_from=333.999.0.0)
@@ -92,4 +92,4 @@ tags: [办公黑科技,高效办公]
 - 😺 视频：[B站 『 Python自动化办公社区 』](https://space.bilibili.com/259649365)
 - 💬 微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)

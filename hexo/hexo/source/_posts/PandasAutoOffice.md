@@ -7,14 +7,6 @@ tags: Pandas
 
 
 <p align="center">
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license"/>
-    </a>   
-</p>
-<p align="center">
-	<strong>🍬python for office</strong>
-</p>
-<p align="center">
 	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
 </p>
 
@@ -29,27 +21,11 @@ tags: Pandas
     <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks"/>
     </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues"/>
-    </a>	
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license"/>
-    </a>   
-</p>
-
-<p align="center" name="gitee">
-	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office/'>
-		<img src='https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark' alt='gitee star'/>
-	</a>
-	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork"/>
-	</a>
-	<a href="http://www.python4office.cn/images/qq.jpg">
+    	<a href="http://www.python4office.cn/images/qq.jpg">
 	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
 </p>
+
+
 
 
 
@@ -64,13 +40,13 @@ tags: Pandas
 
 | 课程链接                                                                              | 特点             | 配套代码                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 🏠[Anaconda数据分析&人工智能教程（100讲）](https://www.bilibili.com/video/BV1rU4y1u7og) |  手把手·案例讲解 | [点我直达](https://mp.weixin.qq.com/s/soM4Pt6c2lznOH848Qd3aA) |
+| 🏠[Anaconda数据分析&人工智能教程（100讲）](https://www.bilibili.com/video/BV1rU4y1u7og) |  手把手·案例讲解 | [点我直达](https://mp.weixin.qq.com/s/P0iBO7a5zEP_cAvm6bLPhQ) |
 | 🔥[三大金融工具特训班——Wind、Excel、Python(完结)](https://www.bilibili.com/video/BV16U4y1g7mS) | 收藏之王：每3个人观看，就有1个人收藏~！                      | 👉[点我直达](https://gitee.com/zhaofeng092/PandasAutoOffice/blob/main/%E4%B8%89%E5%A4%A7%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7%E7%89%B9%E8%AE%AD%E7%8F%AD%E2%80%94%E2%80%94Wind%E3%80%81Excel%E3%80%81Python(%E5%AE%8C%E7%BB%93)/%E4%B8%89%E5%A4%A7%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7%E7%89%B9%E8%AE%AD%E7%8F%AD%E2%80%94%E2%80%94Wind%E3%80%81Excel%E3%80%81Python(%E5%AE%8C%E7%BB%93).md) |
 
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+### 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+- 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 
 

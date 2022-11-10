@@ -4,10 +4,10 @@ date: 2022-03-15 14:43:11
 tags: 黑科技 
 ---
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+### 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
+- 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
@@ -34,4 +34,4 @@ tags: 黑科技
 | 🚦[PDF Drive - Search and download PDF files for free.](https://www.pdfdrive.com/) |
 | 🚦[28个黑科技软件](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MjU3ODYyNA==&action=getalbum&album_id=2186546268016017410&scene=173&from_msgid=2247485723&from_itemidx=1&count=3&nolastread=1#wechat_redirect) |
 
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)

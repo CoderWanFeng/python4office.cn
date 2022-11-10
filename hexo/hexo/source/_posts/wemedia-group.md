@@ -1,29 +1,44 @@
 ---
-title: 自媒体小伙伴 - 微信交流群
+title: 自媒体小伙伴 - 微信交流群、线上沙龙 & 线下活动、关于作者
 date: 2022-02-18 15:43:50
 tags: 自媒体
 ---
 
 
-
-
-### 自媒体交流群
+### 一、自媒体交流群（免费）
 
 <!-- more -->
 
 
 
 `1.交流群`
-欢迎加入 晚枫的自媒体同行 交流群，添加方式：``扫码下图👇``
 
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/1-wemedia-group.jpg)
+欢迎加入 自媒体人 的 微信交流群，添加方式：``直接扫码下图，长期有效👇``
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
-- 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
-- ⚡ 学习资料，点击领取👉[6套自媒体课程的合集](https://mp.weixin.qq.com/s/QSFUzwPZMnIQDFdt_JQXug)
-- 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
+> 大家可以在群里发一下自己的作品，互相学习交流。
+> 注意，**群里不发广告也不卖课，如被骚扰，请告诉群主！**不定时举行自媒体的线上沙龙 & 线下交流活动（重庆），感兴趣可以留意群公告哟~
 
 
-![coder-secret](https://www.python-office.com/api/img-cdn/coder-secret.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1-wemedia-group.jpg)
+
+
+> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)。一定要备注：进大群。
+
+
+### 二、线上沙龙（免费） + 线下分享会（重庆）
+**线下沙龙预告**
+等口罩稳定后，计划有一场线下沙龙：**拍摄设备如何使用？**
+全员讨论，感兴趣可以加我的微信，进群焦虑~加好友请备注：线下活动。
+我的微信：点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+
+### 三、关于我
+
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/8Z4pHYo22jz0sEIhyTDBbQ)，兼职做自媒体4年了
+- 🐧 编程知识博主：[B站：程序员晚枫](https://space.bilibili.com/1989702333) | [B站：Python自动化办公社区](https://space.bilibili.com/259649365)
+- 👨‍💻 我的``自媒体``经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+- ⚡ 学习资料，点击领取👉[6套自媒体课程的合集](https://mp.weixin.qq.com/s/VsH82z5sYY61f9RB3unRgQ)
+- 🎁 粉丝福利👉[我的短视频，全是被 夸 火的？？](https://www.xiaohongshu.com/discovery/item/63305311000000001701c8a9)
+
+
+![coder-secret](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)

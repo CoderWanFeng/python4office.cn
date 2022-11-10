@@ -17,82 +17,22 @@ tags: Python项目
 
 # 二、Python实战项目
 
-## 1、自动化办公项目
+为了方便大家获取源代码，100个Python实战项目，已经全部开源，开源地址如下👇
+
+| 序号 | 项目介绍       | 国内地址(中文版) |  国外地址（英文版） |
+| ---- | -------------- | -------- |-------- |
+| 1    | 100个Python实战项目 | [国内的朋友，点我](https://gitee.com/CoderWanFeng/awesome-python-framework/blob/project/README.md)     |[国外的朋友，点我](https://github.com/CoderWanFeng/awesome-python-framework/blob/project/README.md)     |
 
 
-- ❤[第0讲：项目发布](https://www.bilibili.com/video/BV1pT4y1k7FH)
+# 三、关于作者
 
-- [第1讲：安装python环境](https://www.bilibili.com/video/BV1Q44y1u7rV)
+你好，我是Python程序员晚枫，自己的短视频：
 
-- [第2讲：批量重命名](https://www.bilibili.com/video/BV12r4y187Yj)
+- [【程序员晚枫】学编程、学Python接单？根本不可行，别再被割韭菜了！](https://www.bilibili.com/video/BV1wD4y117Zs)
+- [【程序员晚枫】30岁转行程序员，来得及吗？我自己的转行经验。](https://www.bilibili.com/video/BV1Nr4y1B76X)
+- [【程序员晚枫】学Python，真的不用花钱！](https://www.bilibili.com/video/BV1wG4y1p7WR/?spm_id_from=333.999.0.0)
 
-- [第3讲：PPT转PDF](https://www.bilibili.com/video/BV17Y411c792)
-
-- [第4讲：批量生成Excel数据](https://www.bilibili.com/video/BV1wr4y1b7uk)
-
-- [第5讲：合并Excel](https://www.bilibili.com/video/BV1714y147Ao)
-
-- ⭐[特别刊：微信机器人](https://www.python-office.com/office/robot.html)
-
-- [第6讲：PDF 加水印](https://www.bilibili.com/video/BV1Se411T7au)
-
-- [第7讲：数据可视化 - 词云](https://www.bilibili.com/video/BV1Me4y1h7Ku)
-
-- [第8讲：查询Excel（疫情管理专题）](https://www.bilibili.com/video/BV1Bd4y1B7yr)
-
-- 💻[第9讲：PDF 转 Word](https://www.bilibili.com/video/BV1Bd4y1B7yr)
-
-- 👩[第10讲：给图片 加 水印](https://www.bilibili.com/video/BV1jT411T7n9)
-
-- [第11讲：根据内容，查找文件](https://www.bilibili.com/video/BV13P411n77G)
-
-## 2、爬虫项目
-- [逆天！5行Python代码爬取3000+ 上市公司的信息，我发现了股市的套路...](https://mp.weixin.qq.com/s/bJa_PHo2ijgzRVNUgU5F1w)
-
-- [行Python代码下载图片，百度看了都害怕，适合小白](https://mp.weixin.qq.com/s/P6pRm1VX8bGYepC8O4Bt4Q)
-
-
-## 3、数据分析项目
-- [用Python爬了我的微信好友，他们是这样的...](https://mp.weixin.qq.com/s/-vsy85RdWyJL01yOGkZk9Q)
-
-## 4、实用工具
-- [语音转文字](https://mp.weixin.qq.com/s/Ug_IFSEQBzDshe7KuFckTQ)
-
-- [Python可以下载B站视频了？1行命令搞定，悄悄用](https://mp.weixin.qq.com/s/NaDDcn-X8aruVHBvWmHXUQ)
-
-- [我有一个500万的梦想，程序员是怎么买彩票的？](https://mp.weixin.qq.com/s/Q6JgW06hMUSik0DqGD0rOA)
-
-- [使用click创建完美的Python命令行程序！](https://mp.weixin.qq.com/s/63TeUrT_b4HaizlzkEoxlA)
-
-## 5、机器人项目
-
-- 🔥[001-项目发布](https://www.bilibili.com/video/BV1Xa411u7yU)
-
-- [002-发消息](https://www.bilibili.com/video/BV1Jt4y1j7F1)
-
-- [003-发文件](https://www.bilibili.com/video/BV1te4y1y7Ro)
-
-- [004-根据关键词，自动回复](https://www.bilibili.com/video/BV1fV4y1M7ju)
-
-- [⌚005-24小时，后台运行](https://www.bilibili.com/video/BV11L411L7oi)
-
-
-## 6、游戏项目
-
-- [玩过自己开发的贪吃蛇吗？点这里，教你用Python写一个贪吃蛇小游戏！（附源代码）](https://mp.weixin.qq.com/s/Cd1iDcZq9nKxk-mV8phTpA)
-
-- [Python3+pygame实现的90坦克大战 代码完整 有演示效果](https://mp.weixin.qq.com/s/079HcgEuKnBbxKPedLg72Q)
-
-## 7、开源项目
-- [3年开发了5个私人项目：自动化办公、网站、机器人、小程序...免费开源，拿走不谢~](https://mp.weixin.qq.com/s/ndZC6m9CDepZ8PhREylfiw)
-
-- [开源中国推荐：python-office自动化办公，每个功能只需一行代码，做到了真正的开箱即用。](https://mp.weixin.qq.com/s/d2m7xYCLXF8QUlr-5sSuPA)
-
-## 8、网站项目
-
-- [给女朋友开发一个网站](https://www.bilibili.com/video/BV16M4y1c7GE)
-
-- [阿里云 + WordPress，自动生成个人网站](https://mp.weixin.qq.com/s/4O1DiFu5-PGG0UuJz3FI1Q)
-<!-- - []() -->
-# 三、联系方式
-![](https://www.python-office.com/api/img-cdn/group/0816.jpg)
+自己转行程序员3年了，兼职做编程博主也3年了，我一直都提供付费答疑服务，时长1年，有问必答：
+- 🏠为什么要做付费答疑？👉[我的商单报价来到2w+，可我只想2点前睡觉](https://mp.weixin.qq.com/s/0kdEeIBk3MGF02YEXcp46Q)
+- 🙋‍**服务内容和价格**，见本文第4部分👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
+- 🌏付费后，**第一次语音沟通的内容**，见本文第2部分👉[星球来了一位台湾的小伙伴，他竟然这样说？我羡慕哭了~](https://mp.weixin.qq.com/s/cKPXrt2i_kcRZ4MP7nxSiQ)

@@ -3,9 +3,9 @@ title: 视频教程推荐
 date: 2022-02-09 13:08:33
 tags:
 ---
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+### 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+- 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](http://www.python4office.cn/wechat-group)
 
@@ -50,7 +50,7 @@ tags:
 | [一堂课看懂技术创新与商业模式](http://gk.link/a/118xc)       |      |
 | [成为你自己](https://www.bilibili.com/video/BV1mi4y1j7DF)    |   武志红   |
 | [怎样讲一个能影响别人的好故事？](http://gk.link/a/113zd)     |      |
-| 💰[15个小而美的副业赚钱项目（完结）](https://mp.weixin.qq.com/s/QSFUzwPZMnIQDFdt_JQXug) |      |
+| 💰[15个小而美的副业赚钱项目（完结）](https://mp.weixin.qq.com/s/VsH82z5sYY61f9RB3unRgQ) |      |
 | [手把手教你玩音乐](http://gk.link/a/118xk)                   |      |
 | [摄影入门课-希望人人都能拍出好照片](http://gk.link/a/118xn)  |      |
 | [如何讲好一堂课](http://gk.link/a/11970)  |   北京新东方教学经理，新东方互联网产品技术总监   |
@@ -86,4 +86,4 @@ tags:
 | [推荐系统及算法实践十八式](https://t7.lagounews.com/rRD6R5RDsr403) | 前阿里巴巴算法专家 |
 | [大数据技术基础 22 讲](https://t5.lagounews.com/rRE7R8RCsr72E) |  |
 
-![](https://www.python-office.com/api/img-cdn/group/qr-code.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)

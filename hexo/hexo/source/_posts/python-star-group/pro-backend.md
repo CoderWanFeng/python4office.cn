@@ -4,7 +4,7 @@ date: 2022-08-13 01:47:08
 tags:
 ---
 
-如果你是一位连Python基础都不会的小白，本套系列不适合你。请加入晚枫的：[Python读者圈](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)，去1对1指导学习：有关基础的ABCD。
+如果你是一位连Python基础都不会的小白，本套系列不适合你。请加入晚枫的：[Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)，去1对1指导学习：有关基础的ABCD。
 
 如果你是已经学习过Python基础，但是没有建立起系统知识体系的朋友，你可以继续往下看👇这是提问者的定制化学习资料：[提问者的问题](https://mp.weixin.qq.com/s/mZqmri7uLjQmirqUa6pAog)
 
@@ -36,15 +36,15 @@ tags:
 
 <!-- more -->
 
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/group/2-free-group.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
 
 
 ##　我的1对1答疑服务
 你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
-- [转行程序员3年后，我更加坚定了！](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)
+- [我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
-> ⭐今年我推出了陪你学习1年的Python学习服务：[点我查看](https://mp.weixin.qq.com/s/YoOjhj6bJSK8nVgQS-txbg)。
+> ⭐今年我推出了陪你学习1年的Python学习服务：[点我查看](https://www.bilibili.com/video/BV1sd4y1c7T9)。
 - 星球已涨价到599元（2022.9.20），我为你服务1年，我不会做优惠活动，以后会涨价。
 - 提供：**定制学习计划 + 推荐配套教程 + 有问必答。**适合0-3年的Python学习者，不论你是爱好者还是程序员，我们一起打牢基础，进阶Python。
 - **每月**最少语音沟通一次学习计划的执行情况，根据进度做相应的调整。

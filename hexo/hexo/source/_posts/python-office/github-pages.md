@@ -1,48 +1,166 @@
 ---
-title: github-pages是如何搭建的？
+title: python-office是如何搭建的？
 date: 2022-05-31 18:54:16
 tags: 
 ---
 
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>python-office</title>
-    <meta name="generator" content="VuePress 1.9.7">
-    
-    <meta name="description" content="python-office自动化办公">
-    
-    <link rel="preload" href="./assets/css/0.styles.1306b68e.css" as="style"><link rel="preload" href="./assets/js/app.fa7e33e2.js" as="script"><link rel="preload" href="./assets/js/2.a1d55f4d.js" as="script"><link rel="preload" href="./assets/js/7.9bf69f72.js" as="script"><link rel="prefetch" href="./assets/js/10.1d308212.js"><link rel="prefetch" href="./assets/js/11.9673df9c.js"><link rel="prefetch" href="./assets/js/12.1b7b91fd.js"><link rel="prefetch" href="./assets/js/13.633f88fa.js"><link rel="prefetch" href="./assets/js/14.2697ab47.js"><link rel="prefetch" href="./assets/js/15.14996e55.js"><link rel="prefetch" href="./assets/js/16.a6af27f4.js"><link rel="prefetch" href="./assets/js/17.d4666eae.js"><link rel="prefetch" href="./assets/js/18.0c525901.js"><link rel="prefetch" href="./assets/js/19.76d292a7.js"><link rel="prefetch" href="./assets/js/20.25794adc.js"><link rel="prefetch" href="./assets/js/21.1d358792.js"><link rel="prefetch" href="./assets/js/22.22a1e7a4.js"><link rel="prefetch" href="./assets/js/23.b3205f27.js"><link rel="prefetch" href="./assets/js/24.2998f611.js"><link rel="prefetch" href="./assets/js/3.0c893207.js"><link rel="prefetch" href="./assets/js/4.2e5a36eb.js"><link rel="prefetch" href="./assets/js/5.06e1c49b.js"><link rel="prefetch" href="./assets/js/6.5ec218b2.js"><link rel="prefetch" href="./assets/js/8.bcfd2372.js"><link rel="prefetch" href="./assets/js/9.f93ddc75.js">
-    <link rel="stylesheet" href="./assets/css/0.styles.1306b68e.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">python-office</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/./" aria-current="page" class="nav-link router-link-exact-active router-link-active">
-  主页
-</a></div><div class="nav-item"><a href="http://www.python4office.cn/wechat-group/" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  交流群
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.bilibili.com/video/BV1pT4y1k7FH" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  视频教程
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/CoderWanFeng/python-office" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  GitHub
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/./" aria-current="page" class="nav-link router-link-exact-active router-link-active">
-  主页
-</a></div><div class="nav-item"><a href="http://www.python4office.cn/wechat-group/" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  交流群
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.bilibili.com/video/BV1pT4y1k7FH" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  视频教程
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/CoderWanFeng/python-office" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  GitHub
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/./" aria-current="page" class="active sidebar-link">Home</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>入门指南</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>核心功能</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>相关文档</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常见问题</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><img src="http://python4office.cn/images/github-nav.jpg" alt="hero"> <h1 id="main-title">
-      Welcome to python-office
-    </h1> <p class="description">
-      为自动化办公而生
-    </p> <p class="action"><a href="/./guide/introduction.html" class="nav-link action-button">
-  开始使用 →
-</a></p></header> <div class="features"><div class="feature"><h2>专注一个领域</h2> <p>Python-office 是一个 Python 自动化办公第三方库，能解决大部分自动化办公的问题。</p></div><div class="feature"><h2>降低学习门槛</h2> <p>不用学习Python编程知识，会电脑操作就行</p></div><div class="feature"><h2>一行代码</h2> <p>实现自动化办公，做到开箱即用</p></div></div> <div class="theme-default-content custom content__default"></div> <div class="footer">
-    Hep Licensed | Copyright © 2022-present 程序员晚枫
-  </div></main></div><div class="global-ui"><!----></div></div>
-    <script src="./assets/js/app.fa7e33e2.js" defer></script><script src="./assets/js/2.a1d55f4d.js" defer></script><script src="./assets/js/7.9bf69f72.js" defer></script>
-  </body>
-</html>
+<p align="center">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/github-nav.jpg" alt="github license"/>
+    </a>   
+</p>
+<p align="center">
+	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
+</p>
+<p align="center">
+	👉 <a target="_blank" href="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office.jpg">本开源项目的交流群</a> 👈
+</p>
+
+
+<p align="center" name="'github">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors"/>
+    </a>
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks"/>
+    </a>
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues"/>
+    </a>	
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license"/>
+    </a>
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license"/>
+    </a>   
+</p>
+
+<p align="center" name="gitee">
+	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office/'>
+		<img src='https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
+	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=dark" alt="gitee fork"/>
+	</a>
+	<a target="_blank" href="http://www.python4office.cn/images/qq.jpg">
+	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
+</p>
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+[**🌎English Documentation**](README-EN.md)
+
+-------------------------------------------------------------------------------
+
+## 📚简介
+
+Python-office 是一个 Python 自动化办公第三方库，能解决大部分自动化办公的问题。而且每个功能只需一行代码，不需要小白用户学习 Python 知识，做到了真正的开箱即用。
+> 功能持续更新中，提交你的功能需求/参与项目开发，联系👉[开发者微信](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+
+
+![](https://www.python-office.com/api/img-cdn/python-office/find_excel_data/group.jpg)
+### 🍺特点
+- 一键搭建所有 Python + 自动化办公的编程环境。
+- 使用一行代码解决大部分自动化办公的问题，不需要小白学习 Python 知识
+- 贴合职场办公需求
+- 极简编程，学习成本极低，工作效率提升显著
+
+
+-------------------------------------------------------------------------------
+
+## 📦安装
+
+### 🍊pip 自动下载&更新
+
+```
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+```
+
+
+-------------------------------------------------------------------------------
+
+## 📝文档
+
+[📘官网：https://www.python-office.com/](https://www.python-office.com/)
+
+全部功能的说明
+
+- 文字教程👉[传送门](https://www.python-office.com/guide/allFunc.html)
+
+- 视频教程👉[传送门](https://www.python-office.com/video/video.html)
+
+
+## 🛠️包含组件
+
+以下所有功能，都在逐步搭建中。
+
+| 模块                   |     介绍                                                                          |GitHub地址| star|
+| ----------------------|---------------------------------------------------------------------------------- |-----|-----|
+| PyOfficeRobot                   |     聊天机器人                                                        | https://github.com/CoderWanFeng/PyOfficeRobot |<img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg" alt="github star"/>|
+| search4file                   |     文档搜索                                                        | https://github.com/CoderWanFeng/search4file |<img src="https://img.shields.io/github/stars/CoderWanFeng/search4file.svg" alt="github star"/>|
+| poexcel                 |     excel处理                                              |https://github.com/CoderWanFeng/poexcel |<img src="https://img.shields.io/github/stars/CoderWanFeng/poexcel.svg" alt="github star"/>|
+| poword                  |     word处理                                              |https://github.com/CoderWanFeng/poword |<img src="https://img.shields.io/github/stars/CoderWanFeng/poword.svg" alt="github star"/>|
+| poppt                   |     ppt处理                                                                     |https://github.com/CoderWanFeng/poppt |<img src="https://img.shields.io/github/stars/CoderWanFeng/poppt.svg" alt="github star"/>|
+| popdf                   |     pdf处理                                              |https://github.com/CoderWanFeng/popdf |<img src="https://img.shields.io/github/stars/CoderWanFeng/popdf.svg" alt="github star"/>|
+| pofile                  |     文件和文件夹的操作                                          |https://github.com/CoderWanFeng/pofile |<img src="https://img.shields.io/github/stars/CoderWanFeng/pofile.svg" alt="github star"/>|
+| wftools                 |     便捷小工具                                        |https://github.com/CoderWanFeng/wftools |<img src="https://img.shields.io/github/stars/CoderWanFeng/wftools.svg" alt="github star"/>|
+| poimage                 |     图片处理            |https://github.com/CoderWanFeng/poimage |<img src="https://img.shields.io/github/stars/CoderWanFeng/poimage.svg" alt="github star"/>|
+| povideo                 |     视频处理                                          |https://github.com/CoderWanFeng/povideo |<img src="https://img.shields.io/github/stars/CoderWanFeng/povideo.svg" alt="github star"/>|
+| web（名称待定）                   |     网站快捷搭建                                         | | |
+| email（名称待定）                  |     邮件功能                                                        | | |
+| ocr（名称待定）     |     识别功能：文字识别、语音识别                                                         | | |
+
+可以根据需求对每个模块单独引入，也可以通过`import office`方式引入所有模块。
+
+
+-------------------------------------------------------------------------------
+
+## 🏗️添砖加瓦
+
+
+### 📐PR的建议
+
+python-office欢迎任何人来添砖加瓦，贡献代码，建议提交的pr（pull request）放在一个单独的文件夹下：
+
+- 在[contributors](https://github.com/CoderWanFeng/python-office/tree/master/contributors)文件夹中，用自己的GitHub名字建一个文件夹；
+- 把自己的所有代码，都提交到这个自己的文件夹里；
+- 不要改其它任何文件夹里的代码！不要改别人的代码！
+- 对别人的代码有疑问，可以直接提issue。
+
+
+
+### 🐞提供bug反馈或建议
+
+提交问题反馈时，请务必填写和python-office代码本身有关的问题，不进行有关python学习，甚至是个人练习的知识答疑和讨论。
+
+- [Gitee issue](https://gitee.com/CoderWanFeng/python-office/issues)
+- [Github issue](https://github.com/CoderWanFeng/python-office/issues)
+
+-------------------------------------------------------------------------------
+
+## 🪙支持python-office
+
+### 💳捐赠
+
+如果你觉得python-office不错，可以捐赠请维护者喝杯咖啡~，在此表示感谢^_^。
+
+[捐赠给项目](https://gitee.com/CoderWanFeng/python-office) 👈该项捐赠仅用于支持本项目发展使用
+
+
+-------------------------------------------------------------------------------
+
+## ⭐Star python-office
+
+[![Stargazers over time](https://starchart.cc/CoderWanFeng/python-office.svg)](https://starchart.cc/CoderWanFeng/python-office)
+
+## 📌联系作者
+
+
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
