@@ -5,6 +5,28 @@ tags: 数据分析
 ---
 
 
+<p align="center">
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+<p align="center" name="'github">
+    <a target="_blank" href='https://github.com/CoderWanFeng/PyOfficeRobot'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
+		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
+  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
+	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  </a>
+    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
+  </a>
+</p>
 
 ### 《利用Python进行数据分析》 - 电子书
 
@@ -15,11 +37,18 @@ tags: 数据分析
 
     - 配套视频：https://b23.tv/0WV3YU5
     
-    - 🚸学习Python过程中有任何问题，欢迎加入我的学习交流群👉 [进群](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ) 👈
+    - 🚸免费Python学习交流群👉 [进群](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ) 👈
 
 <!-- more -->
 
+<p align="center">
+    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
+    </a>   
+</p>
     
+
+
 ### 数据分析 - 视频课程
 
 

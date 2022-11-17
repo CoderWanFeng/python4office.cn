@@ -68,8 +68,8 @@ tags:
 
 句句没提短视频，但是做到任何一个建议，都能让你远离短视频。
 
-期待来我的学习星球，和我分享你的好消息~
 
-![](https://www.python-office.com/api/img-cdn/group/python-star.jpg)
+如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
 
 

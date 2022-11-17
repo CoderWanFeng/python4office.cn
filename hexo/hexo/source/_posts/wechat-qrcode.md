@@ -5,6 +5,28 @@ tags: 联系我
 ---
 
 
+<p align="center">
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+<p align="center" name="'github">
+    <a target="_blank" href='https://github.com/CoderWanFeng/PyOfficeRobot'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
+		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
+  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
+	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  </a>
+    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
+  </a>
+</p>
 ### [联系我](http://python4office.cn/account-display/)
 
 - 你好呀，我是``程序员晚枫``。
@@ -24,11 +46,8 @@ tags: 联系我
 - [我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
-> ⭐今年我推出了陪你学习1年的Python学习服务：[点我查看](https://www.bilibili.com/video/BV1sd4y1c7T9)。
-- 星球已涨价到599元（2022.9.20），我为你服务1年，我不会做优惠活动，以后会涨价。
-- 提供：**定制学习计划 + 推荐配套教程 + 有问必答。**适合0-3年的Python学习者，不论你是爱好者还是程序员，我们一起打牢基础，进阶Python。
-- **每月**最少语音沟通一次学习计划的执行情况，根据进度做相应的调整。
-- 1年之内，有问必答。我会的问题，从原理到应用，给你解释清楚；我不会的问题，我尽最大的努力去研究，回来和你分享。
+> ⭐今年我推出了陪你学习1年的Python学习服务，如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
 
 
 ### QQ群

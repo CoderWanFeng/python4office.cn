@@ -7,29 +7,26 @@ tags: 微信群
 
 
 <p align="center">
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/github-nav.jpg" alt="github license"/>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
     </a>   
 </p>
-<p align="center">
-	<strong>🍬python for office</strong>
-</p>
 
 
 
-<p align="center" name="gitee">
-  <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+<p align="center" name="'github">
+    <a target="_blank" href='https://github.com/CoderWanFeng/PyOfficeRobot'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star"/>
     </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
+		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-        <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors"/>
-    </a>
-	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office/'>
-		<img src='https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark' alt='gitee star'/>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork"/>
-	</a>
+  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
+	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  </a>
+    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
+  </a>
 </p>
 
 
@@ -61,7 +58,7 @@ tags: 微信群
 
 ### 2、纯小白群
 
-- 其二，下面是免费的小白群，目前有**68个**了：想白嫖学习群的也可以扫码加入下方的免费交流群：和**白嫖的同学们**交流~
+- 其二，下面是免费的小白群，目前有**69个**了：想白嫖学习群的也可以扫码加入下方的免费交流群：和**白嫖的同学们**交流~
 这个微信群：主要用来**领取学习资料 + 和小白交流**，不会私信任何人，如果有广告，请私信群主移除。
 
 > 60套Python学习资料：[传送门](https://mp.weixin.qq.com/s/sO6hbVqORy7JpN-5TlaKvQ)
@@ -74,12 +71,20 @@ tags: 微信群
 ![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
 
 
+
+
 ### 3、编程学习指导
 
-转行程序员3年了，兼职做编程博主也3年了，我一直都提供付费答疑服务，时长1年，有问必答：
-- 🏠为什么要做付费答疑？👉[我的商单报价来到2w+，可我只想2点前睡觉](https://mp.weixin.qq.com/s/0kdEeIBk3MGF02YEXcp46Q)
-- 🙋‍**服务内容和价格**，见本文第4部分👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
-- 🌏付费后，**第一次语音沟通的内容**，见本文第2部分👉[星球来了一位台湾的小伙伴，他竟然这样说？我羡慕哭了~](https://mp.weixin.qq.com/s/cKPXrt2i_kcRZ4MP7nxSiQ)
+
+如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+
+<p align="center">
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>
+
 ## 二、QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
 ![CoderWanFeng](/images/qq.jpg)

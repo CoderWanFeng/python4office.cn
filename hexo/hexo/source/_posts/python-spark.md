@@ -11,11 +11,10 @@ tags: spark
 - [我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
-> ⭐今年我推出了陪你学习1年的Python学习服务：[点我查看](https://www.bilibili.com/video/BV1sd4y1c7T9)。
-- 星球已涨价到599元（2022.9.20），我为你服务1年，我不会做优惠活动，以后会涨价。
-- 提供：**定制学习计划 + 推荐配套教程 + 有问必答。**适合0-3年的Python学习者，不论你是爱好者还是程序员，我们一起打牢基础，进阶Python。
-- **每月**最少语音沟通一次学习计划的执行情况，根据进度做相应的调整。
-- 1年之内，有问必答。我会的问题，从原理到应用，给你解释清楚；我不会的问题，我尽最大的努力去研究，回来和你分享。
+> ⭐今年我推出了陪你学习1年的Python学习服务：👇
+
+如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
 
 ## 2、Python + 大数据开发
 
