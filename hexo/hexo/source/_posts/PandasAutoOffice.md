@@ -4,24 +4,26 @@ date: 2022-02-15 16:39:01
 tags: Pandas
 ---
 
-<p align="center">
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
 
 
-<p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
+<p align="center" id='外卖-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
 </p>
 
 
-<p align="center" name="'github">
-    <a target="_blank" href='https://github.com/CoderWanFeng/PyOfficeRobot'>
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star"/>
+<p align="center" name="图标-github">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
     </a>
-    	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
-		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
   	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
 	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
@@ -30,6 +32,7 @@ tags: Pandas
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
+
 
 
 
@@ -46,7 +49,7 @@ tags: Pandas
 
 | 课程链接                                                                              | 特点             | 配套代码                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 🏠[Anaconda数据分析&人工智能教程（100讲）](https://www.bilibili.com/video/BV1rU4y1u7og) |  手把手·案例讲解 | [点我直达](https://mp.weixin.qq.com/s/P0iBO7a5zEP_cAvm6bLPhQ) |
+| 🏠[Anaconda数据分析&人工智能教程（100讲）](https://www.bilibili.com/video/BV1rU4y1u7og) |  手把手·案例讲解 | [点我直达](https://mp.weixin.qq.com/s/EgEaowCCpfrrDXSPmhDw6w) |
 | 🔥[三大金融工具特训班——Wind、Excel、Python(完结)](https://www.bilibili.com/video/BV16U4y1g7mS) | 收藏之王：每3个人观看，就有1个人收藏~！                      | 👉[点我直达](https://gitee.com/zhaofeng092/PandasAutoOffice/blob/main/%E4%B8%89%E5%A4%A7%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7%E7%89%B9%E8%AE%AD%E7%8F%AD%E2%80%94%E2%80%94Wind%E3%80%81Excel%E3%80%81Python(%E5%AE%8C%E7%BB%93)/%E4%B8%89%E5%A4%A7%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7%E7%89%B9%E8%AE%AD%E7%8F%AD%E2%80%94%E2%80%94Wind%E3%80%81Excel%E3%80%81Python(%E5%AE%8C%E7%BB%93).md) |
 
 
@@ -63,7 +66,11 @@ tags: Pandas
 
 ------
 
-
+<p align="center" id='0基础数据分析-banner'>
+    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
+    </a>   
+</p>
 
 ### ① 专题：金融数据分析
 
@@ -87,7 +94,11 @@ tags: Pandas
 
 
 
-
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    </a>   
+</p>
  ### ② 自动化办公
 
 > 下面只列出了同学最需要{最火}的视频，它们的视频和对应的代码，如表格所示
@@ -129,3 +140,9 @@ tags: Pandas
 点击支持👉[赞赏码](https://gitee.com/zhaofeng092/python_auto_office/blob/master/%E8%B4%A6%E5%8F%B7%E5%85%B1%E7%94%A8%E8%B5%84%E6%BA%90/image/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg)
 
 有任何问题，欢迎在下方评论告诉我哟~
+
+<p align="center" id='腾讯云-banner'>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>

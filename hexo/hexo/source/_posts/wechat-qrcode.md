@@ -13,7 +13,7 @@ tags: 联系我
 
 
 
-<p align="center" name="'github">
+<p align="center" name="图标-github">
     <a target="_blank" href='https://github.com/CoderWanFeng/PyOfficeRobot'>
     <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star"/>
     </a>
@@ -52,7 +52,7 @@ tags: 联系我
 
 ### QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
-![CoderWanFeng](/images/qq.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg)
 
 
 ### 免费读者群

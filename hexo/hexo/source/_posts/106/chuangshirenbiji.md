@@ -4,7 +4,6 @@ date: 2022-07-04 08:55:45
 tags: 数据分析
 ---
 
-
 <p align="center">
     <a target="_blank" href='https://url.cn/Z4lzPLaF'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
@@ -13,12 +12,12 @@ tags: 数据分析
 
 
 
-<p align="center" name="'github">
-    <a target="_blank" href='https://github.com/CoderWanFeng/PyOfficeRobot'>
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star"/>
+<p align="center" name="图标-github">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
     </a>
-    	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
-		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
   	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
 	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
@@ -27,6 +26,7 @@ tags: 数据分析
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
+
 
 ### 《利用Python进行数据分析》 - 电子书
 
@@ -74,3 +74,10 @@ tags: 数据分析
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
+
+
+<p align="center">
+    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>

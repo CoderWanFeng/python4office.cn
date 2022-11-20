@@ -6,6 +6,21 @@ tags:
 
 
 
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='外卖-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
 > 以下所有蓝色链接，都可以点击。
 >以下内容包含：
 >1、探索心理测试
@@ -48,6 +63,7 @@ tags:
     - [情商测试「专业版」](http://www.urlort.cn/2UJvx1)
     - [你能从人际关系中获得多少支持？](http://www.urlort.cn/2UJx8c)
     - [家庭-工作平衡度评估](http://www.urlort.cn/2VT4V5)
+    - [硅谷精英的冥想课](http://url.newrank.cn/9QmU5c)
 
 ## 2、心理视频的链接
 

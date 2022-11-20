@@ -7,61 +7,35 @@ tags: [自动化办公,团队介绍]
 
 
 
-
-
 <p align="center">
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license"/>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
     </a>   
 </p>
-<p align="center">
-	<strong>🍬python for office</strong>
-</p>
-<p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
-</p>
 
 
-<p align="center" name="'github">
+
+<p align="center" name="图标-github">
     <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
     </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues"/>
-    </a>	
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license"/>
-    </a>   
-</p>
-
-<p align="center" name="gitee">
-	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office/'>
-		<img src='https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork"/>
-	</a>
-	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
+  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
+	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  </a>
+    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
+  </a>
 </p>
-
-
 
 
 
 
 # Python自动化办公社区，团队协作仓库。
 
-本仓库是 ⛳[Python自动化办公社区](https://gitee.com/zhaofeng092/python_auto_office/blob/master/%E5%85%B3%E9%94%AE%E8%AF%8D/%E7%BE%A4%E8%81%8A/%E5%85%A8%E7%BD%91%E5%90%8C%E5%90%8D.md) 发起维护的 团队 资源列表，内容包括：文章、视频配套代码，团队故事，网站开发、小程序开发等。由「[Python图书馆](https://space.bilibili.com/259649365)」、「[Web图书馆](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg3MDU3OTgxMg==&action=getalbum&album_id=1904783288632721409&scene=173&from_msgid=2247489811&from_itemidx=2&count=3&nolastread=1#wechat_redirect)」、「[栗姐说写作变现](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4MzE2Mzk1NA==&action=getalbum&album_id=1851500109679673345&scene=173&from_msgid=2649303563&from_itemidx=2&count=3&nolastread=1#wechat_redirect)」、「[法学万轻舟](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIxNzEzNTA4OA==&action=getalbum&album_id=2056406806263824384&scene=173&from_msgid=2650208172&from_itemidx=1&count=3&nolastread=1#wechat_redirect)」微信公号团队维护更新。
+本仓库是 ⛳[Python自动化办公社区](https://www.python-office.com/) 发起维护的 团队 资源列表，内容包括：文章、视频配套代码，团队故事，网站开发、小程序开发等。由「[Python图书馆](https://space.bilibili.com/259649365)」、「[Web图书馆](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg3MDU3OTgxMg==&action=getalbum&album_id=1904783288632721409&scene=173&from_msgid=2247489811&from_itemidx=2&count=3&nolastread=1#wechat_redirect)」、「[栗姐说写作变现](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4MzE2Mzk1NA==&action=getalbum&album_id=1851500109679673345&scene=173&from_msgid=2649303563&from_itemidx=2&count=3&nolastread=1#wechat_redirect)」、「[法学万轻舟](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIxNzEzNTA4OA==&action=getalbum&album_id=2056406806263824384&scene=173&from_msgid=2650208172&from_itemidx=1&count=3&nolastread=1#wechat_redirect)」微信公号团队维护更新。
 
 
 ### 本项目的参与者

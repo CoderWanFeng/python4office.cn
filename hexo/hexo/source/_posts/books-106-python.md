@@ -3,21 +3,26 @@ title: 106本Python电子书：一网打尽全网Python学习资源~！
 date: 2022-02-21 12:26:49
 tags: [Python,电子书]
 ---
-
-<p align="center">
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
 
 
+<p align="center" id='外卖-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
 
-<p align="center" name="'github">
-    <a target="_blank" href='https://github.com/CoderWanFeng/PyOfficeRobot'>
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star"/>
+
+<p align="center" name="图标-github">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
     </a>
-    	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
-		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
   	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
 	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
@@ -27,6 +32,8 @@ tags: [Python,电子书]
   </a>
 </p>
 
+
+
 ### 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
@@ -34,12 +41,12 @@ tags: [Python,电子书]
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利，点击使用👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
-
-<p align="center">
+<p align="center" id='进群-banner'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
     </a>   
 </p>
+
 ------
 
 
@@ -67,6 +74,12 @@ tags: [Python,电子书]
    - [Python-Docx库 | Word与Python的完美结合（附使用文档）](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247491631&idx=1&sn=c169f107acfb03b2f37661a4b6f50587&chksm=eaf5411add82c80c59af213553db3020d0b5a439b84dcb21086258a6a9b2de2719df0390e32a#rd)
    - [如何用Python处理Excel？Pandas视频教程&官方文档来啦~](https://mp.weixin.qq.com/s/v8GdZ1YpVSy-bwRZyo2n1g)
 
+  <p align="center" id='0基础数据分析-banner'>
+    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
+    </a>   
+</p>
+
 ### 2、初级编程
 
 1. [《Python参考手册》](https://mp.weixin.qq.com/s/Y-Upfqd4HMHJE4Se0drifQ)
@@ -86,6 +99,13 @@ tags: [Python,电子书]
 2. [春招苦短，程序员面试会问啥？](https://mp.weixin.qq.com/s/atmmc22jtH0MESupXnw_Zw)
 
 ### 5、应用开发
+
+<p align="center" id='52讲爬虫-banner'>
+    <a target="_blank" href='https://et3.lagou.com/WR75RzRpsd27C'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
+    </a>   
+</p>
+
 
 - 爬虫
   - [《Python3网络爬虫数据采集》](https://mp.weixin.qq.com/s/MTtkH4sSRSpJV1JOr84P_Q)
@@ -131,3 +151,9 @@ tags: [Python,电子书]
 > 有问必答的 [知识星球](https://t.zsxq.com/Yj6yR3j)和 ✍️[交流群](https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w)，每次更新资源，[兆锋](http://t.cn/A649A0Hp)都会在群里通知的~
 
 ![合集](https://img-blog.csdnimg.cn/20210303170458567.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjMyMTUxNw==,size_16,color_FFFFFF,t_70#pic_center)
+
+<p align="center" id='腾讯云-banner'>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>
