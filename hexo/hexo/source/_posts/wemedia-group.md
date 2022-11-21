@@ -52,26 +52,26 @@ tags: 自媒体
 ![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1-wemedia-group.jpg)
 
 
-> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)。一定要备注：进大群。
+> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)。一定要备注：进大群。
 
 
 ### 二、线上沙龙（免费） + 线下分享会（重庆）
 **线下沙龙预告**
 等口罩稳定后，计划有一场线下沙龙：**拍摄设备如何使用？**
 全员讨论，感兴趣可以加我的微信，进群焦虑~加好友请备注：线下活动。
-我的微信：点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+我的微信：点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 
 ### 三、关于我
 
 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/8Z4pHYo22jz0sEIhyTDBbQ)，兼职做自媒体4年了
 - 🐧 编程知识博主：[B站：程序员晚枫](https://space.bilibili.com/1989702333) | [B站：Python自动化办公社区](https://space.bilibili.com/259649365)
 - 👨‍💻 我的``自媒体``经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 - ⚡ 学习资料，点击领取👉[6套自媒体课程的合集](https://mp.weixin.qq.com/s/VsH82z5sYY61f9RB3unRgQ)
 - 🎁 粉丝福利👉[我的短视频，全是被 夸 火的？？](https://www.xiaohongshu.com/discovery/item/63305311000000001701c8a9)
 
 
-![coder-secret](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![coder-secret](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
 
 <p align="center" id='腾讯云'>
     <a target="_blank" href='https://url.cn/Z4lzPLaF'>

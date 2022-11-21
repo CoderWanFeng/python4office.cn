@@ -5,11 +5,25 @@ tags: 联系我
 ---
 
 
-<p align="center">
+
+<p align="center" id='腾讯云-banner'>
     <a target="_blank" href='https://url.cn/Z4lzPLaF'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
     </a>   
 </p>
+
+<p align="center" id='100本电子书-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/H3us6_7wg2QspGZfGtfDZw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
+
 
 
 
@@ -42,7 +56,7 @@ tags: 联系我
 ### 我的1对1答疑服务
 
 
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 - [我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 

@@ -4,6 +4,23 @@ date: 2022-02-21 10:42:38
 tags: 咖啡
 ---
 
+
+
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='外卖-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
 2019年夏天，我在👉[尼泊尔做义工](https://mp.weixin.qq.com/s/99tUbTqd5S4dLujmnEGJ6w)，店长每天自制各种咖啡，我也体会到了喝咖啡的乐趣。
 正好最近工作稳定下来了，上班没事我也自制各种咖啡来喝一喝，自娱自乐。
 

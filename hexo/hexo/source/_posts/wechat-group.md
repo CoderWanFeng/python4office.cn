@@ -5,20 +5,23 @@ date: 2022-08-22 22:36:44
 tags: 微信群
 ---
 
-
-<p align="center" id='支付宝'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+<p align="center" id='腾讯云-banner'>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
     </a>   
 </p>
 
-
-<p align="center" id='外卖'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+<p align="center" id='100本电子书-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/H3us6_7wg2QspGZfGtfDZw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
     </a>   
 </p>
 
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 
@@ -43,23 +46,28 @@ tags: 微信群
 
 
 
-你好，我是Python程序员晚枫，我干了3年编程博主了，
- - 💻我的最新视频：[学编程、学Python接单？根本不可行，别再被割韭菜了！](https://www.bilibili.com/video/BV1wD4y117Zs)
- - 🎇自己的开源项目，获得过开源中国的推荐：[python-office，1行代码实现自动化办公](https://www.python-office.com/)
- - 📱个人网站：[python4office.cn](http://python4office.cn/%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86-1/)
+你好呀，这里是程序员晚枫，如需1对1技术咨询，请点击👉[传送门](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+- [我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
+- 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://mp.weixin.qq.com/s/d2m7xYCLXF8QUlr-5sSuPA)
+- [法学院毕业后，我是怎么成为Python程序员的？](https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ)
+- 个人网站：www.python-office.com
 ## 一、编程交流群
 
 
 我提供的交流群有3个：
 
 ### 1、程序员大群
-- 其一，只需要 **1元** 的技术大群，长期有效，目前400+人的技术大群有5个了：⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/SlG0Bh3dxD3NEc9p7PQLJg)。
-**如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个1元群（广告勿扰），有技术问题发出来，咱们互相学习。**
-**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)。
+其一，只需要 **2元** 的技术大群，长期有效，目前400+人的技术大群有5个了：⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/WArb-brDHhdBYHyZ4cU8_Q)。
+**如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个付费群（广告勿扰），有技术问题发出来，咱们互相学习。**
+**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)。
 
 
+<p align="center" id='付费群的对话'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/WArb-brDHhdBYHyZ4cU8_Q'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/chat.jpg" width="400" height="600"/>
+    </a>   
+</p>
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/chat.jpg)
 
 
 > 免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
@@ -76,8 +84,105 @@ tags: 微信群
 
 
 <!-- more -->
+<p align="center" id='免费技术群'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg" width="300" height="300"/>
+    </a>   
+</p>
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
+
+
+
+<p align="center" id='支付宝'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='外卖'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+
+### 3、编程学习指导
+
+
+如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
+
+<p align="center" id='1对1咨询-banner'>
+    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg" width="300" height='400'/>
+    </a>   
+</p>
+
+
+
+
+
+
+## 二、QQ群
+是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
+
+<p align="center" id='QQ群'>
+    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg" width="300" height="400"/>
+    </a>   
+</p>
+
+
+
+
+
+
+## 三、重庆交流群
+我们用来沉淀自媒体知识的地方，可以免费加入
+
+<p align="center" id='重庆本地群'>
+    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/shalong.jpg'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/shalong.jpg" width="300" height="400"/>
+    </a>   
+</p>
+
+
+
+
+## 四、关于我
+
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
+![CoderWanFeng](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
+- 🐧 编程知识博主
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
+- ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
+- 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
+
+
+
+## 五、推荐课程
+
+以下是一些可以快速学习的资料。
+
+
+
+
+<p align="center" id='腾讯云-banner'>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
 
 <p align="center" id='0基础数据分析-banner'>
     <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
@@ -85,25 +190,11 @@ tags: 微信群
     </a>   
 </p>
 
-
-### 3、编程学习指导
-
-
-如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
-
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='django网站-banner'>
+    <a target="_blank" href='http://gk.link/a/10Wl1'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2FPython%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91.jpg" width="100%"/>
     </a>   
 </p>
-
-
-## 二、QQ群
-是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg)
-
-
 
 <p align="center" id='52讲爬虫-banner'>
     <a target="_blank" href='https://et3.lagou.com/WR75RzRpsd27C'>
@@ -111,46 +202,35 @@ tags: 微信群
     </a>   
 </p>
 
-## 三、免费知识星球
-我们用来沉淀知识的星球，内含丰富资料，可以免费加入
-![CoderWanFeng](/images/star.jpg)
 
 
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
 
-## 四、关于我
+<p align="center" id='100本电子书-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/H3us6_7wg2QspGZfGtfDZw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
+    </a>   
+</p>
 
-你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)
-- 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
-- ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
-- 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+<p align="center" id='实战项目-banner'>
+    <a target="_blank" href='http://www.python4office.cn/python-project-list/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fproject.jpg" width="100%"/>
+    </a>   
+</p>
 
-
-
-## 五、推荐课程
-
-以下是一些可以快速学习的资料
-
-- [100个Python实战项目](http://www.python4office.cn/python-project-list/)
-
-- [106本Python电子书](http://www.python4office.cn/books-106-python/)
-
-- [Python + Excel自动化办公 - 30讲](https://www.bilibili.com/video/BV1hk4y1C73S)
-
-- [Python数据分析 - 100讲](https://www.bilibili.com/video/BV1rU4y1u7og)
-
-- [Python自动化办公 - 50讲](https://www.bilibili.com/video/BV1y54y1i78U)
-
-- [给非程序员的Python入门课](https://www.bilibili.com/video/BV18g411h7jJ)
+<p align="center" id='11个软件-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uE1M8ESBQ3wJ_q-Cl1aNvg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fsoft-11.jpg" width="100%"/>
+    </a>   
+</p>
 
 
-
-
-
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='25个学习资源-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/_01V8I7rVkgvIIo7ygwwQA'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fpy-25-source.jpg" width="100%"/>
     </a>   
 </p>

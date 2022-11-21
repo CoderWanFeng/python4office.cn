@@ -6,19 +6,23 @@ tags: 软件
 
 
 
-<p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+<p align="center" id='腾讯云-banner'>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
     </a>   
 </p>
 
-
-<p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+<p align="center" id='100本电子书-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/H3us6_7wg2QspGZfGtfDZw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
     </a>   
 </p>
 
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 
@@ -55,11 +59,11 @@ tags: 软件
 </p>
 
 ## 二、关于我
-你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)，感谢你看我的视频和文章
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)，感谢你看我的视频和文章
 > 以下是关于我自己的介绍和联系方式
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
-- 💬 我的微信，点击联系👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ5)，[B站：Python自动化办公社区](https://space.bilibili.com/259649365)~
+- 💬 我的微信，点击联系👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)，[B站：Python自动化办公社区](https://space.bilibili.com/259649365)~
 
 
 

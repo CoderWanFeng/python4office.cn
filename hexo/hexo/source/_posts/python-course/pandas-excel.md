@@ -23,10 +23,10 @@ tags: pandas
 
 > 如果有同学，可以跟着课程，把代码和Excel文件还原出来，，并且分享给我，我愿意赞赏现金88元（微信红包）
 
-我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 ## 🙋‍关于我
 
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 - [我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 

@@ -252,6 +252,6 @@ Django维护一个建议新贡献者的页面: https://docs.djangoproject.com/en
 
 一旦你开始贡献，你开始通过IRC，邮件列表与人交流。我强烈建议你去看看组织遵守的礼仪。通常看看这个演示文稿来得到一个简要的了解。 http://www.shakthimaan.com/downloads/glv/presentations/mailing-list-etiquette.pdf 
 
-即使阅读本文后，如果你遇到任何问题。可以随时在微信找我:[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ),或给我发邮件：1957875073@qq.com。
+即使阅读本文后，如果你遇到任何问题。可以随时在微信找我:[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ),或给我发邮件：1957875073@qq.com。
 
 > 本文转载自：[链接](https://linux.cn/article-4628-weixin.html#rd?sukey=cbbc36a2500a2e6c44df210b08b1326f1382f39f0316ec2175bc12c34db5cd80b3b1fe7d06dcfa42e07044652a0ba790)

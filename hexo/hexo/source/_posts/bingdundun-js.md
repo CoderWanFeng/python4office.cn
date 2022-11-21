@@ -4,10 +4,10 @@ date: 2022-02-10 10:45:09
 tags: JavaScript
 ---
 
-### 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](/wechat-group)
 
 ### 冰墩墩进阶款代码

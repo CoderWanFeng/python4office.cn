@@ -88,7 +88,7 @@ datetime.datetime.now() + datetime.timedelta(days=7)#格式化时间
 
 ![](https://www.python-office.com/api/img-cdn/pro-python/time-datetime/convert.jpg)
 
-时间戳和结构化数据、字符串数据之间，可以进行转换。这一点的注意事项见上图，这里不再赘述，如有疑问，可以添加我的微信，进行更加详细的沟通👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+时间戳和结构化数据、字符串数据之间，可以进行转换。这一点的注意事项见上图，这里不再赘述，如有疑问，可以添加我的微信，进行更加详细的沟通👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 
 #### 参考资料
 1. [万字总结！Python 实现定时任务的八种方案](https://mp.weixin.qq.com/s/jWWQyWr6Y3PnFJ2slcK2Xw)

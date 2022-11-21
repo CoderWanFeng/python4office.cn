@@ -3,10 +3,25 @@ title: 视频教程推荐
 date: 2022-02-09 13:08:33
 tags:
 ---
-### 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1sd4y1c7T9)
+
+
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='外卖-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/dAm2B09i2ZaqCwhwP-AEdQ)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](http://www.python4office.cn/wechat-group)
 
 ### 视频教程
@@ -86,4 +101,4 @@ tags:
 | [推荐系统及算法实践十八式](https://t7.lagounews.com/rRD6R5RDsr403) | 前阿里巴巴算法专家 |
 | [大数据技术基础 22 讲](https://t5.lagounews.com/rRE7R8RCsr72E) |  |
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
