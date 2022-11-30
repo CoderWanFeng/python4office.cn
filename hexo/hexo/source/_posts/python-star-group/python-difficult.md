@@ -6,7 +6,7 @@ tags:
 
 
 
-大家好，这里是程序员晚枫，[知识星球：Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
+大家好，这里是程序员晚枫，[https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQPython读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
 
 昨晚收到一个常见的星球提问，今天来详细回复一下。
 

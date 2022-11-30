@@ -69,7 +69,7 @@ tags: 软件
 
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://et3.lagou.com/WR75RzRpsd27C'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -83,5 +83,12 @@ tags: 软件
 <p align="center" id='django网站-banner'>
     <a target="_blank" href='http://gk.link/a/10Wl1'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2FPython%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='滴滴-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
     </a>   
 </p>

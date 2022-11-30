@@ -4,7 +4,11 @@ date: 2022-11-14 17:13:43
 tags: 招聘
 ---
 
-
+<p align="center" id='滴滴-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
+    </a>   
+</p>
 
 <p align="center" id='支付宝-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
@@ -14,7 +18,7 @@ tags: 招聘
 
 
 <p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
@@ -38,15 +42,15 @@ tags: 招聘
 </p>
 
 
-# 国企招聘 官方渠道
+# 1、国企招聘 官方渠道
 
 以下链接，点击直达👇
 
 - [全国国资委名单](http://www.sasac.gov.cn/n4422011/n17627531/c17633273/content.html)
 - [全国服务中心-招聘专栏](http://job.mohrss.gov.cn/cjobs/institution/listInstitution)
-- [值得程序员加入的173家国企汇总，网友：这下彻底躺平了！](https://mp.weixin.qq.com/s/zef2BWH2rLNn_9rix1zjXQ)
+- [值得程序员加入的173家国企汇总，网友：这下彻底躺平了！](https://www.bilibili.com/video/BV1nM411k7ub)
 
-# 上岸交流群
+# 2、上岸交流群
 
 - 国企求职交流群，扫码加入👇
 ![点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wf-work.jpg)

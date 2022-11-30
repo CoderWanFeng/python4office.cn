@@ -28,11 +28,11 @@ tags: 联系我
 
 
 <p align="center" name="图标-github">
-    <a target="_blank" href='https://github.com/CoderWanFeng/PyOfficeRobot'>
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star"/>
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
     </a>
-    	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
-		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
   	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
 	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
@@ -41,7 +41,10 @@ tags: 联系我
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
-### [联系我](http://python4office.cn/account-display/)
+
+
+
+## [联系我](http://python4office.cn/account-display/)
 
 - 你好呀，我是``程序员晚枫``。
 
@@ -61,138 +64,115 @@ tags: 联系我
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
 > ⭐今年我推出了陪你学习1年的Python学习服务，如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+
+<p align="center" id='1对1咨询-banner'>
+    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg" width="300" height='400'/>
+    </a>   
+</p>
+
 
 
 ### QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg)
+
+<p align="center" id='QQ群'>
+    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg" width="300" height="400"/>
+    </a>   
+</p>
 
 
 ### 免费读者群
 我们用来交流Python知识的读者群，可以免费加入，广告勿扰
-👉[读者群](http://www.python4office.cn/wechat-group/)
+
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    </a>   
+</p>
 
 
-- 👇下面是这3年里，我录制的学习资料，拿走不谢！
+### 学习资源
 
-
-
-### ①Python入门&自动化办公
-
-<!-- more -->
-
-
-- 视频
-
-  - 👉[2020年-Python自动化办公（可能是B站内容最全的！有源代码 ，适合小白~）](https://www.bilibili.com/video/BV12K411N7nx)
-  - [2021年-【高级应用】Python自动化办公](https://www.bilibili.com/video/BV1Ty4y1D7wZ)
-  - [花了2万多买的Python教程全套，现在分享给大家，入门到精通(Python全栈开发教程)](https://www.acfun.cn/v/ac20463077)
-  - [推荐5个Excel自动化办公免费学习资源~（数据分析、Python、VBA等）](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247486060&idx=1&sn=d659e07f6f720130e5e58ba43be4cb4d&chksm=eaf6ab59dd81224f148f798639c5995a8ab24620a00869231598ee31249e7f827d3b1055f5e3#rd)
-  - [推荐5个Python金融免费学习资源](https://mp.weixin.qq.com/s/x-OgceFo2TuILQMUduCmZw)
-  - [学了Python，可以做哪些兼职月入过万？](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247486237&idx=1&sn=27659d6e6703d3a7a2c229dccba75e0a&chksm=eaf6aa28dd81233ea76c79537912fd334ea21d75dced913b243165eb5e3772b2b04661e91e6f#rd)
-
-- 文字：
-
-  - [Python必读好书，这9本份量十足~](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247486593&idx=1&sn=b4d9226cb02272ae014561692ff9fd0b&chksm=eaf6adb4dd8124a2af3525fb73e6dc6f7cc85b9c5bd5efce220c5a8f293d1b88352706828b05#rd)
-
-  - 👉[47页PPT：如何利用Python进行自动化办公？](https://mp.weixin.qq.com/s/k4opXSWsgjBGpu8aUVetSw)
-
-  - 🍓[【福利】10本Python入门到进阶的电子书，15套Python视频教程~](https://mp.weixin.qq.com/s/J4zNQ1heLmZyQBGremqbPQ)
-
-  - [Python经典练习题100道（附链接）](https://mp.weixin.qq.com/s/2xJ_OjGNCN15B1WlN6O_GQ)
-
-  - 👉[买到回家的火车票了吗？用Python免费在12306刷票，还不快来试试~](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247488665&idx=1&sn=e227f4a916cb7149b8a7bad8ff952bb1&chksm=eaf6b5acdd813cbae215fbc5d0c5ad92db762be876c8453667e6f6e224985b35058fff99f79f#rd)
-
-  - [你以为打上马赛克就安全了吗？用Python一键还原，了解一下？](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247487609&idx=1&sn=3b6adaf948b4480dc0cd76afcd044248&chksm=eaf6b14cdd81385a91d0db36243aae7df096816a376acc9632e1e6483e197ed2b555ca748bde#rd)
-
-  - [成为一名优秀程序员的101个小建议](https://mp.weixin.qq.com/s/FgX-p3pF-_e3e9ZBjM3nEQ)
-
-    
-
-### ②Excel、Word、PPT专项
-
-- 👉[Python自动化办公--Pandas玩转Excel（全30集）](https://www.bilibili.com/video/BV1hk4y1C73S)
-- [【超详细】EXCEL数据分析（分析、公式、函数、可视化）](https://www.bilibili.com/video/BV195411t7vN)
-- 👉[Excel高效学习班（完结 · 附资料）](https://www.acfun.cn/v/ac21081575)
-- [Excel从入门到精通（最新，Excel2019版，附资料）](https://mp.weixin.qq.com/s/a7sV6d-UfIqSYxxgyTr_8A)
-- [Excel自动化办公推荐教材](https://gitee.com/zhaofeng092/python_auto_office/blob/master/B%E7%AB%99/%E3%80%90%E8%B6%85%E8%AF%A6%E7%BB%86%E3%80%91EXCEL%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/book.md)
-- 
-- [88个你不知道的Word神技能：5秒搞定排版、算数、翻译、去水印、文档恢复，一套解决所有办公软件难题！](http://www.urlort.cn/2INdQ9)
-- [微软MOS专家教你：学完这8堂课，普通人也能快速高效做出高质量PPT](http://www.urlort.cn/2TcFXb)
-- [微软OFFICE讲师：实用有趣的Excel课，轻松搞定各种表格，让你工作更高效](http://www.urlort.cn/2TcG46)
+👇下面是这3年里，我整理的学习资料，拿走不谢！
 
 
 
-### ③Python爬虫
-
-- [Python爬虫案例实战（2020 · 周更）](https://www.bilibili.com/video/BV15E411P7ey?p=1)
-- [2020年Python爬虫全套课程（学完可做项目）](https://www.acfun.cn/v/ac20437401)
-- 🆒[52讲轻松搞定网络爬虫](https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow)：如果你想学爬虫，听这一套足够了，不用听其它课程了。
-
-
-
-### ④数据分析&数据可视化
-
-- 🔥[七周成为数据分析师](https://www.acfun.cn/v/ac19843284)
-
-- [Power BI教程_商业数据可视化](https://www.acfun.cn/v/ac19838235)
-
-- 🉑[数据分析和可视化精讲](http://t.cn/A6qlcSCV)
-
-- [掌握高效数据可视化技法（完结）](https://www.acfun.cn/v/ac20848856)
-
-- [内幕：报价上万的大屏数据可视化，成本只有10分钟？（附18套可视化模板）](https://www.bilibili.com/video/BV1Kz4y1r76w)
-
-- [手摸手搭建python数据可视化平台（2020 · 周更）](https://www.bilibili.com/video/BV1zi4y1t7YU)
-
-- [耗子尾汁！各行业都极其加分的数据分析，到底应该怎么学？](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247486878&idx=1&sn=3515dcfefce834965458906dc9ce2880&chksm=eaf6acabdd8125bdefd77bf34c50b9afa916df9aec0652fe9d87ed78e1230f7d99da4edbddbc#rd)
-
-  
-
-### ⑤聊天机器人&微信机器人
-
-- [我是如何通过微信机器人，实现自动回复的？](https://www.bilibili.com/video/BV1Q64y1Z7TB)
-- [机器人的软件和源代码](https://gitee.com/zhaofeng092/python_auto_office/blob/master/%E5%85%B3%E9%94%AE%E8%AF%8D/%E6%9C%BA%E5%99%A8%E4%BA%BA.md)
-
-- [腾讯AI聊天机器人源代码，复制粘贴就能聊](https://mp.weixin.qq.com/s/8ZdQtc2zlkUVG_g8__RlJA)
-- 💖[彩虹屁机器人 · 源代码](https://mp.weixin.qq.com/s/KarWOWBxpx2x6V02K2sPHQ)
-- [彩虹屁机器人 + AI · 全套教程](http://t.cn/A6qaFUZw)
-- [部署机器人](https://mp.weixin.qq.com/s/xT3TSZTPH4O7uDMuJBElgw)(以下两家性能无差别)：
-  - [阿里云（市场占有率高）](http://t.cn/A6qV0C42)
-  - [腾讯云（方便在微信操作）](https://curl.qcloud.com/HBu2xulk)
-- [Django：机器人如何部署在服务器上？](https://www.bilibili.com/video/BV1t54y127y3)
+<p align="center" id='腾讯云-banner'>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 
-### ⑥小程序开发
-
-- 🉑[新视频：腾讯官方！微信小程序开发](https://mp.weixin.qq.com/s/Zs9KrzSonUfKPU4JFgEFPg)：这是腾讯小程序团队自己出的课程，想学小程序的话，还有比这更好的课吗？
-- [老视频：纯干货！5小时搞定小程序开发~](https://www.bilibili.com/video/BV1Vp4y1k71p)
 
 
 
-### ⑦心理分析
+<p align="center" id='0基础数据分析-banner'>
+    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
+    </a>   
+</p>
 
-- 👉[武志红：成为你自己（2020 · 全90讲）](https://www.bilibili.com/video/BV1mi4y1j7DF)
-- [荣格心理分析入门：认识你自己【全】](https://www.acfun.cn/v/ac20499334)
-- 🏃[职业优势测试](https://mp.weixin.qq.com/s/OKQYnpnnSmUyl33-WVak3g)：找到自己的优势，巩固优势，并用优势取胜，这个【田忌赛马】的故事，从上小学开始就明白。但是长大后，很多人却把时间花在寻找并改正自己的缺点上。我觉得这是一个悲哀。
-- 🌟[潜在心理创伤测试](http://www.urlort.cn/2SIUm2)
-- [你延续着哪些来自童年的性格陷阱？](http://www.urlort.cn/2SIUK8)
-- [恋爱心理成熟度评估](http://www.urlort.cn/2SIV69)
+<p align="center" id='django网站-banner'>
+    <a target="_blank" href='http://gk.link/a/10Wl1'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2FPython%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='52讲爬虫-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 
-### 待分类
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
 
-- [Google工程师：TensorFlow2.0入门到进阶](https://www.acfun.cn/v/ac18888954)
-- 🔨[Vue高度还原饿了么APP（完结 · 附源码）](https://www.acfun.cn/v/ac21081272)
-- [别说程序员不懂浪漫，用代码一样可以花式表白~](https://www.bilibili.com/video/BV1zi4y1V73n)
-- [用上这12个Chrome扩展功能，每年省出1个年假的时间~](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247487179&idx=1&sn=2246bc53f52d738001538d9ffff9a14a&chksm=eaf6affedd8126e85f389c4e9fcd1ba0b6a5f07364ec786bfc7e82c1e8ef4ec003e56484e56f#rd)
-- [用代码写了一段银河](https://mp.weixin.qq.com/s/ySzv7ychUjof0lhFjSjS7w)
-- [早知道这些查询数据的API，我还学什么爬虫啊.doc](https://mp.weixin.qq.com/s/QFlh0OB-niHupylvTPC24g)
-- [一个开源工具箱，帮你找出被偷走的个人数据~！](https://mp.weixin.qq.com/s/szHwiXrC6Xl1gsjEPm6APw)
-- [用 Python 修改微信（支付宝）运动步数，轻松 TOP1](https://mp.weixin.qq.com/s/hVR1NDcxc3sh6v6k4g1QZQ)
-- [自从我用了这 7 个神奇的办公软件，效率提高了，人也精神了](https://mp.weixin.qq.com/s/SaCpaqbsOp2AU6f7F4MqgA)
+<p align="center" id='100本电子书-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/H3us6_7wg2QspGZfGtfDZw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='实战项目-banner'>
+    <a target="_blank" href='http://www.python4office.cn/python-project-list/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fproject.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='11个软件-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uE1M8ESBQ3wJ_q-Cl1aNvg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fsoft-11.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='25个学习资源-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/_01V8I7rVkgvIIo7ygwwQA'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fpy-25-source.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='外卖-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
 
 

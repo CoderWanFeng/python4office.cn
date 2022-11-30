@@ -1,13 +1,225 @@
 ---
-title: java-study-grammer
+title: Java学习路线
 date: 2022-11-02 00:06:19
 tags:
 ---
 
+<p align="center" id='腾讯云-banner'>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    </a>   
+</p>
+
+# 常见面试
+
+类加载顺序：https://blog.csdn.net/weixin_44843569/article/details/121616483
+
+- 面试问题：https://blog.csdn.net/weixin_43490763/article/details/120467259
+
+- 设计模式：
+
+redis：雪崩、击穿
+
+
+多线程和锁：乐观锁（redis锁）
+
+jvm：堆栈的区别
+
+微服务：
+    服务熔断、降级
+    组件和服务调用
+
+
+设计模式：观察者模式、适配器模式
+
+gc：CMS和G1
+
+深拷贝怎么实现？
+
+数据库优化
+
+get和post的区别
+
+
+# 学习路线
+
+1、java基础：https://www.bilibili.com/video/BV1fh411y7R8/?p=633
+
+2、mybatis boot mysql：
+
+mysql：https://www.bilibili.com/video/BV13p4y1Q74y/
+
+mybatis:https://www.bilibili.com/video/BV1mW411M737/?p=6
+
+boot：https://www.bilibili.com/video/BV19K4y1L7MT/?p=34
+
+3、docker & k8s & nginx
+
+- nginx:https://www.bilibili.com/video/BV1zJ411w7SV/
+
+- docker
+
+- k8s：https://www.bilibili.com/video/BV1K5411N7j8/
+
+4、redis：https://www.bilibili.com/video/BV1Rv41177Af/
+
+5、设计模式：https://www.bilibili.com/video/BV1G4411c7N4/
+
+6、数据结构和算法：https://www.bilibili.com/video/BV1E4411H73v/?p=2
+
+7、cloud：https://www.bilibili.com/video/BV18E411x7eT/?p=95
+
+操作系统：https://www.bilibili.com/video/BV1uW411f72n/?p=28
+
+计算机网络：https://www.bilibili.com/video/BV1c4411d7jb/?p=28
+
+netty:https://www.bilibili.com/video/BV1DJ411m7NR/?p=4
+
+dubbo:https://www.bilibili.com/video/BV1ns411c7jV/?p=25
+
+
+
 [学习路线](https://luxian.yupi.icu/#/roadmap/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF?id=%e9%98%b6%e6%ae%b5-1%ef%bc%9ajava-%e5%85%a5%e9%97%a8)
+
+
+# 拓展资料
 
 java版本：https://www.oracle.com/java/technologies/java-se-support-roadmap.html
 
 java11的新特性：https://mp.weixin.qq.com/s/meI2E2UBoflzXi1Ow4Fr1Q
 
 jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123485244
+
+
+
+
+
+# 福利资料
+
+
+
+<p align="center" id='腾讯云-banner'>
+    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+
+<p align="center" id='0基础数据分析-banner'>
+    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='django网站-banner'>
+    <a target="_blank" href='http://gk.link/a/10Wl1'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2FPython%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='52讲爬虫-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='100本电子书-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/H3us6_7wg2QspGZfGtfDZw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='实战项目-banner'>
+    <a target="_blank" href='http://www.python4office.cn/python-project-list/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fproject.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='11个软件-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uE1M8ESBQ3wJ_q-Cl1aNvg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fsoft-11.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='25个学习资源-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/_01V8I7rVkgvIIo7ygwwQA'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fpy-25-source.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='外卖-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='滴滴-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+
+<!-- 以上是1040 * 100 -->
+<p align="center" name="图标-github">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
+  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
+	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  </a>
+    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
+  </a>
+</p>
+
+<p align="center" id='1对1咨询-banner'>
+    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg" width="300" height='400'/>
+    </a>   
+</p>
+
+<p align="center" id='QQ群'>
+    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg" width="300" height="400"/>
+    </a>   
+</p>

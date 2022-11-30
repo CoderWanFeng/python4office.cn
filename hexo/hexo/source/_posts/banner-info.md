@@ -1,6 +1,6 @@
 ---
 title: 网站通用banner代码
-date: 2023-11-19 01:46:16
+date: 2019-11-19 01:46:16
 tags: banner
 ---
 
@@ -35,7 +35,7 @@ tags: banner
 </p>
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://et3.lagou.com/WR75RzRpsd27C'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -82,11 +82,23 @@ tags: banner
 
 
 <p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/KfjQBf1n_slziZxeOQnhzQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
 
+
+<p align="center" id='滴滴-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='话费充值-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/WIxNowXwVJu1Pugq16AQrA'>
+    < img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fphone-92-1.jpg" width="100%"/>
+    </ a>   
+</p >
 
 
 <!-- 以上是1040 * 100 -->

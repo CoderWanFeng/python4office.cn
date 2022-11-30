@@ -5,7 +5,7 @@ tags:
 ---
 ![](https://www.python-office.com/api/img-cdn/pro-python/time-datetime/cover.jpg)
 
-大家好，这里是程序员晚枫。Python学习服务：[点我查看](https://mp.weixin.qq.com/s/cKPXrt2i_kcRZ4MP7nxSiQ)
+大家好，这里是程序员晚枫。Python学习服务：[点我查看](http://www.python4office.cn/wechat-group/)
 
 在Python中，表示时间的格式一共有3种：时间戳、结构化时间、格式化时间，2个模块：time、datetime。
 
@@ -95,3 +95,10 @@ datetime.datetime.now() + datetime.timedelta(days=7)#格式化时间
 2. [1.7w 字总结！Python 如何处理日期与时间？](https://mp.weixin.qq.com/s/8vLnORTr8oMU9rMMf3hzLw)
 3. https://www.bilibili.com/video/BV1pT4y1k7FH
 -----
+
+
+<p align="center" id='滴滴-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
+    </a>   
+</p>

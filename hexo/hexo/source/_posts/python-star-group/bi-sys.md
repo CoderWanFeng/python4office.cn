@@ -12,7 +12,7 @@ tags:
 之前给大家分享过一个视频👇
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/bi-course/3-min.jpg)
 
-今天收到了[知识星球：Python读者圈](https://mp.weixin.qq.com/s/cKPXrt2i_kcRZ4MP7nxSiQ)里的提问：晚枫，如何使用Python开发这样一个大屏数据可视化系统？完整的技术方案是什么？
+今天收到了[知识星球：Python读者圈](http://www.python4office.cn/wechat-group/)里的提问：晚枫，如何使用Python开发这样一个大屏数据可视化系统？完整的技术方案是什么？
 
 于是我就写了一篇文章，给他详细讲了一下实现方案 + 学习计划 + 推荐资料。
 
