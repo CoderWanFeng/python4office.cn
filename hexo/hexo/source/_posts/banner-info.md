@@ -35,7 +35,7 @@ tags: banner
 </p>
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
+    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -73,9 +73,15 @@ tags: banner
     </a>   
 </p>
 
+<p align="center" id='实战项目-宽-banner'>
+    <a target="_blank" href='http://www.python4office.cn/python-project-list/'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/projects-100.jpg" width="100%"/>
+    </a>   
+</p>
+
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -84,6 +90,12 @@ tags: banner
 <p align="center" id='外卖-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='阿凡达2-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/-_Zw-9UI2oMGELssBRjRHQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Ftemp%2Favatar2.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -96,9 +108,21 @@ tags: banner
 
 <p align="center" id='话费充值-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/WIxNowXwVJu1Pugq16AQrA'>
-    < img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fphone-92-1.jpg" width="100%"/>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fphone-92-1.jpg" width="100%"/>
     </ a>   
-</p >
+</p>
+
+<p align="center" id='3k副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F3k-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 <!-- 以上是1040 * 100 -->

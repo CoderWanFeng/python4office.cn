@@ -59,8 +59,8 @@ tags: 联系我
 ### 我的1对1答疑服务
 
 
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
-- [我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
+你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+- 👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
 > ⭐今年我推出了陪你学习1年的Python学习服务，如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
@@ -123,7 +123,7 @@ tags: 联系我
 </p>
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
+    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -163,7 +163,7 @@ tags: 联系我
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>

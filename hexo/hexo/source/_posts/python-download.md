@@ -59,17 +59,17 @@ tags: 软件
 </p>
 
 ## 二、关于我
-你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)，感谢你看我的视频和文章
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)，感谢你看我的视频和文章
 > 以下是关于我自己的介绍和联系方式
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
-- 💬 我的微信，点击联系👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)，[B站：Python自动化办公社区](https://space.bilibili.com/259649365)~
+- 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
+- 💬 我的微信，点击联系👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)，[B站：Python自动化办公社区](https://space.bilibili.com/259649365)~
 
 
 
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
+    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -87,8 +87,8 @@ tags: 软件
 </p>
 
 
-<p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
-    </a>   
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
 </p>

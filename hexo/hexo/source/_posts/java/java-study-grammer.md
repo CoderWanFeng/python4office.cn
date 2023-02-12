@@ -17,16 +17,34 @@ tags:
     </a>   
 </p>
 
+[学习路线](https://luxian.yupi.icu/#/roadmap/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF?id=%e9%98%b6%e6%ae%b5-1%ef%bc%9ajava-%e5%85%a5%e9%97%a8)
+
+
+# 工具
+
+maven仓库：https://mvnrepository.com/
+
+代码规范：https://developer.aliyun.com/live/1201
+
 # 常见面试
 
 类加载顺序：https://blog.csdn.net/weixin_44843569/article/details/121616483
 
+Java程序员如何写简历？ - 敖丙的回答 - 知乎
+https://www.zhihu.com/question/23527137/answer/1008285022
+
+mysql优化：https://www.bilibili.com/video/BV1iq4y1u7vj/?p=159
+
 - 面试问题：https://blog.csdn.net/weixin_43490763/article/details/120467259
+    - https://blog.csdn.net/w20001118/article/details/125724647
 
 - 设计模式：
 
 redis：雪崩、击穿
 
+mybatis中#和$的区别
+
+联合索引和多个索引的区别
 
 多线程和锁：乐观锁（redis锁）
 
@@ -36,8 +54,19 @@ jvm：堆栈的区别
     服务熔断、降级
     组件和服务调用
 
+红黑树为什么用
+垃圾回收的区别
+mr中矩阵计算的逻辑
+
+ioc、aop
 
 设计模式：观察者模式、适配器模式
+
+mysql有哪些事务？
+
+boot的常用注解
+
+boot的加载顺序
 
 gc：CMS和G1
 
@@ -86,7 +115,6 @@ dubbo:https://www.bilibili.com/video/BV1ns411c7jV/?p=25
 
 
 
-[学习路线](https://luxian.yupi.icu/#/roadmap/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF?id=%e9%98%b6%e6%ae%b5-1%ef%bc%9ajava-%e5%85%a5%e9%97%a8)
 
 
 # 拓展资料
@@ -134,7 +162,7 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
 </p>
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
+    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -174,7 +202,7 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -187,10 +215,10 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
 </p>
 
 
-<p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
-    </a>   
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
 </p>
 
 

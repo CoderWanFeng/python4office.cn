@@ -4,7 +4,7 @@ date: 2022-10-10 10:41:54
 tags: 知识星球
 ---
 
-你好，我是在重庆的程序员晚枫，今天讲讲自己的经历。个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
+你好，我是在重庆的程序员晚枫，今天讲讲自己的经历。个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
 
 
 ## 源起

@@ -20,17 +20,16 @@ tags: 软件
     </a>   
 </p>
 
-<p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
-    </a>   
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
 </p>
 
 # 1、安装包 - 下载地址
 11个软件，都打包好了
 
-- 链接：https://pan.baidu.com/s/1WIEq_WQPrW_3YEJVh_RZCA?pwd=nno7 
-- 提取码：nno7
+- 链接：https://pan.quark.cn/s/ff07bf93c859
 
 其中，PyCharm的⭐破解教程：https://mp.weixin.qq.com/s/CHT8a7UNxEg7mn7LEMl8fA
 不破解的话，一年收费1800元。白嫖它不香吗？

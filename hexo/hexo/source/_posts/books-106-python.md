@@ -4,7 +4,7 @@ date: 2022-02-21 12:26:49
 tags: [Python,电子书]
 ---
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -34,9 +34,9 @@ tags: [Python,电子书]
 
 
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
+- 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利，点击使用👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
@@ -68,7 +68,7 @@ tags: [Python,电子书]
 4. [423页PDF：《Python编程初学者指南》](https://mp.weixin.qq.com/s/mwJ8AU9VbSTmhlzVGnMHuw)
    - 👉自动化办公
    - 🔥[超简单：用Python让Excel飞起来](https://mp.weixin.qq.com/s/2ftJGR-iQx3IbbuyGOvMMg)
-   - [409页PDF：《Python：让繁琐工作自动化》](https://mp.weixin.qq.com/s/3ZRf8kO7z1Gd49NCqpln9Q)
+   - [409页PDF：《Python：让繁琐工作自动化》](https://mp.weixin.qq.com/s/tx2X-g9WwKVwBJ_X0I4Orw)
    - [《Python数据分析基础》](https://mp.weixin.qq.com/s/dZxIxnHjaQQF4-AO10TZvA)
    - [PyXLL库 | Excel与Python的完美结合（附使用文档）](https://mp.weixin.qq.com/s/akrlI19XuDlrmInLWWLelA)
    - [Python-Docx库 | Word与Python的完美结合（附使用文档）](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247491631&idx=1&sn=c169f107acfb03b2f37661a4b6f50587&chksm=eaf5411add82c80c59af213553db3020d0b5a439b84dcb21086258a6a9b2de2719df0390e32a#rd)
@@ -101,7 +101,7 @@ tags: [Python,电子书]
 ### 5、应用开发
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
+    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>

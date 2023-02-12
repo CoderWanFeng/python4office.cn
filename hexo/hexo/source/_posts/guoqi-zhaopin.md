@@ -4,18 +4,13 @@ date: 2022-11-14 17:13:43
 tags: 招聘
 ---
 
-<p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
-    </a>   
-</p>
+
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
-
 
 <p align="center" id='外卖-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
@@ -53,12 +48,19 @@ tags: 招聘
 # 2、上岸交流群
 
 - 国企求职交流群，扫码加入👇
-![点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wf-work.jpg)
+![点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1-wemedia-group.jpg)
 
 <p align="center">
     <a target="_blank" href='https://url.cn/Z4lzPLaF'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
     </a>   
 </p>
+
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
+</p>
+
 
 

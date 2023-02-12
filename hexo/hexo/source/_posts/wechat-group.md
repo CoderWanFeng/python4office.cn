@@ -12,11 +12,12 @@ tags: 微信群
     </a>   
 </p>
 
-<p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
+
 
 
 
@@ -57,13 +58,13 @@ tags: 微信群
     </a>   
 </p>
 
-其一，只需要 **1元** 的技术大群，长期有效，目前400+人的技术大群有5个了：
+其一，只需要 **2元** 的技术大群，长期有效，目前400+人的技术大群有5个了：
 
 > ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/WArb-brDHhdBYHyZ4cU8_Q)。
 
 
 **如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个付费群（广告勿扰），有技术问题发出来，咱们互相学习。**
-**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)。
+**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)。
 
 > 免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
 加了对你不能说是没用，只能说是一点用都没有。你可以扫码下面2中的免费群，进去看看。
@@ -93,6 +94,7 @@ tags: 微信群
 
 > 温馨提示：免费群里，请不要频繁@群主，免费群不答疑。群主只是个打工人，兼职做编程知识分享，不想被手机轰炸。
 
+【python-office常见问题】：https://www.python-office.com/ref/qaq.html
 
 <!-- more -->
 <p align="center" id='免费技术群'>
@@ -113,7 +115,7 @@ tags: 微信群
 
 
 你好呀，这里是程序员晚枫，如需1对1技术咨询，请点击👉[传送门](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
-- [我竟然赚到了世界500强的钱！网友：重庆是自媒体人的天堂！](https://mp.weixin.qq.com/s/rCQqKng7Rkufqq5Xk5ygjw)
+- 👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://mp.weixin.qq.com/s/d2m7xYCLXF8QUlr-5sSuPA)
 - [法学院毕业后，我是怎么成为Python程序员的？](https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ)
 - 个人网站：www.python-office.com
@@ -144,7 +146,7 @@ tags: 微信群
 
 
 <p align="center" id='支付宝'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UsFs6ooDspyhhKMleKTVpw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -173,10 +175,10 @@ tags: 微信群
 
 ## 四、关于我
 
-你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
 ![CoderWanFeng](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
 - 🐧 编程知识博主
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
@@ -218,7 +220,7 @@ tags: 微信群
 </p>
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'>
+    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -254,4 +256,11 @@ tags: 微信群
     <a target="_blank" href='https://mp.weixin.qq.com/s/_01V8I7rVkgvIIo7ygwwQA'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fpy-25-source.jpg" width="100%"/>
     </a>   
+</p>
+
+
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
 </p>

@@ -88,7 +88,7 @@ datetime.datetime.now() + datetime.timedelta(days=7)#格式化时间
 
 ![](https://www.python-office.com/api/img-cdn/pro-python/time-datetime/convert.jpg)
 
-时间戳和结构化数据、字符串数据之间，可以进行转换。这一点的注意事项见上图，这里不再赘述，如有疑问，可以添加我的微信，进行更加详细的沟通👉[CoderWanFeng](https://mp.weixin.qq.com/s/4Br2YXCinQEHseJwdtGAsQ)
+时间戳和结构化数据、字符串数据之间，可以进行转换。这一点的注意事项见上图，这里不再赘述，如有疑问，可以添加我的微信，进行更加详细的沟通👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
 
 #### 参考资料
 1. [万字总结！Python 实现定时任务的八种方案](https://mp.weixin.qq.com/s/jWWQyWr6Y3PnFJ2slcK2Xw)
@@ -97,8 +97,8 @@ datetime.datetime.now() + datetime.timedelta(days=7)#格式化时间
 -----
 
 
-<p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
-    </a>   
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
 </p>

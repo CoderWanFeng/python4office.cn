@@ -12,10 +12,10 @@ tags:
     </a>   
 </p>
 
-<p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
-    </a>   
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
 </p>
 
 
@@ -40,6 +40,19 @@ tags:
 
 
 
+# 1、入门项目
+
+1行Python代码下载图片：https://mp.weixin.qq.com/s/H9NVBxwo_po8WsqsIRJ7YQ
+
+微博爬虫：https://mp.weixin.qq.com/s/z9ToYLZSbDxOOKgdxd2Kww
+
+<p align="center" id='52讲爬虫-banner'>
+    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
+    </a>   
+</p>
+
+# 2、高级项目
 
 1. WechatSogou – 微信公众号爬虫
 
@@ -101,7 +114,11 @@ github地址：
 
 https://github.com/LiuXingMing/SinaSpider
 
-
+<p align="center" id='52讲爬虫-banner'>
+    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
+    </a>   
+</p>
 
 6. distribute_crawler – 小说下载分布式爬虫
 
@@ -168,6 +185,12 @@ https://github.com/hanc00l/wooyun_public
 https://github.com/simapple/spider
 
 
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
+
 
 13. findtrip – 机票爬虫（去哪儿和携程网）。
 
@@ -205,7 +228,11 @@ https://github.com/Shu-Ji/baidu-music-spider
 
 https://github.com/pakoo/tbcrawler
 
-
+<p align="center" id='0基础数据分析-banner'>
+    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
+    </a>   
+</p>
 
 19. stockholm – 一个股票数据（沪深）爬虫和选股策略测试框架。根据选定的日期范围抓取所有沪深两市股票的行情数据。支持使用表达式定义选股策略。支持多线程处理。保存数据到JSON文件、CSV文件。
 

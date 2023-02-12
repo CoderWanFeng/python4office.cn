@@ -155,10 +155,10 @@ if __name__ == '__main__':
 希望能给你带来帮助。如果想系统的学习Python，欢迎大家扫码加入我的知识星球👉[Python读者圈](https://mp.weixin.qq.com/s/nNhFPD-xNsp2QvFc6HWLNQ)，我们一起学习提高~
 
 
-<p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/S18_mi0gPrIOMUE_orssfg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fdidi-gao.jpg" width="100%"/>
-    </a>   
+<p align="center" id='1w副业-banner'>
+    <a target="_blank" href='http://t.cn/A6KiaiqK'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    </a>   
 </p>
 
 
