@@ -46,35 +46,40 @@ tags: 联系我
 
 ## [联系我](http://python4office.cn/account-display/)
 
-- 你好呀，我是``程序员晚枫``。
+你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+- 👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
+- 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
+- 🤖[法学院毕业后，我是怎么转行程序员的？](https://www.bilibili.com/video/BV1Nr4y1B76X/)
+- 💻[少儿编程，有必要学习吗？](https://www.bilibili.com/video/BV1me4y1d7Ks/)
 
-- ``扫码下图，即可添加我为好友``，
-请写明：``城市 + 目的 + 哪个平台看到我的``~👇会更快通过好友。例如：
+
+> ``扫码下图，即可添加我为好友``，
+> 白天在上班，晚上统一回复。
+> 拜托：没什么需要我做的，就真的勿扰哈~我只是个打工仔，上班太累了，不想花精力说客套话，也不需要那么多不认可我价值的好友，觉得我不值就别加我，简简单单。❤
+
+- 已经加了这个⭐[付费群](https://mp.weixin.qq.com/s/WArb-brDHhdBYHyZ4cU8_Q)的朋友，添加时请直接备注：1024
+- 想要投稿【程序员故事】赚稿费的朋友，请添加时备注：投稿
+- 咨询转行问题、技术答疑的朋友，请添加时备注：咨询，白嫖勿扰。
+
+
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+
+
+
+请写明：``城市 + 目的 + 哪个平台看到我的``~👆会更快通过好友。例如：
     - 重庆 + Python + B站、
     - 北京 + 求职 + 小红书、
     - 广州 + 自媒体 + 微博
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 
-### 我的1对1答疑服务
-
-
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
-- 👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
-
-> ⭐今年我推出了陪你学习1年的Python学习服务，如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-
-<p align="center" id='1对1咨询-banner'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg" width="300" height='400'/>
-    </a>   
-</p>
 
 
 
 ### QQ群
 是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
+
+> 进群问题：群主B站小号叫什么？
+> 正确答案：[程序员晚枫](https://space.bilibili.com/1989702333)
 
 <p align="center" id='QQ群'>
     <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg'>

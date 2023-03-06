@@ -41,8 +41,31 @@ tags: 软件
   </a>
 </p>
 
-## 一、视频中提到的下载和学习资料
+# 一、视频中提到的下载和学习资料
 
+
+## Python和PyCharm的下载链接
+
+### Python下载
+2023年，推荐哪个Python版本？👉[点我查看](https://mp.weixin.qq.com/s/GEKiEJMiubal2oxooNe1JA)
+
+| 版本号       | 下载地址 |
+| -------------- | -------- |
+| 3.7 | [点我直达](https://www.python.org/downloads/release/python-371/)     |
+| ❤3.8 | [点我直达](https://www.python.org/downloads/release/python-389/)     |
+| ⭐3.9 | [点我直达](https://www.python.org/downloads/release/python-399/)     |
+| 3.10 | [点我直达](https://www.python.org/downloads/release/python-3102/)     |
+| 3.11 | [点我直达](https://www.python.org/downloads/release/python-3111/)     |
+| 3.12 | [点我直达](https://www.python.org/downloads/release/python-3120a5/)     |
+
+### PyCharm下载
+
+| 版本号       | 下载地址 |
+| -------------- | -------- |
+| Professional | [点我直达](https://www.jetbrains.com/pycharm/download/download-thanks.html)     |
+| 🏠Community | [点我直达](https://www.jetbrains.com/pycharm/download/download-thanks.html)     |
+
+## 其它软件的下载
 1. 11个编程软件的下载：
     - [安装包下载](https://mp.weixin.qq.com/s/ktmQafdstwep_A5vae_Ymw)
     - [安装包的视频教程](https://www.bilibili.com/video/BV18g411h7jJ?p=3&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)

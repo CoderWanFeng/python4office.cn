@@ -16,9 +16,19 @@ tags: 机器人
 
 # 1、聊天机器人
 
-- ChatGPT，申请api-key：[点我直达](https://openai.com/blog/chatgpt/)
 
-- 1行代码，调用ChatGPT，全部代码：[点我直达](https://mp.weixin.qq.com/s/HJfLZILUOWn4TK8qk3DL9w)
+| 功能       | 说明文档 |网址 |
+| -------------- | -------- |-------- |
+| 🔥ChatGPT官方API | [点我直达](https://mp.weixin.qq.com/s/V1aT99qIAZlhmn9f7WtumQ)     |[点我直达](https://openai.com/blog/introducing-chatgpt-and-whisper-apis) |
+| ChatGPT，申请账号 | [点我直达](https://openai.com/blog/chatgpt/)    |  [点我直达](https://openai.com/blog/chatgpt/)|
+| 复旦发布：国产ChatGPT | [点我直达](https://mp.weixin.qq.com/s/gm73Yvl1r6FaTHUz5T0f3g)     |  [点我直达](http://python4office.cn/chatgpt-fudan/)|
+| ⭐北大发布：ChatGPT + Excel | [点我直达](https://mp.weixin.qq.com/s/8wg8tdrsVEzBm-YExPaIIA)     |  [点我直达](https://chatexcel.com/)|
+| 1行代码，调用ChatGPT | [点我直达](https://mp.weixin.qq.com/s/HJfLZILUOWn4TK8qk3DL9w)     | [点我直达](https://mp.weixin.qq.com/s/HJfLZILUOWn4TK8qk3DL9w)|
+| Siri + ChatGPT | [点我直达](https://mp.weixin.qq.com/s/CxO2w2eNnH6vxzsWwpq7vQ)     | [点我直达](http://python4office.cn/chatgpt/siri-chatgpt-github/)|
+| 📱手机版ChatGPT | [点我直达](https://mp.weixin.qq.com/s/-CuJwDESm1gwImXqnyirVg)     | |
+| 本地部署ChatGPT | [点我直达](https://mp.weixin.qq.com/s/FnYZUORG0xQhFUBdLO6qTw)     |  [点我直达](https://github.com/hpcaitech/ColossalAI)   |
+
+
 
 ⭐微信聊天机器人：[点我直达](https://www.python-office.com/office/robot.html)
 
