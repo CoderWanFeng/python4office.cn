@@ -6,9 +6,9 @@ tags: 软件
 
 
 
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -19,7 +19,7 @@ tags: 软件
 </p>
 
 <p align="center" id='30讲自动化办公-banner'>
-    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <a target="_blank" href='https://www.python-office.com/video/video.html'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
     </a>   
 </p>
@@ -33,10 +33,10 @@ tags: 软件
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -46,24 +46,31 @@ tags: 软件
 
 ## Python和PyCharm的下载链接
 
+
 ### Python下载
+
+> 百度云链接：https://pan.baidu.com/s/15cJdWXnGVZYvxqjnvazZ-g?pwd=oq8d 
+> 提取码：oq8d
+
 2023年，推荐哪个Python版本？👉[点我查看](https://mp.weixin.qq.com/s/GEKiEJMiubal2oxooNe1JA)
 
-| 版本号       | 下载地址 |
-| -------------- | -------- |
-| 3.7 | [点我直达](https://www.python.org/downloads/release/python-371/)     |
-| ❤3.8 | [点我直达](https://www.python.org/downloads/release/python-389/)     |
-| ⭐3.9 | [点我直达](https://www.python.org/downloads/release/python-399/)     |
-| 3.10 | [点我直达](https://www.python.org/downloads/release/python-3102/)     |
-| 3.11 | [点我直达](https://www.python.org/downloads/release/python-3111/)     |
-| 3.12 | [点我直达](https://www.python.org/downloads/release/python-3120a5/)     |
+| 版本号 | 下载地址                                                            |
+| ------ | ------------------------------------------------------------------- |
+| 3.7    | [点我直达](https://www.python.org/downloads/release/python-371/)    |
+| ❤3.8   | [点我直达](https://www.python.org/downloads/release/python-389/)    |
+| ⭐3.9   | [点我直达](https://www.python.org/downloads/release/python-399/)    |
+| 3.10   | [点我直达](https://www.python.org/downloads/release/python-3102/)   |
+| 3.11   | [点我直达](https://www.python.org/downloads/release/python-3111/)   |
+| 3.12   | [点我直达](https://www.python.org/downloads/release/python-3120a5/) |
+
+
 
 ### PyCharm下载
 
-| 版本号       | 下载地址 |
-| -------------- | -------- |
-| Professional | [点我直达](https://www.jetbrains.com/pycharm/download/download-thanks.html)     |
-| 🏠Community | [点我直达](https://www.jetbrains.com/pycharm/download/download-thanks.html)     |
+| 版本号       | 下载地址                                                                    |
+| ------------ | --------------------------------------------------------------------------- |
+| Professional | [点我直达](https://www.jetbrains.com/pycharm/download/download-thanks.html) |
+| 🏠Community   | [点我直达](https://www.jetbrains.com/pycharm/download/download-thanks.html) |
 
 ## 其它软件的下载
 1. 11个编程软件的下载：
@@ -75,6 +82,8 @@ tags: 软件
     - [官网发布：python-office库 | 专为Python自动化办公而生，一行代码提高办公效率](https://www.bilibili.com/video/BV1pT4y1k7FH/)
 
 
+![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/foot/moyu-web.jpg)
+
 <p align="center" id='进群-banner'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
@@ -82,36 +91,15 @@ tags: 软件
 </p>
 
 ## 二、关于我
-你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)，感谢你看我的视频和文章
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)，感谢你看我的视频和文章
 > 以下是关于我自己的介绍和联系方式
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击联系👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)，[B站：Python自动化办公社区](https://space.bilibili.com/259649365)~
+- 💬 我的微信，点击联系👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)，[B站：Python自动化办公社区](https://space.bilibili.com/259649365)~
 
 
 
+---
 
-<p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
-    </a>   
-</p>
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
 
-<p align="center" id='0基础数据分析-banner'>
-    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
-    </a>   
-</p>
-
-<p align="center" id='django网站-banner'>
-    <a target="_blank" href='http://gk.link/a/10Wl1'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2FPython%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91.jpg" width="100%"/>
-    </a>   
-</p>
-
-
-<p align="center" id='1w副业-banner'>
-    <a target="_blank" href='http://t.cn/A6KiaiqK'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
-    </a>   
-</p>

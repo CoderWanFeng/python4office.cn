@@ -30,6 +30,6 @@ tags:
 
 ### 上海 - 买菜互助群
 请添加我的微信，备注：上海，我来邀请你进群
-![CoderWanFeng](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 
 <div style="position:relative;width:100%;height:0;padding-top:55.56%;padding-bottom:36px;margin-top:1.6em;margin-bottom:0.9em;overflow:hidden;border:1px solid #EBEBEB;border-radius:4px;"><iframe loading="lazy" style="position:absolute;width:100%;height:100%;top:0;left:0;border:none;padding:0;margin:0;" src="https://www.gaoding.com/design/view?id=x36QNreMZW&type=embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>

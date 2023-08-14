@@ -13,7 +13,7 @@ tags:
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
+	👉 <a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -45,8 +45,8 @@ tags:
 	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
 		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=dark" alt="gitee fork"/>
 	</a>
-	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
+	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/></a>
 </p>
 
 -------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ tags:
 
 安装
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 代码
 ```
@@ -79,7 +79,7 @@ office.tools.qrcodetools('http://python4office.cn/python-office/profile/')
 
 安装
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 代码
 ```
@@ -98,7 +98,7 @@ office.tools.transtools(to_lang='Chinese', content='hello world')
 安装
 ```
 
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 
 代码
@@ -119,7 +119,7 @@ office.video.video2mp3(path=path, mp3_name='result')
 
 安装
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 代码
 
@@ -139,7 +139,7 @@ office.file.replace4filename(
 
 安装
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 代码
 ```

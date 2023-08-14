@@ -19,7 +19,7 @@ tags: python-office
 - 问题原因：目前python-office的部分功能，不适配mac系统
 - 解决方法：新开了一个库：python-office-mac，下载命令：
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office-mac -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office-mac -U
 ```
 
 ## 问题：如何参与项目的开发，给python-office增加自己的方法

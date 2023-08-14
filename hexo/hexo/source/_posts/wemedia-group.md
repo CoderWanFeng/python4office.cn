@@ -6,7 +6,7 @@ tags: 自媒体
 
 
 <p align="center" id='支付宝'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -29,10 +29,10 @@ tags: 自媒体
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -57,30 +57,43 @@ tags: 自媒体
 </p>
 
 
-> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)。一定要备注：进大群。
+> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)。一定要备注：进大群。
 
 
-### 二、线上沙龙（免费） + 线下分享会（重庆）
+### 线上沙龙（免费） + 线下分享会（重庆）
 **线下沙龙预告**
 等口罩稳定后，计划有一场线下沙龙：**拍摄设备如何使用？**
 全员讨论，感兴趣可以加我的微信，进群焦虑~加好友请备注：线下活动。
-我的微信：点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+我的微信：点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 
+
+### 二、大厂内推信息群
+
+
+> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/3-selectWork-group.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
+
+👉[点我加入：大厂内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/3-selectWork-group.jpg)
+
+<p align="center" id='滴滴-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/73Q83BCQioZT4i94PmPSDA'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads/didi-gao.jpg" width="100%"/>
+    </a>   
+</p>
 ### 三、关于我
 
 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1aD4y1N7ai)，兼职做自媒体4年了
 - 🐧 编程知识博主：[B站：程序员晚枫](https://space.bilibili.com/1989702333) | [B站：Python自动化办公社区](https://space.bilibili.com/259649365)
 - 👨‍💻 我的``自媒体``经历，点击查看👉👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - ⚡ 学习资料，点击领取👉[6套自媒体课程的合集](https://mp.weixin.qq.com/s/VsH82z5sYY61f9RB3unRgQ)
 - 🎁 粉丝福利👉[我的短视频，全是被 夸 火的？？](https://www.xiaohongshu.com/discovery/item/63305311000000001701c8a9)
 
 
-![coder-secret](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
+![coder-secret](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 
-<p align="center" id='腾讯云'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
 

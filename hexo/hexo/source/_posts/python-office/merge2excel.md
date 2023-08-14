@@ -8,7 +8,7 @@ tags:
 ![bar](https://img-blog.csdnimg.cn/c18ea794b3ae4d96bdafbc9c7268b474.jpeg#pic_center)
 大家好，这里是程序员晚枫。
 
-❤先说一个好消息，``python-office自动化办公``的官网上线了，点击直达👉[https://www.python-office.com](https://mp.weixin.qq.com/s/RKTP1Q_DQxyPDaLTT0AC2g)
+❤先说一个好消息，``python-office自动化办公``的官网上线了，点击直达👉[https://www.python-office.com](https://mp.weixin.qq.com/s/n9aq6QvkFq-FsheDQaIhFg)
 
 今天开源项目[python-office](https://mp.weixin.qq.com/s/d2m7xYCLXF8QUlr-5sSuPA)发布了一个新功能:
 
@@ -35,7 +35,7 @@ tags:
 #### 安装python-office这个库
 
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 
 

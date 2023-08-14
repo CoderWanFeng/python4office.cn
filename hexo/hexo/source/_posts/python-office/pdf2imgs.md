@@ -23,7 +23,7 @@ tags: python-office
 
 安装
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 如果没有Python环境，可以试一下这个6分钟的无脑安装教程👉[来，手把手带你搭建Python环境](https://mp.weixin.qq.com/s/kRjulm_pN_jZGWQ6fsGtkw)
 

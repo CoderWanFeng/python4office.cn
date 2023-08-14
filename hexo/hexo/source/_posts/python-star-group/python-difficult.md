@@ -6,7 +6,7 @@ tags:
 
 
 
-大家好，这里是程序员晚枫，[https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYwPython读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
+大家好，这里是程序员晚枫，[https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8GbwPython读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
 
 昨晚收到一个常见的星球提问，今天来详细回复一下。
 
@@ -54,7 +54,7 @@ tags:
 找到原因，问题也就解决了一半。
 对症下药：
 - 如果你不清楚自己的目的，来[星球](https://www.bilibili.com/video/BV1sd4y1c7T9)里找我，我重新和你梳理一下你的目标，尤其是第一步应该实现的。带着目标去学习这种复杂的知识，舒服。
-- 如果是因为前面基础知识听课的过程中，遗漏了很多细节，重新去听一遍是最好的办法。如果觉得这套课听烦了，联系我的微信：👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)，我给你一套新的。温故而知新，你也可以有。
+- 如果是因为前面基础知识听课的过程中，遗漏了很多细节，重新去听一遍是最好的办法。如果觉得这套课听烦了，联系我的微信：👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)，我给你一套新的。温故而知新，你也可以有。
 
 如果我猜错了，以上原因都不对，**我们再次沟通，采取其它调整方式**。学习Python固然很难，但是找到一个适合你的方法，是我愿意尝试的事情。
 

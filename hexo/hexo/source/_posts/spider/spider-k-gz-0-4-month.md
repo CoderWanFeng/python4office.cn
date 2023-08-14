@@ -21,7 +21,7 @@ tags: 爬虫
 
 ## 总
 
-首先推荐，涵盖以上大部分内容的一套课程，传送门👉[52讲轻松搞定网络爬虫](https://et7.lagou.com/xR41RCR2siB09) 爬虫启蒙老师崔大大的爬虫课，值得一学～
+首先推荐，涵盖以上大部分内容的一套课程，传送门👉[52讲轻松搞定网络爬虫](http://gk.link/a/11erO) 爬虫启蒙老师崔大大的爬虫课，值得一学～
 
 
 ## 分
@@ -57,4 +57,4 @@ flask：[14天搞定Flask Web框架](https://www.bilibili.com/video/BV1PA411e7ku
 
 ### 6、简历指导
 
- [资深 互联网人力总监 教你轻松拿到满意 Offer](https://et1.lagou.com/xRBDR+Rrsi1DC)
+ [资深 互联网人力总监 教你轻松拿到满意 Offer](http://gk.link/a/120eV)

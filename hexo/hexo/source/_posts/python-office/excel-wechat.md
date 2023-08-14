@@ -11,7 +11,7 @@ tags: python-office
 
 原文链接：https://blog.csdn.net/culljores/article/details/127080680
 
-大家好，这里是Python程序员晚枫，今天给大家分享一篇[读者群](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ)里的来稿：**Python + Excel自动化办公，在工作中的实际应用**。
+大家好，这里是Python程序员晚枫，今天给大家分享一篇[读者群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)里的来稿：**Python + Excel自动化办公，在工作中的实际应用**。
 
 欢迎大家总结[python-office](https://mp.weixin.qq.com/s/QhaUoB7Q4CJHR29uD6JSHQ)的使用经验，联系我投稿哟~
 
@@ -90,3 +90,11 @@ for Name in Names:             #第5行代码获得的昵称需要遍历
 ```
 ----
 
+
+
+
+---
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
+
+![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/foot/moyu-web.jpg)

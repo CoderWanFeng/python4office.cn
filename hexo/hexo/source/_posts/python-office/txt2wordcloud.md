@@ -14,7 +14,7 @@ tags:
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
+	👉 <a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -46,8 +46,8 @@ tags:
 	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
 		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=dark" alt="gitee fork"/>
 	</a>
-	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
+	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/></a>
 </p>
 
 -------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ office.image.txt2wordcloud(filename='yes-minister.txt', color='black', result_fi
 
 ## 3、关于python-office
 python-office是pypi开源的第三方库，专为python自动化办公而生。
-欢迎大家加入python-office这个库的技术交流群👉[传送门](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ)
+欢迎大家加入python-office这个库的技术交流群👉[传送门](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 
 >也欢迎大家参与python-office这个开源项目的建设：
 > - https://gitee.com/CoderWanFeng/python-office

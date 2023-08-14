@@ -13,7 +13,7 @@ tags:
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
+	👉 <a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -45,8 +45,8 @@ tags:
 	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
 		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=dark" alt="gitee fork"/>
 	</a>
-	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
+	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/></a>
 </p>
 
 -------------------------------------------------------------------------------
@@ -85,3 +85,11 @@ office.word.docx2pdf(path=path)
 - [深度盘点丨史上最全的Python自动化办公库（34个）](https://mp.weixin.qq.com/s/RsBG_cg8GsB2P-9zmhrA1Q)
 - [xlwings库 | Excel与Python的完美结合（附使用文档）](https://mp.weixin.qq.com/s/2_qNnsPK6fjEAUu3jf-NFA)
 - [Python-Docx库 | Word与Python的完美结合（附使用文档）](https://mp.weixin.qq.com/s/_QzBRGeXsqF65-xlzQfFjQ)
+
+
+
+---
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
+
+![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/foot/moyu-web.jpg)

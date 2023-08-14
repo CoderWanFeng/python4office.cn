@@ -52,7 +52,7 @@ tags: python-office
 
 安装
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 如果你的电脑里还没有安装python环境，可以在下列公众号的后台发送：**安装教程**，获取一个6分钟的傻瓜式安装教程，有电脑就能跟着完成操作~
 

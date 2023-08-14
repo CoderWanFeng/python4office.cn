@@ -12,7 +12,7 @@ tags: python-office
 今天给大家分享一个超级实用的功能：**1行代码，破解wifi密码**！！！
 
 
->最近在紧锣密鼓的给python-office增加实用功能，全部功能汇总网站：[https://www.python-office.com](https://mp.weixin.qq.com/s/RKTP1Q_DQxyPDaLTT0AC2g)
+>最近在紧锣密鼓的给python-office增加实用功能，全部功能汇总网站：[https://www.python-office.com](https://mp.weixin.qq.com/s/n9aq6QvkFq-FsheDQaIhFg)
 
 
 ## 1、先上代码

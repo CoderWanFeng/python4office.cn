@@ -20,7 +20,7 @@ tags:
 
 1行命令，安装PyOfficeRobot这个库
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple PyOfficeRobot -U
+pip install -i https://mirrors.aliyun.com/pypi/simple PyOfficeRobot -U
 ```
 
 ## 2、微信机器人

@@ -37,7 +37,7 @@ phone_num(10000 * 10000)
 
 **我把它们全部整理出来了，今天我们就来一起学习一下~**
 
-如有遗漏或者错误，欢迎大家多多指点，我的个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+如有遗漏或者错误，欢迎大家多多指点，我的个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 
 ## 随机数是哪个文件生成的？
 
@@ -227,7 +227,7 @@ int = 136
 - [精品！ 45个 GIT 经典操作场景](https://mp.weixin.qq.com/s/4_54glQ4akTB5MSHyFYwlg)
 - [Anaconda介绍、安装及使用保姆级教程](https://mp.weixin.qq.com/s/gYRBE6JCRnHb1TUycGkTLg)
 
-下一篇想看什么，加入读者群告诉我吧👉[Python交流群](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ)
+下一篇想看什么，加入读者群告诉我吧👉[Python交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 
 
 ------

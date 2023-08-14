@@ -6,9 +6,9 @@ tags:
 
 
 
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -29,7 +29,7 @@ tags:
 
 
 <p align="center" id='0基础数据分析-banner'>
-    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <a target="_blank" href='http://gk.link/a/10EfJ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
     </a>   
 </p>
@@ -41,7 +41,7 @@ tags:
 </p>
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
+    <a target="_blank" href='http://gk.link/a/11FsN'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -49,7 +49,7 @@ tags:
 
 
 <p align="center" id='30讲自动化办公-banner'>
-    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <a target="_blank" href='https://www.python-office.com/video/video.html'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
     </a>   
 </p>
@@ -81,7 +81,7 @@ tags:
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -101,10 +101,10 @@ tags:
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -123,10 +123,10 @@ tags:
     </a>   
 </p>
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](http://www.python4office.cn/wechat-group)
 
 ### 视频教程
@@ -153,7 +153,7 @@ tags:
 | [玩转Python数据分析](https://mp.weixin.qq.com/s/5sf9rb4BPVBcLK2vg2psxg) |      |
 | 🎯[推荐一条高效的Python爬虫学习路径！](https://mp.weixin.qq.com/s/0Ud5J_o4inFg27dHRwHCDg) |      |
 | [反爬虫实战](https://mp.weixin.qq.com/s/ieR5c8G2ehqcgStrzs-Zeg) |      |
-| [快速掌握MySQL要领](https://t10.lagounews.com/rR7FR=RCsV65C) |      |
+| [快速掌握MySQL要领](http://gk.link/a/110o2) |      |
 | [手把手带你写一个Web框架](http://gk.link/a/1130p)            |   腾讯高级工程师   |
 | [数据分析与可视化精讲](https://mp.weixin.qq.com/s/sIkCV0Oq9zEFP2eYj3ZCew) |  |
 
@@ -165,8 +165,7 @@ tags:
 | ------------------------------------------------------------ | ---- |
 | [写作，是普通人最爽的“提款机”！​](https://mp.weixin.qq.com/s/lJPA_auxWLlMwMHw-feOpA) |      |
 | [12步通关求职面试](https://mp.weixin.qq.com/s/eKHWZBwsGVRMYIiFZ-9IMA)   |  拉勾网招聘总监    |
-| [跟着华为学管理](https://t5.lagounews.com/rRE1R4R0sV2F3)     |      |
-| [跟清华教授学经济，用经济学增值个人财富](https://t9.lagounews.com/rRBERJR0sV684) |   清华大学经济管理学院教授   |
+| [跟着华为学管理](http://gk.link/a/120eP)     |      |
 | [一堂课看懂技术创新与商业模式](http://gk.link/a/118xc)       |      |
 | [成为你自己](https://www.bilibili.com/video/BV1mi4y1j7DF)    |   武志红   |
 | [怎样讲一个能影响别人的好故事？](http://gk.link/a/113zd)     |      |
@@ -182,11 +181,11 @@ tags:
 
 | 课程链接                                                     | 授课老师                 |
 | ------------------------------------------------------------ | ------------------------ |
-| [计算机网络通关29讲](https://t6.lagounews.com/rR20RgR+srD28) | 前阿里高级技术专家（P8） |
-| [数据结构与算法面试宝典](https://t6.lagounews.com/rRD1R+RTsr893) | 前微软资深软件工程师 |
+| [计算机网络通关29讲](http://gk.link/a/120eQ) | 前阿里高级技术专家（P8） |
+| [数据结构与算法面试宝典](http://gk.link/a/11976) | 前微软资深软件工程师 |
 | [玩转Git三剑客](http://gk.link/a/1196V) | 携程代码平台负责人 |
 | [Linux实战技能100讲](http://gk.link/a/111MW) |  |
-| [程序员的数学课](https://t3.lagounews.com/rR54RURCsrBE1) | 中科院博士 |
+| [程序员的数学课](http://gk.link/a/120eR) | 中科院博士 |
 | [安全攻防技能30讲](https://mp.weixin.qq.com/s/9ZT-mAtwmF7Kyi8t00DHQA) | 前微博安全研发负责人 |
 | [深入浅出计算机组成原理](https://mp.weixin.qq.com/s/PL7TOXV123e0PG2rJWvxnw) | 科技公司创始人 |
 
@@ -203,7 +202,7 @@ tags:
 | 课程链接                                                     | 授课老师                 |
 | ------------------------------------------------------------ | ------------------------ |
 | [算法面试通关40讲](http://gk.link/a/11976) | 前Facebook工程师，卡内基梅隆大学计算机硕士 |
-| [推荐系统及算法实践十八式](https://t7.lagounews.com/rRD6R5RDsr403) | 前阿里巴巴算法专家 |
-| [大数据技术基础 22 讲](https://t5.lagounews.com/rRE7R8RCsr72E) |  |
+| [推荐系统及算法实践十八式](http://gk.link/a/120eN) | 前阿里巴巴算法专家 |
+| [大数据技术基础 22 讲](http://gk.link/a/120eO) |  |
 
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)

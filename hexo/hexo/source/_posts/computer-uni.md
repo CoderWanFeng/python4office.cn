@@ -9,10 +9,10 @@ tags:
 ## 关于我
 
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - 🐧 编程知识博主
 - 👨‍💻 我的经历，点击查看👉[985硕士，Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1mZ4y147we)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
@@ -28,7 +28,7 @@ tags:
 | ------------------------ | ------------------ |
 | A+                       |                    |
 | 10001 北京大学           |                    |
-| 10003 清华大学           |                    |
+| 10003 阿里镜像           |                    |
 | 10335 浙江大学           |                    |
 | 90002 国防科技大学       |                    |
 | A                        |                    |

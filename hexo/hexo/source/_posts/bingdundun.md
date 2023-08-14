@@ -4,10 +4,10 @@ date: 2022-02-09 17:06:19
 tags: Turtle
 ---
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](/wechat-group)
 - 看到这里的朋友，记得加我哟，免费送你1套付费课程📕
 ### 冰墩墩基础款代码
@@ -439,4 +439,4 @@ t.done()
 ```
 
 ### 答疑与交流
-![CoderWanFeng](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)

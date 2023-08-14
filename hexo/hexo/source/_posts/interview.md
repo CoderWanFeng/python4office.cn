@@ -14,7 +14,7 @@ tags: [程序员,面试]
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
+	👉 <a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -46,15 +46,15 @@ tags: [程序员,面试]
 	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
 		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork"/>
 	</a>
-	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
+	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/></a>
 </p>
 
 
 
 最近在面试Python程序员的工作，顺手把自己在学习和面试过程中遇到的问题，整理在这里。
 内容种类比较多，我把它们分为5大类：Python、算法和数据结构、数据库和调优、前端、职业规划。
-> 内容持续更新中，如需深入沟通，请添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)，备注：面试
+> 内容持续更新中，如需深入沟通，请添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)，备注：面试
 
 ### Python
 

@@ -15,7 +15,7 @@ tags: 开源项目
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
+	👉 <a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -47,8 +47,8 @@ tags: 开源项目
 	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
 		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork"/>
 	</a>
-	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
+	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/></a>
 </p>
 
 
@@ -252,6 +252,6 @@ Django维护一个建议新贡献者的页面: https://docs.djangoproject.com/en
 
 一旦你开始贡献，你开始通过IRC，邮件列表与人交流。我强烈建议你去看看组织遵守的礼仪。通常看看这个演示文稿来得到一个简要的了解。 http://www.shakthimaan.com/downloads/glv/presentations/mailing-list-etiquette.pdf 
 
-即使阅读本文后，如果你遇到任何问题。可以随时在微信找我:[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw),或给我发邮件：1957875073@qq.com。
+即使阅读本文后，如果你遇到任何问题。可以随时在微信找我:[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw),或给我发邮件：1957875073@qq.com。
 
 > 本文转载自：[链接](https://linux.cn/article-4628-weixin.html#rd?sukey=cbbc36a2500a2e6c44df210b08b1326f1382f39f0316ec2175bc12c34db5cd80b3b1fe7d06dcfa42e07044652a0ba790)

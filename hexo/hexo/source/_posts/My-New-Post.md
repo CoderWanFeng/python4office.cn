@@ -68,7 +68,7 @@ tags: 自动化办公
 
 - [Python爬虫案例实战（2020 · 周更）](https://www.bilibili.com/video/BV15E411P7ey?p=1)
 - [2020年Python爬虫全套课程（学完可做项目）](https://www.acfun.cn/v/ac20437401)
-- 🆒[52讲轻松搞定网络爬虫](https://et10.lagou.com/xRC1RvRasR9E6)：如果你想学爬虫，听这一套足够了，不用听其它课程了。
+- 🆒[52讲轻松搞定网络爬虫](http://gk.link/a/11FsN)：如果你想学爬虫，听这一套足够了，不用听其它课程了。
 
 
 

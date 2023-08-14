@@ -4,9 +4,9 @@ date: 2022-11-27 02:15:23
 tags:
 ---
 
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -32,10 +32,10 @@ tags:
 	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office/'>
 		<img src='https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
   
@@ -54,7 +54,7 @@ tags:
     - 国内地址：[点击领取](https://mp.weixin.qq.com/s/aco4IdHcRolfeH2g6rIlsQ)
     - 国外地址：[GitHub](https://github.com/CoderWanFeng/pydatav/tree/main/pydatav/resources/templates)
 
-- 定制模板🎦[手把手教学](https://et5.lagou.com/WR94RgR7sFC09)
+- 定制模板🎦[手把手教学](https://www.bilibili.com/video/BV1zi4y1t7YU)
 
 
 

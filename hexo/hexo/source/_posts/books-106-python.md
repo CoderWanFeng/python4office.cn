@@ -4,7 +4,7 @@ date: 2022-02-21 12:26:49
 tags: [Python,电子书]
 ---
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -24,20 +24,20 @@ tags: [Python,电子书]
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
 
 
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利，点击使用👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
@@ -75,7 +75,7 @@ tags: [Python,电子书]
    - [如何用Python处理Excel？Pandas视频教程&官方文档来啦~](https://mp.weixin.qq.com/s/v8GdZ1YpVSy-bwRZyo2n1g)
 
   <p align="center" id='0基础数据分析-banner'>
-    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <a target="_blank" href='http://gk.link/a/10EfJ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
     </a>   
 </p>
@@ -101,7 +101,7 @@ tags: [Python,电子书]
 ### 5、应用开发
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
+    <a target="_blank" href='http://gk.link/a/11FsN'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -148,12 +148,12 @@ tags: [Python,电子书]
 - 🌟[Python和Excel选哪个？Python学到什么程度才能实战？学Python到底在学什么？](https://www.bilibili.com/video/BV19X4y1K7TG)
 
 
-> 有问必答的 [知识星球](https://t.zsxq.com/Yj6yR3j)和 ✍️[交流群](https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w)，每次更新资源，[兆锋](http://t.cn/A649A0Hp)都会在群里通知的~
+> 有问必答的 [知识星球](https://t.zsxq.com/Yj6yR3j)和 ✍️[交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)，每次更新资源，[兆锋](http://t.cn/A649A0Hp)都会在群里通知的~
 
 ![合集](https://img-blog.csdnimg.cn/20210303170458567.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjMyMTUxNw==,size_16,color_FFFFFF,t_70#pic_center)
 
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>

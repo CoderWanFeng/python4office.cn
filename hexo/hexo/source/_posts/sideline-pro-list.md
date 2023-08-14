@@ -1,12 +1,30 @@
 ---
-title: 那些月入3000的副业 · 合集
+title: 读者福利 和 互联网副业 · 合集
 date: 2022-12-05 17:40:06
 tags: 副业
 ---
 
 
+# 0、福利
+
+你好，我是程序员晚枫。
+
+
+不说废话，先去把福利**领**一遍：👇
+
+
+| 必中福利       | 无套路领取 |羊毛群 |
+| -------------- | -------- |----- |
+| 🎁支付宝红包 | [点我直达](https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w)     |    |
+| 外卖红包 | [点我直达](https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg)     |    |
+| 🚗滴滴红包 | [点我直达](https://mp.weixin.qq.com/s/73Q83BCQioZT4i94PmPSDA)  | [滴滴福利群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/4-didi-group.jpg) |
+| 云服务器 | [点我直达](https://url.cn/Z4lzPLaF)  | |
+
+
+以下没有任何套路的福利，都可以点击图片，直接领取👇
+
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -19,10 +37,22 @@ tags: 副业
 </p>
 
 
+<p align="center" id='滴滴-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/73Q83BCQioZT4i94PmPSDA'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads/didi-gao.jpg" width="100%"/>
+    </a>   
+</p>
 
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
+    </a>   
+</p>
 
 # 1、副业
 
+下面这些，是我自己总结的，可以稳定月入3000+的副业，👇
+成本就是你的时间和流量，不需要其它投入了。
 
 | 副业项目       | 项目介绍 |
 | -------------- | -------- |
@@ -32,7 +62,8 @@ tags: 副业
 | 推广信用卡 | [点我直达](https://mp.weixin.qq.com/s/o3HQAgHDJ8GQ_NkTtqBaUQ)     |
 | ⭐支付宝红包 | [点我直达](https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ)     |
 | 电影分销 | [点我直达](https://mp.weixin.qq.com/s/dInWbi3Y0XWpFI2GDDSMTA)     |
-| 🚗滴滴优惠券 | [点我直达](https://mp.weixin.qq.com/s/mKXNW_GNMbAcuJ425ckObQ)     |
+| 🚗滴滴优惠券 | [点我直达](https://mp.weixin.qq.com/s/73Q83BCQioZT4i94PmPSDA)     |
+| 🚗股票交流群 | [点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/5-finance-group.jpg)     |
 
 
 

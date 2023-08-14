@@ -35,7 +35,7 @@ pobaidu.imageprocess.colourize(img_path=r'img/img_1.png')
 ### 1、下载第三方库
 
 在terminal里运行以下代码：``pip install pobaidu``
-怎么下载第三方库，这是一个在往期文章里重复了一万遍的问题了，还有不懂的同学，去看这篇文章：[使用清华大学的黑科技，加速下载Python第三方库](https://mp.weixin.qq.com/s/EnhHNRCwEXXseBS3aTNuMg)
+怎么下载第三方库，这是一个在往期文章里重复了一万遍的问题了，还有不懂的同学，去看这篇文章：[使用阿里镜像的黑科技，加速下载Python第三方库](https://mp.weixin.qq.com/s/EnhHNRCwEXXseBS3aTNuMg)
 
 
 ### 2、配置信息

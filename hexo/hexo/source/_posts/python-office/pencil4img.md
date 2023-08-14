@@ -6,7 +6,7 @@ tags: python-office
 
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/pencil4img-cover.jpg)
-大家好，这里是程序员晚枫，读者交流群🏠[点我直达](https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w)
+大家好，这里是程序员晚枫，读者交流群🏠[点我直达](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 
 之前给大家介绍了：👉[25个Python学习资源（文字版），摸鱼必备，可以用到就业](https://mp.weixin.qq.com/s/_01V8I7rVkgvIIo7ygwwQA)
 
@@ -21,7 +21,7 @@ tags: python-office
 
 安装
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 >如果你的电脑里还没有安装python环境，可以看一下下面这个6分钟的傻瓜式安装教程，有电脑就能操作：https://www.bilibili.com/video/BV18g411h7jJ?p=3
 

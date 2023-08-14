@@ -5,9 +5,9 @@ tags: 电子书
 ---
 
 
-<p align="center">
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -20,15 +20,21 @@ tags: 电子书
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
 
 
+
+
+### 流畅的Python(第2版) - 纸质书
+
+- 点击查看：[想要精通Python？《流畅的Python（第2版）》是你不可或缺的指南](https://mp.weixin.qq.com/s/zXAki0zvYKzZfWZLh5lK8A)
+- 
 ### 流畅的Python - 电子书
 
 - 百度云下载（永久有效）
@@ -38,7 +44,7 @@ tags: 电子书
 
     - 配套视频：https://www.acfun.cn/v/ac35152150_1
     
-    - 🚸免费Python学习交流群👉 [进群](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ) 👈
+    - 🚸免费Python学习交流群👉 [进群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw) 👈
 
 <!-- more -->
 
@@ -63,21 +69,15 @@ tags: 电子书
 
 
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
-<p align="center">
-    <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
-    </a>   
-</p>
+---
 
-<p align="center" id='1w副业-banner'>
-    <a target="_blank" href='http://t.cn/A6KiaiqK'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
-    </a>   
-</p>
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
+
+![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/foot/moyu-web.jpg)

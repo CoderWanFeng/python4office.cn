@@ -18,7 +18,7 @@ tags:
 
 今天我就给大家分享一下我们沟通时使用的素材：开发这个系统的学习路径，小白也能看懂。
 
-如果实在看不懂，没关系，+我微信，我1对1给你讲明白：[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+如果实在看不懂，没关系，+我微信，我1对1给你讲明白：[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 
 我也写了一个全套系统的简单demo，拿走即用，后台回复：**大屏数据**，24小时即可自动获取视频教程~
 
@@ -56,7 +56,7 @@ tags:
   - 0基础 or Demo开发：Flask，``https://mp.weixin.qq.com/s/5sf9rb4BPVBcLK2vg2psxg``
 - 数据：
   - 必学：SQL alchemy
-  - MySQL：``https://et9.lagou.com/JR97RTRPs4186``
+  - MySQL：``http://gk.link/a/110o3``
 - 部署：
   - Linux：``http://gk.link/a/11yJA``
 
@@ -68,7 +68,7 @@ tags:
 
 > 当你需要学习Python时，网上有大量的免费资料，但是按照什么计划学习？使用哪些资料？如何系统掌握？这些问题的答案，可能就需要一位有经验的程序员给你答复了。
 
-我自己是自学了2年，转行成为Python程序员的。所以0基础如何快速、系统的学习Python，我能给你提供有针对性的帮助，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+我自己是自学了2年，转行成为Python程序员的。所以0基础如何快速、系统的学习Python，我能给你提供有针对性的帮助，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 
 ----
 #### 更多阅读

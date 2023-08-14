@@ -7,7 +7,7 @@ tags: 自动化办公
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -42,7 +42,7 @@ reportlab输入Python的第三方库，使用前需要先安装，
 因此**一行命令**就可以完成的安装命令如下👇
 
 ```python
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 ## 2、核心代码模块导入
 #### ①提前导入相关内容，并且注册字体。（注册字体前需要先准备好字体文件）

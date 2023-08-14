@@ -33,7 +33,7 @@ tags: python-office
 - 如果你之前用过这个库，也要运行一下这行命令，进行一下更新。否则没有本文功能。
 
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 
 运行这行命令之前，你的电脑里必须有python环境。
@@ -57,3 +57,10 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
 > 如果我有没说清楚的，或者在使用过程中有问题，欢迎大家在评论区和我交流~
 
 ----
+
+
+---
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
+
+![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/foot/moyu-web.jpg)

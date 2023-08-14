@@ -25,10 +25,10 @@ tags: Pandas
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -45,7 +45,7 @@ tags: Pandas
 # 1、热门课程的配套资料
 
 根据后台数据分析，大部分同学，都是来领取这2套课程的资料。
-如果找不到，请私信我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+如果找不到，请私信我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 
 | 课程链接                                                                              | 特点             | 配套代码                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -54,32 +54,32 @@ tags: Pandas
 
 
 <p align="center" id='0基础数据分析-banner'>
-    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <a target="_blank" href='http://gk.link/a/10EfJ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
     </a>   
 </p>
 
 <p align="center" id='30讲自动化办公-banner'>
-    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <a target="_blank" href='https://www.python-office.com/video/video.html'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
     </a>   
 </p>
 
-# 2、你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+# 2、你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
 
 
 
 ###### 🉑B站所有课程都有源代码，每天下班整理中ing....
 
-> 如果下面还没及时公布出来，可以点击添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)提醒我哟~
+> 如果下面还没及时公布出来，可以点击添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)提醒我哟~
 
 ------
 
 <p align="center" id='0基础数据分析-banner'>
-    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <a target="_blank" href='http://gk.link/a/10EfJ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
     </a>   
 </p>
@@ -93,11 +93,10 @@ tags: Pandas
 
 | 课程链接                                                     | 特点                                                         | 配套代码                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [解读你身边的经济学](https://t9.lagounews.com/yRC1R0RJsDDD8) | 授课老师：韩秀云，清华大学经管学院教授✍                      | [点我直达](https://t9.lagounews.com/yRC1R0RJsDDD8)           |
 | [说透数字化转型](http://gk.link/a/10EfK)                     | IBM副合伙人，《银行数字化转型》作者                          | 📱[点我直达](http://gk.link/a/10EfK)                          |
 | [【Python基础+量化进阶】基于Python的量化学习](https://www.bilibili.com/video/BV1mU4y1M78S) |                                                              | [点我直达](https://gitee.com/zhaofeng092/PandasAutoOffice/blob/main/%E3%80%90Python%E5%9F%BA%E7%A1%80+%E9%87%8F%E5%8C%96%E8%BF%9B%E9%98%B6%E3%80%91%E5%9F%BA%E4%BA%8EPython%E7%9A%84%E9%87%8F%E5%8C%96%E5%AD%A6%E4%B9%A0/file.md) |
-| [数据分析实战45讲](http://gk.link/a/10EfJ)                   | 授课老师：清华大学博士                                       | [点我直达](http://gk.link/a/10EfJ)                           |
-| [数据分析与可视化精讲](https://t6.lagounews.com/yREERlRJsD543) | 让数据更有价值的可视化分析技能                               | [点我直达](https://t6.lagounews.com/yREERlRJsD543)           |
+| [数据分析实战45讲](http://gk.link/a/10EfJ)                   | 授课老师：阿里镜像博士                                       | [点我直达](http://gk.link/a/10EfJ)                           |
+| [数据分析与可视化精讲](https://www.bilibili.com/video/BV19z4y167Tb) | 让数据更有价值的可视化分析技能                               | [点我直达](https://www.bilibili.com/video/BV19z4y167Tb)           |
 | [Python量化金融项目 - 30讲](https://www.bilibili.com/video/BV16b4y187Km) | 嘘~去看                                                      |                                                              |
 | [Python编程在金融中的应用（极简版）](https://www.bilibili.com/video/BV1rK4y1a76X) | 和上面👉[第1套课](https://www.bilibili.com/video/BV16U4y1g7mS/)，是同一家出的 |                                                              |
 | [Python金融数据分析高级训练营（完结）](https://www.bilibili.com/video/BV1Ut4y1i7wS) |                                                              |                                                              |
@@ -114,7 +113,7 @@ tags: Pandas
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
@@ -151,8 +150,8 @@ tags: Pandas
 
 | 课程链接                                                     |
 | ------------------------------------------------------------ |
-| [Python玩转数据分析](https://t7.lagounews.com/yR5ER9RJsD1B2) |
-| [52讲轻松搞定网络爬虫](https://et10.lagou.com/xRC1RvRasR9E6) |
+| [Python玩转数据分析](http://gk.link/a/10EfJ) |
+| [52讲轻松搞定网络爬虫](http://gk.link/a/11FsN) |
 | [Office 应用大师班：从菜鸟轻松晋级职场高手](http://url.newrank.cn/39Dopa) |
 | [大厂晋升指南](http://gk.link/a/10EfL)                       |
 
@@ -168,9 +167,9 @@ tags: Pandas
 
 有任何问题，欢迎在下方评论告诉我哟~
 
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
 

@@ -18,5 +18,5 @@ tags: 自动化办公
     - 提醒：如果不会**从代码仓库里**下载代码，可以看一下这个小白教程：[傻瓜式教程，无脑跟着操作就行](https://www.bilibili.com/video/BV1Ry4y1m7Ai?spm_id_from=333.999.0.0)
 
 ## 关于作者：程序员晚枫
-- 💬 ``如果你需要 - 联系我来沟通学习问题，请点击添加``👉[我的微信](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fqrcode2web.jpg)
+- 💬 ``如果你需要 - 联系我来沟通学习问题，请点击添加``👉[我的微信](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 - 🎁 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)

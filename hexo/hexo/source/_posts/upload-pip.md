@@ -15,7 +15,7 @@ tags: 开源项目
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ">本开源项目的交流群</a> 👈
+	👉 <a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -47,8 +47,8 @@ tags: 开源项目
 	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
 		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork"/>
 	</a>
-	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/></a>
+	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/></a>
 </p>
 
 
@@ -61,7 +61,7 @@ tags: 开源项目
 当有了一些成果以后，如何发布宣传是一件很重要的事，
 开源也是Python发展这么迅速一个非常重要的原因，所以Python官方也给大家提供了分享自己代码和项目的地方：pypi
 今天向大家介绍一下如何向全球公开发布自己的pip项目。
-> 如果你还没学完Python基础，推荐你这套👉[Python基础精讲课程](http://gk.link/a/10E3B)
+> 如果你还没学完Python基础，推荐你这套👉[Python基础精讲课程](https://www.python-office.com/video/video.html)
 
 ### 1.注册一个pypi账号
 
@@ -154,3 +154,11 @@ twine upload dist/heyWFeng-0.0.1.tar.gz
 上传成功之后，会显示你自己项目的地址:https://pypi.org/project/heyWFeng/ ，赶快打开去看看吧~
 
 参考链接：[CSDN](https://liangjunfeng.blog.csdn.net/article/details/80037315?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.pc_relevant_paycolumn_v2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.pc_relevant_paycolumn_v2&utm_relevant_index=5)
+
+
+
+---
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
+
+![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/foot/moyu-web.jpg)

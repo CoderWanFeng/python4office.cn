@@ -24,7 +24,7 @@ tags: python-office
 
 安装
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office -U
+pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 ```
 如果你的电脑里还没有安装python环境，可以看一下下面这个6分钟的傻瓜式安装教程，有电脑就能操作~
 安装教程：[https://www.bilibili.com/video/BV1Q44y1u7rV](https://www.bilibili.com/video/BV1Q44y1u7rV)

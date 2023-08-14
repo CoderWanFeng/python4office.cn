@@ -6,9 +6,9 @@ tags: 联系我
 
 
 
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -19,7 +19,7 @@ tags: 联系我
 </p>
 
 <p align="center" id='30讲自动化办公-banner'>
-    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <a target="_blank" href='https://www.python-office.com/video/video.html'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
     </a>   
 </p>
@@ -34,89 +34,80 @@ tags: 联系我
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/Jf_EVdKlVnHhK68fW5OA6A">
-	<img src="https://img.shields.io/badge/QQ-1090738447-orange"/>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w">
+    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
 
 
+你好，这里是程序员晚枫，山东人，目前在重庆做C++/Python开发。
 
-## [联系我](http://python4office.cn/account-display/)
+- 下面是我的微信，付费进这个👉[读者群](https://mp.weixin.qq.com/s/yMl9-06DSmjLTobyJNrJJw)的朋友，直接扫码+我。
 
-你好，我是Python程序员晚枫，我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/j-t09tlOLZhC4Rhc77SmYw)
-- 👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
-- 🤖[法学院毕业后，我是怎么转行程序员的？](https://www.bilibili.com/video/BV1Nr4y1B76X/)
-- 💻[少儿编程，有必要学习吗？](https://www.bilibili.com/video/BV1me4y1d7Ks/)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
 
-
-> ``扫码下图，即可添加我为好友``，
-> 白天在上班，晚上统一回复。
-> 拜托：没什么需要我做的，就真的勿扰哈~我只是个打工仔，上班太累了，不想花精力说客套话，也不需要那么多不认可我价值的好友，觉得我不值就别加我，简简单单。❤
-
-- 已经加了这个⭐[付费群](https://mp.weixin.qq.com/s/WArb-brDHhdBYHyZ4cU8_Q)的朋友，添加时请直接备注：1024
-- 想要投稿【程序员故事】赚稿费的朋友，请添加时备注：投稿
-- 咨询转行问题、技术答疑的朋友，请添加时备注：咨询，白嫖勿扰。
+- 如果不是付费读者，是：想加免费群、商务合作、1对1咨询，请继续往下看。
 
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+# 1、读者群
+
+这是我更新文章、视频教程、开源项目的第5年了，为了帮助大家解决技术问题，我提供了读者群的沟通方式：
+
+``其中有3类群聊：``
+
+- 免费的QQ群：[点我加入](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg)
+
+- 免费的微信交流群（目前60多个）：[点我加入](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+
+- 付费**4元**的微信群（目前9个）：[点我加入](https://mp.weixin.qq.com/s/yMl9-06DSmjLTobyJNrJJw)
+
+请注意如果你选择了白嫖群，请不要进群以后@我提问，**白嫖群目前建了100多个了，我有工作，真的看不过来。**白嫖群里大家互相帮助吧，多谢理解！
+
+4元的付费群，我懂的问题我会尽力答疑。然而我必须说一句，**我并不认为所有技术问题我都能解决，我只能做到问心无愧**，希望能给大家提供一个纯粹的Python学习环境，想发广告或者非技术交流目的，就没必要加入了哈。
+
+
+# 2、商务合作
+
+如需商务合作，请扫码下图添加微信：CoderWanFeng，请一定要备注：**商务合作**，否则不通过。
+
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
+
+# 3、1对1咨询
+
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+
+- [【程序员晚枫】程序员的中年危机？根本不存在，看看程序员大佬们怎么说](https://www.bilibili.com/video/BV14F41177tY)
+
+- [【程序员晚枫】想转行程序员？没考虑清楚这3点，转行肯定后悔](https://www.bilibili.com/video/BV1x44y1g7ay)
+
+- [【程序员晚枫】想转行程序员？没考虑清楚这3点，转行肯定后悔](https://www.bilibili.com/video/BV1JD4y1r7SF)
+
+- [【程序员晚枫】3类不能去的编程培训班，转行程序员的同学，去了学不到东西也找不到工作](https://www.bilibili.com/video/BV1XY4y1W7UR)
+
+- [【程序员晚枫】《我，阿里P7，找不到工作》，中年程序员的危机](https://www.bilibili.com/video/BV1414y1j7rF)
+
+- [【程序员晚枫】来聊聊，转行程序员， 真能拿到高工资吗？](https://www.bilibili.com/video/BV1SG4y1J7CP)
 
 
 
-请写明：``城市 + 目的 + 哪个平台看到我的``~👆会更快通过好友。例如：
-    - 重庆 + Python + B站、
-    - 北京 + 求职 + 小红书、
-    - 广州 + 自媒体 + 微博
+# 4、学习资源
+
+👇下面一些适合自学的学习资料，拿走不谢！
 
 
 
-
-
-### QQ群
-是不是还有喜欢用QQ的朋友，我们的QQ群：1090738447
-
-> 进群问题：群主B站小号叫什么？
-> 正确答案：[程序员晚枫](https://space.bilibili.com/1989702333)
-
-<p align="center" id='QQ群'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg" width="300" height="400"/>
+<p align="center" id='大礼包-banner'>
+    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
+    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
-
-
-### 免费读者群
-我们用来交流Python知识的读者群，可以免费加入，广告勿扰
-
-<p align="center" id='进群-banner'>
-    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
-    </a>   
-</p>
-
-
-### 学习资源
-
-👇下面是这3年里，我整理的学习资料，拿走不谢！
-
-
-
-<p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
-    </a>   
-</p>
-
-
-
-
-
 
 <p align="center" id='0基础数据分析-banner'>
-    <a target="_blank" href='https://et1.lagou.com/WR98RLRpsd374'>
+    <a target="_blank" href='http://gk.link/a/10EfJ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
     </a>   
 </p>
@@ -128,7 +119,7 @@ tags: 联系我
 </p>
 
 <p align="center" id='52讲爬虫-banner'>
-    <a target="_blank" href='https://et10.lagou.com/xRC1RvRasR9E6'>
+    <a target="_blank" href='http://gk.link/a/11FsN'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
@@ -136,7 +127,7 @@ tags: 联系我
 
 
 <p align="center" id='30讲自动化办公-banner'>
-    <a target="_blank" href='http://gk.link/a/10E3B'>
+    <a target="_blank" href='https://www.python-office.com/video/video.html'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
     </a>   
 </p>
@@ -168,7 +159,7 @@ tags: 联系我
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
     </a>   
 </p>
