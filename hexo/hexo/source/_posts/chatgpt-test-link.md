@@ -17,6 +17,10 @@ tags: 机器人
 </p>
 
 
+# 安卓版​ChatGPT
+
+- 下载地址：[https://play.google.com/store/apps/details?id=com.openai.chatgpt&pli=1](https://play.google.com/store/apps/details?id=com.openai.chatgpt&pli=1)
+
 # Google版​ChatGPT
 
 - 使用地址👉[点我直达](https://bard.google.com/)，大陆地区需要科学上网哦。
