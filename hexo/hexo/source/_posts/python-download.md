@@ -67,10 +67,7 @@ tags: 软件
 
 ### PyCharm下载
 
-| 版本号       | 下载地址                                                                    |
-| ------------ | --------------------------------------------------------------------------- |
-| Professional | [点我直达](https://www.jetbrains.com/pycharm/download/download-thanks.html) |
-| 🏠Community   | [点我直达](https://www.jetbrains.com/pycharm/download/download-thanks.html) |
+适合本课程的PyCharm，下载地址：https://www.jetbrains.com/pycharm/
 
 ## 其它软件的下载
 1. 11个编程软件的下载：

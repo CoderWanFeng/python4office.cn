@@ -22,7 +22,18 @@ tags: 福利
 - 106本Python电子书：[点我直达](https://mp.weixin.qq.com/s/Ka9_1DEpzfLTy0bwfe5r0g)
 
 
-# 2、联系我
+# 2、原创课程
+
+今年夏天（2023年8月）开始，在更新下面这2套原创视频课程，有需要的朋友可以加入学习：
+
+| 视频                                                                                            | 配套文档&代码&软件                                                 | 学习群                                                    |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------- |
+| [50讲 · Python自动化办公（更新中）](https://www.python-office.com/course/50-python-office.html) | [打开](https://www.python-office.com/course/50-python-office.html) | [加入](https://mp.weixin.qq.com/s/yMl9-06DSmjLTobyJNrJJw) |
+| [8讲 · Python微信机器人（已完结）](https://www.bilibili.com/video/BV1Xa411u7yU)                 | [打开](https://gitee.com/CoderWanFeng/PyOfficeRobot)               | [加入](https://mp.weixin.qq.com/s/yMl9-06DSmjLTobyJNrJJw) |
+
+
+
+# 3、联系我
 
 如果需要和我1对1沟通学习问题，有2种和我沟通的方式：
 
@@ -35,7 +46,7 @@ tags: 福利
     </a>   
 </p>
 
-# 3、视频课程 & 福利
+# 4、视频课程 & 福利
 
 很多朋友找到我是学习Python + 自动化办公的，给大家推荐2套良心课程，都是视频教程。
 
