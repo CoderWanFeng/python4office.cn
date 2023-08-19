@@ -4,7 +4,7 @@ date: 2023-07-16 22:36:21
 tags: VLOG
 ---
 
-> 点击图片，直达视频
+
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1mz4y177j1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100%, height=500> </iframe>
 
