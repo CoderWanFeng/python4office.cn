@@ -1,4 +1,4 @@
-cd /hexo/hexo
+cd hexo/hexo
 yarn install
 yarn run clean
 yarn run build
