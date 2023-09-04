@@ -16,6 +16,9 @@ tags: 机器人
     </a>   
 </p>
 
+# 抖音版​ChatGPT - 豆包
+
+使用地址：[打开](https://www.doubao.com/chat/)
 
 # 安卓版​ChatGPT
 

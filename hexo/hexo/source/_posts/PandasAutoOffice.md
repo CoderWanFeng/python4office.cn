@@ -45,7 +45,7 @@ tags: Pandas
 # 1、热门课程的配套资料
 
 根据后台数据分析，大部分同学，都是来领取这2套课程的资料。
-如果找不到，请私信我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
+如果找不到，请私信我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
 
 | 课程链接                                                                              | 特点             | 配套代码                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -65,16 +65,16 @@ tags: Pandas
     </a>   
 </p>
 
-# 2、你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
+# 2、你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
 
 
 
 ###### 🉑B站所有课程都有源代码，每天下班整理中ing....
 
-> 如果下面还没及时公布出来，可以点击添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)提醒我哟~
+> 如果下面还没及时公布出来，可以点击添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)提醒我哟~
 
 ------
 

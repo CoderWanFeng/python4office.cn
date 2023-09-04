@@ -9,7 +9,7 @@ tags:
 
 ![](https://www.python-office.com/api/img-cdn/we-media/duan-shipin-cut/cover.jpg)
 
-大家好，这里是在重庆的Python程序员晚枫，个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
+大家好，这里是在重庆的Python程序员晚枫，个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
 
 作为一个编程博主，这个夏天，被问到到最多的问题是：
 >如何戒掉短视频？

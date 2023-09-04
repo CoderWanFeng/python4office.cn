@@ -54,7 +54,7 @@ tags: [程序员,面试]
 
 最近在面试Python程序员的工作，顺手把自己在学习和面试过程中遇到的问题，整理在这里。
 内容种类比较多，我把它们分为5大类：Python、算法和数据结构、数据库和调优、前端、职业规划。
-> 内容持续更新中，如需深入沟通，请添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)，备注：面试
+> 内容持续更新中，如需深入沟通，请添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)，备注：面试
 
 ### Python
 

@@ -26,7 +26,7 @@ tags:
 
 # 3、交流群
 
-读者交流群👉[点我直达](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
+读者交流群👉[点我直达](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
 
 # 4、关于作者
 

@@ -4,7 +4,7 @@ date: 2022-03-30 17:01:54
 tags: 机器人
 ---
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/yFcocJbfS9Hs375NhE8Gbw)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
