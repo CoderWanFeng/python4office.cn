@@ -49,8 +49,7 @@ tags: 软件
 
 ### Python下载
 
-> 百度云链接：https://pan.baidu.com/s/15cJdWXnGVZYvxqjnvazZ-g?pwd=oq8d 
-> 提取码：oq8d
+> 百度云链接：https://mp.weixin.qq.com/s/D5Ki2wgJQKB-uusdjtJDRA
 
 2023年，推荐哪个Python版本？👉[点我查看](https://mp.weixin.qq.com/s/GEKiEJMiubal2oxooNe1JA)
 

@@ -20,14 +20,14 @@ tags: 微信群
 ### 1、Python交流群
 
 <p align="center" id='付费群的对话'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/yMl9-06DSmjLTobyJNrJJw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg'>
     <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/chat.jpg" width="400" height="600"/>
     </a>   
 </p>
 
-其一，只需要 **4元** 的技术大群，长期有效，目前400+人的技术大群有5个了：
+其一，只需要 **9元** 的技术大群，长期有效，目前400+人的技术大群有5个了：
 
-> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/yMl9-06DSmjLTobyJNrJJw)。
+> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg)。
 
 
 **如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个付费群（广告勿扰），有技术问题发出来，咱们互相学习。**
@@ -122,8 +122,8 @@ tags: 微信群
 
 
 <p align="center" id='支付宝'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
 

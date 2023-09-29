@@ -4,8 +4,8 @@ date: 2022-02-21 12:26:49
 tags: [Python,电子书]
 ---
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -33,13 +33,6 @@ tags: [Python,电子书]
 </p>
 
 
-
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
-- 🐧 编程知识博主
-- 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
-- ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
-- 🎁 粉丝福利，点击使用👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
 <p align="center" id='进群-banner'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
@@ -148,7 +141,7 @@ tags: [Python,电子书]
 - 🌟[Python和Excel选哪个？Python学到什么程度才能实战？学Python到底在学什么？](https://www.bilibili.com/video/BV19X4y1K7TG)
 
 
-> 有问必答的 [知识星球](https://t.zsxq.com/Yj6yR3j)和 ✍️[交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)，每次更新资源，[兆锋](http://t.cn/A649A0Hp)都会在群里通知的~
+> 有问必答的 ✍️[交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)，每次更新资源，我都会在群里通知的~
 
 ![合集](https://img-blog.csdnimg.cn/20210303170458567.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjMyMTUxNw==,size_16,color_FFFFFF,t_70#pic_center)
 
@@ -157,3 +150,11 @@ tags: [Python,电子书]
     <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
     </a>   
 </p>
+
+
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
+- 🐧 编程知识博主
+- 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+- ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
+- 🎁 粉丝福利，点击使用👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)

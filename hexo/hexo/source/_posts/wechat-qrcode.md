@@ -47,7 +47,7 @@ tags: 联系我
 
 山东人，目前在重庆做C++/Python开发。
 
-- 下面是我的微信，付费进这个👉[读者群](https://mp.weixin.qq.com/s/yMl9-06DSmjLTobyJNrJJw)的朋友，直接扫码+我。
+- 下面是我的微信，付费进这个👉[读者群](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg)的朋友，直接扫码+我。
 
 ![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
 
@@ -64,7 +64,7 @@ tags: 联系我
 
 - 免费的微信交流群（目前60多个）：[点我加入](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 
-- 付费**4元**的微信群（目前9个）：[点我加入](https://mp.weixin.qq.com/s/yMl9-06DSmjLTobyJNrJJw)
+- 付费**9元**的微信群（目前9个）：[点我加入](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg)
 
 请注意如果你选择了白嫖群，请不要进群以后@我提问，**白嫖群目前建了100多个了，我有工作，真的看不过来。**白嫖群里大家互相帮助吧，多谢理解！
 
@@ -161,8 +161,8 @@ tags: 联系我
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/iK_jZ70cq5-djdxtltGG9w'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2Falipay.jpg" width="100%"/>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
 
