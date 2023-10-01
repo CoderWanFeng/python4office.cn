@@ -60,9 +60,10 @@ tags: 联系我
 
 ``其中有3类群聊：``
 
+- 免费的微信交流群（目前60多个）：[点我加入](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+
 - 免费的QQ群：[点我加入](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg)
 
-- 免费的微信交流群（目前60多个）：[点我加入](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 
 - 付费**9元**的微信群（目前9个）：[点我加入](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg)
 
