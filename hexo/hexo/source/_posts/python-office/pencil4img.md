@@ -8,7 +8,7 @@ tags: python-office
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/pencil4img-cover.jpg)
 大家好，这里是程序员晚枫，读者交流群🏠[点我直达](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 
-之前给大家介绍了：👉[25个Python学习资源（文字版），摸鱼必备，可以用到就业](https://mp.weixin.qq.com/s/_01V8I7rVkgvIIo7ygwwQA)
+之前给大家介绍了：👉[25个Python学习资源（文字版），摸鱼必备，可以用到就业](https://mp.weixin.qq.com/s/-mlsV7PFc27JElOTCskMsg)
 
 今天，给大家介绍python-office近期更新的功能之一：**1行代码，画出美女的素描**。
 

@@ -78,7 +78,7 @@ tags: 自动化办公
 
 - [Power BI教程_商业数据可视化](https://www.acfun.cn/v/ac19838235)
 
-- 🉑[数据分析和可视化精讲](http://t.cn/A6qlcSCV)
+- 🉑[数据分析和可视化精讲](https://www.bilibili.com/video/BV1hk4y1C73S)
 
 - [掌握高效数据可视化技法（完结）](https://www.acfun.cn/v/ac20848856)
 

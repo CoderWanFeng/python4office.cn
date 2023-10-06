@@ -19,7 +19,7 @@ tags: python-office
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/HYOWV7ImvTXImyYWtwADog
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/10 22:35 
 @本段代码的视频说明     ：https://www.python-office.com/course/docs/50-15-VatInvoiceOCR2Excel.html
@@ -198,7 +198,7 @@ office.file.search_by_content(
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/HYOWV7ImvTXImyYWtwADog
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/8 22:29 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1ph4y1v7MN/
@@ -218,7 +218,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/HYOWV7ImvTXImyYWtwADog
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/10 11:43 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1Fw411S7kV/
@@ -235,7 +235,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/HYOWV7ImvTXImyYWtwADog
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/13 20:09 
 @本段代码的视频说明     ： https://www.bilibili.com/video/BV14p4y1j7jg/

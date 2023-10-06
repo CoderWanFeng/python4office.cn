@@ -19,7 +19,7 @@ tags: python-office
 
 > 目前已经更新了27讲内容，国庆期间会更新完成全部50讲。
 
-以下[绿色](https://mp.weixin.qq.com/s/_01V8I7rVkgvIIo7ygwwQA)文字，均可点击直达课程👇
+以下[绿色](https://mp.weixin.qq.com/s/-mlsV7PFc27JElOTCskMsg)文字，均可点击直达课程👇
 
 ## 0、准备工作
 

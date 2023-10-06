@@ -37,47 +37,98 @@ tags: 电子书
 - 
 ### 流畅的Python - 电子书
 
-- 百度云下载（永久有效）
-    - 链接：链接：https://pan.baidu.com/s/1mdgPA3H2gszc0sRHQ3NcUQ?pwd=35wv 
-    
-    - 提取码：35wv
+- 云盘下载（永久有效）
+    - 链接：[点我下载](https://pan.quark.cn/s/7e820618bb6d)
 
-    - 配套视频：https://www.acfun.cn/v/ac35152150_1
+    - 配套教程：[Python 核心技术与实战](http://gk.link/a/10E3y)
     
-    - 🚸免费Python学习交流群👉 [进群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw) 👈
 
 <!-- more -->
 
 
 
-### 数据分析 - 视频课程
+### Python视频课程
 
 
-- 🔥[七周成为数据分析师](https://www.acfun.cn/v/ac19843284)
-
-- [Power BI教程_商业数据可视化](https://www.acfun.cn/v/ac19838235)
-
-- 🉑[数据分析和可视化精讲](http://t.cn/A6qlcSCV)
-
-- [掌握高效数据可视化技法（完结）](https://www.acfun.cn/v/ac20848856)
-
-- [内幕：报价上万的大屏数据可视化，成本只有10分钟？（附18套可视化模板）](https://www.bilibili.com/video/BV1Kz4y1r76w)
-
-- [手摸手搭建python数据可视化平台（2020 · 周更）](https://www.bilibili.com/video/BV1zi4y1t7YU)
-
-- [耗子尾汁！各行业都极其加分的数据分析，到底应该怎么学？](http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&mid=2247486878&idx=1&sn=3515dcfefce834965458906dc9ce2880&chksm=eaf6acabdd8125bdefd77bf34c50b9afa916df9aec0652fe9d87ed78e1230f7d99da4edbddbc#rd)
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
-- 🐧 编程知识博主
-- 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
-- ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
-- 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
----
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='https://www.python-office.com/video/video.html'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
 
-![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/foot/moyu-web.jpg)
+<p align="center" id='10讲机器人-banner'>
+    <a target="_blank" href='https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+<p align="center" id='100本电子书-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='85本电子书-二维码-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook-2.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='11个软件-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/w9ITodQR3kzSXc4t1H92nw'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fsoft-11.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='25个学习资源-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/-mlsV7PFc27JElOTCskMsg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fpy-25-source.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='实战项目-banner'>
+    <a target="_blank" href='http://www.python4office.cn/python-project-list/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fproject.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='实战项目-宽-banner'>
+    <a target="_blank" href='http://www.python4office.cn/python-project-list/'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/projects-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='支付宝-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+<p align="center" id='外卖-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='滴滴-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/73Q83BCQioZT4i94PmPSDA'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads/didi-gao.jpg" width="100%"/>
+    </a>   
+</p>

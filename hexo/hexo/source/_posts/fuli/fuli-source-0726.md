@@ -9,27 +9,26 @@ tags: 福利
 
 感谢你的关注，下面是送给大家的学习资料~
 
-# 1、免费资料
+# 1、学习资料
 
-- 💻100个Python自动化办公的视频 + 源码：[点我直达](https://www.python-office.com/)
+- 💻85本Python电子书 + 1套Python视频教程：[点我直达](https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw)
 
-- 1个G 的 编程软件：[点我直达](https://mp.weixin.qq.com/s/ktmQafdstwep_A5vae_Ymw)
+- 10个常用的编程软件：[点我直达](https://mp.weixin.qq.com/s/w9ITodQR3kzSXc4t1H92nw)
 
-- 免费学习群：[点我直达](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+- 读者交流群：[点我直达](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 
 - 🎁7个ChatGPT网站：[点我直达](https://mp.weixin.qq.com/s/-dtUCic75tRi8Vp_x31m3A)
 
-- 106本Python电子书：[点我直达](https://mp.weixin.qq.com/s/Ka9_1DEpzfLTy0bwfe5r0g)
 
 
 # 2、原创课程
 
 今年夏天（2023年8月）开始，在更新下面这2套原创视频课程，有需要的朋友可以加入学习：
 
-| 视频                                                                                            | 配套文档&代码&软件                                                 | 学习群                                                    |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------- |
-| [50讲 · Python自动化办公（更新中）](https://www.python-office.com/course/50-python-office.html) | [打开](https://www.python-office.com/course/50-python-office.html) | [加入](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg) |
-| [8讲 · Python微信机器人（已完结）](https://www.bilibili.com/video/BV1Xa411u7yU)                 | [打开](https://gitee.com/CoderWanFeng/PyOfficeRobot)               | [加入](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg) |
+| 视频                                                                                            | 配套文档&代码&软件                                        | 学习群                                                    |
+| ----------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| [50讲 · Python自动化办公（已完结）](https://www.python-office.com/course/50-python-office.html) | [打开](https://mp.weixin.qq.com/s/YQC7puZpBV4ytYod18TzHw) | [加入](http://www.python4office.cn/wechat-group/) |
+| [10讲 · Python微信机器人（已完结）](https://www.bilibili.com/video/BV1S84y1m7xd)                | [打开](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)      | [加入](http://www.python4office.cn/wechat-group/) |
 
 
 
@@ -54,7 +53,7 @@ tags: 福利
 
 - [121讲 · Python基础（已完结）](http://gk.link/a/11Put)
 
-- [50讲 · Python自动化办公（更新中）](https://www.python-office.com/course/50-python-office.html)
+- [50讲 · Python自动化办公（已完结）](https://www.python-office.com/course/50-python-office.html)
 
 下面是一些没有套路的福利，不中你直接打我脸。
 

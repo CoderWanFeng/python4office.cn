@@ -13,7 +13,7 @@ tags: 软件
 </p>
 
 <p align="center" id='100本电子书-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/H3us6_7wg2QspGZfGtfDZw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
     </a>   
 </p>
@@ -72,13 +72,13 @@ tags: 软件
 1. 11个编程软件的下载：
     - [安装包下载](https://mp.weixin.qq.com/s/ktmQafdstwep_A5vae_Ymw)
     - [安装包的视频教程](https://www.bilibili.com/video/BV18g411h7jJ?p=3&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)
-2. 106本Python电子书：[点我直达](https://mp.weixin.qq.com/s/H3us6_7wg2QspGZfGtfDZw)
+2. 106本Python电子书：[点我直达](https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw)
 3. 60套Python视频课程：[点我直达](http://www.python4office.cn/%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86-1/)
     - 给非程序员的Python入门课：[点我直达](https://www.bilibili.com/video/BV18g411h7jJ)
     - [官网发布：python-office库 | 专为Python自动化办公而生，一行代码提高办公效率](https://www.bilibili.com/video/BV1pT4y1k7FH/)
 
 
-![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/foot/moyu-web.jpg)
+![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
 
 <p align="center" id='进群-banner'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
