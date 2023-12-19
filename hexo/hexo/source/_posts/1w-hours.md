@@ -45,7 +45,7 @@ tags:
 
 **把时间花在有价值的事情上，从基础开始学、深入研究理论、不断提高实践的难度。**
 
-如果你觉得自己定不了学习计划，你可以联系我，我能力范围内的，我可以和你沟通：个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
+如果你觉得自己定不了学习计划，你可以联系我，我能力范围内的，我可以和你沟通：个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
 - 看到这里的朋友，记得加我哟，免费送你1套付费课程📕
 
 

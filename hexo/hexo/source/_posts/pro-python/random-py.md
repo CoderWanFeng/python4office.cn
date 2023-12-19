@@ -37,7 +37,7 @@ phone_num(10000 * 10000)
 
 **我把它们全部整理出来了，今天我们就来一起学习一下~**
 
-如有遗漏或者错误，欢迎大家多多指点，我的个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
+如有遗漏或者错误，欢迎大家多多指点，我的个人微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
 
 ## 随机数是哪个文件生成的？
 

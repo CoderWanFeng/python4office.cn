@@ -47,11 +47,12 @@ tags: 联系我
 
 山东人，目前在重庆做C++/Python开发。
 
-- 下面是我的微信，付费进这个👉[读者群](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg)的朋友，直接扫码+我。
+- 下面是我的微信，需要商务合作的朋友，可以直接扫码添加。👇
+- 如果不是账号合作，是：想加读者群、1对1咨询的朋友，请继续往下看。
 
 ![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
 
-- 如果不是付费读者，是：想加免费群、商务合作、1对1咨询，请继续往下看。
+
 
 
 # 1、读者群

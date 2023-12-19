@@ -10,9 +10,9 @@ tags: 开源
 
 ## 先给爱学习的朋友发个假期福利。👇
 
-争取明天更新完成，课程也会涨价到78元/套，目前10元就可以拿下，一模一样的课程和服务，长期有效。
+课程全部更新完成，目前78元就可以拿下，长期有效。
 
-假期在家里学习的同学，赶紧冲：[点我领取](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2Nzg5MjgyNg==&action=getalbum&album_id=3056320585091366915&scene=21#wechat_redirect)
+假期在家里学习的同学，赶紧冲：[点我领取](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
 
 ## 清华大学pip
 
@@ -36,4 +36,4 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office
 
 ----
 
-大家在学习课程中有任何问题，欢迎+微信和我交流~[我的联系方式：微信、读者群、1对1、福利](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
+大家在学习课程中有任何问题，欢迎+微信和我交流~[我的联系方式：微信、读者群、1对1、福利](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)

@@ -25,7 +25,7 @@ tags: 1v1
 我这边建议，分为5个阶段的学习：python基础、前端（网页构成）、爬虫（不需要反爬虫）、亚马逊API接口、自动化办公
 
 1、基础：2-3小时；不要跟着做，知道有26字母
-[配套课程](https://www.bilibili.com/video/BV1wD4y1o7AS/?spm_id_from=333.337.search-card.all.click)
+[配套课程](https://www.acfun.cn/v/ac20463077/?spm_id_from=333.337.search-card.all.click)
 
 2、前端：js；定位网页元素、和python交互
 [重点听JS部分](https://www.bilibili.com/video/BV1jj411P7Yp/?spm_id_from=333.337.search-card.all.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)

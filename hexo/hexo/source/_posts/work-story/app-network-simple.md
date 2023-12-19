@@ -15,7 +15,7 @@ tags: 1对1咨询
 分为4个步骤：
 
 ## 1、Python基础学习：
-【免费版】https://www.bilibili.com/video/BV1wD4y1o7AS
+【免费版】https://www.acfun.cn/v/ac20463077
 【付费版】http://gk.link/a/11Put
 
 ## 2、pandas：

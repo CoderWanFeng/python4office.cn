@@ -29,7 +29,7 @@ tags: 1v1
 1. 计算机基础：https://www.bilibili.com/video/BV1YP411F7SK
 2. 服务器：https://www.bilibili.com/video/BV13J41167Ty/
 3. 网络知识：https://www.bilibili.com/video/BV18a411N744/
-4. python：https://www.bilibili.com/video/BV1wD4y1o7AS/
+4. python：https://www.acfun.cn/v/ac20463077/
 
 
 ## 写在最后
@@ -38,4 +38,4 @@ tags: 1v1
 
 希望你能坚持学习，学习过程中遇到问题，欢迎继续找我沟通~
 
-我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
+我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)

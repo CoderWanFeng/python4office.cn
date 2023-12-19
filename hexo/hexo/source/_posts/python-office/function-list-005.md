@@ -83,14 +83,12 @@ tags: python-office
 > 2个付费渠道：B站和微信公众号，2选1就行。悄悄说：B站购买更优惠~苹果手机，通过B站购买，更加优惠哦~
 
 
-- B站 购买链接：[10元-点我直达](https://mp.weixin.qq.com/s/J47pgSQBwKQxfT0mBBlvSA)
+- B站 购买链接：[28元-点我直达](https://mp.weixin.qq.com/s/9xIqv8EMK3zkctn2VkfceQ)
 - 微信 购买链接：[78元-点我直达](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
 
 付费后，2个平台都会自动出现百度云链接，永久有效。
 
-> 👆，现在购买全套课程是10元，国庆更新完后，会涨价到78元。
-
-购买资料 或者 学习过程中有任何问题，也欢迎+我的微信交流👉[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
+购买资料 或者 学习过程中有任何问题，也欢迎+我的微信交流👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
 
 ------
 

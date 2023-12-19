@@ -9,11 +9,14 @@ tags: 原创课程
 
 你好，我是程序员晚枫，小红书/B站/抖音/知乎，都叫这个名字。
 
-诚信很重要。有关课程的任何问题，我都负责解答。这是我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
+诚信很重要。有关课程的任何问题，我都负责解答。这是我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
 
 
 
 # 视频、文档、软件、代码
+
+
+- 视频在线看：[https://www.bilibili.com/video/BV118411R7bB/](https://www.bilibili.com/video/BV118411R7bB/?spm_id_from=333.999.0.0)
 
 
 我用夸克网盘分享了「给小白的《50讲Python自动化办公》」，点击链接即可保存。
@@ -24,7 +27,7 @@ tags: 原创课程
 # 答疑群
 
 本群二维码长期有效，如果万一我忘记更新了，你可以+我微信，备注：50讲，我来邀请你。
-我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/B1V6KeXc7IOEB8DgXLWv3g)
+我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
 
 ![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/6-50-po.jpg)
 

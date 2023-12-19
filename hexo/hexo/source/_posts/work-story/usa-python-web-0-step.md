@@ -33,7 +33,7 @@ tags: 1对1咨询
 
 这一部分，需要全面的了解python基础知识、Web开发基础知识，不求甚解。
 
-- 👉[最经典的基础课](https://www.bilibili.com/video/BV1wD4y1o7AS/?spm_id_from=333.337.search-card.all.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+- 👉[最经典的基础课](https://www.acfun.cn/v/ac20463077/?spm_id_from=333.337.search-card.all.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 
 - [检验基础学习是否成功的课程](http://gk.link/a/10E3y)，来自Facebook资深工程师，这个是付费内容，建议看，可以不看💻
 
