@@ -1,14 +1,14 @@
 ---
-title: 1行Python代码，自动发送邮件
+title: 1行Python代码，自动发送带附件的邮件
 date: 2023-12-19 10:16:17
 tags: 自动化办公
 ---
 
 ![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/poemail/poemail-course.jpg)
 
-大家好，这里是程序员晚枫，今天给大家分享：1行Python代码，自动发送邮件。
+大家好，这里是程序员晚枫，今天给大家分享：1行Python代码，自动发送邮件，还可以带附件哟~
 
-> 本文来自在小破站：**Python自动化办公社区**更新的入门系列教程：给小白的《6讲 · Python实现自动发邮件（更新中）》。
+> 本文来自在小破站：**Python自动化办公社区**更新的入门系列教程：[给小白的《6讲 · Python实现自动发邮件（更新中）》](https://www.python-office.com/course-002/poemail/poemail.html)。
 
 ## 1、准备工作
 

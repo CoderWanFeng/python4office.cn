@@ -40,3 +40,9 @@ tags: 年度目标
    - pywinauto
    - uiautomation
      - https://learn.microsoft.com/zh-cn/windows/win32/winauto/ui-automation-specification
+
+- protobuf
+  - https://blog.csdn.net/lizhichao410/article/details/126070641
+  - https://blog.csdn.net/mijichui2153/article/details/99585860
+  - https://protobuf.dev/getting-started/pythontutorial/
+  - https://protobuf.dev/reference/python/python-generated/

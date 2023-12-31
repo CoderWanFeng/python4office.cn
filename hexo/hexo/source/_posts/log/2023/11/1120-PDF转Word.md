@@ -6,7 +6,7 @@ tags: 自动化办公
 
 大家好，这里是程序员晚枫。
 
-今年十一假期没出去旅游，在家里更新一套原创课程，点击查看👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)。
+今年十一假期没出去旅游，在家里更新一套原创课程，点击查看👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/VH93du82QMuPz_1V3c5a6w)。
 
 所有功能，都只需要1行代码，非常适合非程序员入门Python使用。
 
