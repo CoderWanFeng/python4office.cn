@@ -72,7 +72,7 @@ tags: 副业
 </p>
 
 <p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/73Q83BCQioZT4i94PmPSDA'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/YvdPJB2fd0qPNP8VAMgG5g'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads/didi-gao.jpg" width="100%"/>
     </a>   
 </p>

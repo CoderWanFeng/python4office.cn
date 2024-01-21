@@ -32,7 +32,7 @@ wftools.open_soft(soft_path=soft_path, num=2)
 
 运行这段代码，注意几个细节：
 
-1. 运行代码之前，在电脑上下载wftools这个库。命令：``pip install wftools``，视频教程见50讲自动化办公的第3讲，[点我直达](https://mp.weixin.qq.com/s/VH93du82QMuPz_1V3c5a6w)
+1. 运行代码之前，在电脑上下载wftools这个库。命令：``pip install wftools``，视频教程见50讲自动化办公的第3讲，[点我直达](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
 2. soft_path这里，改成自己电脑上微信.exe的存储位置。
 3. num这里，改成你要打开几个微信。
 

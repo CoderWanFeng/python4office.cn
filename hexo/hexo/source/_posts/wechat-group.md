@@ -90,7 +90,7 @@ tags: 微信群
 
 👉[点我加入：大厂内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/3-selectWork-group.jpg)
 
-每天打车上下班的朋友，可以加一下👉[滴滴优惠券微信群：必中！](https://mp.weixin.qq.com/s/73Q83BCQioZT4i94PmPSDA)
+每天打车上下班的朋友，可以加一下👉[滴滴优惠券微信群：必中！](https://mp.weixin.qq.com/s/YvdPJB2fd0qPNP8VAMgG5g)
 ### 4、编程学习指导
 
 
@@ -104,12 +104,8 @@ tags: 微信群
 
 我是山东人，不靠坑人挣钱，但是我每天上班真的很累了，也请不要白嫖我。觉得我提供不了帮助，看看我的短视频也好。感谢理解。❤
 
-<p align="center" id='1对1咨询-banner'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg" width="300" height='400'/>
-    </a>   
-</p>
 
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
 
 
 
@@ -135,7 +131,7 @@ tags: 微信群
 
 
 <p align="center" id='外卖'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/fdQ0TbTocPvw-DAMsFUlVg'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/-MxjOZdbaBxlQGqvYOTPig'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
@@ -146,12 +142,7 @@ tags: 微信群
 ## 三、重庆交流群
 我们用来沉淀自媒体知识的地方，可以免费加入
 
-<p align="center" id='重庆本地群'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/shalong.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/shalong.jpg" width="300" height="400"/>
-    </a>   
-</p>
-
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/shalong.jpg)
 
 
 
