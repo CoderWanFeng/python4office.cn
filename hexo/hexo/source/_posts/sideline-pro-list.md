@@ -13,12 +13,13 @@ tags: 副业
 不说废话，先去把福利**领**一遍：👇
 
 
-| 必中福利    | 无套路领取                                                    | 羊毛福利群                                                                                      |
+| 必中福利    | 无套路领取                                                    | 羊毛福利群                                                                                  |
 | ----------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | 🎁支付宝红包 | [点我领取](https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg) | [点我加入](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/4-didi-group.jpg) |
 | 外卖红包    | [点我领取](https://mp.weixin.qq.com/s/-MxjOZdbaBxlQGqvYOTPig) | [点我加入](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/4-didi-group.jpg) |
 | 🚗滴滴红包   | [点我领取](https://mp.weixin.qq.com/s/YvdPJB2fd0qPNP8VAMgG5g) | [点我加入](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/4-didi-group.jpg) |
 | 云服务器    | [点我领取](https://url.cn/Z4lzPLaF)                           | [点我加入](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/4-didi-group.jpg) |
+| 幻兽帕鲁，搭建教程    | [点我领取](https://developer.aliyun.com/topic/ecs/huanshou?source=5176.11533457&userCode=t6duaoe1)                           | [点我加入](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/4-didi-group.jpg) |
 
 
 以下没有任何套路的福利，都可以点击图片，直接领取👇
@@ -63,7 +64,7 @@ tags: 副业
 | ⭐支付宝红包  | [点我直达](https://mp.weixin.qq.com/s/TSnAjBs2dILSI_pM1pPznQ)                                  |
 | 电影分销     | [点我直达](https://mp.weixin.qq.com/s/dInWbi3Y0XWpFI2GDDSMTA)                                  |
 | 🚗滴滴优惠券  | [点我直达](https://mp.weixin.qq.com/s/YvdPJB2fd0qPNP8VAMgG5g)                                  |
-| 🚗股票交流群  | [点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/5-finance-group.jpg) |
+| 🚗股票交流群  | [点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg) |
 
 
 

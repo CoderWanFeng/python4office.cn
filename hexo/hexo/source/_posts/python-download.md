@@ -73,7 +73,7 @@ tags: 软件
     - [安装包下载](https://mp.weixin.qq.com/s/ktmQafdstwep_A5vae_Ymw)
     - [安装包的视频教程](https://www.bilibili.com/video/BV18g411h7jJ?p=3&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)
 2. 106本Python电子书：[点我直达](https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw)
-3. 60套Python视频课程：[点我直达](http://www.python4office.cn/%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86-1/)
+3. 60套Python视频课程：[点我直达](https://www.python-office.com/)
     - 给非程序员的Python入门课：[点我直达](https://www.bilibili.com/video/BV18g411h7jJ)
     - [官网发布：python-office库 | 专为Python自动化办公而生，一行代码提高办公效率](https://www.bilibili.com/video/BV1pT4y1k7FH/)
 

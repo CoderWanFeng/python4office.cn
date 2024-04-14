@@ -10,7 +10,7 @@ tags: 自动化办公
 
 ## 前文回顾
 
-在去年发布的课程：[给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)中，分享过**自动创建带模拟数据的Excel文件**。👇
+在去年发布的课程：[给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/VH93du82QMuPz_1V3c5a6w)中，分享过**自动创建带模拟数据的Excel文件**。👇
 
 - [是真的！Python可以创建Excel了，1行代码就能模拟真实数据，AI办公还会远吗？](https://www.bilibili.com/video/BV18m4y1u7Kq/?buvid=&is_story_h5=false&mid=qMItlNpUNhCu1MnTH%2FJ7Ew%3D%3D&share_medium=iphone&share_pattern=placard&share_plat=ios&share_session_id=D4F498EB-69F0-47F6-987B-8B2E41BC59E9&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1704814497&unique_k=lYda8Fz&vd_source=dcea3feb81b702defb6006f671564224)
 
