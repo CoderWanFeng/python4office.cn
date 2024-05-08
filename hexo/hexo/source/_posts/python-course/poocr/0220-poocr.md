@@ -15,7 +15,7 @@ tags: 原创课程
 
 # 视频
 
-- 视频在线看：[点我直达](https://www.bilibili.com/video/BV13J4m1s7L7/?spm_id_from=333.999.0.0)
+- 视频在线看：[点我直达](https://www.bilibili.com/video/BV13J4m1s7L7/)
 
 # 文档
 

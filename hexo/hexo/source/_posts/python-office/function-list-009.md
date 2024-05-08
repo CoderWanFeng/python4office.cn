@@ -36,9 +36,9 @@ print(image.mode, image.size, image.format)
 
 -------
 
-以上所有仓库的功能介绍，我都加入了原创课程:[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/VH93du82QMuPz_1V3c5a6w)都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
+以上所有仓库的功能介绍，我都加入了原创课程:[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/VH93du82QMuPz_1V3c5a6w)
+- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 

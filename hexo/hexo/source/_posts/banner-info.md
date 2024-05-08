@@ -199,7 +199,11 @@ tags: banner
 
 ![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 
-![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/poocr/%E5%B0%81%E9%9D%A2-%E6%A8%AA.jpg)
+<p align="center" id='5讲OCR-banner'>
+    <a target="_blank" href='https://www.python-office.com/course-002/5-poocr/5-poocr.html'>
+    <img src="https://course-1300615378.cos.ap-guangzhou.myqcloud.com/poocr%2F%E5%B0%81%E9%9D%A2-%E6%A8%AA.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 ![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/fuye-info/%E5%B0%81%E9%9D%A2-%E6%A8%AA.jpg)

@@ -53,6 +53,6 @@ pofile.clean4disk(r"c://")  # 不写参数，默认抹除所有磁盘
 
 ## 相关课程
 
-- [给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/VH93du82QMuPz_1V3c5a6w)
+- [给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
 - [给小白的《10讲 · Python微信机器人》（完结）](https://mp.weixin.qq.com/s/2fZiSQPVtDJCz0fHtqrsVA)
 - [给小白的《6讲 · Python自动收发邮件》（完结）](https://mp.weixin.qq.com/s/XYIVihTmBUtxGha24QJ-yg)

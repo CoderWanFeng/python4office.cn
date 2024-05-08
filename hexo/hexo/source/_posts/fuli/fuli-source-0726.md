@@ -27,11 +27,16 @@ tags: 福利
 
 今年夏天（2023年8月）开始，在更新下面这2套原创视频课程，有需要的朋友可以加入学习：
 
-| 视频                                                                                            | 配套文档&代码&软件                                        | 学习群                                                    |
-| ----------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| [50讲 · Python自动化办公（已完结）](https://www.python-office.com/course/50-python-office.html) | [打开](https://mp.weixin.qq.com/s/YQC7puZpBV4ytYod18TzHw) | [加入](http://www.python4office.cn/wechat-group/) |
-| [10讲 · Python微信机器人（已完结）](https://www.bilibili.com/video/BV1S84y1m7xd)                | [打开](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)      | [加入](http://www.python4office.cn/wechat-group/) |
 
+| 课程链接                                                                    | 配套文档&代码&软件                                                | 读者交流群                                              |
+|-------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
+| [50讲 · Python + 自动化办公](https://www.python-office.com/course/50-python-office.html)                 | [打开](https://www.python-office.com/course/50-python-office.html)                     | [加入](http://python4office.cn/wechat-group/)        |
+| [10讲 · Python + 微信机器人](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html) | [打开](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html) | [加入](http://python4office.cn/wechat-group/)        |
+| [30讲 · Python + 数据分析](https://www.bilibili.com/video/BV1hk4y1C73S)         | [打开](https://mp.weixin.qq.com/s/n5b-C4ZhkhfZmlCTvepM4A)   | [加入](http://python4office.cn/wechat-group/)        |
+| [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)             | [打开](https://www.python-office.com/course-002/5-poocr/5-poocr.html)                  | [加入](http://python4office.cn/wechat-group/)        |
+| [100讲 · Python + 人工智能](https://www.bilibili.com/video/BV1rU4y1u7og/)    | [打开](https://mp.weixin.qq.com/s/P52GVQEJ1bVAN5vPM_t3Jg)                   | [加入](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ)        |
+| [6讲 · Python + 自动发邮件](https://www.python-office.com/course-002/poemail/poemail.html)                  | [打开](https://www.python-office.com/course-002/poemail/poemail.html)                  | [加入](http://python4office.cn/wechat-group/)        |
+| [公众号接入阿里大模型了，欢迎来撩](https://mp.weixin.qq.com/s/SfNA34bC6wMLRaKONfOWhw)   | [点我免费用](https://mp.weixin.qq.com/s/SfNA34bC6wMLRaKONfOWhw) | [加入](http://www.python4office.cn/wechat-group-ai/) |
 
 
 # 3、联系我

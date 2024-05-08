@@ -35,7 +35,7 @@ tags: 第三方库
 
 ## OCR课程发布
 
-去年的原创课程[给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/VH93du82QMuPz_1V3c5a6w)中，有2个功能特别受欢迎。
+去年的原创课程[给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)中，有2个功能特别受欢迎。
 
 一个是PDF转Word，另一个就是批量识别发票并且保存为Excel文件，之前也写文章分享过了。
 
