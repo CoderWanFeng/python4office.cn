@@ -19,7 +19,7 @@ tags: python-office
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/10 22:35 
 @本段代码的视频说明     ：https://www.python-office.com/course/docs/50-15-VatInvoiceOCR2Excel.html
@@ -55,7 +55,7 @@ ressult = poocr.ocr.IDCardOCR()
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/8/22 23:28 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1em4y1H7ir/
@@ -87,7 +87,7 @@ office.pdf.pdf2docx(file_path=r'./test_files/50-04-pdf2docx',
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/8/22 23:28 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1em4y1H7ir/
@@ -119,7 +119,7 @@ office.pdf.pdf2docx(file_path=r'./test_files/50-04-pdf2docx',
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/8/25 22:27 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV18m4y1u7Kq
@@ -154,7 +154,7 @@ poexcel.fake2excel()
 # -*- coding: UTF-8 -*-
 '''
 @作者 ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信 ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信 ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站 ：www.python-office.com
 @Date    ：2023/6/30 22:06 
 @Description     ：https://www.python-office.com/course/docs/cooperator/01-add_watermark.html
@@ -176,7 +176,7 @@ poimage.add_watermark(file=r'D:\download\金融最新资讯新闻解读宣传实
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/4 1:24 
 @本段代码的视频说明     ： https://www.bilibili.com/video/BV1Lm4y1M7Pz/
@@ -198,7 +198,7 @@ office.file.search_by_content(
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/8 22:29 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1ph4y1v7MN/
@@ -218,7 +218,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/10 11:43 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1Fw411S7kV/
@@ -235,7 +235,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/13 20:09 
 @本段代码的视频说明     ： https://www.bilibili.com/video/BV14p4y1j7jg/
@@ -256,7 +256,7 @@ office.image.down4img(url='https://python-office-1300615378.cos.ap-chongqing.myq
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g
+@微信     ：CoderWanFeng : https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/8/28 21:05 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1Fu4y1v7xH
@@ -282,8 +282,16 @@ office.wechat.chat_robot(who='每天进步一点点')  # 智能聊天
 
 这次我整理了50个自动化办公的实用共鞥你，都是1行Python代码就能实现的，录制了给小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzI2Nzg5MjgyNg==&scene=1&album_id=3056320585091366915&count=3&uin=&key=&devicetype=Windows+11+x64&version=63090621&lang=zh_CN&ascene=0)
+- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加微信和我交流哟~👇
 
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+
+
+## 原创课程
+
+- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
+- [给小白的《5讲 · Python发票批量识别保存为Excel》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
+- [给小白的《10讲Python微信机器人》](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
 

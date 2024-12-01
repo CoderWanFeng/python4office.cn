@@ -6,25 +6,6 @@ tags: 联系我
 
 
 
-<p align="center" id='大礼包-banner'>
-    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
-    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
-    </a>   
-</p>
-
-<p align="center" id='100本电子书-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
-    </a>   
-</p>
-
-<p align="center" id='30讲自动化办公-banner'>
-    <a target="_blank" href='https://www.python-office.com/video/video.html'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
-    </a>   
-</p>
-
-
 
 
 <p align="center" name="图标-github">
@@ -70,7 +51,7 @@ tags: 联系我
 
 请注意如果你选择了白嫖群，请不要进群以后@我提问，**白嫖群目前建了100多个了，我有工作，真的看不过来。**白嫖群里大家互相帮助吧，多谢理解！
 
-4元的付费群，我懂的问题我会尽力答疑。然而我必须说一句，**我并不认为所有技术问题我都能解决，我只能做到问心无愧**，希望能给大家提供一个纯粹的Python学习环境，想发广告或者非技术交流目的，就没必要加入了哈。
+付费读者群，我懂的问题我会尽力答疑。然而我必须说一句，**我并不认为所有技术问题我都能解决，我只能做到问心无愧**，希望能给大家提供一个纯粹的Python学习环境，想发广告或者非技术交流目的，就没必要加入了哈。
 
 
 # 2、商务合作
@@ -163,16 +144,42 @@ tags: 联系我
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <a target="_blank" href='http://www.python4office.cn/fuli/zhifubao-0923/'>
     <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
 
 
 <p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/-MxjOZdbaBxlQGqvYOTPig'>
+    <a target="_blank" href='https://kzurl05.cn/7II7R5'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
+
+
+# 5、一些心得
+
+## 学习篇
+- [业余爱好者，如何从0开始快速掌握Python？](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
+- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
+- [给小白的《10讲 · Python微信机器人》](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
+- [给小白的《Python实现OCR自动批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
+- [给小白的《6讲 · Python自动收发邮件》](https://mp.weixin.qq.com/s/AeTkloNri7gpk25m50VmTA)
+
+## 职场篇
+- [普通人转行程序员，最大的困难是什么？](https://mp.weixin.qq.com/s/_P9_fmr9DmW2BWdnx5juwQ)
+
+
+## 副业篇
+
+- [29岁的目标，副业收入10万+](https://mp.weixin.qq.com/s/ypdZ_vsYX1h5WcxFoLE2oA)
+- [熬夜3年后，我的短视频账号终于赚钱了！](https://mp.weixin.qq.com/s/0CzbDHB_fslLJSW_GDRvKQ)
+- [自媒体接1条广告净赚1000+，但我真的不敢推荐](https://mp.weixin.qq.com/s/jtNrjAhZqun_z7Bs4C2kIQ)
+- [一天赚10000比一天赚500，焦虑更多了](https://mp.weixin.qq.com/s/j8HRWr9qD6TdbV_EqTpv-Q)
+- [普通人想靠自媒体逆袭，已经没有机会了](https://mp.weixin.qq.com/s/oPvWL_FJVoqacH935qDgmg)
+
+
+## 生活篇
+- [晚枫 | 2024年3月总结，人生中第一次「开车撞人了」](https://mp.weixin.qq.com/s/sEP_y-Ja50XKI5AkVB_8Mg)
 
 

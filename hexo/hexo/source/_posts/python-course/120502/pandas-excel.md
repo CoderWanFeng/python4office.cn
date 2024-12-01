@@ -18,9 +18,9 @@ tags: pandas
 
 ## 答疑群
 
-扫码下图，直接加入，如果二维码过期了不要担心，请点击添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)，好友验证消息请填写：**30讲**，我来邀请你加群。
+扫码下图，直接加入，如果二维码过期了不要担心，请点击添加我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)，好友验证消息请填写：**30讲**，我来邀请你加群。
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/30-pandas-001.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
 
 如果你对副业感兴趣，也可以免费订阅我的副业项目专栏：[副业信息差](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk0MjYzNTI3MQ==&action=getalbum&album_id=3342868959406227458&scene=173&subscene=&sessionid=undefined&enterid=0&from_msgid=2247483864&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 

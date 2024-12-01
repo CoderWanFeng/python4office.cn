@@ -7,13 +7,13 @@ tags: 招聘
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <a target="_blank" href='http://www.python4office.cn/fuli/zhifubao-0923/'>
     <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
 
 <p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/-MxjOZdbaBxlQGqvYOTPig'>
+    <a target="_blank" href='https://kzurl05.cn/7II7R5'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
@@ -48,7 +48,7 @@ tags: 招聘
 # 2、上岸交流群
 
 - 国企求职交流群，扫码加入👇
-![点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1-wemedia-group.jpg)
+![点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
 
 <p align="center" id='大礼包-banner'>
     <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>

@@ -4,7 +4,7 @@ date: 2024-02-20 14:08:24
 tags: 原创课程
 ---
 
-> 友情提示：课程持续更新中，请一定要添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)，我来给你提供课程最新资料
+> 友情提示：课程持续更新中，请一定要添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)，我来给你提供课程最新资料
 
 
 你好，我是程序员晚枫，小红书/B站/抖音/知乎，都叫这个名字。
@@ -12,6 +12,13 @@ tags: 原创课程
 诚信很重要。有关课程的任何问题，我都负责解答，上面有我的微信👆。
 
 感谢您付费购买《OCR批量识别，Python版》，下面是课程的配套资料 + 专用答疑群。
+
+# 软件和代码
+
+
+我用网盘分享，点击链接即可保存。
+- [配套软件和代码，点我下载](https://pan.quark.cn/s/6a293e6a4b99)
+- [免费开通腾讯云OCR，点我开通](https://curl.qcloud.com/v0BcWo7t)
 
 # 视频
 
@@ -26,19 +33,15 @@ tags: 原创课程
 - 第3讲：[下载poocr](https://www.python-office.com/course-002/5-poocr/docs/3-install_poocr.html)
 - 第4讲：[OCR识别的所有功能](https://www.python-office.com/course-002/5-poocr/docs/4-all_ocr_func.html)
 - 第5讲：[OCR批量识别后，自动保存为Excel](https://www.python-office.com/course-002/5-poocr/docs/5-ocr2excel.html)
+- 第6讲：[发票识别支持PDF格式了](https://www.python-office.com/course-002/5-poocr/docs/6-pdf2excel.html)
 
-# 软件和代码
-
-
-我用网盘分享，点击链接即可保存。
-- [点我直达](https://pan.quark.cn/s/43c27c3e38d2)
 
 
 # 答疑群
 
 答疑群长期有效，进入方式：+我微信👇，备注：OCR自动化，我来邀请你。
-我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
 
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 
 # 读者福利
 

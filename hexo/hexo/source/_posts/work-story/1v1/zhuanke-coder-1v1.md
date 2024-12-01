@@ -17,7 +17,7 @@ tags: 1对1咨询
 
 <!-- more -->
 
-> 如果你也需1对1咨询转行程序员的问题，欢迎加我微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
+> 如果你也需1对1咨询转行程序员的问题，欢迎加我微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
 
 
 ## 1、学历问题，根本不是问题

@@ -5,7 +5,7 @@ tags: 技术咨询
 ---
 
 
-今天的1对1咨询（我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)）是一个关于Excel自动化办公的问题：**在一个文件夹中有若干个excel工作簿，每个工作簿里都有相同个数的工作表，这些工作表的格式都是肯定的。我需要把文件夹中的工作簿汇总成一个工作簿，工作薄中的不同的工作表，也对应汇总。**也想深入学一些Python技术。
+今天的1对1咨询（我的微信：[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)）是一个关于Excel自动化办公的问题：**在一个文件夹中有若干个excel工作簿，每个工作簿里都有相同个数的工作表，这些工作表的格式都是肯定的。我需要把文件夹中的工作簿汇总成一个工作簿，工作薄中的不同的工作表，也对应汇总。**也想深入学一些Python技术。
 
 说得简单点，可以理解成：如何把多个相同格式的Excel表格汇总到1个Excel表格里？
 
@@ -23,7 +23,7 @@ tags: 技术咨询
 首先看一下目前已有的代码，主要是2个：多个excel汇总到1个Excel的不同sheet里、多个Excel的同一个sheet汇总到1个Excel的同一个sheet里。
 
 
-- 多个excel汇总到1个Excel的不同sheet里：这个代码的下载和使用，我们在之前的课程里讲解过的：点击查看这套课程的第22讲👉[《给小白的50讲Python自动化办公》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
+- 多个excel汇总到1个Excel的不同sheet里：这个代码的下载和使用，我们在之前的课程里讲解过的：点击查看这套课程的第22讲👉[《给小白的50讲Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
 - 多个Excel的同一个sheet汇总到1个Excel的同一个sheet里：这个代码，见下面的代码片段，完整的代码使用方法，可以添加我的微信沟通。👇
 
 ```python

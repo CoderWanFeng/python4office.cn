@@ -39,12 +39,12 @@ tags: 社区活动
 
 
 <p align="center" id='自媒体交流群'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1-wemedia-group.jpg"/>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg"/>
     </a>   
 </p>
 
 
-> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)。一定要备注：进大群。
+> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)。一定要备注：进大群。
 
 
 
@@ -52,7 +52,7 @@ tags: 社区活动
 
 
 <p align="center" id='支付宝'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <a target="_blank" href='http://www.python4office.cn/fuli/zhifubao-0923/'>
     <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
@@ -70,12 +70,12 @@ tags: 社区活动
 ### 二、大厂内推信息群
 
 
-> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/3-selectWork-group.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
+> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
 
-👉[点我加入：大厂内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/3-selectWork-group.jpg)
+👉[点我加入：大厂内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
 
 <p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YvdPJB2fd0qPNP8VAMgG5g'>
+    <a target="_blank" href='https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads/didi-gao.jpg" width="100%"/>
     </a>   
 </p>
@@ -84,7 +84,7 @@ tags: 社区活动
 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1aD4y1N7ai)，兼职做自媒体4年了
 - 🐧 编程知识博主：[B站：程序员晚枫](https://space.bilibili.com/1989702333) | [B站：Python自动化办公社区](https://space.bilibili.com/259649365)
 - 👨‍💻 我的``自媒体``经历，点击查看👉👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
 - ⚡ 学习资料，点击领取👉[6套自媒体课程的合集](https://mp.weixin.qq.com/s/VsH82z5sYY61f9RB3unRgQ)
 - 🎁 粉丝福利👉[我的短视频，全是被 夸 火的？？](https://www.xiaohongshu.com/discovery/item/63305311000000001701c8a9)
 
@@ -99,7 +99,7 @@ tags: 社区活动
 
 
 <p align="center" id='外卖'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/-MxjOZdbaBxlQGqvYOTPig'>
+    <a target="_blank" href='https://kzurl05.cn/7II7R5'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>

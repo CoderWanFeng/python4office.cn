@@ -81,14 +81,14 @@ tags:
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <a target="_blank" href='http://www.python4office.cn/fuli/zhifubao-0923/'>
     <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
 
 
 <p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/-MxjOZdbaBxlQGqvYOTPig'>
+    <a target="_blank" href='https://kzurl05.cn/7II7R5'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
@@ -123,10 +123,10 @@ tags:
     </a>   
 </p>
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
+### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](http://www.python4office.cn/wechat-group)
 
 ### 视频教程

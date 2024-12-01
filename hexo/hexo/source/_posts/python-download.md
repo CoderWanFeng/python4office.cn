@@ -87,11 +87,11 @@ tags: 软件
 </p>
 
 ## 二、关于我
-你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)，感谢你看我的视频和文章
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)，感谢你看我的视频和文章
 > 以下是关于我自己的介绍和联系方式
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击联系👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)，[B站：Python自动化办公社区](https://space.bilibili.com/259649365)~
+- 💬 我的微信，点击联系👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)，[B站：Python自动化办公社区](https://space.bilibili.com/259649365)~
 
 
 

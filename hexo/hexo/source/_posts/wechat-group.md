@@ -31,7 +31,7 @@ tags: 微信群
 
 
 **如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个付费群（广告勿扰），有技术问题发出来，咱们互相学习。**
-**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)。
+**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)。
 
 > 免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
 加了对你不能说是没用，只能说是一点用都没有。你可以扫码下面2中的免费群，进去看看。
@@ -86,11 +86,11 @@ tags: 微信群
 
 ### 3、大厂内推群
 
-> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/3-selectWork-group.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
+> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
 
-👉[点我加入：大厂内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/3-selectWork-group.jpg)
+👉[点我加入：大厂内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
 
-每天打车上下班的朋友，可以加一下👉[滴滴优惠券微信群：必中！](https://mp.weixin.qq.com/s/YvdPJB2fd0qPNP8VAMgG5g)
+每天打车上下班的朋友，可以加一下👉[滴滴优惠券微信群：必中！](https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg)
 ### 4、编程学习指导
 
 
@@ -124,14 +124,14 @@ tags: 微信群
 
 
 <p align="center" id='支付宝'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <a target="_blank" href='http://www.python4office.cn/fuli/zhifubao-0923/'>
     <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
 
 
 <p align="center" id='外卖'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/-MxjOZdbaBxlQGqvYOTPig'>
+    <a target="_blank" href='https://kzurl05.cn/7II7R5'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
@@ -148,10 +148,10 @@ tags: 微信群
 
 ## 四、关于我
 
-你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
+你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
 ![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 - 🐧 编程知识博主
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 

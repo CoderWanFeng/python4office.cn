@@ -7,7 +7,7 @@ tags: [开源项目,poimage]
 大家好，这里是程序员晚枫，这段时间给大家分享多个微信自动化的代码：
 
 - [用Python实现微信多开，1行代码免费用](https://mp.weixin.qq.com/s/qlubpfAytr_coV8GilG9RA)
-- [给小白的《10讲 · Python微信机器人》（完结）](https://mp.weixin.qq.com/s/2fZiSQPVtDJCz0fHtqrsVA)
+- [给小白的《10讲 · Python微信机器人》（完结）](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
 
 
 今天再给大家分享一个：**用Python发一个好看的朋友圈的代码。**
@@ -60,9 +60,9 @@ poimage.split4img(img_path=r"./imgs/icon2.jpg", output_path=r'D:\程序员晚枫
 ----
 
 
-我今年发布了一个原创课程:[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
+我今年发布了一个原创课程:[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
+- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 

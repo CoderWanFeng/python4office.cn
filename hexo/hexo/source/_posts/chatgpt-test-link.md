@@ -43,7 +43,7 @@ tags: 机器人
 试玩地址：
 
 <p align="center" id='开源交流群-banner'>
-<a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office.jpg'>
+<a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg'>
 <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office-qr.jpg" width="100%"/>
 </a> 
 </p>
@@ -93,7 +93,7 @@ tags: 机器人
 ⭐微信聊天机器人：[点我直达](https://www.python-office.com/office/robot.html)
 
 
-🎁支付宝-必中红包：[点我直达](https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg)
+🎁支付宝-必中红包：[点我直达](http://www.python4office.cn/fuli/zhifubao-0923/)
 
 
 

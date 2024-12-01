@@ -13,7 +13,7 @@ tags:
 	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
 </p>
 <p align="center">
-	👉 <a target="_blank" href="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office.jpg">本开源项目的交流群</a> 👈
+	👉 <a target="_blank" href="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -62,7 +62,7 @@ tags:
 ## 📚简介
 
 Python-office 是一个 Python 自动化办公第三方库，能解决大部分自动化办公的问题。而且每个功能只需一行代码，不需要小白用户学习 Python 知识，做到了真正的开箱即用。
-> 功能持续更新中，提交你的功能需求/参与项目开发，联系👉[开发者微信](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
+> 功能持续更新中，提交你的功能需求/参与项目开发，联系👉[开发者微信](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
 
 
 ![](https://www.python-office.com/api/img-cdn/python-office/find_excel_data/group.jpg)

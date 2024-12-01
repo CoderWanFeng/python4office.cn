@@ -35,13 +35,13 @@ tags: 第三方库
 
 ## OCR课程发布
 
-去年的原创课程[给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)中，有2个功能特别受欢迎。
+去年的原创课程[给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)中，有2个功能特别受欢迎。
 
 一个是PDF转Word，另一个就是批量识别发票并且保存为Excel文件，之前也写文章分享过了。
 
 但大家表示看的不过瘾，所以今年我把其中之一：批量识别发票，并且转为Excel文件，单独拎出来做成了一个系统的课程。
 
-从基础讲起，一直到实现最终的效果，点击直达👉[给小白的《Python实现OCR自动批量识别》](https://mp.weixin.qq.com/s/_9Ln4Z02YEXNSu-OnGTCxw)
+从基础讲起，一直到实现最终的效果，点击直达👉[给小白的《Python实现OCR自动批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
 
 
 ## 磁盘自动抹除使用痕迹

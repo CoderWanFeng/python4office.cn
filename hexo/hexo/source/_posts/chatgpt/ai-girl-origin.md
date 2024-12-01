@@ -27,13 +27,13 @@ tags: AI
 </p>
 
 <p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YvdPJB2fd0qPNP8VAMgG5g'>
+    <a target="_blank" href='https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads/didi-gao.jpg" width="100%"/>
     </a>   
 </p>
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <a target="_blank" href='http://www.python4office.cn/fuli/zhifubao-0923/'>
     <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>

@@ -6,13 +6,13 @@ tags: 开源
 
 大家好，这里是程序员晚枫。国庆假期，大家去哪里玩耍了？
 
-这个假期我哪也没去，一直待在家里更新课程：[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)，截止今晚的这篇文章发布，已经更新到第41讲了。
+这个假期我哪也没去，一直待在家里更新课程：[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)，截止今晚的这篇文章发布，已经更新到第41讲了。
 
 ## 先给爱学习的朋友发个假期福利。👇
 
 课程全部更新完成，目前78元就可以拿下，长期有效。
 
-假期在家里学习的同学，赶紧冲：[点我领取](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
+假期在家里学习的同学，赶紧冲：[点我领取](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
 
 ## 清华大学pip
 
@@ -36,4 +36,4 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office
 
 ----
 
-大家在学习课程中有任何问题，欢迎+微信和我交流~[我的联系方式：微信、读者群、1对1、福利](https://mp.weixin.qq.com/s/Nt8E8vC-ZsoN1McTOYbY2g)
+大家在学习课程中有任何问题，欢迎+微信和我交流~[我的联系方式：微信、读者群、1对1、福利](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)

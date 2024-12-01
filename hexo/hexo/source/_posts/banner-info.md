@@ -74,20 +74,20 @@ tags: banner
 
 
 <p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/RsdnDYbT15rV6K396VNRdg'>
+    <a target="_blank" href='http://www.python4office.cn/fuli/zhifubao-0923/'>
     <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
     </a>   
 </p>
 
 
 <p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/-MxjOZdbaBxlQGqvYOTPig'>
+    <a target="_blank" href='https://kzurl05.cn/7II7R5'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
 
 <p align="center" id='滴滴-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YvdPJB2fd0qPNP8VAMgG5g'>
+    <a target="_blank" href='https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads/didi-gao.jpg" width="100%"/>
     </a>   
 </p>
@@ -111,7 +111,7 @@ tags: banner
 </p>
 
 <p align="center" id='腾讯云-banner'>
-    <a target="_blank" href='https://url.cn/Z4lzPLaF'>
+    <a target="_blank" href='https://curl.qcloud.com/3csDz9jU'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>
     </a>   
 </p>
@@ -208,3 +208,8 @@ tags: banner
 
 ![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/fuye-info/%E5%B0%81%E9%9D%A2-%E6%A8%AA.jpg)
 
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/ai-group.jpg)
+
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BC%95%E5%AF%BC%E5%85%B3%E6%B3%A8/sub-py.jpg)
