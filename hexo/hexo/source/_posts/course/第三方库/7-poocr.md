@@ -1,6 +1,6 @@
 ---
-title: 性能优化必备！深入掌握Python性能分析神器cProfile
-date: 2024-11-11 00:41:49
+title: 告别手动输入：poocr库让你的文字识别更智能
+date: 2024-12-2 00:41:49
 tags: [第三方库,pip]
 ---
 
@@ -11,7 +11,7 @@ tags: [第三方库,pip]
     </a>   
 </p>
 
-> 这是专栏[优秀的第三方库](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2Nzg5MjgyNg==&action=getalbum&album_id=3716702258420088833#wechat_redirect)的第7篇原创文章。
+> 这是专栏[优秀的第三方库](http://www.python4office.cn/course/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/all/)的第7篇原创文章。
 
 大家好，这里是程序员晚枫。
 poocr是一个具有OCR功能的Python第三方库，支持识别100多种场景下的文字识别，例如发票、驾驶证、身份证等。以下是使用poocr的基本步骤：

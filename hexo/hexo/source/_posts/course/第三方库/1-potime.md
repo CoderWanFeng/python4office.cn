@@ -11,7 +11,7 @@ tags: [第三方库,pip]
     </a>   
 </p>
 
-> 这是专栏[优秀的第三方库](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2Nzg5MjgyNg==&action=getalbum&album_id=3716702258420088833#wechat_redirect)的第3篇原创文章。
+> 这是专栏[优秀的第三方库](http://www.python4office.cn/course/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/all/)的第3篇原创文章。
 
 大家好，这里是程序员晚枫。
 
