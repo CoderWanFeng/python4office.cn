@@ -38,4 +38,4 @@ tags: 1v1
 
 希望你能坚持学习，学习过程中遇到问题，欢迎继续找我沟通~
 
-我的微信，点击添加👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
+我的微信，点击添加👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)

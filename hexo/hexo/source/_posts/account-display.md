@@ -4,7 +4,7 @@ date: 2022-02-25 13:51:51
 tags:
 ---
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
+### 你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
@@ -18,7 +18,7 @@ tags:
 <!-- more -->
 
 
-全网同名：[程序员晚枫](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
+全网同名：[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
 
 ## 主营平台
 - [公众号](https://mp.weixin.qq.com/s/0eyznBsIM7M4dGr-07C8Tg)

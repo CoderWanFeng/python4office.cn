@@ -36,4 +36,4 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office
 
 ----
 
-大家在学习课程中有任何问题，欢迎+微信和我交流~[我的联系方式：微信、读者群、1对1、福利](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
+大家在学习课程中有任何问题，欢迎+微信和我交流~[我的联系方式：微信、读者群、1对1、福利](http://www.python4office.cn/wechat-qrcode/)

@@ -4,7 +4,7 @@ date: 2024-02-20 14:08:24
 tags: 原创课程
 ---
 
-> 友情提示：课程持续更新中，请一定要添加我的微信👉[CoderWanFeng](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)，我来给你提供课程最新资料
+> 友情提示：课程持续更新中，请一定要添加我的微信👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)，我来给你提供课程最新资料
 
 
 你好，我是程序员晚枫，小红书/B站/抖音/知乎，都叫这个名字。

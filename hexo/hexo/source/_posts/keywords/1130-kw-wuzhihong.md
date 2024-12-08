@@ -26,7 +26,7 @@ tags:
 
 # 3、交流群
 
-读者交流群👉[点我直达](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
+读者交流群👉[点我直达](http://www.python4office.cn/wechat-qrcode/)
 
 # 4、关于作者
 

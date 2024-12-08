@@ -104,7 +104,7 @@ var _hmt = _hmt || [];
 		        
 					<a class="qq" target="_blank" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ" title="qq"><i class="icon-qq"></i></a>
 		        
-					<a class="weixin" target="_blank" href="https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA" title="weixin"><i class="icon-weixin"></i></a>
+					<a class="weixin" target="_blank" href="http://www.python4office.cn/wechat-qrcode/" title="weixin"><i class="icon-weixin"></i></a>
 		        
 					<a class="bilibili" target="_blank" href="https://space.bilibili.com/259649365" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
@@ -159,7 +159,7 @@ var _hmt = _hmt || [];
 			        
 						<a class="qq" target="_blank" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ" title="qq"><i class="icon-qq"></i></a>
 			        
-						<a class="weixin" target="_blank" href="https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA" title="weixin"><i class="icon-weixin"></i></a>
+						<a class="weixin" target="_blank" href="http://www.python4office.cn/wechat-qrcode/" title="weixin"><i class="icon-weixin"></i></a>
 			        
 						<a class="bilibili" target="_blank" href="https://space.bilibili.com/259649365" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
@@ -199,6 +199,945 @@ var _hmt = _hmt || [];
               </div>
               <div id="js-content" class="content-ll">
                 
+  
+    <article id="post-apscheduler-study" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/apscheduler-study/">Python定时库APScheduler原理及用法</a>
+    </h1>
+  
+
+        
+        <a href="/apscheduler-study/" class="archive-article-date">
+  	<time datetime="2022-02-09T02:16:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center" id="支付宝-banner">
+    <a target="_blank" href="http://www.python4office.cn/fuli/zhifubao-0923/">
+    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%">
+    </a>   
+</p>
+
+
+<p align="center" id="外卖-banner">
+    <a target="_blank" href="https://kzurl05.cn/7II7R5">
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%">
+    </a>   
+</p>
+
+<h2 id="1-APScheduler简介"><a href="#1-APScheduler简介" class="headerlink" title="1. APScheduler简介"></a>1. APScheduler简介</h2><p>APscheduler全称Advanced Python Scheduler</p>
+<p>作用为在指定的时间规则执行指定的任务，指定的任务就是一个Python函数。</p>
+<h2 id="2-APScheduler组件"><a href="#2-APScheduler组件" class="headerlink" title="2. APScheduler组件"></a>2. APScheduler组件</h2><p>核心组件有4个：Job、JobStore、Trigger、Executor<br>除了以下组件，还有Event 事件、 Listener 监听事件、 Scheduler 调度器</p>
+<p>但需要自己操作的，只有</p>
+<ul>
+<li>Job：也就是自定义的函数</li>
+<li>JobStore：存储任务的方式，默认是存在内存，可以选择存储在数据库里，例如：redis</li>
+</ul>
+<h3 id="Job-作业"><a href="#Job-作业" class="headerlink" title="Job 作业"></a>Job 作业</h3><p><strong>作用</strong></p>
+<p>Job作为APScheduler最小执行单位。<br>创建Job时指定执行的函数，函数中所需参数，Job执行时的一些设置信息。</p>
+<p><strong>构建说明</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">id：指定作业的唯一ID</span><br><span class="line"></span><br><span class="line">name：指定作业的名字</span><br><span class="line"></span><br><span class="line">trigger：apscheduler定义的触发器，用于确定Job的执行时间，根据设置的trigger规则，计算得到下次执行此job的</span><br><span class="line">时间， 满足时将会执行</span><br><span class="line"></span><br><span class="line">executor：apscheduler定义的执行器，job创建时设置执行器的名字，根据字符串你名字到scheduler获取到执行此</span><br><span class="line">job的 执行器，执行job指定的函数</span><br><span class="line"></span><br><span class="line">max_instances：执行此job的最大实例数，executor执行job时，根据job的id来计算执行次数，根据设置的最大实例数</span><br><span class="line">来确定是否可执行</span><br><span class="line"></span><br><span class="line">next_run_time：Job下次的执行时间，创建Job时可以指定一个时间[datetime],不指定的话则默认根据trigger获取触</span><br><span class="line">发时间</span><br><span class="line"></span><br><span class="line">misfire_grace_time：Job的延迟执行时间，例如Job的计划执行时间是21:00:00，但因服务重启或其他原因导致</span><br><span class="line">21:00:31才执行，如果设置此key为40,则该job会继续执行，否则将会丢弃此job</span><br><span class="line"></span><br><span class="line">coalesce：Job是否合并执行，是一个bool值。例如scheduler停止20s后重启启动，而job的触发器设置为5s执行</span><br><span class="line">一次，因此此job错过了4个执行时间，如果设置为是，则会合并到一次执行，否则会逐个执行</span><br><span class="line"></span><br><span class="line">func：Job执行的函数</span><br><span class="line"></span><br><span class="line">args：Job执行函数需要的位置参数</span><br><span class="line"></span><br><span class="line">kwargs：Job执行函数需要的关键字参数</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Jobstore-作业存储"><a href="#Jobstore-作业存储" class="headerlink" title="Jobstore 作业存储"></a>Jobstore 作业存储</h3><p>Jobstore在scheduler中初始化，另外也可通过scheduler的add_jobstore动态添加Jobstore。每个jobstore<br>都会绑定一个alias，scheduler在Add Job时，根据指定的jobstore在scheduler中找到相应的jobstore，并<br>将job添加到jobstore中。</p>
+<p>Jobstore主要是通过pickle库的loads和dumps【实现核心是通过python的__getstate__和__setstate__重写<br>实现】，每次变更时将Job动态保存到存储中，使用时再动态的加载出来，作为存储的可以是redis，也可以<br>是数据库【通过sqlarchemy这个库集成多种数据库】，也可以是mongodb等</p>
+<p>目前APScheduler支持的Jobstore：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MemoryJobStore</span><br><span class="line">MongoDBJobStore</span><br><span class="line">RedisJobStore</span><br><span class="line">RethinkDBJobStore</span><br><span class="line">SQLAlchemyJobStore</span><br><span class="line">ZooKeeperJobStore</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Trigger-触发器"><a href="#Trigger-触发器" class="headerlink" title="Trigger 触发器"></a>Trigger 触发器</h3><p>Trigger绑定到Job，在scheduler调度筛选Job时，根据触发器的规则计算出Job的触发时间，然后与当前时间比较<br>确定此Job是否会被执行，总之就是根据trigger规则计算出下一个执行时间。</p>
+<p>Trigger有多种种类，指定时间的DateTrigger，指定间隔时间的IntervalTrigger，像Linux的crontab<br>一样的CronTrigger</p>
+<p>目前APScheduler支持的触发器：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DateTrigger</span><br><span class="line">IntervalTrigger</span><br><span class="line">CronTrigger</span><br></pre></td></tr></table></figure>
+
+<h3 id="Executor-执行器"><a href="#Executor-执行器" class="headerlink" title="Executor 执行器"></a>Executor 执行器</h3><p>Executor在scheduler中初始化，另外也可通过scheduler的add_executor动态添加Executor。<br>每个executor都会绑定一个alias，这个作为唯一标识绑定到Job，在实际执行时会根据Job绑定的executor<br>找到实际的执行器对象，然后根据执行器对象执行Job</p>
+<p>Executor的种类会根据不同的调度来选择，如果选择AsyncIO作为调度的库，那么选择AsyncIOExecutor，如果<br>选择tornado作为调度的库，选择TornadoExecutor，如果选择启动进程作为调度，<br>选择ThreadPoolExecutor或者ProcessPoolExecutor都可以</p>
+<p>Executor的选择需要根据实际的scheduler来选择不同的执行器</p>
+<p>目前APScheduler支持的Executor：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">AsyncIOExecutor</span><br><span class="line">GeventExecutor</span><br><span class="line">ThreadPoolExecutor</span><br><span class="line">ProcessPoolExecutor</span><br><span class="line">TornadoExecutor</span><br><span class="line">TwistedExecutor</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Scheduler工作流程图"><a href="#3-Scheduler工作流程图" class="headerlink" title="3. Scheduler工作流程图"></a>3. Scheduler工作流程图</h2><p><img src="/images/apscheduler-study/add-job.jpg"></p>
+<h2 id="4-代码演示"><a href="#4-代码演示" class="headerlink" title="4.代码演示"></a>4.代码演示</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># File Name: interval.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> apscheduler.jobstores.redis <span class="keyword">import</span> RedisJobStore</span><br><span class="line"><span class="keyword">from</span> apscheduler.schedulers.blocking <span class="keyword">import</span> BlockingScheduler</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">tick</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Tick! The time is: %s&#x27;</span> % datetime.now())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    REDIS = &#123;</span><br><span class="line">        <span class="string">&#x27;host&#x27;</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;port&#x27;</span>: <span class="string">&#x27;6379&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;db&#x27;</span>: <span class="number">14</span>,</span><br><span class="line">        <span class="string">&#x27;password&#x27;</span>: <span class="string">&#x27;Hx$hfcmsrx3&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    SCHEDULER_JOBSTORES = &#123;</span><br><span class="line">        <span class="string">&#x27;redis&#x27;</span>: RedisJobStore(**REDIS)</span><br><span class="line">    &#125;</span><br><span class="line">    scheduler = BlockingScheduler(jobstores=SCHEDULER_JOBSTORES)</span><br><span class="line">    scheduler.add_job(tick, <span class="string">&#x27;interval&#x27;</span>, jobstore=<span class="string">&#x27;redis&#x27;</span>, seconds=<span class="number">5</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Press Ctrl+&#123;0&#125; to exit&#x27;</span>.<span class="built_in">format</span>(<span class="string">&#x27;Break&#x27;</span> <span class="keyword">if</span> os.name == <span class="string">&#x27;nt&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;C    &#x27;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        scheduler.start()</span><br><span class="line">    <span class="keyword">except</span> (KeyboardInterrupt, SystemExit):</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="5-参考链接"><a href="#5-参考链接" class="headerlink" title="5. 参考链接"></a>5. 参考链接</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/95563033">Python定时库APScheduler原理及用法 - 知乎 (zhihu.com)</a></p>
+<hr>
+<p><img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg"></p>
+<p><img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">APScheduler</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/apscheduler-study/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-coder-contest" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/coder-contest/">除了杨超越杯,这8个编程大赛程序员都该了解下!</a>
+    </h1>
+  
+
+        
+        <a href="/coder-contest/" class="archive-article-date">
+  	<time datetime="2022-02-08T09:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/kexuanxiu1163/article/details/104403930">https://blog.csdn.net/kexuanxiu1163/article/details/104403930</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/MOY37RQW1JarN33BgZk/article/details/88414869">https://blog.csdn.net/MOY37RQW1JarN33BgZk/article/details/88414869</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">程序员比赛</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/coder-contest/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-centos-download" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/centos-download/">CentOS 官方下载地址</a>
+    </h1>
+  
+
+        
+        <a href="/centos-download/" class="archive-article-date">
+  	<time datetime="2022-02-07T07:30:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center" id="支付宝-banner">
+    <a target="_blank" href="http://www.python4office.cn/fuli/zhifubao-0923/">
+    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%">
+    </a>   
+</p>
+
+
+<p align="center" id="外卖-banner">
+    <a target="_blank" href="https://kzurl05.cn/7II7R5">
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%">
+    </a>   
+</p>
+
+
+<ol>
+<li>官方下载地址，包含不同架构和镜像<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.centos.org/download/">https://www.centos.org/download/</a><br> 下载之后，如果是win10系统，可以直接使用hyper功能安装本地虚拟机<br> CentOS8自带Python3.6.8</p>
+</blockquote></li></ol>
+        
+          <a class="article-more-a" href="/centos-download/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">CentOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/centos-download/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-redis-setup" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/redis-setup/">CentOS8下Redis的安装</a>
+    </h1>
+  
+
+        
+        <a href="/redis-setup/" class="archive-article-date">
+  	<time datetime="2022-02-07T06:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div align="center">
+    <a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng"> <img src="https://badgen.net/badge/Github/%E7%A8%8B%E5%BA%8F%E5%91%98?icon=github&color=red"></a>
+    <a target="_blank" rel="noopener" href="http://t.cn/A6Gkrbzw"> <img src="https://badgen.net/badge/follow/%E5%85%AC%E4%BC%97%E5%8F%B7?icon=rss&color=green"></a>
+    <a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365"> <img src="https://badgen.net/badge/pick/B%E7%AB%99?icon=dependabot&color=blue"></a>
+    <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/6cR5fMSCtdI5sJdWiDwhOA"> <img src="https://badgen.net/badge/join/%E4%BA%A4%E6%B5%81%E7%BE%A4?icon=atom&color=yellow"></a>
+</div>
+
+<p>redis可以使用yum安装，也可以使用源码的方式安装<br>本次使用yum安装。</p>
+<blockquote>
+<p>源码安装教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/redis/redis-install.html">https://www.runoob.com/redis/redis-install.html</a></p>
+</blockquote>
+        
+          <a class="article-more-a" href="/redis-setup/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">CentOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/redis-setup/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-celery-setup" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/celery-setup/">Celery讲解和入门案例</a>
+    </h1>
+  
+
+        
+        <a href="/celery-setup/" class="archive-article-date">
+  	<time datetime="2022-01-26T12:26:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Celery介绍"><a href="#Celery介绍" class="headerlink" title="Celery介绍"></a>Celery介绍</h2>
+        
+          <a class="article-more-a" href="/celery-setup/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Celery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/celery-setup/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-baiss-tech-nav" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/baiss-tech-nav/">近期项目知识点整理</a>
+    </h1>
+  
+
+        
+        <a href="/baiss-tech-nav/" class="archive-article-date">
+  	<time datetime="2022-01-26T02:41:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>Redis支持五种数据类型：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特点</th>
+<th>命令</th>
+<th>场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>string（字符串）</td>
+<td>最基本的类型<br>二进制安全，可以包含任何数据<br>最大能存储512MB</td>
+<td>set<br>get</td>
+<td></td>
+</tr>
+<tr>
+<td>hash（哈希）</td>
+<td>适合于存储对象</td>
+<td>hset<br>hmset</td>
+<td>存储、读取、修改用户属性</td>
+</tr>
+<tr>
+<td>list（列表）</td>
+<td>双向链表</td>
+<td>lpush<br></td>
+<td>1,最新消息排行等功能(比如朋友圈的时间线) <br>2,消息队列</td>
+</tr>
+<tr>
+<td>set（集合）</td>
+<td>无序、不重复</td>
+<td>sadd<br>sinter：交集<br></td>
+<td>1、共同好友 <br>2、利用唯一性,统计访问网站的所有独立ip<br> 3、好友推荐时,根据tag求交集,大于某个阈值就可以推荐</td>
+</tr>
+<tr>
+<td>zset(sorted set：有序集合)</td>
+<td>有序，不重复<br>每个元素对应一个double类型的分数，分数可以重复</td>
+<td>zadd<br>zincrby</td>
+<td>1、排行榜<br> 2、带权重的消息队列</td>
+</tr>
+</tbody></table>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/redis/redis-data-types.html">Redis 数据类型 | 菜鸟教程 (runoob.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cxxjohnson/p/9072383.html">redis常用命令大全 - chenxiangxiang - 博客园 (cnblogs.com)</a></li>
+</ul>
+<h2 id="Supervisor"><a href="#Supervisor" class="headerlink" title="Supervisor"></a>Supervisor</h2><h4 id="参考链接-1"><a href="#参考链接-1" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+<li><a target="_blank" rel="noopener" href="http://www.python4office.cn/supervisor-config/">Supervisor使用详解</a></li>
+</ul>
+<h2 id="Celery"><a href="#Celery" class="headerlink" title="Celery"></a>Celery</h2><h3 id="协程和异步"><a href="#协程和异步" class="headerlink" title="协程和异步"></a>协程和异步</h3><h4 id="原理和实现"><a href="#原理和实现" class="headerlink" title="原理和实现"></a>原理和实现</h4><p>不是计算机提供的，是人为创造的，通过一个线程实现代码块之间的切换执行。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实现协程的几种方式</span></span><br><span class="line">greenlet</span><br><span class="line"><span class="keyword">yield</span></span><br><span class="line">asyncio - <span class="number">3.4</span>：遇到io阻塞会自动切换</span><br><span class="line"><span class="keyword">async</span>&amp;<span class="keyword">await</span>关键字：<span class="number">3.5</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="协程的意义"><a href="#协程的意义" class="headerlink" title="协程的意义"></a>协程的意义</h4><p>基于协程实现的编程，叫做异步编程。</p>
+<h4 id="阻塞"><a href="#阻塞" class="headerlink" title="阻塞"></a>阻塞</h4><p>进程运行的三个状态：运行、就绪、阻塞</p>
+<p>阻塞：程序运行时，遇到了IO，程序挂起，CPU被切走</p>
+<p>非阻塞：程序没有遇到IO；或者程序遇到IO，但是我通过某种手段，让CPU强行运行我的程序。</p>
+<h4 id="参考链接-2"><a href="#参考链接-2" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/article/903701468278784">任务调度利器：Celery - 廖雪峰的官方网站 (liaoxuefeng.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19S4y1j7iv?p=1">ByYuan celery从语法到案例精讲课程_哔哩哔哩_bilibili</a></li>
+</ul>
+<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><h4 id="python中-classmethod-staticmethod区别"><a href="#python中-classmethod-staticmethod区别" class="headerlink" title="python中@classmethod @staticmethod区别"></a>python中@classmethod @staticmethod区别</h4><ul>
+<li>@staticmethod 不需要访问和类相关的属性或数据(感觉只是概念上的区别，你这样声明了用的人就知道了，如果你非要在这个方法中访问test.xxx 它就和@classmethod的作用一样了。）</li>
+<li>@classmethod 可以访问和类相关（不和实例相关)的属性，</li>
+</ul>
+<h2 id="APScheduler"><a href="#APScheduler" class="headerlink" title="APScheduler"></a>APScheduler</h2><p>APScheduler是基于Quartz的一个Python定时任务框架。提供了基于日期、固定时间间隔以及crontab类型的任务，并且可以持久化任务。在线文档：<a target="_blank" rel="noopener" href="https://apscheduler.readthedocs.io/en/latest/userguide.html">https://apscheduler.readthedocs.io/en/latest/userguide.html</a></p>
+<h4 id="参看链接"><a href="#参看链接" class="headerlink" title="参看链接"></a>参看链接</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/somezz/article/details/83104368">花10分钟让你彻底学会Python定时任务框架apscheduler_somezz的专栏-CSDN博客_apscheduler</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/chosen0ne/article/details/7842421?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_paycolumn_v3&utm_relevant_index=2">Python定时任务框架APScheduler_架构师专栏-CSDN博客_python定时任务框架</a></li>
+</ul>
+<h2 id="Flask"><a href="#Flask" class="headerlink" title="Flask"></a>Flask</h2><h4 id="请求钩子"><a href="#请求钩子" class="headerlink" title="请求钩子"></a>请求钩子</h4><p>中间层</p>
+<h4 id="上下文"><a href="#上下文" class="headerlink" title="上下文"></a>上下文</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1L64y1C7ce?p=5">https://www.bilibili.com/video/BV1L64y1C7ce?p=5</a></p>
+</blockquote>
+<ul>
+<li>请求上下文<ul>
+<li>request</li>
+<li>session</li>
+</ul>
+</li>
+<li>应用上下文<ul>
+<li>current_app<ul>
+<li>伴随request产生和消灭</li>
+</ul>
+</li>
+<li>g对象<ul>
+<li>在方法之间传递参数</li>
+<li>本次请求之内有效</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>上下文实现的原理<ul>
+<li>Threadlocal：线程局部变量</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/baiss-tech-nav/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hexo-setup-config-bug" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-setup-config-bug/">Hexo的安装和配置</a>
+    </h1>
+  
+
+        
+        <a href="/hexo-setup-config-bug/" class="archive-article-date">
+  	<time datetime="2022-01-25T01:06:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><ul>
+<li><p>hexo文章中插入方便管理的图片文件夹</p>
+<blockquote>
+<p>在/source/_post文件夹的同级目录下，创建images文件夹。在其中创建文章的同名文件夹，在文章中引入即可，例如：’![](/images/nginx-config/img_name.png)’</p>
+</blockquote>
+</li>
+<li><p>hexo改变根目录，搭配nginx配置特定的端口</p>
+</li>
+</ul>
+<blockquote>
+<p>在_config.yml文件中，修改root：属性</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/hexo-setup-config-bug/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/hexo-setup-config-bug/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-to-do-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/to-do-list/">近日待办事项</a>
+    </h1>
+  
+
+        
+        <a href="/to-do-list/" class="archive-article-date">
+  	<time datetime="2022-01-24T13:15:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h2 id="2022-4-29"><a href="#2022-4-29" class="headerlink" title="2022-4-29"></a>2022-4-29</h2><ul>
+<li>设计模式</li>
+<li>sql语法</li>
+<li>flask</li>
+<li>腾讯云认证</li>
+</ul>
+<h2 id="2022-4-6"><a href="#2022-4-6" class="headerlink" title="2022-4-6"></a>2022-4-6</h2><ul>
+<li>pandas</li>
+<li>腾讯云认证</li>
+</ul>
+<h2 id="2022-2-14"><a href="#2022-2-14" class="headerlink" title="2022-2-14"></a>2022-2-14</h2><ul>
+<li><input disabled type="checkbox"> git：熟练操作</li>
+</ul>
+<h2 id="2022-2-9"><a href="#2022-2-9" class="headerlink" title="2022-2-9"></a>2022-2-9</h2><ul>
+<li><input disabled type="checkbox"> apscheduler：理清原理</li>
+</ul>
+<h2 id="2022-2-8"><a href="#2022-2-8" class="headerlink" title="2022-2-8"></a>2022-2-8</h2><ul>
+<li><input checked disabled type="checkbox"> Hyper-V设置固态IP</li>
+<li><input checked disabled type="checkbox"> Hyper-V设置端口映射<ul>
+<li>netsh interface portproxy add v4tov4 listenport=外网端口 listenaddress=主IP connectaddress=私网IP connectport=私网IP端口</li>
+</ul>
+</li>
+</ul>
+<h2 id="2022-2-7"><a href="#2022-2-7" class="headerlink" title="2022-2-7"></a>2022-2-7</h2><ul>
+<li><input disabled type="checkbox"> Hyper-V设置固态IP</li>
+</ul>
+<h2 id="2022-1-27"><a href="#2022-1-27" class="headerlink" title="2022-1-27"></a>2022-1-27</h2><ul>
+<li><input checked disabled type="checkbox"> apscheduler：跑通demo</li>
+<li><input checked disabled type="checkbox"> python单元测试：跑通demo<ul>
+<li>unittest：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1BF411e7hD?p=3&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BF411e7hD?p=3&amp;spm_id_from=pageDriver</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="2022-1-26"><a href="#2022-1-26" class="headerlink" title="2022-1-26"></a>2022-1-26</h2><ul>
+<li><p><input checked disabled type="checkbox">  celery：跑通demo</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.python4office.cn/celery-setup/">Celery讲解和入门案例 | 程序员晚枫的个人网站 (python4office.cn)</a></li>
+</ul>
+</li>
+<li><p><input checked disabled type="checkbox">  mpvue：小程序开发</p>
+<ul>
+<li>mpvue停止维护，改为uniapp</li>
+</ul>
+</li>
+</ul>
+<h2 id="2022-1-25"><a href="#2022-1-25" class="headerlink" title="2022-1-25"></a>2022-1-25</h2><ul>
+<li><input checked disabled type="checkbox"> nginx：不同路径配置不同端口<ul>
+<li><a href="../nginx-config/">NGINX 配置 同一域名端口下，根据URL 导向不同的项目目录</a></li>
+<li><a href="../hexo-setup-config-bug/">需要修改Hexo的根目录</a></li>
+</ul>
+</li>
+<li><input checked disabled type="checkbox"> hexo：文章图片放在对应的文件夹里<ul>
+<li><a href="../hexo-setup-config-bug/">Hexo的安装和配置</a></li>
+</ul>
+</li>
+<li><input disabled type="checkbox"> mpvue：小程序开发</li>
+</ul>
+<h2 id="2022-1-24"><a href="#2022-1-24" class="headerlink" title="2022-1-24"></a>2022-1-24</h2><ul>
+<li><input checked disabled type="checkbox"> supervisor：管理Linux服务器项目的进程<ul>
+<li><a href="../supervisor-config/">supervisor使用详解</a></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人计划</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/to-do-list/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-nginx-config" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/nginx-config/">NGINX 配置 同一域名端口下，根据URL 导向不同的项目目录</a>
+    </h1>
+  
+
+        
+        <a href="/nginx-config/" class="archive-article-date">
+  	<time datetime="2022-01-24T13:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center" id="支付宝-banner">
+    <a target="_blank" href="http://www.python4office.cn/fuli/zhifubao-0923/">
+    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%">
+    </a>   
+</p>
+
+
+<p align="center" id="外卖-banner">
+    <a target="_blank" href="https://kzurl05.cn/7II7R5">
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%">
+    </a>   
+</p>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>下载tar.gz：<a target="_blank" rel="noopener" href="http://nginx.org/en/download.html">下载链接</a>，上传到linux</li>
+<li>解压后运行：configure</li>
+<li>编译：make install</li>
+<li>修改：/usr/local/nginx/conf/nginx.conf</li>
+</ol>
+<h2 id="不同路径配置不同端口"><a href="#不同路径配置不同端口" class="headerlink" title="不同路径配置不同端口"></a>不同路径配置不同端口</h2>
+        
+          <a class="article-more-a" href="/nginx-config/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/nginx-config/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-create-requeriments" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -286,1131 +1225,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-supervisor-config" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/supervisor-config/">Supervisor使用详解</a>
-    </h1>
-  
-
-        
-        <a href="/supervisor-config/" class="archive-article-date">
-  	<time datetime="2022-01-23T11:08:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近项目中需要使用supervisor部署flask项目，supervisor只支持Linux上使用。</p>
-<p>于是我就拿自己的<a target="_blank" rel="noopener" href="https://curl.qcloud.com/rRyNNRRE">腾讯云服务器</a>，做了一下试验。试验过程曲折，我把过程记录如下。</p>
-<h2 id="Supervisor简介"><a href="#Supervisor简介" class="headerlink" title="Supervisor简介"></a>Supervisor简介</h2><p>Supervisor是用Python开发的一套通用的进程管理程序，能将一个普通的命令行进程变为后台daemon，并监控进程状态，异常退出时能自动重启。它是通过fork/exec的方式把这些被管理的进程当作supervisor的子进程来启动，这样只要在supervisor的配置文件中，把要管理的进程的可执行文件的路径写进去即可。也实现当子进程挂掉的时候，父进程可以准确获取子进程挂掉的信息的，可以选择是否自己启动和报警。supervisor还提供了一个功能，可以为supervisord或者每个子进程，设置一个非root的user，这个user就可以管理它对应的进程。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2>
-        
-          <a class="article-more-a" href="/supervisor-config/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/supervisor-config/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-workon-venv" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/workon-venv/">使用virtualenvwrapper搭建Linux虚拟环境，并用workon命令启动</a>
-    </h1>
-  
-
-        
-        <a href="/workon-venv/" class="archive-article-date">
-  	<time datetime="2022-01-23T07:58:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center" id="支付宝-banner">
-    <a target="_blank" href="http://www.python4office.cn/fuli/zhifubao-0923/">
-    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%">
-    </a>   
-</p>
-
-
-<p align="center" id="外卖-banner">
-    <a target="_blank" href="https://kzurl05.cn/7II7R5">
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%">
-    </a>   
-</p>
-
-
-
-
-<h2 id="目标说明"><a href="#目标说明" class="headerlink" title="目标说明"></a>目标说明</h2>
-        
-          <a class="article-more-a" href="/workon-venv/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/workon-venv/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-be-yourslf" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/be-yourslf/">成为你自己 · 配套测试&amp;课程</a>
-    </h1>
-  
-
-        
-        <a href="/be-yourslf/" class="archive-article-date">
-  	<time datetime="2022-01-12T14:11:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center" id="支付宝-banner">
-    <a target="_blank" href="http://www.python4office.cn/fuli/zhifubao-0923/">
-    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%">
-    </a>   
-</p>
-
-
-<p align="center" id="外卖-banner">
-    <a target="_blank" href="https://kzurl05.cn/7II7R5">
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%">
-    </a>   
-</p>
-
-
-
-<blockquote>
-<p>以下所有蓝色链接，都可以点击。<br>以下内容包含：<br>1、探索心理测试<br>2、更多心理视频<br>3、武志红的图书<br>4、心理交流群</p>
-</blockquote>
-<h2 id="1、心理测试的链接"><a href="#1、心理测试的链接" class="headerlink" title="1、心理测试的链接"></a>1、心理测试的链接</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">需要课程相关的心理测试，请点击下面这些蓝色链接。</span><br><span class="line">如果需要更多心理课程，请看本文第2部分</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>个人成长：<ul>
-<li>💘<a target="_blank" rel="noopener" href="http://www.urlort.cn/2SIUm2">潜在心理创伤测试</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2UJxkf">你心底有哪些隐藏的偏见？</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2Qbuge">童年阴影评估</a></li>
-<li>😥<a target="_blank" rel="noopener" href="http://www.urlort.cn/2UJxt0">习惯性重复：你在重复家庭的伤害吗？</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2VT4Q3">原生家庭影响评估</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/zblwUazPpVjTMapNCG2nhg">🙋发现你最突出的5项天赋</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>爱的能力：<ul>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2SIV69">恋爱心理成熟度评估</a></li>
-<li>👬<a target="_blank" rel="noopener" href="http://www.urlort.cn/2UJuC7">面对伴侣，你是哪种依恋类型？</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2UJv93">异性魅力评估</a></li>
-<li><a target="_blank" rel="noopener" href="http://url.newrank.cn/353MW6">什么样的异性最适合你？</a></li>
-<li><a target="_blank" rel="noopener" href="http://url.newrank.cn/353N5e">爱情智商评估</a></li>
-<li><a target="_blank" rel="noopener" href="http://url.newrank.cn/353LH8">测试你的出轨倾向</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>面对生活：<ul>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2UJvh8">气质类型评估</a></li>
-<li>🏃<a target="_blank" rel="noopener" href="http://www.urlort.cn/2S7zo0">发现属于自己的职场优势</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2UJvx1">情商测试「专业版」</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2UJx8c">你能从人际关系中获得多少支持？</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2VT4V5">家庭-工作平衡度评估</a></li>
-<li><a target="_blank" rel="noopener" href="http://url.newrank.cn/9QmU5c">硅谷精英的冥想课</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="2、心理视频的链接"><a href="#2、心理视频的链接" class="headerlink" title="2、心理视频的链接"></a>2、心理视频的链接</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">需要听更多心理分析的课程，发现最真实的自己，请点击下面这些蓝色链接</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>与自己对话<ol>
-<li>🔥<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mi4y1j7DF">武志红《成为你自己》</a></li>
-<li>👨‍👩‍👧‍👦<a target="_blank" rel="noopener" href="http://www.urlort.cn/2VT445">超越原生家庭，活出全新自我</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2VSXI9">21天摆脱抑郁困扰：别让坏情绪拖累你的人生</a></li>
-<li><a target="_blank" rel="noopener" href="http://gk.link/a/113zd">说出你的故事：怎样讲一个能影响别人的好故事？</a></li>
-<li>📺<a target="_blank" rel="noopener" href="http://url.newrank.cn/3ed0n3">施琪嘉创伤30讲：走出心理阴影，重塑强大内心</a></li>
-</ol>
-</li>
-</ul>
-<ul>
-<li>和别人相处<ol>
-<li><a target="_blank" rel="noopener" href="http://gk.link/a/113yv">李一帆《解决你的恋爱难题》</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2VT0wc">实用人格手册：读懂自己与他人的必备指南</a></li>
-<li>🍭<a target="_blank" rel="noopener" href="http://www.urlort.cn/2VT6gc">给90后女生的关系课</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.urlort.cn/2VSZD6">越吵越亲密的哈佛亲密关系攻略</a></li>
-<li><a target="_blank" rel="noopener" href="http://url.newrank.cn/3ed0a9">人人必修的52堂犯罪心理学</a></li>
-</ol>
-</li>
-</ul>
-<h2 id="3、心理分析的交流群"><a href="#3、心理分析的交流群" class="headerlink" title="3、心理分析的交流群"></a>3、心理分析的交流群</h2><p>👉扫码下图添加我的微信：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA">CoderWanFeng</a>，验证消息请填写：<strong>心理分析</strong>，即可加入群聊~</p>
-<p><img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg" alt="CoderWanFeng"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/be-yourslf/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-web" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/python-web/">Python网站开发 - Django &amp; Flask必备知识点</a>
-    </h1>
-  
-
-        
-        <a href="/python-web/" class="archive-article-date">
-  	<time datetime="2022-01-10T17:07:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license">
-    </a>   
-</p>
-<p align="center">
-    <strong>🍬python for office</strong>
-</p>
-<p align="center">
-    👉 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
-</p>
-
-
-<p align="center" name="图标-github">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues">
-    </a>    
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license">
-    </a>   
-</p>
-
-<p align="center" name="gitee">
-    <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office/">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork">
-    </a>
-    <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-    <img src="https://img.shields.io/badge/QQ-163434413-orange"></a>
-</p>
-
-
-
-<p>Python程序员使用最多的可能就是Web开发框架了。我在转行过程中，也是毫不例外的学习了Djnago和Flask这两个网站开发技术，现在把一些常见的必备知识，整理如下。</p>
-<h2 id="Django"><a href="#Django" class="headerlink" title="Django"></a>Django</h2><blockquote>
-<p>参考：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/2BPiuy_gRA4j6CTWG7jVtQ">为什么 Django 框架持续统治着 Python 网站开发？</a></p>
-</blockquote>
-<h2 id="Flask"><a href="#Flask" class="headerlink" title="Flask"></a>Flask</h2><blockquote>
-<p>参考：<a target="_blank" rel="noopener" href="http://gk.link/a/1130p">手把手带你写一个Web框架</a></p>
-</blockquote>
-        
-          <a class="article-more-a" href="/python-web/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网站开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/python-web/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-linux-command" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/linux-command/">Linux的常用命令</a>
-    </h1>
-  
-
-        
-        <a href="/linux-command/" class="archive-article-date">
-  	<time datetime="2022-01-05T14:30:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license">
-    </a>   
-</p>
-<p align="center">
-    <strong>🍬python for office</strong>
-</p>
-<p align="center">
-    👉 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
-</p>
-
-
-<p align="center" name="图标-github">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues">
-    </a>    
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license">
-    </a>   
-</p>
-
-<p align="center" name="gitee">
-    <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office/">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork">
-    </a>
-    <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-    <img src="https://img.shields.io/badge/QQ-163434413-orange"></a>
-</p>
-
-
-
-<p>对于习惯了 Windows、macOS 等图形界面的用户来说，Linux 以命令行为主的操作方式导致它刚开始的学习曲线还是很陡峭的。<br>别无他法，多看书，多练习。于是我把自己在<a target="_blank" rel="noopener" href="https://curl.qcloud.com/PHemptia">腾讯云服务器</a>里常用的命令，记录在这里，常看常新。</p>
-<h3 id="查看存储大小"><a href="#查看存储大小" class="headerlink" title="查看存储大小"></a>查看存储大小</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">du -sh file、dir 查看文件、文件夹大小</span><br><span class="line"></span><br><span class="line">df -h 查看每个根路径的分区大小</span><br><span class="line">df -hl 查看磁盘剩余空间</span><br><span class="line"></span><br><span class="line">du -sm [文件夹] 返回该文件夹总M数</span><br></pre></td></tr></table></figure>
-
-<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3>
-        
-          <a class="article-more-a" href="/linux-command/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/linux-command/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-upload-pip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/upload-pip/">以最简洁的方式打包发布你自己的pip项目</a>
-    </h1>
-  
-
-        
-        <a href="/upload-pip/" class="archive-article-date">
-  	<time datetime="2022-01-05T08:03:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license">
-    </a>   
-</p>
-<p align="center">
-    <strong>🍬python for office</strong>
-</p>
-<p align="center">
-    👉 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
-</p>
-
-
-<p align="center" name="图标-github">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues">
-    </a>    
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license">
-    </a>   
-</p>
-
-<p align="center" name="gitee">
-    <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office/">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork">
-    </a>
-    <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-    <img src="https://img.shields.io/badge/QQ-163434413-orange"></a>
-</p>
-
-
-
-
-<p>你有没有过这种经历？</p>
-<blockquote>
-<p>花费很长时间写了一套代码，逻辑很复杂，功能很丰富，让你很自豪，但你却发现，你没法把他分享出去？让更多的人看到？</p>
-</blockquote>
-<p>当有了一些成果以后，如何发布宣传是一件很重要的事，<br>开源也是Python发展这么迅速一个非常重要的原因，所以Python官方也给大家提供了分享自己代码和项目的地方：pypi<br>今天向大家介绍一下如何向全球公开发布自己的pip项目。</p>
-<blockquote>
-<p>如果你还没学完Python基础，推荐你这套👉<a target="_blank" rel="noopener" href="https://www.python-office.com/video/video.html">Python基础精讲课程</a></p>
-</blockquote>
-<h3 id="1-注册一个pypi账号"><a href="#1-注册一个pypi账号" class="headerlink" title="1.注册一个pypi账号"></a>1.注册一个pypi账号</h3>
-        
-          <a class="article-more-a" href="/upload-pip/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">开源项目</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/upload-pip/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-open-source-py" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/open-source-py/">如何参与1个python的开源项目？</a>
-    </h1>
-  
-
-        
-        <a href="/open-source-py/" class="archive-article-date">
-  	<time datetime="2022-01-05T07:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license">
-    </a>   
-</p>
-<p align="center">
-    <strong>🍬python for office</strong>
-</p>
-<p align="center">
-    👉 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
-</p>
-
-
-<p align="center" name="图标-github">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues">
-    </a>    
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license">
-    </a>   
-</p>
-
-<p align="center" name="gitee">
-    <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office/">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork">
-    </a>
-    <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-    <img src="https://img.shields.io/badge/QQ-163434413-orange"></a>
-</p>
-
-
-
-<p>在过去五年我一直参与 <a target="_blank" rel="noopener" href="http://dgplug.org/">Durgapur Linux</a>用户组。我一直为各种开源项目进行贡献。我为开源贡献的主要原因是非常享受当你发送一个补丁或PR（pull request 提交问题）到一个开源项目的感觉。当数以百万计的人在每天的生活中使用你的一些代码时，这会让你感到幸福。</p>
-<p>通过Google <a target="_blank" rel="noopener" href="http://www.google-melange.com/">Summer of Code</a>和 <a target="_blank" rel="noopener" href="http://yourstory.com/2013/09/super-student-sayan-chowdhury-python-and-open-source-developer/">Super Student</a>，很多人与我联系。他们都有相同的问题。</p>
-<p>如何开始？我懂x、y、z语言。我应该对哪个项目贡献？我如何能过滤出一个bug？所以，我想写一篇博客文章来将尝试回答这些问题。但是，首先让我们了解什么是开源软件。</p>
-<h3 id="什么是开源软件（OSS"><a href="#什么是开源软件（OSS" class="headerlink" title="什么是开源软件（OSS)"></a>什么是开源软件（OSS)</h3>
-        
-          <a class="article-more-a" href="/open-source-py/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">开源项目</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/open-source-py/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-blacktech-nav" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blacktech-nav/">黑科技导航 - 内容列表</a>
-    </h1>
-  
-
-        
-        <a href="/blacktech-nav/" class="archive-article-date">
-  	<time datetime="2022-01-01T13:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center" id="支付宝-banner">
-    <a target="_blank" href="http://www.python4office.cn/fuli/zhifubao-0923/">
-    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%">
-    </a>   
-</p>
-
-
-<p align="center" id="外卖-banner">
-    <a target="_blank" href="https://kzurl05.cn/7II7R5">
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%">
-    </a>   
-</p>
-
-
-
-
-<p align="center" name="图标-github">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-        <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office">
-        <img src="https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-      <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-    <img src="https://img.shields.io/badge/QQ-163434413-orange">
-  </a>
-        <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
-    <img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen">
-  </a>
-</p>
-
-<p>你好呀，我是<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA">程序员晚枫</a>， 💬 我的微信，点击添加👉<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA">CoderWanFeng</a></p>
-<blockquote>
-<p>点击以下蓝色字体，可以直达资源<br>高效办公软件 · 分享交流群：<a target="_blank" rel="noopener" href="http://www.python4office.cn/wechat-group/">点我加入</a></p>
-</blockquote>
-<h2 id="OFFICE类"><a href="#OFFICE类" class="headerlink" title="OFFICE类"></a>OFFICE类</h2><table>
-<thead>
-<tr>
-<th>软件</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/0cM3HAKGGcVn9FL6XnNGaw">Win11自动更新</a></td>
-<td>官方软件，帮你从Win10更新到Win11，不影响已有软件的使用</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/7E_BjzNSv4zMv6_I8mSzZQ">✨Excel工具箱</a></td>
-<td>支持WPS和OFFICE，200多个功能，表格达人必备！</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/IW98U4YdX-ZA5qlJA1tlbg">💻PPT插件</a></td>
-<td>它包含38个设计辅助功能，8大在线资源库，超 20 万专业 PPT 素材！</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/okGDduCSwFBTC1H3k5lPQw">PDF编辑器</a></td>
-<td>你能想到的PDF操作，它都能做，而且还免费！</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/4KLFZJYgOFxlRJs-kWNmFQ">🍀文件夹管理</a></td>
-<td>超赞！像使用浏览器一样管理你的文件夹</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Do_RmhJZFlUTkLTks1jR7w">👀文件搜索</a></td>
-<td>搜索神器 Everything，你把它的潜力用到极致了吗？</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/PGKrVgQcv3uKIWoMS7hw_g">办公插件工具箱</a></td>
-<td>这才是办公工具，本来的样子</td>
-</tr>
-<tr>
-<td>🖊<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/NgEmkh2si0BrOsOkjgKAcA">不会卡的杀毒软件</a></td>
-<td>秒杀360 ： 无弹窗、不变卡，是我的基本原则。</td>
-</tr>
-</tbody></table>
-        
-          <a class="article-more-a" href="/blacktech-nav/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">办公黑科技</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">高效办公</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blacktech-nav/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-google_python_code_rule" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/google_python_code_rule/">Google Python开源项目风格指南——中文版</a>
-    </h1>
-  
-
-        
-        <a href="/google_python_code_rule/" class="archive-article-date">
-  	<time datetime="2021-12-30T06:41:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license">
-    </a>   
-</p>
-<p align="center">
-    <strong>🍬python for office</strong>
-</p>
-<p align="center">
-    👉 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
-</p>
-
-
-<p align="center" name="图标-github">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues">
-    </a>    
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license">
-    </a>   
-</p>
-
-<p align="center" name="gitee">
-    <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office/">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=white" alt="gitee fork">
-    </a>
-    <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-    <img src="https://img.shields.io/badge/QQ-163434413-orange"></a>
-</p>
-
-
-
-
-
-<h1 id="Python-风格指南-内容目录"><a href="#Python-风格指南-内容目录" class="headerlink" title="Python 风格指南 - 内容目录"></a>Python 风格指南 - 内容目录</h1><p>Google Python开源项目风格十分流行，我把其中自己关注的内容摘抄如下。</p>
-<blockquote>
-<p>如需查看原手册：<a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/">传送门</a></p>
-</blockquote>
-<h2 id="Python语言规范"><a href="#Python语言规范" class="headerlink" title="Python语言规范"></a>Python语言规范</h2>
-        
-          <a class="article-more-a" href="/google_python_code_rule/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">代码规范</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">开源项目</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/google_python_code_rule/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/49/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/">48</a><a class="page-number" href="/page/49/">49</a><span class="page-number current">50</span><a class="page-number" href="/page/51/">51</a><a class="page-number" href="/page/52/">52</a><a class="extend next" rel="next" href="/page/51/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/49/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/">48</a><a class="page-number" href="/page/49/">49</a><span class="page-number current">50</span><a class="page-number" href="/page/51/">51</a><a class="page-number" href="/page/52/">52</a><a class="page-number" href="/page/53/">53</a><a class="extend next" rel="next" href="/page/51/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1527,15 +1344,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数字化转型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化办公</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">团队介绍</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">数字化转型</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1551,7 +1368,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Turtle</a>
+                <a href="javascript:void(0)" class="js-tag color1">办公黑科技</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">高效办公</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1575,19 +1396,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">办公黑科技</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高效办公</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ai</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Turtle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">机器人</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1603,15 +1424,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">机器人</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">职场</a>
+                <a href="javascript:void(0)" class="js-tag color3">咖啡</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">平台</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">职场</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1620,10 +1441,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">pip</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">咖啡</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1643,15 +1460,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">金融</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python-office</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1663,11 +1472,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">招聘</a>
+                <a href="javascript:void(0)" class="js-tag color3">金融</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">程序员</a>
+                <a href="javascript:void(0)" class="js-tag color4">python-office</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">招聘</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1675,7 +1488,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
+                <a href="javascript:void(0)" class="js-tag color4">程序员</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1684,6 +1497,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">黑科技</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1703,7 +1520,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">单元测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">spark</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1711,15 +1536,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">单元测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1751,11 +1568,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">社区活动</a>
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
+                <a href="javascript:void(0)" class="js-tag color5">社区活动</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1775,11 +1592,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工房</a>
+                <a href="javascript:void(0)" class="js-tag color4">大模型</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">大模型</a>
+                <a href="javascript:void(0)" class="js-tag color3">工房</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1791,15 +1608,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">福利</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">微信机器人</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">第三方库</a>
+                <a href="javascript:void(0)" class="js-tag color3">福利</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1815,23 +1628,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">第三方库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">chatgpt</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知识付费</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">关键词</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">pobaidu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1839,15 +1640,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">关键词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">知识付费</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">chatgpt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">pobaidu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">potencent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1855,11 +1664,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">下载</a>
+                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">课程资料</a>
+                <a href="javascript:void(0)" class="js-tag color5">potencent</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1867,15 +1676,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">课程资料</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">免费教程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知识星球</a>
+                <a href="javascript:void(0)" class="js-tag color3">下载</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">转行程序员</a>
+                <a href="javascript:void(0)" class="js-tag color5">知识星球</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1887,11 +1700,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习计划</a>
+                <a href="javascript:void(0)" class="js-tag color1">转行程序员</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">1对1咨询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1903,15 +1720,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">副业信息差</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">原创文章</a>
+                <a href="javascript:void(0)" class="js-tag color1">副业信息差</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1931,6 +1744,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">原创文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">程序员说法</a>
               </li>
              
@@ -1939,7 +1756,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年度目标</a>
+                <a href="javascript:void(0)" class="js-tag color4">pdf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CPython</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1947,7 +1768,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CPython</a>
+                <a href="javascript:void(0)" class="js-tag color5">年度目标</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1967,11 +1788,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wftools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">1v1</a>
+                <a href="javascript:void(0)" class="js-tag color1">pycon</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1979,11 +1796,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pycon</a>
+                <a href="javascript:void(0)" class="js-tag color4">1v1</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">交流群</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wftools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">商务合作</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1999,11 +1824,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">商务合作</a>
+                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">周记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">恰饭</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2012,26 +1853,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">推广</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">恰饭</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">语法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2047,10 +1868,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">3.12</a>
               </li>
              
@@ -2059,7 +1876,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">转行咨询</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python进阶</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2068,6 +1885,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">付费咨询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">转行咨询</a>
               </li>
              
               <li class="article-tag-list-item">

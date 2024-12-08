@@ -47,7 +47,7 @@ tags: [副业,副业信息差]
 
 - ![知识星球：副业信息差](https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83%2F%E5%89%AF%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%B7%AE.jpg)
 
-### 你好呀，我是[程序员晚枫](https://mp.weixin.qq.com/s/8x7c9qiAneTsDJq9JnWLgA)
+### 你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
 - 🐧 程序员/互联网劝退师
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
 - 💬 我的微信，点击添加👉[CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
