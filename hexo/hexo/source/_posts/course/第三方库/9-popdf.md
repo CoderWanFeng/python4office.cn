@@ -4,39 +4,69 @@ date: 2024-12-08 10:16:17
 tags: [ 第三方库,自动化办公,pdf ]
 ---
 
-大家好，这里是程序员晚枫，今天给大家分享一个Python自动化办公的新功能：分割PDF。
+大家好，这里是程序员晚枫，今天给大家分享一个PDF自动化办公的第三方库：popdf。
 
-## 需求说明
+> 源码地址：[https://github.com/CoderWanFeng/popdf](https://github.com/CoderWanFeng/popdf)
 
-上次在小破站给大家录制的原创课程：[《给小白的50讲Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
-，里面有一讲是关于PDF转Word的特别热门。
+popdf 是一个 Python 自动化办公之 Excel 操作的第三方库，它来自于开源项目 python-office。
 
-但是那个功能有一个缺点：不能转换扫描件，最近在录制另一套新课程发现了一个值得尝试的解决办法，于是就想找一个扫描版的PDF试一下。
+以下是 popdf 的一些基本使用方法：
 
-在50讲自动化办公的课程群里一问，热心的学员马上就发出来了。但是这个PDF文件太大了，做测试不方便，我就想把它拆分一下，比如：只要前3页，或者取第10-第30页。
+### 安装 popdf
 
-搜了一下已有的PDF自动化办公的库，没找到这个功能，所以就有了今天的代码。
+你可以通过 pip 命令来安装 popdf：
 
-## 上代码
-
-首先，下载一个PDF自动化办公的专用库：``popdf``，命令如下，👇
-
+```bash
+pip install -i https://mirrors.aliyun.com/pypi/simple/ popdf -U
 ```
-pip install popdf
-```
+## 更新说明
 
-然后直接1行代码搞定，👇
+本次popdf 发布了1.0.0版本：重点有以下几个方面的更新：
 
-```
-# pip install popdf
+- 精简了依赖库：重点封装了PyMuPDF和PyPDF2这2个库，去掉了其它处理PDF的库，减小了20M的存储空间。
+- 精简了代码：删除了不必要的代码和注释，优化了代码结构。
+- 统一了参数的命名方式：input_path、output_path、input_file、output_file...，下文有详细的介绍
+- 完善了配套的课程，这部分课程会发布到B站：Python自动化办公社区，大家敬请期待~
+
+
+## popdf 的功能
+
+popdf 提供了多种功能，包括但不限于：
+
+1. `add_text_watermark`：给 PDF 添加文本类型的水印。
+2. `txt2pdf`：将 TXT 文件转换为 PDF。
+3. `encrypt4pdf`：对 PDF 文件进行加密。
+4. `decrypt4pdf`：对 PDF 文件进行解密。
+5. `merge2pdf`：合并多个 PDF 文件。
+6. `pdf2docx`：将 PDF 转换为 Word 文档。
+7. `pdf2imgs`：将 PDF 转换为图片。
+8. `split4pdf`：将 PDF 按指定页数拆分。
+
+## 使用示例
+
+以下是一些 popdf 功能的使用示例：
+
+### PDF 转 Word
+
+```python
 import popdf
 
-popdf.split_pdf(input_path=r'D:\程序员晚枫的文件夹\原始.pdf',
-                output_path=r'D:\程序员晚枫的文件夹\切割后的.pdf',
-                from_page=0, to_page=4)
+popdf.pdf2docx(input_file='程序员晚枫.pdf', output_path='输出的Word文件路径')
 ```
 
-#### 参数说明
+### 添加水印
+
+```python
+import popdf
+
+popdf.add_text_watermark(input_file='你的PDF文件路径.pdf', point=(50, 50), text='水印内容')
+```
+
+请注意，具体的使用方法和参数可能会根据 popdf 的版本更新而有所变化，建议查看官方文档或 GitHub 仓库以获取最新的使用指南和示例代码。
+
+### 参数说明
+
+本次更新，还统一了参数的命名方式：
 
 - input_path：输入PDF的路径一般用于批量操作
 - output_path：输出PDF的路径，一般用于批量操作
@@ -46,11 +76,12 @@ popdf.split_pdf(input_path=r'D:\程序员晚枫的文件夹\原始.pdf',
 
 ## 相关课程
 
-- [给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
-- [给小白的《10讲 · Python微信机器人》（完结）](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
-- [给小白的《Python实现OCR自动批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
+- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
+- [给小白的《10讲 · Python微信机器人》](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
+- [给小白的《5讲 · Python实现OCR自动批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
 
 ---
 
 
-交流群：[http://www.python4office.cn/wechat-group/](http://www.python4office.cn/wechat-group/)
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BC%95%E5%AF%BC%E5%85%B3%E6%B3%A8/sub-py.jpg)

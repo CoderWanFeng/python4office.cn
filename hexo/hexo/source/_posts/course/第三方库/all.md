@@ -33,3 +33,4 @@ tags: [ 第三方库,pip ]
 7. [将 Python 代码打包为 exe 文件：Nuitka 入门指南](https://mp.weixin.qq.com/s/BPhLhDhdo67O-h8xyyJ1FA)
 8. [告别手动输入：poocr库让你的文字识别更智能](https://mp.weixin.qq.com/s/nzbK-42HsDG2_gQxhjjtww)
 9. [26.7万下载！Python自动化办公专用库：python-office，发布1.0.0版本](http://www.python4office.cn/course/第三方库/8-po)
+9. [减小20M！PDF自动化办公专用库：popdf，发布1.0.0版本](http://www.python4office.cn/course/第三方库/9-pdf)
