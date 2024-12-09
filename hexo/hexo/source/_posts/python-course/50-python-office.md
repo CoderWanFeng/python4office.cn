@@ -26,11 +26,10 @@ tags: 原创课程
 
 # 答疑群
 
-本群二维码长期有效，如果万一我忘记更新了，你可以+我微信，备注：50讲，我来邀请你。
+因为群二维码经常失效，所以庆直接+我微信，备注：50讲，我来邀请你。
 我的微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
-
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
 # 读者福利
 
 做了几年自媒体了，整理了一些互联网撸羊毛的方法，长期有效。👇
