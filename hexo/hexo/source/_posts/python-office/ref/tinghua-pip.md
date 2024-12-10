@@ -24,7 +24,7 @@ tags: 开源
 所以我们可以使用清华大学提供的免费镜像，快速下载我们的代码。命令如下，👇。
 
 ```python
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-office
+pip install -i https://mirrors.aliyun.com/pypi/simple/ python-office
 ```
 
 使用方法也非常的简单，我在课程第3讲专门讲了使用方法，大家一定要去看一下。
