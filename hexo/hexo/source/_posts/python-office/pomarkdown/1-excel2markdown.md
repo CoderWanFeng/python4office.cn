@@ -10,11 +10,19 @@ tags: [ 第三方库,自动化办公,markdown ]
     </a>   
 </p>
 
-大家好，这里是程序员晚枫，今天给大家分享一个Python自动化办公的第三方库：pomarkdown，专门用来处理PDF文件。
+大家好，这里是程序员晚枫，今天给大家分享一个Python自动化办公的第三方库：``pomarkdown``，专门用来处理markdown文件。
 
 > 源码地址：https://github.com/CoderWanFeng/pomarkdown
 
+本文是该库的第1个功能：1行代码将Excel转成Markdown。
 
+## 需求说明
+
+我最近在出一套课程：Python + Excel，实现自动化办公。
+
+其中写文档的过程中需要用到到Excel转成Markdown，方便我在文档中插入表格数据。
+
+所以我就开发了这个功能：可以实现整个Excel的转换，也可以只转换其中的1个sheet。
 
 ## 上代码
 
@@ -39,12 +47,11 @@ pomarkdown.excel2markdown(
 
 #### 参数说明
 
-- input_path：输入PDF的路径一般用于批量操作
-- output_path：输出PDF的路径，一般用于批量操作
 - input_file: 输入PDF的文件名，可以包含路径，一般用于单个文件的操作
 - output_file：输出结果的文件名，可以包含路径，一般用于单个文件的操作
-- input_file_list: 输入PDF的文件列表，一般用于批量操作，例如：合并2个pdf文件
- - sheet_name：工作表名称，默认是Sheet1
+- input_path：输入PDF的路径一般用于批量操作，选填
+- output_path：输出PDF的路径，一般用于批量操作，选填
+- sheet_name：工作表名称，可以不填，默认是所有的sheet
 
 ## 相关课程
 

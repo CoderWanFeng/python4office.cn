@@ -6,6 +6,9 @@ tags: [自动化办公,Excel,pandas]
 
 大家好，这里是程序员晚枫，之前在B站账号：**Python自动化办公社区**发布了一套关于**Excel + Python实现自动化办公**的教程，目前已经有40w+的播放了。
 
+- [Python自动化办公--Pandas玩转Excel（全30集）：https://www.bilibili.com/video/BV1hk4y1C73S](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+
+
 其中主要使用的Python第三方库是**pandas**，今天就以pandas为核心内容，给大家分享一下精简版的10分钟入门教程。
 
 
@@ -15,7 +18,7 @@ tags: [自动化办公,Excel,pandas]
 - 把技术上的专用名词改为通俗易懂的日常词汇，因为关注我的朋友有一部分不是程序员。
 - 增加了pandas + excel应用的案例，官网文档主要是编程角度的介绍。
 
-因本人能力有限，如果有错误的地方，欢迎大家评论区 或者 加入[读者群](https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w)告知。
+因本人能力有限，如果有错误的地方，欢迎大家评论区 或者 加入[读者群](https://mp.weixin.qq.com/s/wx-JkgOUoJhb-7ZESxl93w)交流。
 
 ## 0、写在前面
 
@@ -105,6 +108,13 @@ print(platform_df.fans.describe())
 print(platform_df.sort_values('fans'))
 ```
 
+如果想降序排列，可以使用``ascending=False``参数。
+
+根据行索引进行排序，代码如下：
+```python
+print(platform_df.sort_index(ascending=False))
+```
+
 ## 4、筛选数据
 
 ### 筛选出粉丝数大于10w的账号
@@ -122,22 +132,27 @@ print(platform_df[platform_df.remark.isna()])
 platform_df['new'] = 100
 print(platform_df)
 ```
+
+
 ## 6、删除一列
 ```python
 platform_df.drop('new',axis=1,inplace=True) #axis=1表示删除列，inplace=True表示直接在原数据上修改
 print(platform_df)
 ```
+
+
 ## 7、保存数据
 ```python
 platform_df.to_excel('D:\\work\\程序员晚枫的账号.xlsx',sheet_name='sheet1',index=False) #index=False表示不保存索引
 ```
 
-## 8、总结
-
-以上就是pandas的10分钟入门教程，希望对大家有所帮助。
-
-## 参考文档
 
 
-- [10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
-- [Python自动化办公--Pandas玩转Excel（全30集）](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+## 8、参考文档
+
+
+- [10 minutes to pandas：https://pandas.pydata.org/docs/user_guide/10min.html](https://pandas.pydata.org/docs/user_guide/10min.html)
+- [Python自动化办公--Pandas玩转Excel（全30集）：https://www.bilibili.com/video/BV1hk4y1C73S](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BC%95%E5%AF%BC%E5%85%B3%E6%B3%A8/sub-py.jpg)
+
