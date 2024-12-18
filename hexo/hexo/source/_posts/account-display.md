@@ -4,6 +4,13 @@ date: 2022-02-25 13:51:51
 tags:
 ---
 
+
+## 2024-12-18
+
+- YouTube：[https://www.youtube.com/channel/UCtg1O5pVbuch1sVk_ELr7Hg](https://www.youtube.com/channel/UCtg1O5pVbuch1sVk_ELr7Hg)
+- X：[https://x.com/CoderWanFeng](https://x.com/CoderWanFeng)
+- Facebook：[https://www.facebook.com/matthew.liu.3551](https://www.facebook.com/matthew.liu.3551)
+
 ### 你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
