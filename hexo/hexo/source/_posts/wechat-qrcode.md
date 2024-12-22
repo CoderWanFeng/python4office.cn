@@ -6,6 +6,11 @@ tags: 联系我
 
 
 
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 <p align="center" name="图标-github">
@@ -26,7 +31,10 @@ tags: 联系我
 
 你好，这里是程序员晚枫，小红书/B站/知乎/抖音都叫这个名。
 
-山东人，目前在重庆做C++/Python开发。
+关于我：
+- 985硕士，编程博主，开源作者
+- Python中国组委会成员、PSF Memeber
+- 全网粉丝40w+，Python教程播放量200w+，5年+转行程序员的咨询经验
 
 
 # 1、商务合作
@@ -39,12 +47,8 @@ tags: 联系我
 
 # 2、1对1咨询
 
-关于我：
-- 985硕士，编程博主，开源作者
-- Python中国组委会成员、PSF Memeber
-- 全网粉丝40w+，Python教程播放量200w+，5年+转行程序员的咨询经验
 
-我能提供的咨询服务：
+我能提供的 1对1 咨询服务有：
 
 - 转行程序员的学习规划+面试指导
 - Python学习规划 + 学习答疑
