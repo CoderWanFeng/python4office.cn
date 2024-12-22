@@ -35,11 +35,21 @@ tags: 原创课程
 - 第5讲：[OCR批量识别后，自动保存为Excel](https://www.python-office.com/course-002/5-poocr/docs/5-ocr2excel.html)
 - 第6讲：[发票识别支持PDF格式了](https://www.python-office.com/course-002/5-poocr/docs/6-pdf2excel.html)
 
+## exe版本
 
+另外插播一个好消息：我们已经研发出了exe版本的软件，直接用鼠标点点就能进行发票识别，不需要学习Python。
+
+- 演示视频：[发票批量识别.exe，发布了！不用学Python，给财务人的自动化软件](https://www.bilibili.com/video/BV19bmBYWE1t/?spm_id_from=333.999.0.0)
+
+目前粉丝价格是198/个exe软件，没有二次收费，后续也会免费更新。
+
+对于购买了本套课程的朋友，可以直接加我微信，补差价198-98=100获取，我的微信在下方。
 
 # 答疑群
 
 答疑群长期有效，进入方式：+我微信👇，备注：OCR自动化，我来邀请你。
+
+> 如果需要补差价获取exe的朋友，请另外备注**exe**哟。
 
 ![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
 

@@ -24,60 +24,46 @@ tags: 联系我
 </p>
 
 
-你好，这里是程序员晚枫，，小红书/B站/知乎/抖音都叫这个名。
+你好，这里是程序员晚枫，小红书/B站/知乎/抖音都叫这个名。
 
 山东人，目前在重庆做C++/Python开发。
 
-- 下面是我的微信，需要商务合作的朋友，可以直接扫码添加。👇
-- 如果不是账号合作，是：想加读者群、1对1咨询的朋友，请继续往下看。
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
-
-
-
-
-# 1、读者群
-
-这是我更新文章、视频教程、开源项目的第5年了，为了帮助大家解决技术问题，我提供了读者群的沟通方式：
-
-``其中有3类群聊：``
-
-- 免费的微信交流群（目前60多个）：[点我加入](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
-
-- 免费的QQ群：[点我加入](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg)
-
-
-- 付费**9元**的微信群（目前9个）：[点我加入](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg)
-
-请注意如果你选择了白嫖群，请不要进群以后@我提问，**白嫖群目前建了100多个了，我有工作，真的看不过来。**白嫖群里大家互相帮助吧，多谢理解！
-
-付费读者群，我懂的问题我会尽力答疑。然而我必须说一句，**我并不认为所有技术问题我都能解决，我只能做到问心无愧**，希望能给大家提供一个纯粹的Python学习环境，想发广告或者非技术交流目的，就没必要加入了哈。
-
-
-# 2、商务合作
+# 1、商务合作
 
 如需商务合作，请扫码下图添加微信：CoderWanFeng，请一定要备注：**商务合作**，否则不通过。
 
 ![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
 
-# 3、1对1咨询
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+# 2、1对1咨询
 
-- [【程序员晚枫】程序员的中年危机？根本不存在，看看程序员大佬们怎么说](https://www.bilibili.com/video/BV14F41177tY)
+关于我：
+- 985硕士，编程博主，开源作者
+- Python中国组委会成员、PSF Memeber
+- 全网粉丝40w+，Python教程播放量200w+，5年+转行程序员的咨询经验
 
-- [【程序员晚枫】想转行程序员？没考虑清楚这3点，转行肯定后悔](https://www.bilibili.com/video/BV1x44y1g7ay)
+我能提供的咨询服务：
 
-- [【程序员晚枫】想转行程序员？没考虑清楚这3点，转行肯定后悔](https://www.bilibili.com/video/BV1JD4y1r7SF)
+- 转行程序员的学习规划+面试指导
+- Python学习规划 + 学习答疑
+- 少儿编程学习指导
+- 普通人可以快速启动的12个副业项目
 
-- [【程序员晚枫】3类不能去的编程培训班，转行程序员的同学，去了学不到东西也找不到工作](https://www.bilibili.com/video/BV1XY4y1W7UR)
-
-- [【程序员晚枫】《我，阿里P7，找不到工作》，中年程序员的危机](https://www.bilibili.com/video/BV1414y1j7rF)
-
-- [【程序员晚枫】来聊聊，转行程序员， 真能拿到高工资吗？](https://www.bilibili.com/video/BV1SG4y1J7CP)
+如需咨询服务，请添加我的微信，备注你的问题：
 
 
+
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+
+
+
+# 3、读者群
+
+这是我更新文章、视频教程、开源项目的第5年了，为了帮助大家解决技术问题，我提供了读者群的沟通方式：
+
+- 点我直达：[交流群](http://www.python4office.cn/wechat-group/)
 
 # 4、学习资源
 
