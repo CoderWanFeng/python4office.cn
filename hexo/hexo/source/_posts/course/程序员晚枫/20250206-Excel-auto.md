@@ -11,7 +11,11 @@ tags: [python,下载]
 
 ## 网盘地址
 
-课程在更新中，请 + 我微信，我发给你资料。备注：30讲
+- 链接直达：https://pan.quark.cn/s/7313497334cd
+
+## 课程答疑群
+
+请 + 我微信，我邀请你加入答疑群。备注：30讲
 
 ![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
 
