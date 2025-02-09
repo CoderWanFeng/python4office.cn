@@ -13,6 +13,11 @@ tags: [python,下载]
 
 - 链接直达：https://pan.quark.cn/s/7313497334cd
 
+## 视频合集
+
+- 链接直达：[【30讲】Excel自动化办公之Pandas](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
+
+
 ## 课程答疑群
 
 请 + 我微信，我邀请你加入答疑群。备注：30讲
