@@ -6,7 +6,11 @@ tags: 微信群
 
 
 
-
+<p align="center" id='CodeMaster-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/3KvzA0ZOKJCz11Sk-karOw'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community%2Fgitcode%2FCodeMaster-3.png" width="100%"/>
+    </a>   
+</p>
 
 
 
@@ -154,8 +158,6 @@ tags: 微信群
 - 💬 我的微信，点击添加👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
-
-
 
 ## 五、推荐课程
 
