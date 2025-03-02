@@ -223,6 +223,17 @@ tags: banner
 
 <p align="center" id='CodeMaster-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/3KvzA0ZOKJCz11Sk-karOw'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community%2Fgitcode%2FCodeMaster-3.png" width="100%"/>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community%2Fgitcode%2FCodeMaster-3.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='pycon-2024-banner'>
+    <a target="_blank" href='https://www.bilibili.com/video/BV1Y6qWYWEyQ/'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community/pycon/2024/pycon2024.jpg" width="100%"/>
+    </a>   
+</p>
+<p align="center" id='b-py-auto-2024-banner'>
+    <a target="_blank" href='https://space.bilibili.com/259649365'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community/gitcode/B-py-auto.jpg" width="100%"/>
     </a>   
 </p>
