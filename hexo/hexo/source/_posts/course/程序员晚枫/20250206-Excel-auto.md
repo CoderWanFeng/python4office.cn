@@ -22,7 +22,7 @@ tags: [python,下载]
 
 请 + 我微信，我邀请你加入答疑群。备注：30讲
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
+![](https://www.python-office.com/assets/img/wechat.c27aec60.jpg)
 
 
 

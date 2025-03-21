@@ -123,7 +123,7 @@ print(pf.t0(12.2, 12.3, 1000))
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/0816.jpg)
+![](https://www.python-office.com/assets/img/0816.27540085.jpg)
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BC%95%E5%AF%BC%E5%85%B3%E6%B3%A8/sub-py.jpg)
+![](https://www.python-office.com/assets/img/sub-py.4754d4d4.jpg)

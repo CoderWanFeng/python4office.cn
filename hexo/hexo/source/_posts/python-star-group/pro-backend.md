@@ -45,5 +45,5 @@ tags:
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
 > ⭐今年我推出了陪你学习1年的Python学习服务，如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+![](https://www.python-office.com/assets/img/1v1.83f93bff.jpg)
 

@@ -32,4 +32,4 @@ tags: 原创课程
 
 最后一个是付费的读者群，请添加我的微信，备注：2019，我来邀请你~
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)

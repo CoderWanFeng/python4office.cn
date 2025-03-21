@@ -27,5 +27,5 @@ tags: pandas
 ## 1对1技术咨询
 
 > ⭐今年我推出了1对1答疑的Python学习指导，如果需要可以扫码下图加我好友👇
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg)
+![](https://www.python-office.com/assets/img/1v1.83f93bff.jpg)
 

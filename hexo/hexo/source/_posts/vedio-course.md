@@ -205,4 +205,4 @@ tags:
 | [推荐系统及算法实践十八式](http://gk.link/a/120eN) | 前阿里巴巴算法专家 |
 | [大数据技术基础 22 讲](http://gk.link/a/120eO) |  |
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)

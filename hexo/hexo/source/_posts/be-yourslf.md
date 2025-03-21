@@ -94,5 +94,5 @@ tags:
 👉扫码下图添加我的微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)，验证消息请填写：**心理分析**，即可加入群聊~
 
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![CoderWanFeng](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
 

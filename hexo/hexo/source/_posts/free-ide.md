@@ -11,7 +11,7 @@ tags:
 ## 离线
 - 离线安装-需要下载软件和插件，对应的资源 ：：[软件和插件，点我直达](https://mp.weixin.qq.com/s/d_mjo3EiHDXVfJ6rcgHGMQ)
 ## 你懂的
-- 第3集：Google对应的教程文档，只要是识字，会用鼠标和键盘，就可以实现，傻瓜式教程。软件和文档我都整理好了👉[点击＋我微信，免费分享给你](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
+- 第3集：Google对应的教程文档，只要是识字，会用鼠标和键盘，就可以实现，傻瓜式教程。软件和文档我都整理好了👉[点击＋我微信，免费分享给你](https://www.python-office.com/assets/img/wechat.c27aec60.jpg)
 
 
 最后，🔞如果你是小白，第一接触python、或者pycharm，也许我最近录制的这个教程，对你更有帮助：[给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
@@ -19,7 +19,7 @@ tags:
 
 
 ## 关于作者：程序员晚枫
-- 💬 ``如果你需要 - 联系我来1对1沟通学习问题，请点击添加``👉[我的微信](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+- 💬 ``如果你需要 - 联系我来1对1沟通学习问题，请点击添加``👉[我的微信](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
 - 🎁 学习资料，点击领取👉[60套Python课程的合集](https://www.python-office.com/)
 
 
@@ -27,12 +27,12 @@ tags:
 
 ## 交流群
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/0816.jpg)
+![](https://www.python-office.com/assets/img/0816.27540085.jpg)
 
 ##　读者福利
 
 <p align="center" id='福利合集-banner'>
     <a target="_blank" href='http://python4office.cn/sideline-pro-list/'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg" width="100%"/>
+    <img src="https://www.python-office.com/assets/img/fuli.682e424c.jpg" width="100%"/>
     </a>   
 </p>

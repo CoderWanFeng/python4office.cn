@@ -13,7 +13,7 @@ tags: 1对1咨询
 这位朋友是专科毕业，在电子厂干了2年多，感觉看不到希望，来找我咨询一下有没有转行程序员的可能性 + 学习计划。
 
 我觉得他的情况和提问很有代表性，今天重点给大家分享一下我们有关学历的讨论。
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
+![](https://www.python-office.com/assets/img/fuli.682e424c.jpg)
 
 <!-- more -->
 

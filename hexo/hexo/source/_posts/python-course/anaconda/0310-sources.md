@@ -25,4 +25,4 @@ Anaconda下载链接，支持Windows、Mac、Linux：[点我直达](https://www.
 
 扫码下图，加入课程学习群，👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/0816.jpg)
+![](https://www.python-office.com/assets/img/0816.27540085.jpg)

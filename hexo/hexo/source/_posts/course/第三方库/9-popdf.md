@@ -84,4 +84,4 @@ popdf.add_text_watermark(input_file='你的PDF文件路径.pdf', point=(50, 50),
 
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BC%95%E5%AF%BC%E5%85%B3%E6%B3%A8/sub-py.jpg)
+![](https://www.python-office.com/assets/img/sub-py.4754d4d4.jpg)

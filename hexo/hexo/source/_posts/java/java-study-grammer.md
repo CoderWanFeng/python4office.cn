@@ -241,13 +241,13 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
 </p>
 
 <p align="center" id='1对1咨询-banner'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg" width="300" height='400'/>
+    <a target="_blank" href='https://www.python-office.com/assets/img/1v1.83f93bff.jpg'>
+    <img src="https://www.python-office.com/assets/img/1v1.83f93bff.jpg" width="300" height='400'/>
     </a>   
 </p>
 
 <p align="center" id='QQ群'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg" width="300" height="400"/>
+    <a target="_blank" href='https://www.python-office.com/assets/img/qq-group.a2c44fd1.jpg'>
+    <img src="https://www.python-office.com/assets/img/qq-group.a2c44fd1.jpg" width="300" height="400"/>
     </a>   
 </p>

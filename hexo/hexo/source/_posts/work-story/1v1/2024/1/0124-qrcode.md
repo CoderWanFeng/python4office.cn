@@ -60,6 +60,6 @@ Linux（服务器） + mongdb（数据库） + django（后端接口）
 
 在学习和开发过程中，有任何问题，都可以联系我的微信，👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
 
 

@@ -97,5 +97,5 @@ tags: 软件
 
 ---
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg)
+![](https://www.python-office.com/assets/img/fuli.682e424c.jpg)
 

@@ -20,7 +20,7 @@ tags: 电子书
 
 👇添加我的微信，备注：85，我来邀请您~
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
 
 
 

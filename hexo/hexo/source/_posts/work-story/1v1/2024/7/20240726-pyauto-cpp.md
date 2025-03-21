@@ -61,4 +61,4 @@ Python基础学完有2个作用：
 
 接下来的学习过程中，有问题请随时联系我，👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)

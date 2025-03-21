@@ -58,4 +58,4 @@ except ValueError as e:
 
 Python学习交流群，欢迎加入，👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/0816.jpg)
+![](https://www.python-office.com/assets/img/0816.27540085.jpg)

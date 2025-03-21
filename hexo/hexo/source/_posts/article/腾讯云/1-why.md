@@ -66,4 +66,4 @@ tags: 原创文章
 
 我在所有平台的账号都叫程序员晚枫，更新5年了，有一些程序员从事自媒体的经验，欢迎想靠自媒体赚钱的朋友+我聊个5毛钱的。👇
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![CoderWanFeng](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)

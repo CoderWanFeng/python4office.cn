@@ -179,20 +179,20 @@ tags: banner
 </p>
 
 <p align="center" id='1对1咨询-banner'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/1v1.jpg" width="300" height='400'/>
+    <a target="_blank" href='https://www.python-office.com/assets/img/1v1.83f93bff.jpg'>
+    <img src="https://www.python-office.com/assets/img/1v1.83f93bff.jpg" width="300" height='400'/>
     </a>   
 </p>
 
 <p align="center" id='QQ群'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qq-group.jpg" width="300" height="400"/>
+    <a target="_blank" href='https://www.python-office.com/assets/img/qq-group.a2c44fd1.jpg'>
+    <img src="https://www.python-office.com/assets/img/qq-group.a2c44fd1.jpg" width="300" height="400"/>
     </a>   
 </p>
 
 <p align="center" id='福利合集-banner'>
     <a target="_blank" href='http://python4office.cn/sideline-pro-list/'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/fuli.jpg" width="100%"/>
+    <img src="https://www.python-office.com/assets/img/fuli.682e424c.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -203,7 +203,7 @@ tags: banner
 </p>
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/qr-code.jpg)
+![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
 
 <p align="center" id='5讲OCR-banner'>
     <a target="_blank" href='https://www.python-office.com/course-002/5-poocr/5-poocr.html'>
@@ -215,15 +215,15 @@ tags: banner
 ![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/fuye-info/%E5%B0%81%E9%9D%A2-%E6%A8%AA.jpg)
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/ai-group.jpg)
+![](https://www.python-office.com/assets/img/ai-group.26a72793.jpg)
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/%E5%BC%95%E5%AF%BC%E5%85%B3%E6%B3%A8/sub-py.jpg)
+![](https://www.python-office.com/assets/img/sub-py.4754d4d4.jpg)
 
 
 <p align="center" id='CodeMaster-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community%2Fgitcode%2FCodeMaster-3.jpg" width="100%"/>
+    <img src="https://www.python-office.com/assets/img/CodeMaster-3.89d93331.jpg" width="100%"/>
     </a>   
 </p>
 
