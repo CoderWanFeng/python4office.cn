@@ -76,7 +76,7 @@ tags: 微信群
 
 <!-- more -->
 <p align="center" id='免费技术群'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg"/>
+    <img src="https://www.python-office.com/assets/img/python-office.1a174c76.jpg"/>
     </a>   
 </p>
 
@@ -90,9 +90,9 @@ tags: 微信群
 
 ### 3、大厂内推群
 
-> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
+> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://www.python-office.com/assets/img/python-office.1a174c76.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
 
-👉[点我加入：大厂内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg)
+👉[点我加入：大厂内推求职交流群](https://www.python-office.com/assets/img/python-office.1a174c76.jpg)
 
 每天打车上下班的朋友，可以加一下👉[滴滴优惠券微信群：必中！](https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg)
 ### 4、编程学习指导

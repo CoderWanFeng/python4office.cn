@@ -13,7 +13,7 @@ tags:
 	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
 </p>
 <p align="center">
-	👉 <a target="_blank" href="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg">本开源项目的交流群</a> 👈
+	👉 <a target="_blank" href="https://www.python-office.com/assets/img/python-office.1a174c76.jpg">本开源项目的交流群</a> 👈
 </p>
 
 

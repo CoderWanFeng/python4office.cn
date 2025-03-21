@@ -43,7 +43,7 @@ tags: 机器人
 试玩地址：
 
 <p align="center" id='开源交流群-banner'>
-<a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/2-free-group.jpg'>
+<a target="_blank" href='https://www.python-office.com/assets/img/python-office.1a174c76.jpg'>
 <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office-qr.jpg" width="100%"/>
 </a> 
 </p>
