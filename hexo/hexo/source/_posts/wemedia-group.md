@@ -89,7 +89,7 @@ tags: 社区活动
 - 🎁 粉丝福利👉[我的短视频，全是被 夸 火的？？](https://www.xiaohongshu.com/discovery/item/63305311000000001701c8a9)
 
 
-![coder-secret](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
+![coder-secret](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
 
 <p align="center" id='大礼包-banner'>
     <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>

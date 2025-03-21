@@ -62,4 +62,4 @@ tags: 1v1
 - 针对常见问题，会复制粘贴就可以了。
 - 遇到具体需求，可以继续找我咨询，我的微信如下，👇。
 
-![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
+![](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)

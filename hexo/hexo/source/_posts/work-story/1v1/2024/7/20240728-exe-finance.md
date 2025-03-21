@@ -46,4 +46,4 @@ tags: 1对1
 
 接下来的学习过程中，有问题请随时联系我，👇
 
-![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
+![](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)

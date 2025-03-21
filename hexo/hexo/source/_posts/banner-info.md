@@ -203,7 +203,7 @@ tags: banner
 </p>
 
 
-![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
+![](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
 
 <p align="center" id='5讲OCR-banner'>
     <a target="_blank" href='https://www.python-office.com/course-002/5-poocr/5-poocr.html'>

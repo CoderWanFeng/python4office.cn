@@ -34,4 +34,4 @@ https://pyinstaller.org/en/stable/
 # 3、学习答疑
 学习过程中，有自己解决不了的问题，欢迎联系我~
 我的微信👇
-![点我直达](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
+![点我直达](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)

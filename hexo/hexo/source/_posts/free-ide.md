@@ -19,7 +19,7 @@ tags:
 
 
 ## 关于作者：程序员晚枫
-- 💬 ``如果你需要 - 联系我来1对1沟通学习问题，请点击添加``👉[我的微信](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
+- 💬 ``如果你需要 - 联系我来1对1沟通学习问题，请点击添加``👉[我的微信](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
 - 🎁 学习资料，点击领取👉[60套Python课程的合集](https://www.python-office.com/)
 
 

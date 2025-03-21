@@ -286,7 +286,7 @@ office.wechat.chat_robot(who='每天进步一点点')  # 智能聊天
 
 大家学习 或 使用代码过程中，有任何问题，都可以加微信和我交流哟~👇
 
-![CoderWanFeng](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
+![CoderWanFeng](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
 
 
 ## 原创课程

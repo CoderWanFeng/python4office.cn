@@ -77,4 +77,4 @@ tags: 1v1
 - PT对普通人，没有任何用处。
 - 学习过程中有更多问题，可以继续找我咨询，我的微信如下，👇。
 
-![](https://www.python-office.com/assets/img/qr-code.842c35b6.jpg)
+![](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
