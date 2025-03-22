@@ -124,7 +124,7 @@ tags: [办公黑科技,高效办公]
 - 😺 视频：[B站 『 Python自动化办公社区 』](https://space.bilibili.com/259649365)
 - 💬 微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
 
-![CoderWanFeng](https://www.python-office.com/assets/img/python-office.1a174c76.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)
 
 <p align="center">
     <a target="_blank" href='https://kzurl05.cn/7II7R5'>

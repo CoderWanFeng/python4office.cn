@@ -14,7 +14,7 @@ tags: spark
 > ⭐今年我推出了陪你学习1年的Python学习服务：👇
 
 如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://www.python-office.com/assets/img/1v1.83f93bff.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/1v1.jpg)
 
 ## 2、Python + 大数据开发
 
@@ -39,4 +39,4 @@ tags: spark
 ## 3、读者交流群
 > 以下是免费读者交流群，可以进群和大家讨论学习
 
-![](https://www.python-office.com/assets/img/python-office.1a174c76.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)

@@ -22,7 +22,7 @@ tags: 副业
 <!-- more -->
 
 扫码下图，直达↓
-![](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
 
 ##　2.Python高级学习资料
 

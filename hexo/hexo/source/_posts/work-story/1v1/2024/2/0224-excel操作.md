@@ -56,6 +56,6 @@ office.excel.merge2sheet(dir_path)
 
 关于今天的文章，有任何疑问欢迎在评论区 or 交流群和我交流~
 
-![](https://www.python-office.com/assets/img/0816.27540085.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/0816.jpg)
 
 

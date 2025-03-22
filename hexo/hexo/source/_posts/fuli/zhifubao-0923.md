@@ -47,4 +47,4 @@ tags: 福利
 
 除了支付宝红包，还有以下几个长年有效的红包活动。扫码直达。👇
 
-![](https://www.python-office.com/assets/img/fuli.682e424c.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/fuli/all-1.jpg)

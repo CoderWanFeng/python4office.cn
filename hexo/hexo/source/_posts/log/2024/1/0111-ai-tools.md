@@ -62,4 +62,4 @@ AI绘画很火，也很好玩，但是国内开放接口给大家的，腾讯估
 
 
 
-![](https://www.python-office.com/assets/img/ai-group.26a72793.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/ai-group.jpg)

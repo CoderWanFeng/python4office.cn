@@ -145,4 +145,4 @@ def add(a,b):
 
 接下来的学习过程中，有问题请随时联系我，👇
 
-![](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)

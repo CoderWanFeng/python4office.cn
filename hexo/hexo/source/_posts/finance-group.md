@@ -14,8 +14,8 @@ tags: 金融
 <!-- more -->
 
 欢迎加入 Python&金融数据分析 交流群
-![CoderWanFeng](https://www.python-office.com/assets/img/python-office.1a174c76.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)
 
 
 
-![](https://www.python-office.com/assets/img/sub-py.4754d4d4.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)

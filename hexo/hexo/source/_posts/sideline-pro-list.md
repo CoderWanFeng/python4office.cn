@@ -63,7 +63,7 @@ tags: 副业
 | ⭐支付宝红包  | [点我直达](http://www.python4office.cn/fuli/zhifubao-0923/)                                              |
 | 电影分销     | [点我直达](https://mp.weixin.qq.com/s/dInWbi3Y0XWpFI2GDDSMTA)                                              |
 | 🚗滴滴优惠券  | [点我直达](https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg) |
-| 🚗股票交流群  | [点我直达](https://www.python-office.com/assets/img/python-office.1a174c76.jpg)                |
+| 🚗股票交流群  | [点我直达](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)                |
 
 
 
@@ -79,6 +79,6 @@ tags: 副业
 欢迎大家加入读者群
 
 <p align="center" id='自媒体交流群'>
-    <img src="https://www.python-office.com/assets/img/python-office.1a174c76.jpg"/>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg"/>
     </a>   
 </p>

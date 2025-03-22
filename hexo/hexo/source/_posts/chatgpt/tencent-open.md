@@ -31,4 +31,4 @@ tags: 大模型
 
 欢迎免费加入AI工具交流群，👇
 
-![](https://www.python-office.com/assets/img/ai-group.26a72793.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/ai-group.jpg)

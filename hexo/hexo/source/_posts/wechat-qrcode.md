@@ -41,7 +41,7 @@ tags: 联系我
 
 如需商务合作，请扫码下图添加微信：CoderWanFeng，请一定要备注：**商务合作**，否则不通过。
 
-![CoderWanFeng](https://www.python-office.com/assets/img/wechat.c27aec60.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/wechat.jpg)
 
 
 
@@ -59,7 +59,7 @@ tags: 联系我
 
 
 
-![CoderWanFeng](https://www.python-office.com/assets/img/1v1.83f93bff.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/1v1.jpg)
 
 
 

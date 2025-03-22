@@ -67,4 +67,4 @@ Python处理Excel的专用库，没有之一：pandas
 
 学习过程中有更多问题，可以继续找我咨询，我的微信如下，👇。
 
-![](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)

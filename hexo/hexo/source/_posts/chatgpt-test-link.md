@@ -43,8 +43,8 @@ tags: 机器人
 试玩地址：
 
 <p align="center" id='开源交流群-banner'>
-<a target="_blank" href='https://www.python-office.com/assets/img/python-office.1a174c76.jpg'>
-<img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office-qr.jpg" width="100%"/>
+<a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg'>
+<img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/python-office-qr.jpg" width="100%"/>
 </a> 
 </p>
 
@@ -62,7 +62,7 @@ tags: 机器人
 
 项目地址：[点我直达](项目地址：https://github.com/gventuri/pandas-ai)
 
-![](https://www.python-office.com/assets/img/fuli.682e424c.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/fuli/all-1.jpg)
 
 # 0、中国版ChatGPT
 
@@ -118,6 +118,6 @@ tags: 机器人
 
 ---
 
-![](https://www.python-office.com/assets/img/fuli.682e424c.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/fuli/all-1.jpg)
 
 ![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)

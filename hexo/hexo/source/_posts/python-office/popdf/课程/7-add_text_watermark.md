@@ -56,5 +56,5 @@ popdf.add_text_watermark(input_file=r'./test_files/pdf/程序员晚枫.pdf', poi
 
 
 
-![](https://www.python-office.com/assets/img/sub-py.4754d4d4.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
 

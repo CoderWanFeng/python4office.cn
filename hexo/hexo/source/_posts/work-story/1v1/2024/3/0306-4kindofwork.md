@@ -67,4 +67,4 @@ tags: 1v1
 
 我的微信，👇
 
-![CoderWanFeng](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)

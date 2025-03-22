@@ -39,4 +39,4 @@ tags: 福利
 
 以上仅是简单介绍，如果想要了解更多信息，可以加入读者交流群。👇
 
-![](https://www.python-office.com/assets/img/python-office.1a174c76.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)

@@ -154,5 +154,5 @@ platform_df.to_excel('D:\\work\\程序员晚枫的账号.xlsx',sheet_name='sheet
 - [10 minutes to pandas：https://pandas.pydata.org/docs/user_guide/10min.html](https://pandas.pydata.org/docs/user_guide/10min.html)
 - [Python自动化办公--Pandas玩转Excel（全30集）：https://www.bilibili.com/video/BV1hk4y1C73S](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
 
-![](https://www.python-office.com/assets/img/sub-py.4754d4d4.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
 

@@ -45,7 +45,7 @@ Python安装包
 
 扫码下图，直达群聊。👇
 
-![](https://www.python-office.com/assets/img/python-office.1a174c76.jpg)
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)
 
 
 

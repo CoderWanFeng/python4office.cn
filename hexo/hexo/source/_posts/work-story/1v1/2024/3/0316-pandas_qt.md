@@ -46,4 +46,4 @@ tags: 1v1
 
 学习过程中有问题直接找我沟通，👇
 
-![CoderWanFeng](https://www.python-office.com/assets/img/qr-code.b0c382a8.jpg)
+![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
