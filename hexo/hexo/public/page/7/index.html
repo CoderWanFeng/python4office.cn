@@ -212,6 +212,122 @@ var _hmt = _hmt || [];
               <div id="js-content" class="content-ll">
                 
   
+    <article id="post-python-office/potx/20241216-手写发票 高级版" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/python-office/potx/20241216-%E6%89%8B%E5%86%99%E5%8F%91%E7%A5%A8%20%E9%AB%98%E7%BA%A7%E7%89%88/">效率翻倍！用腾讯云智能OCR，实现1行Python代码识别手写发票</a>
+    </h1>
+  
+
+        
+        <a href="/python-office/potx/20241216-%E6%89%8B%E5%86%99%E5%8F%91%E7%A5%A8%20%E9%AB%98%E7%BA%A7%E7%89%88/" class="archive-article-date">
+  	<time datetime="2024-12-17T16:33:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>大家好，这里是程序员晚枫，今天给大家带来一个腾讯云的新功能：智能结构化识别（Pro版）。</p>
+<blockquote>
+<p>智能结构化（Smart Structure Optical Character Recognition ）融合了业界领先的深度学习技术、图像检测技术以及OCR大模型能力，能够实现不限版式的结构化信息抽取。无论是固定卡证还是复杂的物流单据，均可实现智能识别。该产品预学习建立键值对应关系，支持客户定制模板，提升数据提取录入效率，适用于政务、票据核销、行业表单和国际物流等场景。</p>
+</blockquote>
+<h2 id="0、功能介绍"><a href="#0、功能介绍" class="headerlink" title="0、功能介绍"></a>0、功能介绍</h2><p>提起OCR，大家可能相对陌生，我先给大家解释一下这个东西有什么用：</p>
+<blockquote>
+<p>专业的解释：OCR（Optical Character Recognition），即光学字符识别。</p>
+</blockquote>
+<p>好吧，这个解释也非常的抽象。</p>
+<blockquote>
+<p>再来一个通俗的解释：它是一种将图片中的文字提取出来，保存为可编辑文本的技术。</p>
+</blockquote>
+<p>举例来说，我们之前给大家分享过的：发票识别、车牌识别、银行卡识别等，都属于OCR的一种。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2210890">【文字识别】用1行Python代码识别身份证信息，准确率超过99%，YYDS</a></li>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2210796">【文字识别】基于腾讯云AI，用1行Python代码识别增值税发票，YYDS</a></li>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2211644">【文字识别】基于腾讯AI识别车牌号码，轻松写一个停车场管理系统，YYDS</a></li>
+</ul>
+<p>但体验过的朋友都知道，这些识别的通用性不强：它们都是针对标准模板文件的识别，比如用来识别身份证的软件/程序，拿去识别车牌号就不准确了，</p>
+<blockquote>
+<p>那有没有一种通用的程序，用同一套软件，可以识别所有常见的卡/证，甚至从一些没有规律的图片立提取文字呢？</p>
+</blockquote>
+<p>最近我发现腾讯云推出了<strong>智能识别Pro版本</strong>，做到了这一点！这就是本篇文章要给大家分享的内容。</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/smart-ocr?from_column=20421&from=20421">智能结构化OCR，点击直达</a></p>
+<h2 id="1-安装potx-cloud"><a href="#1-安装potx-cloud" class="headerlink" title="1. 安装potx-cloud"></a>1. 安装potx-cloud</h2><p>使用这个ocr功能，需要安装一个python库：potx-cloud。</p>
+<p>安装也很简单，在有python环境的电脑上，只需要执行下面这一行命令，就可以自动下载和安装了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install potx-cloud</span><br></pre></td></tr></table></figure>
+
+
+<p>这个库内置了智能结构化的接口，可以通过1行代码直接调用。</p>
+<h2 id="2-识别手写发票"><a href="#2-识别手写发票" class="headerlink" title="2. 识别手写发票"></a>2. 识别手写发票</h2><p>为了让大家更好的理解，本文会通过用腾讯云智能OCR，实现1行Python代码识别手写发票，来带大家体验一下这个功能：</p>
+<p>直接上代码！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> potx</span><br><span class="line"></span><br><span class="line">res = potx.ocr.SmartStructuralPro(</span><br><span class="line">    <span class="built_in">id</span>=SecretId, </span><br><span class="line">    key=SecretKey, </span><br><span class="line">    img_path=<span class="string">r&#x27;D:\workplace\\程序员晚枫的手写发票.png&#x27;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
+
+<p>运行以上代码，就可以得到识别结果了。</p>
+<h2 id="3-后续开发计划"><a href="#3-后续开发计划" class="headerlink" title="3. 后续开发计划"></a>3. 后续开发计划</h2><p>后续会增加以下功能：</p>
+<ul>
+<li>识别结果自动保存为Excel</li>
+<li>支持批量识别</li>
+</ul>
+<p>大家在使用过程中有任何问题或者新的需求，请在评论区留言，我会尽快回复。</p>
+<hr>
+<p>最后，抢先<strong>免费体验</strong>全部功能，请点击：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/smart-ocr?from_column=20421&from=20421">智能结构化OCR</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python-office</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/python-office/potx/20241216-%E6%89%8B%E5%86%99%E5%8F%91%E7%A5%A8%20%E9%AB%98%E7%BA%A7%E7%89%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-log/2024/1216-12月总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1401,121 +1517,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-python-office/popdf/课程/1-pdf2docx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/python-office/popdf/%E8%AF%BE%E7%A8%8B/1-pdf2docx/">PDF转Word，1行代码搞定</a>
-    </h1>
-  
-
-        
-        <a href="/python-office/popdf/%E8%AF%BE%E7%A8%8B/1-pdf2docx/" class="archive-article-date">
-  	<time datetime="2024-12-08T02:16:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center" id="进群-banner">
-    <a target="_blank" href="http://www.python4office.cn/wechat-group/">
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%">
-    </a>   
-</p>
-
-<p>大家好，这里是程序员晚枫，今天给大家分享一个Python自动化办公的第三方库：popdf，专门用来处理PDF文件。</p>
-<blockquote>
-<p>源码地址：<a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/popdf">https://github.com/CoderWanFeng/popdf</a></p>
-</blockquote>
-<h2 id="需求说明"><a href="#需求说明" class="headerlink" title="需求说明"></a>需求说明</h2><h2 id="上代码"><a href="#上代码" class="headerlink" title="上代码"></a>上代码</h2><p>首先，下载一个PDF自动化办公的专用库：<code>popdf</code>，命令如下，👇</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install popdf</span><br></pre></td></tr></table></figure>
-
-<p>然后直接1行代码搞定，👇</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># pip install popdf</span><br><span class="line">import popdf</span><br><span class="line"></span><br><span class="line">popdf.pdf2docx(</span><br><span class="line">            input_file=r&#x27;test_files/pdf/程序员晚枫.pdf&#x27;,</span><br><span class="line">            output_path=r&#x27;./test_files/docx/&#x27;</span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
-
-<h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
-<li>input_path：输入PDF的路径一般用于批量操作</li>
-<li>output_path：输出PDF的路径，一般用于批量操作</li>
-<li>input_file: 输入PDF的文件名，可以包含路径，一般用于单个文件的操作</li>
-<li>output_file：输出结果的文件名，可以包含路径，一般用于单个文件的操作</li>
-<li>input_file_list: 输入PDF的文件列表，一般用于批量操作，例如：合并2个pdf文件</li>
-</ul>
-<h2 id="相关课程"><a href="#相关课程" class="headerlink" title="相关课程"></a>相关课程</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/opus/857901377884520482?spm_id_from=333.999.0.0">给小白的《50讲 · Python自动化办公》</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1S84y1m7xd/?spm_id_from=333.999.0.0">给小白的《10讲 · Python微信机器人》</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13J4m1s7L7/?spm_id_from=333.999.0.0">给小白的《5讲 · Python实现OCR自动批量识别》</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pQ4y177nV/">给小白的《6讲 · Python自动收发邮件》</a></li>
-</ul>
-<hr>
-<p><img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">自动化办公</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">第三方库</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pdf</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/python-office/popdf/%E8%AF%BE%E7%A8%8B/1-pdf2docx/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/">59</a><a class="extend next" rel="next" href="/page/8/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/6/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/60/">60</a><a class="extend next" rel="next" href="/page/8/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1628,11 +1632,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Pandas</a>
+                <a href="javascript:void(0)" class="js-tag color1">自动化办公</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化办公</a>
+                <a href="javascript:void(0)" class="js-tag color2">Pandas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1644,15 +1648,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">banner</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">APScheduler</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color2">banner</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1664,7 +1664,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Turtle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">黑科技导航</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1676,19 +1692,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Celery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">黑科技导航</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重庆</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1696,15 +1700,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+                <a href="javascript:void(0)" class="js-tag color3">重庆</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">职场</a>
+                <a href="javascript:void(0)" class="js-tag color1">程序员比赛</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1716,19 +1716,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">程序员比赛</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">咖啡</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
+                <a href="javascript:void(0)" class="js-tag color3">职场</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">金融</a>
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1752,7 +1748,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">金融</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1764,19 +1768,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">招聘</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">python-office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">黑科技</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">程序员</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1788,7 +1780,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">招聘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">黑科技</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">大数据</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">程序员</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1800,11 +1804,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">装饰器</a>
+                <a href="javascript:void(0)" class="js-tag color5">单元测试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">单元测试</a>
+                <a href="javascript:void(0)" class="js-tag color4">装饰器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1816,15 +1820,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网站开发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">副业</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1832,7 +1828,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">副业</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">sqlalchemy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1841,10 +1849,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">心理分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1876,7 +1880,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工房</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1884,27 +1888,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信机器人</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">原创课程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">福利</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python实战项目</a>
+                <a href="javascript:void(0)" class="js-tag color3">工房</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1912,7 +1896,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">第三方库</a>
+                <a href="javascript:void(0)" class="js-tag color5">原创课程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信机器人</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">福利</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1920,15 +1916,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+                <a href="javascript:void(0)" class="js-tag color5">第三方库</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知识付费</a>
+                <a href="javascript:void(0)" class="js-tag color1">Python实战项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1936,7 +1928,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">chatgpt</a>
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">知识付费</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1944,7 +1940,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">potencent</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">chatgpt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1960,7 +1960,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">下载</a>
+                <a href="javascript:void(0)" class="js-tag color5">potencent</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1976,11 +1976,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">下载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">知识星球</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">VLOG</a>
+                <a href="javascript:void(0)" class="js-tag color1">转行程序员</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1988,7 +1992,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习计划</a>
+                <a href="javascript:void(0)" class="js-tag color5">VLOG</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1996,11 +2000,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习计划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">找工作</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
+                <a href="javascript:void(0)" class="js-tag color5">商务合作</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2012,11 +2020,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">商务合作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">转行程序员</a>
+                <a href="javascript:void(0)" class="js-tag color1">副业信息差</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2024,11 +2028,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">副业信息差</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">麓悦江城</a>
+                <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2044,6 +2044,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">麓悦江城</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">千里会</a>
               </li>
              
@@ -2056,15 +2064,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">资源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工作</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2072,19 +2072,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">课程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">月度总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日志</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2092,7 +2080,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日志</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">年度总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">课程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2104,10 +2108,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">poimage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
@@ -2116,11 +2116,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wftools</a>
+                <a href="javascript:void(0)" class="js-tag color3">poimage</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线下活动</a>
+                <a href="javascript:void(0)" class="js-tag color3">wftools</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2128,11 +2128,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pycon</a>
+                <a href="javascript:void(0)" class="js-tag color4">交流群</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">交流群</a>
+                <a href="javascript:void(0)" class="js-tag color5">线下活动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pycon</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2148,14 +2152,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">项目</a>
               </li>
              
@@ -2168,7 +2164,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">周记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">内置函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">粉丝福利</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2180,10 +2188,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">粉丝福利</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
@@ -2192,19 +2196,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">3.12</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Excel</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">转行咨询</a>
+                <a href="javascript:void(0)" class="js-tag color5">3.12</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">技术咨询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">转行咨询</a>
               </li>
              
               <li class="article-tag-list-item">
