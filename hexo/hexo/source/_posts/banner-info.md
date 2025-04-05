@@ -17,6 +17,13 @@ tags: banner
 <!-- more -->
 
 
+<p align="center" id='全套-banner'>
+    <a target="_blank" href='https://www.python-office.com/guide/allFunc.html'>
+    <img src="https://cos.python-office.com/course%2Fall-banner.jpg" width="100%"/>
+    </a>   
+</p>
+
+
 
 <p align="center" id='30讲自动化办公-banner'>
     <a target="_blank" href='https://www.python-office.com/video/video.html'>
@@ -74,7 +81,7 @@ tags: banner
 
 <p align="center" id='实战项目-宽-banner'>
     <a target="_blank" href='http://www.python4office.cn/python-project-list/'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/projects-100.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/projects-100.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -179,20 +186,20 @@ tags: banner
 </p>
 
 <p align="center" id='1对1咨询-banner'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/1v1.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/1v1.jpg" width="300" height='400'/>
+    <a target="_blank" href='https://cos.python-office.com/wechat/1v1.jpg'>
+    <img src="https://cos.python-office.com/wechat/1v1.jpg" width="300" height='400'/>
     </a>   
 </p>
 
 <p align="center" id='QQ群'>
-    <a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/qq-group.jpg'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/qq-group.jpg" width="300" height="400"/>
+    <a target="_blank" href='https://cos.python-office.com/group/qq-group.jpg'>
+    <img src="https://cos.python-office.com/group/qq-group.jpg" width="300" height="400"/>
     </a>   
 </p>
 
 <p align="center" id='福利合集-banner'>
     <a target="_blank" href='http://python4office.cn/sideline-pro-list/'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/fuli/all-1.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/ads/fuli/all-1.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -203,7 +210,7 @@ tags: banner
 </p>
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+![](https://cos.python-office.com/wechat/qr-code.jpg)
 
 <p align="center" id='5讲OCR-banner'>
     <a target="_blank" href='https://www.python-office.com/course-002/5-poocr/5-poocr.html'>
@@ -215,26 +222,26 @@ tags: banner
 ![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/fuye-info/%E5%B0%81%E9%9D%A2-%E6%A8%AA.jpg)
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/ai-group.jpg)
+![](https://cos.python-office.com/group/ai-group.jpg)
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
+![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
 
 <p align="center" id='CodeMaster-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/activity/CodeMaster-3.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/activity/CodeMaster-3.jpg" width="100%"/>
     </a>   
 </p>
 
 <p align="center" id='pycon-2024-banner'>
     <a target="_blank" href='https://www.bilibili.com/video/BV1Y6qWYWEyQ/'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community/pycon/2024/pycon2024.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/community/pycon/2024/pycon2024.jpg" width="100%"/>
     </a>   
 </p>
 <p align="center" id='b-py-auto-2024-banner'>
     <a target="_blank" href='https://space.bilibili.com/259649365'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community/gitcode/B-py-auto.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/community/gitcode/B-py-auto.jpg" width="100%"/>
     </a>   
 </p>
 

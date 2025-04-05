@@ -16,7 +16,7 @@ tags: 资源
 
 大家有任何问题，欢迎加入AI工具交流群，👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/ai-group.jpg)
+![](https://cos.python-office.com/group/ai-group.jpg)
 
 
 ## Python自动化办公
@@ -28,7 +28,7 @@ tags: 资源
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/0816.jpg)
+![](https://cos.python-office.com/group/0816.jpg)
 
 ##　３元红包，每人１个
 

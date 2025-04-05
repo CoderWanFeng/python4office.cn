@@ -60,7 +60,7 @@ client_secret = '百度AI平台的应用key'
 - 其它的定制化需求。
 我的微信：[CoderWanFeng]()，扫码下图直接添加。👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+![](https://cos.python-office.com/wechat/qr-code.jpg)
 
 ## 写在最后
 

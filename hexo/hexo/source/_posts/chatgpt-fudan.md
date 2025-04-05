@@ -18,8 +18,8 @@ MOSS 项目主页：https://txsun1997.github.io/blogs/moss.html
 
 
 <p align="center" id='开源交流群-banner'>
-<a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg'>
-<img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/python-office-qr.jpg" width="100%"/>
+<a target="_blank" href='https://cos.python-office.com/group/free-group.jpg'>
+<img src="https://cos.python-office.com/group/python-office-qr.jpg" width="100%"/>
 </a> 
 </p>
 

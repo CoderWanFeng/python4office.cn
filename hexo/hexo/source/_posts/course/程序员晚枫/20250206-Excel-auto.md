@@ -11,7 +11,7 @@ tags: [python,下载]
 
 ## 网盘地址
 
-- 链接直达：https://pan.quark.cn/s/7313497334cd
+- 链接直达：https://pan.quark.cn/s/23dd665febe2
 
 ## 视频合集
 
@@ -22,7 +22,7 @@ tags: [python,下载]
 
 请 + 我微信，我邀请你加入答疑群。备注：30讲
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/wechat.jpg)
+![](https://cos.python-office.com/wechat/wechat.jpg)
 
 
 

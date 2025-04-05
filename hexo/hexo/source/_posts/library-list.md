@@ -21,7 +21,7 @@ tags: 黑科技
 ### 你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+- 💬 我的微信，点击添加👉[CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
@@ -48,7 +48,7 @@ tags: 黑科技
 | 🚦[PDF Drive - Search and download PDF files for free.](https://www.pdfdrive.com/) |
 | 🚦[28个黑科技软件](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MjU3ODYyNA==&action=getalbum&album_id=2186546268016017410&scene=173&from_msgid=2247485723&from_itemidx=1&count=3&nolastread=1#wechat_redirect) |
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)
+![CoderWanFeng](https://cos.python-office.com/group/free-group.jpg)
 
 
 

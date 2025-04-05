@@ -125,7 +125,7 @@ GitHub 项目地址：[https://github.com/CoderWanFeng/popdf](https://github.com
 
 <p align="center" id='CodeMaster-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/activity/CodeMaster-3.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/activity/CodeMaster-3.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -139,18 +139,18 @@ GitHub 项目地址：[https://github.com/CoderWanFeng/popdf](https://github.com
 ---
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
+![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
 ## 交流群
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/0816.jpg)
+![](https://cos.python-office.com/group/0816.jpg)
 
 ###　读者福利
 
 <p align="center" id='福利合集-banner'>
     <a target="_blank" href='http://python4office.cn/sideline-pro-list/'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/fuli/all-1.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/ads/fuli/all-1.jpg" width="100%"/>
     </a>   
 </p>
 

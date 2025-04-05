@@ -10,7 +10,7 @@ tags: 微信群
 
 <!-- more -->
 <p align="center" id='免费技术群'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg"/>
+    <img src="https://cos.python-office.com/group/free-group.jpg"/>
     </a>   
 </p>
 

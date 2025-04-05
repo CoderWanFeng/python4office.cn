@@ -20,7 +20,7 @@ tags: 原创课程
 
 
 我用夸克网盘分享了「给小白的《50讲Python自动化办公》」，点击链接即可保存。
-- 链接：https://pan.quark.cn/s/32056609d35b
+- 链接：https://pan.quark.cn/s/f8be0735110e
 - 提取码：GBzf
 
 
@@ -29,7 +29,7 @@ tags: 原创课程
 因为群二维码经常失效，所以庆直接+我微信，备注：50讲，我来邀请你。
 我的微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/wechat.jpg)
+![](https://cos.python-office.com/wechat/wechat.jpg)
 # 读者福利
 
 做了几年自媒体了，整理了一些互联网撸羊毛的方法，长期有效。👇

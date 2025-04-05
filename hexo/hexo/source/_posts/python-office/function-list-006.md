@@ -242,7 +242,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 '''
 import office
 
-office.image.down4img(url='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/logo/icon2.jpg',
+office.image.down4img(url='https://cos.python-office.com/logo/icon2.jpg',
                       output_path=r'D:\workplace\code\gitee\python-office.com\docs-pages\vuepress\course\code\test_files\50-16-down4img')
 
 ```
@@ -286,7 +286,7 @@ office.wechat.chat_robot(who='每天进步一点点')  # 智能聊天
 
 大家学习 或 使用代码过程中，有任何问题，都可以加微信和我交流哟~👇
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+![CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
 
 
 ## 原创课程

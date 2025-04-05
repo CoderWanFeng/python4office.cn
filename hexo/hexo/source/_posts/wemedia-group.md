@@ -39,7 +39,7 @@ tags: 社区活动
 
 
 <p align="center" id='自媒体交流群'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg"/>
+    <img src="https://cos.python-office.com/group/free-group.jpg"/>
     </a>   
 </p>
 
@@ -70,9 +70,9 @@ tags: 社区活动
 ### 二、大厂内推信息群
 
 
-> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
+> 另外，我来到重庆工作以后，建了一个重庆程序员的👉[内推求职交流群](https://cos.python-office.com/group/free-group.jpg)，群公告里有：华为、腾讯、阿里、字节等大厂的内推信息，持续更新中！欢迎重庆的小伙伴，进群交个朋友~
 
-👉[点我加入：大厂内推求职交流群](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)
+👉[点我加入：大厂内推求职交流群](https://cos.python-office.com/group/free-group.jpg)
 
 <p align="center" id='滴滴-banner'>
     <a target="_blank" href='https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg'>
@@ -89,7 +89,7 @@ tags: 社区活动
 - 🎁 粉丝福利👉[我的短视频，全是被 夸 火的？？](https://www.xiaohongshu.com/discovery/item/63305311000000001701c8a9)
 
 
-![coder-secret](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+![coder-secret](https://cos.python-office.com/wechat/qr-code.jpg)
 
 <p align="center" id='大礼包-banner'>
     <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>

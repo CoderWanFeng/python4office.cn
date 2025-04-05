@@ -32,11 +32,11 @@ tags: pandas
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
 > ⭐今年我推出了陪你学习1年的Python学习服务，如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/1v1.jpg)
+![](https://cos.python-office.com/wechat/1v1.jpg)
 
 
 <p align="center" id='CodeMaster-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/activity/CodeMaster-3.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/activity/CodeMaster-3.jpg" width="100%"/>
     </a>   
 </p>

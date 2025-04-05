@@ -43,7 +43,7 @@ tags: 职场
 
 # 2、程序员交流群
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/coder-group.jpg)
+![](https://cos.python-office.com/coder-group.jpg)
 
 
 

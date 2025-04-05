@@ -51,7 +51,7 @@ tags: 原创课程
 
 > 如果需要补差价获取exe的朋友，请另外备注**exe**哟。
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+![CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
 
 # 读者福利
 

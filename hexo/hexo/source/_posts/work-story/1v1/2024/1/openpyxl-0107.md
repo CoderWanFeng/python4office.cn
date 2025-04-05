@@ -43,4 +43,4 @@ tags: 1v1
 
 学习加油，有问题沟通，👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+![](https://cos.python-office.com/wechat/qr-code.jpg)

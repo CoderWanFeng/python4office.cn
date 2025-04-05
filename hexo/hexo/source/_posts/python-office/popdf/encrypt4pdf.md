@@ -75,12 +75,12 @@ office.pdf.encrypt4pdf(path=r'D:\程序员晚枫的文件夹\input_pdf',
 
 <p align="center" id='CodeMaster-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/activity/CodeMaster-3.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/activity/CodeMaster-3.jpg" width="100%"/>
     </a>   
 </p>
 
 ---
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/fuli/all-1.jpg)
+![](https://cos.python-office.com/ads/fuli/all-1.jpg)
 
 ![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)

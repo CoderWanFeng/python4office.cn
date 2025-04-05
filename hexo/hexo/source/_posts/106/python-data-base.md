@@ -121,7 +121,7 @@ tags: 电子书
 
 <p align="center" id='实战项目-宽-banner'>
     <a target="_blank" href='http://www.python4office.cn/python-project-list/'>
-    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/projects-100.jpg" width="100%"/>
+    <img src="https://cos.python-office.com/projects-100.jpg" width="100%"/>
     </a>   
 </p>
 

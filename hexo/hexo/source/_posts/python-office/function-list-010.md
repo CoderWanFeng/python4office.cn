@@ -67,6 +67,6 @@ tags: 第三方库
 大家在使用中有问题，请随时在读者群进行反馈~一起加油！👇
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/0816.jpg)
+![](https://cos.python-office.com/group/0816.jpg)
 
 

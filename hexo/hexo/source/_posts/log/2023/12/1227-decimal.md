@@ -79,5 +79,5 @@ print(c)
 
 但你还有没有更好的办法呢？欢迎在读者群交流一下~👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/0816.jpg)
+![](https://cos.python-office.com/group/0816.jpg)
 

@@ -50,18 +50,18 @@ tags: 1v1
 ## 1. 15讲 · Python基础入门
 
 - 视频：[点我直达](https://www.python-office.com/course-002/15-Python/15-Python.html)
-- 资料：https://pan.quark.cn/s/2a3013b184e4
+- 资料：https://pan.quark.cn/s/155a48fe1267
 
 ## 2. 50讲 · Python自动化办公
 
 - 视频：[点我直达](https://www.python-office.com/course/50-python-office.html#%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84%E3%80%8A50%E8%AE%B2-%C2%B7-python%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E3%80%8B)
-- 资料：：https://pan.quark.cn/s/32056609d35b
+- 资料：：https://pan.quark.cn/s/f8be0735110e
 - 提取码：GBzf
 
 ## 3. 30讲 · Python数据分析
 
 - 视频：[点我直达](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
-- 资料：https://pan.quark.cn/s/7313497334cd
+- 资料：https://pan.quark.cn/s/23dd665febe2
 
 
 ## 其它问题
@@ -75,5 +75,5 @@ tags: 1v1
 
 其它任何问题，都可以直接问我。我的微信，👇
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+![CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
 

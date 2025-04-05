@@ -43,4 +43,4 @@ tags: 热点
 
 写到这里，也要感谢默默关注点赞的老铁们！一路同行且珍惜。
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
+![](https://cos.python-office.com/ads/gzh/sub-py.jpg)

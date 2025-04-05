@@ -70,6 +70,6 @@ tags:
 
 
 如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/1v1.jpg)
+![](https://cos.python-office.com/wechat/1v1.jpg)
 
 

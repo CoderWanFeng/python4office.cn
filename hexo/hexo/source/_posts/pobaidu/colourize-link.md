@@ -16,4 +16,4 @@ tags: [pobaidu,AI]
 - 需要远程设置百度AI + 安装Python环境，直到运行成功为止，399元/次。
 
 扫码下图，添加我的微信。👇
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/wechat/qr-code.jpg)
+![](https://cos.python-office.com/wechat/qr-code.jpg)

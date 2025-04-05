@@ -45,7 +45,7 @@ Python安装包
 
 扫码下图，直达群聊。👇
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/free-group.jpg)
+![](https://cos.python-office.com/group/free-group.jpg)
 
 
 

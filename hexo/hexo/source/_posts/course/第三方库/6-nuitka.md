@@ -80,4 +80,4 @@ nuitka --standalone --onefile --optimize=2 pdf_extract_tool.py
 > 大家在阅读过程中有任何问题，或者觉得有收获的话，欢迎点赞、评论和收藏。
 
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
+![](https://cos.python-office.com/ads/gzh/sub-py.jpg)

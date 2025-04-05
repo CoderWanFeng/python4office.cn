@@ -48,4 +48,4 @@ GitCode 是 CSDN 为开发者提供的开源项目创新服务平台，秉承“
 
 你还知道哪些国产的替代平台，可以在评论区补充~
 
-![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
+![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
