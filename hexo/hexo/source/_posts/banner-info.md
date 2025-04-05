@@ -9,7 +9,7 @@ tags: banner
 
 
 <p align="center" id='进群-banner'>
-    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
     </a>   
 </p>
@@ -245,7 +245,11 @@ tags: banner
     </a>   
 </p>
 
-
+<p align="center" id='4套课程'>
+    <a target="_blank" href='https://www.python-office.com/guide/allFunc.html'>
+    <img src="https://cos.python-office.com/course%2Fall-1.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 - [业余爱好者，如何从0开始快速掌握Python？](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
@@ -257,4 +261,5 @@ tags: banner
 - [给小白的《30讲 · Python + Excel数据分析》](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
 - [给小白的《10讲 · Python + PDF 自动化办公》](http://www.python-office.com/course-002/10-popdf/10-popdf.html)
 - [Python学习交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+- [零基础Python自动化办公，一站式搞定！](https://mp.weixin.qq.com/s/XDOMnTISBpglNvSf4R-tmg)
 

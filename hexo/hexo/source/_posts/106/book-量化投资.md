@@ -48,7 +48,7 @@ tags: 电子书
 
 
 <p align="center" id='进群-banner'>
-    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
     </a>   
 </p>
@@ -61,7 +61,7 @@ tags: 电子书
 
 
 <p align="center" id='进群-banner'>
-    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
     </a>   
 </p>
