@@ -14,7 +14,7 @@ tags:
 	<strong>🍬python for office</strong>
 </p>
 <p align="center">
-	👉 <a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">本开源项目的交流群</a> 👈
+	👉 <a href="http://www.python4office.cn/wechat-group/">本开源项目的交流群</a> 👈
 </p>
 
 
@@ -93,7 +93,7 @@ office.image.txt2wordcloud(filename='yes-minister.txt', color='black', result_fi
 
 ## 3、关于python-office
 python-office是pypi开源的第三方库，专为python自动化办公而生。
-欢迎大家加入python-office这个库的技术交流群👉[传送门](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+欢迎大家加入python-office这个库的技术交流群👉[传送门](http://www.python4office.cn/wechat-group/)
 
 >也欢迎大家参与python-office这个开源项目的建设：
 > - https://gitee.com/CoderWanFeng/python-office

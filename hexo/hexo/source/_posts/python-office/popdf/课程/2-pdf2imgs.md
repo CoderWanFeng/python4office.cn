@@ -100,3 +100,18 @@ popdf.pdf2imgs(
 
 ![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
 
+
+
+## 交流群
+
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/0816.jpg)
+
+###　读者福利
+
+<p align="center" id='福利合集-banner'>
+    <a target="_blank" href='http://python4office.cn/sideline-pro-list/'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/fuli/all-1.jpg" width="100%"/>
+    </a>   
+</p>
+

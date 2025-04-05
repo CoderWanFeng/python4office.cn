@@ -227,7 +227,7 @@ int = 136
 - [精品！ 45个 GIT 经典操作场景](https://mp.weixin.qq.com/s/4_54glQ4akTB5MSHyFYwlg)
 - [Anaconda介绍、安装及使用保姆级教程](https://mp.weixin.qq.com/s/gYRBE6JCRnHb1TUycGkTLg)
 
-下一篇想看什么，加入读者群告诉我吧👉[Python交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+下一篇想看什么，加入读者群告诉我吧👉[Python交流群](http://www.python4office.cn/wechat-group/)
 
 
 ------

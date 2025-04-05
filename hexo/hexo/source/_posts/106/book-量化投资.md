@@ -25,7 +25,7 @@ tags: 电子书
   	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
 	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
+    	<a href="http://www.python4office.cn/wechat-group/">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -37,7 +37,7 @@ tags: 电子书
 
     - ⭐ 下载链接：https://pan.quark.cn/s/c54526424d2e
     
-    - 🚸 免费Python学习交流群👉 [进群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw) 👈
+    - 🚸 免费Python学习交流群👉 [进群](http://www.python4office.cn/wechat-group/) 👈
 
 <!-- more -->
 <p align="center" id='30讲自动化办公-banner'>

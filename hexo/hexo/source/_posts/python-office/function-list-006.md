@@ -282,7 +282,7 @@ office.wechat.chat_robot(who='每天进步一点点')  # 智能聊天
 
 这次我整理了50个自动化办公的实用共鞥你，都是1行Python代码就能实现的，录制了给小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
+- 加入学习👉[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加微信和我交流哟~👇
 
@@ -291,7 +291,7 @@ office.wechat.chat_robot(who='每天进步一点点')  # 智能聊天
 
 ## 原创课程
 
-- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
-- [给小白的《5讲 · Python发票批量识别保存为Excel》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
-- [给小白的《10讲Python微信机器人》](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
+- [给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《5讲 · Python发票批量识别保存为Excel》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
+- [给小白的《10讲Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
 

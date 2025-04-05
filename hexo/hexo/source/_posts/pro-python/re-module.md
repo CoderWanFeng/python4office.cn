@@ -70,7 +70,7 @@ res = re.findall('.{8}', s)
 > - [超全！我把 Python 的 200个标准库整理出来了](https://mp.weixin.qq.com/s/wPpw1wneX_PO3pIY7t8T3Q)
 
 今天我们重点讲一下re模块的使用。
-关于str的所有自带方法，如果大家想看的话，可以加入交流群告诉我：[交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)。我可以另写一个篇新的文章来介绍。
+关于str的所有自带方法，如果大家想看的话，可以加入交流群告诉我：[交流群](http://www.python4office.cn/wechat-group/)。我可以另写一个篇新的文章来介绍。
 
 ## 二、常用方法
 

@@ -23,7 +23,7 @@ tags: 个人网站
   	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
 	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
+    	<a href="http://www.python4office.cn/wechat-group/">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -78,7 +78,7 @@ yarn run dev
 ## 项目部署
 
 我这里是部署在腾讯的云服务器上，微信里就可以进行各种操作。正好这个双十一在搞活动，新用户**50元**就能买**1年**的服务器，非常划算。
-大家可以长按下图，直接扫码购买。👇使用过程中遇到问题，也可以加入读者群进行沟通交流：[交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)。
+大家可以长按下图，直接扫码购买。👇使用过程中遇到问题，也可以加入读者群进行沟通交流：[交流群](http://www.python4office.cn/wechat-group/)。
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/%E5%AE%98%E7%BD%91%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%2Fdaijin.jpg)
 

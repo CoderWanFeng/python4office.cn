@@ -132,11 +132,25 @@ GitHub 项目地址：[https://github.com/CoderWanFeng/popdf](https://github.com
 ## 相关课程
 
 
-- [给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
-- [给小白的《10讲 · Python微信机器人》（完结）](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
-- [给小白的《5讲 · Python实现发票批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
+- [给小白的《50讲 · Python自动化办公》（完结）](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《10讲 · Python微信机器人》（完结）](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
+- [给小白的《5讲 · Python实现发票批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 
 ---
 
 
 ![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/gzh/sub-py.jpg)
+
+## 交流群
+
+
+![](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/group/0816.jpg)
+
+###　读者福利
+
+<p align="center" id='福利合集-banner'>
+    <a target="_blank" href='http://python4office.cn/sideline-pro-list/'>
+    <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/ads/fuli/all-1.jpg" width="100%"/>
+    </a>   
+</p>
+

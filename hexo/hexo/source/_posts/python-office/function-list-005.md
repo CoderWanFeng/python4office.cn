@@ -5,7 +5,7 @@ tags: python-office
 ---
 
 
-欢迎学习给小白的《50讲 · Python自动化办公》，课程正在持续更新中🚀，每一节课都包含：视频、文档、代码、软件和答疑群，[点我下载](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)。
+欢迎学习给小白的《50讲 · Python自动化办公》，课程正在持续更新中🚀，每一节课都包含：视频、文档、代码、软件和答疑群，[点我下载](https://www.python-office.com/course/50-python-office.html)。
 
 本次课程的特点有以下几个：
 
@@ -84,7 +84,7 @@ tags: python-office
 
 
 - B站 购买链接：[28元-点我直达](https://mp.weixin.qq.com/s/9xIqv8EMK3zkctn2VkfceQ)
-- 微信 购买链接：[78元-点我直达](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
+- 微信 购买链接：[78元-点我直达](https://www.python-office.com/course/50-python-office.html)
 
 付费后，2个平台都会自动出现百度云链接，永久有效。
 

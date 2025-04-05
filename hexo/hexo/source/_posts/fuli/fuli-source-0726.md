@@ -17,7 +17,7 @@ tags: 福利
 
 - 10个常用的编程软件：[点我直达](https://mp.weixin.qq.com/s/w9ITodQR3kzSXc4t1H92nw)
 
-- 读者交流群：[点我直达](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+- 读者交流群：[点我直达](http://www.python4office.cn/wechat-group/)
 
 - 🎁7个ChatGPT网站：[点我直达](https://mp.weixin.qq.com/s/-dtUCic75tRi8Vp_x31m3A)
 

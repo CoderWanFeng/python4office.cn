@@ -27,7 +27,7 @@ tags: [Python,电子书]
   	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
 	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
+    	<a href="http://www.python4office.cn/wechat-group/">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -141,7 +141,7 @@ tags: [Python,电子书]
 - 🌟[Python和Excel选哪个？Python学到什么程度才能实战？学Python到底在学什么？](https://www.bilibili.com/video/BV19X4y1K7TG)
 
 
-> 有问必答的 ✍️[交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)，每次更新资源，我都会在群里通知的~
+> 有问必答的 ✍️[交流群](http://www.python4office.cn/wechat-group/)，每次更新资源，我都会在群里通知的~
 
 ![合集](https://img-blog.csdnimg.cn/20210303170458567.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjMyMTUxNw==,size_16,color_FFFFFF,t_70#pic_center)
 

@@ -173,7 +173,7 @@ tags: banner
   	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
 	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
   </a>
-    	<a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">
+    	<a href="http://www.python4office.cn/wechat-group/">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
 </p>
@@ -237,3 +237,17 @@ tags: banner
     <img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/community/gitcode/B-py-auto.jpg" width="100%"/>
     </a>   
 </p>
+
+
+
+
+- [业余爱好者，如何从0开始快速掌握Python？](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
+- [给小白的《15讲 · Python入门课》](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
+- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
+- [给小白的《10讲 · Python微信机器人》](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
+- [给小白的《5讲 · Python实现文字批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
+- [给小白的《6讲 · Python自动收发邮件》](https://mp.weixin.qq.com/s/AeTkloNri7gpk25m50VmTA)
+- [给小白的《30讲 · Python + Excel数据分析》](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
+- [给小白的《10讲 · Python + PDF 自动化办公》](http://www.python-office.com/course-002/10-popdf/10-popdf.html)
+- [Python学习交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+

@@ -12,7 +12,7 @@ tags: AI
 👉[Stable Diffusion的入门介绍和使用教程](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247497115&idx=1&sn=bda2343390fcbefe779dee640ba1ba9d&chksm=fa82b581cdf53c9769b7d1621bc381f9a17966b43b15785de026eb7ba47344943c4be3341520&token=29989834&lang=zh_CN#rd)
 
 
-- 在使用过程中有任何问题，欢迎加入读者交流群：[点我直达](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+- 在使用过程中有任何问题，欢迎加入读者交流群：[点我直达](http://www.python4office.cn/wechat-group/)
 
 - 如果是AI方面的纯小白，可以先看一下这个编程入门教程：[从 0 到 1，快速上手 Python](http://gk.link/a/11Put)
 

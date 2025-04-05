@@ -23,7 +23,7 @@ tags: 技术咨询
 首先看一下目前已有的代码，主要是2个：多个excel汇总到1个Excel的不同sheet里、多个Excel的同一个sheet汇总到1个Excel的同一个sheet里。
 
 
-- 多个excel汇总到1个Excel的不同sheet里：这个代码的下载和使用，我们在之前的课程里讲解过的：点击查看这套课程的第22讲👉[《给小白的50讲Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
+- 多个excel汇总到1个Excel的不同sheet里：这个代码的下载和使用，我们在之前的课程里讲解过的：点击查看这套课程的第22讲👉[《给小白的50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
 - 多个Excel的同一个sheet汇总到1个Excel的同一个sheet里：这个代码，见下面的代码片段，完整的代码使用方法，可以添加我的微信沟通。👇
 
 ```python

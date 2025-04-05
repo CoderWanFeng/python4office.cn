@@ -11,7 +11,7 @@ tags:
     
     - 提取码：5g7m
     
-    - 🚸免费Python学习交流群👉 [进群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw) 👈
+    - 🚸免费Python学习交流群👉 [进群](http://www.python4office.cn/wechat-group/) 👈
 
 <!-- more -->
 
