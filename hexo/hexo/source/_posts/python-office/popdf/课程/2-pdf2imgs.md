@@ -1,5 +1,5 @@
 ---
-title: PDF转图片，1行代码搞定
+title: PDF 转图片，一行代码搞定！批量支持已上线！
 date: 2024-12-08 10:16:17
 tags: [ 第三方库,自动化办公,pdf ]
 ---
@@ -28,32 +28,74 @@ tags: [ 第三方库,自动化办公,pdf ]
 
 
 
-大家好，这里是程序员晚枫，今天给大家分享一个Python自动化办公的第三方库：popdf，专门用来处理PDF文件。
+大家好，我是程序员晚枫。今天我要给大家带来一个超实用的功能——`popdf` 现在支持 PDF 转图片了，而且还能批量操作！是不是很激动？别急，我来手把手教你玩转这个功能。
 
-> 源码地址：https://github.com/CoderWanFeng/popdf
+## 1. 一行代码搞定单文件转换
 
-## 需求说明
+`popdf` 的核心就是简单暴力。只需要一行代码，你就能轻松把 PDF 转成图片：
 
+```python
+from popdf import pdf2imgs
 
-
-## 上代码
-
-首先，下载一个PDF自动化办公的专用库：``popdf``，命令如下，??
-
+pdf2imgs(
+    input_file=r"程序员晚枫的文件夹/single_file.pdf",
+    output_file=r"程序员晚枫的文件夹/single_file.png"
+)
 ```
-pip install popdf
+
+是不是很简单？小白也能秒上手！
+
+## 2. 批量转换，轻松搞定
+
+现在，`popdf` 更是升级了！支持批量转换啦！只需要换两个参数，就能一次性处理一堆 PDF 文件。以下是关键参数的讲解：
+
+- **`input_file` 和 `output_file`**：这组参数用来处理单个文件，适合零散的 PDF 转换。
+- **`input_path` 和 `output_path`**：这组参数才是今天的主角！`input_path` 是 PDF 文件夹路径，`output_path` 是输出图片文件夹路径。只要把 PDF 文件丢进输入文件夹，运行代码，图片文件就自动出来了。
+
+批量转换的代码示例如下：
+
+```python
+from popdf import pdf2imgs
+
+pdf2imgs(
+    input_path=r"程序员晚枫的文件夹/pdf_folder/",  # PDF 文件夹路径
+    output_path=r"程序员晚枫的文件夹/img_folder/"  # 输出图片文件夹路径
+)
 ```
 
-然后直接1行代码搞定，??
+是不是超方便？再也不用手动一个个转换了！
 
-```
-# pip install popdf
-import popdf
+## 3. 代码示例，直接上手
 
-popdf.pdf2imgs(
-            input_file=r'test_files/pdf/程序员晚枫.pdf',
-            output_path='./test_files/img/')
+为了让大家更直观地感受，我再贴一个完整的代码示例：
+
+```python
+from popdf import pdf2imgs
+
+# 单文件转换
+pdf2imgs(
+    input_file=r"程序员晚枫的文件夹/single_file.pdf",
+    output_file=r"程序员晚枫的文件夹/single_file.png"
+)
+
+# 批量转换
+pdf2imgs(
+    input_path=r"程序员晚枫的文件夹/pdf_folder/",
+    output_path=r"程序员晚枫的文件夹/img_folder/"
+)
 ```
+
+记住，路径一定要改成你自己的文件夹路径，否则程序会骂你哦！
+
+## 4. 关于我：程序员晚枫
+
+我是程序员晚枫，一个热爱技术、爱折腾的开发者。平时喜欢写一些实用的工具和库，帮助大家解决开发中的小痛点。`popdf` 就是其中之一，希望能帮到更多人。
+
+如果你对这个工具感兴趣，或者有任何问题，欢迎在评论区留言！告诉我你的使用体验，或者提出你想要的功能，说不定下个版本就实现了哦！
+
+快来试试吧，保证让你惊艳！有问题留言区见！ 😄
+
+GitHub 项目地址：[https://github.com/CoderWanFeng/popdf](https://github.com/CoderWanFeng/popdf)
 
 #### 参数说明
 
@@ -61,7 +103,6 @@ popdf.pdf2imgs(
 - output_path：输出PDF的路径，一般用于批量操作
 - input_file: 输入PDF的文件名，可以包含路径，一般用于单个文件的操作
 - output_file：输出结果的文件名，可以包含路径，一般用于单个文件的操作
-- input_file_list: 输入PDF的文件列表，一般用于批量操作，例如：合并2个pdf文件
 
 
 ## 加入开源
@@ -89,14 +130,25 @@ popdf.pdf2imgs(
 
 ## 相关课程
 
-- [给小白的《50讲 · Python自动化办公》](https://www.bilibili.com/opus/857901377884520482?spm_id_from=333.999.0.0)
-- [给小白的《10讲 · Python微信机器人》](https://www.bilibili.com/video/BV1S84y1m7xd/?spm_id_from=333.999.0.0)
-- [给小白的《5讲 · Python实现OCR自动批量识别》](https://www.bilibili.com/video/BV13J4m1s7L7/?spm_id_from=333.999.0.0)
-- [给小白的《6讲 · Python自动收发邮件》](https://www.bilibili.com/video/BV1pQ4y177nV/)
+- [业余爱好者，如何从0开始快速掌握Python？](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
+- [给小白的《15讲 · Python入门课》](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
+- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
+- [给小白的《10讲 · Python微信机器人》](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
+- [给小白的《5讲 · Python实现文字批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
+- [给小白的《6讲 · Python自动收发邮件》](https://mp.weixin.qq.com/s/AeTkloNri7gpk25m50VmTA)
+- [给小白的《30讲 · Python + Excel数据分析》](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
+- [给小白的《10讲 · Python + PDF 自动化办公》](http://www.python-office.com/course-002/10-popdf/10-popdf.html)
+- [Python学习交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
+- [零基础Python自动化办公，一站式搞定！](https://mp.weixin.qq.com/s/XDOMnTISBpglNvSf4R-tmg)
+
 
 ---
 
-
+<p align="center" id='4套课程'>
+    <a target="_blank" href='https://www.python-office.com/guide/allFunc.html'>
+    <img src="https://cos.python-office.com/course%2Fall-1.jpg" width="100%"/>
+    </a>   
+</p>
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
