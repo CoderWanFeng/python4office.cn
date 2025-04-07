@@ -52,6 +52,11 @@ office.pdf.encrypt4pdf(path=r'D:\程序员晚枫的文件夹\input_pdf',
 
 
 
+![](https://cos.python-office.com/course/10%E8%AE%B2PDF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/popdf-heng.jpg)
+
+
+
+
 ----
 
 

@@ -45,6 +45,13 @@ pdf2imgs(
 
 是不是很简单？小白也能秒上手！
 
+
+
+![](https://cos.python-office.com/course/10%E8%AE%B2PDF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/popdf-heng.jpg)
+
+
+
+
 ## 2. 批量转换，轻松搞定
 
 现在，`popdf` 更是升级了！支持批量转换啦！只需要换两个参数，就能一次性处理一堆 PDF 文件。以下是关键参数的讲解：
