@@ -36,7 +36,7 @@ tags:
 
 <!-- more -->
 
-![CoderWanFeng](https://cos.python-office.com/group/free-group.jpg)
+![CoderWanFeng](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 
 ##　我的1对1答疑服务

@@ -6,7 +6,7 @@ tags: python-office
 
 <p align="center">
     <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license"/>
+    <img src="https://cos.python-office.com/logo/github-nav.jpg" alt="github license"/>
     </a>   
 </p>
 <p align="center">
@@ -180,7 +180,7 @@ pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 
 > 关于版本更新，如有疑问，请私信微博@[程序员晚枫](http://www.python4office.cn/weibo-qaq/)
 >
-> 或者，欢迎有学习/定制功能/加入项目需求的同学，直接加入我们的项目交流群👉[点我直达](https://cos.python-office.com/group/free-group.jpg)
+> 或者，欢迎有学习/定制功能/加入项目需求的同学，直接加入我们的项目交流群👉[点我直达](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 ## 参考资料 
 - 教材：

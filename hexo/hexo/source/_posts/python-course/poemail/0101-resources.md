@@ -29,7 +29,7 @@ tags: 原创课程
 本群二维码长期有效，如果万一我忘记更新了，你可以+我微信，备注：邮件自动化，我来邀请你。
 我的微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
 
-![](https://cos.python-office.com/group/free-group.jpg)
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 # 读者福利
 

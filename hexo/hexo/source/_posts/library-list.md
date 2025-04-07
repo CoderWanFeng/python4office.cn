@@ -48,7 +48,7 @@ tags: 黑科技
 | 🚦[PDF Drive - Search and download PDF files for free.](https://www.pdfdrive.com/) |
 | 🚦[28个黑科技软件](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MjU3ODYyNA==&action=getalbum&album_id=2186546268016017410&scene=173&from_msgid=2247485723&from_itemidx=1&count=3&nolastread=1#wechat_redirect) |
 
-![CoderWanFeng](https://cos.python-office.com/group/free-group.jpg)
+![CoderWanFeng](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 
 

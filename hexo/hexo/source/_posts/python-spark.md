@@ -39,4 +39,4 @@ tags: spark
 ## 3、读者交流群
 > 以下是免费读者交流群，可以进群和大家讨论学习
 
-![](https://cos.python-office.com/group/free-group.jpg)
+![](https://cos.python-office.com/group%2Ffree-group.jpg)

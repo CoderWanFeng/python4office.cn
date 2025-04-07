@@ -4,6 +4,12 @@ date: 2025-03-25 13:51:51
 tags: 自媒体
 ---
 
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    </a>   
+</p>
+
 今年换到了法务岗，一直忙着适应新工作，更新都耽误了。
 
 今晚总结了一下我平时高效更新的工具和顺序，记录一下。

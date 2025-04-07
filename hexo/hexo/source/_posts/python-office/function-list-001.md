@@ -3,52 +3,36 @@ title: 5个有趣的 Python 自动化办公程序，建议收藏！超实用~
 date: 2022-05-06 13:31:42
 tags:
 ---
-
-<p align="center">
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license"/>
-    </a>   
-</p>
-<p align="center">
-	<strong>🍬python for office</strong>
-</p>
-<p align="center">
-	👉 <a href="http://www.python4office.cn/wechat-group/">本开源项目的交流群</a> 👈
-</p>
-
-
-<p align="center" name="图标-github">
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues"/>
-    </a>	
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license"/>
-    </a>
-    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license"/>
+<p align="center" id='进群-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
     </a>   
 </p>
 
-<p align="center" name="gitee">
-	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office/'>
-		<img src='https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark' alt='gitee star'/>
-	</a>
-	<a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-		<img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=dark" alt="gitee fork"/>
-	</a>
-	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-	<img src="https://img.shields.io/badge/QQ-163434413-orange"/></a>
+<p align="center">
+	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
+</p>
+<p align="center">
+	👉 <a target="_blank" href="http://www.python4office.cn/wechat-group/">本开源项目的交流群</a> 👈
 </p>
 
+
+
+<p align="center" name="gitcode">
+	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+		<img src='https://gitcode.com/CoderWanFeng1/python-office/star/badge.svg?theme=dark' alt='gitcode star'/>
+	</a>	
+	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+<img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
+</a>
+  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
+	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
+  </a>
+    	<a href="http://www.python4office.cn/wechat-group/">
+	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
+  </a>
+
+</p>
 -------------------------------------------------------------------------------
 
 

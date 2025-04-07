@@ -8,7 +8,7 @@ tags: 开源项目
 
 <p align="center">
     <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
-    <img src="http://python4office.cn/images/github-nav.jpg" alt="github license"/>
+    <img src="https://cos.python-office.com/logo/github-nav.jpg" alt="github license"/>
     </a>   
 </p>
 <p align="center">

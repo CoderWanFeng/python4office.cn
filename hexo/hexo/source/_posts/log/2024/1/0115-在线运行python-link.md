@@ -21,4 +21,4 @@ tags: 自动化办公
 
 进群可以**领取Python课程**
 
-![](https://cos.python-office.com/group/free-group.jpg)
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
