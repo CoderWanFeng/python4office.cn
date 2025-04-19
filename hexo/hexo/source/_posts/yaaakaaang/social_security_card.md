@@ -1,6 +1,12 @@
-<span style="font-size:36px;">识别社保卡信息，手动整理效率低，OCR 和 Python 来帮你！</span>
+---
+title: 识别社保卡信息，手动整理效率低，OCR 和 Python 来帮你！
+date: 2025-04-15 21:56:17
+tags: [pobd]
+---
 
 <span style="font-size:20px;"><span style="color:#66a3e0;">你是否曾因社保卡，一头变得两个大。现在不用再愁啦，一行代码解决它。【pobd】 你的办公好帮手。</span></span>
+
+
 
 
 #  一、1行代码，体验魔法
