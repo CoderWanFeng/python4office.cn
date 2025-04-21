@@ -47,7 +47,7 @@ mysql入个门：[MySQL数据库入门到精通](https://www.bilibili.com/video/
 mongdb必会：[前后端程序员必学的中间件-mongodb从入门到精通](https://www.bilibili.com/video/BV1Yb4y1Z7bu)
 ### 4、api
 
-django，学会做一个博客即可：[从开发到部署，掌握项目开发全流程](http://gk.link/a/10Wl1)
+django，学会做一个博客即可：[从开发到部署，掌握项目开发全流程](https://www.bilibili.com/video/BV1zi4y1t7YU)
 
 flask：[14天搞定Flask Web框架](https://www.bilibili.com/video/BV1PA411e7ku/)
 

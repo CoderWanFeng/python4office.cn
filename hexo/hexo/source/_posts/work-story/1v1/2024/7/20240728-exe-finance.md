@@ -36,7 +36,7 @@ tags: 1对1
 
 1. 接口请求：[Python爬虫从入门到高级实战](https://www.bilibili.com/video/BV1y54y1y74F)。这套课听懂就可以，不需要全部跟着做。
 2. 数据库：[MySQL数据库入门到大牛](https://www.bilibili.com/video/BV1iq4y1u7vj/?spm_id_from=333.337.search-card.all.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)，这套课不用学习安装，其余都要学。
-3. 网站开发：[从开发到部署，掌握项目开发全流程](http://gk.link/a/10Wl1)。这套课全部都跟着做一遍，哪里不懂就直接问。
+3. 网站开发：[从开发到部署，掌握项目开发全流程](https://www.bilibili.com/video/BV1zi4y1t7YU)。这套课全部都跟着做一遍，哪里不懂就直接问。
 
 ## 答疑
 

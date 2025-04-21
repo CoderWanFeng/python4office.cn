@@ -58,7 +58,7 @@ tags: 福利
 
 > 悄悄说，第2套是我的原创哦
 
-- [121讲 · Python基础（已完结）](http://gk.link/a/11Put)
+- [121讲 · Python基础（已完结）](https://www.python-office.com/course-002/15-Python/15-Python.html)
 
 - [50讲 · Python自动化办公（已完结）](https://www.python-office.com/course/50-python-office.html)
 

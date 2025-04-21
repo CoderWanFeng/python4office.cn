@@ -16,7 +16,7 @@ tags:
 - 1、《流畅的Python》：https://mp.weixin.qq.com/s/xcbe3R8EaTE22j5_9OxQYw
 - 2、上面这本书的配套视频教程：[《Python高级核心技术97讲》](https://mp.weixin.qq.com/s/Cmk-_vrTo8Y-tDwChhEBLA)
 ### 后端
-- Django快速开发实战 ：http://gk.link/a/10Wl1
+- Django快速开发实战 ：https://www.bilibili.com/video/BV1zi4y1t7YU
 - Linux实战技能100讲： http://gk.link/a/111MW
 - 高性能MySQL实战： http://gk.link/a/110o3
 ## 2、计算机基础知识

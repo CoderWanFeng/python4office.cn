@@ -17,7 +17,7 @@ tags: JavaScript
 
 冰墩墩进阶款代码，主要通过JavaScript中的React框架来实现，
 > 如需深入学习的同学，可以学习视频课程：[React 实战进阶 45 讲 - 掌握大厂热门的前端利器](http://gk.link/a/118LK)
-> JavaScript通常搭配Python中的Django框架来使用：[Django快速开发实战 - 从开发到部署，掌握项目开发全流程](http://gk.link/a/10Wl1)
+> JavaScript通常搭配Python中的Django框架来使用：[Django快速开发实战 - 从开发到部署，掌握项目开发全流程](https://www.bilibili.com/video/BV1zi4y1t7YU)
 
 `实现代码如下`
 

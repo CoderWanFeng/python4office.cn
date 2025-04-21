@@ -37,7 +37,7 @@ tags: 1对1咨询
 
 - [检验基础学习是否成功的课程](http://gk.link/a/10E3y)，来自Facebook资深工程师，这个是付费内容，建议看，可以不看💻
 
-Django学习，直接看官网就行：https://docs.djangoproject.com/zh-hans/4.2/ ， 如果看的吃力，可以看一下这套课程：[Django学习](http://gk.link/a/10Wl1)
+Django学习，直接看官网就行：https://docs.djangoproject.com/zh-hans/4.2/ ， 如果看的吃力，可以看一下这套课程：[Django学习](https://www.bilibili.com/video/BV1zi4y1t7YU)
 
 ##　２、练习
 

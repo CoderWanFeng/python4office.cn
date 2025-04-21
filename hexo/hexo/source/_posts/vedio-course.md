@@ -35,7 +35,7 @@ tags:
 </p>
 
 <p align="center" id='django网站-banner'>
-    <a target="_blank" href='http://gk.link/a/10Wl1'>
+    <a target="_blank" href='https://www.bilibili.com/video/BV1zi4y1t7YU'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2FPython%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91.jpg" width="100%"/>
     </a>   
 </p>
@@ -149,7 +149,7 @@ tags:
 | [画一个‘冰墩墩’](https://mp.weixin.qq.com/s/8ktglsoN-Or8X5t6pJKtLw) | Python绘制冬奥吉祥物“冰墩墩”，源代码都给你，复制粘贴就可以运行！ |
 | [零基础学 Python - 掌握 AI 时代的编程语言](http://gk.link/a/110jO) |   前新浪网技术经理   |
 | [🔥推荐7个Excel自动化办公免费学习资源~（数据分析、Python、VBA等）](https://mp.weixin.qq.com/s/BlTpJyr81LXSHSmtPIs_jg) |      |
-| [Python网站开发实战](http://gk.link/a/10Wl1)                 |   前大众点评搜索负责人   |
+| [Python网站开发实战](https://www.bilibili.com/video/BV1zi4y1t7YU)                 |   前大众点评搜索负责人   |
 | [玩转Python数据分析](https://mp.weixin.qq.com/s/5sf9rb4BPVBcLK2vg2psxg) |      |
 | 🎯[推荐一条高效的Python爬虫学习路径！](https://mp.weixin.qq.com/s/0Ud5J_o4inFg27dHRwHCDg) |      |
 | [反爬虫实战](https://mp.weixin.qq.com/s/ieR5c8G2ehqcgStrzs-Zeg) |      |
