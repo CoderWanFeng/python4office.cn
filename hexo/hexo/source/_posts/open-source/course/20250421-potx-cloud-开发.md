@@ -5,7 +5,7 @@ tags: [个人网站,开源]
 --- 
 
 
-![请在此添加图片描述](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20250421-7df0207e.png?x-cos-security-token=fao2ht5w4PPu4v3qbq4Jqa2ZyyUI9J0a240071915c803ecfcafad8c8a0ed511bjrpNyjeDiEzc9PrqfdMWlPEL2VmbkSmxCMuOXOIF36H8VTVIoXhcRGizOC4EK-4xsQ-xm81yOiezUMmg3CzPxveHflnqq8iwoW0V6wblrkU8Vi9THD9a7C83qifOtuLZHo5iEu49vyLkUfYL9EvBhMdRTR0EJmGTTbMXcg-aRGxnmBn3ifQJ-dHM0PoaP7KFM7H9f4Uy_x4pggrIHxBEQedquqO7DUK4EWapa-9bsUdyZOyMt-6EedoQXbOJ8azjxJzlpSRhAOkPxpEEJgKNlPN7XNeyC6_UIgOxEULVkmXVbqxV5VbUqtqU83M-1h9pOXrhVs_Te0QtQ7JOMAJ5ekIQrFF6pg7ghZu3nT8zvh-1YdgYDeSE4xxoO4f8DZgj23zbe7bWxFuFnlcde0cPRw&q-sign-algorithm=sha1&q-ak=AKIDdWYfRtodEOMGkkWqnK-2kYBKBNwvN7ru6uW6lqykclFor_4gsDhb2ZZbGAWwMbGJ&q-sign-time=1745241695%3B1745248890&q-key-time=1745241695%3B1745248890&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=ca98974f4cc2ebbe3634804d81c29b82b8ac8fa0)
+![](http://python4office.cn/images/open-source/course/20250421-potx-cloud-开发/pypi.png)
 
 大家好，这里是程序员晚枫，全网同名。
 
