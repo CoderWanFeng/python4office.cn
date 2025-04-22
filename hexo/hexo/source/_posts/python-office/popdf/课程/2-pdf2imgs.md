@@ -30,6 +30,12 @@ tags: [ 第三方库,自动化办公,pdf ]
 
 大家好，我是程序员晚枫。今天我要给大家带来一个超实用的功能——`popdf` 现在支持 PDF 转图片了，而且还能批量操作！是不是很激动？别急，我来手把手教你玩转这个功能。
 
+
+## 视频
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV19WRVYKEEY" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100%, height=500> </iframe>
+
+
 ## 1. 一行代码搞定单文件转换
 
 `popdf` 的核心就是简单暴力。只需要一行代码，你就能轻松把 PDF 转成图片：

@@ -28,6 +28,12 @@ tags: [ 第三方库,自动化办公,pdf ]
 
 > pip install popdf
 
+## 视频
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1pB9UYSEoG" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100%, height=500> </iframe>
+
+
+
 ## 1. 一行代码搞定单文件转换
 
 之前我就说过，`popdf` 的核心就是简单暴力。只需要一行代码，你就能轻松把 PDF 转成 Word：

@@ -28,8 +28,12 @@ tags: [ 第三方库,自动化办公,pdf ]
 
 > 源码地址：https://github.com/CoderWanFeng/popdf
 
-## 需求说明
 
+
+
+## 视频
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1n1QPYJE61" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100%, height=500> </iframe>
 
 
 ## 上代码
