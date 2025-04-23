@@ -19,9 +19,7 @@ tags: 原创课程
 
 - 视频在线看：[点我直达](https://www.bilibili.com/video/BV1pQ4y177nV/)
 
-
-我用网盘分享了「给小白的《6讲Python自动收发邮件》」，点击链接即可保存。
-- [点我直达](https://drive.uc.cn/s/16161237fedb4)
+- 课程资料：[点我下载](https://pan.quark.cn/s/c532497a62b7)
 
 
 # 答疑群

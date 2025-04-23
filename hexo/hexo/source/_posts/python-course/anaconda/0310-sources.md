@@ -14,7 +14,7 @@ Python学习网站：[www.python-office.com](www.python-office.com)
 
 - 我用网盘分享了「Anaconda&人工智能」，点击链接即可保存。
 
-- 链接：[点我直达](https://pan.quark.cn/s/f46a0a330bca)
+- 链接：[点我直达](https://pan.quark.cn/s/e14a06ebaac3)
 
 ## 软件下载
 
