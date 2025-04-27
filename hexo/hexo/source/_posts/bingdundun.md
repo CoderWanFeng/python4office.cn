@@ -7,7 +7,7 @@ tags: Turtle
 ### 你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+- 💬 我的微信，点击添加👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 - 💪 社区交流群👉[Python自动化办公社区 · 交流群](/wechat-group)
 - 看到这里的朋友，记得加我哟，免费送你1套付费课程📕
 ### 冰墩墩基础款代码
@@ -439,4 +439,4 @@ t.done()
 ```
 
 ### 答疑与交流
-![CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
+![python-office](https://cos.python-office.com/wechat/qr-code.jpg)

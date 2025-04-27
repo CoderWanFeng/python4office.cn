@@ -10,7 +10,7 @@ tags: 原创课程
 
 你好，我是程序员晚枫，小红书/B站/抖音/知乎，都叫这个名字。
 
-诚信很重要。有关课程的任何问题，我都负责解答。这是我的微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+诚信很重要。有关课程的任何问题，我都负责解答。这是我的微信：[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 
 
@@ -25,7 +25,7 @@ tags: 原创课程
 # 答疑群
 
 本群二维码长期有效，如果万一我忘记更新了，你可以+我微信，备注：邮件自动化，我来邀请你。
-我的微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+我的微信：[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 ![](https://cos.python-office.com/group%2Ffree-group.jpg)
 

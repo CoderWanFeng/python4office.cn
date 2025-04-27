@@ -44,7 +44,7 @@ tags: 社区活动
 </p>
 
 
-> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)。一定要备注：进大群。
+> 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[python-office](http://www.python4office.cn/wechat-qrcode/)。一定要备注：进大群。
 
 
 
@@ -84,7 +84,7 @@ tags: 社区活动
 你好呀，我是[程序员晚枫](https://www.bilibili.com/video/BV1aD4y1N7ai)，兼职做自媒体4年了
 - 🐧 编程知识博主：[B站：程序员晚枫](https://space.bilibili.com/1989702333) | [B站：Python自动化办公社区](https://space.bilibili.com/259649365)
 - 👨‍💻 我的``自媒体``经历，点击查看👉👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+- 💬 我的微信，点击添加👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 - ⚡ 学习资料，点击领取👉[6套自媒体课程的合集](https://mp.weixin.qq.com/s/VsH82z5sYY61f9RB3unRgQ)
 - 🎁 粉丝福利👉[我的短视频，全是被 夸 火的？？](https://www.xiaohongshu.com/discovery/item/63305311000000001701c8a9)
 

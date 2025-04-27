@@ -4,7 +4,7 @@ date: 2024-02-20 14:08:24
 tags: 原创课程
 ---
 
-> 友情提示：课程持续更新中，请一定要添加我的微信👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)，我来给你提供课程最新资料
+> 友情提示：课程持续更新中，请一定要添加我的微信👉[python-office](http://www.python4office.cn/wechat-qrcode/)，我来给你提供课程最新资料
 
 
 你好，我是程序员晚枫，小红书/B站/抖音/知乎，都叫这个名字。
@@ -51,7 +51,7 @@ tags: 原创课程
 
 > 如果需要补差价获取exe的朋友，请另外备注**exe**哟。
 
-![CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
+![python-office](https://cos.python-office.com/wechat/qr-code.jpg)
 
 # 读者福利
 

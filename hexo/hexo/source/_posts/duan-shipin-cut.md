@@ -41,7 +41,7 @@ tags:
 
 
 
-大家好，这里是在重庆的Python程序员晚枫，个人微信👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+大家好，这里是在重庆的Python程序员晚枫，个人微信👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 作为一个编程博主，这个夏天，被问到到最多的问题是：
 >如何戒掉短视频？

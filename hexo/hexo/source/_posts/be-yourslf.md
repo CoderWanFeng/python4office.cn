@@ -91,8 +91,8 @@ tags:
 
 ## 3、心理分析的交流群
 
-👉扫码下图添加我的微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)，验证消息请填写：**心理分析**，即可加入群聊~
+👉扫码下图添加我的微信：[python-office](http://www.python4office.cn/wechat-qrcode/)，验证消息请填写：**心理分析**，即可加入群聊~
 
 
-![CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
+![python-office](https://cos.python-office.com/wechat/qr-code.jpg)
 
