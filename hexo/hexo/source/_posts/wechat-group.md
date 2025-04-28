@@ -30,7 +30,7 @@ tags: 微信群
 
 
 **如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个付费群（广告勿扰），有技术问题发出来，咱们互相学习。**
-**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)。
+**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[python-office](http://www.python4office.cn/wechat-qrcode/)。
 
 > 免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
 加了对你不能说是没用，只能说是一点用都没有。你可以扫码下面2中的免费群，进去看看。
@@ -73,9 +73,9 @@ tags: 微信群
 ## 二、关于作者
 
 你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
-![CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
+![python-office](https://cos.python-office.com/wechat/qr-code.jpg)
 - 🐧 编程知识博主
-- 💬 我的微信，点击添加👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+- 💬 我的微信，点击添加👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
 ## 三、推荐课程

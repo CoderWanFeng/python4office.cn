@@ -82,7 +82,7 @@ tags: 微信机器人
 
 你可以选择自己开发，也可以选择进群后，悬赏给群友们开发。
 
-如果你想找我给你增加功能，你可以打开这个链接，添加我的微信👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+如果你想找我给你增加功能，你可以打开这个链接，添加我的微信👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 ## 使用过程中收费吗？
 

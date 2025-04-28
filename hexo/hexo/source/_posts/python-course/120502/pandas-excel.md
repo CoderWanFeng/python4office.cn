@@ -18,7 +18,7 @@ tags: pandas
 
 ## 答疑群
 
-扫码下图，直接加入，如果二维码过期了不要担心，请点击添加我的微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)，好友验证消息请填写：**30讲**，我来邀请你加群。
+扫码下图，直接加入，如果二维码过期了不要担心，请点击添加我的微信：[python-office](http://www.python4office.cn/wechat-qrcode/)，好友验证消息请填写：**30讲**，我来邀请你加群。
 
 ![](https://cos.python-office.com/group%2Ffree-group.jpg)
 

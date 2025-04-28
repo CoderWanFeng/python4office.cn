@@ -43,7 +43,7 @@ tags: 1v1
 
 下面是每套课程和对应的资料：
 
-> 请注意：以下课程中的收费内容，都不需要再次付费，直接找我要即可。我的微信：hdylw1024
+> 请注意：以下课程中的收费内容，都不需要再次付费，直接找我要即可。我的微信：python-office
 
 
 
@@ -75,5 +75,5 @@ tags: 1v1
 
 其它任何问题，都可以直接问我。我的微信，👇
 
-![CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
+![python-office](https://cos.python-office.com/wechat/qr-code.jpg)
 

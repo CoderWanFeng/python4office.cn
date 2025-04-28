@@ -66,7 +66,7 @@ tags: 1v1
 
 > +微信之前先说明：非常欢迎您找我1对1语音咨询，但我是个普通打工仔，按次数收费：269元/次。
 
-如果你需要，可以添加我的微信👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+如果你需要，可以添加我的微信👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 
 如果您觉得我值得，就加我，觉得不值。建议您加我的粉丝群就行了~👇

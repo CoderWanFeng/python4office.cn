@@ -37,7 +37,7 @@ tags: [办公黑科技,高效办公]
   </a>
 </p>
 
-你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)， 💬 我的微信，点击添加👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)， 💬 我的微信，点击添加👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 > 点击以下蓝色字体，可以直达资源
 >高效办公软件 · 分享交流群：[点我加入](http://www.python4office.cn/wechat-group/)
@@ -122,7 +122,7 @@ tags: [办公黑科技,高效办公]
 - 🌱 干货：[公众号『 Python自动化办公社区 』](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2Nzg5MjgyNg==&action=getalbum&album_id=1471181205869035521&scene=173&from_msgid=2247496010&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 
 - 😺 视频：[B站 『 Python自动化办公社区 』](https://space.bilibili.com/259649365)
-- 💬 微信：[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+- 💬 微信：[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 ![CoderWanFeng](https://cos.python-office.com/group%2Ffree-group.jpg)
 

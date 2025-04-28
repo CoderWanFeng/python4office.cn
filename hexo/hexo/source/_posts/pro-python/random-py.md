@@ -37,7 +37,7 @@ phone_num(10000 * 10000)
 
 **我把它们全部整理出来了，今天我们就来一起学习一下~**
 
-如有遗漏或者错误，欢迎大家多多指点，我的个人微信👉[CoderWanFeng](http://www.python4office.cn/wechat-qrcode/)
+如有遗漏或者错误，欢迎大家多多指点，我的个人微信👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 ## 随机数是哪个文件生成的？
 
