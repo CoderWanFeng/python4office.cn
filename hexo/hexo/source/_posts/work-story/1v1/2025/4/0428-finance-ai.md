@@ -32,7 +32,10 @@ tags: 1v1
 
 先学一下编程入门，直接用我的课程就行了：[点我直达](http://www.python4office.cn/course/%E7%A8%8B%E5%BA%8F%E5%91%98%E6%99%9A%E6%9E%AB/20250211-course-001/)
 
-然后看这套培训机构的专业课程：[点我直达](http://www.python4office.cn/course/%E4%B8%9A%E5%8A%A1%E5%88%86%E6%9E%90/20250211-course-002/)
+然后看这套培训机构的专业课程：
+
+通过网盘分享的文件：人工智能AI深度学习就业班【百Z】等2个文件
+链接: https://pan.baidu.com/s/1937zpJmeeCX-Flau7XHvog?pwd=8sz9 提取码: 8sz9 
 
 
 - 人工智能
@@ -41,7 +44,11 @@ tags: 1v1
 
 先听一个入门的Python + 人工智能：[点我直达](http://www.python4office.cn/python-course/anaconda/0310-sources/)
 
-这个直接上培训班的课程就行了：[点我直达](http://www.python4office.cn/course/%E4%BA%BA%E5%B7%A5%E6%88%B7%E5%88%86%E6%9E%90/20250211-course-003/)
+这个直接上培训班的课程就行了：
+
+
+通过网盘分享的文件：人工智能AI深度学习就业班【百Z】等2个文件
+链接: https://pan.baidu.com/s/1937zpJmeeCX-Flau7XHvog?pwd=8sz9 提取码: 8sz9 
 
 
 - 带做项目
