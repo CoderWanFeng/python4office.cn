@@ -92,7 +92,7 @@ tags: 1v1
 
 ## 联系我
 
-入门以后，如果确定了方向，想继续制订学习计划，欢迎联系我：[CoderWanFeng](http://python4office.cn/wechat-qrcode/)
+入门以后，如果确定了方向，想继续制订学习计划，欢迎联系我：[python-office](http://python4office.cn/wechat-qrcode/)
 
 
 

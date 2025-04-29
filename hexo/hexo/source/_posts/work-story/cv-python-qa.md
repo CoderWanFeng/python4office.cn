@@ -7,7 +7,7 @@ tags: 副业
 
 你好，这里是程序员晚枫，以下是沟通中需要的资料。
 
-> 如有问题，需要再次1对1咨询，请+我的微信：[CoderWanFeng](http://python4office.cn/wechat-qrcode/)
+> 如有问题，需要再次1对1咨询，请+我的微信：[python-office](http://python4office.cn/wechat-qrcode/)
 
 
 ##　1.我的账号

@@ -48,7 +48,7 @@ tags: python-office
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/10 22:35 
 @本段代码的视频说明     ：https://www.python-office.com/course/docs/50-15-VatInvoiceOCR2Excel.html
@@ -84,7 +84,7 @@ ressult = poocr.ocr.IDCardOCR()
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/8/22 23:28 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1em4y1H7ir/
@@ -116,7 +116,7 @@ office.pdf.pdf2docx(file_path=r'./test_files/50-04-pdf2docx',
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/8/22 23:28 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1em4y1H7ir/
@@ -148,7 +148,7 @@ office.pdf.pdf2docx(file_path=r'./test_files/50-04-pdf2docx',
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/8/25 22:27 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV18m4y1u7Kq
@@ -205,7 +205,7 @@ poimage.add_watermark(file=r'D:\download\金融最新资讯新闻解读宣传实
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/4 1:24 
 @本段代码的视频说明     ： https://www.bilibili.com/video/BV1Lm4y1M7Pz/
@@ -227,7 +227,7 @@ office.file.search_by_content(
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/8 22:29 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1ph4y1v7MN/
@@ -247,7 +247,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/10 11:43 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1Fw411S7kV/
@@ -264,7 +264,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/9/13 20:09 
 @本段代码的视频说明     ： https://www.bilibili.com/video/BV14p4y1j7jg/
@@ -285,7 +285,7 @@ office.image.down4img(url='https://cos.python-office.com/logo/icon2.jpg',
 # -*- coding: UTF-8 -*-
 '''
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@微信     ：CoderWanFeng : http://www.python4office.cn/wechat-qrcode/
+@微信     ：python-office : http://www.python4office.cn/wechat-qrcode/
 @个人网站      ：www.python-office.com
 @代码日期    ：2023/8/28 21:05 
 @本段代码的视频说明     ：https://www.bilibili.com/video/BV1Fu4y1v7xH

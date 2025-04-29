@@ -6,7 +6,7 @@ tags: python-office
 
 
 
-![CoderWanFeng](https://www.python-office.com/api/img-cdn/python-office/user-demo/excel-wechat/cover.jpg)
+![python-office](https://cos.python-office.com/wechat%2Fqr-code.jpg)
 作者：culljores
 
 原文链接：https://blog.csdn.net/culljores/article/details/127080680

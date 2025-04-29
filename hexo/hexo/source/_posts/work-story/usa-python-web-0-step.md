@@ -71,4 +71,4 @@ Django学习，直接看官网就行：https://docs.djangoproject.com/zh-hans/4.
 
 以上是完整的学习计划，
 
-学习过程中有解决不了的问题，可以联系我：CoderWanFeng
+学习过程中有解决不了的问题，可以联系我：python-office
