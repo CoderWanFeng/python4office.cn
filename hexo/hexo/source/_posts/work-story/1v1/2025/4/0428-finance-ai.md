@@ -32,10 +32,8 @@ tags: 1v1
 
 先学一下编程入门，直接用我的课程就行了：[点我直达](http://www.python4office.cn/course/%E7%A8%8B%E5%BA%8F%E5%91%98%E6%99%9A%E6%9E%AB/20250211-course-001/)
 
-然后看这套培训机构的专业课程：
+然后看这套培训机构的专业课程：https://pan.quark.cn/s/6549fb241d1e
 
-通过网盘分享的文件：人工智能AI深度学习就业班【百Z】等2个文件
-链接: https://pan.baidu.com/s/1937zpJmeeCX-Flau7XHvog?pwd=8sz9 提取码: 8sz9 
 
 
 - 人工智能
@@ -44,16 +42,16 @@ tags: 1v1
 
 先听一个入门的Python + 人工智能：[点我直达](http://www.python4office.cn/python-course/anaconda/0310-sources/)
 
-这个直接上培训班的课程就行了：
+这个直接上培训班的课程就行了：https://pan.quark.cn/s/b12ede9d6c1b
 
 
-通过网盘分享的文件：人工智能AI深度学习就业班【百Z】等2个文件
-链接: https://pan.baidu.com/s/1937zpJmeeCX-Flau7XHvog?pwd=8sz9 提取码: 8sz9 
 
 
 - 带做项目
 
 这部分学完了我带你做，届时详聊。
+
+- 项目预备 - 发票识别：https://www.bilibili.com/video/BV13J4m1s7L7/
 
 
 ![](http://python4office.cn/images/work-story/1v1/2025/4/0428-finance-ai/zhihu.jpg)
