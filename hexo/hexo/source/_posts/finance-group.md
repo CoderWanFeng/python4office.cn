@@ -49,7 +49,7 @@ tags: 金融
 <!-- more -->
 
 欢迎加入 Python&金融数据分析 交流群
-![CoderWanFeng](https://cos.python-office.com/group%2Ffree-group.jpg)
+![python-office](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 
 

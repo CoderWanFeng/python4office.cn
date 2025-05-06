@@ -10,7 +10,7 @@ tags: 微信群
 
 你好，我是程序员晚枫。我提供的交流群有3个，有付费的、有免费的，您自己选，不搞割韭菜那一套。
 
-如需1对1咨询，你也可以 + 我的微信，点击直达👉[CoderWanFeng](http://python4office.cn/wechat-qrcode/)
+如需1对1咨询，你也可以 + 我的微信，点击直达👉[python-office](http://python4office.cn/wechat-qrcode/)
 
 如需学习资料：[零基础Python自动化办公，4套原创课程，一站式搞定！](https://www.python-office.com/guide/allFunc.html)
 

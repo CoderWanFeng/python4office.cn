@@ -50,7 +50,7 @@ tags: [副业,副业信息差]
 ### 你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
 - 🐧 程序员/互联网劝退师
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
-- 💬 我的微信，点击添加👉[CoderWanFeng](https://cos.python-office.com/wechat/qr-code.jpg)
+- 💬 我的微信，点击添加👉[python-office](https://cos.python-office.com/wechat/qr-code.jpg)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](http://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
 
