@@ -21,6 +21,8 @@ tags: [pobd]
 ## 📍 一行代码实现功能
 为了让不懂代码的朋友也能轻松使用，我将功能都封装到了一行代码里。你把源代码下载下来后，只需要调用下面这行代码，就可以实现识别发票，并保存为excel表格。
 
+这行代码在文件  pobd\exmaples\course\code\11_vat_invoice.py  里。
+
 ```        
        pobd.ocr2excel.vat_invoice(img_path=input_file, output_excel_path=output_file,  app_id=app_id, api_key=api_key,  secret_key=secret_key)
 
