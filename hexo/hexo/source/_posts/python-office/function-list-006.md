@@ -324,3 +324,5 @@ office.wechat.chat_robot(who='每天进步一点点')  # 智能聊天
 - [给小白的《5讲 · Python发票批量识别保存为Excel》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [给小白的《10讲Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
 
+
+![](https://cos.python-office.com/course/50%E8%AE%B2%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/free-link.jpg)
