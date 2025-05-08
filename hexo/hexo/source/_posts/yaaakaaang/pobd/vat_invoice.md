@@ -27,6 +27,9 @@ tags: [pobd]
        pobd.ocr2excel.vat_invoice(img_path=input_file, output_excel_path=output_file,  app_id=app_id, api_key=api_key,  secret_key=secret_key)
 
 ```
+input_file 就是你存放增值税发票的目录， output_file 是生成excel表格的目录。 
+
+而 <span style="color:#e60000;">app_id、api_key、secret_key </span>的获取方法，可以留言区联系我，也可以访问参考文档 [https://blog.csdn.net/2301_81016982/article/details/147276083?spm=1001.2014.3001.5502](url)
 
 ## 📍 效果展示
 发票上的信息几乎都能识别，这里只截图了一部分。
@@ -34,6 +37,8 @@ tags: [pobd]
 
 #  三、零代码方案（exe小程序）
 如果你觉得这样还是不得劲，我还开发了一个exe版的小程序。你可以直接下载并运行这个程序，无需安装任何额外的软件。
+
+如果你也受困于发票录入工作，不妨试试这个方案。技术本应服务于人，让AI帮我们完成这些机械劳动，把时间留给更有价值的工作吧！
 
 感兴趣的话，请在评论区留言，我会尽快将发送给你。
 
