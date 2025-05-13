@@ -10,12 +10,15 @@ tags: 第三方库
 
 - [pobd](https://gitcode.com/python4office/pobd)
 - [poocr](https://gitcode.com/python4office/poocr)
+- [26.7万下载！Python自动化办公专用库：python-office，发布1.0.0版本](https://github.com/CoderWanFeng/python-office)
 
 ## 一、开源协议大不同
 
 PySide 走的是 Lesser General Public License（LGPL）路线，这协议相对宽松，你要是用它来搞开发，那可就方便啦。能自由地用、改代码，分发的时候也不受太多限制。自己开发出来的应用想用啥协议都行，只要把库本身修改的部分按照 LGPL 协议处理好就行。
 
 可 PyQt 呢，人家默认走的是 GNU General Public License（GPL）协议。这协议就有点 “严格” 啦，要是你用了 PyQt 开发应用，然后想把这个应用分发给第三方，那对不起哦，你整个应用的源代码也得跟着 GPL 协议开源。不过别慌，PyQt 也考虑到了商业需求，给咱们提供了商业授权选项，花点钱就能用它来开发闭源的商业软件，是不是超贴心。
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/70a60ed3-32fa-46c2-876f-1b3c759519e8/image.png 'image.png')
 
 ## 二、开发和维护团队 “出身” 不凡
 
