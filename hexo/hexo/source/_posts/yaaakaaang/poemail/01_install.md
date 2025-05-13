@@ -81,7 +81,7 @@ tags: [poemail]
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747129811000.jpg)
 
 在弹出的这个框，点击中间这个
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/8a02a948-b084-4016-ae19-7b98148e1c75/image.png 'image.png')
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747136220130.jpg)
 
 点击右边的三个点
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747130046718.jpg)
