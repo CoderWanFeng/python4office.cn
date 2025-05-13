@@ -20,11 +20,11 @@
 2. 克隆项目：`git clone https://gitcode.com/python4office/python4office.cn.git`
 3. 本地运行
 
-> cd hexo/hexo
-> yarn install
-> yarn run clean
-> yarn run build
-> yarn run server
+> cd hexo/hexo &
+> yarn install &
+> yarn run clean &
+> yarn run build &
+> yarn run server &
 
 
 ## 作者
