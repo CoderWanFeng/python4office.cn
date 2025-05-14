@@ -47,3 +47,16 @@ tags: [poemail]
 找到有三角形这行，鼠标左键单击它就可以了。
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747140201231.jpg)
+
+#  五、运行效果
+运行日志显示成功
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747204448394.jpg)
+
+然后我们再看网页邮箱有一封带附件的未读邮件
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747204569143(1).jpg)
+
+点开查看详细信息
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747204667553.jpg)
