@@ -9,12 +9,13 @@ tags: [poemail]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747191490267.jpg)
 
-#  二、修改代码
+#  二、修改授权码和qq邮箱
 
 前面这两行改成你的授权码和qq邮箱
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747191574272.jpg)
 
+#  三、批量发送给多个收件人
 
 下面就是实现批量发送的关键步骤了
 
@@ -26,13 +27,15 @@ tags: [poemail]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747192704157.jpg)
 
+#  四、发送时指定多个抄送人
+
 如果有多个抄送人，比如 `456...456@qq.com` 和 `456...789@qq.com`
 
 也是一样的操作修改第四行
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747192940607.png)
 
-#  三、运行代码
+#  五、运行代码
 
 鼠标移到第五个文件，然后鼠标右键单击
 
