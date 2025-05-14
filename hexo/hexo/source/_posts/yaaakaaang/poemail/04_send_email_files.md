@@ -10,11 +10,13 @@ tags: [poemail]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747139002082.jpg)
 
-#  二、修改代码
+#  二、修改授权码和qq邮箱
 
 打开文件后，前面这4行还是按照上一章的方法修改
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747139243114.jpg)
+
+#  三、指定要发送的附件
 
 重点是这里，把这里改为你要发送的附件
 
@@ -36,7 +38,7 @@ tags: [poemail]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747140018401.jpg)
 
-#  三、运行代码
+#  四、运行代码
 
 鼠标移到第四个文件，然后鼠标右键单击
 
