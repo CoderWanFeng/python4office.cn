@@ -4,6 +4,14 @@ date: 2025-05-14 12:50:32
 tags: [poemail]
 ---
 
+<span style="font-size:20px;"><span style="color:#66a3e0;">如果你是教师或培训师，会收到大量学生提交的作业或项目文件； </span></span>
+
+<span style="font-size:20px;"><span style="color:#66a3e0;">如果你参与了一个项目，团队成员会给你发送大量设计稿、文档等； </span></span>
+
+<span style="font-size:20px;"><span style="color:#66a3e0;">如果你是一家公司的财务，会收到大量包含发票、财务报表的邮件； </span></span>
+
+<span style="font-size:20px;"><span style="color:#66a3e0;">无论是什么职业，如果你有大量的邮件附件需要下载，那么这篇文章会为你节省大把的时间去做你想做的事！ </span></span>
+
 #  一、打开文件
 
 双击鼠标左键第六个文件
