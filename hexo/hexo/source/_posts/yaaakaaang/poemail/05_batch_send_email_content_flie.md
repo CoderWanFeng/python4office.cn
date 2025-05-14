@@ -49,3 +49,33 @@ tags: [poemail]
 找到有三角形这行，鼠标左键单击它就可以了。
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747193113909.jpg)
+
+#  六、运行效果
+
+可以同时设置多个收件人与抄送人，不过我们这里分开测试
+
+## 📍 1. 多个收件人，一个抄送人
+运行日志显示成功
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205335675.jpg)
+
+网页邮箱成功收到邮件
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205470924.jpg)
+
+qq邮箱也成功收到邮件，而且可以看到几乎是同时收到的
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205561722.jpg)
+
+## 📍 2. 多个抄送人，一个收件人
+运行日志显示成功
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205800523.jpg)
+
+网页邮箱成功收到抄送邮件
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205875525.jpg)
+
+qq邮箱也成功收到抄送邮件，同样几乎是同时收到的
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205976777.jpg)
