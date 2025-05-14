@@ -58,3 +58,21 @@ tags: [poemail]
 找到有三角形这行，鼠标左键单击它就可以了。
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747198578410.jpg)
+
+#  六、运行效果
+
+首先可以看到我这里有两封未读邮件
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747206494057.jpg)
+
+我们在这里设置为  UNSEEN，然后日志显示成功
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747206720575.jpg)
+
+接下来打开 E:\poemail\tests 这个文件夹，会看见有以  序号 + 发送人的邮箱地址命名的文件夹
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747206818413.jpg)
+
+打开文件夹能看见附件被正确的下载下来了
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747206935914.jpg)
