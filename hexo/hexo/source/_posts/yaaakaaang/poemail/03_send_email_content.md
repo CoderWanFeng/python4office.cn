@@ -67,3 +67,13 @@ tags: [poemail]
 找到有三角形这行，鼠标左键单击它就可以了。
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747138812298.jpg)
+
+#  六、运行效果
+运行日志显示发送成功
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747203918847.png)
+
+在网易邮箱也收到了邮件
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747204141595.jpg)
+
