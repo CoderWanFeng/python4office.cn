@@ -18,7 +18,7 @@ tags: [poemail]
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747137790647.jpg)
 
 
-#  二、填写你的qq邮箱授
+#  二、填写你的qq邮箱
 
 用刚才的方法，把这里改成你的 qq邮箱
 
@@ -28,7 +28,7 @@ tags: [poemail]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747138008245.jpg)
 
-#  三、填写收件人qq邮箱授
+#  三、填写收件人qq邮箱
 
 还是老方法修改第三行
 
@@ -38,7 +38,7 @@ tags: [poemail]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747138211124(1).jpg)
 
-#  四、填写抄送人qq邮箱授
+#  四、填写抄送人qq邮箱
 
 正文和主题不用多说了，不过这里的抄送人还是要多提一嘴
 
