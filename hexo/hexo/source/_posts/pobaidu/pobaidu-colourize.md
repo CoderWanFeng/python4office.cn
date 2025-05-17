@@ -58,7 +58,7 @@ client_secret = '百度AI平台的应用key'
 - 连Python都不会用，但是想实现本文功能；
 - 想在本文基础上进行2次开发；
 - 其它的定制化需求。
-我的微信：[CoderWanFeng]()，扫码下图直接添加。👇
+我的微信：[python-office](http://www.python4office.cn/wechat-qrcode/)，扫码下图直接添加。👇
 
 ![](https://cos.python-office.com/wechat/qr-code.jpg)
 
