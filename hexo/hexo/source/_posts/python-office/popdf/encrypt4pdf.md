@@ -65,7 +65,7 @@ office.pdf.encrypt4pdf(path=r'D:\程序员晚枫的文件夹\input_pdf',
 
 如果你喜欢以上这些开源项目，欢迎加入我们的开源小组，一起交流学习，一起进步。
 
-> 加我的微信：hdylw1024，备注：开源
+> 加我的微信：python-office，备注：开源
 
 关于项目的介绍：
 
