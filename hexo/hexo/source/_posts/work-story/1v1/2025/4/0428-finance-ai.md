@@ -51,7 +51,7 @@ tags: 1v1
 
 这部分学完了我带你做，届时详聊。
 
-- 项目预备 - 发票识别：https://www.bilibili.com/video/BV13J4m1s7L7/
+- 项目预备 - 发票识别：https://www.python-office.com/course-002/5-poocr/5-poocr.html
 
 
 ![](http://python4office.cn/images/work-story/1v1/2025/4/0428-finance-ai/zhihu.jpg)

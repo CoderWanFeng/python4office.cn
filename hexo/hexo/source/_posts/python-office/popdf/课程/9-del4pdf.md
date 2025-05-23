@@ -89,10 +89,14 @@ popdf.del4pdf(
 
 ## 相关课程
 
-- [给小白的《50讲 · Python自动化办公》](https://www.bilibili.com/opus/857901377884520482?spm_id_from=333.999.0.0)
-- [给小白的《10讲 · Python微信机器人》](https://www.bilibili.com/video/BV1S84y1m7xd/?spm_id_from=333.999.0.0)
-- [给小白的《5讲 · Python实现OCR自动批量识别》](https://www.bilibili.com/video/BV13J4m1s7L7/?spm_id_from=333.999.0.0)
-- [给小白的《6讲 · Python自动收发邮件》](https://www.bilibili.com/video/BV1pQ4y177nV/)
+- [给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
+- [给小白的《5讲 · Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
+- [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
+- [给小白的《30讲 · Python数据分析》](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
+- [给小白的《15讲 · Python入门基础》](http://www.python-office.com/course-002/15-Python/15-Python.html)
+
+
 
 ---
 

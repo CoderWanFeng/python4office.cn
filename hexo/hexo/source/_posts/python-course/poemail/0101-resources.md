@@ -17,7 +17,7 @@ tags: 原创课程
 # 视频、文档、软件、代码
 
 
-- 视频在线看：[点我直达](https://www.bilibili.com/video/BV1pQ4y177nV/)
+- 视频在线看：[点我直达](https://www.python-office.com/course-002/poemail/poemail.html)
 
 - 课程资料：[点我下载](https://pan.quark.cn/s/c532497a62b7)
 

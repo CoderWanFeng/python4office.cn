@@ -22,7 +22,7 @@ tags: 原创课程
 
 # 视频
 
-- 视频在线看：[点我直达](https://www.bilibili.com/video/BV13J4m1s7L7/)
+- 视频在线看：[点我直达](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 
 # 文档
 
