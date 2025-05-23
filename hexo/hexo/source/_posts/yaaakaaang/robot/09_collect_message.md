@@ -36,3 +36,16 @@ tags: [PyOfficeRobot]
 滚动的越多，收集的聊天记录越多
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747991485141.jpg)
+
+#  四、运行代码
+
+单击鼠标右键左边第九个文件
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747995153625.png)
+
+然后找到有三角形这行，鼠标左键单击它
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747995241986.jpg)
+
+#  五、运行效果
+
