@@ -25,3 +25,22 @@ tags: [poocr]
 
 ## 📍 一行代码实现功能
 
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748057675792.jpg)
+
+其中 `input_path` 就是你存放报关单的路径
+
+`output_excel` 是你识别结果的存储路径
+
+而`id` 和 `key` 则是腾讯云ocr的账号和密码，可以看这个链接查看怎么获取
+
+[https://gitcode.com/python4office/python4office.cn/blob/main/hexo/hexo/source/_posts/yaaakaaang/poocr/00_get_key.md?init=initTree](url)
+
+# 四、识别效果
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748058313978.jpg)
+
+后面还有很多信息，我这里没有截全。
+
+# 五、更多可能性
+
+如果你还有更多的需求需要实现，可以在评论区留言，我看见了会尽快回复您。
