@@ -33,18 +33,6 @@ tags: [PyOfficeRobot]
 
 这里我们可以看见这是用的思知研发的大模型来智能聊天的
 
-那可不可以用 chat  gpt 或者其他模型呢？ 当然可以！
 
-# 四、chat  gpt
-
-先在上面个箭头处加上一个井号 `#`
-
-再把下面个箭头处的井号删除
-
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747974906206.jpg)
-
-最后在这里填上你的 chat  gpt 的 api_key 就可以运行了。
-
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747975053763.jpg)
 
 
