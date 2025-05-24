@@ -6,7 +6,7 @@ tags: [poocr]
 
 
 
-登录腾讯ocr官网 [https://cloud.tencent.com/document/product/598/37140](https://cloud.tencent.com/document/product/598/37140)
+登录 [腾讯ocr官网](https://cloud.tencent.com/document/product/598/37140)
 
 ![](https://i-blog.csdnimg.cn/img_convert/bc8b2eb47399bc185b9eb6e94aa10232.png)
 
@@ -58,7 +58,7 @@ tags: [poocr]
 
 ![](https://i-blog.csdnimg.cn/img_convert/1ddd77523280b1f670052f658d67811a.png)
 
-2.进入 用户列表 [https://console.cloud.tencent.com/cam](https://console.cloud.tencent.com/cam)
+2.进入 [ 用户列表](https://console.cloud.tencent.com/cam)
 
 然后点击授权按钮
 ![](https://i-blog.csdnimg.cn/img_convert/a4ea0ffde405fdea3cdb69be0d324c2a.png)
