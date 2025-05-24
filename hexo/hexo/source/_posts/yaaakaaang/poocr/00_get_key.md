@@ -47,9 +47,11 @@ tags: [poocr]
 ![](https://i-blog.csdnimg.cn/img_convert/cf65854fd54c9ce4fe17ab691e824c97.png)
 
 点击 [新建密钥] 就拿到 账号(id) 和 密钥(key) 了。
+
 记得点击下载CSV文件，保存到本地，以免后面忘了。
 
 ![](https://i-blog.csdnimg.cn/img_convert/fd14416c6f3a732b8025d3d126ce0641.png)
+
 最后就是开通权限，有两种方法可以开通权限
 
 1.进入 文字识别 页面 ，点击 [立即开通] 按钮开通权限
