@@ -33,7 +33,7 @@ tags: [poocr]
 
 而`id` 和 `key` 则是腾讯云ocr的账号和密码，可以看这个链接查看怎么获取
 
-[https://gitcode.com/python4office/python4office.cn/blob/main/hexo/hexo/source/_posts/yaaakaaang/poocr/00_get_key.md?init=initTree](url)
+[获取腾讯云账号和密码](https://gitcode.com/python4office/python4office.cn/blob/main/hexo/hexo/source/_posts/yaaakaaang/poocr/00_get_key.md?init=initTree)
 
 # 四、识别效果
 
