@@ -37,10 +37,26 @@ tags: [poocr]
 
 # 四、识别效果
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748058313978.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/060da862587655850fd6d80b587797e.png)
+
+这上面的所有消息都能够识别出来
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748059829342.jpg)
 
 后面还有很多信息，我这里没有截全。
 
 # 五、更多可能性
+
+我们还做了更多的功能，比如 增值税发票识别、驾\行驶证识别
+
+[https://gitcode.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/pobd](url)
+
+邮件自动化
+
+[https://gitcode.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/poemail](url)
+
+微信自动化
+
+https://gitcode.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/robot
 
 如果你还有更多的需求需要实现，可以在评论区留言，我看见了会尽快回复您。
