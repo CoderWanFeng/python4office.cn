@@ -9,7 +9,7 @@ tags: [PyOfficeRobot]
 
 找到左边第一个文件，鼠标左键双击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747893953918.png)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748240687016.jpg)
 
 你要发送给谁，就把谁的昵称填写在这
 
@@ -31,11 +31,11 @@ tags: [PyOfficeRobot]
 
 找到左边第一个文件，鼠标右键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748062678117.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748240772955.jpg)
 
 然后找到有三角形这行，鼠标左键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748062731384.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748240819183.jpg)
 
 # 四、运行效果
 
