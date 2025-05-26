@@ -6,9 +6,9 @@ tags: [PyOfficeRobot]
 
 #  一、填写收信人、发送的文件名
 
-找到左边第二个文件，鼠标左键双击它
+找到左边【发文件】这个文件，鼠标左键双击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747896229987.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241327445.jpg)
 
 然后在这里填收信人的昵称
 
@@ -28,13 +28,13 @@ file=r'E:\poemail\tests\test_files\要发送的文件.docx'
 
 #  二、运行代码
 
-找到左边第二个文件，鼠标右键单击它
+找到左边【发文件】这个文件，鼠标右键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747896802165.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241405562.jpg)
 
 然后找到有三角形这行，鼠标左键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747896859804.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241456649.jpg)
 
 # 三、运行效果
 
