@@ -7,9 +7,9 @@ tags: [PyOfficeRobot]
 
 #  一、填写聊天对象微信昵称
 
-找到左边第四个文件，鼠标左键双击它
+找到左边 【定时发送】  这个文件，鼠标左键双击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747901898110.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748240884967.jpg)
 
 你要发送给谁，就把谁的昵称填写在这
 
@@ -25,13 +25,13 @@ tags: [PyOfficeRobot]
 
 #  二、运行代码
 
-找到左边第四个文件，鼠标右键单击它
+找到左边 【定时发送】  这个文件，鼠标右键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747902129164.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241013787.jpg)
 
 然后找到有三角形这行，鼠标左键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747902179235.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241083950.jpg)
 
 # 三、运行效果
 
