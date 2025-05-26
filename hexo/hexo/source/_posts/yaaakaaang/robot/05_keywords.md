@@ -7,9 +7,9 @@ tags: [PyOfficeRobot]
 
 #  一、填写收信人
 
-找到左边第三个文件，鼠标左键双击它
+找到左边【根据关键词回复】文件，鼠标左键双击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747897644832.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241501662.jpg)
 
 你想自动回复谁的消息，就把这里改成谁的昵称
 
@@ -34,13 +34,13 @@ tags: [PyOfficeRobot]
 
 # 三、运行代码
 
-找到左边第三个文件，鼠标右键单击它
+找到左边【根据关键词回复】文件，鼠标右键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747898315438.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241567968.jpg)
 
 然后找到有三角形这行，鼠标左键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747898375913.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241600353.jpg)
 
 # 四、运行效果
 
