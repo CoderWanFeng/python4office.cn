@@ -7,9 +7,9 @@ tags: [PyOfficeRobot]
 
 #  一、填写聊天对象的微信昵称
 
-找到左边第八个文件，鼠标左键双击它
+找到左边【智能聊天】，鼠标左键双击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747972846088.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748242273401.jpg)
 
 然后在这里填写你要和谁聊天
 
@@ -17,13 +17,13 @@ tags: [PyOfficeRobot]
 
 # 二、运行代码
 
-找到左边第八个文件，鼠标右键单击它
+找到左边【智能聊天】这个文件，鼠标右键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747974454261.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748242364754.jpg)
 
 然后找到有三角形这行，鼠标左键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747974394965.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748242393809.jpg)
 
 # 三、运行效果
 
