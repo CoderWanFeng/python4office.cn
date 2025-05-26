@@ -22,13 +22,13 @@ tags: [PyOfficeRobot]
 
 #  三、运行代码
 
-  找到左边第五个文件，鼠标右键单击它
+  找到左边  【群发消息】文件，鼠标右键单击它
   
-  ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747904013660.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241172552.jpg)
   
   然后找到有三角形这行，鼠标左键单击它
   
-  ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747904083691.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241290098.jpg)
   
   会跳出这么一个框来，接着点击加载
   
