@@ -7,9 +7,9 @@ tags: [PyOfficeRobot]
 
 #  一、填写微信群名称
 
-找到左边第九个文件，鼠标左键双击它
+找到左边【收集群指定人发的消息】，鼠标左键双击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747990773086.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748242121861.jpg)
 
 然后在这里填写微信群的名字
 
@@ -33,7 +33,7 @@ tags: [PyOfficeRobot]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747991485141.jpg)
 
-然后在运行代码前最好在要收集的群里发一条消息，让这个群位于消息列表前面
+注意：在运行代码前最好在要收集的群里发一条消息，让这个群位于消息列表前面
 
 因为如果这个群聊在消息列表的靠后处，鼠标有可能移不到有效地点
 
