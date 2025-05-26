@@ -11,13 +11,13 @@ tags: [PyOfficeRobot]
 
 #  二、直接运行代码
 
-找到左边第七个文件，鼠标右键单击它
+找到左边【收集群成员信息】 这个文件，鼠标右键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747971178195.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241956196.jpg)
 
 然后找到有三角形这行，鼠标左键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747971228505.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748242035924.jpg)
 
 # 三、运行效果
 
