@@ -6,9 +6,9 @@ tags: [PyOfficeRobot]
 
 #  一、填写验证信息
 
-找到左边第六件，鼠标左键双击它
+找到左边 【批量加好友】这个文件，鼠标左键双击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747967956191.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241777981.jpg)
 
 然后在这里填写申请语
 
@@ -22,13 +22,13 @@ tags: [PyOfficeRobot]
 
 # 二、运行代码
 
-找到左边第六个文件，鼠标右键单击它
+找到左边 【批量加好友】这个文件，鼠标右键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747968412787.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241833103.jpg)
 
 然后找到有三角形这行，鼠标左键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747968451627.jpg)
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748241875914.jpg)
 
 # 三、运行效果
 
