@@ -41,3 +41,7 @@ tags: [pobd]
 识别完成后，点击5 [打开结果目录]按钮 就能直接打开 存放生成的表的目录
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/img17.png)
+
+#  四、使用代码
+
+当然不止有exe版本的，还有代码版本的，下一章我们就来讲讲代码是怎么实现的。
