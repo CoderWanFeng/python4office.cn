@@ -80,4 +80,8 @@ tags: [pobd]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107266685.jpg)
 
+#  六、原始数据
 
+如果你需要原始数据，运行这段代码就可以了
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107413197.jpg)
