@@ -54,4 +54,30 @@ tags: [pobd]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106715016.jpg)
 
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749103853675.jpg)
+
+#  五、批量识别
+
+鼠标移到这后面，然后按下 ctrl  加  / ，注释掉这行代码
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106816845.jpg)
+
+鼠标移到这两行后面，然后按下 ctrl  加  / ，取消注释掉
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106949460.jpg)
+
+最终是这个效果
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107114514.jpg)
+
+再将发票都放入这个文件夹下
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107043247.jpg)
+
+运行代码后
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107205554.jpg)
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107266685.jpg)
+
 
