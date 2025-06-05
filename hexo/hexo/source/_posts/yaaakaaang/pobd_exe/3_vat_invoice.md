@@ -10,7 +10,7 @@ tags: [pobd]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749105627298.jpg)
 
-在这里填入你的账号密码
+在这里填入你的账号密码，我这里的是加密了的写法
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749105916162.jpg)
 
@@ -27,4 +27,31 @@ tags: [pobd]
 `secret_key = 'asdfg'`
 
 #  二、填写发票名称
+
+将发票放在这里
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106356217.jpg)
+
+然后把发票的文件名写在这里
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106475137.jpg)
+
+这行代码表示生成的识别结果
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106534715.jpg)
+
+#  三、运行代码
+
+鼠标右键这个文件
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106604775.jpg)
+
+然后鼠标左键点击这个三角形
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106644161.jpg).
+
+#  四、运行效果
+
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106715016.jpg)
+
 
