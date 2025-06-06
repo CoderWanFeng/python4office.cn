@@ -44,12 +44,12 @@ tags: [pobd]
 
 ![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749195406052.jpg)
 
-#  五、银行卡识别
+#  五、社保卡识别
 
 打开这个文件
 
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749195498549.jpg)
 
+然后将社保卡图片放入这个文件夹下，就可以运行代码批量识别了
 
-然后将银行卡图片放入这个文件夹下，就可以运行代码批量识别了
-
-
+![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749196383344.jpg)
