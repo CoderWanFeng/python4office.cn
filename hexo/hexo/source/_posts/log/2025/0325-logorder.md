@@ -50,5 +50,5 @@ tags: 自媒体
   - [51CTO](https://blog.51cto.com/u_15493782)
   - [百度](https://author.baidu.com/home/1655119794937691)
   - [掘金](https://juejin.im/user/5e0f0e0f5188257e8c1e0c08)
-  - [搜狐](https://mp.sohu.com/profile?xpt=NmYxYmY0ZWYtNzRiNC00NjRiLTg1YTktNGQ1MTg1MDYzZTA3)
+  - [搜狐](https://m.sohu.com/@CoderWanFeng)
 
