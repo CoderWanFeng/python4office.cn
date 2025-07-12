@@ -16,7 +16,7 @@ tags: 副业
 | 必中福利    | 优惠| 无套路领取                                                                                                 |
 | ----------- | ---| ---------------------------------------------------------------------------------------------------------- |
 | 🎁支付宝红包 | 无门槛红包| [点我领取](http://www.python4office.cn/fuli/zhifubao-0923/)                                                |
-| 外卖红包    | 满20-6、30-9| [点我领取](https://kzurl05.cn/7II7R5)                                                                      |
+| 外卖红包    | 满20-6、30-9| [点我领取](https://kzurl19.cn/7CAHjq)                                                                      |
 | 🚗滴滴红包    |8折、9折，随机领| [点我领取](https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg) |
 | 云服务器     |免费试用| [点我领取](https://curl.qcloud.com/3csDz9jU)                                                               |
 | 京东红包     |满11-10| [点我领取](https://u.jd.com/Or535EV)                                                               |
@@ -32,7 +32,7 @@ tags: 副业
 
 
 <p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://kzurl05.cn/7II7R5'>
+    <a target="_blank" href='https://kzurl19.cn/7CAHjq'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
