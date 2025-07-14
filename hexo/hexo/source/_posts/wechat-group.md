@@ -14,6 +14,15 @@ tags: 微信群
 
 如需学习资料：[零基础Python自动化办公，4套原创课程，一站式搞定！](https://www.python-office.com/guide/allFunc.html)
 
+业余时间做编程博主，同时维护了一个开源中国的推荐项目：[python-office](https://mp.weixin.qq.com/s/7aA0KoXGJuSFkTns-MZYjA)。
+
+这是一个Python自动化办公的功能库，有关这个库和我的经历，详见下面这几个资料：
+- [DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休](https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw)
+- [更新了3年的开源项目python-office，给我带来了什么？](https://mp.weixin.qq.com/s/fLz3W_rDHml6iR-bAgyFAw)
+- [有生之年！python-office被写进教材了？我也有百度百科词条了？](https://mp.weixin.qq.com/s/vYa790i1H9u63aLYrBsTuQ)
+
+
+
 ### 1、Python交流群
 
 其一，只需要 **9元** 的技术大群，长期有效，目前400+人的技术大群有5个了：
