@@ -9,7 +9,7 @@ tags: [第三方库,pyinstaller]
 
 <p align="center" id='进群-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HOM_f1W8Dyy1cX9yLlSj9TUoJEXFC4p5UHj4IjbEYOGs2CdefJeSCX4kmmGM6iXpka9eo0c'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
     </a>   
 </p>
 
@@ -225,9 +225,12 @@ act -j build --matrix os:ubuntu-latest
 
 下节课《第九讲：运行时问题定位与解决》教你“用户打不开”时如何远程诊断。
 
-------
 
+----
 
+大家在学习课程中有任何问题，欢迎+微信和我交流👉[我的联系方式：微信、读者群、1对1、福利](http://www.python4office.cn/wechat-qrcode/)
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
+
+
 
