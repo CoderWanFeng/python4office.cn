@@ -18,7 +18,14 @@ tags: python-office
 
 
 
+
 <p align="center" name="gitcode">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 		<img src='https://gitcode.com/CoderWanFeng1/python-office/star/badge.svg?theme=dark' alt='gitcode star'/>
 	</a>	
@@ -33,6 +40,7 @@ tags: python-office
   </a>
 
 </p>
+
 
 欢迎学习给小白的《50讲 · Python自动化办公》，课程正在持续更新中🚀，每一节课都包含：视频、文档、代码、软件和答疑群，[点我下载](https://www.python-office.com/course/50-python-office.html)。
 

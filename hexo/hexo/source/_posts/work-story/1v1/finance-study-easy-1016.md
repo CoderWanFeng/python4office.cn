@@ -18,7 +18,14 @@ tags: 1v1
 
 
 
+
 <p align="center" name="gitcode">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 		<img src='https://gitcode.com/CoderWanFeng1/python-office/star/badge.svg?theme=dark' alt='gitcode star'/>
 	</a>	
@@ -33,6 +40,7 @@ tags: 1v1
   </a>
 
 </p>
+
 
 
 今天咨询的主题是：自己工作中有一些重复性的工作，自己对Python比较感兴趣，想通过实现这些需求，学习一下Python。目前是0基础应该怎么学习？

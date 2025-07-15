@@ -22,7 +22,14 @@ tags:
 
 
 
+
 <p align="center" name="gitcode">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 		<img src='https://gitcode.com/CoderWanFeng1/python-office/star/badge.svg?theme=dark' alt='gitcode star'/>
 	</a>	
@@ -37,6 +44,7 @@ tags:
   </a>
 
 </p>
+
 
 
 ### 数据分析 - 电子书

@@ -19,7 +19,14 @@ tags: python-office
 
 
 
+
 <p align="center" name="gitcode">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 		<img src='https://gitcode.com/CoderWanFeng1/python-office/star/badge.svg?theme=dark' alt='gitcode star'/>
 	</a>	
@@ -34,6 +41,7 @@ tags: python-office
   </a>
 
 </p>
+
 大家好，这里是程序员晚枫，小红书/小破站都叫这个名。
 
 我工作中的主力语言是C++，在工作之余我搜集了很多有特色的自动化办公代码：**可以用1行代码，帮助编程小白解决复杂的办公问题。**
