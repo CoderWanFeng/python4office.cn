@@ -19,7 +19,7 @@ tags: [ 第三方库,自动化办公,pdf ]
 
 <p align="center" id='进群-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HOM_f1W8Dyy1cX9yLlSj9TUoJEXFC4p5UHj4IjbEYOGs2CdefJeSCX4kmmGM6iXpka9eo0c'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2F%E6%8A%80%E6%9C%AF%E7%BE%A4.jpg" width="100%"/>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
     </a>   
 </p>
 
