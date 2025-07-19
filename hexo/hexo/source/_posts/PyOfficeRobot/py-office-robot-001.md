@@ -7,7 +7,7 @@ tags:
 
 ![](https://www.python-office.com/api/img-cdn/robot/wechat/cover.jpg)
 
-之前给大家分享过一个微信机器人：[一个15分钟的视频，教你用Python创建自己的微信聊天机器人！](http://t.cn/A66p30bI)
+之前给大家分享过一个微信机器人：[一个15分钟的视频，教你用Python创建自己的微信聊天机器人！](https://www.bilibili.com/video/BV1Q64y1Z7TB/)
 
 但是这个机器人，需要基于网页版才能用；然而很多朋友的微信，是不能登录网页版微信的。
 
