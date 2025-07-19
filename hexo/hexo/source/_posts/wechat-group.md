@@ -25,12 +25,12 @@ tags: 微信群
 
 ### 1、Python交流群
 
-其一，只需要 **9元** 的技术大群，长期有效，目前400+人的技术大群有5个了：
+其一，只需要 **14元** 的技术大群，长期有效，目前400+人的技术大群有5个了：
 
-> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HOM_f1W8Dyy1cX9yLlSj9TUoJEXFC4p5UHj4IjbEYOGs2CdefJeSCX4kmmGM6iXpka9eo0c)。
+> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/dfdNNrlnxGCOsDHV4fq6iQ)。
 
 <p align="center" id='付费群的对话'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HOM_f1W8Dyy1cX9yLlSj9TUoJEXFC4p5UHj4IjbEYOGs2CdefJeSCX4kmmGM6iXpka9eo0c'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/dfdNNrlnxGCOsDHV4fq6iQ'>
     <img src="https://cos.python-office.com/group/chat.jpg" width="400" height="600"/>
     </a>   
 </p>
@@ -135,7 +135,7 @@ tags: 微信群
 
 
 <p align="center" id='进群-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HOM_f1W8Dyy1cX9yLlSj9TUoJEXFC4p5UHj4IjbEYOGs2CdefJeSCX4kmmGM6iXpka9eo0c'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/dfdNNrlnxGCOsDHV4fq6iQ'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
     </a>   
 </p>
