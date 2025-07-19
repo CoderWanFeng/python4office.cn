@@ -4,6 +4,10 @@ date: 2025-07-19 16:24:04
 tags: 第三方库
 ---
 
+大家好，这里是程序员晚枫。
+
+今天继续给大家更新专栏：[优秀的第三方库](https://gitcode.com/python4office/python4office.cn/edit/main/hexo/hexo/source/_posts/course/第三方库)之3大Web框架。
+
 
 ## 一、一句话记住谁是谁
 - Django：
@@ -18,11 +22,18 @@ tags: 第三方库
     - ``https://github.com/fastapi/fastapi``
 
 ## 二、它们都是怎么来的？
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/4098c588-a6fd-45d4-97fd-cae2e99ea3ec/image.png 'image.png')
+
 1. Django（2005 年）  
    当时一群报社程序员天天被老板催“快上线”，干脆一次性把所有常用功能（登录、后台、数据库）打包好，省得每次都从零开始。于是 Django = “懒人救星”。
 
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/014405c0-c2ec-4a85-b618-ae01ddecdd05/image.png 'image.png')
+
 2. Flask（2010 年）  
    有个德国小哥觉得 Django 太重，写了一行愚人节玩笑代码：“Hello World 只要 5 行！” 结果大家当真了，越玩越大，就成了 Flask。核心就是：别给我多余的东西，我只想要一把瑞士军刀。
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/965efef1-dacc-43ab-a160-5ec13bdb8dae/image.png 'image.png')
 
 3. FastAPI（2018 年）  
    AI 火了，大家发现“机器学习模型”要对外提供服务，传统框架慢得像老牛。于是 FastAPI 来了，专门解决“高并发 + 自动生成接口文档”这两个痛点，一上线就飙车。
@@ -54,3 +65,13 @@ tags: 第三方库
 ## 六、一句话总结
 做后台选 Django，做玩具选 Flask，做接口选 FastAPI。  
 如果只能学一个？先学 FastAPI，再回头看 Django，你会发现原来“全家桶”里的每个零件都叫什么，心里更有底。
+
+
+
+----
+
+大家在学习课程中有任何问题，欢迎+微信和我交流👉[我的联系方式：微信、读者群、1对1、福利](http://www.python4office.cn/wechat-qrcode/)
+
+![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
+
+
