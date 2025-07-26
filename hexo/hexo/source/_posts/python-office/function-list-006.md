@@ -279,7 +279,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 '''
 import office
 
-office.image.down4img(url='https://raw.gitcode.com/CoderWanFeng1/website/raw/main/icon2.jpg',
+office.image.down4img(url='https://raw.gitcode.com/CoderWanFeng1/website/raw/main/icon3.jpg',
                       output_path=r'D:\workplace\code\gitee\python-office.com\docs-pages\vuepress\course\code\test_files\50-16-down4img')
 
 ```
