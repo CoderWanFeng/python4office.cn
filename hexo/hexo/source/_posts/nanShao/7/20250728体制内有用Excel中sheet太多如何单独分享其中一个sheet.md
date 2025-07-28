@@ -96,8 +96,9 @@ OK，到这里我要告诉大家的是，今天这篇文章教给大家的代码
 
 第三，所有功能只需要一行代码就能实现问题的解决。
 
-下面是这门课程的介绍海报，包含了详细的课程目录，有需要的小伙伴可以扫码付费领取。
-![09d902c4b38aba779b93e8364dd0f935.png](https://raw.gitcode.com/user-images/assets/5027920/4aa56998-7528-4908-bfc2-dd1e469d0f12/09d902c4b38aba779b93e8364dd0f935.png '09d902c4b38aba779b93e8364dd0f935.png')
+所以，如果你对这门[《给小白的50讲 · Python自动化办公》](https://mp.weixin.qq.com/merchant/mppaysubscribe?action=go_paid_article&article_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2F9hB7Ghyf_km5ARSBBWt4BQ&token=772408466&lang=zh_CN)感兴趣，可以点击左边蓝字报名咨询。
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/df7121f7-192b-42e5-a627-fbe859fa12d2/image.png 'image.png')
 
 如果你对这门课程还有想了解的，或者购买后有问题，可以加我微信咨询，**nanshaoshixiong**，备注**888**。
 
@@ -112,7 +113,6 @@ OK，到这里我要告诉大家的是，今天这篇文章教给大家的代码
 [群太多管理不过来？试试这个微信机器人的智能回复功能](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247502446&idx=1&sn=05ddaf0b55ccb2a35cc89120b4032a43&scene=21#wechat_redirect)
 
 [你忘记了文件名称？那我来教你用内容搜索来找到目标文件](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247502454&idx=1&sn=0473e26f4a63d132b0a61c1211bce497&scene=21#wechat_redirect)
-
 
 <center>
 
