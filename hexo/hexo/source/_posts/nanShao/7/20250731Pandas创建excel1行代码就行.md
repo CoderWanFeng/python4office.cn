@@ -81,6 +81,8 @@ OK，到这里我要告诉大家的是，今天这篇文章教给大家的代码
 
 所以，如果你对这门[《30讲PythonExcel数据分析》](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247502505&idx=1&sn=7552c4f09bc5f784e1528c67eb2deec5&scene=21#wechat_redirect)感兴趣，可以点击左边蓝字报名咨询。
 
+![30讲python+excel数据分析海报跳转到付费文章.jpg](https://raw.gitcode.com/user-images/assets/5027920/3b0ef5f6-3839-4f74-b8ab-d244d81d36e7/30讲python_excel数据分析海报跳转到付费文章.jpg '30讲python+excel数据分析海报跳转到付费文章.jpg')
+
 如果你对这门课程还有想了解的，或者购买后有问题，可以加我微信咨询，**nanshaoshixiong**，备注**888**。
 
 
