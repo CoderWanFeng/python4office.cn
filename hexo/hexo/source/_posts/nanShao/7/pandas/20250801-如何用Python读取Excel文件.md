@@ -45,7 +45,7 @@ example.set_index("学号",inplace=True)
 print(example.columns)
 
 # 这行代码表示将修改后的Excel文件存储到某个路径下
-example.to_excel(r"C:\Users\zzqyy\Desktop\Pandas玩转Excel\02读取文件\输出.xlsx")
+example.to_excel(r"C:\Users\zzqyy\Desktop\Pandas玩转Excel\02读取文件\程序员晚枫输出.xlsx")
 print("完成！")
 ```
 

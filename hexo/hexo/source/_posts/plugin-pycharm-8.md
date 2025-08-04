@@ -27,7 +27,7 @@ tags:
 
 点击直达：[读者群](http://www.python4office.cn/wechat-group/)
 <p align="center" id='进群-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/84c9JDk3a1g9GbvRmO39uA '>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/84c9JDk3a1g9GbvRmO39uA'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
     </a>   
 </p>
