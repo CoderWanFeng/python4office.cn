@@ -38,3 +38,24 @@ pip install python-office -i https://pypi.tuna.tsinghua.edu.cn/simple
 那这一讲就到这里，大家课后一定要对着代码敲一遍，加深一下印象，这样下次遇到这个需求时就可以直接去用了。
 
 行，如果你喜欢视频，可以点赞收藏转发，我们下一讲再见。
+
+本讲视频代码如下：
+
+```python
+# -*- coding: UTF-8 -*-
+'''
+@作者  ：楠少师兄
+@微信     ：nanshaoshixiong
+@代码日期    ：2025/8/5
+'''
+
+# 导入库：python-office，简写为：office
+# pip install python-office
+# pip install python-office -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+import office
+
+# 填入你的ppt目录
+office.ppt.ppt2pdf(path=r'C:\Users\Administrator\Desktop\10讲python自动化办公\05-PPT转PDF',\
+                   output_path=r'C:\Users\Administrator\Desktop\10讲python自动化办公\05-PPT转PDF\output')
+```
