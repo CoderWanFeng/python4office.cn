@@ -3,7 +3,7 @@ title: 如何用Python读取Excel文件
 date: 2025-08-01 23:41:49
 tags: [30讲PythonExcel数据分析]
 ---
-[![9块读者交流群.png](https://raw.gitcode.com/user-images/assets/5027920/48edc8fa-6d2e-4eca-9e14-d71638eadb55/14块读者交流群.png '14块读者交流群.png')](https://mp.weixin.qq.com/s/84c9JDk3a1g9GbvRmO39uA)
+[![9块读者交流群.png](https://raw.gitcode.com/user-images/assets/5027920/48edc8fa-6d2e-4eca-9e14-d71638eadb55/14块读者交流群.png '14块读者交流群.png')](https://mp.weixin.qq.com/s/_aOF7012zr2gkvO9bpvUng)
 
 大家好，我是楠少，用通俗易懂的方式，教小白学python。
 
