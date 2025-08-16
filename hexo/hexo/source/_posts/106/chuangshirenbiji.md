@@ -13,7 +13,7 @@ tags: 数据分析
 
 
 <p align="center" id='进群-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/_aOF7012zr2gkvO9bpvUng'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=1'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
     </a>   
 </p>
@@ -55,7 +55,7 @@ tags: 数据分析
 
 
 <p align="center" id='进群-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/_aOF7012zr2gkvO9bpvUng'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=1'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
     </a>   
 </p>
