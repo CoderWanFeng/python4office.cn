@@ -14,8 +14,8 @@ def get_up():
 
 
 name, _, city = get_up()  # _ 占位忽略粉丝量
-print(name, city)
+print(name, city)  # 程序员晚枫 ChongQing
 
 # 只想要首尾，中间全部打包
 first, *_, last = get_up()
-print(first, last)  # Alice Shanghai
+print(first, last)  # 程序员晚枫 ChongQing

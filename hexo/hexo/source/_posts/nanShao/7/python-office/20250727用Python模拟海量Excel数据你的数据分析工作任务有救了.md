@@ -5,7 +5,7 @@ tags: [50讲Python自动化办公]
 ---
 [![14块读者交流群.png](https://raw.gitcode.com/user-images/assets/5027920/48edc8fa-6d2e-4eca-9e14-d71638eadb55/14块读者交流群.png '14块读者交流群.png')](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247502200&idx=1&sn=7e543675545ac6622123af6009fdebce&scene=21#wechat_redirect)
 
-大家好，我是楠少，用通俗易懂的方式，教小白学python。
+大家好，我是晚枫，用通俗易懂的方式，教小白学python。
 
 
 前几年我还在努力学习爬虫的时候，我的培训老师给我们实操的练手项目就有自动将爬取到的数据存储到Excel表格中。
@@ -117,7 +117,7 @@ language: 数据用什么语言，默认是中文，可以填english
 ![image.png](https://raw.gitcode.com/user-images/assets/5027920/df7121f7-192b-42e5-a627-fbe859fa12d2/image.png 'image.png')
 
 
-如果你对这门课程还有想了解的，或者购买后有问题，可以加我微信咨询，**nanshaoshixiong**，备注**888**。
+如果你对这门课程还有想了解的，或者购买后有问题，可以加我微信咨询，**wfdev7**，备注**888**。
 
 <center>
 

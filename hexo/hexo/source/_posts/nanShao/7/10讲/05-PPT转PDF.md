@@ -15,7 +15,7 @@ tags: [10讲Python自动化办公]
 ```python
 pip install python-office -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-好，大家看这个目录，这里有一个叫楠少师兄的PPT文件，我们要实现的需求是将它转换成PDF文件。
+好，大家看这个目录，这里有一个叫晚枫师兄的PPT文件，我们要实现的需求是将它转换成PDF文件。
 
 该怎么做呢？
 
@@ -44,8 +44,8 @@ pip install python-office -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```python
 # -*- coding: UTF-8 -*-
 '''
-@作者  ：楠少师兄
-@微信     ：nanshaoshixiong
+@作者  ：晚枫师兄
+@微信     ：wfdev7
 @代码日期    ：2025/8/5
 '''
 

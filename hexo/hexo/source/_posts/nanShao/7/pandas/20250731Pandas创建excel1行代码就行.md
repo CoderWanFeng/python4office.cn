@@ -5,7 +5,7 @@ tags: [30讲Python+Excel数据分析]
 ---
 [![14块读者交流群.png](https://raw.gitcode.com/user-images/assets/5027920/48edc8fa-6d2e-4eca-9e14-d71638eadb55/14块读者交流群.png '14块读者交流群.png')](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247502200&idx=1&sn=7e543675545ac6622123af6009fdebce&scene=21#wechat_redirect)
 
-大家好，我是楠少，用通俗易懂的方式，教小白学python。
+大家好，我是晚枫，用通俗易懂的方式，教小白学python。
 
 **今天，我们开始学习《30讲Python+Excel数据分析》课程的第2讲。**
 
@@ -83,7 +83,7 @@ OK，到这里我要告诉大家的是，今天这篇文章教给大家的代码
 
 ![30讲python+excel数据分析海报跳转到付费文章.jpg](https://raw.gitcode.com/user-images/assets/5027920/3b0ef5f6-3839-4f74-b8ab-d244d81d36e7/30讲python_excel数据分析海报跳转到付费文章.jpg '30讲python+excel数据分析海报跳转到付费文章.jpg')
 
-如果你对这门课程还有想了解的，或者购买后有问题，可以加我微信咨询，**nanshaoshixiong**，备注**888**。
+如果你对这门课程还有想了解的，或者购买后有问题，可以加我微信咨询，**wfdev7**，备注**888**。
 
 
 
