@@ -1,6 +1,6 @@
 ---
-title: 这里是标题
-date: 2025-08-14 00:41:49
+title: 发票识别
+date: 2025-08-22
 tags: [ 星河计划 ]
 ---
 
@@ -52,31 +52,35 @@ tags: [ 星河计划 ]
 
 大家好，这里是码农如瓮，专注于分享：Python自动化办公。
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
-## 功能介绍
+## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> pdf转word文档，只需要一行代码，输入文件的位置，即可实现。
-## 使用说明
-
-#### 下载python-office
-
-只需要下面这一条命令，就可以自动下载和安装python-office
+> 识别发票并将结果转为excel:只需要一行代码，识别发票图片，将识别结果存为excel。
+## 2. 使用说明
+#### 下载poocr
+只需要下面这一条命令，就可以自动下载和安装下载poocr
 ```
-pip install python-office
+pip install poocr
 ```
 #### 调用功能
 照抄下面代码，修改文件存放位置，右键选择运行
 ```python
-import office # 导入python-office
+# pip install poocr
+import poocr
 
-office.pdf.pdf2docx(input_file=r'./test_files/30-01-pdf2docx/程序员晚枫.pdf',
-                    output_path=r'./test_files/30-01-pdf2docx/pdf2docx/test.docx')
+poocr.ocr2excel.VatInvoiceOCR2Excel(input_path=r'test_files/30-10-VatInvoiceOCR2Excel/',
+                                    output_path=r'test_files/30-10-VatInvoiceOCR2Excel',
+                                    output_excel='程序员晚枫的发票.xlsx',
+                                    id='AKIDmaBRaWFk4D9sWAd9lEYgdNuDQQbhZDqI',
+                                    key='JOGuLacQ1OXTBfv53oMispcCH4e1B8rN')
 # 参数解释：
-# input_file：需要转换的文件路径+文件名
-# output_path: 转换后的文件路径+文件名
-# ps: 记得指定转换后的文件名哦
+# input_path: 输入文件路径，可以是单个文件或文件夹
+# output_path: 输出Excel文件的路径，表示使用函数默认文件名并保存在当前目录
+# output_excel: 输出Excel文件的名称
+# id: OCR引擎的用户ID
+# key: OCR引擎的用户密钥
 ```
 
-## 4.提交需求
+## 3.提交需求
 1行代码实现复杂功能，是不是很简单？目前python-office这个自动化办公的第三方库正在持续开发中。
 欢迎大家加入交流群，来沟通你的功能需求~
 

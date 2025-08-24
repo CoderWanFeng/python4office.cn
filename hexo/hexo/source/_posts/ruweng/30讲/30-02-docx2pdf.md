@@ -1,5 +1,5 @@
 ---
-title: 这里是标题
+title: word转pdf
 date: 2025-08-14 00:41:49
 tags: [ 星河计划 ]
 ---
@@ -52,10 +52,10 @@ tags: [ 星河计划 ]
 
 大家好，这里是码农如瓮，专注于分享：Python自动化办公。
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
-## 功能介绍
+## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> pdf转word文档，只需要一行代码，输入文件的位置，即可实现。
-## 使用说明
+> word转pdf:只需要一行代码，输入文件的位置，即可实现。
+## 2. 使用说明
 
 #### 下载python-office
 
@@ -64,19 +64,18 @@ tags: [ 星河计划 ]
 pip install python-office
 ```
 #### 调用功能
-照抄下面代码，修改文件存放位置，右键选择运行
+照抄下面代码，按照下方参数解释，修改文件存放位置参数，右键选择运行
 ```python
 import office # 导入python-office
 
-office.pdf.pdf2docx(input_file=r'./test_files/30-01-pdf2docx/程序员晚枫.pdf',
-                    output_path=r'./test_files/30-01-pdf2docx/pdf2docx/test.docx')
+office.word.docx2pdf(path=r'./test_files/30-02-docx2pdf/抖快-程序员晚枫.docx',
+                     output_path=r'./test_files/30-02-docx2pdf/docx2pdf')
 # 参数解释：
 # input_file：需要转换的文件路径+文件名
-# output_path: 转换后的文件路径+文件名
-# ps: 记得指定转换后的文件名哦
+# output_path: 转换后的输出位置，如果不存在会自动创建
 ```
 
-## 4.提交需求
+## 3.提交需求
 1行代码实现复杂功能，是不是很简单？目前python-office这个自动化办公的第三方库正在持续开发中。
 欢迎大家加入交流群，来沟通你的功能需求~
 
