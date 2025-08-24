@@ -54,7 +54,7 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> 查询所有excel中指定内容出现次数:只需要一行代码，实现查询并统计目录下所有excel中出现某个指定关键字的次数，并存为excel文件。
+> **查询所有excel中指定内容出现次数**: 只需要一行代码，实现查询并统计目录下所有excel中出现某个指定关键字的次数，并存为excel文件。
 ## 2. 使用说明
 #### 下载poexcel
 只需要下面这一条命令，就可以自动下载和安装poexcel
@@ -87,6 +87,5 @@ poexcel.query4excel(query_content='小红书',
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
 
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
+
 

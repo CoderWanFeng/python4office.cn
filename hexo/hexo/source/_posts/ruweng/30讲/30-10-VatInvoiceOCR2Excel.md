@@ -54,7 +54,7 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> 识别发票并将结果转为excel:只需要一行代码，识别发票图片，将识别结果存为excel。
+> **识别发票并将结果转为excel**: 只需要一行代码，识别发票图片，将识别结果存为excel。
 ## 2. 使用说明
 #### 下载poocr
 只需要下面这一条命令，就可以自动下载和安装下载poocr
@@ -90,6 +90,5 @@ poocr.ocr2excel.VatInvoiceOCR2Excel(input_path=r'test_files/30-10-VatInvoiceOCR2
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
 
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
+
 

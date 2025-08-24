@@ -54,7 +54,7 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> pdf转word文档:只需要一行代码，将docx文件转为图片。
+> **pdf转word文档**: 只需要一行代码，将docx文件转为图片。
 ## 2. 使用说明
 #### 下载python-office
 只需要下面这一条命令，就可以自动下载和安装python-office
@@ -82,7 +82,4 @@ office.word.docx4imgs(word_path=r'./test_files/30-15-docx4imgs/程序员晚枫.d
 > - 开源地址：
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
-
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
-
+ 

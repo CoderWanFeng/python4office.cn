@@ -54,7 +54,7 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> excel生成模拟数据: 
+> **excel生成模拟数据**: 
 > - 大家可以先看一下下面的excel截图，包含了人名和对应的公司和电话，是不是看起来很真实，但其实这些数据都是我们生成的模拟数据。
 > - 只需要一行代码，大家就可以实现如此炫酷的功能。![项目截图](./images/fakedata.png)
 ## 2. 使用说明
@@ -88,6 +88,4 @@ office.excel.fake2excel(columns=['name', 'company', 'phone_number'],
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
 
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 

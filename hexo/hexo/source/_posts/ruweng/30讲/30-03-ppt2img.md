@@ -54,7 +54,7 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> ppt转图片: 只需要一行代码，即可实现ppt转图片的功能，并且支持选择转为一张或多张图片。
+> **ppt转图片**: 只需要一行代码，即可实现ppt转图片的功能，并且支持选择转为一张或多张图片。
 ## 2. 使用说明 
 
 #### 下载python-office
@@ -87,6 +87,4 @@ office.ppt.ppt2img(input_path=r'./test_files/30-03-ppt2img/ppt-程序员晚枫.p
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
 
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 

@@ -54,7 +54,7 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> 头像加国旗:只需要一行代码，给自己的头像加上国旗。
+> **头像加国旗**: 只需要一行代码，给自己的头像加上国旗。
 ## 2. 使用说明
 #### 下载poimage
 只需要下面这一条命令，就可以自动下载和安装poimage
@@ -83,6 +83,4 @@ poimage.flag2profile(profile_path=r'./test_files/30-17-flag2profile/程序员晚
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
 
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 

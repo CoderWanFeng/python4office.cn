@@ -54,7 +54,7 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> 统计代码数量:只需要一行代码，统计文件夹下所有代码数量。
+> **统计代码数量**: 只需要一行代码，统计文件夹下所有代码数量。
 ## 2. 使用说明
 #### 下载pocode
 只需要下面这一条命令，就可以自动下载和安装pocode
@@ -86,6 +86,4 @@ print(f'代码总行数：{count_of_code_lines}，代码空行：{count_of_blank
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
 
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
-
+ 
