@@ -55,6 +55,8 @@ tags: [ 星河计划 ]
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
 > **识别发票并将结果转为excel**: 只需要一行代码，识别发票图片，将识别结果存为excel。
+> -  首先在下面链接拿到id和key：https://cloud.tencent.com/act/cps/redirect?redirect=34190&cps_key=ca76be5a2293ba3906d6d5407aea15ee
+在代码中输入得到的key和id
 ## 2. 使用说明
 #### 下载poocr
 只需要下面这一条命令，就可以自动下载和安装下载poocr
