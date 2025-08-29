@@ -106,6 +106,9 @@ PyQt 的性能更是杠杠的，经过多年优化打磨，稳定得很。在处
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
+![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+
+
 
 提示词：Python GUI开发，PySide和PyQt两个库的对决。封面主体部分，用蛇形 Python 图标缠绕在一个现代感十足的立方体上，立方体的六个面分别展示 PySide 和 PyQt 的 logo，背景为科技感十足的代码编辑器界面。在画面中心位置，用醒目的高对比度色彩写上‘PySide vs PyQt：Python GUI开发史诗级对决，谁才是王者？’。整体配色采用蓝色和绿色的科技风配色，同时添加一些流光溢彩的特效，营造出紧张而充满科技感的氛围，体现出这是一场关乎 Python GUI开发领域王座的史诗级对决。
 
@@ -117,4 +120,7 @@ PyQt 的性能更是杠杠的，经过多年优化打磨，稳定得很。在处
 大家在学习课程中有任何问题，欢迎+微信和我交流👉[我的联系方式：微信、读者群、1对1、福利](http://www.python4office.cn/wechat-qrcode/)
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
+
+![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+
 

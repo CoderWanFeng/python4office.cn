@@ -61,3 +61,6 @@ poocr.ocr2excel.VatInvoiceOCR2Excel(input_path=pdf_path, id=SecretId, key=Secret
 这些步骤和代码示例应该能帮助你开始使用poocr进行OCR识别。更多详细的使用案例和功能介绍，可以查看poocr的官方文档和教程。
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
+
+![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+

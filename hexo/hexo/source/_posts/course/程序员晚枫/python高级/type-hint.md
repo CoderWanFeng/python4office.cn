@@ -176,6 +176,9 @@ type-hint-demo/
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
+![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+
+
 
 剪映「零插件」做出赛博感的 5 步套路  
 （15 min 视频，用剪映桌面版 4.6+ 即可完成，所有参数可直接抄）
