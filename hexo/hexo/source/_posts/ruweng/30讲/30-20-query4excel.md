@@ -1,5 +1,5 @@
 ---
-title: pdf转word
+title: 查询所有excel中指定内容出现次数
 date: 2025-08-22
 tags: [ 星河计划 ]
 ---
@@ -54,24 +54,27 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> pdf转word文档:只需要一行代码，输入文件的位置，即可实现。
+> **查询所有excel中指定内容出现次数**: 只需要一行代码，实现查询并统计目录下所有excel中出现某个指定关键字的次数，并存为excel文件。
 ## 2. 使用说明
-#### 下载python-office
-只需要下面这一条命令，就可以自动下载和安装python-office
+#### 下载poexcel
+只需要下面这一条命令，就可以自动下载和安装poexcel
 ```
-pip install python-office
+pip install poexcel
 ```
 #### 调用功能
 照抄下面代码，修改文件存放位置，右键选择运行
 ```python
-import office # 导入python-office
+import poexcel
 
-office.pdf.pdf2docx(input_file=r'./test_files/30-01-pdf2docx/程序员晚枫.pdf',
-                    output_path=r'./test_files/30-01-pdf2docx/pdf2docx/test.docx')
+poexcel.query4excel(query_content='小红书',
+                    query_path=r'./test_files/30-20-query4excel',
+                    output_path=r'./test_files/out',
+                    output_name='query4excel.xlsx')
 # 参数解释：
-# input_file：需要转换的文件路径+文件名
-# output_path: 转换后的文件路径+文件名
-# ps: 记得指定转换后的文件名哦
+# query_content：需要查询的关键词
+# query_path: 查询excel文件的存放路径
+# output_path：输出结果文件的路径
+# output_name：结果文件的名字
 ```
 
 ## 3.提交需求
@@ -83,13 +86,6 @@ office.pdf.pdf2docx(input_file=r'./test_files/30-01-pdf2docx/程序员晚枫.pdf
 > - 开源地址：
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
-
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
-
-![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
-  
-![美团红包](https://raw.gitcode.com/user-images/assets/5027920/84f473b9-6373-46f4-beea-b671bddc637c/6d283319df13b09a3f74a9f19bf18a97.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
 
 
 

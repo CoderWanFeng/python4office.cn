@@ -1,5 +1,5 @@
 ---
-title: pdf转word
+title: excel生成模拟数据
 date: 2025-08-22
 tags: [ 星河计划 ]
 ---
@@ -54,7 +54,10 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> pdf转word文档:只需要一行代码，输入文件的位置，即可实现。
+> **excel生成模拟数据**: 
+> - 大家可以先看一下下面的excel截图，包含了人名和对应的公司和电话，是不是看起来很真实，但其实这些数据都是我们生成的模拟数据。
+> - 只需要一行代码，大家就可以实现如此炫酷的功能。
+> - ![项目截图](./images/fakedata.png)
 ## 2. 使用说明
 #### 下载python-office
 只需要下面这一条命令，就可以自动下载和安装python-office
@@ -66,13 +69,15 @@ pip install python-office
 ```python
 import office # 导入python-office
 
-office.pdf.pdf2docx(input_file=r'./test_files/30-01-pdf2docx/程序员晚枫.pdf',
-                    output_path=r'./test_files/30-01-pdf2docx/pdf2docx/test.docx')
+office.excel.fake2excel(columns=['name', 'company', 'phone_number'],
+                        rows=100,
+                        path=r'./test_files/30-04-fake2excel/中文-1.xlsx')
 # 参数解释：
-# input_file：需要转换的文件路径+文件名
-# output_path: 转换后的文件路径+文件名
-# ps: 记得指定转换后的文件名哦
+# columns：需要模拟的数据，每种数据为excel中的一列。将数据名填入[]中，并加上单引号 (可模拟的数据见下方链接)
+# rows：生成多少行数据
+# path：生成的Excel的位置和名称
 ```
+能模拟的数据有哪些？http://python4office.cn/python-office/fake2excel/
 
 ## 3.提交需求
 1行代码实现复杂功能，是不是很简单？目前python-office这个自动化办公的第三方库正在持续开发中。
@@ -83,13 +88,5 @@ office.pdf.pdf2docx(input_file=r'./test_files/30-01-pdf2docx/程序员晚枫.pdf
 > - 开源地址：
 > - https://gitee.com/CoderWanFeng/python-office
 > - https://github.com/CoderWanFeng/python-office
-
-> 注意：这个功能，目前只支持docx格式的文件。
-![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
-
-![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
-  
-![美团红包](https://raw.gitcode.com/user-images/assets/5027920/84f473b9-6373-46f4-beea-b671bddc637c/6d283319df13b09a3f74a9f19bf18a97.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
-
 
 
