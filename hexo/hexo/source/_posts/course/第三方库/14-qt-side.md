@@ -104,9 +104,13 @@ PyQt 的性能更是杠杠的，经过多年优化打磨，稳定得很。在处
 朋友们，这下对 PySide 和 PyQt 的区别应该心里有数了吧。那在开发时就可以根据自己的项目实际情况，综合考虑选择适合自己的库啦。
 
 
+
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
 ![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+  
+![美团红包](https://raw.gitcode.com/user-images/assets/5027920/84f473b9-6373-46f4-beea-b671bddc637c/6d283319df13b09a3f74a9f19bf18a97.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
+
 
 
 
@@ -119,8 +123,12 @@ PyQt 的性能更是杠杠的，经过多年优化打磨，稳定得很。在处
 
 大家在学习课程中有任何问题，欢迎+微信和我交流👉[我的联系方式：微信、读者群、1对1、福利](http://www.python4office.cn/wechat-qrcode/)
 
+
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
 ![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+  
+![美团红包](https://raw.gitcode.com/user-images/assets/5027920/84f473b9-6373-46f4-beea-b671bddc637c/6d283319df13b09a3f74a9f19bf18a97.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
+
 
 

@@ -80,6 +80,10 @@ nuitka --standalone --onefile --optimize=2 pdf_extract_tool.py
 > 大家在阅读过程中有任何问题，或者觉得有收获的话，欢迎点赞、评论和收藏。
 
 
+
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
 ![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+  
+![美团红包](https://raw.gitcode.com/user-images/assets/5027920/84f473b9-6373-46f4-beea-b671bddc637c/6d283319df13b09a3f74a9f19bf18a97.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
+
