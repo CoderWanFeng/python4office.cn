@@ -42,7 +42,7 @@ tags: 书单号
 
 <!-- more -->
 
-> 视频链接：https://mbd.baidu.com/newspage/data/videolanding?nid=sv_16568693311099651743&sourceFrom=share
+> 视频链接： https://v.douyin.com/3OEqp0TKY5A/ 
 
 
 
