@@ -54,7 +54,7 @@ tags: [ 星河计划 ]
 **这个系列教程，用来逐一介绍python-office自动化办公的功能。**
 ## 1. 功能介绍
 今天我们介绍这个库的功能之一：
-> **去除图片水印**: 只需要一行代码，去除图片中的水印。
+> **生成跳转二维码**: 只需要一行代码，生成可以跳转到指定链接的二维码。
 ## 2. 使用说明
 #### 下载python-office
 只需要下面这一条命令，就可以自动下载和安装python-office
@@ -66,11 +66,13 @@ pip install python-office
 ```python
 import office # 导入python-office
 
-office.image.del_watermark(input_image=r'./test_files/30-11-del_watermark/img.png',
-                           output_image=r'./test_files/30-11-del_watermark/del_water_mark.jpg')
+office.tools.qrcodetools(url='https://space.bilibili.com/259649365?spm_id_from=333.337.search-card.all.click',
+                         output=r'F:\自动化办公\30chapter\test_files\30-11-qrcodetools\pythonoffice.jpg')
+
+
 # 参数解释：
-# input_image: 输入图片的路径，这是需要进行水印删除处理的图片。 
-# output_image: 处理后图片的保存路径。
+# url: 想要跳转的网页链接。 
+# output: 二维码存放路径+名称。
 
 ```
 
