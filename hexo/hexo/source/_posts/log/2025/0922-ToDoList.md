@@ -19,20 +19,26 @@ tags: 工作
 - [又来上海了，我和PyCon China的3年](https://mp.weixin.qq.com/s/ml7LahBApiqFnSkL_tZGEw)
 - 黑客松的奖金
 - 和PyCon的vlog
+- 报销
+- 无线网卡
 
 2、云栖大会
+
 - 预告
 - agent
 - 总结
 
 3、GitCode重庆站
+
 - 场地
 
 4、开书店
+
 - 改经营类目
 - 抖音账号
 
 5、PyRa
+
 - 运行
 
 6、Python课程
@@ -44,13 +50,14 @@ tags: 工作
 - 仓颉
 
 7、加拿大
+
 - 雅思
 - 算法
 - 简历
 
 8、青岛
-- 周四买票
 
+- 周四买票
 
 ---
 
@@ -58,5 +65,5 @@ tags: 工作
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
 ![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
-  
+
 ![美团红包](https://raw.gitcode.com/user-images/assets/5027920/84f473b9-6373-46f4-beea-b671bddc637c/6d283319df13b09a3f74a9f19bf18a97.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')

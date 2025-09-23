@@ -1,5 +1,5 @@
 cd hexo/hexo
-# yarn install
+ yarn install
 yarn run clean
 yarn run build
 # yarn run server
