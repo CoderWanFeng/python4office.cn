@@ -54,6 +54,7 @@ tags: 深度文章
 
 <!-- more -->
 
+![封面图](https://raw.gitcode.com/user-images/assets/5027920/9f5e8ff2-6696-49bc-94a3-11960d0ccb5f/image.png 'image.png')
 
 大家好，这里是程序员晚枫。
 
@@ -61,8 +62,9 @@ tags: 深度文章
 
 ## 1、什么是PDF？
 
-PDF（Portable Document
-Format，便携式文档格式）的原理，可以理解为一套为了精确还原文档的“说明书”或“施工蓝图”。它的核心设计目标是：在任何设备、任何操作系统上，打开同一个PDF文件，看到的版面、字体、颜色和图片都完全一致。
+PDF（Portable Document Format，便携式文档格式）的原理，可以理解为一套为了精确还原文档的“说明书”或“施工蓝图”。它的核心设计目标是：在任何设备、任何操作系统上，打开同一个PDF文件，看到的版面、字体、颜色和图片都完全一致。
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/081ed309-de8c-44bd-94de-81a35ea1aa15/image.png 'image.png')
 
 在PDF出现之前，跨平台共享文档是一场噩梦。你把一个用特定字体和排版软件制作的文档发给别人，如果他的电脑上没有相同的字体和软件，打开后就会面目全非。PDF通过“冻结”文档的最终形态，完美解决了格式错乱和依赖缺失的问题。
 
@@ -84,13 +86,15 @@ PDF格式的官方技术规范是由国际标准化组织（ISO） 发布的 ISO
 
 | 库的类型         | 代表库                    | 目标与取舍                                                                                                | 文档链接                                                    |
 |:-------------|:-----------------------|:-----------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
-| **“轻量级”工具包** | `pypdf` (PyPDF2)       | **目标**：提供最基础的读写、合并、拆分功能。<br>**取舍**：放弃对复杂字体、高级渲染、表单和 JavaScript 的深度支持，以保持代码简洁和易于使用。                   | https://pypi.org/project/pypdf/                         |
+| **“轻量级”工具包** | `pypdf` (PyPDF2)       | **目标**：提供最基础的读写、合并、拆分功能。<br>**取舍**：放弃对复杂字体、高级渲染、表单和 JavaScript 的深度支持，以保持代码简洁和易于使用。                   | https://pypdf.readthedocs.io                       |
 | **“高性能”引擎**  | `PyMuPDF`              | **目标**：在文本提取、渲染和文档操作上提供极致的速度和广泛的格式支持。<br>**取舍**：虽然功能强大，但其 API 可能更接近底层，且对 PDF 2.0 的最新特性支持可能滞后。        | https://pymupdf.readthedocs.io                          |
 | **“合规性”专家**  | `pikepdf`              | **目标**：专注于正确性、安全性和对 PDF 内部结构的低级访问，擅长修复文件。<br>**取舍**：不提供高级布局或内容生成功能，它的重点是“理解”PDF，而不是“创造”PDF。          | https://pikepdf.readthedocs.io/                         |
 | **“内容生成”专家** | `ReportLab`, `borb`    | **目标**：从零开始，以编程方式生成布局精美、符合标准的 PDF 报告。<br>**取舍**：它们的强项是生成，而不是解析或编辑现有的复杂 PDF。`borb` 虽然也支持读取，但其核心优势在生成。 | https://www.reportlab.com/dev/opensource/               |
 | **“数据提取”专家** | `pdfplumber`           | **目标**：极其精准地从 PDF 中提取文本、表格和位置信息。<br>**取舍**：完全放弃写入和编辑功能，将所有精力投入到“阅读”这一件事上。                            | https://github.com/jsvine/pdfplumber                    |
 | **“商业库”**    | `Spire.PDF for Python` | **目标**：一款完全独立的 PDF 开发组件。<br>**取舍**：商业组件，使用需要付费。                                                      | https://www.e-iceblue.cn/Introduce/Spire-PDF-Python.html |
 | **“入门级”工具包** | `popdf`                | **目标**：一行代码，实现pdf操作。<br>**取舍**：适合机械重复的操作，不适合复杂场景。                                                    | https://www.python-office.com/course-002/10-popdf/10-popdf.html|
+
+![针对不同场景](https://raw.gitcode.com/user-images/assets/5027920/7b302e34-96ad-4254-a168-806c01bce94f/image.png 'image.png')
 
 PDF 库生态就像一个**工具箱**。你不会找到一把能拧所有螺丝、锯所有木头、测量所有尺寸的“万能工具”。你拥有的是一把专门拧螺丝的**螺丝刀**（`pypdf`）、一把精准切割的**锯子**（`pdfplumber`）、和一个功能强大的**电钻**（`PyMuPDF`）。你的任务决定了你需要从工具箱里拿出哪件工具，或者如何组合使用它们。
 
@@ -161,6 +165,8 @@ from popdf import merge2pdf
 pdf_list = ["程序员晚枫_file1.pdf", "程序员晚枫_file2.pdf"]
 merge2pdf(pdf_list, "merged.pdf")
 ```
+
+![popdf-heng.jpg](https://raw.gitcode.com/user-images/assets/5027920/ed8ec79e-f02c-4bfe-8a35-32c4be037a3d/popdf-heng.jpg 'popdf-heng.jpg')
 
 ## 4、总结
 
