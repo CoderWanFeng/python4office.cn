@@ -130,7 +130,7 @@ pip install popdf
 from popdf import pdf2docx
 
 # 转换单个文件
-pdf2docx(input_file="input.pdf", output_file="output.docx")
+pdf2docx(input_file="程序员晚枫.pdf", output_file="output.docx")
 # 批量转换（指定输入输出文件夹）
 pdf2docx(input_path="./pdfs/", output_path="./docs/")
 ```
