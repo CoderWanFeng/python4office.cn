@@ -62,13 +62,15 @@ tags: 自动化办公
 
 在做资料检索的过程中，我有了一个意外发现：微软的Excel，已经支持Python了？！
 
-
+![微软官网教程](https://raw.gitcode.com/user-images/assets/5027920/a4aff9ca-509a-4d9b-b2bb-07e1bca9fadd/image.png 'image.png')
 
   
 
 ## 你的 Excel 其实藏着 Python 引擎，2025 年最值得学的办公技能  
 
-2025 年 3 月，微软宣布 Excel 内置 Python 功能全面开放，Windows、Mac 和网页版用户终于能直接在单元格中运行 Python 代码。这不是简单的插件集成，而是将 Python 生态（如 pandas、matplotlib）直接嵌入 Excel，意味着你不用切换窗口就能用 Python 处理数据、生成图表，甚至跑机器学习模型。  
+2025 年 3 月，微软宣布 Excel 内置 Python 功能全面开放，Windows、Mac 和网页版用户终于能直接在单元格中运行 Python 代码。
+
+这不是简单的插件集成，而是将 Python 生态（如 pandas、matplotlib）直接嵌入 Excel，意味着你不用切换窗口就能用 Python 处理数据、生成图表，甚至跑机器学习模型。  
 
 但多数人还不知道：你的 Excel 可能已经支持这项功能。打开 Excel 看看「公式」选项卡是否有「插入 Python」按钮？如果没有，检查你的版本是否符合要求——这是解锁高效办公的第一道门槛。  
 
