@@ -52,6 +52,9 @@ tags: 视频脚本
     <a href="http://www.python4office.cn/wechat-group/"> <img src="https://badgen.net/badge/join/%E4%BA%A4%E6%B5%81%E7%BE%A4?icon=atom&color=yellow"></a>
 </div>
 
+
+> 视频已发布：[深度解析：Python中处理PDF的库有很多，我应该选择哪一个？](https://www.bilibili.com/video/BV11kx9zCEXj)
+
 <!-- more -->
 
 ![封面图](https://raw.gitcode.com/user-images/assets/5027920/9f5e8ff2-6696-49bc-94a3-11960d0ccb5f/image.png 'image.png')
