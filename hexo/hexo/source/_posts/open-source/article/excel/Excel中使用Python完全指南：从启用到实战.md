@@ -58,6 +58,12 @@ tags: 自动化办公
 
 大家好，这里是程序员晚枫。
 
+之前给大家推荐了：[Python处理Excel用哪个库？Pandas不是唯一选择](https://mp.weixin.qq.com/s/h7rAexLvLBmV2nItisUNCA)
+
+在做资料检索的过程中，我有了一个意外发现：微软的Excel，已经支持Python了？！
+
+
+
   
 
 ## 你的 Excel 其实藏着 Python 引擎，2025 年最值得学的办公技能  
