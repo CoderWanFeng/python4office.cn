@@ -66,6 +66,7 @@ tags: 自动化办公
 
   
 
+
 ## 你的 Excel 其实藏着 Python 引擎，2025 年最值得学的办公技能  
 
 2025 年 3 月，微软宣布 Excel 内置 Python 功能全面开放，Windows、Mac 和网页版用户终于能直接在单元格中运行 Python 代码。
