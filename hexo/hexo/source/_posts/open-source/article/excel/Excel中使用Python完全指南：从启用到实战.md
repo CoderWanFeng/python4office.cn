@@ -209,5 +209,7 @@ Excel 中的 Python 不能直接读取本地文件（如 `pandas.read_excel` 禁
 
 ![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
 
+![滴滴红包](https://raw.gitcode.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+
 
 
