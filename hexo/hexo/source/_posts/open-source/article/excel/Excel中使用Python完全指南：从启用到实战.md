@@ -180,15 +180,34 @@ Excel 中的 Python 不能直接读取本地文件（如 `pandas.read_excel` 禁
 - [Excel 中使用 Python 完全指南](https://support.microsoft.com/zh-cn/office/excel-%E4%B8%AD%E7%9A%84-python-%E5%85%A5%E9%97%A8-a33fbcbe-065b-41d3-82cf-23d05397f53d)
 
 
+
+
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='https://www.python-office.com/video/video.html'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='15讲入门-banner'>
+    <a target="_blank" href='http://www.python-office.com/course-002/15-Python/15-Python.html'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/15%E8%AE%B2%E5%85%A5%E9%97%A8-%E6%A8%AA.jpg" width="100%"/>
+    </a>   
+</p>
+
+
 ---
 
 > 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
 
 ![小红书：爱吃火锅的小明](https://raw.gitcode.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
 
+
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
 ![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+  
 
-![美团红包](https://raw.gitcode.com/user-images/assets/5027920/84f473b9-6373-46f4-beea-b671bddc637c/6d283319df13b09a3f74a9f19bf18a97.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
+![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+
+
 
