@@ -54,7 +54,23 @@ tags: 第三方库
 
 <!-- more -->
 
-周五下班的路上刷手机，发现doll姐置顶了学习Python的动态。
+周五下班的路上刷手机，意外发现陪我度过无数黑夜的doll姐姐，置顶了学习Python的动态。
+
+![x](https://raw.gitcode.com/user-images/assets/5027920/4f094a57-b833-464a-b537-e93e556adb40/17fb1ebb827ce7309e11b61ac5d4e1ac.jpg '17fb1ebb827ce7309e11b61ac5d4e1ac.jpg')
+
+![数据科学手册](https://raw.gitcode.com/user-images/assets/5027920/10eba640-23a5-4118-93f1-ad31b338d98e/0b4239882ccdcf8b3f10db52bd8a3c5f.jpg '0b4239882ccdcf8b3f10db52bd8a3c5f.jpg')
+
+而且她用的这本书也是我推荐过的《Python数据科学手册》。
+
+## 缘分啊
+
+![写真](https://raw.gitcode.com/user-images/assets/5027920/be28233b-5c1d-4ec5-afcf-3aeaefb12e9c/f7dd762f3c33d1bcbbf79cf6b819ef71.png 'f7dd762f3c33d1bcbbf79cf6b819ef71.png')
+
+我在2023年录制的[《给小白的《50讲 · Python自动化办公》（完结）》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)，就用过她作为封面，当时纯属蹭流量。
+
+![2023年的课](https://raw.gitcode.com/user-images/assets/5027920/b55ef6a2-5d98-4ad9-a59f-97aecfec8d9b/71c3083225d09357bdf829e89efc0217.jpg '71c3083225d09357bdf829e89efc0217.jpg')
+
+
 
 
 
