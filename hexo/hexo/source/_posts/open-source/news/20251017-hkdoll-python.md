@@ -90,6 +90,12 @@ tags: 第三方库
     </a>   
 </p>
 
+## 最近的更新
+
+最近事情有点多，主要精力用在更新视频上了。
+
+![pdf库的选择](https://raw.gitcode.com/user-images/assets/5027920/6efc556d-8146-429a-baee-bb3a4e5e8a1b/a2a3b66b48bae1283db98ab8b6626757.jpg 'a2a3b66b48bae1283db98ab8b6626757.jpg')
+
 
 ## **关于作者**  
 
