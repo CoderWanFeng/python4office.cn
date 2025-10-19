@@ -78,10 +78,17 @@ tags: 第三方库
 - 视频版：👇
 
 
+![2024年](https://raw.gitcode.com/user-images/assets/5027920/c7fba1af-a724-470f-a397-f5cad1ebc158/5ab88fcd9364b894e545162ec239878f.jpg '5ab88fcd9364b894e545162ec239878f.jpg')
 
 
 
+送大家一套Python入门课，👇
 
+<p align="center" id='15讲入门-banner'>
+    <a target="_blank" href='http://www.python-office.com/course-002/15-Python/15-Python.html'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/15%E8%AE%B2%E5%85%A5%E9%97%A8-%E6%A8%AA.jpg" width="100%"/>
+    </a>   
+</p>
 
 
 ## **关于作者**  
