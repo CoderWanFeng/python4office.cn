@@ -54,6 +54,7 @@ tags: 深度文章
 
 <!-- more -->
 
+大家好，这里是程序员晚枫。
 
 2025年数据处理效率报告显示，Python处理Excel的需求同比增长80%，但70%的开发者仍在为库选择困扰。面对pandas、openpyxl、xlsxwriter等众多工具，到底哪个最适合你的场景？本文将从功能对比、性能测试、实战案例到避坑指南，帮你找到最优解。
 
@@ -102,7 +103,7 @@ Python处理Excel的库多达十余种，但真正主流的不过五个。它们
 ### 数据读取：速度与兼容性的平衡
 
 - **中小文件（<10万行）**：优先用**pandas**，一行代码完成多sheet读取：  
-  `df = pd.read_excel("data.xlsx", sheet_name=["Sheet1", "Sheet2"])`  
+  `df = pd.read_excel("wfdev7_data.xlsx", sheet_name=["Sheet1", "Sheet2"])`  
 - **超大文件（>100万行）**：用**pandas分块模式**，内存占用降低80%：  
   `chunks = pd.read_excel("big_data.xlsx", chunksize=10000)`  
 - **旧格式.xls文件**：安装**xlrd 1.2.0版本**（新版已不支持）：  
@@ -270,7 +271,7 @@ wb.save("financial_report.xlsx")
 - **分块处理**：pandas用chunksize参数，openpyxl开启read_only=True：  
   `wb = openpyxl.load_workbook("big_file.xlsx", read_only=True)`  
 - **数据类型转换**：读取时指定dtype，减少内存占用：  
-  `pd.read_excel("data.xlsx", dtype={"ID": str, "金额": float})`  
+  `pd.read_excel("wfdev7_data.xlsx", dtype={"ID": str, "金额": float})`  
 - **避免循环写入**：用pandas批量写入代替openpyxl逐单元格操作。
 
 ### 混合使用策略：发挥各库优势
@@ -278,7 +279,7 @@ wb.save("financial_report.xlsx")
 - **数据分析+格式美化**：pandas处理数据，openpyxl添加样式：  
   ```python
   # pandas处理数据
-  df = pd.read_excel("data.xlsx")
+  df = pd.read_excel("wfdev7_data.xlsx")
   df["利润"] = df["收入"] - df["支出"]
   
   # openpyxl设置格式
