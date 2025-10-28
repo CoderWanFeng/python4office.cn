@@ -62,7 +62,7 @@ tags: 自动化办公
 
 在做资料检索的过程中，我有了一个意外发现：微软的Excel，已经支持Python了？！
 
-![微软官网教程](https://raw.gitcode.com/user-images/assets/5027920/a4aff9ca-509a-4d9b-b2bb-07e1bca9fadd/image.png 'image.png')
+![微信图片_20251028232905_898_47.png](https://raw.gitcode.com/user-images/assets/5027920/25a8f48c-052d-4253-a808-008779ba1a82/微信图片_20251028232905_898_47.png '微信图片_20251028232905_898_47.png')
 
   
 
