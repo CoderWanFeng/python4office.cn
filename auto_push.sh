@@ -140,8 +140,8 @@ if [ "$BUILD_HEXO" = true ]; then
             # SSH远程操作（优化连接）
             if command -v sshpass >/dev/null 2>&1; then
                 # Linux系统：使用sshpass（最快）
-                sshpass -p "$LINUX_PWD" ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no \
-                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>/dev/null
+                sshpass -p "$LINUX_PWD" ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no -o LogLevel=QUIET \
+                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" >/dev/null 2>&1
             elif command -v powershell >/dev/null 2>&1; then
                 # Windows系统：优化PowerShell调用
                 powershell -Command "
@@ -156,13 +156,13 @@ if [ "$BUILD_HEXO" = true ]; then
                         }
                     } catch {
                         # 如果Posh-SSH不可用，尝试使用标准ssh
-                        Start-Process -NoNewWindow -Wait ssh -ArgumentList @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', \"$LINUX_USER@$LINUX_IP\", \"cd '$LINUX_P4O' && sh ngnix.sh\")
+                        Start-Process -NoNewWindow -Wait ssh -ArgumentList @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', '-o', 'LogLevel=QUIET', \"$LINUX_USER@$LINUX_IP\", \"cd '$LINUX_P4O' && sh ngnix.sh\") -WindowStyle Hidden
                     }
-                " 2>/dev/null
+                " >/dev/null 2>&1
             else
                 # 使用标准ssh（需要密钥认证）
-                ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no \
-                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>/dev/null
+                ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no -o LogLevel=QUIET \
+                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" >/dev/null 2>&1
             fi
             log "远程服务器操作完成"
         ) &
