@@ -92,6 +92,12 @@ git commit -m "$COMMIT_MSG"
 echo "\n=== 推送更改到远程仓库 ==="
 git push
 
+# 7. 如果构建了Hexo，刷新CDN缓存
+if [ "$BUILD_HEXO" = true ]; then
+    echo "\n=== 刷新CDN缓存 ==="
+    python refresh_cdn.py
+fi
+
 echo "\n=== 流程完成 ==="
 echo "自动打包、提交和推送完成！"
 
