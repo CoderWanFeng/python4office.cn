@@ -35,13 +35,18 @@ while [[ $# -gt 0 ]]; do
 done
 
 # 输出控制函数
-log() { $QUIET || echo "$@"; }
+log() { 
+    if ! $QUIET; then
+        echo "$@"
+    fi
+}
 
 log "=== 开始自动打包和推送流程 ==="
 
 # 1. Hexo构建优化（并行执行）
 if [ "$BUILD_HEXO" = true ]; then
-    log "\n=== 构建Hexo网站 ==="
+    log
+    log "=== 构建Hexo网站 ==="
     cd hexo/hexo
     
     # 检查是否需要重新安装依赖（避免重复安装）
@@ -66,7 +71,8 @@ if [ "$BUILD_HEXO" = true ]; then
 fi
 
 # 2. 快速Git状态检查（避免不必要的git status输出）
-log "\n=== 检查Git状态 ==="
+log
+log "=== 检查Git状态 ==="
 if git diff-index --quiet HEAD -- 2>/dev/null && [ -z "$(git ls-files --others --exclude-standard)" ]; then
     log "无文件变更，跳过提交"
     exit 0
@@ -85,7 +91,8 @@ if [ -n "$UNTRACKED_FILES" ]; then
 fi
 
 # 4. 生成智能commit信息（优化版）
-log "\n=== 生成commit信息 ==="
+log
+log "=== 生成commit信息 ==="
 COMMIT_MSG="更新网站"
 
 # 使用更高效的模式匹配
@@ -105,7 +112,8 @@ fi
 log "生成的commit信息: $COMMIT_MSG"
 
 # 5. 批量Git操作（减少命令调用）
-log "\n=== 执行Git操作 ==="
+log
+log "=== 执行Git操作 ==="
 git add . >/dev/null 2>&1
 git commit -m "$COMMIT_MSG" >/dev/null 2>&1
 git push >/dev/null 2>&1
@@ -114,7 +122,8 @@ log "Git操作完成"
 
 # 6. 远程操作优化（条件执行和并行处理）
 if [ "$BUILD_HEXO" = true ]; then
-    log "\n=== 执行远程部署 ==="
+    log
+    log "=== 执行远程部署 ==="
     
     # 从环境变量获取服务器信息
     LINUX_IP=$linux_ip
@@ -137,17 +146,23 @@ if [ "$BUILD_HEXO" = true ]; then
                 # Windows系统：优化PowerShell调用
                 powershell -Command "
                     \$ErrorActionPreference = 'SilentlyContinue'
-                    \$session = New-SSHSession -ComputerName $LINUX_IP -Credential (
-                        New-Object System.Management.Automation.PSCredential(
-                            '$LINUX_USER', 
-                            (ConvertTo-SecureString '$LINUX_PWD' -AsPlainText -Force)
-                        )
-                    ) -AcceptKey \$true -ConnectionTimeout 10
-                    if (\$session.Connected) {
-                        Invoke-SSHCommand -SessionId \$session.SessionId -Command 'cd \"$LINUX_P4O\" && sh ngnix.sh' | Out-Null
-                        Remove-SSHSession -SessionId \$session.SessionId | Out-Null
+                    try {
+                        Import-Module Posh-SSH -ErrorAction SilentlyContinue
+                        \$cred = New-Object System.Management.Automation.PSCredential('$LINUX_USER', (ConvertTo-SecureString '$LINUX_PWD' -AsPlainText -Force))
+                        \$session = New-SSHSession -ComputerName '$LINUX_IP' -Credential \$cred -AcceptKey \$true -ConnectionTimeout 10
+                        if (\$session.Connected) {
+                            Invoke-SSHCommand -SessionId \$session.SessionId -Command 'cd \"$LINUX_P4O\" && sh ngnix.sh' | Out-Null
+                            Remove-SSHSession -SessionId \$session.SessionId | Out-Null
+                        }
+                    } catch {
+                        # 如果Posh-SSH不可用，尝试使用标准ssh
+                        Start-Process -NoNewWindow -Wait ssh -ArgumentList @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', \"$LINUX_USER@$LINUX_IP\", \"cd '$LINUX_P4O' && sh ngnix.sh\")
                     }
                 " 2>/dev/null
+            else
+                # 使用标准ssh（需要密钥认证）
+                ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no \
+                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>/dev/null
             fi
             log "远程服务器操作完成"
         ) &
@@ -167,6 +182,7 @@ if [ "$BUILD_HEXO" = true ]; then
     fi
 fi
 
-log "\n=== 流程完成 ==="
+log
+log "=== 流程完成 ==="
 log "自动打包、提交和推送完成！"
 
