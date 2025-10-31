@@ -116,15 +116,51 @@ if [ "$BUILD_HEXO" = true ]; then
     else
         echo "登录远程服务器: $LINUX_USER@$LINUX_IP"
         
-        # 使用ssh登录远程服务器并执行命令
-        echo "使用SSH登录远程服务器..."
-        ssh  $LINUX_USER@$LINUX_IP << EOF
-            cd "$LINUX_P4O"
-            echo "进入工作目录: $LINUX_P4O"
-            sh ngnix.sh
-            echo "nginx.sh执行完成"
+        # Windows系统SSH自动登录方案
+        echo "Windows系统SSH自动登录..."
+        
+        # 方案1: 使用PowerShell的SSH命令（推荐）
+        if command -v powershell >/dev/null 2>&1; then
+            echo "使用PowerShell SSH连接..."
+            powershell -Command "
+                \$session = New-SSHSession -ComputerName $LINUX_IP -Credential (New-Object System.Management.Automation.PSCredential('$LINUX_USER', (ConvertTo-SecureString '$LINUX_PWD' -AsPlainText -Force))) -AcceptKey \$true
+                if (\$session.Connected) {
+                    Invoke-SSHCommand -SessionId \$session.SessionId -Command 'cd \"$LINUX_P4O\" && sh ngnix.sh'
+                    Remove-SSHSession -SessionId \$session.SessionId | Out-Null
+                    Write-Host '远程服务器操作完成'
+                } else {
+                    Write-Host 'SSH连接失败'
+                }
+            "
+        # 方案2: 使用expect工具（如果已安装）
+        elif command -v expect >/dev/null 2>&1; then
+            echo "使用expect工具..."
+            expect << EOF
+                spawn ssh -o StrictHostKeyChecking=no $LINUX_USER@$LINUX_IP
+                expect "password:"
+                send "$LINUX_PWD\r"
+                expect "*$"
+                send "cd \"$LINUX_P4O\"\r"
+                expect "*$"
+                send "sh ngnix.sh\r"
+                expect "*$"
+                send "exit\r"
+                expect eof
 EOF
-        echo "远程服务器操作完成"
+            echo "远程服务器操作完成"
+        # 方案3: 使用plink（PuTTY工具）
+        elif command -v plink >/dev/null 2>&1; then
+            echo "使用plink工具..."
+            echo "y" | plink -ssh -pw "$LINUX_PWD" $LINUX_USER@$LINUX_IP "cd \"$LINUX_P4O\" && sh ngnix.sh"
+            echo "远程服务器操作完成"
+        else
+            echo "警告：未找到合适的自动登录工具"
+            echo "请选择以下方案之一："
+            echo "1. 安装PowerShell SSH模块: Install-Module -Name Posh-SSH"
+            echo "2. 安装expect工具（Windows版）"
+            echo "3. 安装PuTTY工具包（包含plink）"
+            echo "4. 手动登录服务器执行: cd $LINUX_P4O && sh ngnix.sh"
+        fi
     fi
     
     echo "\n=== 刷新CDN缓存 ==="
