@@ -102,6 +102,13 @@ if [ "$BUILD_HEXO" = true ]; then
     LINUX_PWD=$linux_pwd
     LINUX_P4O=$linux_p4o
     
+    # 打印环境变量值（用于调试）
+    echo "环境变量信息："
+    echo "linux_ip: $LINUX_IP"
+    echo "linux_user: $LINUX_USER"
+    echo "linux_pwd: [已设置]"  # 密码不直接显示
+    echo "linux_p4o: $LINUX_P4O"
+    
     # 检查环境变量是否设置
     if [ -z "$LINUX_IP" ] || [ -z "$LINUX_USER" ] || [ -z "$LINUX_PWD" ] || [ -z "$LINUX_P4O" ]; then
         echo "警告：缺少远程服务器环境变量，跳过远程操作"
@@ -109,19 +116,15 @@ if [ "$BUILD_HEXO" = true ]; then
     else
         echo "登录远程服务器: $LINUX_USER@$LINUX_IP"
         
-        # 使用sshpass登录远程服务器并执行命令
-        if command -v sshpass >/dev/null 2>&1; then
-            sshpass -p "$LINUX_PWD" ssh -o StrictHostKeyChecking=no $LINUX_USER@$LINUX_IP << EOF
-                cd "$LINUX_P4O"
-                echo "进入工作目录: $LINUX_P4O"
-                sh ngnix.sh
-                echo "nginx.sh执行完成"
+        # 使用ssh登录远程服务器并执行命令
+        echo "使用SSH登录远程服务器..."
+        ssh  $LINUX_USER@$LINUX_IP << EOF
+            cd "$LINUX_P4O"
+            echo "进入工作目录: $LINUX_P4O"
+            sh ngnix.sh
+            echo "nginx.sh执行完成"
 EOF
-            echo "远程服务器操作完成"
-        else
-            echo "警告：sshpass未安装，无法自动登录远程服务器"
-            echo "请手动登录服务器执行: cd $LINUX_P4O && sh ngnix.sh"
-        fi
+        echo "远程服务器操作完成"
     fi
     
     echo "\n=== 刷新CDN缓存 ==="
