@@ -92,8 +92,38 @@ git commit -m "$COMMIT_MSG"
 echo "\n=== 推送更改到远程仓库 ==="
 git push
 
-# 7. 如果构建了Hexo，刷新CDN缓存
+# 7. 如果构建了Hexo，执行远程服务器操作并刷新CDN缓存
 if [ "$BUILD_HEXO" = true ]; then
+    echo "\n=== 执行远程服务器操作 ==="
+    
+    # 从环境变量获取服务器信息
+    LINUX_IP=$linux_ip
+    LINUX_USER=$linux_user
+    LINUX_PWD=$linux_pwd
+    LINUX_P4O=$linux_p4o
+    
+    # 检查环境变量是否设置
+    if [ -z "$LINUX_IP" ] || [ -z "$LINUX_USER" ] || [ -z "$LINUX_PWD" ] || [ -z "$LINUX_P4O" ]; then
+        echo "警告：缺少远程服务器环境变量，跳过远程操作"
+        echo "需要设置的环境变量：linux_ip, linux_user, linux_pwd, linux_p4o"
+    else
+        echo "登录远程服务器: $LINUX_USER@$LINUX_IP"
+        
+        # 使用sshpass登录远程服务器并执行命令
+        if command -v sshpass >/dev/null 2>&1; then
+            sshpass -p "$LINUX_PWD" ssh -o StrictHostKeyChecking=no $LINUX_USER@$LINUX_IP << EOF
+                cd "$LINUX_P4O"
+                echo "进入工作目录: $LINUX_P4O"
+                sh ngnix.sh
+                echo "nginx.sh执行完成"
+EOF
+            echo "远程服务器操作完成"
+        else
+            echo "警告：sshpass未安装，无法自动登录远程服务器"
+            echo "请手动登录服务器执行: cd $LINUX_P4O && sh ngnix.sh"
+        fi
+    fi
+    
     echo "\n=== 刷新CDN缓存 ==="
     python refresh_cdn.py
 fi
