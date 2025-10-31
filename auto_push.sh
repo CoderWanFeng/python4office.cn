@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 自动打包、提交和推送脚本（优化版）
+# 自动打包、提交和推送脚本（优化修复版）
 # 根据最近修改的文件生成智能的commit信息
 
 # 参数处理
@@ -39,35 +39,33 @@ log() { $QUIET || echo "$@"; }
 
 log "=== 开始自动打包和推送流程 ==="
 
-# 1. Hexo构建优化（并行执行）
+# 1. Hexo构建优化（修复并行执行问题）
 if [ "$BUILD_HEXO" = true ]; then
     log "\n=== 构建Hexo网站 ==="
-    cd hexo/hexo
+    cd hexo/hexo || { log "错误: 无法进入hexo目录"; exit 1; }
     
     # 检查是否需要重新安装依赖（避免重复安装）
     if [ ! -d "node_modules" ] || [ "package.json" -nt "node_modules" ]; then
         log "安装依赖..."
-        yarn install --silent
+        yarn install --silent || { log "错误: 依赖安装失败"; exit 1; }
     else
         log "依赖已存在，跳过安装"
     fi
     
-    # 并行执行清理和构建
-    log "清理和构建..."
-    yarn run clean --silent &
-    CLEAN_PID=$!
+    # 修复并行执行问题：先清理再构建
+    log "清理..."
+    yarn run clean --silent || { log "警告: 清理失败，继续构建"; }
     
-    # 等待清理完成后再构建
-    wait $CLEAN_PID
-    yarn run build --silent
+    log "构建..."
+    yarn run build --silent || { log "错误: Hexo构建失败"; exit 1; }
     
     log "Hexo构建完成！"
-    cd ../..
+    cd ../.. || { log "错误: 无法返回上级目录"; exit 1; }
 fi
 
 # 2. 快速Git状态检查（避免不必要的git status输出）
 log "\n=== 检查Git状态 ==="
-if git diff-index --quiet HEAD -- 2>/dev/null && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+if git diff-index --quiet HEAD -- 2>/dev/null && [ -z "$(git ls-files --others --exclude-standard 2>/dev/null)" ]; then
     log "无文件变更，跳过提交"
     exit 0
 fi
@@ -106,13 +104,13 @@ log "生成的commit信息: $COMMIT_MSG"
 
 # 5. 批量Git操作（减少命令调用）
 log "\n=== 执行Git操作 ==="
-git add . >/dev/null 2>&1
-git commit -m "$COMMIT_MSG" >/dev/null 2>&1
-git push >/dev/null 2>&1
+git add . >/dev/null 2>&1 || { log "错误: git add失败"; exit 1; }
+git commit -m "$COMMIT_MSG" >/dev/null 2>&1 || { log "错误: git commit失败"; exit 1; }
+git push >/dev/null 2>&1 || { log "错误: git push失败"; exit 1; }
 
 log "Git操作完成"
 
-# 6. 远程操作优化（条件执行和并行处理）
+# 6. 远程操作优化（修复并行处理和错误处理）
 if [ "$BUILD_HEXO" = true ]; then
     log "\n=== 执行远程部署 ==="
     
@@ -126,40 +124,48 @@ if [ "$BUILD_HEXO" = true ]; then
     if [ -z "$LINUX_IP" ] || [ -z "$LINUX_USER" ] || [ -z "$LINUX_PWD" ] || [ -z "$LINUX_P4O" ]; then
         log "警告：缺少远程服务器环境变量，跳过远程操作"
     else
-        # 并行执行远程操作和CDN刷新
-        (
+        # 修复并行处理：使用更稳定的方式
+        remote_operation() {
             # SSH远程操作（优化连接）
             if command -v sshpass >/dev/null 2>&1; then
                 # Linux系统：使用sshpass（最快）
                 sshpass -p "$LINUX_PWD" ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no \
-                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>/dev/null
+                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>/dev/null && \
+                    log "远程服务器操作完成" || log "远程服务器操作失败"
             elif command -v powershell >/dev/null 2>&1; then
                 # Windows系统：优化PowerShell调用
                 powershell -Command "
                     \$ErrorActionPreference = 'SilentlyContinue'
-                    \$session = New-SSHSession -ComputerName $LINUX_IP -Credential (
-                        New-Object System.Management.Automation.PSCredential(
-                            '$LINUX_USER', 
-                            (ConvertTo-SecureString '$LINUX_PWD' -AsPlainText -Force)
-                        )
-                    ) -AcceptKey \$true -ConnectionTimeout 10
-                    if (\$session.Connected) {
-                        Invoke-SSHCommand -SessionId \$session.SessionId -Command 'cd \"$LINUX_P4O\" && sh ngnix.sh' | Out-Null
-                        Remove-SSHSession -SessionId \$session.SessionId | Out-Null
+                    try {
+                        Import-Module Posh-SSH -ErrorAction Stop
+                        \$cred = New-Object System.Management.Automation.PSCredential('$LINUX_USER', (ConvertTo-SecureString '$LINUX_PWD' -AsPlainText -Force))
+                        \$session = New-SSHSession -ComputerName '$LINUX_IP' -Credential \$cred -AcceptKey \$true -ConnectionTimeout 10
+                        if (\$session.Connected) {
+                            Invoke-SSHCommand -SessionId \$session.SessionId -Command 'cd \"$LINUX_P4O\" && sh ngnix.sh' | Out-Null
+                            Remove-SSHSession -SessionId \$session.SessionId | Out-Null
+                            Write-Host '远程服务器操作完成'
+                        } else {
+                            Write-Host 'SSH连接失败'
+                        }
+                    } catch {
+                        Write-Host 'PowerShell SSH模块未安装或连接失败'
                     }
                 " 2>/dev/null
+            else
+                log "警告：未找到合适的SSH工具"
             fi
-            log "远程服务器操作完成"
-        ) &
+        }
         
+        cdn_refresh() {
+            python refresh_cdn.py >/dev/null 2>&1 && \
+            log "CDN缓存刷新完成" || log "CDN缓存刷新失败"
+        }
+        
+        # 并行执行
+        remote_operation &
         REMOTE_PID=$!
         
-        # 并行执行CDN刷新
-        (
-            python refresh_cdn.py >/dev/null 2>&1
-            log "CDN缓存刷新完成"
-        ) &
-        
+        cdn_refresh &
         CDN_PID=$!
         
         # 等待所有后台任务完成
