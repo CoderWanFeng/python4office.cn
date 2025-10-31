@@ -52,19 +52,19 @@ if [ "$BUILD_HEXO" = true ]; then
     # 检查是否需要重新安装依赖（避免重复安装）
     if [ ! -d "node_modules" ] || [ "package.json" -nt "node_modules" ]; then
         log "安装依赖..."
-        yarn install --silent
+        yarn install --silent >/dev/null 2>&1
     else
         log "依赖已存在，跳过安装"
     fi
     
     # 并行执行清理和构建
     log "清理和构建..."
-    yarn run clean --silent &
+    yarn run clean --silent >/dev/null 2>&1 &
     CLEAN_PID=$!
     
     # 等待清理完成后再构建
     wait $CLEAN_PID
-    yarn run build --silent
+    yarn run build --silent >/dev/null 2>&1
     
     log "Hexo构建完成！"
     cd ../..
