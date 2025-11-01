@@ -303,6 +303,9 @@ if [ "$BUILD_HEXO" = true ]; then
             if [ $SSH_EXIT -eq 0 ]; then
                 check_status "SSH连接" 0
                 step_start "执行远程部署脚本"
+                if [ -n "$SSH_RESULT" ]; then
+                    log_verbose "远程脚本输出: $SSH_RESULT"
+                fi
                 check_status "远程部署" 0 "$SSH_RESULT"
             else
                 handle_error "SSH连接" $SSH_EXIT "$SSH_RESULT"
