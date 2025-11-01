@@ -117,7 +117,7 @@ echo
 echo "${MAGENTA}${BOLD}=== Git操作流程 ===${RESET}"
 
 step_start "检查Git仓库状态"
-if git diff-index --quiet HEAD -- 2>/dev/null && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+if git diff-index --quiet HEAD -- 2>/dev/null && [ -z "$(git ls-files --others --exclude-standard 2>/dev/null)" ]; then
     echo "${YELLOW}⚠ 无文件变更，跳过提交${RESET}"
     exit 0
 fi
@@ -128,8 +128,9 @@ step_start "分析文件变更"
 MODIFIED_FILES=$(git diff --name-only HEAD 2>/dev/null || echo "")
 UNTRACKED_FILES=$(git ls-files --others --exclude-standard 2>/dev/null || echo "")
 
-MODIFIED_COUNT=$(echo "$MODIFIED_FILES" | wc -l)
-UNTRACKED_COUNT=$(echo "$UNTRACKED_FILES" | wc -l)
+# 修复：正确计算文件行数，处理空输入情况
+MODIFIED_COUNT=$(echo "$MODIFIED_FILES" | grep -c . || echo "0")
+UNTRACKED_COUNT=$(echo "$UNTRACKED_FILES" | grep -c . || echo "0")
 
 if [ -n "$MODIFIED_FILES" ]; then
     log_verbose "修改的文件: $MODIFIED_COUNT 个"
@@ -188,11 +189,11 @@ echo "${GREEN}✓ Git操作流程完成${RESET}"
 echo
 echo "${MAGENTA}${BOLD}=== 远程部署流程 ===${RESET}"
 
-# 从环境变量获取服务器信息
-LINUX_IP=$linux_ip
-LINUX_USER=$linux_user
-LINUX_PWD=$linux_pwd
-LINUX_P4O=$linux_p4o
+# 从环境变量获取服务器信息（修复：使用正确的变量引用方式）
+LINUX_IP=${linux_ip}
+LINUX_USER=${linux_user}
+LINUX_PWD=${linux_pwd}
+LINUX_P4O=${linux_p4o}
 
 # 检查环境变量是否设置
 step_start "检查远程服务器配置"
@@ -211,23 +212,32 @@ else
         SSH_RESULT=""
         SSH_ERROR=""
         
+        # 显示详细的连接信息
+        log_verbose "准备连接到远程服务器..."
+        log_verbose "服务器地址: $LINUX_USER@$LINUX_IP"
+        log_verbose "远程目录: $LINUX_P4O"
+        log_verbose "执行脚本: ngnix.sh"
+        
         if command -v sshpass >/dev/null 2>&1; then
             # Linux系统：使用sshpass（最快）
             log_verbose "使用sshpass进行SSH连接"
+            log_verbose "SSH命令: sshpass -p '[密码]' ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $LINUX_USER@$LINUX_IP \"cd '$LINUX_P4O' && sh ngnix.sh\""
             SSH_RESULT=$(sshpass -p "$LINUX_PWD" ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no \
                 $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>&1)
             SSH_EXIT=$?
         elif command -v powershell >/dev/null 2>&1; then
             # Windows系统：优化PowerShell调用
             log_verbose "使用PowerShell进行SSH连接"
+            log_verbose "PowerShell命令: Start-Process ssh -ArgumentList @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', \"${LINUX_USER}@${LINUX_IP}\", \"cd '${LINUX_P4O}' && sh ngnix.sh\")"
             SSH_RESULT=$(powershell -Command "
                 \$ErrorActionPreference = 'SilentlyContinue'
                 try {
                     # 直接使用标准ssh命令，避免复杂的PowerShell模块
-                    \$process = Start-Process -NoNewWindow -PassThru -Wait ssh -ArgumentList @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', \"$LINUX_USER@$LINUX_IP\", \"cd '$LINUX_P4O' && sh ngnix.sh\") -WindowStyle Hidden
+                    \$sshArgs = @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', \"${LINUX_USER}@${LINUX_IP}\", \"cd '${LINUX_P4O}' && sh ngnix.sh\")
+                    \$process = Start-Process -NoNewWindow -PassThru -Wait ssh -ArgumentList \$sshArgs -WindowStyle Hidden
                     exit \$process.ExitCode
                 } catch {
-                    Write-Error 'PowerShell SSH连接失败'
+                    Write-Output 'PowerShell SSH连接失败: \$_.Exception.Message'
                     exit 1
                 }
             " 2>&1)
@@ -235,9 +245,19 @@ else
         else
             # 使用标准ssh（需要密钥认证）
             log_verbose "使用标准SSH连接"
+            log_verbose "SSH命令: ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $LINUX_USER@$LINUX_IP \"cd '$LINUX_P4O' && sh ngnix.sh\""
             SSH_RESULT=$(ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no \
                 $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>&1)
             SSH_EXIT=$?
+        fi
+        
+        # 显示详细的执行结果
+        log_verbose "SSH执行完成，退出码: $SSH_EXIT"
+        if [ -n "$SSH_RESULT" ]; then
+            log_verbose "SSH执行结果:"
+            echo "$SSH_RESULT" | while IFS= read -r line; do
+                log_verbose "  $line"
+            done
         fi
         
         if [ $SSH_EXIT -eq 0 ]; then
@@ -262,8 +282,13 @@ else
         else
             check_status "CDN脚本检查" 0
             step_start "执行CDN缓存刷新"
+            log_verbose "执行CDN刷新脚本: python refresh_cdn.py"
             CDN_RESULT=$(python refresh_cdn.py 2>&1)
             CDN_EXIT=$?
+            log_verbose "CDN刷新完成，退出码: $CDN_EXIT"
+            if [ -n "$CDN_RESULT" ]; then
+                log_verbose "CDN刷新结果: $CDN_RESULT"
+            fi
             if [ $CDN_EXIT -eq 0 ]; then
                 check_status "CDN刷新" 0 "$CDN_RESULT"
             else
@@ -289,10 +314,11 @@ else
         if [ $CDN_EXIT -ne 0 ]; then
             echo "${RED}✗ CDN刷新任务失败${RESET}"
         fi
+        # 修复：当并行任务失败时返回适当的错误码
+        exit 1
     fi
 fi
 
 echo
 echo "${GREEN}${BOLD}=== 流程完成 ===${RESET}"
 echo "${GREEN}✓ 自动Git提交、推送和远程部署完成！${RESET}"
-
