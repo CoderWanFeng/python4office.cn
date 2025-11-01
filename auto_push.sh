@@ -114,6 +114,8 @@ handle_error() {
     exit $exit_code
 }
 
+echo
+echo
 echo "${MAGENTA}${BOLD}=== 开始自动打包和推送流程 ===${RESET}"
 
 # 1. Hexo构建优化（并行执行）
@@ -145,17 +147,27 @@ if [ "$BUILD_HEXO" = true ]; then
     
     # 并行执行清理和构建
     step_start "清理Hexo缓存"
-    if yarn run clean 2>&1; then
+    HEXO_CLEAN_RESULT=$(yarn run clean 2>&1)
+    HEXO_CLEAN_EXIT=$?
+    if [ $HEXO_CLEAN_EXIT -eq 0 ]; then
         check_status "Hexo清理" 0
+        if [ -n "$HEXO_CLEAN_RESULT" ]; then
+            log_verbose "Hexo清理输出: $HEXO_CLEAN_RESULT"
+        fi
     else
-        handle_error "Hexo清理" $? "yarn run clean 执行失败"
+        handle_error "Hexo清理" $HEXO_CLEAN_EXIT "$HEXO_CLEAN_RESULT"
     fi
     
     step_start "构建Hexo网站"
-    if yarn run build 2>&1; then
+    HEXO_BUILD_RESULT=$(yarn run build 2>&1)
+    HEXO_BUILD_EXIT=$?
+    if [ $HEXO_BUILD_EXIT -eq 0 ]; then
         check_status "Hexo构建" 0
+        if [ -n "$HEXO_BUILD_RESULT" ]; then
+            log_verbose "Hexo构建输出: $HEXO_BUILD_RESULT"
+        fi
     else
-        handle_error "Hexo构建" $? "yarn run build 执行失败"
+        handle_error "Hexo构建" $HEXO_BUILD_EXIT "$HEXO_BUILD_RESULT"
     fi
     
     cd ../..
@@ -274,27 +286,12 @@ if [ "$BUILD_HEXO" = true ]; then
                 SSH_RESULT=$(powershell -Command "
                     \$ErrorActionPreference = 'SilentlyContinue'
                     try {
-                        # 首先尝试使用标准ssh命令
+                        # 直接使用标准ssh命令，避免复杂的PowerShell模块
                         \$process = Start-Process -NoNewWindow -PassThru -Wait ssh -ArgumentList @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', \"$LINUX_USER@$LINUX_IP\", \"cd '$LINUX_P4O' && sh ngnix.sh\") -WindowStyle Hidden
                         exit \$process.ExitCode
                     } catch {
-                        # 如果标准ssh失败，尝试Posh-SSH作为备选
-                        try {
-                            Import-Module Posh-SSH -ErrorAction SilentlyContinue
-                            \$cred = New-Object System.Management.Automation.PSCredential('$LINUX_USER', (ConvertTo-SecureString '$LINUX_PWD' -AsPlainText -Force))
-                            \$session = New-SSHSession -ComputerName '$LINUX_IP' -Credential \$cred -AcceptKey \$true -ConnectionTimeout 10
-                            if (\$session.Connected) {
-                                \$result = Invoke-SSHCommand -SessionId \$session.SessionId -Command 'cd \"$LINUX_P4O\" && sh ngnix.sh'
-                                Remove-SSHSession -SessionId \$session.SessionId
-                                Write-Output \$result.Output
-                            } else {
-                                Write-Error 'SSH连接失败'
-                                exit 1
-                            }
-                        } catch {
-                            Write-Error '所有SSH连接方法都失败'
-                            exit 1
-                        }
+                        Write-Error 'PowerShell SSH连接失败'
+                        exit 1
                     }
                 " 2>&1)
                 SSH_EXIT=$?
