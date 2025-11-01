@@ -272,23 +272,29 @@ if [ "$BUILD_HEXO" = true ]; then
                 # Windows系统：优化PowerShell调用
                 log_verbose "使用PowerShell进行SSH连接"
                 SSH_RESULT=$(powershell -Command "
-                    \$ErrorActionPreference = 'Continue'
+                    \$ErrorActionPreference = 'SilentlyContinue'
                     try {
-                        Import-Module Posh-SSH -ErrorAction SilentlyContinue
-                        \$cred = New-Object System.Management.Automation.PSCredential('$LINUX_USER', (ConvertTo-SecureString '$LINUX_PWD' -AsPlainText -Force))
-                        \$session = New-SSHSession -ComputerName '$LINUX_IP' -Credential \$cred -AcceptKey \$true -ConnectionTimeout 10
-                        if (\$session.Connected) {
-                            \$result = Invoke-SSHCommand -SessionId \$session.SessionId -Command 'cd \"$LINUX_P4O\" && sh ngnix.sh'
-                            Remove-SSHSession -SessionId \$session.SessionId
-                            Write-Output \$result.Output
-                        } else {
-                            Write-Error 'SSH连接失败'
-                            exit 1
-                        }
-                    } catch {
-                        # 如果Posh-SSH不可用，尝试使用标准ssh
+                        # 首先尝试使用标准ssh命令
                         \$process = Start-Process -NoNewWindow -PassThru -Wait ssh -ArgumentList @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', \"$LINUX_USER@$LINUX_IP\", \"cd '$LINUX_P4O' && sh ngnix.sh\") -WindowStyle Hidden
                         exit \$process.ExitCode
+                    } catch {
+                        # 如果标准ssh失败，尝试Posh-SSH作为备选
+                        try {
+                            Import-Module Posh-SSH -ErrorAction SilentlyContinue
+                            \$cred = New-Object System.Management.Automation.PSCredential('$LINUX_USER', (ConvertTo-SecureString '$LINUX_PWD' -AsPlainText -Force))
+                            \$session = New-SSHSession -ComputerName '$LINUX_IP' -Credential \$cred -AcceptKey \$true -ConnectionTimeout 10
+                            if (\$session.Connected) {
+                                \$result = Invoke-SSHCommand -SessionId \$session.SessionId -Command 'cd \"$LINUX_P4O\" && sh ngnix.sh'
+                                Remove-SSHSession -SessionId \$session.SessionId
+                                Write-Output \$result.Output
+                            } else {
+                                Write-Error 'SSH连接失败'
+                                exit 1
+                            }
+                        } catch {
+                            Write-Error '所有SSH连接方法都失败'
+                            exit 1
+                        }
                     }
                 " 2>&1)
                 SSH_EXIT=$?
