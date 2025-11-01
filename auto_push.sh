@@ -1,20 +1,15 @@
 #!/bin/bash
 
-# 自动打包、提交和推送脚本（详细状态版）
+# 自动Git提交和推送脚本（详细状态版）
 # 根据最近修改的文件生成智能的commit信息
 
 # 参数处理
-BUILD_HEXO=false
 QUIET=false
 VERBOSE=false
 
 # 解析命令行参数
 while [[ $# -gt 0 ]]; do
     case $1 in
-        --build-hexo|-b)
-            BUILD_HEXO=true
-            shift
-            ;;
         --quiet|-q)
             QUIET=true
             shift
@@ -26,7 +21,6 @@ while [[ $# -gt 0 ]]; do
         --help|-h)
             echo "用法: $0 [选项]"
             echo "选项:"
-            echo "  -b, --build-hexo    构建Hexo网站"
             echo "  -q, --quiet         静默模式，减少输出"
             echo "  -v, --verbose       详细模式，显示所有操作步骤和状态"
             echo "  -h, --help         显示帮助信息"
@@ -116,65 +110,9 @@ handle_error() {
 
 echo
 echo
-echo "${MAGENTA}${BOLD}=== 开始自动打包和推送流程 ===${RESET}"
+echo "${MAGENTA}${BOLD}=== 开始自动Git提交和推送流程 ===${RESET}"
 
-# 1. Hexo构建优化（并行执行）
-if [ "$BUILD_HEXO" = true ]; then
-    echo
-    echo "${MAGENTA}${BOLD}=== 构建Hexo网站 ===${RESET}"
-    
-    step_start "检查Hexo目录"
-    if [ ! -d "hexo/hexo" ]; then
-        handle_error "Hexo目录检查" 1 "hexo/hexo 目录不存在"
-    fi
-    cd hexo/hexo
-    check_status "Hexo目录检查" 0
-    
-    # 检查是否需要重新安装依赖（避免重复安装）
-    step_start "检查依赖状态"
-    if [ ! -d "node_modules" ] || [ "package.json" -nt "node_modules" ]; then
-        log_verbose "需要重新安装依赖"
-        step_start "安装依赖"
-        if yarn install --silent 2>&1; then
-            check_status "依赖安装" 0
-        else
-            handle_error "依赖安装" $? "yarn install 执行失败"
-        fi
-    else
-        log_verbose "依赖已存在，跳过安装"
-        check_status "依赖检查" 0 "依赖已存在"
-    fi
-    
-    # 并行执行清理和构建
-    step_start "清理Hexo缓存"
-    HEXO_CLEAN_RESULT=$(yarn run clean 2>&1)
-    HEXO_CLEAN_EXIT=$?
-    if [ $HEXO_CLEAN_EXIT -eq 0 ]; then
-        check_status "Hexo清理" 0
-        if [ -n "$HEXO_CLEAN_RESULT" ]; then
-            log_verbose "Hexo清理输出: $HEXO_CLEAN_RESULT"
-        fi
-    else
-        handle_error "Hexo清理" $HEXO_CLEAN_EXIT "$HEXO_CLEAN_RESULT"
-    fi
-    
-    step_start "构建Hexo网站"
-    HEXO_BUILD_RESULT=$(yarn run build 2>&1)
-    HEXO_BUILD_EXIT=$?
-    if [ $HEXO_BUILD_EXIT -eq 0 ]; then
-        check_status "Hexo构建" 0
-        if [ -n "$HEXO_BUILD_RESULT" ]; then
-            log_verbose "Hexo构建输出: $HEXO_BUILD_RESULT"
-        fi
-    else
-        handle_error "Hexo构建" $HEXO_BUILD_EXIT "$HEXO_BUILD_RESULT"
-    fi
-    
-    cd ../..
-    echo "${GREEN}✓ Hexo构建流程完成${RESET}"
-fi
-
-# 2. Git状态检查
+# 1. Git状态检查
 echo
 echo "${MAGENTA}${BOLD}=== Git操作流程 ===${RESET}"
 
@@ -246,117 +184,7 @@ fi
 
 echo "${GREEN}✓ Git操作流程完成${RESET}"
 
-# 6. 远程操作优化（条件执行和并行处理）
-if [ "$BUILD_HEXO" = true ]; then
-    echo
-    echo "${MAGENTA}${BOLD}=== 远程部署流程 ===${RESET}"
-    
-    # 从环境变量获取服务器信息
-    LINUX_IP=$linux_ip
-    LINUX_USER=$linux_user
-    LINUX_PWD=$linux_pwd
-    LINUX_P4O=$linux_p4o
-    
-    # 检查环境变量是否设置
-    step_start "检查远程服务器配置"
-    if [ -z "$LINUX_IP" ] || [ -z "$LINUX_USER" ] || [ -z "$LINUX_PWD" ] || [ -z "$LINUX_P4O" ]; then
-        echo "${YELLOW}⚠ 缺少远程服务器环境变量，跳过远程操作${RESET}"
-        echo "${YELLOW}需要设置: linux_ip, linux_user, linux_pwd, linux_p4o${RESET}"
-    else
-        check_status "服务器配置检查" 0 "IP: $LINUX_IP, 用户: $LINUX_USER"
-        
-        # 并行执行远程操作和CDN刷新
-        step_start "启动远程部署任务"
-        
-        # 远程服务器操作
-        (
-            step_start "建立SSH连接"
-            SSH_RESULT=""
-            SSH_ERROR=""
-            
-            if command -v sshpass >/dev/null 2>&1; then
-                # Linux系统：使用sshpass（最快）
-                log_verbose "使用sshpass进行SSH连接"
-                SSH_RESULT=$(sshpass -p "$LINUX_PWD" ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no \
-                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>&1)
-                SSH_EXIT=$?
-            elif command -v powershell >/dev/null 2>&1; then
-                # Windows系统：优化PowerShell调用
-                log_verbose "使用PowerShell进行SSH连接"
-                SSH_RESULT=$(powershell -Command "
-                    \$ErrorActionPreference = 'SilentlyContinue'
-                    try {
-                        # 直接使用标准ssh命令，避免复杂的PowerShell模块
-                        \$process = Start-Process -NoNewWindow -PassThru -Wait ssh -ArgumentList @('-o', 'ConnectTimeout=10', '-o', 'StrictHostKeyChecking=no', \"$LINUX_USER@$LINUX_IP\", \"cd '$LINUX_P4O' && sh ngnix.sh\") -WindowStyle Hidden
-                        exit \$process.ExitCode
-                    } catch {
-                        Write-Error 'PowerShell SSH连接失败'
-                        exit 1
-                    }
-                " 2>&1)
-                SSH_EXIT=$?
-            else
-                # 使用标准ssh（需要密钥认证）
-                log_verbose "使用标准SSH连接"
-                SSH_RESULT=$(ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no \
-                    $LINUX_USER@$LINUX_IP "cd '$LINUX_P4O' && sh ngnix.sh" 2>&1)
-                SSH_EXIT=$?
-            fi
-            
-            if [ $SSH_EXIT -eq 0 ]; then
-                check_status "SSH连接" 0
-                step_start "执行远程部署脚本"
-                if [ -n "$SSH_RESULT" ]; then
-                    log_verbose "远程脚本输出: $SSH_RESULT"
-                fi
-                check_status "远程部署" 0 "$SSH_RESULT"
-            else
-                handle_error "SSH连接" $SSH_EXIT "$SSH_RESULT"
-            fi
-        ) &
-        
-        REMOTE_PID=$!
-        
-        # CDN刷新操作
-        (
-            step_start "检查CDN刷新脚本"
-            if [ ! -f "refresh_cdn.py" ]; then
-                echo "${YELLOW}⚠ CDN刷新脚本不存在，跳过CDN刷新${RESET}"
-            else
-                check_status "CDN脚本检查" 0
-                step_start "执行CDN缓存刷新"
-                CDN_RESULT=$(python refresh_cdn.py 2>&1)
-                CDN_EXIT=$?
-                if [ $CDN_EXIT -eq 0 ]; then
-                    check_status "CDN刷新" 0 "$CDN_RESULT"
-                else
-                    handle_error "CDN刷新" $CDN_EXIT "$CDN_RESULT"
-                fi
-            fi
-        ) &
-        
-        CDN_PID=$!
-        
-        # 等待所有后台任务完成
-        step_start "等待并行任务完成"
-        wait $REMOTE_PID $CDN_PID 2>/dev/null
-        REMOTE_EXIT=$?
-        CDN_EXIT=$?
-        
-        if [ $REMOTE_EXIT -eq 0 ] && [ $CDN_EXIT -eq 0 ]; then
-            check_status "并行任务" 0 "所有任务执行完成"
-        else
-            if [ $REMOTE_EXIT -ne 0 ]; then
-                echo "${RED}✗ 远程部署任务失败${RESET}"
-            fi
-            if [ $CDN_EXIT -ne 0 ]; then
-                echo "${RED}✗ CDN刷新任务失败${RESET}"
-            fi
-        fi
-    fi
-fi
-
 echo
 echo "${GREEN}${BOLD}=== 流程完成 ===${RESET}"
-echo "${GREEN}✓ 自动打包、提交和推送完成！${RESET}"
+echo "${GREEN}✓ 自动Git提交和推送完成！${RESET}"
 
