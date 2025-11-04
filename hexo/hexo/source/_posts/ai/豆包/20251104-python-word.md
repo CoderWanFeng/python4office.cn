@@ -53,6 +53,8 @@ tags: 自动化办公
     <a href="http://www.python4office.cn/wechat-group/"> <img src="https://badgen.net/badge/join/%E4%BA%A4%E6%B5%81%E7%BE%A4?icon=atom&color=yellow"></a>
 </div>
 
+![word库](https://raw.gitcode.com/user-images/assets/5027920/417c757d-0369-4473-bcdd-f6a56c26c8a1/image.png 'image.png')
+
 <!-- more -->
 
 
@@ -60,6 +62,8 @@ tags: 自动化办公
 还在手动复制粘贴改Word格式？批量生成100份合同要熬到半夜？合并多份文档总出现格式错乱？别慌！Python里藏着5个处理Word的“神仙库”，从基础排版到批量生成、格式转换全搞定，打工人直接省出摸鱼时间！下面逐个拆解，按需取用～
 
 ## 一、python-docx：新手入门的“百搭款”
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/a8176309-3524-4787-8c1e-e78e4fb8ecf1/image.png 'image.png')
 
 划重点：Python处理Word入门首选，新手零门槛！
 
@@ -101,6 +105,8 @@ doc.save('自动化文档.docx')
 
 ## 二、Spire.Doc for Python：全格式兼容的“全能选手”
 
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/79d23f55-73fa-42ea-8956-68cd5c09c06a/image.png 'image.png')
+
 ### （一）啥场景需要它？
 
 Spire.Doc是全格式兼容专业库，支持.doc/.docx，无需Office，API全面，可创建、编辑、转换文档，提取图片、批注等细节，适配复杂需求。
@@ -136,6 +142,8 @@ doc.Close()
 
 ## 三、docxtpl：模板生成的“效率王者”
 
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/1fff7d75-2bf0-4a14-8919-24c4fc60030d/image.png 'image.png')
+
 ### （一）它有多香？批量生成文档神器
 
 docxtpl是批量文档生成神器，基于python-docx+Jinja2模板引擎，通过模板占位符（{{变量}}）填充数据，秒生成多份个性化文档，完美保留格式。
@@ -168,6 +176,8 @@ tpl.save('张三入职通知.docx')
 批量生成可循环数据列表，几秒完成百份文档。
 
 ## 四、pywin32：Windows专属的“终极操控者”
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/9fb1715f-6a14-42a0-9a78-657a05e20006/image.png 'image.png')
 
 ### （一）它的底气：直接操控Office本尊
 
@@ -210,6 +220,8 @@ print('转换完成！')
 关键：必须执行关闭/退出命令，避免后台残留进程。
 
 ## 五、docxcompose：文档合并专家
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/2dade4b1-4c13-47e4-9077-03ab08b1a027/image.png 'image.png')
 
 ### （一）专攻文档合并的“拼接大师”
 
