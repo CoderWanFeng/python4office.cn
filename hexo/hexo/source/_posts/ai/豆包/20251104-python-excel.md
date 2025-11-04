@@ -53,7 +53,7 @@ tags: 自动化办公
     <a href="http://www.python4office.cn/wechat-group/"> <img src="https://badgen.net/badge/join/%E4%BA%A4%E6%B5%81%E7%BE%A4?icon=atom&color=yellow"></a>
 </div>
 
-
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/4f517dd7-c189-4f62-b937-2e37aef2b96d/image.png 'image.png')
 
 
 <!-- more -->
@@ -65,6 +65,8 @@ tags: 自动化办公
 ## 一、openpyxl：.xlsx处理的“入门首选”
 
 openpyxl是Python处理Excel 2010+版本（.xlsx/.xlsm）的“入门界顶流”——纯Python开发，Windows、Mac、Linux都能用，API设计得清爽不绕弯，官方文档还带详细示例。新手花半小时跟着示例敲代码，就能搞定基础操作，日常办公的读写、改格式需求基本都能cover。
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/aa664ffc-bede-4660-a1a8-073cb8e83059/image.png 'image.png')
 
 ### 核心功能
 
@@ -115,6 +117,8 @@ wb.save("员工信息表.xlsx")
 
 xlrd和xlwt是处理“老古董”.xls文件的“黄金搭档”——分工超明确：xlrd负责读.xls数据，xlwt负责写.xls文件，再配个xlutils库，还能改已有.xls文件，完美解决旧格式兼容问题。重点提醒：xlrd 2.0以上版本不支持.xlsx，要处理旧文件得装1.2.0版本。
 
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/1a4ee732-8800-406c-bb78-2e656c2320c7/image.png 'image.png')
+
 ### 核心功能
 
 核心能力精准匹配旧格式：xlrd能读.xls的工作表、单元格数据，还能算出行数列数，按需加载工作表省内存；xlwt能新建.xls，写数据时加基础格式（加粗、边框），合并单元格也能用；xlutils就是“粘合剂”，让xlrd读的内容能通过xlwt修改。
@@ -155,6 +159,8 @@ for row in range(1, worksheet.nrows):
 ## 三、pandas：Excel数据处理的“效率王者”
 
 pandas虽不是专门为Excel设计的，但处理Excel批量数据的能力，堪称办公界的“天花板”！它能用“DataFrame”表格格式加载Excel数据，筛选、排序、汇总都是秒级完成，再搭openpyxl或xlrd当“引擎”，新旧格式都能搞定。
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/af7adb77-7ee0-4462-a73d-a09f4efac457/image.png 'image.png')
 
 ### 核心功能
 
@@ -200,6 +206,8 @@ print("汇总完成！直接打开‘季度销售汇总.xlsx’看结果～")
 ## 四、xlsxwriter：Excel格式美化的“颜值担当”
 
 xlsxwriter是Excel“颜值担当”——虽然不能读Excel文件，但做格式美化和图表的能力拉满！单元格格式、条件格式、数据验证都能精细控制，还能做折线图、柱状图这些专业图表，生成的Excel报表堪比专业排版，拿去给老板汇报超有面。
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/98e756d5-c245-488c-b8ca-b2d957e92bdf/image.png 'image.png')
 
 ### 核心功能
 
@@ -271,6 +279,8 @@ print("报表生成完成！打开‘业绩报表.xlsx’看效果～")
 ## 五、pywin32：Windows下的“全能操控手”
 
 pywin32是Windows用户的“Excel全能遥控器”——靠调用本地Microsoft Excel的COM接口干活，相当于用Python替你手动点鼠标操作Excel。所以Excel能做的事，它全能干，宏、密码保护、高级图表这些都不在话下，堪称“无上限”工具。
+
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/a9a65d37-6226-4b78-87c4-959433d261c3/image.png 'image.png')
 
 ### 核心功能
 
