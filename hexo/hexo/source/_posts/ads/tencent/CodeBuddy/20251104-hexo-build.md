@@ -1,7 +1,7 @@
 ---
 title: 用CodeBuddy CLI开发了几个脚本，太丝滑了
 date: 2025-10-31 00:24:04
-tags: deepseek
+tags: [CodeBuddy,vibecoding]
 ---
 
 
