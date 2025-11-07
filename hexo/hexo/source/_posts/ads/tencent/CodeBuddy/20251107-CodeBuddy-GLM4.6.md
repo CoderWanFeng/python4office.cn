@@ -41,7 +41,7 @@ tags: [CodeBuddy,vibecoding]
 
 
 
-
+![image.png](https://raw.gitcode.com/user-images/assets/5027920/b98e1092-23d0-4b5c-a157-6d22938d2aac/image.png 'image.png')
 
 <!-- more -->
 
@@ -51,7 +51,7 @@ tags: [CodeBuddy,vibecoding]
 
 ## 一、从Claude被封到挖到宝！我的CodeBuddy使用血泪史
 
-![Image](&resource_key=1fac43cb-17f4-462b-a6e0-cf04fd168733&resource_key=1fac43cb-17f4-462b-a6e0-cf04fd168733)
+
 
 ### （一）被国外工具卡脖子的日子，谁懂啊！
 
