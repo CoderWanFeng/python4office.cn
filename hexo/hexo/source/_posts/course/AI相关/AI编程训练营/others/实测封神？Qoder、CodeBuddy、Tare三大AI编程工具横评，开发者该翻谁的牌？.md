@@ -161,3 +161,70 @@ Qoder能快速“吃透”整个代码库，自动梳理依赖关系、找重构
 **通过我的邀请码使用Qoder，可以获得pro版的试用和1000积分，积分可以直接用于AI编程。**
 
 ![扫码领取](https://raw.gitcode.com/user-images/assets/5027920/4a2806c7-4ba8-4db0-bdfe-cdec209673a3/Snipaste_2025-11-10_23-30-15__2_.jpg 'Snipaste_2025-11-10_23-30-15 (2).jpg')
+
+
+
+## **关于作者**  
+
+我是程序员晚枫，985硕士，Python中国讲师，全网粉丝40w+，专注自动化办公6年！
+
+> 我的课程实用性强，操作简单，轻松上手。这4套课一定能让你学有所得！ 
+
+- B站视频教程：[官网发布：python-office库 | 专为Python自动化办公而生，一行代码提高办公效率 | 哪里不会点哪里，再也不用学习Python编程](https://www.bilibili.com/video/BV1pT4y1k7FH/?spm_id_from=333.1387.0.0&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+- Python中国大会：[非程序员如何学习和使用 Python-程序员晚枫-科技博主&开源作者](https://www.bilibili.com/video/BV1Y6qWYWEyQ/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+
+- [业余爱好者，如何从0开始快速掌握Python？](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
+
+
+
+<p align="center" id='CodeMaster-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw'>
+    <img src="https://cos.python-office.com/activity/CodeMaster-3.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+
+
+
+
+- [给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
+- [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
+- [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
+
+
+
+
+
+<p align="center" id='30讲自动化办公-banner'>
+    <a target="_blank" href='https://www.python-office.com/video/video.html'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    </a>   
+</p>
+
+<p align="center" id='15讲入门-banner'>
+    <a target="_blank" href='http://www.python-office.com/course-002/15-Python/15-Python.html'>
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/15%E8%AE%B2%E5%85%A5%E9%97%A8-%E6%A8%AA.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+---
+
+> 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
+
+![小红书：爱吃火锅的小明](https://raw.gitcode.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+
+
+![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
+
+![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+  
+
+![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+
+![滴滴红包](https://raw.gitcode.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+
+
