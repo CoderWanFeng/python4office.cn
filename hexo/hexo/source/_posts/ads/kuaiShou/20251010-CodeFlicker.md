@@ -60,20 +60,11 @@ CodeFlicker的发布，暴露了快手的野望：不满足做内容平台，要
 > 快手推出的AI原生IDE编程工具——CodeFlicker，加入AI IDE赛道。支持AI问答、代码补全、Agent编程，可实现端到端开发。提供Jam与Duet模式，兼顾氛围编程和企业级复杂需求。具备任务拆解、MCP集成、多源适配与上下文重塑能力。
 > 官网：https://www.codeflicker.ai/
 
-
-
-<p align="center" id='30讲自动化办公-banner'>
-    <a target="_blank" href='https://www.python-office.com/video/video.html'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+<p align="center" id='AI编程训练营'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg" width="200" height='500'/>
     </a>   
 </p>
-
-<p align="center" id='15讲入门-banner'>
-    <a target="_blank" href='http://www.python-office.com/course-002/15-Python/15-Python.html'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/15%E8%AE%B2%E5%85%A5%E9%97%A8-%E6%A8%AA.jpg" width="100%"/>
-    </a>   
-</p>
-
 
 ---
 

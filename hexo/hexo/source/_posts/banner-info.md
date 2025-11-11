@@ -177,9 +177,9 @@ tags: banner
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-  	<a href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-	<img src="https://img.shields.io/badge/QQ-163434413-orange"/>
-  </a>
+<a href="https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw">
+  <img src="https://img.shields.io/badge/加入-AI编程训练营-red" alt="AI编程训练营">
+</a>
     	<a href="http://www.python4office.cn/wechat-group/">
 	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
   </a>
@@ -187,7 +187,7 @@ tags: banner
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg" width="300" height='400'/>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg" width="200" height='500'/>
     </a>   
 </p>
 

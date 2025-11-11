@@ -5,27 +5,49 @@ tags: 微信群
 ---
 
 
+<p align="center">
+	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
+</p>
+
+
+
+
+
+<p align="center" name="gitcode">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
+	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+		<img src='https://gitcode.com/CoderWanFeng1/python-office/star/badge.svg?theme=dark' alt='gitcode star'/>
+	</a>	
+	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+<img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
+</a>
+<a href="https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw">
+  <img src="https://img.shields.io/badge/加入-AI编程训练营-red" alt="AI编程训练营">
+</a>
+    	<a href="http://www.python4office.cn/wechat-group/">
+	<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E4%BA%A4%E6%B5%81%E7%BE%A4-brightgreen"/>
+  </a>
+
+</p>
+
+
+
 ## 一、编程交流群
 
 
 你好，我是程序员晚枫。我提供的交流群有3个，有付费的、有免费的，您自己选，不搞割韭菜那一套。
 
-如需1对1咨询，你也可以 + 我的微信，点击直达👉[python-office](http://python4office.cn/wechat-qrcode/)
-
-如需学习资料：[零基础Python自动化办公，4套原创课程，一站式搞定！](https://www.python-office.com/guide/allFunc.html)
-
-业余时间做编程博主，同时维护了一个开源中国的推荐项目：[python-office](https://mp.weixin.qq.com/s/7aA0KoXGJuSFkTns-MZYjA)。
-
-这是一个Python自动化办公的功能库，有关这个库和我的经历，详见下面这几个资料：
-- [DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休](https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw)
-- [更新了3年的开源项目python-office，给我带来了什么？](https://mp.weixin.qq.com/s/fLz3W_rDHml6iR-bAgyFAw)
-- [有生之年！python-office被写进教材了？我也有百度百科词条了？](https://mp.weixin.qq.com/s/vYa790i1H9u63aLYrBsTuQ)
-
+如需学习AI编程，点击直达👉[AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)
 
 
 ### 1、Python交流群
 
-其一，只需要 **9元** 的技术大群，长期有效，目前400+人的技术大群有5个了：
+其一，只需要 **9元** 的技术大群，长期有效，目前400+人的技术大群有9个了：
 
 > ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=1)。
 
@@ -42,6 +64,15 @@ tags: 微信群
 **因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[python-office](http://www.python4office.cn/wechat-qrcode/)。
 
 > 免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
+
+
+
+我做编程博主，同时维护了一个开源中国的推荐项目：[python-office](https://mp.weixin.qq.com/s/7aA0KoXGJuSFkTns-MZYjA)。
+
+这是一个Python自动化办公的功能库，有关这个库和我的经历，详见下面这几个资料：
+- [DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休](https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw)
+- [更新了3年的开源项目python-office，给我带来了什么？](https://mp.weixin.qq.com/s/fLz3W_rDHml6iR-bAgyFAw)
+- [有生之年！python-office被写进教材了？我也有百度百科词条了？](https://mp.weixin.qq.com/s/vYa790i1H9u63aLYrBsTuQ)
 
 
 
