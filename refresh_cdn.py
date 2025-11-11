@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 腾讯云CDN域名刷新工具
-用于刷新 python4office.cn 域名的CDN缓存
+用于刷新域名的CDN缓存
 使用腾讯云官方Python SDK
 """
 
@@ -42,8 +42,10 @@ def refresh_cdn_cache():
         
         # 设置要刷新的URL列表
         urls = [
-            "https://python4office.cn/",
-            "https://www.python4office.cn/"
+            "http://python4office.cn/",
+            "http://www.python4office.cn/",
+            "https://www.python-office.com/",
+            "https://www.python-office.com/"
         ]
         req.Urls = urls
         
@@ -66,6 +68,7 @@ def main():
     """主函数"""
     print("=== 腾讯云CDN缓存刷新工具 ===")
     print(f"目标域名: python4office.cn")
+    print(f"目标域名: python-office.com")
     print()
     
     # 检查环境变量
