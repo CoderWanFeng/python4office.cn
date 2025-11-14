@@ -34,6 +34,11 @@ tags: 广告
 
 <!-- more -->
 
+
+大家好，这里是程序员晚枫。
+
+刷到一篇文章：[24小时快速入门大热语言Rust！学不会来找我](https://mp.weixin.qq.com/s/CkqyzHKarLmkWs0x963QOw)，我觉得Python应该也来一篇？
+
 ## 一、工欲善其事：Python 开发环境快速搭建
 
 ![Image](&resource_key=7b19f8e8-fe4b-40b7-a659-a25bfc6b8664&resource_key=7b19f8e8-fe4b-40b7-a659-a25bfc6b8664)
@@ -42,7 +47,9 @@ tags: 广告
 
 ### （一）最新版本 Python 下载指南
 
-2025 年，Python 的最新稳定版本是 Python 3.9，它已经全面支持 Windows、macOS、Linux 系统。大家可以从 Python 官方网站（[https://www.python.org/downloads/](https://www.python.org/downloads/) ）下载对应系统的安装包。如果你觉得官方下载速度慢，也可以试试国内的镜像站，比如清华开源软件镜像站（[https://mirrors.tuna.tsinghua.edu.cn/python/](https://mirrors.tuna.tsinghua.edu.cn/python/) ），下载速度那叫一个快，分分钟就能把安装包收入囊中！
+2025 年，Python 的最新稳定版本是 Python 3.14，它已经全面支持 Windows、macOS、Linux 系统。
+
+大家可以从 Python 官方网站（[https://www.python.org/downloads/](https://www.python.org/downloads/) ）下载对应系统的安装包。如果你觉得官方下载速度慢，也可以试试国内的镜像站，比如清华开源软件镜像站（[https://mirrors.tuna.tsinghua.edu.cn/python/](https://mirrors.tuna.tsinghua.edu.cn/python/) ），下载速度那叫一个快，分分钟就能把安装包收入囊中！
 
 Windows 用户在下载时，要注意选择 64 位的 exe 文件，这样才能充分发挥系统性能。macOS 用户就更简单啦，直接下载 pkg 安装包就行。Linux 用户呢，建议通过命令行工具安装，比如在 Ubuntu 系统中，打开终端，输入 “sudo apt-get install python3.9”，然后输入密码，等待安装完成即可，简单又高效。
 
