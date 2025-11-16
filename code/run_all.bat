@@ -1,70 +1,42 @@
 @echo off
-echo ===== Excelπ§æﬂ =====
-echo ‘À–– 01_excel_merge.exe
-start "" "E:\docs\code\py\python4office.cn\code\excel_tools\01_excel_merge.exe"
-pause
-echo ‘À–– 02_excel_filter.exe
-start "" "E:\docs\code\py\python4office.cn\code\excel_tools\02_excel_filter.exe"
-pause
-echo ‘À–– 03_excel_pivot.exe
-start "" "E:\docs\code\py\python4office.cn\code\excel_tools\03_excel_pivot.exe"
-pause
-echo ‘À–– 04_excel_chart.exe
-start "" "E:\docs\code\py\python4office.cn\code\excel_tools\04_excel_chart.exe"
-pause
-echo ‘À–– 05_excel_formula.exe
-start "" "E:\docs\code\py\python4office.cn\code\excel_tools\05_excel_formula.exe"
-pause
+echo ===== ‰ªéÁªü‰∏ÄÁõÆÂΩïÂêØÂä®ÊâÄÊúâÂ∑•ÂÖ∑ =====
+echo ÂèØÊâßË°åÊñá‰ª∂‰ΩçÁΩÆ: %~dp0exe\
 
-echo ===== Wordπ§æﬂ =====
-echo ‘À–– 06_word_replace.exe
-start "" "E:\docs\code\py\python4office.cn\code\word_tools\06_word_replace.exe"
-pause
-echo ‘À–– 07_word_merge.exe
-start "" "E:\docs\code\py\python4office.cn\code\word_tools\07_word_merge.exe"
-pause
-echo ‘À–– 08_word_to_pdf.exe
-start "" "E:\docs\code\py\python4office.cn\code\word_tools\08_word_to_pdf.exe"
-pause
-echo ‘À–– 09_word_report.exe
-start "" "E:\docs\code\py\python4office.cn\code\word_tools\09_word_report.exe"
-pause
-echo ‘À–– 10_word_table.exe
-start "" "E:\docs\code\py\python4office.cn\code\word_tools\10_word_table.exe"
-pause
+echo ===== ExcelÂ∑•ÂÖ∑ =====
+if exist "%~dp0exe\ExcelÂ∑•ÂÖ∑\*.exe" (
+    for %%f in ("%~dp0exe\ExcelÂ∑•ÂÖ∑\*.exe") do (
+        echo ËøêË°å %%~nf
+        start "" "%%f"
+        pause
+    )
+)
 
-echo ===== PDFπ§æﬂ =====
-echo ‘À–– 11_pdf_merge.exe
-start "" "E:\docs\code\py\python4office.cn\code\pdf_tools\11_pdf_merge.exe"
-pause
-echo ‘À–– 12_pdf_split.exe
-start "" "E:\docs\code\py\python4office.cn\code\pdf_tools\12_pdf_split.exe"
-pause
-echo ‘À–– 13_pdf_watermark.exe
-start "" "E:\docs\code\py\python4office.cn\code\pdf_tools\13_pdf_watermark.exe"
-pause
-echo ‘À–– 14_pdf_to_image.exe
-start "" "E:\docs\code\py\python4office.cn\code\pdf_tools\14_pdf_to_image.exe"
-pause
-echo ‘À–– 15_pdf_encrypt_decrypt.exe
-start "" "E:\docs\code\py\python4office.cn\code\pdf_tools\15_pdf_encrypt_decrypt.exe"
-pause
+echo ===== WordÂ∑•ÂÖ∑ =====
+if exist "%~dp0exe\WordÂ∑•ÂÖ∑\*.exe" (
+    for %%f in ("%~dp0exe\WordÂ∑•ÂÖ∑\*.exe") do (
+        echo ËøêË°å %%~nf
+        start "" "%%f"
+        pause
+    )
+)
 
-echo ===== ∆‰À˚π§æﬂ =====
-echo ‘À–– 16_file_rename.exe
-start "" "E:\docs\code\py\python4office.cn\code\other_tools\16_file_rename.exe"
-pause
-echo ‘À–– 17_email_send.exe
-start "" "E:\docs\code\py\python4office.cn\code\other_tools\17_email_send.exe"
-pause
-echo ‘À–– 18_image_process.exe
-start "" "E:\docs\code\py\python4office.cn\code\other_tools\18_image_process.exe"
-pause
-echo ‘À–– 19_data_clean.exe
-start "" "E:\docs\code\py\python4office.cn\code\other_tools\19_data_clean.exe"
-pause
-echo ‘À–– 20_auto_task.exe
-start "" "E:\docs\code\py\python4office.cn\code\other_tools\20_auto_task.exe"
-pause
-echo À˘”–π§æﬂ“—∆Ù∂Ø
+echo ===== PDFÂ∑•ÂÖ∑ =====
+if exist "%~dp0exe\PDFÂ∑•ÂÖ∑\*.exe" (
+    for %%f in ("%~dp0exe\PDFÂ∑•ÂÖ∑\*.exe") do (
+        echo ËøêË°å %%~nf
+        start "" "%%f"
+        pause
+    )
+)
+
+echo ===== ÂÖ∂‰ªñÂ∑•ÂÖ∑ =====
+if exist "%~dp0exe\ÂÖ∂‰ªñÂ∑•ÂÖ∑\*.exe" (
+    for %%f in ("%~dp0exe\ÂÖ∂‰ªñÂ∑•ÂÖ∑\*.exe") do (
+        echo ËøêË°å %%~nf
+        start "" "%%f"
+        pause
+    )
+)
+
+echo ÊâÄÊúâÂ∑•ÂÖ∑Â∑≤ÂêØÂä®
 pause

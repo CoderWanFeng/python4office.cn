@@ -76,7 +76,27 @@ except subprocess.CalledProcessError:
 
 # 为每个脚本创建打包命令
 build_commands = []
-output_dir = os.path.join(current_dir, "dist")
+
+# 统一输出目录 - 所有可执行文件将放在这里
+output_dir = os.path.join(current_dir, "exe")
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# 按工具类型创建子目录以保持组织结构
+tool_subdirs = {
+    "excel_tools": "Excel工具",
+    "word_tools": "Word工具", 
+    "pdf_tools": "PDF工具",
+    "other_tools": "其他工具"
+}
+
+# 为每个工具类型创建子目录
+for subdir, display_name in tool_subdirs.items():
+    subdir_path = os.path.join(output_dir, display_name)
+    if not os.path.exists(subdir_path):
+        os.makedirs(subdir_path)
+        print(f"创建目录: {subdir_path}")
+
 spec_dir = os.path.join(current_dir, "build")
 
 for script in script_files:
@@ -116,11 +136,16 @@ for i, (script_name, script_dir, cmd) in enumerate(build_commands):
         # 恢复原始目录
         os.chdir(original_dir)
         
-        # 移动可执行文件到脚本所在目录
+        # 确定目标子目录
+        tool_type = os.path.basename(script_dir)
+        display_subdir = tool_subdirs.get(tool_type, "其他工具")
+        target_subdir = os.path.join(output_dir, display_subdir)
+        
+        # 移动可执行文件到统一的exe目录下的相应子目录
         ext = ".exe" if sys.platform == "win32" else ""
         exe_path = os.path.join(output_dir, f"{script_name}{ext}")
         if os.path.exists(exe_path):
-            target_path = os.path.join(script_dir, f"{script_name}{ext}")
+            target_path = os.path.join(target_subdir, f"{script_name}{ext}")
             if os.path.exists(target_path):
                 os.remove(target_path)
             shutil.move(exe_path, target_path)
@@ -149,8 +174,12 @@ fail_count = 0
 
 for script in script_files:
     script_name = os.path.splitext(os.path.basename(script))[0]
+    script_dir = os.path.dirname(script)
+    tool_type = os.path.basename(script_dir)
+    display_subdir = tool_subdirs.get(tool_type, "其他工具")
+    
     ext = ".exe" if sys.platform == "win32" else ""
-    target_path = os.path.join(os.path.dirname(script), f"{script_name}{ext}")
+    target_path = os.path.join(output_dir, display_subdir, f"{script_name}{ext}")
     
     if os.path.exists(target_path):
         success_count += 1
@@ -253,5 +282,5 @@ else:  # Linux
     os.chmod(os.path.join(current_dir, "run_all.sh"), 0o755)
     print("\n创建启动脚本: run_all.sh")
 
-print("\n打包完成！所有可执行文件已保存到相应的工具目录中。")
+print(f"\n打包完成！所有可执行文件已统一保存到: {output_dir}")
 print("您可以使用 run_all.bat (Windows) 或 run_all.sh (macOS/Linux) 启动所有工具。")
