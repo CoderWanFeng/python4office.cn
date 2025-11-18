@@ -199,7 +199,7 @@ pdfrw本身不擅长“原创”，但**却是ReportLab的“黄金搭档”！*
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg" width="200" height='500'/>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg" width="400" height='1000'/>
     </a>   
 </p>
 
