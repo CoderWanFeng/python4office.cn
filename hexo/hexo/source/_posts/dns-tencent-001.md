@@ -51,7 +51,7 @@ tags: [DNS,腾讯云,GitHub]
 
 ​``每位程序员和技术爱好者，想必都想搭建一个属于自己的个人网站吧？``
 
-我自己使用【腾讯云DNS解析 + GitHub Pages】，免费创建了一个个人网站：[www.python-office.com](http://www.python-office.com)
+我自己使用【腾讯云DNS解析 + GitHub Pages】，免费创建了一个个人网站：[www.python-office.com](https://www.python-office.com)
 今天我就给大家分享一下，我的具体操作步骤，小白也能看得懂~
 
 <!-- more -->

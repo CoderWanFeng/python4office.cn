@@ -60,7 +60,7 @@ tags: 1v1
 
 ## 3. 30讲 · Python数据分析
 
-- 视频：[点我直达](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
+- 视频：[点我直达](https://www.python-office.com/course-002/30-Excel/30-Excel.html)
 - 资料：https://pan.quark.cn/s/23dd665febe2
 
 

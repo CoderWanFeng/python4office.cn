@@ -21,7 +21,7 @@ tags: [python,下载]
 
 ## 视频合集
 
-- 链接直达：[【30讲】Excel自动化办公之Pandas](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
+- 链接直达：[【30讲】Excel自动化办公之Pandas](https://www.python-office.com/course-002/30-Excel/30-Excel.html)
 
 
 ## 课程答疑群

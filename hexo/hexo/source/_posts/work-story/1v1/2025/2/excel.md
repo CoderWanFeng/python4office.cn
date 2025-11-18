@@ -17,7 +17,7 @@ tags: 1v1
 
 给小白的《15讲 · Python入门课》
 
-http://www.python-office.com/course-002/15-Python/15-Python.html
+https://www.python-office.com/course-002/15-Python/15-Python.html
 
 2、50讲自动化办公：跟着做1遍
 

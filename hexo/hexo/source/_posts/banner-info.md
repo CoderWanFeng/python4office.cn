@@ -39,7 +39,7 @@ tags: banner
 </p>
 
 <p align="center" id='15讲入门-banner'>
-    <a target="_blank" href='http://www.python-office.com/course-002/15-Python/15-Python.html'>
+    <a target="_blank" href='https://www.python-office.com/course-002/15-Python/15-Python.html'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/15%E8%AE%B2%E5%85%A5%E9%97%A8-%E6%A8%AA.jpg" width="100%"/>
     </a>   
 </p>
@@ -272,7 +272,7 @@ tags: banner
 - [给小白的《10讲 · Python微信机器人》](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
 - [给小白的《5讲 · Python实现文字批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
 - [给小白的《6讲 · Python自动收发邮件》](https://mp.weixin.qq.com/s/AeTkloNri7gpk25m50VmTA)
-- [给小白的《30讲 · Python + Excel数据分析》](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
+- [给小白的《30讲 · Python + Excel数据分析》](https://www.python-office.com/course-002/30-Excel/30-Excel.html)
 - [给小白的《10讲 · Python + PDF 自动化办公》](https://mp.weixin.qq.com/s/nAQnTcWfQiE3RYXvaauT-w)
 - [Python学习交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 - [零基础Python自动化办公，一站式搞定！](https://mp.weixin.qq.com/s/XDOMnTISBpglNvSf4R-tmg)

@@ -173,8 +173,8 @@ GitHub 项目地址：[https://github.com/CoderWanFeng/popdf](https://github.com
 - [给小白的《10讲 · Python微信机器人》](https://mp.weixin.qq.com/s/-oR2dUakXEY3vmPbzVtrnA)
 - [给小白的《5讲 · Python实现文字批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
 - [给小白的《6讲 · Python自动收发邮件》](https://mp.weixin.qq.com/s/AeTkloNri7gpk25m50VmTA)
-- [给小白的《30讲 · Python + Excel数据分析》](http://www.python-office.com/course-002/30-Excel/30-Excel.html)
-- [给小白的《10讲 · Python + PDF 自动化办公》](http://www.python-office.com/course-002/10-popdf/10-popdf.html)
+- [给小白的《30讲 · Python + Excel数据分析》](https://www.python-office.com/course-002/30-Excel/30-Excel.html)
+- [给小白的《10讲 · Python + PDF 自动化办公》](https://www.python-office.com/course-002/10-popdf/10-popdf.html)
 - [Python学习交流群](https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw)
 - [零基础Python自动化办公，一站式搞定！](https://mp.weixin.qq.com/s/XDOMnTISBpglNvSf4R-tmg)
 
