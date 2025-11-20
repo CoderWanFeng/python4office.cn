@@ -32,9 +32,26 @@ tags: 原创课程
 ![](https://cos.python-office.com/wechat/wechat.jpg)
 # 读者福利
 
+## AI编程
+
+2025年底，我更新了一套全新的课程：[给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，大家对编程、AI感兴趣，一定要来看看。
+
+> 购买了50讲自动化办公的朋友，长期都是149加入！！扫码下图加我，备注：老用户
+
+<p align="center" id='AI编程训练营'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg" width="400" height='1000'/>
+    </a>   
+</p>
+
+
+## 互联网羊毛
+
 做了几年自媒体了，整理了一些互联网撸羊毛的方法，长期有效。👇
 
 [点我领福利](http://python4office.cn/sideline-pro-list/)
+
+
 
 # Vlog
 
