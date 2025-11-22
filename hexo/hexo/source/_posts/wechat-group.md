@@ -5,6 +5,8 @@ tags: 微信群
 ---
 
 
+![AI编程-横](https://raw.gitcode.com/user-images/assets/5027920/7429d22d-2e89-4333-8305-e0352ae7a344/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
+
 <p align="center">
 	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
 </p>
@@ -73,13 +75,14 @@ tags: 微信群
 - [DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休](https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw)
 - [更新了3年的开源项目python-office，给我带来了什么？](https://mp.weixin.qq.com/s/fLz3W_rDHml6iR-bAgyFAw)
 - [有生之年！python-office被写进教材了？我也有百度百科词条了？](https://mp.weixin.qq.com/s/vYa790i1H9u63aLYrBsTuQ)
+- [AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)
 
 
 
 
 ### 2、纯小白群
 
-- 其二，下面是免费的小白群，目前有**69个**了：想白嫖学习群的也可以扫码加入下方的免费交流群：和**白嫖的同学们**交流~
+- 其二，下面是免费的小白群，目前有**89个**了：想白嫖学习群的也可以扫码加入下方的免费交流群：和**白嫖的同学们**交流~
 这个微信群：主要用来**领取学习资料 + 和小白交流**，不会私信任何人，如果有广告，请私信群主移除。
 
 
