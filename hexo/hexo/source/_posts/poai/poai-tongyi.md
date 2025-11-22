@@ -49,7 +49,7 @@ tags: [人工智能,chatgpt]
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai%2Fchatgpt%2Fcover.jpg)
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
 
 最近ChatGPT火爆全球，哪怕你不是程序员，应该也听过他的大名了。
 

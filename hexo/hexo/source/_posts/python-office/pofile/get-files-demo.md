@@ -7,7 +7,7 @@ tags: 自动化办公
 
 
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
 
 GitHub上有个开源项目：**python-office**，是专门用来自动化办公的Python第三方库。
 

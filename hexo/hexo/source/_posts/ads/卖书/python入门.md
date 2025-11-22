@@ -4,7 +4,7 @@ date: 2025-11-14 00:24:04
 tags: 广告
 ---
 
-![AI编程-横](https://raw.gitcode.com/user-images/assets/5027920/7429d22d-2e89-4333-8305-e0352ae7a344/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
+![扫码查看AI编程训练营](https://raw.gitcode.com/user-images/assets/5027920/7429d22d-2e89-4333-8305-e0352ae7a344/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
 
 
 
@@ -35,7 +35,7 @@ tags: 广告
 <!-- more -->
 
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
 
 刷到一篇文章：[24小时快速入门大热语言Rust！学不会来找我](https://mp.weixin.qq.com/s/CkqyzHKarLmkWs0x963QOw)，我觉得Python应该也来一篇？
 

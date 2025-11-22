@@ -7,7 +7,7 @@ tags:
 
 学习pandas应该看哪本书？pandas创始人，推荐了1本《利用Python进行数据分析》
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
 
 我最近在原创一个系列👉[pandas玩转excel，从入门到精通](https://mp.weixin.qq.com/s/YkON0ROI7WPt0EefGYSEpg)
 

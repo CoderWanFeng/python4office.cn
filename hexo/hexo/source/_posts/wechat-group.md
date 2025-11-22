@@ -5,7 +5,7 @@ tags: 微信群
 ---
 
 
-![AI编程-横](https://raw.gitcode.com/user-images/assets/5027920/7429d22d-2e89-4333-8305-e0352ae7a344/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
+![扫码查看AI编程训练营](https://raw.gitcode.com/user-images/assets/5027920/7429d22d-2e89-4333-8305-e0352ae7a344/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
 
 <p align="center">
 	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈

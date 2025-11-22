@@ -46,7 +46,7 @@ tags: [第三方库,pyinstaller]
 
 
 
-大家好，这里是程序员晚枫，全网同名。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，全网同名。
 
 
 ——用 GitHub Actions 在 5 分钟内同时产出 Win / macOS / Linux 三系统可执行文件

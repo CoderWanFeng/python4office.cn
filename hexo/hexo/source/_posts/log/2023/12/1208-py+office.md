@@ -6,7 +6,7 @@ tags: 自动化办公
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/python-office/1209-py-office/cover.jpg)
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
 
 在小破站账号：Python自动化办公社区，更新Python教程4年多了。
 
