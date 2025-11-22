@@ -110,6 +110,6 @@ tags:
 
 
 如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg)
+![](https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
 
 

@@ -106,7 +106,7 @@ tags: 微信群
 我是山东人，不靠坑人挣钱，但是我每天上班真的很累了，也请不要白嫖我。觉得我提供不了帮助，看看我的短视频也好。感谢理解。❤
 
 
-![](https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg)
+![](https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
 
 
 

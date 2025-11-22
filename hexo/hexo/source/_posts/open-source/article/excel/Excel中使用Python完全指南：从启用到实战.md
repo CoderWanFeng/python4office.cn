@@ -182,7 +182,7 @@ Excel 中的 Python 不能直接读取本地文件（如 `pandas.read_excel` 禁
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg" width="400" height='1000'/>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
 
@@ -205,7 +205,7 @@ Excel 中的 Python 不能直接读取本地文件（如 `pandas.read_excel` 禁
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg" width="400" height='1000'/>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
 

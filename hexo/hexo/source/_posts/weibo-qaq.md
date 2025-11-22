@@ -9,7 +9,7 @@ tags: 联系我
 因为自己本职是打工人时间精力有限，所以提供有偿答疑学习服务，2种形式。
 
 如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://raw.gitcode.com/user-images/assets/5027920/37faf76f-4628-4765-9ec7-7798f9ae0087/极简AI编程.jpg)
+![](https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
 
 如果觉得我的经验和知识一文不值，可以继续看我的文章和视频，信任我了再来找我：
 - [#公众号：Python自动化办公社区](https://mp.weixin.qq.com/s/QhaUoB7Q4CJHR29uD6JSHQ)
