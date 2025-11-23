@@ -32,8 +32,101 @@ tags: [AI编程]
 
 ![扫码查看AI编程训练营](https://raw.gitcode.com/user-images/assets/5027920/7429d22d-2e89-4333-8305-e0352ae7a344/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
 
-如周五的直播所说，Qoder、CodeBuddy、Tare这些AI编程工具，都只能调用单一的大模型，如果想调用更
-https://cloud.siliconflow.cn/i/ciS03HX7
+
+
+![一个方法解决](https://raw.gitcode.com/user-images/assets/5027920/98883964-37a0-43b1-9121-f9054ed6345a/厂商合作__1_.jpg '厂商合作 (1).jpg')
+
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
+
+如周五的直播所说，[Qoder、CodeBuddy、Tare](https://mp.weixin.qq.com/s/wgvhnONoyCGEMH0IeQv6Wg)这些AI编程工具，都只能调用单一的大模型。
+
+比如[Qoder](https://mp.weixin.qq.com/s/y4HGSni6q65WWkegFS48WA)是阿里开发的，你只能用阿里的大模型，它的优缺点你都要接受。
+
+但是如果你想调用更多大模型：
+
+- 体验一些小众的、爆火的、专用的、或者国外的大模型。比如最近大火的``MiniMax、kimi-k2``
+- 当你在做一个复杂的项目时，想在不同场景下使用不同的大模型。比如文件识别你想用``deepseek-ocr``，agent开发你想用qwen。
+- 或者想对各种不同的大模型做一个测试，找到最适合自己的模型产品。
+
+那么今天的文章你一定对你有用：通过一个简单的方法，就可以调用全部你想用的大模型，而不再局限于哪一家的产品。
+
+![模型广场持续更新...](https://raw.gitcode.com/user-images/assets/5027920/ce6b5a84-854c-416c-9ed0-90a8c71677e5/image.png 'image.png')
+
+## 实操步骤
+
+> 这个方法的原理也不神秘，就是通过vscode的插件：[cline](https://cline.bot/)
+
+### 1.注册账号
+
+点击我的专属链接，可以免费获取2000万tokens：
+
+- [点我注册领取](https://cloud.siliconflow.cn/i/ciS03HX7)
+
+手机用户也可以直接扫码：
+
+
+![2000万tokens](https://raw.gitcode.com/user-images/assets/5027920/7213612f-3e76-4e23-ba43-ac48110f02e2/厂商合作.jpg '厂商合作.jpg')
+
+注册后，获取API密钥，如下图所示：
+
+![这里的密钥，下面的插件要用](https://raw.gitcode.com/user-images/assets/5027920/4490bc51-d35f-4129-a1ed-2bf715219a5c/image.png 'image.png')
+
+
+
+### 2. 安装 Cline 插件
+
+- 打开 VSCode，没有vscode的朋友请加我微信：wfdev7，加入我的[AI编程训练营](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，我都会提供：下载和安装教程。
+- 点击左侧的扩展图标（或使用快捷键 Ctrl/command+Shift+X）。
+- 在搜索框中输入 Cline，找到对应的插件并点击 安装。
+
+![install](https://raw.gitcode.com/user-images/assets/5027920/6e622b45-2fd5-4c26-bae9-d88b3852be29/image.png 'image.png')
+
+
+### 3.配置cline
+
+安装完成后，点击 VSCode 左侧的 Cline 插件图标（机器人头像）。
+在插件界面中，点击 设置（齿轮图标）。
+
+在设置页面中，进行以下配置：
+- API Provider：选择 OpenAI Compatible。
+- Base URL：填写 https://api.siliconflow.cn/v1。
+- API Key：粘贴你在第一步的平台中复制的 API Key。
+- Model ID：去硅基流动的模型广场选择你想要使用的模型，这里有疑问的，可以看我们[AI编程训练营](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)的视频。
+
+配置完成后，点击 Done 保存设置。
+
+![前3个都是固定的](https://raw.gitcode.com/user-images/assets/5027920/189dfcae-d144-4d1e-84eb-cd5970e375f0/image.png 'image.png')
+
+
+### 4.测试效果
+
+以上配置好以后，就可以使用了。
+
+![直接输入你的命令](https://raw.gitcode.com/user-images/assets/5027920/34a13183-cfa3-466b-a373-d442f16cc96f/image.png 'image.png')
+
+
+**接下来，就自由的体验你的AI之旅吧！**
+
+### 相关阅读
+
+- [我用AI写了一个发票批量识别软件，免费分享给大家](https://mp.weixin.qq.com/s/1V6w9CjQV8S8z8NRSc3L_w)
+- [我决定用AI重写这个34.7万次下载的Python库](https://mp.weixin.qq.com/s/4-spiPBgTKMu--Uw8yWQ8A)
+- [从300万行优化到30万行：我是如何让AI自动统计代码行数的？](https://mp.weixin.qq.com/s/g_dXsJWilWWubgwvHFTgbA)
+
+
+
+## 关于AI编程训练营
+
+接下来我的账号会转向**以AI编程为中心，分享和AI有关的内容**。
+
+和2019年做自动化办公，录制了一套自动化办公的教程，并且围绕这套教程更新了接近5年类似。我也在整理了自己的经验后，打造了一套全新的课程：**给小白的《12讲 · AI编程训练营》**。
+
+- 面向小白：不需要会编程，因为AI本来就是为了解放大脑，加入以后，我会循序渐进的带大家学习AI编程
+- 项目为主：这也是我一直以来的风格，**大家都不是深入研究大模型的，用的溜更重要，对吧？**
+- 内容详实：从必备的原理到实践，从文档到视频、软件，有关AI编程有关的，我能接触到的所有内容，我都会制作分享
+- 特色内容：**BAT的合作资源，各家大厂的AI福利，我作为一个编程博主都能拿到的**，作为这套核心课程的学员，我也会毫无保留的分享
+
+以下是这次课程的目录（只展示主干必学部分）：
 
 
 <p align="center" id='AI编程训练营'>
@@ -44,8 +137,116 @@ https://cloud.siliconflow.cn/i/ciS03HX7
 
 
 
+目前计划的课程价格是299元。预售价格是直接5折：149元，我留的30个名额已经秒没了。
+
+这也是我接下来的重点破局项目，现在价格是涨到了**199元**，最后再来20个名额后就恢复原价299了。大家想学习就加直接我微信：**wfdev7**，备注：AI编程
+
+
+
+
+<p align="center" id='30个名额'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/71bd2ff3-ac85-43a4-8288-164cc66e119d/image.png" width="350" height='600'/>
+    </a>   
+</p>
+
+
+
+
+<p align="center" id='老粉的认可'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/6d5a3b73-0367-455a-ab69-4b47ca2646af/image.png" width="350" height='600'/>
+    </a>   
+</p>
+
+<p align="center" id='学习群的氛围'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
+    </a>   
+</p>
+
+## 常见问题
+
+Q：不会编程可以学吗？
+A：可以学习，我的粉丝大多是编程小白。
+
+Q：学习形式是什么？
+A：按顺序看视频，边学边练。文档用来扩展知识，课程群用来分享资料和答疑。
+
+Q：老粉丝有其他优惠吗？
+A：我所有付过费的老粉丝，都有额外的降价优惠，最低我也会送一本书，作为再次支持的感谢。如果是已经购买了这套课程，再想学其它课程，也会有专属的优惠。
+
+Q：有其他更高级的课程吗？
+A：我后续打算还会出：AI编程出海、智能体、工作流、AI创作营，都会以本次的AI编程为基础。
+
+
+
+
+
+
+
 
 
 #### 联系我
 
 有任何问题，欢迎联系我的微信👉[python-office](http://www.python4office.cn/wechat-qrcode/)
+
+
+
+
+## **关于作者**  
+
+我是程序员晚枫，985硕士，Python中国讲师，全网粉丝40w+，专注自动化办公6年！
+
+> 我的课程实用性强，操作简单，轻松上手。这4套课一定能让你学有所得！ 
+
+- B站视频教程：[官网发布：python-office库 | 专为Python自动化办公而生，一行代码提高办公效率 | 哪里不会点哪里，再也不用学习Python编程](https://www.bilibili.com/video/BV1pT4y1k7FH/?spm_id_from=333.1387.0.0&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+- Python中国大会：[非程序员如何学习和使用 Python-程序员晚枫-科技博主&开源作者](https://www.bilibili.com/video/BV1Y6qWYWEyQ/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+
+- [业余爱好者，如何从0开始快速掌握Python？](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
+
+
+
+<p align="center" id='CodeMaster-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw'>
+    <img src="https://cos.python-office.com/activity/CodeMaster-3.jpg" width="100%"/>
+    </a>   
+</p>
+
+
+
+
+
+
+
+- [给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
+- [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
+- [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
+- [给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)
+
+
+
+<p align="center" id='AI编程训练营'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
+    </a>   
+</p>
+
+---
+
+> 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
+
+![小红书：爱吃火锅的小明](https://raw.gitcode.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+
+
+![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
+
+![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+  
+
+![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+
+![滴滴红包](https://raw.gitcode.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+
+
