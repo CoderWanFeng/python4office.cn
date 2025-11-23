@@ -6,7 +6,7 @@ tags:
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，[http://www.python4office.cn/wechat-qrcode/Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，[http://www.python4office.cn/wechat-qrcode/Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
 
 昨晚收到一个常见的星球提问，今天来详细回复一下。
 

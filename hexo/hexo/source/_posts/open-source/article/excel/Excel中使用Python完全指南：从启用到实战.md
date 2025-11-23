@@ -34,7 +34,7 @@ tags: 自动化办公
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw">
+<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
   <img src="https://img.shields.io/badge/加入-AI编程训练营-red" alt="AI编程训练营">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -56,7 +56,7 @@ tags: 自动化办公
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
 之前给大家推荐了：[Python处理Excel用哪个库？Pandas不是唯一选择](https://mp.weixin.qq.com/s/h7rAexLvLBmV2nItisUNCA)
 
@@ -181,7 +181,7 @@ Excel 中的 Python 不能直接读取本地文件（如 `pandas.read_excel` 禁
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
@@ -204,7 +204,7 @@ Excel 中的 Python 不能直接读取本地文件（如 `pandas.read_excel` 禁
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
@@ -214,7 +214,7 @@ Excel 中的 Python 不能直接读取本地文件（如 `pandas.read_excel` 禁
 目前计划的课程价格是299元。预售价格是直接5折：149元，我留了30个名额。
 
 <p align="center" id='30个名额'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/71bd2ff3-ac85-43a4-8288-164cc66e119d/image.png" width="350" height='600'/>
     </a>   
 </p>
@@ -223,13 +223,13 @@ Excel 中的 Python 不能直接读取本地文件（如 `pandas.read_excel` 禁
 这也是我接下来的重点破局项目，我把149优惠价的名额再增加66个，满人后恢复原价。大家有需要就加我微信：**wfdev7**，备注：AI编程
 
 <p align="center" id='老粉的认可'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/6d5a3b73-0367-455a-ab69-4b47ca2646af/image.png" width="350" height='600'/>
     </a>   
 </p>
 
 <p align="center" id='学习群的氛围'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>

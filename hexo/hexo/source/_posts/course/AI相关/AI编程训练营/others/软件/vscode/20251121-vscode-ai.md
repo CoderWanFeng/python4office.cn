@@ -21,7 +21,7 @@ tags: [AI编程]
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw">
+<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
   <img src="https://img.shields.io/badge/加入-AI编程训练营-red" alt="AI编程训练营">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -36,7 +36,7 @@ tags: [AI编程]
 
 ![一个方法解决](https://raw.gitcode.com/user-images/assets/5027920/98883964-37a0-43b1-9121-f9054ed6345a/厂商合作__1_.jpg '厂商合作 (1).jpg')
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
 如周五的直播所说，[Qoder、CodeBuddy、Tare](https://mp.weixin.qq.com/s/wgvhnONoyCGEMH0IeQv6Wg)这些AI编程工具，都只能调用单一的大模型。
 
@@ -75,7 +75,7 @@ tags: [AI编程]
 
 ### 2. 安装 Cline 插件
 
-- 打开 VSCode，没有vscode的朋友请加我微信：wfdev7，加入我的[AI编程训练营](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，我都会提供：下载和安装教程。
+- 打开 VSCode，没有vscode的朋友请加我微信：wfdev7，加入我的[AI编程训练营](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，我都会提供：下载和安装教程。
 - 点击左侧的扩展图标（或使用快捷键 Ctrl/command+Shift+X）。
 - 在搜索框中输入 Cline，找到对应的插件并点击 安装。
 
@@ -91,7 +91,7 @@ tags: [AI编程]
 - API Provider：选择 OpenAI Compatible。
 - Base URL：填写 https://api.siliconflow.cn/v1。
 - API Key：粘贴你在第一步的平台中复制的 API Key。
-- Model ID：去硅基流动的模型广场选择你想要使用的模型，这里有疑问的，可以看我们[AI编程训练营](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)的视频。
+- Model ID：去硅基流动的模型广场选择你想要使用的模型，这里有疑问的，可以看我们[AI编程训练营](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)的视频。
 
 配置完成后，点击 Done 保存设置。
 
@@ -130,7 +130,7 @@ tags: [AI编程]
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
@@ -145,7 +145,7 @@ tags: [AI编程]
 
 
 <p align="center" id='30个名额'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/71bd2ff3-ac85-43a4-8288-164cc66e119d/image.png" width="350" height='600'/>
     </a>   
 </p>
@@ -154,13 +154,13 @@ tags: [AI编程]
 
 
 <p align="center" id='老粉的认可'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/6d5a3b73-0367-455a-ab69-4b47ca2646af/image.png" width="350" height='600'/>
     </a>   
 </p>
 
 <p align="center" id='学习群的氛围'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>
@@ -223,12 +223,12 @@ A：我后续打算还会出：AI编程出海、智能体、工作流、AI创作
 - [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
 - [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
-- [给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)
+- [给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)
 
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>

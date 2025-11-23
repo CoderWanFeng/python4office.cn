@@ -34,12 +34,12 @@ tags: 原创课程
 
 ## AI编程
 
-2025年底，我更新了一套全新的课程：[给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，大家对编程、AI感兴趣，一定要来看看。
+2025年底，我更新了一套全新的课程：[给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，大家对编程、AI感兴趣，一定要来看看。
 
 > 购买了50讲自动化办公的朋友，不论下面的海报价格是多少，大家长期都是149加入！！扫码下图加我，备注：老用户
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>

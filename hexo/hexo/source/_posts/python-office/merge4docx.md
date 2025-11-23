@@ -33,7 +33,7 @@ tags: 自动化办公
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw">
+<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
   <img src="https://img.shields.io/badge/加入-AI编程训练营-red" alt="AI编程训练营">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -43,7 +43,7 @@ tags: 自动化办公
 </p>
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
 终于周末了，我和小明又开始了疯狂的考证学习，昨晚通过合法的手段获取了一套学习资料，却遇到了一个问题：
 

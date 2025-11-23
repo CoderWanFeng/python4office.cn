@@ -43,7 +43,7 @@ tags: 日志
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，今天给大家分享一下Python自动化办公，最近1个月更新的功能。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，今天给大家分享一下Python自动化办公，最近1个月更新的功能。
 
 > 以下代码，全部都可以免费使用哦~！
 

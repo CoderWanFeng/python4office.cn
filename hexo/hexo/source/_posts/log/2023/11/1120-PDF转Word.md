@@ -43,7 +43,7 @@ tags: 自动化办公
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
 今年十一假期没出去旅游，在家里更新一套原创课程，点击查看👉[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)。
 

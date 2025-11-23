@@ -28,7 +28,7 @@ tags: 微信群
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw">
+<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
   <img src="https://img.shields.io/badge/加入-AI编程训练营-red" alt="AI编程训练营">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -44,7 +44,7 @@ tags: 微信群
 
 你好，我是程序员晚枫。我提供的交流群有3个，有付费的、有免费的，您自己选，不搞割韭菜那一套。
 
-如需学习AI编程，点击直达👉[AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)
+如需学习AI编程，点击直达👉[AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)
 
 
 ### 1、Python交流群
@@ -75,7 +75,7 @@ tags: 微信群
 - [DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休](https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw)
 - [更新了3年的开源项目python-office，给我带来了什么？](https://mp.weixin.qq.com/s/fLz3W_rDHml6iR-bAgyFAw)
 - [有生之年！python-office被写进教材了？我也有百度百科词条了？](https://mp.weixin.qq.com/s/vYa790i1H9u63aLYrBsTuQ)
-- [AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)
+- [AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)
 
 
 

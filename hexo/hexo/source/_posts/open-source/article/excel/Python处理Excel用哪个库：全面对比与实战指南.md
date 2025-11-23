@@ -34,7 +34,7 @@ tags: 深度文章
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw">
+<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
   <img src="https://img.shields.io/badge/加入-AI编程训练营-red" alt="AI编程训练营">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -54,7 +54,7 @@ tags: 深度文章
 
 <!-- more -->
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
 2025年数据处理效率报告显示，Python处理Excel的需求同比增长80%，但70%的开发者仍在为库选择困扰。面对pandas、openpyxl、xlsxwriter等众多工具，到底哪个最适合你的场景？本文将从功能对比、性能测试、实战案例到避坑指南，帮你找到最优解。
 
@@ -303,7 +303,7 @@ wb.save("financial_report.xlsx")
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>

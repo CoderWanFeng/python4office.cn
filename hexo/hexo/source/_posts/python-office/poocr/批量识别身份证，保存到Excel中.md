@@ -4,7 +4,7 @@ date: 2024-04-24 23:33:40
 tags: [poocr,python-office,开源项目]
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，全网同名
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，全网同名
 
 今天给大家分享1行Python代码就可以实现的功能：**批量识别身份证，自动保存为Excel文件。**
 

@@ -45,7 +45,7 @@ tags: 第三方库
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
 今天继续给大家更新专栏：[优秀的第三方库](https://gitcode.com/python4office/python4office.cn/edit/main/hexo/hexo/source/_posts/course/第三方库)之3大Web框架。
 

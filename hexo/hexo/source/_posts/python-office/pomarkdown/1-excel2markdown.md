@@ -10,7 +10,7 @@ tags: [ 第三方库,自动化办公,markdown ]
     </a>   
 </p>
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/4Szn7qE3YkBU66amRgmAEw)，今天给大家分享一个Python自动化办公的第三方库：``pomarkdown``，专门用来处理markdown文件。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，今天给大家分享一个Python自动化办公的第三方库：``pomarkdown``，专门用来处理markdown文件。
 
 > 源码地址：https://github.com/CoderWanFeng/pomarkdown
 
