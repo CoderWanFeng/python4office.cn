@@ -12,7 +12,7 @@ tags:
 
 
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4IuNB-Iywlrzs6HV5HY2DA'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/ibpHpQiPPANB4cXCpwiZXw'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
@@ -141,7 +141,7 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
 
 
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4IuNB-Iywlrzs6HV5HY2DA'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/ibpHpQiPPANB4cXCpwiZXw'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>

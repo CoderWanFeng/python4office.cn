@@ -81,7 +81,7 @@ tags: 软件
 ![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
 
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/4IuNB-Iywlrzs6HV5HY2DA'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/ibpHpQiPPANB4cXCpwiZXw'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
