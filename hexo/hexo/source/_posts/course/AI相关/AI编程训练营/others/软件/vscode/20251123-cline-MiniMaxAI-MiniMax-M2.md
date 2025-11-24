@@ -1,5 +1,5 @@
 ---
-title: 通过VsCode和Cline调用智能体模型MiniMaxAI/MiniMax-M2
+title: 通过VsCode和Cline调用智能体模型MiniMax-M2
 date: 2025-11-23 03:41:49
 tags: [AI编程]
 ---
@@ -27,11 +27,15 @@ tags: [AI编程]
 
 </p>
 
+![一个方法解决](https://raw.gitcode.com/user-images/assets/5027920/98883964-37a0-43b1-9121-f9054ed6345a/厂商合作__1_.jpg '厂商合作 (1).jpg')
+
+<!-- more -->
+
 ![扫码查看AI编程训练营](https://raw.gitcode.com/user-images/assets/5027920/7429d22d-2e89-4333-8305-e0352ae7a344/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
 
 
 
-![一个方法解决](https://raw.gitcode.com/user-images/assets/5027920/98883964-37a0-43b1-9121-f9054ed6345a/厂商合作__1_.jpg '厂商合作 (1).jpg')
+
 
 大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
@@ -45,9 +49,9 @@ tags: [AI编程]
 - 当你在做一个复杂的项目时，想在不同场景下使用不同的大模型。比如文件识别你想用``deepseek-ocr``，agent开发你想用qwen。
 - 或者想对各种不同的大模型做一个测试，找到最适合自己的模型产品。
 
-今天我们就一起看一下：如何通过一个简单的方法，调用最近火爆的MiniMax-M2
+今天我们就一起看一下：如何通过一个简单的方法，调用最近火爆的**MiniMax-M2**。
 
-![模型广场持续更新...](https://raw.gitcode.com/user-images/assets/5027920/ce6b5a84-854c-416c-9ed0-90a8c71677e5/image.png 'image.png')
+![MiniMax-M2](https://raw.gitcode.com/user-images/assets/5027920/c62b4984-cb88-4623-a0e1-25615d119dc5/878d22d5-1e2f-4d9d-bab5-6a084c2f29db.png '878d22d5-1e2f-4d9d-bab5-6a084c2f29db.png')
 
 ## 实操步骤
 
