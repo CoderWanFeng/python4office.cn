@@ -39,4 +39,9 @@ tags: 福利
 
 以上仅是简单介绍，如果想要了解更多信息，可以加入读者交流群。👇
 
-![](https://cos.python-office.com/group%2Ffree-group.jpg)
+
+<p align="center" id='AI交流群'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
+    </a>   
+</p>

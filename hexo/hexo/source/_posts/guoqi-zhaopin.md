@@ -48,8 +48,14 @@ tags: 招聘
 # 2、上岸交流群
 
 - 国企求职交流群，扫码加入👇
-![点我直达](https://cos.python-office.com/group%2Ffree-group.jpg)
 
+
+
+<p align="center" id='AI交流群'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
+    </a>   
+</p>
 <p align="center" id='大礼包-banner'>
     <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
     <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>

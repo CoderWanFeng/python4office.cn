@@ -57,8 +57,13 @@ tags: 金融
 <!-- more -->
 
 欢迎加入 Python&金融数据分析 交流群
-![python-office](https://cos.python-office.com/group%2Ffree-group.jpg)
 
+
+<p align="center" id='AI交流群'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
+    </a>   
+</p>
 
 
 

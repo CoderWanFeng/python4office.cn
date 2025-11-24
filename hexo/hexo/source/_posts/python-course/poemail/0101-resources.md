@@ -27,8 +27,13 @@ tags: 原创课程
 本群二维码长期有效，如果万一我忘记更新了，你可以+我微信，备注：邮件自动化，我来邀请你。
 我的微信：[python-office](http://www.python4office.cn/wechat-qrcode/)
 
-![](https://cos.python-office.com/group%2Ffree-group.jpg)
 
+
+<p align="center" id='AI交流群'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
+    </a>   
+</p>
 # 读者福利
 
 做了几年自媒体了，整理了一些互联网撸羊毛的方法，长期有效。👇

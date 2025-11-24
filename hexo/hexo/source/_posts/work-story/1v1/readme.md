@@ -80,11 +80,14 @@ tags: 1v1
 如果您觉得我值得，就加我，觉得不值。建议您加我的粉丝群就行了~👇
 
 <!-- more -->
-<p align="center" id='免费技术群'>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg"/>
+
+
+
+<p align="center" id='AI交流群'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
     </a>   
 </p>
-
 ## 3、学习资料
 
 下面是我自己原创/整理的，帮助小白快速入门Python的学习资料，您也可以看看。👇

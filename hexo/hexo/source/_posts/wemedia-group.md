@@ -38,8 +38,10 @@ tags: 社区活动
 > 注意，**群里不发广告也不卖课，如被骚扰，请告诉群主！**不定时举行川渝地区的线上沙龙 & 线下交流活动，感兴趣可以留意群公告哟~
 
 
-<p align="center" id='自媒体交流群'>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg"/>
+
+<p align="center" id='AI交流群'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
     </a>   
 </p>
 

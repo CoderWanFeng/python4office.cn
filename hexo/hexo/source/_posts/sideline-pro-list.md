@@ -79,7 +79,9 @@ tags: 副业
 
 欢迎大家加入读者群
 
-<p align="center" id='自媒体交流群'>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg"/>
+
+<p align="center" id='AI交流群'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
     </a>   
 </p>

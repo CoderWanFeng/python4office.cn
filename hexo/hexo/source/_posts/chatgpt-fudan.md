@@ -60,10 +60,11 @@ MOSS 项目主页：https://txsun1997.github.io/blogs/moss.html
 # ChatGPT交流群
 
 
-<p align="center" id='开源交流群-banner'>
-<a target="_blank" href='https://cos.python-office.com/group%2Ffree-group.jpg'>
-<img src="https://cos.python-office.com/group/python-office-qr.jpg" width="100%"/>
-</a> 
+
+<p align="center" id='AI交流群'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
+    </a>   
 </p>
 
 
