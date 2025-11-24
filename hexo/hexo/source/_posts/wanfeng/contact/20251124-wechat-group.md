@@ -5,6 +5,8 @@ tags: 联系方式
 ---
 
 
+![aiq.jpg](https://raw.gitcode.com/user-images/assets/5027920/b64ad6c5-4e79-4d17-bc25-8c7316cf514c/aiq.jpg 'aiq.jpg')
+
 大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
 今天给大家介绍一下我的读者交流群~
