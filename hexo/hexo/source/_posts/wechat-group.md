@@ -51,10 +51,10 @@ tags: 微信群
 
 其一，只需要 **9元** 的技术大群，长期有效，目前400+人的技术大群有9个了：
 
-> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=1)。
+> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/4IuNB-Iywlrzs6HV5HY2DA)。
 
 <p align="center" id='付费群的对话'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=1'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4IuNB-Iywlrzs6HV5HY2DA'>
     <img src="https://cos.python-office.com/group/chat.jpg" width="400" height="600"/>
     </a>   
 </p>
@@ -171,9 +171,9 @@ tags: 微信群
 </p>
 
 
-<p align="center" id='进群-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=1'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
+<p align="center" id='进群-banner-AI'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4IuNB-Iywlrzs6HV5HY2DA'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 

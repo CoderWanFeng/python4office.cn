@@ -4,7 +4,11 @@ date: 2025-11-24 10:26:35
 tags: 联系方式
 ---
 
-![aiq.jpg](https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg 'aiq.jpg')
+<p align="center" id='进群-banner-AI'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/4IuNB-Iywlrzs6HV5HY2DA'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    </a>   
+</p>
 
 大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
 
