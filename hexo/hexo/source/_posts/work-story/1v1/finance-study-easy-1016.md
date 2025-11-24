@@ -4,7 +4,7 @@ date: 2023-10-16 22:22:05
 tags: 1v1
 ---
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/ibpHpQiPPANB4cXCpwiZXw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>

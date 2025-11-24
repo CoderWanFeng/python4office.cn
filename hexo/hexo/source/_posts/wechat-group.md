@@ -51,10 +51,10 @@ tags: 微信群
 
 其一，只需要 **9元** 的技术大群，长期有效，目前400+人的技术大群有9个了：
 
-> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/ibpHpQiPPANB4cXCpwiZXw)。
+> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
 
 <p align="center" id='付费群的对话'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/ibpHpQiPPANB4cXCpwiZXw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
     <img src="https://cos.python-office.com/group/chat.jpg" width="400" height="600"/>
     </a>   
 </p>
@@ -172,7 +172,7 @@ tags: 微信群
 
 
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/ibpHpQiPPANB4cXCpwiZXw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>

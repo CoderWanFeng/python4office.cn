@@ -63,7 +63,7 @@ input区域 输入 ./crazy_functions/test_project/python/dqn ， 然后点击 "[
 
 
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/ibpHpQiPPANB4cXCpwiZXw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
