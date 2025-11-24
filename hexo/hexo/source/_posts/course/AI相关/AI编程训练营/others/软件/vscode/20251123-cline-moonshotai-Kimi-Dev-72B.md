@@ -1,6 +1,6 @@
 ---
-title: 通过VsCode和Cline调用智能体模型moonshotai/Kimi-Dev-72B
-date: 2025-11-23 03:41:49
+title: 我发现了一个免费调用Qwen-Coder的方法
+date: 2025-11-24 04:41:49
 tags: [AI编程]
 ---
 
@@ -45,7 +45,7 @@ tags: [AI编程]
 - 当你在做一个复杂的项目时，想在不同场景下使用不同的大模型。比如文件识别你想用``deepseek-ocr``，agent开发你想用qwen。
 - 或者想对各种不同的大模型做一个测试，找到最适合自己的模型产品。
 
-今天我们就一起看一下：如何通过一个简单的方法，调用最近火爆的moonshotai/Kimi-Dev-72B。
+今天我们就一起看一下：如何通过一个免费的方法，调用最近火爆的**Qwen-Coder**。
 
 ![模型广场持续更新...](https://raw.gitcode.com/user-images/assets/5027920/ce6b5a84-854c-416c-9ed0-90a8c71677e5/image.png 'image.png')
 
@@ -88,7 +88,7 @@ tags: [AI编程]
 - API Provider：选择 OpenAI Compatible。
 - Base URL：填写 https://api.siliconflow.cn/v1。
 - API Key：粘贴你在第一步的平台中复制的 API Key。
-- Model ID：填入moonshotai/Kimi-Dev-72B。这里有疑问的，可以看我们[AI编程训练营](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)的视频。
+- Model ID：填入Qwen/Qwen2.5-Coder-7B-Instruct。这里有疑问的，可以看我们[AI编程训练营](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)的视频。
 
 配置完成后，点击 Done 保存设置。
 
