@@ -39,7 +39,7 @@ tags: 微信群
 
 
 
-## 一、编程交流群
+## 一、读者交流群
 
 
 你好，我是程序员晚枫。我提供的交流群有3个，有付费的、有免费的，您自己选，不搞割韭菜那一套。
@@ -47,42 +47,33 @@ tags: 微信群
 如需学习AI编程，点击直达👉[AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)
 
 
-### 1、Python交流群
+### 1、AI交流群
 
-其一，只需要 **9元** 的技术大群，长期有效，目前400+人的技术大群有9个了：
+其一，只需要 **48元** 的AI圈子，长期有效：
 
 > ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
 
-<p align="center" id='付费群的对话'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
-    <img src="https://cos.python-office.com/group/chat.jpg" width="400" height="600"/>
+<p align="center" id='学习群的氛围'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>
 
 
 
 
-**如果你是程序员/编程爱好者/想认真学习技术的小白，欢迎你加入这个付费群（广告勿扰），有技术问题发出来，咱们互相学习。**
-**因为从不免费的原因，群里技术讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[python-office](http://www.python4office.cn/wechat-qrcode/)。
-
-> 免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的技术问题：就是python怎么安装、pip是什么。。。🤦
 
 
+**如果你是AI爱好者、重度使用者，欢迎你加入这个付费群（广告勿扰），有AI问题发出来，咱们互相学习。**
+**因为从不免费的原因，群里讨论气氛一直都还不错。**有任何问题，进群后，你也可以找我聊聊：[python-office](http://www.python4office.cn/wechat-qrcode/)。
 
-我做编程博主，同时维护了一个开源中国的推荐项目：[python-office](https://mp.weixin.qq.com/s/7aA0KoXGJuSFkTns-MZYjA)。
-
-这是一个Python自动化办公的功能库，有关这个库和我的经历，详见下面这几个资料：
-- [DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休](https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw)
-- [更新了3年的开源项目python-office，给我带来了什么？](https://mp.weixin.qq.com/s/fLz3W_rDHml6iR-bAgyFAw)
-- [有生之年！python-office被写进教材了？我也有百度百科词条了？](https://mp.weixin.qq.com/s/vYa790i1H9u63aLYrBsTuQ)
-- [AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)
-
-
+> 免费群里你懂的，基本都是小白用户和混进去发广告的，讨论最难的AI问题：可能就是豆包怎么安装。。。🤦
 
 
 ### 2、纯小白群
 
-- 其二，下面是免费的小白群，目前有**89个**了：想白嫖学习群的也可以扫码加入下方的免费交流群：和**白嫖的同学们**交流~
+- 其二，下面是免费的小白群，目前有**89个**了。
+
 这个微信群：主要用来**领取学习资料 + 和小白交流**，不会私信任何人，如果有广告，请私信群主移除。
 
 
@@ -93,20 +84,22 @@ tags: 微信群
 
 
 <p align="center" id='AI交流群'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <a>
     <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
     </a>   
 </p>
-> 60套Python学习资料：[点我领取](https://www.python-office.com/)
 
 
-### 3、编程学习指导
+> AI 和 编程 学习资料：[点我领取](https://www.python-office.com/)
+
+
+### 3、AI 学习指导
 
 
 
-如果需要和我1对1交流技术问题，可以扫码下图加好友👇
+如果需要和我1对1交流AI or Python问题，可以扫码下图加好友👇
 
-我是山东人，不靠坑人挣钱，但是我每天上班真的很累了，也请不要白嫖我。觉得我提供不了帮助，看看我的短视频也好。感谢理解。❤
+我是山东人，不靠坑人挣钱，但是我每天上班真的很累了，也请不要白嫖我。如果觉得我提供不了帮助，看看我的短视频也好。感谢理解。❤
 
 
 ![](https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
