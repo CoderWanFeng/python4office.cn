@@ -197,42 +197,38 @@ A：我后续打算还会出：AI编程出海、智能体、工作流、AI创作
 
 ## **关于作者**  
 
-我是程序员晚枫，985硕士，Python中国讲师，全网粉丝40w+，专注自动化办公6年！
+先给新朋友介绍一下我自己，你可以叫我晚枫。
 
-> 我的课程实用性强，操作简单，轻松上手。这4套课一定能让你学有所得！ 
+从2019年至今，我成为科技博主已经5年多了,期间没有停止过更新，也很幸运获得了一些值得自豪的收获：物质/精神的都有。
 
-- B站视频教程：[官网发布：python-office库 | 专为Python自动化办公而生，一行代码提高办公效率 | 哪里不会点哪里，再也不用学习Python编程](https://www.bilibili.com/video/BV1pT4y1k7FH/?spm_id_from=333.1387.0.0&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
-- Python中国大会：[非程序员如何学习和使用 Python-程序员晚枫-科技博主&开源作者](https://www.bilibili.com/video/BV1Y6qWYWEyQ/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+- 物质收获，详见GitCode在2025年初对我的一次采访：[DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员晚枫：我不焦虑，40岁就退休](https://mp.weixin.qq.com/s/3KvzA0ZOKJCz11Sk-karOw)
+- 2023年也加入了Python中国组委会，[2024年加入了Python基金会](https://mp.weixin.qq.com/s/G_Ro4UVdgv2tOE_6pHdnUA)。这是我在Python中国大会的演讲：[非程序员如何学习和使用 Python？](https://mp.weixin.qq.com/s/pJAOgaQ8vA08NrNpJzngFw)
+- 我的开源项目[python-office](https://mp.weixin.qq.com/s/7aA0KoXGJuSFkTns-MZYjA)也获得了：[Github上的1200+star 和 GitCode百大开源项目](https://mp.weixin.qq.com/s/pJAOgaQ8vA08NrNpJzngFw)
+- 有了一套全网播放量过百万的课程：[给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
 
-- [业余爱好者，如何从0开始快速掌握Python？](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
+> 以上这些，我把它称为我在all in AI之前的经历。之前建立的Python主题的付费群，也有430多人加入：[Python学习 · 读者交流群](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=8)，如果你是想单纯学习Python的朋友，建议直接加这个Python群。我一直在运营中，也还会继续运营下去。
 
+![Python群的付费记录](https://raw.gitcode.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png 'image.png')
 
+从2023年接触到AI开始，我看到了AI和各行各业结合的机会，以及我作为一个博主可以分享、创作的方向。
 
-<p align="center" id='CodeMaster-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/B9OOU5bb8fOd9KiG43GqAw'>
-    <img src="https://cos.python-office.com/activity/CodeMaster-3.jpg" width="100%"/>
+开始转型AI，根本停不下来，每天都在尝试、分享、获得反馈后继续尝试，如此正向循环，犹如新生儿快速进步。
+
+如果大家对AI感兴趣，可以加入我的AI交流群，和我一起交流成长！👇
+
+<p align="center" id='进群-banner-AI'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 
-
-
-
-
-
-
-- [给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
-- [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
-- [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
-- [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
+> 以下是最近一些有用、开始运行的AI探索：
+- [我也吃上了AI的红利！分享一个邪修思路](https://mp.weixin.qq.com/s/RGakg6tIc_jcYTvjeh3zjw)
 - [给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)
+- [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
+- [AI短视频还有红利！coze书单号，给我冲](https://mp.weixin.qq.com/s/qokwWMcCdr0PSSm3aGhssA)
+- [我用AI写了一个发票批量识别软件，免费分享给大家](https://mp.weixin.qq.com/s/1V6w9CjQV8S8z8NRSc3L_w)
 
-
-
-<p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
-    </a>   
-</p>
 
 ---
 
