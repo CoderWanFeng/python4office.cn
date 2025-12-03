@@ -4,7 +4,11 @@ date: 2025-11-14 00:24:04
 tags: 广告
 ---
 
-![扫码查看AI编程训练营](https://raw.gitcode.com/user-images/assets/5027920/7ff2a283-e875-4fc0-8e6b-f3713d8e20a7/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
+<p align="center" id='扫码查看AI编程训练营'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/7ff2a283-e875-4fc0-8e6b-f3713d8e20a7/极简AI编程__3_.jpg" />
+    </a>   
+</p>
 
 
 

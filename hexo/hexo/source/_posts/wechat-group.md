@@ -5,7 +5,11 @@ tags: 微信群
 ---
 
 
-![扫码查看AI编程训练营](https://raw.gitcode.com/user-images/assets/5027920/7ff2a283-e875-4fc0-8e6b-f3713d8e20a7/极简AI编程__3_.jpg '极简AI编程 (3).jpg')
+<p align="center" id='扫码查看AI编程训练营'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <img src="https://raw.gitcode.com/user-images/assets/5027920/7ff2a283-e875-4fc0-8e6b-f3713d8e20a7/极简AI编程__3_.jpg" />
+    </a>   
+</p>
 
 <p align="center">
 	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
