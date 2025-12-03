@@ -31,8 +31,9 @@ tags: [副业,副业信息差]
 	</a>	
 </p>
 <p align="center" name="gitcode">
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
-<img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
+	<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
+  <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
+</a>
     	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
   <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
 </a>
