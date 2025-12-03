@@ -25,7 +25,7 @@ tags: spark
 - Mysql:https://www.bilibili.com/video/BV1iF411z7Pu
 - Hadoop:https://www.bilibili.com/video/BV1cW411r7c5
 - HBase：https://www.bilibili.com/video/BV1PZ4y1i7gZ
-- Kafka：https://www.bilibili.com/video/BV1vr4y1677k
+- Kafk<br/>A：https://www.bilibili.com/video/BV1vr4y1677k
 - Hive数仓项目：
     - 基础：https://www.bilibili.com/video/BV1CU4y1N7Sh
     - 项目：https://www.bilibili.com/video/BV1ef4y1B7KX

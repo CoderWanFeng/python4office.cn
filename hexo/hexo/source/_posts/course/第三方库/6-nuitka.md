@@ -24,7 +24,7 @@ Nuitka 是一个 Python 编译器，它可以将 Python 代码编译成可执行
 - [初二学生的Python水平，让我震惊！把python-office打包成exe软件，你看完也会喊666](https://www.bilibili.com/video/BV1RG4y1M7uX/?buvid=&is_story_h5=false&mid=qMItlNpUNhCu1MnTH%2FJ7Ew%3D%3D&share_medium=iphone&share_pattern=placard&share_plat=ios&share_session_id=B108129F-613C-474A-94B3-A105CA9CD95B&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1732806036&unique_k=xF8K2Q9)
 
 ## 安装 Nuitka
-你可以通过 pip 来安装 Nuitka：
+你可以通过 pip 来安装 Nuitk<br/>A：
 ```bash
 pip install nuitka -i https://mirrors.aliyun.com/pypi/simple//
 ```

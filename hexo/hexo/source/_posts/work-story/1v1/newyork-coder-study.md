@@ -90,7 +90,7 @@ tags: 1v1
 
 - 入门用：[ DBA OCP 认证全套实战培训视频教程+学习软件文档+全套题库](https://www.bilibili.com/video/BV1bL411w72V/?spm_id_from=333.337.search-card.all.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 
-- 面试用，老师是前腾讯云DBA：[MySQL实战45讲](http://gk.link/a/110o2)
+- 面试用，老师是前腾讯云DB<br/>A：[MySQL实战45讲](http://gk.link/a/110o2)
 
 
 ### 运维

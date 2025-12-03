@@ -89,7 +89,7 @@ flask：[14天搞定Flask Web框架](https://www.bilibili.com/video/BV1PA411e7ku
 
 ### 5、大数据
 
-重点学习kafka：[全面提升你的 Kafka 实战能力](http://gk.link/a/11WtN)
+重点学习kafk<br/>A：[全面提升你的 Kafka 实战能力](http://gk.link/a/11WtN)
 
 ### 6、简历指导
 
