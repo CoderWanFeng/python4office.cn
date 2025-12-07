@@ -17,6 +17,10 @@ tags: 白开水AI社区
   - 小红书：[昭意777](https://www.xiaohongshu.com/user/profile/652b97f6000000002a036582?xsec_token=YBBxE5wCdk6Smofmc8vlqNq7WraH8Yd8dsw5GjJbKy_jE%3D&xsec_source=app_share&xhsshare=CopyLink&shareRedId=ODczREZHPDs2NzUyOTgwNjY0OTg4RklK&apptime=1765078493&share_id=2325d0826825421f9e5a626de46e58f6&share_channel=copy_link)
   - 公众号：[有猫的昭意](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww)
 
+## 直播记录
+
+- 2025.11下：[40万粉丝，AI创作全流程公开](https://www.bilibili.com/video/BV1qx2WB1E8p/?spm_id_from=333.1387.homepage.video_card.click)
+
 ## 联系我们
 
 <p align="center" id='AI交流群'>
