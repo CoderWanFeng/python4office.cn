@@ -19,7 +19,9 @@ tags: 白开水AI社区
 
 ## 直播记录
 
-- 2025.11下：[40万粉丝，AI创作全流程公开](https://www.bilibili.com/video/BV1qx2WB1E8p/?spm_id_from=333.1387.homepage.video_card.click)
+- 2025.11上：[用 AI 开发一个PDF转Word的办公软件，并打包成了exe | Vibe Coding | 视频教程 | Qoder | 0基础入门](https://www.bilibili.com/video/BV1RY2vB6Eoa)
+
+- 2025.11下：[我是怎么用AI自动化 写文章、剪视频的？ | 工作流 | 排版 | 书单号 | 零基础](https://www.bilibili.com/video/BV1qx2WB1E8p)
 
 ## 联系我们
 
