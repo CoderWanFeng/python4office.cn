@@ -1,6 +1,6 @@
 ---
 title: 白开水AI社区 · 简介
-date: 2025-12-07 20:56:34
+date: 2025-12-10 20:56:34
 tags: 白开水AI社区
 ---
 
@@ -19,13 +19,14 @@ tags: 白开水AI社区
 
 ## 直播记录
 
+ > 第一时间关注直播动态，和我们一对一的交流沟通，欢迎加入我们的：[AI学习交流群 · 长期有效](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)
+
 
 | 场次 | 直播录制 | 海报 | 回顾文章 | 主讲人 |筹备组|
 |-----|-----|-----|-----|-----|--|
 | 2025.11上 | [用 AI 开发一个PDF转Word的办公软件，并打包成了exe](https://www.bilibili.com/video/BV1RY2vB6Eoa) | --- | [查看](https://mp.weixin.qq.com/s/lQ7pyvE6ZWKhxFmxW6hqNw) | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) |[晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) |
 | 2025.11下 | [我是怎么用AI自动化 写文章、剪视频的？](https://www.bilibili.com/video/BV1qx2WB1E8p)| [查看](https://mp.weixin.qq.com/s/xOHD_5bVcVscFZvSZvHuUA) | [查看](https://mp.weixin.qq.com/s/HkhaGKfIcTO_ypaehuaMdQ) | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) |[昭意](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww) |
 
- > 第一时间收获直播动态，和我们一对一的交流沟通，欢迎加入我们的AI交流群：[AI学习交流群 · 长期有效](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)
 
 
 ## 联系我们
