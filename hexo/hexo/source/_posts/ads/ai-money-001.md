@@ -6,7 +6,7 @@ tags: 广告
 
 AI又帮我赚钱了！
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，小红书也叫这个名。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，小红书也叫这个名。
 
 做编程博主4年了，一直在尝试各种利用技术赚钱的路子。用上AI之后，试错成本大大降低，成功概率大大提高！
 

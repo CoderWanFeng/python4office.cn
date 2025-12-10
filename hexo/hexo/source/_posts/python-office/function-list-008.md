@@ -33,7 +33,7 @@ tags: python-office
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
+<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
@@ -43,7 +43,7 @@ tags: python-office
 </p>
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，小红书/小破站都叫这个名。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，小红书/小破站都叫这个名。
 
 Python是我工作中的主力语言之一（另一个是C++），在工作之余我给大家（非程序员）搜集了很多实用的自动化办公代码：**可以用1行代码，帮助编程小白解决复杂的办公问题。**
 

@@ -34,7 +34,7 @@ tags: python-office
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
+<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
@@ -44,7 +44,7 @@ tags: python-office
 </p>
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
 
 今天给大家分享一个Python自动化办公的专用库python-office的最新功能：1行代码，实现PPT转为图片。
 

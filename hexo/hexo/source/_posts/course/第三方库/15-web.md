@@ -33,7 +33,7 @@ tags: 第三方库
 	</a>	
 </p>
 <p align="center" name="gitcode">
-	<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
+	<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
@@ -46,7 +46,7 @@ tags: 第三方库
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
 
 今天继续给大家更新专栏：[优秀的第三方库](https://gitcode.com/python4office/python4office.cn/edit/main/hexo/hexo/source/_posts/course/第三方库)之3大Web框架。
 

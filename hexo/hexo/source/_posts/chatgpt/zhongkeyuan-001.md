@@ -17,7 +17,7 @@ tags:
     </a>   
 </p>
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，B站短视频👉
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，B站短视频👉
 
 - [批量识别发票信息，并且写进Excel中！1行Python代码，快速搞定~ | 智能办公，了解一下？](https://www.bilibili.com/video/BV1nm4y1r74m)
 

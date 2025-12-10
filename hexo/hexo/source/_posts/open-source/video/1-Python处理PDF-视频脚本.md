@@ -34,7 +34,7 @@ tags: 视频脚本
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
+<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
@@ -176,7 +176,7 @@ merge2pdf(pdf_list, "merged.pdf")
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>

@@ -8,7 +8,7 @@ tags: 下载
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/python3.7%2FSnipaste_2023-02-21_22-42-22.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
 
 今天给大家分享一个来自Python官网的重要消息：Python3.12正式版将于2023.10.2发布！
 

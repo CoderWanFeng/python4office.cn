@@ -8,7 +8,7 @@ tags: 开源项目
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poimage/flag2profile/cover.png)
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，B站/小红书/知乎，都叫这个名。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，B站/小红书/知乎，都叫这个名。
 
 又到了一年一度制作国庆头像的时候了，这次我们看如何用1行Python代码，轻松制作自己的国旗头像。
 

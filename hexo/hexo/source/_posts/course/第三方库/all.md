@@ -20,7 +20,7 @@ tags: [ 第三方库,pip ]
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
 
 这里是专栏：优秀的Python第三方库
 

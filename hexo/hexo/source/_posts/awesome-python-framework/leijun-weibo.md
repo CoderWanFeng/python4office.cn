@@ -6,7 +6,7 @@ tags: Python实战项目
 
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E5%8D%9A%E7%88%AC%E8%99%AB%2Fweibo.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)，今天给大家分享一个爬取微博的项目。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，今天给大家分享一个爬取微博的项目。
 
 
 ## 使用的框架

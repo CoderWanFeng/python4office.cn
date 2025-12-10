@@ -21,7 +21,7 @@ tags: [AI编程]
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
+<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
@@ -193,7 +193,7 @@ Qoder能快速“吃透”整个代码库，自动梳理依赖关系、找重构
 
 > 以下是最近一些有用、开始运行的AI探索：
 - [我也吃上了AI的红利！分享一个邪修思路](https://mp.weixin.qq.com/s/RGakg6tIc_jcYTvjeh3zjw)
-- [给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)
+- [给小白的《12讲 · AI编程训练营》](https://www.python-office.com/course-002/AICoding/version-001/all.html)
 - [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
 - [AI短视频还有红利！coze书单号，给我冲](https://mp.weixin.qq.com/s/qokwWMcCdr0PSSm3aGhssA)
 - [我用AI写了一个发票批量识别软件，免费分享给大家](https://mp.weixin.qq.com/s/1V6w9CjQV8S8z8NRSc3L_w)

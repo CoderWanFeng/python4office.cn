@@ -4,7 +4,7 @@ date: 2023-12-24 01:16:17
 tags: 自动化办公
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
 
 今天给大家分享一个可以**用1行代码**自动收发邮件的Python第三方库：``poemail``。
 

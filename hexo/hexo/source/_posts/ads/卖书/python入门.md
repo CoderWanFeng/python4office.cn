@@ -5,7 +5,7 @@ tags: 广告
 ---
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
@@ -25,7 +25,7 @@ tags: 广告
 	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg">
+<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
@@ -39,7 +39,7 @@ tags: 广告
 <!-- more -->
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
 
 刷到一篇文章：[24小时快速入门大热语言Rust！学不会来找我](https://mp.weixin.qq.com/s/CkqyzHKarLmkWs0x963QOw)，我觉得Python应该也来一篇？
 
@@ -341,7 +341,7 @@ print("Hello, World!")
 ![小红书：爱吃火锅的小明](https://raw.gitcode.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
@@ -367,7 +367,7 @@ print("Hello, World!")
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg'>
+    <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>

@@ -19,7 +19,7 @@ tags: 自动化办公
     </a>   
 </p>
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
 
 最近Python星球里的一位朋友私信我，想学习一下Python自动化生成数据分析报告。
 

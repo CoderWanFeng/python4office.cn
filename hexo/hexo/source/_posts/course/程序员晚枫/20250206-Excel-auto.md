@@ -11,7 +11,7 @@ tags: [python,下载]
     </a>   
 </p>
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/o98F_h_m6g4u5haPkbBtGg)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
 
 今天给大家分享的是：【30讲】Excel自动化办公之Pandas。
 
