@@ -19,7 +19,7 @@ tags: 白开水AI社区
 
 ## 直播记录
 
- > 第一时间关注直播动态，和我们一对一的交流沟通，欢迎加入我们的：[AI学习交流群 · 长期有效](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)
+ > 第一时间关注直播动态，和我们一对一的交流沟通，欢迎加入我们的：[AI学习交流群 · 长期有效](http://www.python4office.cn/wechat-group/)
 
 
 | 场次 | 直播录制 | 海报 | 回顾文章 | 主讲人 |筹备组|

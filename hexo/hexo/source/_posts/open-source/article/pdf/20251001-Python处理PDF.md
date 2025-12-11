@@ -6,7 +6,7 @@ tags: 深度文章
 
 
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
@@ -37,7 +37,7 @@ tags: 深度文章
 <a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
-    	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
+    	<a href="http://www.python4office.cn/wechat-group/">
   <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
 </a>
 

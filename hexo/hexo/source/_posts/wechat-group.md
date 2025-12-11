@@ -58,7 +58,7 @@ tags: 微信群
 > ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
 
 <p align="center" id='学习群的氛围'>
-    <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>
@@ -169,7 +169,7 @@ tags: 微信群
 
 
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
