@@ -45,7 +45,8 @@ def refresh_cdn_cache():
             "http://python4office.cn/",
             "http://www.python4office.cn/",
             "https://www.python-office.com/",
-            "https://www.python-office.com/"
+            "https://python-office.com/"
+            "cos.python-office.com"
         ]
         req.Urls = urls
         
