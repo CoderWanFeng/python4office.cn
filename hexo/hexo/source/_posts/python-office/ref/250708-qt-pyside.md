@@ -8,7 +8,7 @@ tags: 开源
 
 我们团队最近在基于腾讯的OCR接口，开发一个桌面GUI软件，功能是实现发票识别。
 
-项目地址：[发票识别的源码](https://gitcode.com/python4office/poui/blob/develop/poocr_gui/exe.py)
+项目地址：[发票识别的源码](https://atomgit.com/python4office/poui/blob/develop/poocr_gui/exe.py)
 
 因为技术选型问题，之前选择的是pyqt5这个框架，现在想出售软件，发现了一些商业使用方面的问题，所以打算换成开源免费的
 
@@ -78,7 +78,7 @@ PyQt同样有多个版本，与Qt框架的版本相对应：
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
 
@@ -90,20 +90,20 @@ PyQt同样有多个版本，与Qt框架的版本相对应：
 
 <p align="center" id='30个名额'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/71bd2ff3-ac85-43a4-8288-164cc66e119d/image.png" width="350" height='600'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/71bd2ff3-ac85-43a4-8288-164cc66e119d/image.png" width="350" height='600'/>
     </a>   
 </p>
 
 
 <p align="center" id='老粉的认可'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/6d5a3b73-0367-455a-ab69-4b47ca2646af/image.png" width="350" height='600'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/6d5a3b73-0367-455a-ab69-4b47ca2646af/image.png" width="350" height='600'/>
     </a>   
 </p>
 
 <p align="center" id='学习群的氛围'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>
 
@@ -127,8 +127,8 @@ Q：有其他更高级的课程吗？
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
   
-![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
 
 

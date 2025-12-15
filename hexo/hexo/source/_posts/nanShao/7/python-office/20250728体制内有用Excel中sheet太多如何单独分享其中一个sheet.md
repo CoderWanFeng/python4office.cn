@@ -3,14 +3,14 @@ title: 体制内有用！Excel中sheet太多，如何单独分享其中一个she
 date: 2025-07-28 23:41:49
 tags: [50讲Python自动化办公]
 ---
-[![14块读者交流群.png](https://raw.gitcode.com/user-images/assets/5027920/48edc8fa-6d2e-4eca-9e14-d71638eadb55/14块读者交流群.png '14块读者交流群.png')](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247502200&idx=1&sn=7e543675545ac6622123af6009fdebce&scene=21#wechat_redirect)
+[![14块读者交流群.png](https://raw.atomgit.com/user-images/assets/5027920/48edc8fa-6d2e-4eca-9e14-d71638eadb55/14块读者交流群.png '14块读者交流群.png')](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247502200&idx=1&sn=7e543675545ac6622123af6009fdebce&scene=21#wechat_redirect)
 
 大家好，我是晚枫，用通俗易懂的方式，教小白学python。
 
 之前，我不是跟大家说过，我们的课程销售数据都要进行表格汇总和统计嘛。
 
 而晚枫老师教我的方法就是在一个Excel工作簿中建立多个sheet工作表，类似于下图：
-![37d32aae785d8e293e5304b4b52d6ef3.png](https://raw.gitcode.com/user-images/assets/5027920/da396cb6-b4f6-465b-b4f0-cca580e2d188/37d32aae785d8e293e5304b4b52d6ef3.png '37d32aae785d8e293e5304b4b52d6ef3.png')
+![37d32aae785d8e293e5304b4b52d6ef3.png](https://raw.atomgit.com/user-images/assets/5027920/da396cb6-b4f6-465b-b4f0-cca580e2d188/37d32aae785d8e293e5304b4b52d6ef3.png '37d32aae785d8e293e5304b4b52d6ef3.png')
 
 
 所以，我就在想，未来做的项目变多，一个工作簿中的sheet表格太多的话就不利于分享和展示了。
@@ -98,7 +98,7 @@ OK，到这里我要告诉大家的是，今天这篇文章教给大家的代码
 
 所以，如果你对这门[《给小白的50讲 · Python自动化办公》](https://mp.weixin.qq.com/merchant/mppaysubscribe?action=go_paid_article&article_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2F9hB7Ghyf_km5ARSBBWt4BQ&token=772408466&lang=zh_CN)感兴趣，可以点击左边蓝字报名咨询。
 
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/df7121f7-192b-42e5-a627-fbe859fa12d2/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/df7121f7-192b-42e5-a627-fbe859fa12d2/image.png 'image.png')
 
 如果你对这门课程还有想了解的，或者购买后有问题，可以加我微信咨询，**wfdev7**，备注**888**。
 

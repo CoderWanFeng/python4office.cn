@@ -18,7 +18,7 @@ tags: [pobd]
 ## 📍 源代码免费提供
 
 需要源代码的朋友可以访问以下链接
-[https://gitcode.com/python4office/pobd](url)
+[https://atomgit.com/python4office/pobd](url)
 
 ## 📍 一行代码，轻松解决
 ```
@@ -27,7 +27,7 @@ pobd.ocr2excel.driving_license(img_path=input_file, output_excel_path=output_fil
 
 ## 📍 识别效果
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1746688217943.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1746688217943.jpg)
 
 #  三、exe小程序
 这时候有人就会说这太麻烦了，还有更简单的吗？

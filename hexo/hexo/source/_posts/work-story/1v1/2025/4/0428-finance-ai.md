@@ -58,7 +58,7 @@ tags: 1v1
 
 我今天也是刚得到知乎官方的回复，我的开源作品又获得了知乎的认证，国内已经有N个平台邀请我加入了。
 
-这是我的开源项目之一，你也可以看一下：[点我直达](https://gitcode.com/CoderWanFeng1/python-office)
+这是我的开源项目之一，你也可以看一下：[点我直达](https://atomgit.com/CoderWanFeng1/python-office)
 
 
 ## 写在后面

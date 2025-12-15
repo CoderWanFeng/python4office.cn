@@ -8,11 +8,11 @@ tags: [pobd]
 
 右击鼠标右键，打开这个文件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749105627298.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749105627298.jpg)
 
 在这里填入你的账号密码，我这里的是加密了的写法
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749105916162.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749105916162.jpg)
 
 如果不知道怎么开通的可点下面这个链接
 
@@ -30,58 +30,58 @@ tags: [pobd]
 
 将发票放在这里
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106356217.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749106356217.jpg)
 
 然后把发票的文件名写在这里
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106475137.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749106475137.jpg)
 
 这行代码表示生成的识别结果
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106534715.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749106534715.jpg)
 
 #  三、运行代码
 
 鼠标右键这个文件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106604775.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749106604775.jpg)
 
 然后鼠标左键点击这个三角形
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106644161.jpg).
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749106644161.jpg).
 
 #  四、运行效果
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106715016.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749106715016.jpg)
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749103853675.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749103853675.jpg)
 
 #  五、批量识别
 
 鼠标移到这后面，然后按下 ctrl  加  / ，注释掉这行代码
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106816845.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749106816845.jpg)
 
 鼠标移到这两行后面，然后按下 ctrl  加  / ，取消注释掉
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749106949460.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749106949460.jpg)
 
 最终是这个效果
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107114514.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749107114514.jpg)
 
 再将发票都放入这个文件夹下
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107043247.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749107043247.jpg)
 
 运行代码后
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107205554.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749107205554.jpg)
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107266685.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749107266685.jpg)
 
 #  六、原始数据
 
 如果你需要原始数据，运行这段代码就可以了
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1749107413197.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1749107413197.jpg)

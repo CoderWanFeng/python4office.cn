@@ -32,5 +32,5 @@ tags: pandas
 ## 1对1技术咨询
 
 > ⭐今年我推出了1对1答疑的Python学习指导，如果需要可以扫码下图加我好友👇
-![](https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
+![](https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
 

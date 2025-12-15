@@ -6,7 +6,7 @@ tags: 广告
 
 <p align="center" id='扫码查看AI编程训练营'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
 
@@ -19,10 +19,10 @@ tags: 广告
     	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
 	</a>	
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
 <a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
@@ -338,11 +338,11 @@ print("Hello, World!")
 
 > 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
 
-![小红书：爱吃火锅的小明](https://raw.gitcode.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
 
@@ -350,17 +350,17 @@ print("Hello, World!")
 
 > 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
 
-![小红书：爱吃火锅的小明](https://raw.gitcode.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
 
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
   
 
-![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
 
-![滴滴红包](https://raw.gitcode.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
 
 
 
@@ -368,6 +368,6 @@ print("Hello, World!")
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>

@@ -19,18 +19,18 @@ struct LinkNode
         struct LinkNode * next; //指针域
 }
 ~~~
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/def16d0a-765b-4fef-b2ed-a3c85d27eed6/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/def16d0a-765b-4fef-b2ed-a3c85d27eed6/image.png 'image.png')
 
 **清空链表**
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/06ea1861-da91-4013-8009-a2e23a08a5cb/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/06ea1861-da91-4013-8009-a2e23a08a5cb/image.png 'image.png')
 
 # 函数指针的定义
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/20fc133f-f60e-4e7d-bd95-bfb20255874e/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/20fc133f-f60e-4e7d-bd95-bfb20255874e/image.png 'image.png')
 备注： func 是自定义的函数名字
 
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/41d82ad5-364a-4b43-a503-ffc1f1db6c89/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/41d82ad5-364a-4b43-a503-ffc1f1db6c89/image.png 'image.png')
 
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/77392c1e-c863-408f-bfc9-2f9f0020bcc1/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/77392c1e-c863-408f-bfc9-2f9f0020bcc1/image.png 'image.png')
 
 # 函数指针数组的定义
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/22d0250f-9f15-417f-83d3-88b762a12e48/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/22d0250f-9f15-417f-83d3-88b762a12e48/image.png 'image.png')

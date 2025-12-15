@@ -40,7 +40,7 @@ tags: 原创课程
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
 

@@ -36,6 +36,6 @@ pobd.ocr2excel.social_security_card(img_path=input_file,output_excel_path=output
    ```
 
 #  三、📍 效果展示
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1746688217942.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1746688217942.jpg)
 
 当然，我也把这个功能加进了exe的小程序里，感兴趣的话，请在评论区留言，我会尽快将发送给你。

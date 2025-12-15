@@ -16,17 +16,17 @@ tags: [poemail]
 
 双击鼠标左键第六个文件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747197779534.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747197779534.jpg)
 
 #  二、修改授权码和qq邮箱
 
 打开文件后，把这两行分别改为你的授权码和qq邮箱
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747197845098.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747197845098.jpg)
 
 就像这样
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747197942432(1).jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747197942432(1).jpg)
 
 #  三、指定下载位置
 
@@ -34,7 +34,7 @@ tags: [poemail]
 
 你就把 ` output_path=`的后面修改为 `r'E:\poemail\tests'`，注意仍然是用英文引号
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747198100502.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747198100502.jpg)
 
 #  四、指定下载未读邮件的附件，还是全部邮件的附件
 
@@ -42,37 +42,37 @@ tags: [poemail]
 
 就把 ` status=`的后面修改为 `"UNSEEN"`，就像这样
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747198289009.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747198289009.jpg)
 
 如果是要下载全部邮件的附件
 就把 ` status=`的后面修改为 `"ALL"`，就像这样
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747198428116.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747198428116.jpg)
 
 #  五、运行代码
 
 鼠标移到第六个文件，然后鼠标右键单击
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747198529061.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747198529061.jpg)
 
 找到有三角形这行，鼠标左键单击它就可以了。
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747198578410.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747198578410.jpg)
 
 #  六、运行效果
 
 首先可以看到我这里有两封未读邮件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747206494057.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747206494057.jpg)
 
 我们在这里设置为  UNSEEN，然后日志显示成功
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747206720575.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747206720575.jpg)
 
 接下来打开 E:\poemail\tests 这个文件夹，会看见有以  序号 + 发送人的邮箱地址命名的文件夹
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747206818413.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747206818413.jpg)
 
 打开文件夹能看见附件被正确的下载下来了
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747206935914.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747206935914.jpg)

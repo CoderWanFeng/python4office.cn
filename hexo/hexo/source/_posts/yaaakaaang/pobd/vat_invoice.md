@@ -16,7 +16,7 @@ tags: [pobd]
 ## 📍 源代码免费提供
 
 为了让更多人受益，我将这个工具的源代码免费开源，并托管在GitCode上。你可以访问以下链接获取源代码
-[https://gitcode.com/python4office/pobd](url)
+[https://atomgit.com/python4office/pobd](url)
 
 ## 📍 一行代码实现功能
 为了让不懂代码的朋友也能轻松使用，我将功能都封装到了一行代码里。你把源代码下载下来后，只需要调用下面这行代码，就可以实现识别发票，并保存为excel表格。
@@ -33,7 +33,7 @@ input_file 就是你存放增值税发票的目录， output_file 是生成excel
 
 ## 📍 效果展示
 发票上的信息几乎都能识别，这里只截图了一部分。
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1746678968379(1).jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1746678968379(1).jpg)
 
 #  三、零代码方案（exe小程序）
 如果你觉得这样还是不得劲，我还开发了一个exe版的小程序。你可以直接下载并运行这个程序，无需安装任何额外的软件。

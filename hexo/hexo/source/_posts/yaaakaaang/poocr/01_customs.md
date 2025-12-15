@@ -25,7 +25,7 @@ tags: [poocr]
 
 ## 📍 一行代码实现功能
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748057675792.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1748057675792.jpg)
 
 其中 `input_path` 就是你存放报关单的路径
 
@@ -33,15 +33,15 @@ tags: [poocr]
 
 而`id` 和 `key` 则是腾讯云ocr的账号和密码，可以看这个链接查看怎么获取
 
-[获取腾讯云账号和密码](https://gitcode.com/python4office/python4office.cn/blob/main/hexo/hexo/source/_posts/yaaakaaang/poocr/00_get_key.md?init=initTree)
+[获取腾讯云账号和密码](https://atomgit.com/python4office/python4office.cn/blob/main/hexo/hexo/source/_posts/yaaakaaang/poocr/00_get_key.md?init=initTree)
 
 # 四、识别效果
 
-![示例图片](https://raw.gitcode.com/yaaakaaang/pic/raw/main/060da862587655850fd6d80b587797e.png)
+![示例图片](https://raw.atomgit.com/yaaakaaang/pic/raw/main/060da862587655850fd6d80b587797e.png)
 
 这上面的所有消息都能够识别出来
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748059829342.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1748059829342.jpg)
 
 后面还有很多信息，我这里没有截全。
 
@@ -49,10 +49,10 @@ tags: [poocr]
 
 我们还做了更多的功能，比如 
 
-[增值税发票识别、驾\行驶证识别](https://gitcode.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/pobd)
+[增值税发票识别、驾\行驶证识别](https://atomgit.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/pobd)
 
-[邮件自动化](https://gitcode.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/poemail)
+[邮件自动化](https://atomgit.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/poemail)
 
-[微信自动化](https://gitcode.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/robot)
+[微信自动化](https://atomgit.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/robot)
 
 如果你还有更多的需求需要实现，可以在评论区留言，我看见了会尽快回复您。

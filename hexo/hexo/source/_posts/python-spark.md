@@ -14,7 +14,7 @@ tags: spark
 > ⭐今年我推出了陪你学习1年的Python学习服务：👇
 
 如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
+![](https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
 
 ## 2、Python + 大数据开发
 

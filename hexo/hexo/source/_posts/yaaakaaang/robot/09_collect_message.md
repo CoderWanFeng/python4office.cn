@@ -9,17 +9,17 @@ tags: [PyOfficeRobot]
 
 找到左边【收集群指定人发的消息】，鼠标左键双击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1748242121861.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1748242121861.jpg)
 
 然后在这里填写微信群的名字
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747990880948.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747990880948.jpg)
 
 # 二、填写好友备注
 
 收集指定成员的聊天记录，这里面就填上你对他的备注
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747991158807.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747991158807.jpg)
 
 多个成员之间用英文逗号隔开，比如
 
@@ -31,7 +31,7 @@ tags: [PyOfficeRobot]
 
 滚动的越多，收集的聊天记录越多
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747991485141.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747991485141.jpg)
 
 注意：在运行代码前最好在要收集的群里发一条消息，让这个群位于消息列表前面
 
@@ -43,22 +43,22 @@ tags: [PyOfficeRobot]
 
 单击鼠标右键左边第九个文件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747997572191.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747997572191.jpg)
 
 然后找到有三角形这行，鼠标左键单击它
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747995241986.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747995241986.jpg)
 
 #  五、运行效果
 
 日志显示运行成功
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747997401583.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747997401583.jpg)
 
 这里也多了一个文件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747997458920.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747997458920.jpg)
 
 打开可以看到收集的聊天记录
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747997532252.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747997532252.jpg)

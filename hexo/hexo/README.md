@@ -17,7 +17,7 @@
 ## 快速开始
 
 1. 安装 [Hexo](https://hexo.io/zh-cn/)
-2. 克隆项目：`git clone https://gitcode.com/python4office/python4office.cn.git`
+2. 克隆项目：`git clone https://atomgit.com/python4office/python4office.cn.git`
 3. 本地运行
 
 > cd hexo/hexo
@@ -32,4 +32,4 @@
 > 请自行添加
 
 - [CoderWanFeng](https://github.com/CoderWanFeng)
-- [wzllby](https://gitcode.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/wzllby)
+- [wzllby](https://atomgit.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/wzllby)

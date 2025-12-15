@@ -7,7 +7,7 @@ tags: 第三方库
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -28,10 +28,10 @@ tags: 第三方库
     	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
 	</a>	
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
 <a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
@@ -56,19 +56,19 @@ tags: 第三方库
 
 周五下班的路上刷手机，意外发现陪我度过无数黑夜的doll姐姐，置顶了学习Python的动态。
 
-![x](https://raw.gitcode.com/user-images/assets/5027920/4f094a57-b833-464a-b537-e93e556adb40/17fb1ebb827ce7309e11b61ac5d4e1ac.jpg '17fb1ebb827ce7309e11b61ac5d4e1ac.jpg')
+![x](https://raw.atomgit.com/user-images/assets/5027920/4f094a57-b833-464a-b537-e93e556adb40/17fb1ebb827ce7309e11b61ac5d4e1ac.jpg '17fb1ebb827ce7309e11b61ac5d4e1ac.jpg')
 
-![数据科学手册](https://raw.gitcode.com/user-images/assets/5027920/10eba640-23a5-4118-93f1-ad31b338d98e/0b4239882ccdcf8b3f10db52bd8a3c5f.jpg '0b4239882ccdcf8b3f10db52bd8a3c5f.jpg')
+![数据科学手册](https://raw.atomgit.com/user-images/assets/5027920/10eba640-23a5-4118-93f1-ad31b338d98e/0b4239882ccdcf8b3f10db52bd8a3c5f.jpg '0b4239882ccdcf8b3f10db52bd8a3c5f.jpg')
 
 放大看她用的这本书也是我推荐过的《Python数据科学手册》。
 
 ## 缘分啊
 
-![写真](https://raw.gitcode.com/user-images/assets/5027920/be28233b-5c1d-4ec5-afcf-3aeaefb12e9c/f7dd762f3c33d1bcbbf79cf6b819ef71.png 'f7dd762f3c33d1bcbbf79cf6b819ef71.png')
+![写真](https://raw.atomgit.com/user-images/assets/5027920/be28233b-5c1d-4ec5-afcf-3aeaefb12e9c/f7dd762f3c33d1bcbbf79cf6b819ef71.png 'f7dd762f3c33d1bcbbf79cf6b819ef71.png')
 
 我在2023年录制的[《给小白的《50讲 · Python自动化办公》（完结）》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)，就用过她作为封面，当时纯属蹭流量。
 
-![2023年的课](https://raw.gitcode.com/user-images/assets/5027920/b55ef6a2-5d98-4ad9-a59f-97aecfec8d9b/71c3083225d09357bdf829e89efc0217.jpg '71c3083225d09357bdf829e89efc0217.jpg')
+![2023年的课](https://raw.atomgit.com/user-images/assets/5027920/b55ef6a2-5d98-4ad9-a59f-97aecfec8d9b/71c3083225d09357bdf829e89efc0217.jpg '71c3083225d09357bdf829e89efc0217.jpg')
 
 ## 为什么Python会破圈？
 
@@ -78,7 +78,7 @@ tags: 第三方库
 - 视频版：👇
 
 
-![2024年](https://raw.gitcode.com/user-images/assets/5027920/c7fba1af-a724-470f-a397-f5cad1ebc158/5ab88fcd9364b894e545162ec239878f.jpg '5ab88fcd9364b894e545162ec239878f.jpg')
+![2024年](https://raw.atomgit.com/user-images/assets/5027920/c7fba1af-a724-470f-a397-f5cad1ebc158/5ab88fcd9364b894e545162ec239878f.jpg '5ab88fcd9364b894e545162ec239878f.jpg')
 
 
 
@@ -94,7 +94,7 @@ tags: 第三方库
 
 最近事情有点多，主要精力用在更新视频上了。
 
-![pdf库的选择](https://raw.gitcode.com/user-images/assets/5027920/6efc556d-8146-429a-baee-bb3a4e5e8a1b/a2a3b66b48bae1283db98ab8b6626757.jpg 'a2a3b66b48bae1283db98ab8b6626757.jpg')
+![pdf库的选择](https://raw.atomgit.com/user-images/assets/5027920/6efc556d-8146-429a-baee-bb3a4e5e8a1b/a2a3b66b48bae1283db98ab8b6626757.jpg 'a2a3b66b48bae1283db98ab8b6626757.jpg')
 
 
 ## **关于作者**  
@@ -132,7 +132,7 @@ tags: 第三方库
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>
 
@@ -140,17 +140,17 @@ tags: 第三方库
 
 > 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
 
-![小红书：爱吃火锅的小明](https://raw.gitcode.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
 
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
   
 
-![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
 
-![滴滴红包](https://raw.gitcode.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
 
 
 

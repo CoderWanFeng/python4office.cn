@@ -21,7 +21,7 @@ tags:
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -119,7 +119,7 @@ tags:
 
 <p align="center">
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/d78ad96d-6a5e-49fa-9a6d-ba98ec1a1293/image.png" width="100%"/>
     </a>   
 </p>
 

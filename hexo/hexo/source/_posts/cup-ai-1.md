@@ -51,7 +51,7 @@ tags: 人工智能
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 

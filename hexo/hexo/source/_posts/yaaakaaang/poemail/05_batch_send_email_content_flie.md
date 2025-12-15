@@ -12,13 +12,13 @@ tags: [poemail]
 #  一、打开文件
 双击鼠标左键第五个文件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747191490267.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747191490267.jpg)
 
 #  二、修改授权码和qq邮箱
 
 前面这两行改成你的授权码和qq邮箱
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747191574272.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747191574272.jpg)
 
 #  三、批量发送给多个收件人
 
@@ -30,7 +30,7 @@ tags: [poemail]
 
 `"123...456@qq.com; 123...789@qq.com"`
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747192704157.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747192704157.jpg)
 
 #  四、发送时指定多个抄送人
 
@@ -38,17 +38,17 @@ tags: [poemail]
 
 也是一样的操作修改第四行
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747192940607.png)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747192940607.png)
 
 #  五、运行代码
 
 鼠标移到第五个文件，然后鼠标右键单击
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747193030052.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747193030052.jpg)
 
 找到有三角形这行，鼠标左键单击它就可以了。
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747193113909.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747193113909.jpg)
 
 #  六、运行效果
 
@@ -57,25 +57,25 @@ tags: [poemail]
 ## 📍 1. 多个收件人，一个抄送人
 运行日志显示成功
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205335675.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747205335675.jpg)
 
 网页邮箱成功收到邮件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205470924.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747205470924.jpg)
 
 qq邮箱也成功收到邮件，而且可以看到几乎是同时收到的
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205561722.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747205561722.jpg)
 
 ## 📍 2. 多个抄送人，一个收件人
 运行日志显示成功
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205800523.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747205800523.jpg)
 
 网页邮箱成功收到抄送邮件
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205875525.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747205875525.jpg)
 
 qq邮箱也成功收到抄送邮件，同样几乎是同时收到的
 
-![](https://raw.gitcode.com/yaaakaaang/pic/raw/main/1747205976777.jpg)
+![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747205976777.jpg)

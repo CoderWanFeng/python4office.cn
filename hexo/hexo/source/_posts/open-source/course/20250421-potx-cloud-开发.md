@@ -30,10 +30,10 @@ potx.ocr.VatInvoiceOCR()
 
 ## 怎么参与potx-cloud的开发
 
-potx的源码，全部在GitCode开源：[https://gitcode.com/python4office/potx-cloud](https://gitcode.com/python4office/potx-cloud)，在gitee和GitHub，也都是同步更新的。
+potx的源码，全部在GitCode开源：[https://atomgit.com/python4office/potx-cloud](https://atomgit.com/python4office/potx-cloud)，在gitee和GitHub，也都是同步更新的。
 
 ```shell
-git clone https://gitcode.com/python4office/potx-cloud.git
+git clone https://atomgit.com/python4office/potx-cloud.git
 
 cd potx-cloud
 

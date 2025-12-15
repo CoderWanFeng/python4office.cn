@@ -7,7 +7,7 @@ tags: 第三方库
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -28,7 +28,7 @@ tags: 第三方库
     	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
 	</a>	
 </p>
@@ -50,8 +50,8 @@ tags: 第三方库
 
 我们利用qt，也开发了多个项目：
 
-- [pobd](https://gitcode.com/python4office/pobd)
-- [poocr](https://gitcode.com/python4office/poocr)
+- [pobd](https://atomgit.com/python4office/pobd)
+- [poocr](https://atomgit.com/python4office/poocr)
 - [26.7万下载！Python自动化办公专用库：python-office，发布1.0.0版本](https://github.com/CoderWanFeng/python-office)
 
 ## 一、开源协议大不同
@@ -60,7 +60,7 @@ PySide 走的是 Lesser General Public License（LGPL）路线，这协议相对
 
 可 PyQt 呢，人家默认走的是 GNU General Public License（GPL）协议。这协议就有点 “严格” 啦，要是你用了 PyQt 开发应用，然后想把这个应用分发给第三方，那对不起哦，你整个应用的源代码也得跟着 GPL 协议开源。不过别慌，PyQt 也考虑到了商业需求，给咱们提供了商业授权选项，花点钱就能用它来开发闭源的商业软件，是不是超贴心。
 
-![image.png](https://raw.gitcode.com/user-images/assets/5027920/70a60ed3-32fa-46c2-876f-1b3c759519e8/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/70a60ed3-32fa-46c2-876f-1b3c759519e8/image.png 'image.png')
 
 ## 二、开发和维护团队 “出身” 不凡
 
@@ -108,9 +108,9 @@ PyQt 的性能更是杠杠的，经过多年优化打磨，稳定得很。在处
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
   
-![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
 
 
 
@@ -127,9 +127,9 @@ PyQt 的性能更是杠杠的，经过多年优化打磨，稳定得很。在处
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/84b09492-5f26-4c39-8e30-f056839d1993/6152d8017a3595256e51cbd9e08e148b.png '6152d8017a3595256e51cbd9e08e148b.png')
   
-![美团红包](https://raw.gitcode.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
 
 
 

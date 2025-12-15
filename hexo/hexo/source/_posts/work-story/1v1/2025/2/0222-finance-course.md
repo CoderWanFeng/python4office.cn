@@ -13,10 +13,10 @@ tags: 1v1
     	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-    <a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+    <a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
 	</a>	
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
 <a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">

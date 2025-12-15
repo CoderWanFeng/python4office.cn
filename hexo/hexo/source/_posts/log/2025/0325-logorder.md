@@ -6,7 +6,7 @@ tags: 自媒体
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -45,7 +45,7 @@ tags: 自媒体
   - [华为云](https://bbs.huaweicloud.com/community/usersnew/id_1654839688687117)
   - [码云](https://gitee.com/CoderWanFeng)
   - [GitHub](https://github.com/CoderWanFeng)
-  - [GitCode](https://gitcode.com/CoderWanFeng1)
+  - [GitCode](https://atomgit.com/CoderWanFeng1)
   - [开源中国](https://my.oschina.net/u/3888978)
   - [51CTO](https://blog.51cto.com/u_15493782)
   - [百度](https://author.baidu.com/home/1655119794937691)

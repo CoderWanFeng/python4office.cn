@@ -7,7 +7,7 @@ tags: 微信群
 
 <p align="center" id='扫码查看AI编程训练营'>
     <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
 
@@ -26,10 +26,10 @@ tags: 微信群
     	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
 	</a>	
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
 <a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
@@ -59,7 +59,7 @@ tags: 微信群
 
 <p align="center" id='学习群的氛围'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>
 
@@ -106,7 +106,7 @@ tags: 微信群
 我是山东人，不靠坑人挣钱，但是我每天上班真的很累了，也请不要白嫖我。如果觉得我提供不了帮助，看看我的短视频也好。感谢理解。❤
 
 
-![](https://raw.gitcode.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
+![](https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg)
 
 
 
@@ -170,7 +170,7 @@ tags: 微信群
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 

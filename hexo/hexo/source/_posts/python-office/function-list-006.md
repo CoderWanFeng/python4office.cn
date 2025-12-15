@@ -6,7 +6,7 @@ tags: python-office
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -27,10 +27,10 @@ tags: python-office
     	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
 	</a>	
-	<a target="_blank" href='https://gitcode.com/CoderWanFeng1/python-office'>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
 <a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
@@ -279,7 +279,7 @@ office.image.txt2wordcloud(filename=r'./test_files/50-11-txt2wordcloud/python-of
 '''
 import office
 
-office.image.down4img(url='https://raw.gitcode.com/CoderWanFeng1/website/raw/main/icon3.jpg',
+office.image.down4img(url='https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon3.jpg',
                       output_path=r'D:\workplace\code\gitee\python-office.com\docs-pages\vuepress\course\code\test_files\50-16-down4img')
 
 ```
