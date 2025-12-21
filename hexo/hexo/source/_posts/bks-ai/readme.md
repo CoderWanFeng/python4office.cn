@@ -19,6 +19,17 @@ tags: 白开水AI社区
 | 2025.11下   | [我是怎么用AI自动化 写文章、剪视频的？](https://www.bilibili.com/video/BV1qx2WB1E8p)            | [查看](https://mp.weixin.qq.com/s/xOHD_5bVcVscFZvSZvHuUA) | [查看](https://www.bilibili.com/video/BV1qx2WB1E8p) | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) | [昭意](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww) |
 | 2025.12.14 | [人人都可以AI编程，10大功能现场揭秘！](https://www.bilibili.com/video/BV1FDqGBtE3H)            | [查看](https://mp.weixin.qq.com/s/oyvaNW_HnlxOIzWOyGzIRw) | [查看](https://www.bilibili.com/video/BV1FDqGBtE3H)   | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) | [昭意](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww) |
 
+
+## 社区课程
+
+- [给小白的《12讲 · AI编程训练营》](https://www.python-office.com/course-002/AICoding/version-001/all.html)
+
+- [Coze(扣子)工作流基础核心课](https://mall.bilibili.com/neul-next/detailuniversal/detail.html?isMerchant=1&page=detailuniversal_detail&saleType=10&itemsId=40099831&loadingShow=1&noTitleBar=1&msource=merchant_share)
+
+- [AI短视频还有红利！coze书单号，给我冲](https://mp.weixin.qq.com/s/qokwWMcCdr0PSSm3aGhssA)
+
+- [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
+
 ## 联合创始人
 
 - 晚枫：
