@@ -8,7 +8,7 @@ tags: 机器人
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai/poqywx/001/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，个人网址：[python-office.com](https://www.python-office.com)
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，个人网址：[python-office.com](https://www.python-office.com)
 
 上次分享了微信机器人的视频以后，视频下面有一个热门评论：
 > 什么时候开发企业版微信机器人？自动回复、自动群发等等~

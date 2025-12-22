@@ -5,7 +5,7 @@ tags: AI
 ---
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai/%E7%9B%98%E7%82%B92023/cover.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，今天给大家分享3个我用过的AI工具。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，今天给大家分享3个我用过的AI工具。
 
 国外的工具这里就不推荐了，推荐了你也不能用。今天只推荐几个国内也能用的。
 

@@ -6,7 +6,7 @@ tags: python-office
 
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/pencil4img-cover.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，读者交流群🏠[点我直达](http://www.python4office.cn/wechat-group/)
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，读者交流群🏠[点我直达](http://www.python4office.cn/wechat-group/)
 
 之前给大家介绍了：👉[25个Python学习资源（文字版），摸鱼必备，可以用到就业](https://mp.weixin.qq.com/s/-mlsV7PFc27JElOTCskMsg)
 

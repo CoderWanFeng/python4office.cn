@@ -7,7 +7,7 @@ tags:
 
 
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/format/cover.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，**知识星球：Python读者圈。**
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，**知识星球：Python读者圈。**
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/format/qa.png)
 
 今天我们来讨论一个问题：**python里是如何格式化字符串的？实际工作中使用的是哪一种？**

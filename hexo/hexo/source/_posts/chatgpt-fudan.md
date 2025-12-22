@@ -35,7 +35,7 @@ tags: ai
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
+<a href="https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -47,7 +47,7 @@ tags: ai
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，山东人在重庆。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，山东人在重庆。
 
 - 最新视频👉[淄博烧烤，哪家最好吃？](https://www.bilibili.com/video/BV1sv4y1E76M/?spm_id_from=333.999.0.0&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)
 

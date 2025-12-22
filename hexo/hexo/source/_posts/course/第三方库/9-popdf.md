@@ -4,7 +4,7 @@ date: 2024-12-08 10:16:17
 tags: [ 第三方库,自动化办公,pdf ]
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，今天给大家分享一个PDF自动化办公的第三方库：popdf。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，今天给大家分享一个PDF自动化办公的第三方库：popdf。
 
 > 源码地址：[https://github.com/CoderWanFeng/popdf](https://github.com/CoderWanFeng/popdf)
 

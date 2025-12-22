@@ -34,7 +34,7 @@ tags: 平台
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
+<a href="https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -49,7 +49,7 @@ tags: 平台
 
 公众号：程序员晚枫
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)。
 从2019年6月到现在，我利用下班后的时间更新技术博客已经3年了，目前全网粉丝20w+，
 
 以下是我经常用来更新文章的技术平台。

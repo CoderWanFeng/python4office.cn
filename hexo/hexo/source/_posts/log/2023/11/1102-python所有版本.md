@@ -43,7 +43,7 @@ tags: python基础
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，今天给大家整理了所有Python版本的下载，包含系统：Windows、Mac、Linux。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，今天给大家整理了所有Python版本的下载，包含系统：Windows、Mac、Linux。
 
 ## 写在前面
 

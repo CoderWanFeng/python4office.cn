@@ -43,7 +43,7 @@ tags: 自动化办公
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，B站也叫这个名~
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，B站也叫这个名~
 
 后台收到一个读者需求：
 

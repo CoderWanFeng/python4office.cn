@@ -22,7 +22,7 @@ tags: 白开水AI社区
 
 ## 社区课程
 
-- [给小白的《12讲 · AI编程训练营》](https://www.python-office.com/course-002/AICoding/version-001/all.html)
+- [给小白的《12讲 · AI编程训练营》](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)
 
 - [Coze(扣子)工作流基础核心课](https://mall.bilibili.com/neul-next/detailuniversal/detail.html?isMerchant=1&page=detailuniversal_detail&saleType=10&itemsId=40099831&loadingShow=1&noTitleBar=1&msource=merchant_share)
 

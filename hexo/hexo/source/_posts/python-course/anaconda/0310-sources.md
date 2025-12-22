@@ -4,7 +4,7 @@ date: 2024-03-10 13:49:42
 tags: 人工智能
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)，抖音/快手/小红书/微博，都叫这个名字。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)，抖音/快手/小红书/微博，都叫这个名字。
 
 Python学习网站：[www.python-office.com](www.python-office.com)
 

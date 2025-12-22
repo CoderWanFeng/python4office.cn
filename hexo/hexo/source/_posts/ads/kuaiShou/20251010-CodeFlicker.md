@@ -4,7 +4,7 @@ date: 2025-10-10 02:24:04
 tags: AI编程
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)。
 
 2025年10月9日，当电商平台都在为双11预热时，快手突然扔下一颗技术炸弹——正式发布AI原生IDE编程工具CodeFlicker。这个以短视频和直播见长的互联网巨头，竟然跨界做起了程序员的"生产力工具"？消息一出，技术圈瞬间炸开锅："快手不务正业？""这是要跟GitHub Copilot正面刚？"
 
@@ -61,7 +61,7 @@ CodeFlicker的发布，暴露了快手的野望：不满足做内容平台，要
 > 官网：https://www.codeflicker.ai/
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://www.python-office.com/course-002/AICoding/version-001/all.html'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/a535003a-12dc-4b84-847e-fc5db33796fc/极简AI编程__2_.jpg" width="400" height='1000'/>
     </a>   
 </p>

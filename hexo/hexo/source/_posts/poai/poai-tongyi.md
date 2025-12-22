@@ -35,7 +35,7 @@ tags: [人工智能,chatgpt]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://www.python-office.com/course-002/AICoding/version-001/all.html">
+<a href="https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -49,7 +49,7 @@ tags: [人工智能,chatgpt]
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai%2Fchatgpt%2Fcover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程](https://www.python-office.com/course-002/AICoding/version-001/all.html)。
+大家好，这里是程序员晚枫，正在all in [AI编程](https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ)。
 
 最近ChatGPT火爆全球，哪怕你不是程序员，应该也听过他的大名了。
 
