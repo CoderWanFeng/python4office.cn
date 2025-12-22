@@ -48,7 +48,14 @@ tags: 白开水AI社区
 | 2025.12.5  | 西南大学（北碚校区） | [AI + 开源双重 buff！AtomGit 源启高校西南大学站，12 月 5 日邀你解锁 Coding 新姿势～](https://mp.weixin.qq.com/s/9iOhA1IXR9-7T5W9cL-YnQ) | [AtomGit“源启高校”西南大学站活动圆满结束](https://mp.weixin.qq.com/s/exkUPXHebta5q2m22uc0Mg) |
 | 2025.12.11 | 阿里中心 · 重庆  | [【线下活动】Qoder MeetUP · 重庆阿里中心](https://mp.weixin.qq.com/s/LsUvY2nkn0B-rrbFgW6_TA)                               | [用Qoder打造开源项目，我悄然进化成六边形战士](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ) |
 
+
+## 采访
+
+- AtomGit：[DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休｜CodeMaster#3](https://mp.weixin.qq.com/s/RC54o9C4F87fyAebJUE0kg)
+- 脉脉：[玩赚AI实验室 × 程序员晚枫：用AI和自动化，把打工人的时间变成“现金流”](https://mp.weixin.qq.com/s/HHuNGf6nWh-p2zkfm7tnfQ)
+
 > 更多社区动态，请关注：公众号 - [白开水AI](https://mp.weixin.qq.com/s/Lh6gCEVXcsCEzO8Otk9mNg)
+
 
 ## 联系我们
 
