@@ -18,6 +18,7 @@ tags: 白开水AI社区
 | 2025.11上   | [用 AI 开发一个PDF转Word的办公软件，并打包成了exe](https://www.bilibili.com/video/BV1RY2vB6Eoa) | ---                                                     | [查看](https://www.bilibili.com/video/BV1RY2vB6Eoa) | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) |
 | 2025.11下   | [我是怎么用AI自动化 写文章、剪视频的？](https://www.bilibili.com/video/BV1qx2WB1E8p)            | [查看](https://mp.weixin.qq.com/s/xOHD_5bVcVscFZvSZvHuUA) | [查看](https://www.bilibili.com/video/BV1qx2WB1E8p) | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) | [昭意](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww) |
 | 2025.12.14 | [人人都可以AI编程，10大功能现场揭秘！](https://www.bilibili.com/video/BV1FDqGBtE3H)            | [查看](https://mp.weixin.qq.com/s/oyvaNW_HnlxOIzWOyGzIRw) | [查看](https://www.bilibili.com/video/BV1FDqGBtE3H)   | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) | [昭意](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww) |
+| 2025.12.28 | [怎么使用讯飞星辰Agent平台？来直播间，手把手带你搭建](https://mp.weixin.qq.com/s/-BpX-U5aY12Sq70u9DMewg)            | [查看](https://mp.weixin.qq.com/s/oyvaNW_HnlxOIzWOyGzIRw) | [查看](https://www.bilibili.com/video/BV1FDqGBtE3H)   | [晚枫](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw) | [昭意](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww) |
 
 
 ## 社区课程
@@ -47,6 +48,7 @@ tags: 白开水AI社区
 | 2025.11.29 | 重庆光电园      | [G-Star Gathering Day 重庆站来袭！](https://mp.weixin.qq.com/s/RAGT2VQiUe91YrC9KtCoIA)                               | 待整理                                                                           |
 | 2025.12.5  | 西南大学（北碚校区） | [AI + 开源双重 buff！AtomGit 源启高校西南大学站，12 月 5 日邀你解锁 Coding 新姿势～](https://mp.weixin.qq.com/s/9iOhA1IXR9-7T5W9cL-YnQ) | [AtomGit“源启高校”西南大学站活动圆满结束](https://mp.weixin.qq.com/s/exkUPXHebta5q2m22uc0Mg) |
 | 2025.12.11 | 阿里中心 · 重庆  | [【线下活动】Qoder MeetUP · 重庆阿里中心](https://mp.weixin.qq.com/s/LsUvY2nkn0B-rrbFgW6_TA)                               | [用Qoder打造开源项目，我悄然进化成六边形战士](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ) |
+| 2025.12.27 | 渝客松 · 重庆  | [重庆mini科技节](https://www.xiaohongshu.com/explore/694cfc7c000000001e02db39?app_platform=ios&app_version=9.0.2&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBIb8YSej6Bkah8Rbln16s4FN38VVe3-0hLGfw9uUhURc=&author_share=1&xhsshare=WeixinSession&shareRedId=ODlEOTtHSD82NzUyOTgwNjg5OTg0OzxM&apptime=1766653154&share_id=29e9ad4c6229457ab2e7a46aadee19e1&wechatWid=20b5c62e39945fe860e3e1cca9640af4&wechatOrigin=menu)                               | [我把Qoder当同事，和AI聊出来一个五彩斑斓的办公软件](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ) |
 
 
 ## 采访
