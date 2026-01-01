@@ -21,7 +21,7 @@ tags: 大模型
 
 
 
-<p align="center" name="gitcode">
+<p align="center" name="atomgit">
   <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
     </a>
@@ -29,10 +29,10 @@ tags: 大模型
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
-		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
+		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='atomgit star'/>
 	</a>	
 </p>
-<p align="center" name="gitcode">
+<p align="center" name="atomgit">
 	<a href="https://mp.weixin.qq.com/s/6-ELNKcyZqVG-t1JMfxKHQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>

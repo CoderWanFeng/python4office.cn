@@ -68,7 +68,7 @@ office.video.mark2video(video_path=r'D:\download\baiduyun\图片添加水印.mp4
 
 ## ToDoList
 
-2024年的最后一个月，本仓库也加入了GitCode的G-Star毕业项目，这意味着这个库的维护将会更加的完善。
+2024年的最后一个月，本仓库也加入了atomgit的G-Star毕业项目，这意味着这个库的维护将会更加的完善。
 
 接下来除了继续开发新的功能外，还会重点在以下几个方面进行优化：
 

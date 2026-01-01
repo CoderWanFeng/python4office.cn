@@ -20,9 +20,9 @@ tags: [ 第三方库,自动化办公,pdf ]
 
 
 
-<p align="center" name="gitcode">
+<p align="center" name="atomgit">
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
-		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
+		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='atomgit star'/>
 	</a>	
 	    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
@@ -95,7 +95,7 @@ popdf.add_text_watermark(input_file=r'./test_files/pdf/程序员晚枫.pdf', poi
 
 关于项目的介绍：
 
-- GitCode：[DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休｜CodeMaster#3](https://mp.weixin.qq.com/s/RC54o9C4F87fyAebJUE0kg)
+- atomgit：[DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休｜CodeMaster#3](https://mp.weixin.qq.com/s/RC54o9C4F87fyAebJUE0kg)
 - Python中国大会：[非程序员如何学习和使用 Python-程序员晚枫-科技博主&开源作者](https://www.bilibili.com/video/BV1Y6qWYWEyQ/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 - Pypi：[python-office](https://pypi.org/project/python-office/)
 - 官网：[python-office.com](https://python-office.com)
@@ -125,7 +125,7 @@ popdf.add_text_watermark(input_file=r'./test_files/pdf/程序员晚枫.pdf', poi
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.gitcode.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg '6152d8017a3595256e51cbd9e08e148b.png')
   
 ![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
 

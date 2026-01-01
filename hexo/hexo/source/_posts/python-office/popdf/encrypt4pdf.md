@@ -20,9 +20,9 @@ tags: 自动化办公
 
 
 
-<p align="center" name="gitcode">
+<p align="center" name="atomgit">
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
-		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='gitcode star'/>
+		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='atomgit star'/>
 	</a>	
 	    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
@@ -93,7 +93,7 @@ office.pdf.encrypt4pdf(path=r'D:\程序员晚枫的文件夹\input_pdf',
 
 关于项目的介绍：
 
-- GitCode：[DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休｜CodeMaster#3](https://mp.weixin.qq.com/s/RC54o9C4F87fyAebJUE0kg)
+- atomgit：[DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休｜CodeMaster#3](https://mp.weixin.qq.com/s/RC54o9C4F87fyAebJUE0kg)
 - Python中国大会：[非程序员如何学习和使用 Python-程序员晚枫-科技博主&开源作者](https://www.bilibili.com/video/BV1Y6qWYWEyQ/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 - Pypi：[python-office](https://pypi.org/project/python-office/)
 - 官网：[python-office.com](https://python-office.com)

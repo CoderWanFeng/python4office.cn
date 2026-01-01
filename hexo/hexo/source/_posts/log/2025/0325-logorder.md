@@ -45,7 +45,7 @@ tags: 自媒体
   - [华为云](https://bbs.huaweicloud.com/community/usersnew/id_1654839688687117)
   - [码云](https://gitee.com/CoderWanFeng)
   - [GitHub](https://github.com/CoderWanFeng)
-  - [GitCode](https://atomgit.com/CoderWanFeng1)
+  - [atomgit](https://atomgit.com/CoderWanFeng1)
   - [开源中国](https://my.oschina.net/u/3888978)
   - [51CTO](https://blog.51cto.com/u_15493782)
   - [百度](https://author.baidu.com/home/1655119794937691)
