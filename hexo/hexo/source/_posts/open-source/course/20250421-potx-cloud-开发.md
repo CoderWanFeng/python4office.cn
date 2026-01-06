@@ -7,7 +7,7 @@ tags: [个人网站,开源]
 
 ![](http://python4office.cn/images/open-source/course/20250421-potx-cloud-开发/pypi.png)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，全网同名。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，全网同名。
 
 熟悉我的朋友都知道，我的账号内容80%都是关于开源项目的功能文档，剩下20%是关于开发这些功能的周边。
 

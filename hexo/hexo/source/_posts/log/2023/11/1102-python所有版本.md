@@ -43,7 +43,7 @@ tags: python基础
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，今天给大家整理了所有Python版本的下载，包含系统：Windows、Mac、Linux。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，今天给大家整理了所有Python版本的下载，包含系统：Windows、Mac、Linux。
 
 ## 写在前面
 

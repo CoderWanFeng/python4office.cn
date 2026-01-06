@@ -8,7 +8,7 @@ tags:
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/potencent%2FBankCardOCR%2Fcover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，
 昨天我们学习了：[实战案例！用1行Python代码识别增值税发票，然后将数据自动录入系统](https://mp.weixin.qq.com/s/agsF8ttwxOiZyizsTKBxMQ)。
 
 今天我们继续学习Python自动化办公：每次有新员工入职，都要收集大量的工资卡信息，并且生成Excel文档，能不能用Python**准确、快速**地解决呢？

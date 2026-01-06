@@ -43,7 +43,7 @@ tags: 第三方库
 </p>
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，小红书也叫这个名字。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，小红书也叫这个名字。
 
 
 22年免费发布了Python自动化办公的专用库``python-office``，我统计了一下，这2年这个开源项目已经写了20w行代码。

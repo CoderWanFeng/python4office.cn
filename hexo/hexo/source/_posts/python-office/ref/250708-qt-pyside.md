@@ -4,7 +4,7 @@ date: 2025-07-08 10:41:04
 tags: 开源
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 我们团队最近在基于腾讯的OCR接口，开发一个桌面GUI软件，功能是实现发票识别。
 

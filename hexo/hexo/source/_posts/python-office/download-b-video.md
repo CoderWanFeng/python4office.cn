@@ -8,7 +8,7 @@ tags: python-office
 
 ![](https://www.python-office.com/api/img-cdn/python-office/you-get/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 本周**知识星球：Python读者圈**里的同学，给我提了一个问题：
 > B站的课程很好，但是上班没有网，也不想用B站的视频缓存功能。**怎么把B站的视频下载下来，存到百度网盘里看？**

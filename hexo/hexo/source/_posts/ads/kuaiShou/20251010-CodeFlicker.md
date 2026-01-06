@@ -4,7 +4,7 @@ date: 2025-10-10 02:24:04
 tags: AI编程
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 2025年10月9日，当电商平台都在为双11预热时，快手突然扔下一颗技术炸弹——正式发布AI原生IDE编程工具CodeFlicker。这个以短视频和直播见长的互联网巨头，竟然跨界做起了程序员的"生产力工具"？消息一出，技术圈瞬间炸开锅："快手不务正业？""这是要跟GitHub Copilot正面刚？"
 

@@ -49,7 +49,7 @@ tags: 平台
 
 公众号：程序员晚枫
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 从2019年6月到现在，我利用下班后的时间更新技术博客已经3年了，目前全网粉丝20w+，
 
 以下是我经常用来更新文章的技术平台。

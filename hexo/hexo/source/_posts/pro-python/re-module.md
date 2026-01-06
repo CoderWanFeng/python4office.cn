@@ -6,7 +6,7 @@ tags: 正则表达式
 
 ![](https://www.python-office.com/api/img-cdn/pro-python/re.py/re-cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 上次我们分享了：[4千字总结！Python生成随机数的22种方法，random函数太强了~](https://mp.weixin.qq.com/s/l6Tq3QtkFPOdj4SdYJCPcg)
 

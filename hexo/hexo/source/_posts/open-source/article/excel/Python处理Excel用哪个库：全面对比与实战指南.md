@@ -54,7 +54,7 @@ tags: 深度文章
 
 <!-- more -->
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 2025年数据处理效率报告显示，Python处理Excel的需求同比增长80%，但70%的开发者仍在为库选择困扰。面对pandas、openpyxl、xlsxwriter等众多工具，到底哪个最适合你的场景？本文将从功能对比、性能测试、实战案例到避坑指南，帮你找到最优解。
 

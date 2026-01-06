@@ -4,7 +4,7 @@ date: 2023-12-24 14:16:17
 tags: 日记
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 上次活动认识了一位程序员同行，最近他被裁员一位被裁员的朋友找我聊了一下午，隔着屏幕都感觉到了他的焦虑。
 

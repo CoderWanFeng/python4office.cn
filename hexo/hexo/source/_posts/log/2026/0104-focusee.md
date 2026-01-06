@@ -46,7 +46,7 @@ tags: 自媒体
 
 > 自动变焦、AI虚拟形象、一键生成字幕……这款智能工具正在颠覆传统视频制作流程，让你轻松制作专业级内容。
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 朋友们，元旦假期过得怎么样？我是全部都用来录课和写推文了，大家通过我的更新数量也能看出来。
 

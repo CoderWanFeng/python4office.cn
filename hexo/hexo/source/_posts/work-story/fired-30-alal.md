@@ -48,7 +48,7 @@ tags: 职场
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，今天是读者投稿。下面开始我们的正文。👇
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，今天是读者投稿。下面开始我们的正文。👇
 
 ---
 

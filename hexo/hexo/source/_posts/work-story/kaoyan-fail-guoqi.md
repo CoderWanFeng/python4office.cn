@@ -47,7 +47,7 @@ tags: 找工作
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，今天分享一位读者的投稿~有想投稿的朋友，可以后台联系我。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，今天分享一位读者的投稿~有想投稿的朋友，可以后台联系我。
 
 
 

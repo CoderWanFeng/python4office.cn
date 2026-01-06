@@ -35,7 +35,7 @@ tags: 微信群
 <a href="https://mp.weixin.qq.com/s/7rH5U6s91hnTKCKZy4BHCg">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
-    	<a href="https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w">
+    	<a href="https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg">
   <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
 </a>
 
@@ -53,12 +53,12 @@ tags: 微信群
 
 ### 1、AI交流群
 
-其一，只需要 **48元** 的AI圈子，长期有效：
+其一，只需要 **7元** 的AI圈子，长期有效：
 
-> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+> ⭐[进群链接，点我直达](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 <p align="center" id='学习群的氛围'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>
@@ -169,7 +169,7 @@ tags: 微信群
 
 
 <p align="center" id='进群-banner-AI'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>

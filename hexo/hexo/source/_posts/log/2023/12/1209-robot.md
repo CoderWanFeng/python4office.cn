@@ -6,7 +6,7 @@ tags: 自动化办公
 
 ![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，只给小白分享有用的**自动化办公**代码。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，只给小白分享有用的**自动化办公**代码。
 
 上次给大家分享了：[Python终于可以操作Office了](https://mp.weixin.qq.com/s/wwzGFIn-282FufnX9oNC7A)，发现大家很喜欢。
 

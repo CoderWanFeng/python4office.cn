@@ -4,7 +4,7 @@ date: 2024-1-15 21:16:17
 tags: 自动化办公
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，抖音也叫这个名字。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，抖音也叫这个名字。
 
 今天给大家分享一个腾讯最近推出的Python编程网站：不用安装任何软件，就可以运行Python代码。
 

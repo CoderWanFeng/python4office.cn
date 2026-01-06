@@ -9,7 +9,7 @@ tags: 开源
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/progress/1/cover.jpg)
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 你在写代码的过程中，有没有遇到过以下问题？
 

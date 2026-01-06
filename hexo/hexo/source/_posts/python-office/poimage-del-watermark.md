@@ -8,7 +8,7 @@ tags: 自动化办公
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poimage/%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 最近小明在开淘宝店（淘宝店名：``爱吃火锅的少女``），需要给自己的原创图片加水印，于是我上次给她开发了增加水印的功能：[图片加水印，保护原创图片，一行Python代码搞定](https://www.bilibili.com/video/BV1jT411T7n9)。
 

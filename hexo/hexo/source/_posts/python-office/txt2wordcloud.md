@@ -56,7 +56,7 @@ tags:
 >Python官网发布了Python自动化办公的库：python-office，相关信息：[重磅！官网发布第三方库：python-office，为Python自动化办公而生](https://mp.weixin.qq.com/s/v2n0DTVTZUaw7QOnA0Zlow)
 >不需要自己写代码，直接调用写好的方法就行。
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，专注于分享：Python自动化办公。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，专注于分享：Python自动化办公。
 **这个系列教程[【python-office】功能文档](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2Nzg5MjgyNg==&action=getalbum&album_id=2371443069708992513&scene=173&from_msgid=2247496501&from_itemidx=1&count=3&nolastread=1#wechat_redirect)，用来逐一介绍python-office自动化办公的功能。**
 ## 1、功能介绍
 

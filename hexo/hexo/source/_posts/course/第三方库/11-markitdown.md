@@ -4,7 +4,7 @@ date: 2024-12-18 20:56:36
 tags: 第三方库
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，上周刚给大家发布了一个功能：[仅需1行代码，Excel秒变Markdown！](https://mp.weixin.qq.com/s/ISE2SLf-F6k_38SEQqTGPg)
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，上周刚给大家发布了一个功能：[仅需1行代码，Excel秒变Markdown！](https://mp.weixin.qq.com/s/ISE2SLf-F6k_38SEQqTGPg)
 
 打算本周再增加更多文件转Markdown的功能，在检索实现方案的过程中，我突然发现：就在前几天，微软自己开源了一个工具：MarkItDown。
 

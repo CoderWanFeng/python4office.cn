@@ -43,7 +43,7 @@ tags: 自动化办公
 </p>
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 终于周末了，我和小明又开始了疯狂的考证学习，昨晚通过合法的手段获取了一套学习资料，却遇到了一个问题：
 

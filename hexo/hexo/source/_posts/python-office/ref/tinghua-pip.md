@@ -4,7 +4,7 @@ date: 2023-09-30 18:41:04
 tags: 开源
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。国庆假期，大家去哪里玩耍了？
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。国庆假期，大家去哪里玩耍了？
 
 这个假期我哪也没去，一直待在家里更新课程：[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)，截止今晚的这篇文章发布，已经更新到第41讲了。
 

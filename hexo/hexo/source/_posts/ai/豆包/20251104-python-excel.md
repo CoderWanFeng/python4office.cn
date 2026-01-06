@@ -58,7 +58,7 @@ tags: 自动化办公
 
 <!-- more -->
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 还在手动录入Excel到深夜？百份表格批量改格式改到手腕发酸？跨表核对数据反复出错返工？打工人别硬扛了！Python里藏着5个处理Excel的“神仙库”——从基础读写、批量分析到格式美化，全场景覆盖，直接帮你省出2小时摸鱼时间！下面逐个拆解，按需捡走～
 

@@ -7,7 +7,7 @@ tags: [potencent,AI]
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/potencent%2FVatInvoiceOCR%2Fcover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 录入发票是一件繁琐的工作，如果可以自动识别并且录入系统，那可真是太好了。
 

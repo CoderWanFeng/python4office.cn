@@ -4,7 +4,7 @@ date: 2024-12-09 10:16:17
 tags: [ 第三方库,自动化办公,pdf ]
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，今天给大家分享一个PDF自动化办公的第三方库：PyMuPDF。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，今天给大家分享一个PDF自动化办公的第三方库：PyMuPDF。
 
 > 官网地址：[https://pymupdf.readthedocs.io/en/latest/index.html](https://pymupdf.readthedocs.io/en/latest/index.html)
 

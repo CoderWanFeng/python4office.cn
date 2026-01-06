@@ -9,7 +9,7 @@ tags: 开源
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/pohan/02-han2pinyin/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，小红薯也叫这个名。读者群👉[点我直达](http://www.python4office.cn/wechat-group/)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，小红薯也叫这个名。读者群👉[点我直达](http://www.python4office.cn/wechat-group/)。
 
 之前的视频给大家分享了：中文编程，一行代码实现。
 

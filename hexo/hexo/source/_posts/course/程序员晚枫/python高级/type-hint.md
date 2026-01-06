@@ -47,7 +47,7 @@ tags: [第三方库,pyinstaller]
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)，全网同名。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，全网同名。
 【视频脚本】Python Type Hint 实战精讲  
 目标时长：15~18 min，B 站 1080p60，附完整代码 & 课件下载  
 观众画像：已用 Python 写过项目，但对类型提示“只写过 List[int]”的工程师  

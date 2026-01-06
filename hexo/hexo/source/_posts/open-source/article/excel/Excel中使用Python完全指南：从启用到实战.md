@@ -56,7 +56,7 @@ tags: 自动化办公
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/h0MExYJag6hLnQg26yx98w)。
+大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
 
 之前给大家推荐了：[Python处理Excel用哪个库？Pandas不是唯一选择](https://mp.weixin.qq.com/s/h7rAexLvLBmV2nItisUNCA)
 
