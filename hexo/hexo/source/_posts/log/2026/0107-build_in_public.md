@@ -129,6 +129,8 @@ tags: 自媒体
 至于**个人隐私与专业分享的边界**，我选择保持一定透明度，同时保护核心私人生活。比如，我会分享编程中的思考和生活感悟，但避免过度暴露家庭细节。
 
 - [山东人在重庆办护照，太方便了](https://mp.weixin.qq.com/s/1cwdIXL-cLeoQnq5H_QqOQ)
+- [感谢小米超级岛，让我再次感受到了活着的美好](https://mp.weixin.qq.com/s/NbDgP8VWDL0Dmb_J_rGj0g)
+- [感谢腾讯！港股开门红，来吃个二刀潮牛](https://mp.weixin.qq.com/s/Eui6BauCl7X2j1wqtFsZ4w)
 
 ## 07 2026年的展望
 
@@ -157,7 +159,6 @@ tags: 自媒体
 
 ### 相关阅读
 
-- [感谢小米超级岛，让我再次感受到了活着的美好](https://mp.weixin.qq.com/s/NbDgP8VWDL0Dmb_J_rGj0g)
 - [0 门槛的 AI 编程，让人人都能成为六边形战士](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ)
 - [我的百度数字人，24小时直播中。。。](https://mp.weixin.qq.com/s/2zmp6UAtHoXrxLOC1wn85g)
 - [记录第一次去西南大学分享AI编程，我竟有些感动](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw)
