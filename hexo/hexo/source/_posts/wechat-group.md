@@ -48,7 +48,7 @@ tags: 微信群
 
 你好，我是程序员晚枫。我提供的交流群有3个，有付费的、有免费的，您自己选，不搞割韭菜那一套。
 
-如需学习AI编程，点击直达👉[AI编程，治好了我的学习焦虑](https://mp.weixin.qq.com/s/7rH5U6s91hnTKCKZy4BHCg)
+如需学习AI编程，点击直达👉[给小白的AI编程训练营](https://mp.weixin.qq.com/s/7rH5U6s91hnTKCKZy4BHCg)
 
 
 ### 1、AI交流群
