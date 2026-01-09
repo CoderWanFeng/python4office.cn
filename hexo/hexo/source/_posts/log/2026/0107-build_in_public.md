@@ -131,6 +131,8 @@ tags: 自媒体
 - [山东人在重庆办护照，太方便了](https://mp.weixin.qq.com/s/1cwdIXL-cLeoQnq5H_QqOQ)
 - [感谢小米超级岛，让我再次感受到了活着的美好](https://mp.weixin.qq.com/s/NbDgP8VWDL0Dmb_J_rGj0g)
 - [感谢腾讯！港股开门红，来吃个二刀潮牛](https://mp.weixin.qq.com/s/Eui6BauCl7X2j1wqtFsZ4w)
+- [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
+
 
 ## 07 2026年的展望
 
@@ -163,6 +165,7 @@ tags: 自媒体
 - [我的百度数字人，24小时直播中。。。](https://mp.weixin.qq.com/s/2zmp6UAtHoXrxLOC1wn85g)
 - [记录第一次去西南大学分享AI编程，我竟有些感动](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw)
 - [10年护照到期了，盘点我去过的国家，平行宇宙里的我过得好吗？](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw)
+- [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
 
 
 

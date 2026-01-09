@@ -55,6 +55,8 @@ def play_song(song):
 - []()
 - []()
 - []()
+- [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
+
 
 <p align="center" id='1w副业-banner'>
     <a target="_blank" href='http://t.cn/A6KiaiqK'>

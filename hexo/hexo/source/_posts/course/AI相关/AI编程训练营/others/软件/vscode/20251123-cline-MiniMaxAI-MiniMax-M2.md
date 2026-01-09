@@ -117,6 +117,8 @@ tags: [AI编程]
 - [我用AI写了一个发票批量识别软件，免费分享给大家](https://mp.weixin.qq.com/s/1V6w9CjQV8S8z8NRSc3L_w)
 - [我决定用AI重写这个34.7万次下载的Python库](https://mp.weixin.qq.com/s/4-spiPBgTKMu--Uw8yWQ8A)
 - [从300万行优化到30万行：我是如何让AI自动统计代码行数的？](https://mp.weixin.qq.com/s/g_dXsJWilWWubgwvHFTgbA)
+- [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
+
 
 
 

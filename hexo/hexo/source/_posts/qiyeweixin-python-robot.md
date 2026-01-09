@@ -48,6 +48,8 @@ PS：没有PyCharm的同学，可以去看之前分享的免费下载 + 安装�
 - [1行Python代码去除图片水印，网友：一干二净](https://mp.weixin.qq.com/s/6RS0oo6dNa3mov_5XwNurg)
 - [1行Python代码，对话ChatGPT，网友：太方便了](https://mp.weixin.qq.com/s/HJfLZILUOWn4TK8qk3DL9w)
 - [1行Python代码识别身份证信息，还能自动告警，YYDS](https://mp.weixin.qq.com/s/4PNhYZ1k2au5XoZOBdUM6A)
+- [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
+
 
  
 

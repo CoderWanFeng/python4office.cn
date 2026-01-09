@@ -106,6 +106,7 @@ sentence = f'你好，我是{name}，今年{age}，是个{job}，喜欢{hobby}�
 
 #### 相关阅读
  - [终于把Python后端学习路线整理出来了，包含全套教程~](https://mp.weixin.qq.com/s/JqY0vFpBnG6CzDD1sB3nDw)
+- [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
 
 
 
