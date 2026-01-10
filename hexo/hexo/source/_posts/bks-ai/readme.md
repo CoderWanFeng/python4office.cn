@@ -10,6 +10,14 @@ tags: 白开水AI社区
 
 直播账号：[Python自动化办公社区](https://live.bilibili.com/21757459?broadcast_type=0&is_room_feed=1&spm_id_from=333.1387.to_liveroom.0.click&live_from=86002)
 
+直播群：
+
+<p align="center" id='AI交流群'>
+    <a>
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
+    </a>   
+</p>
+
 ## 直播记录
 
 >
