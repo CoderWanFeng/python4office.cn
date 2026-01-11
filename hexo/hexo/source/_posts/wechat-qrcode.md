@@ -20,7 +20,7 @@ tags: 联系我
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-<a href="https://mp.weixin.qq.com/s/7rH5U6s91hnTKCKZy4BHCg">
+<a href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -155,7 +155,7 @@ tags: 联系我
 - [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
 - [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/7rH5U6s91hnTKCKZy4BHCg)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 
 ## 职场篇
 - [普通人转行程序员，最大的困难是什么？](https://mp.weixin.qq.com/s/_P9_fmr9DmW2BWdnx5juwQ)
