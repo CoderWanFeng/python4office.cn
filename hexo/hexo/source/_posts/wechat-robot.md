@@ -27,9 +27,9 @@ tags: 机器人
 ```python
 # -*- coding: UTF- -*-
 # @公众号 :Python自动化办公社区
-# @Software: PyCharm 安装教程：https://mp.weixin.qq.com/s/a0zoCo9DacvdpIoz1LEN3Q
+# @Docs: 学习网站：https://www.python-office.com/video/video.html
 # @Description: 用Python开发微信聊天机器人
-# Python全套学习资源：https://mp.weixin.qq.com/s/G_5cY05Qoc_yCXGQs4vIeg
+# Python全套学习资源：https://www.python-office.com/video/video.html
 from wxpy import *
 import requests, json, time
 

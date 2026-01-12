@@ -48,7 +48,7 @@ tags: [Python,电子书]
 > 本页为Python电子书资源 · 合集。（正在汇总哟：平均每周增加5本）
 
 
-> 🎯另有：社区 · 全部资源👉[点我直达（基础/项目/软件/文档，等）](https://mp.weixin.qq.com/s/G_5cY05Qoc_yCXGQs4vIeg) 👈
+> 🎯另有：社区 · 全部资源👉[点我直达（基础/项目/软件/文档，等）](https://www.python-office.com/video/video.html) 👈
 
 
 
@@ -129,7 +129,7 @@ tags: [Python,电子书]
 
 ### 最新学习视频
 
-> 全部视频，直达：[传送门](https://mp.weixin.qq.com/s/G_5cY05Qoc_yCXGQs4vIeg)
+> 全部视频，直达：[传送门](https://www.python-office.com/video/video.html)
 >
 > 以下只放高赞+对兆锋自己学习帮助大的视频👇
 
