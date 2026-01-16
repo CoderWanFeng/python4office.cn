@@ -58,11 +58,14 @@ tags: AI
 
 # 2、读者福利
 
-<p align="center" id='大礼包-banner'>
-    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
-    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
+
+<p align="center" id='进群-banner-AI'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
+
+
 
 <p align="center" id='滴滴-banner'>
     <a target="_blank" href='https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg'>

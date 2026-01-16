@@ -145,11 +145,14 @@ tags: [Python,电子书]
 
 ![合集](https://img-blog.csdnimg.cn/20210303170458567.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjMyMTUxNw==,size_16,color_FFFFFF,t_70#pic_center)
 
-<p align="center" id='大礼包-banner'>
-    <a target="_blank" href='http://python4office.cn/fuli/fuli-source-0726/'>
-    <img src="https://banner-1300615378.cos.ap-guangzhou.myqcloud.com/%E6%A8%AA%E6%9D%A1/Python%E5%A4%A7%E7%A4%BC%E5%8C%85.jpg" width="100%"/>
+
+<p align="center" id='进群-banner-AI'>
+    <a target="_blank" href='http://www.python4office.cn/wechat-group/'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
     </a>   
 </p>
+
+
 
 
 ### 你好呀，我是[程序员晚枫](http://www.python4office.cn/wechat-qrcode/)
