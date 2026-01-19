@@ -157,7 +157,7 @@ pdfrw本身不擅长“原创”，但**却是ReportLab的“黄金搭档”！*
 
 ## 相关阅读
 
-- [《给小白的《50讲 · Python自动化办公》（完结）》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)
+- [《给小白的《50讲 · Python自动化办公》（完结）》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 
 

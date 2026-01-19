@@ -66,7 +66,7 @@ tags: 第三方库
 
 ![写真](https://raw.atomgit.com/user-images/assets/5027920/be28233b-5c1d-4ec5-afcf-3aeaefb12e9c/f7dd762f3c33d1bcbbf79cf6b819ef71.png 'f7dd762f3c33d1bcbbf79cf6b819ef71.png')
 
-我在2023年录制的[《给小白的《50讲 · Python自动化办公》（完结）》](https://mp.weixin.qq.com/s/tKlzVee4kmJk4dGfKvVnFQ)，就用过她作为封面，当时纯属蹭流量。
+我在2023年录制的[《给小白的《50讲 · Python自动化办公》（完结）》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)，就用过她作为封面，当时纯属蹭流量。
 
 ![2023年的课](https://raw.atomgit.com/user-images/assets/5027920/b55ef6a2-5d98-4ad9-a59f-97aecfec8d9b/71c3083225d09357bdf829e89efc0217.jpg '71c3083225d09357bdf829e89efc0217.jpg')
 
