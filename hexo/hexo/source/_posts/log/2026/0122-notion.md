@@ -41,6 +41,7 @@ tags: 自媒体
 
 <!-- more -->
 
+![原文地址](https://raw.atomgit.com/user-images/assets/5027920/b3420dcf-7ffc-4d7b-8388-1589ccf3f772/image.png 'image.png')
 
 
 大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg) 🤖
@@ -100,7 +101,9 @@ Ivan早就说过，我们总"通过后视镜驶向未来"，早期电话像电�
 
 内测时，有学员用课程里的方法做发票识别工具，1分钟搞定3天的活；有小白开发AI导航网站，刚部署就接到商业订单。现在报名还能锁定早鸟价，拿到专属答疑群和AI编程工具包，跟着40w+粉丝的编程博主和AI实战派，从0到1掌握AI创作力 🌟
 
-**AI时代的机会，不会留给停在2023年的人**。点击课程链接[30讲·AI编程训练营](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)，一起用AI编程解锁创作力，抓住这个"智力白菜价、机会无限量"的时代！
+**AI时代的机会，不会留给停在2023年的人**。
+
+点击课程👉[30讲·AI编程训练营](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)，一起用AI编程解锁创作力，抓住这个"智力白菜价、机会无限量"的时代！
 
 ---
 
