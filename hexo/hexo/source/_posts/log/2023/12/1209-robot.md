@@ -59,9 +59,9 @@ PyOfficeRobot.chat.send_message(who='程序员晚枫', message='你好，我是�
 
 ---
 
-以上所有机器人的功能，我都加入了原创课程:[给小白的《10讲 · Python微信机器人》（完结）](https://mp.weixin.qq.com/s/g9nejIxuitwRzl5NMi177w)，都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
+以上所有机器人的功能，我都加入了原创课程:[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)，都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《10讲 · Python微信机器人》（完结）](https://mp.weixin.qq.com/s/g9nejIxuitwRzl5NMi177w)
+- 加入学习👉[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 

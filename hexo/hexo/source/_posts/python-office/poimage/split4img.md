@@ -7,7 +7,7 @@ tags: [开源项目,poimage]
 大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，这段时间给大家分享多个微信自动化的代码：
 
 - [用Python实现微信多开，1行代码免费用](https://mp.weixin.qq.com/s/qlubpfAytr_coV8GilG9RA)
-- [给小白的《10讲 · Python微信机器人》（完结）](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 
 
 今天再给大家分享一个：**用Python发一个好看的朋友圈的代码。**

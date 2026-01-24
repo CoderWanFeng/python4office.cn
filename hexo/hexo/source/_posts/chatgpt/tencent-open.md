@@ -62,7 +62,7 @@ tags: 大模型
 - [更新了！微信机器人接入阿里大模型了](https://mp.weixin.qq.com/s/F_DCyPYLNwy7-fU-oN1cOQ)
 - [给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [重磅！公众号接入阿里大模型了！](https://mp.weixin.qq.com/s/dzzZ6iG0ooE2mQUC4YEj6w)
-- [给小白的《10讲Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 
 ## AI交流群
 

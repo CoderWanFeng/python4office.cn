@@ -155,7 +155,7 @@ tags: 联系我
 ## 学习篇
 - [业余爱好者，如何从0开始快速掌握Python？](https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ)
 - [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 - [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
 - [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
