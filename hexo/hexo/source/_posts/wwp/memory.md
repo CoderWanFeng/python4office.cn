@@ -15,3 +15,7 @@ tags: [wwp,c语言]
 
 # 光标
 ![image.png](https://raw.atomgit.com/user-images/assets/5027920/12cbde89-8a83-4c40-bcc8-81196e54e24f/image.png 'image.png')
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

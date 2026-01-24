@@ -707,3 +707,7 @@ uvloop：在 libuv 之上超快速实现 asyncio 事件循环。
 
 
 悄悄的说一下，我常用的只有20个不到，你用了几个？欢迎评论区说一声。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

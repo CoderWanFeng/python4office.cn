@@ -46,6 +46,10 @@ tags: 下载
 
 这里是程序员晚枫，读完本文有收获或者建议，请在评论区告诉我吧~
 
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
 ### 参考链接
 
 - Python各个版本发布时间：https://devguide.python.org/versions/

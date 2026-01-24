@@ -62,4 +62,6 @@ Linux（服务器） + mongdb（数据库） + django（后端接口）
 
 ![](https://cos.python-office.com/wechat/qr-code.jpg)
 
+## 相关阅读
 
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

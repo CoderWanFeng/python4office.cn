@@ -13,3 +13,7 @@ tags: 学习计划
 其次，你要有一个GPT：[零基础 GPT 应用入门课](http://gk.link/a/12eDZ)
 
 最后，你需要一个部署机器人的服务器：[腾讯云服务器](https://curl.qcloud.com/3csDz9jU)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

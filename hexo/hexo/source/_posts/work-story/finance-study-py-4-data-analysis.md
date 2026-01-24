@@ -59,3 +59,7 @@ tags: 学习计划
 
 学习过程中有解决不了的问题，可以联系我：python-office
 
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+

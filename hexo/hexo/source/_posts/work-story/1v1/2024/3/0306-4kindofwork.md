@@ -39,7 +39,7 @@ tags: 1v1
 #### C语言
 
 - [浙江大学翁恺教你C语言程序设计！C语言基础入门！](https://www.bilibili.com/video/BV1dr4y1n7vA/)
-- [浙江大学 C++ 翁恺老师](https://www.bilibili.com/video/BV1dE41167hJ/)
+- [浙江大学 C++ 灰恺老师](https://www.bilibili.com/video/BV1dE41167hJ/)
 
 
 #### Python网站开发
@@ -68,3 +68,7 @@ tags: 1v1
 我的微信，👇
 
 ![python-office](https://cos.python-office.com/wechat/qr-code.jpg)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

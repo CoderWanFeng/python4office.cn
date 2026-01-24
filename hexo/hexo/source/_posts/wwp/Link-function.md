@@ -34,3 +34,7 @@ struct LinkNode
 
 # 函数指针数组的定义
 ![image.png](https://raw.atomgit.com/user-images/assets/5027920/22d0250f-9f15-417f-83d3-88b762a12e48/image.png 'image.png')
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

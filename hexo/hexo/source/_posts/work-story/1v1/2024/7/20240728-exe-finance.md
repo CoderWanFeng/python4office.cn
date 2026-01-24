@@ -47,3 +47,7 @@ tags: 1对1
 接下来的学习过程中，有问题请随时联系我，👇
 
 ![](https://cos.python-office.com/wechat/qr-code.jpg)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

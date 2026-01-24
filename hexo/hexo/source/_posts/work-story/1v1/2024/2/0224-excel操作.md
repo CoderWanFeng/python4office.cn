@@ -58,4 +58,6 @@ office.excel.merge2sheet(dir_path)
 
 ![](https://cos.python-office.com/group/0816.jpg)
 
+## 相关阅读
 
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

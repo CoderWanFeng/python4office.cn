@@ -11,3 +11,7 @@ tags: [wwp,c语言]
  
  # 动态库
  ![image.png](https://raw.atomgit.com/user-images/assets/5027920/5bf4a790-28af-4ddf-80b1-e65055799c95/image.png 'image.png')
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

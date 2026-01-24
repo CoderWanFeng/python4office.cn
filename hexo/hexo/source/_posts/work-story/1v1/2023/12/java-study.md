@@ -57,3 +57,6 @@ tags: 学习计划
 
 面试前可以背一背八股和刷题。
 
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

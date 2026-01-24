@@ -36,3 +36,7 @@ https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ
 
 - [6节课掌握Python爬虫](https://www.bilibili.com/video/BV1Qa4y157RW/?spm_id_from=333.1387.search.video_card.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 - [Python爬虫从入门到高级实战](https://www.bilibili.com/video/BV1y54y1y74F/?spm_id_from=333.1387.search.video_card.click)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

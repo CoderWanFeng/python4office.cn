@@ -29,7 +29,7 @@ tags: 1v1
 
 ### 2、软件下载和安装
 
-在软件下载沟通过程中，还聊了一个高效学习/办公的技巧，是关于[搜索指令](https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8C%87%E4%BB%A4/3660259?fr=ge_ala)的，例如：查找正版软件时，可以搜索“腾讯会议 site:tencent.com”，可以精准的打开官网。
+在软件下载沟通过程中，还聊了一个高效学习/办公的技巧，是关于[搜索指令](https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8C%87%E4%BB%A4/3660259?fr=ge_ala)的，例如：查找正版软件时，可以搜索"腾讯会议 site:tencent.com"，可以精准的打开官网。
 
 安装时有一些需要注意的细节，建议多卸载安装几次，熟练掌握。
 
@@ -146,3 +146,7 @@ def add(a,b):
 接下来的学习过程中，有问题请随时联系我，👇
 
 ![](https://cos.python-office.com/wechat/qr-code.jpg)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

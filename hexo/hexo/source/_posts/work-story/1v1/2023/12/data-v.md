@@ -55,3 +55,7 @@ tags: 学习计划
 最后聊了一个问题，学了编程能不能接单？
 
 我之前专门分享过这个问题👉[学编程，搞副业，纯属扯淡！网友：早知道就好了](https://mp.weixin.qq.com/s/Wixe5poKOEH2O5gA9W8m4A)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

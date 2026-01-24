@@ -24,7 +24,7 @@ https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA
 
 ## 3、django：
 【免费版】https://www.bilibili.com/video/BV1NL41157ph
-【付费版】https://www.bilibili.com/video/BV1zi4y1t7YU
+【付费版】https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg
 
 ## 4、pyinstaller：
 
@@ -35,3 +35,7 @@ https://pyinstaller.org/en/stable/
 学习过程中，有自己解决不了的问题，欢迎联系我~
 我的微信👇
 ![点我直达](https://cos.python-office.com/wechat/qr-code.jpg)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)

@@ -35,3 +35,7 @@ tags:
 - [【程序员晚枫】千万别来重庆上班，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai/)
 
 - [3大措施，整治程序员高薪现象！大快人心，人人有责 | 加班就开除，不用新技术，硬件不更新换代。](https://www.bilibili.com/video/BV1sd4y1c7T9/)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
