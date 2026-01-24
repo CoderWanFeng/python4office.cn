@@ -20,7 +20,7 @@ tags: pandas
 
 
 - [50讲 · Python自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [10讲 · Python微信机器人](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
+- [10讲 · Python微信机器人](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 - [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [6讲 · Python实现自动发邮件](https://www.python-office.com/course-002/poemail/poemail.html)
 
