@@ -41,7 +41,7 @@ tags: 学习计划
 
 你只需要学习Pandas库，视频作为入门，文档才是精髓
 
-- [视频](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+- [视频](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [文档](https://www.pypandas.cn/)
 
 配套图书：《飞速搞定数据分析与处理》，作者是一位瑞士人，名字我忘记了，人民邮电出版社

@@ -1,5 +1,5 @@
 ---
-title: Python自动化办公--Pandas玩转Excel（全30集）
+title: 给小白的《30讲 · Python数据分析》
 date: 2022-08-11 10:31:05
 tags: pandas
 ---

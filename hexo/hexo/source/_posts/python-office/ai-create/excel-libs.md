@@ -13,7 +13,7 @@ tags: python-office
 
 学习高级语法的方法，今天的第一篇文章已经发布了。研究第三方库的学习心得，我打算总结下来，分享给大家。
 
-今天从Excel的处理开始，毕竟我去年的原创课程：[给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)中，最早的一个功能就是创建Excel文件。
+今天从Excel的处理开始，毕竟我去年的原创课程：[给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)中，最早的一个功能就是创建Excel文件。
 
 ## 第三方库
 
@@ -86,7 +86,7 @@ tags: python-office
 
 最后给大家推荐一套Python + Excel办公的入门课程，扫码直接看，👇
 
-- https://www.bilibili.com/video/BV1hk4y1C73S/
+- https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA/
 
 Python自动化办公的交流群，欢迎加入，👇
 

@@ -33,7 +33,7 @@ Python基础学完有2个作用：
 ### 2、50讲自动化办公
 用这个课程里的案例，练习Python基础，掌握Python + 办公的常用方法。
 
-- [给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - 配套资料：http://www.python4office.cn/python-course/50-python-office/
 
 ### 3、专题学习：数据分析之入门库：pandas处理Excel
@@ -42,7 +42,7 @@ Python基础学完有2个作用：
 
 > 只需要学习读取Excel中的数据
 
-- [Python自动化办公--Pandas玩转Excel（全30集）](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+- [给小白的《30讲 · Python数据分析》](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 - 课程资料👉http://www.python4office.cn/python-course/120502/pandas-excel/
 
 

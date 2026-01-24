@@ -15,7 +15,7 @@ tags: 1对1咨询
 
 学习分3步：
 - [基础](https://www.bilibili.com/video/BV1MM4y1G76j/?spm_id_from=333.999.0.0)
-- [pandas处理Excel](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+- [pandas处理Excel](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [正则表达式](http://gk.link/a/113MD)
 
 

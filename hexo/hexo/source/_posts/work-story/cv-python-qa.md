@@ -48,7 +48,7 @@ tags: 副业
 ##　4.自动化办公课程+资料
 读者最喜欢的一套课程：
 
-- [《Python自动化办公--Pandas玩转Excel（全30集）》](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+- [《给小白的《30讲 · Python数据分析》》](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 - 对于程序员来说，听完就行了，不需要动手！！！真心没有技术含量，你杠你对。
 
 - 💻这个视频一定要看，我这几年积累的精髓项目，都在这里面了👉[开源中国推荐：python-office自动化办公，每个功能只需一行代码，做到了真正的开箱即用。](https://www.bilibili.com/video/BV1pT4y1k7FH/?spm_id_from=333.999.0.0)

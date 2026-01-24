@@ -17,7 +17,7 @@ tags: 1v1
 
 给小白的《15讲 · Python入门课》
 
-https://www.python-office.com/course-002/15-Python/15-Python.html
+https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ
 
 2、50讲自动化办公：跟着做1遍
 
@@ -25,7 +25,7 @@ https://www.python-office.com/course-002/15-Python/15-Python.html
 
 学习这一套课程就可以了：给小白的《50讲Python自动化办公》，视频和配套资料如下：
 
-- 全套视频：[点我查看](https://www.python-office.com/course/50-python-office.html)
+- 全套视频：[点我查看](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - 全套资料：[点我下载](http://www.python4office.cn/python-course/50-python-office/)
 
 3、Excel-30讲：听一遍、做一遍

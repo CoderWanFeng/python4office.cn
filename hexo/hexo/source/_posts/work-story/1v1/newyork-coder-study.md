@@ -83,7 +83,7 @@ tags: 1v1
 ### 前后端
 
 - 前端：[千锋web前端开发项目教程](https://www.bilibili.com/video/BV17z4y1D7Yj/?spm_id_from=333.337.search-card.all.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
-- ⭐后端：[从 0 到 1，快速上手 Python](https://www.python-office.com/course-002/15-Python/15-Python.html)
+- ⭐后端：[从 0 到 1，快速上手 Python](https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ)
 
 
 ###　DBA

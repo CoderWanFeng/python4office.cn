@@ -6,13 +6,13 @@ tags: 开源
 
 大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。国庆假期，大家去哪里玩耍了？
 
-这个假期我哪也没去，一直待在家里更新课程：[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)，截止今晚的这篇文章发布，已经更新到第41讲了。
+这个假期我哪也没去，一直待在家里更新课程：[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)，截止今晚的这篇文章发布，已经更新到第41讲了。
 
 ## 先给爱学习的朋友发个假期福利。👇
 
 课程全部更新完成，目前78元就可以拿下，长期有效。
 
-假期在家里学习的同学，赶紧冲：[点我领取](https://www.python-office.com/course/50-python-office.html)
+假期在家里学习的同学，赶紧冲：[点我领取](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 ## 清华大学pip
 

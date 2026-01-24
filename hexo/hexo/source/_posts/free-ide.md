@@ -14,7 +14,7 @@ tags:
 - 第3集：Google对应的教程文档，只要是识字，会用鼠标和键盘，就可以实现，傻瓜式教程。软件和文档我都整理好了👉[点击＋我微信，免费分享给你](https://cos.python-office.com/wechat/wechat.jpg)
 
 
-最后，🔞如果你是小白，第一接触python、或者pycharm，也许我最近录制的这个教程，对你更有帮助：[给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+最后，🔞如果你是小白，第一接触python、或者pycharm，也许我最近录制的这个教程，对你更有帮助：[给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 
 

@@ -45,7 +45,7 @@ tags: 数据分析
 - 百度云下载（永久有效）
     - 链接：https://pan.quark.cn/s/1261f64ef8c6
 
-    - 配套视频：https://www.bilibili.com/video/BV1hk4y1C73S/
+    - 配套视频：https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA/
     
     - 🚸免费Python学习交流群👉 [进群](http://www.python4office.cn/wechat-group/) 👈
 

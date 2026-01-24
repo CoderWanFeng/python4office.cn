@@ -40,7 +40,7 @@ AI又帮我赚钱了！
 
 我可以用更多时间去做优质内容，去思考我认为有价值的问题（可能AI觉得没价值），学我想学了很久的技术。
 
-我也用这段时间，开启了原创课程：[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)课程的制作。希望能更好的帮助大家学习Python！
+我也用这段时间，开启了原创课程：[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)课程的制作。希望能更好的帮助大家学习Python！
 
 
 ## AI交流群

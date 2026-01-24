@@ -6,7 +6,7 @@ tags: [自动化办公,Excel,pandas]
 
 大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，之前在B站账号：**Python自动化办公社区**发布了一套关于**Excel + Python实现自动化办公**的教程，目前已经有40w+的播放了。
 
-- [Python自动化办公--Pandas玩转Excel（全30集）：https://www.bilibili.com/video/BV1hk4y1C73S](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+- [给小白的《30讲 · Python数据分析》：https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 
 
 其中主要使用的Python第三方库是**pandas**，今天就以pandas为核心内容，给大家分享一下精简版的10分钟入门教程。
@@ -152,7 +152,7 @@ platform_df.to_excel('D:\\work\\程序员晚枫的账号.xlsx',sheet_name='sheet
 
 
 - [10 minutes to pandas：https://pandas.pydata.org/docs/user_guide/10min.html](https://pandas.pydata.org/docs/user_guide/10min.html)
-- [Python自动化办公--Pandas玩转Excel（全30集）：https://www.bilibili.com/video/BV1hk4y1C73S](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+- [给小白的《30讲 · Python数据分析》：https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)

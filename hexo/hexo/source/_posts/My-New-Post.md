@@ -56,7 +56,7 @@ tags: 自动化办公
 
 ### ②Excel专项
 
-- 👉[Python自动化办公--Pandas玩转Excel（全30集）](https://www.bilibili.com/video/BV1hk4y1C73S)
+- 👉[给小白的《30讲 · Python数据分析》](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [【超详细】EXCEL数据分析（分析、公式、函数、可视化）](https://www.bilibili.com/video/BV195411t7vN)
 - 👉[Excel高效学习班（完结 · 附资料）](https://www.acfun.cn/v/ac21081575)
 - [Excel从入门到精通（最新，Excel2019版，附资料）](https://mp.weixin.qq.com/s/a7sV6d-UfIqSYxxgyTr_8A)
@@ -78,7 +78,7 @@ tags: 自动化办公
 
 - [Power BI教程_商业数据可视化](https://www.acfun.cn/v/ac19838235)
 
-- 🉑[数据分析和可视化精讲](https://www.bilibili.com/video/BV1hk4y1C73S)
+- 🉑[数据分析和可视化精讲](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 
 - [掌握高效数据可视化技法（完结）](https://www.acfun.cn/v/ac20848856)
 

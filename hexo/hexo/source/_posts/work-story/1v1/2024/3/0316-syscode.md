@@ -27,7 +27,7 @@ tags: 1v1
 
 - 报表项目（1个月的学习时间，比较理想）：
   - [Python爬虫](https://www.bilibili.com/video/BV1y54y1y74F/?spm_id_from=333.999.0.0)
-  - [Python数据分析](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+  - [Python数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
   - [Django快速开发实战：从开发到部署，掌握项目开发全流程](https://www.bilibili.com/video/BV1zi4y1t7YU)
 
 

@@ -34,9 +34,9 @@ Python安装包
 
 如果安装完了还不过瘾，大家可以学习以下入门课程，都是适合小白的实用案例课：
 
-- [50讲 · Python + 自动化办公](https://www.python-office.com/course/50-python-office.html#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B)
+- [50讲 · Python + 自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B)
 - [10讲 · Python + 微信机器人](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
-- [30讲 · Python + 数据分析](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+- [30讲 · Python + 数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [100讲 · Python + 人工智能](https://www.bilibili.com/video/BV1rU4y1u7og/)
 - [6讲 · Python + 自动发邮件](https://www.python-office.com/course-002/poemail/poemail.html?spm_id_from=333.999.0.0)

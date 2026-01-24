@@ -98,7 +98,7 @@ tags: 微信机器人
 ## 还有哪些入门课程？
 
 
-如果你想更全面的学习Python，还有一套录制好的👉[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+如果你想更全面的学习Python，还有一套录制好的👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 
 

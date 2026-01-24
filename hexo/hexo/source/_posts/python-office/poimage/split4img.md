@@ -60,9 +60,9 @@ poimage.split4img(img_path=r"./imgs/icon2.jpg", output_path=r'D:\程序员晚枫
 ----
 
 
-我今年发布了一个原创课程:[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
+我今年发布了一个原创课程:[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 

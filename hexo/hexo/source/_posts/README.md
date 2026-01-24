@@ -59,7 +59,7 @@ tags: [自动化办公,团队介绍]
 > 作者：@KanMenDaShu
 
 *   [Python自动化办公（可能是B站内容最全的！有源代码 ，适合小白~）](https://www.bilibili.com/video/BV1y54y1i78U)
-*   [Python自动化办公--Pandas玩转Excel（全30集）](https://www.bilibili.com/video/BV1hk4y1C73S)
+*   [给小白的《30讲 · Python数据分析》](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 *   [三大金融工具特训班——Wind、Excel、Python(完结)](https://www.bilibili.com/video/BV16U4y1g7mS)
 
 ------

@@ -35,7 +35,7 @@ tags: [Python,自动化办公]
 
 ### 50讲自动化办公
 
-- 视频：[点我直达](https://www.python-office.com/course/50-python-office.html#%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84%E3%80%8A50%E8%AE%B2-%C2%B7-python%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E3%80%8B)
+- 视频：[点我直达](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA#%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84%E3%80%8A50%E8%AE%B2-%C2%B7-python%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E3%80%8B)
 - 课程资料：[点我下载](https://pan.quark.cn/s/f8be0735110e)
 - 源码（程序员用，非程序员用上面的课程资料里的代码）：https://atomgit.com/CoderWanFeng1/python-office
 

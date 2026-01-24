@@ -32,7 +32,7 @@ tags: 学习计划
 
 ### 2、数据分析：pandas
 这部分主要学习Python处理数据的知识，只需要学习一个第三方库：pandas。
-- 学习资料：[30讲 · Python数据分析（已完结）](https://www.bilibili.com/video/BV1hk4y1C73S/)
+- 学习资料：[30讲 · Python数据分析（已完结）](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA/)
 
 ### 3、搭建大屏数据可视化：django
 

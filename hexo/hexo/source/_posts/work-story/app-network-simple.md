@@ -16,11 +16,11 @@ tags: 1对1咨询
 
 ## 1、Python基础学习：
 【免费版】https://www.acfun.cn/v/ac20463077
-【付费版】https://www.python-office.com/course-002/15-Python/15-Python.html
+【付费版】https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ
 
 ## 2、pandas：
 处理数据，必学这个知识
-https://www.bilibili.com/video/BV1hk4y1C73S
+https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA
 
 ## 3、django：
 【免费版】https://www.bilibili.com/video/BV1NL41157ph

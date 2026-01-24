@@ -43,7 +43,7 @@ poimage.flag2profile( flag_path=r'D://国旗的图片.png',
 
 Python自动化办公除了可以帮助我们更好的工作，也有很多趣味小应用。
 
-更多实用功能，大家可以查看课程👉[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+更多实用功能，大家可以查看课程👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 
 

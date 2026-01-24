@@ -53,7 +53,7 @@ Linux（服务器） + mongdb（数据库） + django（后端接口）
 ### 第三步，学习Python，用来开发接口
 首先学习Python基础，这一步不能跳过，不然看不懂Django的课程。
 
-3. [从 0 到 1，快速上手 Python](https://www.python-office.com/course-002/15-Python/15-Python.html)，学习django搭建接口之前，建议熟练掌握Python。
+3. [从 0 到 1，快速上手 Python](https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ)，学习django搭建接口之前，建议熟练掌握Python。
 4. [Django快速开发实战：从开发到部署，掌握项目开发全流程](https://www.bilibili.com/video/BV1zi4y1t7YU)
 
 ## 联系我

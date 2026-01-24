@@ -74,7 +74,7 @@ tags: 1v1
 
 [xpath](https://www.bilibili.com/video/BV1j7411d7s9/?spm_id_from=333.337.search-card.all.click&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 
-[pandas](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0)
+[pandas](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 
 
 4、软件：Selenium（集成）

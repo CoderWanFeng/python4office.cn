@@ -12,7 +12,7 @@ tags: python-office
 
 学习高级语法的方法，今天的第一篇文章已经发布了。研究第三方库的学习心得，我打算总结下来，分享给大家。
 
-今天从PDF的处理开始，毕竟我去年的原创课程：[给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)中，最火的一个视频就是PDF转Word。
+今天从PDF的处理开始，毕竟我去年的原创课程：[给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)中，最火的一个视频就是PDF转Word。
 
 ## 开始正文
 

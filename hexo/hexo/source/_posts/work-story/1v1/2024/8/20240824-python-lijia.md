@@ -139,8 +139,8 @@ def add(a,b):
   - [Python培训：披着科技外衣的成功学课堂](https://www.bilibili.com/video/BV19X4y1K7TG/?vd_source=ca20bb8763fcb18660aa74d7a87234fa#reply713730985)
   - [学编程，搞副业？快逃！](https://www.bilibili.com/video/BV1wD4y117Zs/?spm_id_from=333.999.0.0&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 
-- [50讲Python自动化办公](https://www.python-office.com/course/50-python-office.html)
-- [30讲Python数据分析](https://www.bilibili.com/video/BV1hk4y1C73S/)
+- [50讲Python自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
+- [30讲Python数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA/)
 - [10天自学Python，轻松掌握Python基础（精华版）](https://www.bilibili.com/video/BV1MM4y1G76j/)
 
 接下来的学习过程中，有问题请随时联系我，👇

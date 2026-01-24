@@ -250,7 +250,7 @@ print(f"Speedup: {time_reg / time_slot:.2f}x")
 
 ## 入门课程 + 读者群
 
-- 加入学习👉[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 

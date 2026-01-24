@@ -12,7 +12,7 @@ tags: 自动化办公
 
 > 我在和读者的沟通中，发现很多非程序员的朋友学习Python，不是为了成为Python大师，而只是为了提高自己的办公能力。
 
-之前也给大家分享了一套入门课程：[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)。
+之前也给大家分享了一套入门课程：[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)。
 
 今天在给大家分享一波Python操作Office的代码，涉及的软件很多：Excel、Word、PPT、PDF...赶紧学起来~
 
@@ -143,9 +143,9 @@ poiamge.add_watermark(file='./程序员晚枫-要添加水印的图片.png',
 
 ----
 
-以上所有仓库的核心功能，我都加入了原创课程:[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
+以上所有仓库的核心功能，我都加入了原创课程:[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- 加入学习👉[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 

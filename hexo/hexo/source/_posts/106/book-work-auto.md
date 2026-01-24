@@ -34,7 +34,7 @@ tags: 电子书
 
     - ⭐ 下载链接：https://pan.quark.cn/s/0cde798ffb1d
 
-    - Python自动化办公 视频 教程：https://www.python-office.com/course/50-python-office.html
+    - Python自动化办公 视频 教程：https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA
     
     - 🚸 免费Python学习交流群👉 [进群](http://www.python4office.cn/wechat-group/) 👈
 

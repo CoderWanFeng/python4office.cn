@@ -91,7 +91,7 @@ tags: 1v1
 
 数据分析是个非常宽泛的方向，这里推荐一套办公通用的数据分析课程。
 
-- Pandas玩转Excel（全30集）：[点我学习](https://www.bilibili.com/video/BV1hk4y1C73S/)
+- Pandas玩转Excel（全30集）：[点我学习](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA/)
 
 ### 爬虫
 

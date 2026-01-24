@@ -30,7 +30,7 @@ tags: 1v1
 
 如果时间比较充足，可以再看看这套课，会有新发现：
 
-- [Python自动化办公--Pandas玩转Excel（全30集）](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0&vd_source=dcea3feb81b702defb6006f671564224)
+- [给小白的《30讲 · Python数据分析》](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA&vd_source=dcea3feb81b702defb6006f671564224)
 
 
 ## 写在最后

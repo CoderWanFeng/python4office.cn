@@ -10,7 +10,7 @@ tags: python-office
 
 大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，小红书也叫这个名字。
 
-最近在B站更新一套课程：[给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)，并且建了一个课程群，用来沟通大家的学习问题和需求。
+最近在B站更新一套课程：[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)，并且建了一个课程群，用来沟通大家的学习问题和需求。
 
 在更新课程的这1个多月里，又发现了一些新需求，今天整理出来，分享给大家~
 

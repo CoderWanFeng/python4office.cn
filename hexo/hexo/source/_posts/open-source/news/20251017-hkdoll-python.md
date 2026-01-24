@@ -85,7 +85,7 @@ tags: 第三方库
 送大家一套Python入门课，👇
 
 <p align="center" id='15讲入门-banner'>
-    <a target="_blank" href='https://www.python-office.com/course-002/15-Python/15-Python.html'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/15%E8%AE%B2%E5%85%A5%E9%97%A8-%E6%A8%AA.jpg" width="100%"/>
     </a>   
 </p>
@@ -122,7 +122,7 @@ tags: 第三方库
 
 
 
-- [给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
 - [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)

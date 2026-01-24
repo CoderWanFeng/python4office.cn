@@ -30,9 +30,9 @@ tags: 福利
 
 | 课程链接                                                                    | 配套文档&代码&软件                                                | 读者交流群                                              |
 |-------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
-| [50讲 · Python + 自动化办公](https://www.python-office.com/course/50-python-office.html)                 | [打开](https://www.python-office.com/course/50-python-office.html)                     | [加入](http://python4office.cn/wechat-group/)        |
+| [50讲 · Python + 自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)                 | [打开](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)                     | [加入](http://python4office.cn/wechat-group/)        |
 | [10讲 · Python + 微信机器人](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html) | [打开](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html) | [加入](http://python4office.cn/wechat-group/)        |
-| [30讲 · Python + 数据分析](https://www.bilibili.com/video/BV1hk4y1C73S)         | [打开](https://mp.weixin.qq.com/s/n5b-C4ZhkhfZmlCTvepM4A)   | [加入](http://python4office.cn/wechat-group/)        |
+| [30讲 · Python + 数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)         | [打开](https://mp.weixin.qq.com/s/n5b-C4ZhkhfZmlCTvepM4A)   | [加入](http://python4office.cn/wechat-group/)        |
 | [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)             | [打开](https://www.python-office.com/course-002/5-poocr/5-poocr.html)                  | [加入](http://python4office.cn/wechat-group/)        |
 | [100讲 · Python + 人工智能](https://www.bilibili.com/video/BV1rU4y1u7og/)    | [打开](https://mp.weixin.qq.com/s/P52GVQEJ1bVAN5vPM_t3Jg)                   | [加入](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ)        |
 | [6讲 · Python + 自动发邮件](https://www.python-office.com/course-002/poemail/poemail.html)                  | [打开](https://www.python-office.com/course-002/poemail/poemail.html)                  | [加入](http://python4office.cn/wechat-group/)        |
@@ -58,9 +58,9 @@ tags: 福利
 
 > 悄悄说，第2套是我的原创哦
 
-- [121讲 · Python基础（已完结）](https://www.python-office.com/course-002/15-Python/15-Python.html)
+- [121讲 · Python基础（已完结）](https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ)
 
-- [50讲 · Python自动化办公（已完结）](https://www.python-office.com/course/50-python-office.html)
+- [50讲 · Python自动化办公（已完结）](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 下面是一些没有套路的福利，不中你直接打我脸。
 

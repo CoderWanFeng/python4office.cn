@@ -1,5 +1,5 @@
 ---
-title: Python自动化办公--Pandas玩转Excel（全30集）
+title: 给小白的《30讲 · Python数据分析》
 date: 2024-03-01 10:31:05
 tags: pandas
 ---
@@ -19,7 +19,7 @@ tags: pandas
 ## 更多课程
 
 
-- [50讲 · Python自动化办公](https://www.python-office.com/course/50-python-office.html)
+- [50讲 · Python自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [10讲 · Python微信机器人](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
 - [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [6讲 · Python实现自动发邮件](https://www.python-office.com/course-002/poemail/poemail.html)

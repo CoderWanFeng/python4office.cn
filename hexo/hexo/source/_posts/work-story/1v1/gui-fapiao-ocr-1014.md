@@ -81,7 +81,7 @@ Python处理Excel的专用库，没有之一：pandas
 
 下面是一套pandas + Excel的专用课程
 
-- Pandas玩转Excel（全30集）：[点我学习](https://www.bilibili.com/video/BV1hk4y1C73S/)
+- Pandas玩转Excel（全30集）：[点我学习](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA/)
 
 ### GUI制作
 

@@ -77,7 +77,7 @@ tags: python基础
 
 如果下载完了Python，还想继续学习一些简单的入门课程，推荐我的2套原创课程：
 
-- [给小白的《50讲Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [0基础也能用的《10讲Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
 
 图片

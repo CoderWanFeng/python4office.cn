@@ -52,7 +52,7 @@ tags: AI
 
 - 在使用过程中有任何问题，欢迎加入读者交流群：[点我直达](http://www.python4office.cn/wechat-group/)
 
-- 如果是AI方面的纯小白，可以先看一下这个编程入门教程：[从 0 到 1，快速上手 Python](https://www.python-office.com/course-002/15-Python/15-Python.html)
+- 如果是AI方面的纯小白，可以先看一下这个编程入门教程：[从 0 到 1，快速上手 Python](https://mp.weixin.qq.com/s/Rn0_Tyu9uVP_NRO3LkhJoQ)
 
 - 当然，大家也可以看一下：[新一代AI，能给我们的工作带来哪些帮助？](http://gk.link/a/11Zhc)
 

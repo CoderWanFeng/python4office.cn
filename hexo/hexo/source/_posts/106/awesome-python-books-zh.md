@@ -123,7 +123,7 @@ tags: 电子书
 - 《Python网络数据采集》[查看](https://union-click.jd.com/jdc?e=618%7Cpc%7C&p=JF8BAQsJK1olXwMFXV1UAEkeAl8IGF4RWwYAVG4ZVxNJXF9RXh5UHw0cSgYYXBcIWDoXSQVJQwYBUVpbCEkXHDZNRwYlInUFMyApCTJ0cBVwQTxuCW1-IzhYXkcbM244GFoWVQMKVlddC3snA2g4STXN67Da8e9B3OGY1uefK1olXQACU1ZUAEwVAGoLHGsSXQ8yDwszDkhABT9YGFwRD1UCA25tOEgnBG8BD11nHFQWUixtOEsnAF8IGlsdXQcDUFpYAFcXAmkIHVwJXQACU1ZUAEwUAWkIG2sXXAcGXW5tOC0XVThtWABVWX1EDAYOCClEYjkJRw9BImgAJDwFcD8ffxcMQgJzXVFdDABtDXs)
 
 ## Other Awesome Lists
-- [给小白的《50讲 · Python自动化办公》](https://www.python-office.com/course/50-python-office.html)
+- [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [给小白的《10讲 · Python微信机器人》](https://www.python-office.com/course-002/10-PyOfficeRobot/10-PyOfficeRobot.html)
 - [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)

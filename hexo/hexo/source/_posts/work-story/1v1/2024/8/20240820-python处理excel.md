@@ -50,7 +50,7 @@ Python基础学完有2个作用：
 
 > 只需要学习读取Excel中的数据
 
-- [Python自动化办公--Pandas玩转Excel（全30集）](https://www.bilibili.com/video/BV1hk4y1C73S/?spm_id_from=333.999.0.0&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
+- [给小白的《30讲 · Python数据分析》](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 - 课程资料👉http://www.python4office.cn/python-course/120502/pandas-excel/
 
 
