@@ -50,3 +50,10 @@ tags: 原创课程
 刚开始录制视频会有各种问题，而且大概率，刚开始的视频播放都不够理想，希望大家每一期视频录制完了，能自己总结一下经验。
 
 有问题随时联系。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

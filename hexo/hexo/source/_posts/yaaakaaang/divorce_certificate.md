@@ -67,3 +67,10 @@ df.to_excel('离婚证信息.xlsx', index=False)
 以上，就完成工作啦。
 
 ![11c61c8.jpeg](https://raw.atomgit.com/user-images/assets/5027920/d744769a-6c9b-4c8a-99f3-2d165ab5f6e9/11c61c8.jpeg '11c61c8.jpeg')
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

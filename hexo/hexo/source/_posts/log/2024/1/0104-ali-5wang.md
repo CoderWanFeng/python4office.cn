@@ -32,3 +32,10 @@ tags: 电子书
 
 这一功能背后的算法为阿里通义实验室自研的视频生成模型Animate Anyone。该模型在海外社交媒体平台走红，相关视频播放量超过1亿，被认为是近期大模型领域最受欢迎的算法之一。
 
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

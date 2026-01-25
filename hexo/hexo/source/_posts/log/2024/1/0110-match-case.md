@@ -11,3 +11,10 @@ https://cloud.tencent.com/developer/article/2306031
 3、文末可增加增加例题和具体的实战案例，且每个代码块都能有输出结果易于读者理解~
 4、请勿有外部网站的链接，并且文章的讲解请勿使用大段文字截图的形式，文章内最好不含图片~
 5、文章不含有上下文关系，一篇文章能全面讲解一个知识点为主~
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

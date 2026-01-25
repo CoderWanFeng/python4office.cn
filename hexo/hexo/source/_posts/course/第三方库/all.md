@@ -34,3 +34,10 @@ tags: [ 第三方库,pip ]
 8. [告别手动输入：poocr库让你的文字识别更智能](https://mp.weixin.qq.com/s/nzbK-42HsDG2_gQxhjjtww)
 9. [26.7万下载！Python自动化办公专用库：python-office，发布1.0.0版本](http://www.python4office.cn/course/第三方库/8-po)
 9. [减小20M！PDF自动化办公专用库：popdf，发布1.0.0版本](http://www.python4office.cn/course/第三方库/9-pdf)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

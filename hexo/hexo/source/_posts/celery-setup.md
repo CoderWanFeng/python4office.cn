@@ -152,3 +152,6 @@ celery -A celery_app_task flower --address=127.0.0.1 --port=5566
 - [Celery - 简书 (jianshu.com)](https://www.jianshu.com/p/620052aadbff)
 - [celery开发中踩的坑 - -零 - 博客园 (cnblogs.com)](https://www.cnblogs.com/-wenli/p/10960241.html)
 - [ Celery入门与Flower监控](https://blog.csdn.net/u010784605/article/details/119042393?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-2-119042393.pc_agg_new_rank&utm_term=celery+flower+启动&spm=1000.2123.3001.4430)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

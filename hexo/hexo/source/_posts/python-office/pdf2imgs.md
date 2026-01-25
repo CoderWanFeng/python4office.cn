@@ -94,3 +94,6 @@ office.pdf.pdf2imgs(
 - [pandas创始人：我写了1本《利用Python进行数据分析》，提供全套代码](https://mp.weixin.qq.com/s/VVGZ6iIGjtxY6K00o89LRA)
 
 ---
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

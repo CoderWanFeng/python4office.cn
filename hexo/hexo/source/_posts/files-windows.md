@@ -167,3 +167,6 @@ Files 目前还有一个比较明显的缺点：性能相比默认资源管理�
 相比之下，Files 既有好看的颜值，也有不少我需求的增强功能，在两方面都达到了我的预期，尽管在性能上还存在缺点但也瑕不掩瑜。
 
 如果你和我有类似的需求，也可以下载 Files 试试，或许也能给你不一样的文件浏览体验。Files 是一款开源软件，你可以在 Microsoft Store [免费下载](https://www.microsoft.com/en-us/p/files/9nghp3dx8hdx)，也可以在 [GitHub 页面](https://github.com/files-community/files/) 找到源码，构建属于自己的 Files。
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

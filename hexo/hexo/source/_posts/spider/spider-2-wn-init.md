@@ -52,3 +52,10 @@ tags: 爬虫
 - 免费版：[点我直达](https://www.bilibili.com/video/BV1Qa4y157RW/?spm_id_from=333.999.0.0&vd_source=ca20bb8763fcb18660aa74d7a87234fa)
 
 4、爬虫获取价格信息：[企业级实战课程](https://www.bilibili.com/video/BV1LV411m7Ym/?spm_id_from=333.999.0.0)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

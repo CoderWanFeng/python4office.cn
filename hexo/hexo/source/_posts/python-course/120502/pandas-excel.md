@@ -34,3 +34,10 @@ tags: pandas
 > ⭐今年我推出了1对1答疑的Python学习指导，如果需要可以扫码下图加我好友👇
 ![](https://raw.gitcode.com/user-images/assets/5027920/688bcc16-4fe8-4a10-8e5d-784cb4815d7f/30讲.jpg)
 
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

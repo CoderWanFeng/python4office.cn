@@ -87,3 +87,10 @@ cp objs/nginx /usr/local/nginx/sbin/ngin
 ## 三、写在最后
 完成以上步骤，个人网站的https访问就全部成功了。
 > 在安装过程中有任何问题，欢迎大家在评论区和我讨论~
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

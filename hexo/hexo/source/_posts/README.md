@@ -69,3 +69,6 @@ tags: [自动化办公,团队介绍]
 *   [“做时间的朋友，早日赚到人生的第一个100万”](“做时间的朋友，早日赚到人生的第一个100万”)
 *   [花30万去念MAB商业课，不如花5万块钱去创业](https://mp.weixin.qq.com/s/WA8hCgk2ePP41IuE3l7QZg)
 *   [让我们一起用“玩”的心态去工作](https://mp.weixin.qq.com/s/qWvZjTlBHrQu22IVeq3NqQ)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

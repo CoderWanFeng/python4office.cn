@@ -67,3 +67,10 @@ tags: 原创文章
 我在所有平台的账号都叫程序员晚枫，更新5年了，有一些程序员从事自媒体的经验，欢迎想靠自媒体赚钱的朋友+我聊个5毛钱的。👇
 
 ![python-office](https://cos.python-office.com/wechat/qr-code.jpg)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

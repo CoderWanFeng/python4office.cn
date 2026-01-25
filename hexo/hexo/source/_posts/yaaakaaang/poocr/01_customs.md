@@ -56,3 +56,10 @@ tags: [poocr]
 [微信自动化](https://atomgit.com/python4office/python4office.cn/tree/main/hexo/hexo/source/_posts/yaaakaaang/robot)
 
 如果你还有更多的需求需要实现，可以在评论区留言，我看见了会尽快回复您。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

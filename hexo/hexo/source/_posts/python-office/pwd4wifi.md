@@ -100,3 +100,6 @@ for len_pwd in range(8, 21):
 - [【Python助力疫情】100+不同格式的Excel、100w+数据，1秒找出1个人的信息，怎么做到的？](https://mp.weixin.qq.com/s/NAfh6ooO_9haALMsF8Jf5w)
 
 ----
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

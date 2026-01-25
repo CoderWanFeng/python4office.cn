@@ -405,3 +405,10 @@ pdftocio -t toc.txt -o out.pdf 30堂证券投资通识课_无目录版.pdf
 ## **写在最后**
 
 这一套流程走完，可能第一次会觉得有些难、不适应，但如果用几次熟练掌握以后会发现给 PDF 加目录真的很简单。另外，如果你拥有 Github 账号，欢迎进入 https://github.com/Krasjet/pdf.tocgen 给原作者点个 star，这么好的作品不应该被埋没。也欢迎你将该文章推荐给更多的人。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

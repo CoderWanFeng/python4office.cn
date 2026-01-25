@@ -228,3 +228,6 @@ type-hint-demo/
 一键复用模板  
 剪映 → 我的模板 → 新建 → 把上面 5 步存为「CyberType」模板  
 下次录完直接「一键成片」，替换录屏素材即可。
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

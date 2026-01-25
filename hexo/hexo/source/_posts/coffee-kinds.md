@@ -46,3 +46,10 @@ tags: 咖啡
     - 1份 浓缩咖啡+1.5份 热牛奶
 - 浓缩咖啡康宝蓝/Espresso con Panna
     - Espresso咖啡+奶油;布雷维 是Espresso咖啡+热的鲜奶油，表面有奶泡
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

@@ -523,3 +523,10 @@ list1 = [10, 'a']list2 = [123]list3 = [10, 'a']
 以上就是小编整理的Python面试常用问题和参考答案，供广大Python程序员参考，希望能提供一点助力。如对部分问题有疑问，可以留言。预祝每位Python程序员都能早日拿到理想的offer！
 
 ![图片](https://img-blog.csdnimg.cn/img_convert/9f9ea5e5338cbbfda46b8230d5fcf21e.png)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

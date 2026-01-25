@@ -77,3 +77,10 @@ office.video.mark2video(video_path=r'D:\download\baiduyun\图片添加水印.mp4
 - 增加exe版本里的功能，之前做了一个exe的测试版本，但是没有时间和精力去完善它。
 
 大家在使用这个库的过程中，有什么问题或者建议，欢迎在评论区留言。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

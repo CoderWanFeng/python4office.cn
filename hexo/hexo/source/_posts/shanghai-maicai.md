@@ -33,3 +33,10 @@ tags:
 ![python-office](https://cos.python-office.com/wechat/qr-code.jpg)
 
 <div style="position:relative;width:100%;height:0;padding-top:55.56%;padding-bottom:36px;margin-top:1.6em;margin-bottom:0.9em;overflow:hidden;border:1px solid #EBEBEB;border-radius:4px;"><iframe loading="lazy" style="position:absolute;width:100%;height:100%;top:0;left:0;border:none;padding:0;margin:0;" src="https://www.gaoding.com/design/view?id=x36QNreMZW&type=embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

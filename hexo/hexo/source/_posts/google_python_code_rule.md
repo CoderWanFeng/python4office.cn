@@ -105,3 +105,10 @@ Google Python开源项目风格十分流行，我把其中自己关注的内容�
 - [函数长度](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/#id22)
 - [类型注释](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/#id23)
 ## [临别赠言](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/parting_words/)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

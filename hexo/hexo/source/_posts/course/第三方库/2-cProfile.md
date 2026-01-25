@@ -96,3 +96,10 @@ p.sort_stats('cumulative').print_stats()
 - **gprof2dot**：一个将 `gprof` 格式的输出转换为图形的工具，可以与 `cProfile` 结果一起使用。
 
 通过这些步骤，你可以有效地使用 `cProfile` 来分析和优化你的Python程序的性能。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

@@ -26,3 +26,10 @@ tags: 数字化转型
     - it\ct\ot:互联网、通信、运营
     - iot：物理层面、数据采集、数据分析
     - 汉威：先医后药、先软后硬、小步快跑
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

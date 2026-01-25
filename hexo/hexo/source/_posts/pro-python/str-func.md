@@ -82,3 +82,10 @@ print(str.format(content='yyds'))
 
 format_map_dict = {'content': 'yyds'}
 print(str.format_map(format_map_dict))  # str.format_map(mapping) 方法仅适用于字符串格式中可变数据参数来源于字典等映射关系数据时。mapping 会被直接使用而不是复制到一个 dict。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

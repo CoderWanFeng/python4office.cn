@@ -177,3 +177,6 @@ tags: 联系我
 - [晚枫 | 2024年3月总结，人生中第一次「开车撞人了」](https://mp.weixin.qq.com/s/sEP_y-Ja50XKI5AkVB_8Mg)
 
 
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

@@ -264,3 +264,6 @@ https://github.com/jhao104/proxy_pool
 23. music-163 - 爬取网易云音乐所有歌曲的评论。
 
 https://github.com/RitterHou/music-163
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

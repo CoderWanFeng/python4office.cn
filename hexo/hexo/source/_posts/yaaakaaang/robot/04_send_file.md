@@ -45,3 +45,10 @@ file=r'E:\poemail\tests\test_files\要发送的文件.docx'
 然后微信上也成功发送了文件
 
 ![](https://raw.atomgit.com/yaaakaaang/pic/raw/main/1747896971043.png)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

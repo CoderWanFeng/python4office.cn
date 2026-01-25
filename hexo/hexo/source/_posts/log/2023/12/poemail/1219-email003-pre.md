@@ -60,3 +60,10 @@ content (str): 邮件内容，默认为空字符串
 - **支持自动收邮件。**
 
 大家有更多功能需求，可以在读者群或者评论区告诉我~
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

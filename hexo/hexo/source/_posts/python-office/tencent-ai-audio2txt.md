@@ -103,3 +103,6 @@ povideo.audio2txt(audio_path=r"your_audio_path",
 - 录音识别，官方说明文档：[https://cloud.tencent.com/document/product/1093/37823](https://cloud.tencent.com/document/product/1093/37823)
 - 录音识别，腾讯提供的代码：[https://github.com/TencentCloud/tencentcloud-sdk-python](https://github.com/TencentCloud/tencentcloud-sdk-python)
 
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

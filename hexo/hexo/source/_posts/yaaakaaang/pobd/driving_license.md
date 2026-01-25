@@ -33,3 +33,10 @@ pobd.ocr2excel.driving_license(img_path=input_file, output_excel_path=output_fil
 这时候有人就会说这太麻烦了，还有更简单的吗？
 
 这个可以有，我还开发了exe小程序版的，感兴趣的可以在评论区留言，我会尽快将发送给你。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

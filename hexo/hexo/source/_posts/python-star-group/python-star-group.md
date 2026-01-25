@@ -112,3 +112,10 @@ tags:
 
 我的微信：[python-office](http://www.python4office.cn/wechat-qrcode/)，希望接下来和你一起进步~
 - 看到这里的朋友，记得加我哟，免费送你1套付费课程📕
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

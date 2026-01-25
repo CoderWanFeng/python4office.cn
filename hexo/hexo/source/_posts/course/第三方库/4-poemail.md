@@ -70,3 +70,10 @@ poemail.receive.receive_email(
 `output_path`参数指定了附件保存的路径，`status`参数可以设置为"ALL"来下载所有邮件的附件。
 
 以上就是`poemail`的基本用法，它可以帮助自动化邮件的发送和接收，非常适合需要批量处理邮件的场合。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

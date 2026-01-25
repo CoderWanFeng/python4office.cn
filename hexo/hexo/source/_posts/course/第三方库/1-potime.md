@@ -72,3 +72,10 @@ if __name__ == "__main__":
 ## 总结
 
 `potime` 是一个非常实用的工具，可以帮助你快速地获取代码的运行时间，从而进行性能分析和优化。通过简单的装饰器使用方式，你可以轻松地将其集成到你的项目中。
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

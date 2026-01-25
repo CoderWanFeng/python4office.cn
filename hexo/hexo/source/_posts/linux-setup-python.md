@@ -35,3 +35,10 @@ ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
 
 make&make install不成功，一般是因为第1步里，有些yum库没有安装。
 
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

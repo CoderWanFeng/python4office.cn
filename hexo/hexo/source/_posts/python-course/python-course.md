@@ -36,3 +36,10 @@ tags: 免费教程
 我正在学习这个阶段的内容
 - [Python高级核心技术97讲](https://www.acfun.cn/v/ac35152150_24)
     - [代码仓库](https://gitee.com/CoderWanFeng/python-course/tree/master/Python%E9%AB%98%E7%BA%A7%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF97%E8%AE%B2)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

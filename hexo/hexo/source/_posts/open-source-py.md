@@ -255,3 +255,10 @@ Django维护一个建议新贡献者的页面: https://docs.djangoproject.com/en
 即使阅读本文后，如果你遇到任何问题。可以随时在微信找我:[python-office](http://www.python4office.cn/wechat-qrcode/),或给我发邮件：1957875073@qq.com。
 
 > 本文转载自：[链接](https://linux.cn/article-4628-weixin.html#rd?sukey=cbbc36a2500a2e6c44df210b08b1326f1382f39f0316ec2175bc12c34db5cd80b3b1fe7d06dcfa42e07044652a0ba790)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

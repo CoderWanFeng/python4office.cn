@@ -261,3 +261,6 @@ PS：每个网站都是学计算机混互联网必须知道的，真的牛杯，
 ————————————————
 版权声明：本文为CSDN博主「庆哥Java」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/sinat_33921105/article/details/103899234
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

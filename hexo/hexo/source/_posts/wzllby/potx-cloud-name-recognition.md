@@ -52,3 +52,10 @@ potx.ocr2excel.IDCardOCR2Excel(input_path='test.jpg', id=SecretId, key=SecretKey
 > 对了，如果你觉得这次优化有点东西，记得「点赞 + 在看」，让更多做发票处理的小伙伴看到这个库～ 咱们下次更新见！有问题添加下二维码。
 
 ![](https://cdn.jsdelivr.net/gh/wzllby/pic/img/202504152157373.jpg)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

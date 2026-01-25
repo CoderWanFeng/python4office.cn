@@ -57,3 +57,10 @@ tags: python-office
 | 1    | ppt2pdf   | PPT转PDF  | [视频](https://www.bilibili.com/video/BV17Y411c792)                     | [源码](https://github.com/CoderWanFeng/python-office/blob/master/demo/poppt/ppt2pdf.py)   |
 | 2    | ppt2img   | PPT转图片 | [视频](https://www.bilibili.com/video/BV1pu411Y7zz/)                    | [源码](https://github.com/CoderWanFeng/python-office/blob/master/demo/poppt/ppt2img.py)   |
 | 3    | merge4ppt | 合并PPT   | [文档](https://blog.csdn.net/weixin_42321517/article/details/130877688) | [源码](https://github.com/CoderWanFeng/python-office/blob/master/demo/poppt/merge4ppt.py) |
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

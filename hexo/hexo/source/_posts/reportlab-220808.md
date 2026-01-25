@@ -115,3 +115,10 @@ if __name__ == '__main__':
 获取本文**全套源代码 + 字体 + 报告全文**，请关注下方公众号后，在后台发送：**报告自动化**，即可24小时自动获取~
 
 
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

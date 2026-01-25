@@ -57,3 +57,10 @@ df 就是使用pandas 把数据转换为 DataFrame。这样得到的信息不仅
 最后，就是我们的excel 表格展示啦。
 
 ![community_5e2bc74.png](https://raw.atomgit.com/user-images/assets/5027920/ae4f58bd-ed88-48c7-9420-cd132c5d74b9/community_5e2bc74.png 'community_5e2bc74.png')
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

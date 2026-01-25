@@ -88,3 +88,6 @@ office.pdf.pdf2docx(input_file=r'./test_files/30-01-pdf2docx/程序员晚枫.pdf
 > 注意：这个功能，目前只支持docx格式的文件。
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

@@ -85,3 +85,6 @@ office.word.docx2pdf(path=r'D:\程序员晚枫的文件夹\word-out')
 
 ---
 
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

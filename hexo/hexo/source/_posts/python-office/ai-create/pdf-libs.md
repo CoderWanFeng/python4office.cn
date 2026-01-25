@@ -85,3 +85,10 @@ tags: python-office
 
 每个库的选择取决于具体的应用场景和需求。例如，如果需要进行大量的PDF内容提取，特别是表格数据，pdfplumber可能是一个好选择。如果需要创建或修改PDF内容，ReportLab或PyMuPDF可能更加合适。在选择库时，还需要考虑库的维护状态、社区活跃度和开源协议等因素。
 
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。

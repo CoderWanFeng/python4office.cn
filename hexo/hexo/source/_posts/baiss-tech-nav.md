@@ -107,3 +107,10 @@ APScheduler是基于Quartz的一个Python定时任务框架。提供了基于日
         - 本次请求之内有效
 - 上下文实现的原理
     - Threadlocal：线程局部变量
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+
+
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。
