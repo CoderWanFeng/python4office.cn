@@ -1,6 +1,6 @@
 ---
 title: Moltbot（原名：Clawdbot）全套国内部署教程
-date: 2026-01-28 20:55:56
+date: 2026-01-28 20:56:56
 tags: 自媒体
 ---
 
@@ -44,7 +44,7 @@ tags: 自媒体
 云服务器部署教程，扫码直达👇
 
 
-![扫码](https://raw.atomgit.com/user-images/assets/5027920/2deec84b-178c-49a8-804f-a3aa1bf57f2f/b298484da07516247d213af2774057e6.png 'b298484da07516247d213af2774057e6.png')
+![扫码](https://raw.atomgit.com/user-images/assets/5027920/d31000bf-f57c-41d5-aba3-30760057521f/00e73a7c5814cb3bec0b7e48e4db7e9d.png '00e73a7c5814cb3bec0b7e48e4db7e9d.png')
 
 
 ## 相关阅读
