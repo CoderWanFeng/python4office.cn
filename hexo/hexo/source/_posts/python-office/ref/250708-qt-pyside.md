@@ -91,20 +91,20 @@ PyQt同样有多个版本，与Qt框架的版本相对应：
 这也是我接下来的重点破局项目，现在价格是**199元**，最后再剩下的20个名额，满人后就恢复原价299了。大家想学习就加直接我微信：**wfdev7**，备注：AI编程
 
 <p align="center" id='30个名额'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg'>
+    <a target="_blank" href='http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/71bd2ff3-ac85-43a4-8288-164cc66e119d/image.png" width="350" height='600'/>
     </a>   
 </p>
 
 
 <p align="center" id='老粉的认可'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg'>
+    <a target="_blank" href='http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/6d5a3b73-0367-455a-ab69-4b47ca2646af/image.png" width="350" height='600'/>
     </a>   
 </p>
 
 <p align="center" id='学习群的氛围'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg'>
+    <a target="_blank" href='http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>
@@ -136,4 +136,4 @@ Q：有其他更高级的课程吗？
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)就能上手做AI项目。

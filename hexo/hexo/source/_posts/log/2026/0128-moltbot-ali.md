@@ -23,7 +23,7 @@ tags: 自媒体
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">
+<a href="http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
         <a href="http://www.python4office.cn/wechat-group/">
@@ -54,7 +54,7 @@ tags: 自媒体
 - [记录第一次去西南大学分享AI编程，我竟有些感动](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw)
 - [10年护照到期了，盘点我去过的国家，平行宇宙里的我过得好吗？](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw)
 - [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
+- [给小白的《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)
 
 ---
 
@@ -65,4 +65,4 @@ tags: 自媒体
 **声明**：本文原创，转载请联系授权
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)就能上手做AI项目。

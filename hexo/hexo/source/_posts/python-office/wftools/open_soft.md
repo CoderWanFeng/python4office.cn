@@ -42,7 +42,7 @@ Python可以替代你很多日常办公中的工作，但是学会Python不容�
 
 我是一个程序员，利用业余时间，专门为非程序员整理了10个微信机器人的代码，都是1行代码就可以用的。
 
-方便大家快速入门Python，大家可以点击课程进行学习：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)。
+方便大家快速入门Python，大家可以点击课程进行学习：[给小白的《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)。
 
 这套课程主要教给你Python自动化办公应该怎么用，而不是给你讲深奥的Python编程理论。
 
@@ -53,4 +53,4 @@ Python可以替代你很多日常办公中的工作，但是学会Python不容�
 ![](https://cos.python-office.com/group/0816.jpg)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)就能上手做AI项目。
