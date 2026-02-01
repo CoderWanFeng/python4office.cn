@@ -212,6 +212,346 @@ var _hmt = _hmt || [];
               <div id="js-content" class="content-ll">
                 
   
+    <article id="post-python-star-group/practice-source" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/python-star-group/practice-source/">practice-source</a>
+    </h1>
+  
+
+        
+        <a href="/python-star-group/practice-source/" class="archive-article-date">
+  	<time datetime="2022-07-11T06:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我学习Python的时候，也会遇到这个问题。</p>
+<h2 id="学习Python有哪几个阶段？"><a href="#学习Python有哪几个阶段？" class="headerlink" title="学习Python有哪几个阶段？"></a>学习Python有哪几个阶段？</h2><p>教程类<br>图书类<br>网站类</p>
+<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/python-star-group/practice-source/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-pro-python/ay-speed" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/pro-python/ay-speed/">Python爬虫如何加速？异步、协程还是多进程？分享一个常用做法，小白也能看懂。</a>
+    </h1>
+  
+
+        
+        <a href="/pro-python/ay-speed/" class="archive-article-date">
+  	<time datetime="2022-07-09T07:23:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://www.python-office.com/api/img-cdn/pro-python/spider-speed/spider-cover.jpg"></p>
+<p>最近在知识星球：Python读者圈，遇到读者提问：Python爬虫如何加速？</p>
+<p>这个问题涉及到一个爬虫里，甚至是整个Python编程里都非常重要的问题：</p>
+<blockquote>
+<p>如果同时下载1w张图片，如何有效地加速程序运行，缩短下载时间？</p>
+</blockquote>
+<p>今天我们一起来看一下常用的解决方案。</p>
+<h2 id="1、为什么慢？"><a href="#1、为什么慢？" class="headerlink" title="1、为什么慢？"></a>1、为什么慢？</h2><p>首先我们先看一下，原来的代码里，是什么原因导致程序慢的？<br>下面是代码和运行结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> office</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">18</span>):</span><br><span class="line">    url = <span class="string">&#x27;https://www.python-office.com/api/img-cdn/test/spider/&#123;&#125;.jpg&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">str</span>(i))</span><br><span class="line">    office.image.down4img(url, output_name=<span class="built_in">str</span>(i))</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.python-office.com/api/img-cdn/pro-python/spider-speed/normal.jpg"></p>
+<p>顺序执行看起来很完美，但是完美的背后是不是有陷阱呢？</p>
+<p>为了更好的理解这个代码，我们先举一个例子：你面前有10台洗衣机编号是从1到10，里面转满了衣服需要你清洗，<code>有的脏可能要强力洗洗的久，有的干净只需要速洗洗的快。</code></p>
+<p><strong>清洗以后，需要你记录下他们的清理顺序，有下列2种方案供你选择：</strong></p>
+<ol>
+<li><code>一个挨一个的洗完。</code>先启动洗衣机1号，等1号洗完了，再启动2号，依次类推。这样你记录的结果和上图一样，是完美的按顺序完成。</li>
+<li><code>先同时打开所有的洗衣机，哪一个洗完了就记录哪一个。</code>因为有的洗得快，有的洗得慢，这样你记录的结果是混乱的。</li>
+</ol>
+<p>哪种方式最快呢？毫无疑问是第2种，因为可以让所有的洗衣机同时工作，时间资源可以复用。</p>
+<p>回到我们的程序，我们下载一张图片也是分为2步：请求图片资源，保存到本地。</p>
+<p><strong>上面的代码之所以慢，就是因为它是请求到第1张的资源，保存到本地之后，再去请求第2张的资源。</strong>看起来很完美，但其实问题很大。</p>
+<p>如何加快速度呢？我们如果可以先请求到所有的图片资源（打开所有的洗衣机），然后再统一保存图片（哪台洗完衣服，就先记录哪台），这样是不是就会快很多呢？</p>
+<p><img src="https://www.python-office.com/api/img-cdn/pro-python/spider-speed/cartoon.png"></p>
+<p><strong>下面我们按照第2种思路，在Python里的实现实现一下。</strong></p>
+<h2 id="2、解决代码"><a href="#2、解决代码" class="headerlink" title="2、解决代码"></a>2、解决代码</h2><p>Talk is cheap,show me the code.<br>先上代码和运行结果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">from</span> aiohttp <span class="keyword">import</span> ClientSession</span><br><span class="line"></span><br><span class="line">tasks = []</span><br><span class="line">url = <span class="string">&quot;https://www.python-office.com/api/img-cdn/test/spider/&#123;&#125;.jpg&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">hello</span>(<span class="params">url, i=<span class="string">&#x27;wanfeng&#x27;</span>, <span class="built_in">type</span>=<span class="string">&#x27;jpg&#x27;</span></span>):</span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> ClientSession() <span class="keyword">as</span> session:</span><br><span class="line">        <span class="keyword">async</span> <span class="keyword">with</span> session.get(url) <span class="keyword">as</span> response:</span><br><span class="line">            <span class="keyword">if</span> response.status==<span class="number">200</span>:</span><br><span class="line">                response = <span class="keyword">await</span> response.read()</span><br><span class="line">                <span class="comment"># print(response)</span></span><br><span class="line">                <span class="keyword">async</span> <span class="keyword">with</span> aiofiles.<span class="built_in">open</span>(<span class="string">&#x27;.&#x27;</span>.join((<span class="built_in">str</span>(i), <span class="built_in">type</span>)), <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> output_img:</span><br><span class="line">                    <span class="comment"># for chunk in response:</span></span><br><span class="line">                    <span class="keyword">await</span> output_img.write(response)</span><br><span class="line">                    output_img.close()</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;下载成功，图片名称：<span class="subst">&#123;<span class="string">&#x27;.&#x27;</span>.join((<span class="built_in">str</span>(i), <span class="built_in">type</span>))&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run</span>():</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">18</span>):</span><br><span class="line">        task = asyncio.ensure_future(hello(url.<span class="built_in">format</span>(i), i))</span><br><span class="line">        tasks.append(task)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    loop = asyncio.get_event_loop()</span><br><span class="line">    run()</span><br><span class="line">    loop.run_until_complete(asyncio.wait(tasks))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://www.python-office.com/api/img-cdn/pro-python/spider-speed/yield.jpg"><br>主要使用的库是：</p>
+<ul>
+<li>asyncio：协程，让图片下载不按顺序，可以加快速度</li>
+<li>aiohttp：替代requests，用来异步发送请求。</li>
+<li>aiofiles：异步写入文件内容</li>
+</ul>
+<h2 id="3、还有其它方法吗？"><a href="#3、还有其它方法吗？" class="headerlink" title="3、还有其它方法吗？"></a>3、还有其它方法吗？</h2><p>还有多进程也可以试试，但是多进程更大的优势体现在计算密集型的场景下。<br>爬虫获取网络请求属于I/O密集型操作，多进程的优势不大。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> multiprocessing</span><br><span class="line"><span class="keyword">import</span> os, time</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;https://www.python-office.com/api/img-cdn/test/spider/&#123;&#125;.jpg&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">down4img</span>(<span class="params">url, output_name, <span class="built_in">type</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    下载指定url的一张图片，支持所有格式:jpg\png\gif .etc</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># print(&quot;子进程开始执行&gt;&gt;&gt; pid=&#123;&#125;,ppid=&#123;&#125;,编号&#123;&#125;&quot;.format(os.getpid(), os.getppid(), output_name))</span></span><br><span class="line"></span><br><span class="line">    response = requests.get(url, stream=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;.&#x27;</span>.join((output_name, <span class="built_in">type</span>)), <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> output_img:</span><br><span class="line">        <span class="keyword">for</span> chunk <span class="keyword">in</span> response:</span><br><span class="line">            output_img.write(chunk)</span><br><span class="line">        output_img.close()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;下载成功，图片名称：<span class="subst">&#123;<span class="string">&#x27;.&#x27;</span>.join((output_name, <span class="built_in">type</span>))&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="comment"># print(&quot;子进程终止&gt;&gt;&gt; pid=&#123;&#125;,ppid=&#123;&#125;,编号&#123;&#125;&quot;.format(os.getpid(), os.getppid(), output_name))</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;主进程开始执行&gt;&gt;&gt; pid=&#123;&#125;&quot;</span>.<span class="built_in">format</span>(os.getpid()))</span><br><span class="line">    ps = Pool(multiprocessing.cpu_count())</span><br><span class="line">    ps = Pool(<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">18</span>):</span><br><span class="line">        <span class="comment"># ps.apply(worker,args=(i,))          # 同步执行</span></span><br><span class="line">        output_name = <span class="built_in">str</span>(i)</span><br><span class="line">        <span class="built_in">type</span> = <span class="string">&#x27;jpg&#x27;</span></span><br><span class="line">        ps.apply_async(down4img, args=(url.<span class="built_in">format</span>(<span class="built_in">str</span>(i)), output_name, <span class="built_in">type</span>,))  <span class="comment"># 异步执行</span></span><br><span class="line">        <span class="comment"># ps.apply(down4img, args=(url.format(str(i)), output_name[0], type,))  # 同步执行</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 关闭进程池，停止接受其它进程</span></span><br><span class="line">    ps.close()</span><br><span class="line">    <span class="comment"># 阻塞进程</span></span><br><span class="line">    ps.join()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;主进程终止&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>主要使用的库是：</p>
+<ul>
+<li>multiprocessing：创建进程池</li>
+</ul>
+<h2 id="4、写在最后"><a href="#4、写在最后" class="headerlink" title="4、写在最后"></a>4、写在最后</h2><p>希望能给你带来帮助。如果想系统的学习Python，欢迎大家扫码加入我的知识星球👉<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/nNhFPD-xNsp2QvFc6HWLNQ">Python读者圈</a>，我们一起学习提高~</p>
+<p align="center" id="1w副业-banner">
+    <a target="_blank" href="http://t.cn/A6KiaiqK">
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%">
+    </a>   
+</p>
+
+
+
+
+
+<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/pro-python/ay-speed/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python-star-group/python-star-group" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/python-star-group/python-star-group/">python-star-group</a>
+    </h1>
+  
+
+        
+        <a href="/python-star-group/python-star-group/" class="archive-article-date">
+  	<time datetime="2022-07-07T02:17:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>大家好，这里是程序员晚枫，正在all in <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg">各种AI项目</a>。</p>
+<p>今年下半年开始，我打算做一个知识星球，和你一起学习。</p>
+<h2 id="0、介绍一下我自己"><a href="#0、介绍一下我自己" class="headerlink" title="0、介绍一下我自己"></a>0、介绍一下我自己</h2><p>我是一名3年工作经验的Python程序员，2019年硕士毕业于华南理工大学。<br>也是从毕业这一年开始做编程自媒体，2个全网同名的系列账号：Python自动化办公（社区）、程序员晚枫。<br>截止今天（22年7月）全网粉丝20w+，获得过多个技术平台的专家博主称号。</p>
+<p>但是：</p>
+<ul>
+<li>说实话，以上这些只能说明我自己曾经努力过，</li>
+<li>然而学习Python的重点是你自己，</li>
+<li>那么，我能给你的学习带来什么呢？</li>
+</ul>
+<p><strong>今年下半年开始，我建立了一个知识星球：Python读者圈，来帮助你学习Python。</strong></p>
+<p>门票：365元/位，以下是星球能提供的服务。</p>
+<h2 id="1、如何白嫖？"><a href="#1、如何白嫖？" class="headerlink" title="1、如何白嫖？"></a>1、如何白嫖？</h2><p>知道你想学习，又不想付费。那我就给你说一下，如何白嫖这个星球？</p>
+<h3 id="打卡返现：全额返款365元"><a href="#打卡返现：全额返款365元" class="headerlink" title="打卡返现：全额返款365元"></a>打卡返现：全额返款365元</h3><p>加入以后，你可以<strong>每天更新一个自己学习总结的Python知识点，连续更新n天返现。</strong>规则如下：</p>
+<ul>
+<li>连续打卡天数和返现金额，3个梯度：30天返现50元；60天返现100元；90天返现150元。每个梯度都可以领一次，一共返现300元，完成全部梯度，额外返现65元，所以一共返现全部的门票365元：50+100+150+65。建议先从30天打卡开始，循序渐进。</li>
+<li>每条带上序号：N/30，带上标签：#打卡返现。禁止先占位，第二天再写内容，每次断更，需要重新开始。</li>
+<li>打卡字数需要200字以上+自己的代码截图，一定要是自己的原创，禁止复制粘贴或者洗稿等其它欺骗性行为，一经发现不诚信的朋友，取消返现资格。整个星球通告。</li>
+<li>不参加打卡返现也没关系，不影响其它星球权益和服务。如果确认参加，可以加一下我的微信：python-office，我拉你进打卡群。</li>
+</ul>
+<h3 id="投稿有稿费"><a href="#投稿有稿费" class="headerlink" title="投稿有稿费"></a>投稿有稿费</h3><p>如果你在学习的过程中，有一些精彩的总结或者案例实践，欢迎整理成优美的文章投稿在我的公众号：Python自动化办公社区（方向：小白案例）或者Python图书馆（方向：专业分享）。</p>
+<p><strong>稿件一经发布，我会付你稿费50元。如果阅读满1000元，再奖励50元。</strong>投稿要求：</p>
+<ul>
+<li>没在其它平台发布过，作者写你的名字，我标记原创。</li>
+<li>不用复杂的排版，但是需要自己的代码配图，可以用word的形式提交给我。如果自己有公众号，也可以写在自己的公众号里，用预览的形式给我。</li>
+<li>发布后可以转发朋友圈、微信群，但是禁止机器刷量。</li>
+</ul>
+<h3 id="参与开源项目有奖励"><a href="#参与开源项目有奖励" class="headerlink" title="参与开源项目有奖励"></a>参与开源项目有奖励</h3><p>我在做一个开源项目：python-office，目前该项目获得了开源中国的推荐，GitHub star 160+。</p>
+<p>等你的python开发技术驾轻就熟了，<strong>我会指导你参与开源项目的开发。</strong>仅限加入星球的朋友：</p>
+<ul>
+<li><p>首次提交有效PR，会获得一本Python进阶图书。具体是哪本书，我会挑一本通过我对你的了解，对你当前阶段技术进步最有帮助的。</p>
+</li>
+<li><p>如果连续贡献有效开源代码，我会邀请你成为星球合伙人or自媒体合伙人，我和你共享更多的行业资源~</p>
+</li>
+</ul>
+<h3 id="成为星球合伙人"><a href="#成为星球合伙人" class="headerlink" title="成为星球合伙人"></a>成为星球合伙人</h3><p><strong>点赞评论别人的分享，积极参与技术讨论。</strong>我会从星球里挑选星球合伙人，和你一起运营这个星球，分享其中的荣誉和收益，成为一名靠谱的斜杠青年。</p>
+<h2 id="2、核心价值"><a href="#2、核心价值" class="headerlink" title="2、核心价值"></a>2、核心价值</h2><p>好了，说完如何白嫖，再<strong>详细说一下这个星球提供的核心价值：学习Python。</strong></p>
+<h3 id="每月1次：1对1的语音沟通，保姆式的陪伴学习"><a href="#每月1次：1对1的语音沟通，保姆式的陪伴学习" class="headerlink" title="每月1次：1对1的语音沟通，保姆式的陪伴学习"></a>每月1次：1对1的语音沟通，保姆式的陪伴学习</h3><p><code>从你加入星球开始，我就会详细了解关于你：</code></p>
+<ul>
+<li>你现阶段是什么水平；</li>
+<li>你的学习目标是什么；</li>
+<li>结合你的水平和目标，给你一个量身定制的学习计划。</li>
+</ul>
+<h3 id="每月10次：星球提问，每次不少于500字的回复"><a href="#每月10次：星球提问，每次不少于500字的回复" class="headerlink" title="每月10次：星球提问，每次不少于500字的回复"></a>每月10次：星球提问，每次不少于500字的回复</h3><p>我在星球里设置了每人每月10次的提问机会，不论你在星球里提什么问题，不论问题是复杂还是简单，每次我会给你一个500字以上的回复。</p>
+<ul>
+<li>10次会不会太少了？如果你需要每天都提问1次以上，只能说明1个问题：<ul>
+<li>我给你制定的学习计划不适合你，不能有效的带领你学习，给你造成了很多问题。那么请你联系我，我们重新制定学习计划。</li>
+<li>我希望你的每次提问都是经过认真思考的，每次提问都难度递增，让我感受到你的进步。</li>
+</ul>
+</li>
+</ul>
+<h3 id="专栏免费看"><a href="#专栏免费看" class="headerlink" title="专栏免费看"></a>专栏免费看</h3><p>我自己是Python开发，我在持续地整理几个专栏，提供给大家阅读和讨论：</p>
+<ul>
+<li>搭建个人网站</li>
+<li>Python基础解析</li>
+<li>pandas源码解析</li>
+<li>flask源码解析</li>
+<li>自动化办公</li>
+<li>面试经验分享</li>
+</ul>
+<h3 id="其它福利"><a href="#其它福利" class="headerlink" title="其它福利"></a>其它福利</h3><p>另外星球里还会提供其它福利：</p>
+<ul>
+<li>我用心推荐的电子书</li>
+<li>各种办公黑科技软件</li>
+<li>不定时的抽奖、周边包邮的礼物</li>
+</ul>
+<h2 id="这个星球适合什么样的人？"><a href="#这个星球适合什么样的人？" class="headerlink" title="这个星球适合什么样的人？"></a>这个星球适合什么样的人？</h2><p>最后我想说一下，我个人希望在星球里看到的朋友是：<strong>不论你是业余爱好者、还是Python开发，你是在认真学习Python，我们可以通过不断的学习、讨论和实践，熟练的掌握Python这门技术。</strong></p>
+<p>以下这些朋友，<code>不适合</code>加入星球：</p>
+<ul>
+<li><code>伸手党。</code>学习是一个双向的事情，你一定要确保，你有这个学习能力。如果是完全对计算机操作、对Python开发不感兴趣，是想来让我替你写代码的。我实在是没时间接这种私活。</li>
+<li><code>善良比聪明重要。</code>这句话是我在另一个博主那里看到的。我本身就是个Python开发，不是很喜欢去猜别人的套路。如果你是带着学习Python以外的目的来的，要么你就直接告诉我，要么你就别加入。</li>
+</ul>
+<p>最后我要说清楚，我只是个普通的Python程序员，在我们这行里也绝对不是技术最好的，但应该会比小白，或者刚入行的新人接触的多一些。</p>
+<p><strong>另外我自己也在学习Python进阶的技术，我只能提供力所能及的技术分享和支持。</strong></p>
+<p>如果我是最顶级的Python程序员，我的星球也不是这个价格了，你说是吧？</p>
+<blockquote>
+<p>另外，这个星球永远都不会做优惠活动，例如：提供60元门票优惠券什么的。如果你觉得我的定价高了，或者我的星球不够好，我再继续努力学习提高就是了，365元提供1年的服务，是我目前的底线。未来我的技术越来越好、星球服务越来越完善了，我会继续涨价。</p>
+</blockquote>
+<p>我的微信：<a target="_blank" rel="noopener" href="http://www.python4office.cn/wechat-qrcode/">python-office</a>，希望接下来和你一起进步~</p>
+<ul>
+<li>看到这里的朋友，记得加我哟，免费送你1套付费课程📕</li>
+</ul>
+<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/python-star-group/python-star-group/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-106/chuangshirenbiji" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1794,518 +2134,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-git-high-version" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/git-high-version/">git-high-version</a>
-    </h1>
-  
-
-        
-        <a href="/git-high-version/" class="archive-article-date">
-  	<time datetime="2022-06-02T02:17:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>centos安装高版本git</p>
-<p>yum默认安装1.8.1，版本太低了，vscode的插件会报版本过低</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install http://opensource.wandisco.com/centos/6/git/x86_64/wandisco-git-release-6-1.noarch.rpm</span><br><span class="line">yum -y install git</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
-<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">给小白的《30讲 · AI编程训练营》</a></li>
-</ul>
-<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/git-high-version/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-office/python-office-qaq" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/python-office/python-office-qaq/">python-office：常见问题</a>
-    </h1>
-  
-
-        
-        <a href="/python-office/python-office-qaq/" class="archive-article-date">
-  	<time datetime="2022-05-31T11:14:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center" id="进群-banner-AI">
-    <a target="_blank" href="http://www.python4office.cn/wechat-group/">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%">
-    </a>   
-</p>
-
-<p align="center">
-    👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
-</p>
-<p align="center">
-    👉 <a target="_blank" href="http://www.python4office.cn/wechat-group/">本开源项目的交流群</a> 👈
-</p>
-
-
-
-
-<p align="center" name="atomgit">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-        <a target="_blank" href="https://gitee.com/CoderWanFeng//python-office/">
-        <img src="https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-    <a target="_blank" href="https://atomgit.com/CoderWanFeng1/python-office">
-        <img src="https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark" alt="atomgit star">
-    </a>    
-    <a target="_blank" href="https://atomgit.com/CoderWanFeng1/python-office">
-<img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
-</a>
-<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">
-  <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
-</a>
-        <a target="_blank" rel="noopener" href="http://www.python4office.cn/wechat-group/">
-  <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
-</a>
-
-</p>
-
-
-<blockquote>
-<p>总结了python-office在使用过程中的常见问题，<br>也欢迎有使用经验的同学，来一起更新这个文档：</p>
-</blockquote>
-<ul>
-<li>不会代码的同学：<a target="_blank" rel="noopener" href="https://docs.qq.com/sheet/DYVNvUUhlZUFHeXVY">腾讯文档</a></li>
-<li>会代码的同学：<a target="_blank" rel="noopener" href="https://gitee.com/CoderWanFeng/python4office.cn/blob/main/hexo/hexo/source/_posts/python-office/python-office-qaq.md">本文档的Git地址</a></li>
-</ul>
-<h2 id="问题：导入office后报红，并且运行时提示：office-has-no-attributes-‘xxx’"><a href="#问题：导入office后报红，并且运行时提示：office-has-no-attributes-‘xxx’" class="headerlink" title="问题：导入office后报红，并且运行时提示：office has no attributes ‘xxx’"></a>问题：导入office后报红，并且运行时提示：office has no attributes ‘xxx’</h2><ul>
-<li>问题原因：使用了虚拟环境</li>
-<li>解决方法：<ul>
-<li>如果您不是专业开发，请不要使用虚拟环境，跟着这个教程，把环境调回来：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Q44y1u7rV">教程</a> </li>
-<li>如果您是专业开发，配置好你的虚拟环境后，再下载和运行代码，你应该知道怎么做吧？</li>
-</ul>
-</li>
-</ul>
-<h2 id="问题：mac下载报错"><a href="#问题：mac下载报错" class="headerlink" title="问题：mac下载报错"></a>问题：mac下载报错</h2><ul>
-<li>问题原因：目前python-office的部分功能，不适配mac系统</li>
-<li>解决方法：新开了一个库：python-office-mac，下载命令：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://mirrors.aliyun.com/pypi/simple python-office-mac -U</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="问题：如何参与项目的开发，给python-office增加自己的方法"><a href="#问题：如何参与项目的开发，给python-office增加自己的方法" class="headerlink" title="问题：如何参与项目的开发，给python-office增加自己的方法"></a>问题：如何参与项目的开发，给python-office增加自己的方法</h2><p>目前项目已开源在GitHub和Gitee，可以通过PR的方式，参与项目开发。</p>
-<ul>
-<li>项目地址：</li>
-<li>GitHub：<a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/python-office">https://github.com/CoderWanFeng/python-office</a></li>
-<li>Gitee：<a target="_blank" rel="noopener" href="https://gitee.com/CoderWanFeng/python-office">https://gitee.com/CoderWanFeng/python-office</a></li>
-</ul>
-<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python-office</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/python-office/python-office-qaq/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-office/github-pages" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/python-office/github-pages/">python-office是如何搭建的？</a>
-    </h1>
-  
-
-        
-        <a href="/python-office/github-pages/" class="archive-article-date">
-  	<time datetime="2022-05-31T10:54:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center" id="进群-banner-AI">
-    <a target="_blank" href="http://www.python4office.cn/wechat-group/">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%">
-    </a>   
-</p>
-
-<p align="center">
-    👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
-</p>
-<p align="center">
-    👉 <a target="_blank" href="http://www.python4office.cn/wechat-group/">本开源项目的交流群</a> 👈
-</p>
-
-
-
-
-<p align="center" name="atomgit">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-        <a target="_blank" href="https://gitee.com/CoderWanFeng//python-office/">
-        <img src="https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-    <a target="_blank" href="https://atomgit.com/CoderWanFeng1/python-office">
-        <img src="https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark" alt="atomgit star">
-    </a>    
-    <a target="_blank" href="https://atomgit.com/CoderWanFeng1/python-office">
-<img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
-</a>
-<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">
-  <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
-</a>
-        <a target="_blank" rel="noopener" href="http://www.python4office.cn/wechat-group/">
-  <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
-</a>
-
-</p>
-
-
-<p align="center">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/github-nav.jpg" alt="github license">
-    </a>   
-</p>
-<p align="center">
-    👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
-</p>
-<p align="center">
-    👉 <a target="_blank" href="https://cos.python-office.com/group%2Ffree-group.jpg">本开源项目的交流群</a> 👈
-</p>
-
-
-<p align="center" name="图标-github">
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/contributors/CoderWanFeng/python-office" alt="github contributors">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/forks/CoderWanFeng/python-office" alt="github forks">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues/CoderWanFeng/python-office" alt="github issues">
-    </a>    
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/issues-pr/CoderWanFeng/python-office" alt="github license">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/license/CoderWanFeng/python-office" alt="github license">
-    </a>   
-</p>
-
-<p align="center" name="gitee">
-    <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office/">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-    <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-        <img src="https://gitee.com/CoderWanFeng/python-office/badge/fork.svg?theme=dark" alt="gitee fork">
-    </a>
-    <a target="_blank" href="https://mp.weixin.qq.com/s/yaSmFKO3RrBpyanW3nvRAQ">
-    <img src="https://img.shields.io/badge/QQ-163434413-orange"></a>
-</p>
-
-
-
-
-
-<hr>
-<p><a href="README-EN.md"><strong>🌎English Documentation</strong></a></p>
-<hr>
-<h2 id="📚简介"><a href="#📚简介" class="headerlink" title="📚简介"></a>📚简介</h2><p>Python-office 是一个 Python 自动化办公第三方库，能解决大部分自动化办公的问题。而且每个功能只需一行代码，不需要小白用户学习 Python 知识，做到了真正的开箱即用。</p>
-<blockquote>
-<p>功能持续更新中，提交你的功能需求/参与项目开发，联系👉<a target="_blank" rel="noopener" href="http://www.python4office.cn/wechat-qrcode/">开发者微信</a></p>
-</blockquote>
-<p><img src="https://www.python-office.com/api/img-cdn/python-office/find_excel_data/group.jpg"></p>
-<h3 id="🍺特点"><a href="#🍺特点" class="headerlink" title="🍺特点"></a>🍺特点</h3><ul>
-<li>一键搭建所有 Python + 自动化办公的编程环境。</li>
-<li>使用一行代码解决大部分自动化办公的问题，不需要小白学习 Python 知识</li>
-<li>贴合职场办公需求</li>
-<li>极简编程，学习成本极低，工作效率提升显著</li>
-</ul>
-<hr>
-<h2 id="📦安装"><a href="#📦安装" class="headerlink" title="📦安装"></a>📦安装</h2><h3 id="🍊pip-自动下载-amp-更新"><a href="#🍊pip-自动下载-amp-更新" class="headerlink" title="🍊pip 自动下载&amp;更新"></a>🍊pip 自动下载&amp;更新</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<h2 id="📝文档"><a href="#📝文档" class="headerlink" title="📝文档"></a>📝文档</h2><p><a target="_blank" rel="noopener" href="https://www.python-office.com/">📘官网：https://www.python-office.com/</a></p>
-<p>全部功能的说明</p>
-<ul>
-<li><p>文字教程👉<a target="_blank" rel="noopener" href="https://www.python-office.com/guide/allFunc.html">传送门</a></p>
-</li>
-<li><p>视频教程👉<a target="_blank" rel="noopener" href="https://www.python-office.com/video/video.html">传送门</a></p>
-</li>
-</ul>
-<h2 id="🛠️包含组件"><a href="#🛠️包含组件" class="headerlink" title="🛠️包含组件"></a>🛠️包含组件</h2><p>以下所有功能，都在逐步搭建中。</p>
-<table>
-<thead>
-<tr>
-<th>模块</th>
-<th>介绍</th>
-<th>GitHub地址</th>
-<th>star</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PyOfficeRobot</td>
-<td>聊天机器人</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/PyOfficeRobot">https://github.com/CoderWanFeng/PyOfficeRobot</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>search4file</td>
-<td>文档搜索</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/search4file">https://github.com/CoderWanFeng/search4file</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/search4file.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>poexcel</td>
-<td>excel处理</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/poexcel">https://github.com/CoderWanFeng/poexcel</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/poexcel.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>poword</td>
-<td>word处理</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/poword">https://github.com/CoderWanFeng/poword</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/poword.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>poppt</td>
-<td>ppt处理</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/poppt">https://github.com/CoderWanFeng/poppt</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/poppt.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>popdf</td>
-<td>pdf处理</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/popdf">https://github.com/CoderWanFeng/popdf</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/popdf.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>pofile</td>
-<td>文件和文件夹的操作</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/pofile">https://github.com/CoderWanFeng/pofile</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/pofile.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>wftools</td>
-<td>便捷小工具</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/wftools">https://github.com/CoderWanFeng/wftools</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/wftools.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>poimage</td>
-<td>图片处理</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/poimage">https://github.com/CoderWanFeng/poimage</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/poimage.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>povideo</td>
-<td>视频处理</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/povideo">https://github.com/CoderWanFeng/povideo</a></td>
-<td><img src="https://img.shields.io/github/stars/CoderWanFeng/povideo.svg" alt="github star"></td>
-</tr>
-<tr>
-<td>web（名称待定）</td>
-<td>网站快捷搭建</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>email（名称待定）</td>
-<td>邮件功能</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>ocr（名称待定）</td>
-<td>识别功能：文字识别、语音识别</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>可以根据需求对每个模块单独引入，也可以通过<code>import office</code>方式引入所有模块。</p>
-<hr>
-<h2 id="🏗️添砖加瓦"><a href="#🏗️添砖加瓦" class="headerlink" title="🏗️添砖加瓦"></a>🏗️添砖加瓦</h2><h3 id="📐PR的建议"><a href="#📐PR的建议" class="headerlink" title="📐PR的建议"></a>📐PR的建议</h3><p>python-office欢迎任何人来添砖加瓦，贡献代码，建议提交的pr（pull request）放在一个单独的文件夹下：</p>
-<ul>
-<li>在<a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/python-office/tree/master/contributors">contributors</a>文件夹中，用自己的GitHub名字建一个文件夹；</li>
-<li>把自己的所有代码，都提交到这个自己的文件夹里；</li>
-<li>不要改其它任何文件夹里的代码！不要改别人的代码！</li>
-<li>对别人的代码有疑问，可以直接提issue。</li>
-</ul>
-<h3 id="🐞提供bug反馈或建议"><a href="#🐞提供bug反馈或建议" class="headerlink" title="🐞提供bug反馈或建议"></a>🐞提供bug反馈或建议</h3><p>提交问题反馈时，请务必填写和python-office代码本身有关的问题，不进行有关python学习，甚至是个人练习的知识答疑和讨论。</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://gitee.com/CoderWanFeng/python-office/issues">Gitee issue</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/python-office/issues">Github issue</a></li>
-</ul>
-<hr>
-<h2 id="🪙支持python-office"><a href="#🪙支持python-office" class="headerlink" title="🪙支持python-office"></a>🪙支持python-office</h2><h3 id="💳捐赠"><a href="#💳捐赠" class="headerlink" title="💳捐赠"></a>💳捐赠</h3><p>如果你觉得python-office不错，可以捐赠请维护者喝杯咖啡~，在此表示感谢^_^。</p>
-<p><a target="_blank" rel="noopener" href="https://gitee.com/CoderWanFeng/python-office">捐赠给项目</a> 👈该项捐赠仅用于支持本项目发展使用</p>
-<hr>
-<h2 id="⭐Star-python-office"><a href="#⭐Star-python-office" class="headerlink" title="⭐Star python-office"></a>⭐Star python-office</h2><p><a target="_blank" rel="noopener" href="https://starchart.cc/CoderWanFeng/python-office"><img src="https://starchart.cc/CoderWanFeng/python-office.svg" alt="Stargazers over time"></a></p>
-<h2 id="📌联系作者"><a href="#📌联系作者" class="headerlink" title="📌联系作者"></a>📌联系作者</h2><p><img src="https://cos.python-office.com/wechat/qr-code.jpg" alt="python-office"></p>
-<p><img src="https://cos.python-office.com/course/50%E8%AE%B2%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/free-link.jpg"></p>
-<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/python-office/github-pages/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/52/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/51/">51</a><a class="page-number" href="/page/52/">52</a><span class="page-number current">53</span><a class="page-number" href="/page/54/">54</a><a class="page-number" href="/page/55/">55</a><span class="space">&hellip;</span><a class="page-number" href="/page/57/">57</a><a class="extend next" rel="next" href="/page/54/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/52/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/51/">51</a><a class="page-number" href="/page/52/">52</a><span class="page-number current">53</span><a class="page-number" href="/page/54/">54</a><a class="page-number" href="/page/55/">55</a><span class="space">&hellip;</span><a class="page-number" href="/page/58/">58</a><a class="extend next" rel="next" href="/page/54/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -2422,10 +2253,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Pandas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">团队介绍</a>
               </li>
              
@@ -2438,11 +2265,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">banner</a>
+                <a href="javascript:void(0)" class="js-tag color2">Pandas</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color2">banner</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2458,34 +2285,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">黑科技导航</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Celery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ai</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">机器人</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重庆</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
@@ -2494,11 +2293,39 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">黑科技导航</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ai</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Celery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">机器人</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">软件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">职场</a>
+                <a href="javascript:void(0)" class="js-tag color3">重庆</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2510,15 +2337,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">咖啡</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pip</a>
+                <a href="javascript:void(0)" class="js-tag color3">职场</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">pandas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">咖啡</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2527,6 +2354,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">金融</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">代码规范</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">开源项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">python-office</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">招聘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">黑科技</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2542,22 +2397,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">代码规范</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">开源项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python-office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">自媒体</a>
               </li>
              
@@ -2566,15 +2405,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">程序员</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">招聘</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">黑科技</a>
+                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2582,7 +2413,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
+                <a href="javascript:void(0)" class="js-tag color4">程序员</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2594,7 +2425,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">装饰器</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2602,15 +2433,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网站开发</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">副业</a>
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2618,19 +2445,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">装饰器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">副业</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Swagger</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">心理分析</a>
+                <a href="javascript:void(0)" class="js-tag color1">sqlalchemy</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">个人计划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">sqlalchemy</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2642,7 +2473,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+                <a href="javascript:void(0)" class="js-tag color5">心理分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">社区活动</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2662,11 +2497,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">社区活动</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
+                <a href="javascript:void(0)" class="js-tag color3">工房</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2674,11 +2509,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color1">微信机器人</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信机器人</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2706,19 +2541,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">白开水AI社区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工房</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知识付费</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2730,7 +2553,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
+                <a href="javascript:void(0)" class="js-tag color3">白开水AI社区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">知识付费</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2738,11 +2565,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">chatgpt</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2751,6 +2578,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">关键词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">chatgpt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2770,10 +2601,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">下载</a>
               </li>
              
@@ -2782,11 +2609,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">知识星球</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">转行程序员</a>
+                <a href="javascript:void(0)" class="js-tag color4">短视频</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">1对1咨询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2794,7 +2633,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">码匠er</a>
+                <a href="javascript:void(0)" class="js-tag color4">找工作</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2806,7 +2645,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">短视频</a>
+                <a href="javascript:void(0)" class="js-tag color1">转行程序员</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2818,19 +2657,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">1对1咨询</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">找工作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习计划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
+                <a href="javascript:void(0)" class="js-tag color5">码匠er</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2846,11 +2673,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数字人</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">大模型行业</a>
+                <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2862,11 +2685,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">大模型行业</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">deepseek</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">华为</a>
+                <a href="javascript:void(0)" class="js-tag color4">数字人</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2878,6 +2705,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">华为</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">人形机器人</a>
               </li>
              
@@ -2886,7 +2717,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">副业信息差</a>
+                <a href="javascript:void(0)" class="js-tag color2">openai</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2894,7 +2725,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">openai</a>
+                <a href="javascript:void(0)" class="js-tag color5">原创文章</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2902,7 +2733,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">原创文章</a>
+                <a href="javascript:void(0)" class="js-tag color1">副业信息差</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2918,10 +2749,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">程序员说法</a>
               </li>
              
@@ -2934,7 +2761,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">月度总结</a>
+                <a href="javascript:void(0)" class="js-tag color5">小编故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pdf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">行业热点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">10讲Python自动化办公课程推广文案</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">30讲Python自动化办公</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">读者交流群</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2942,15 +2789,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">月度总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">热点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年度目标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">财富自由</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2962,7 +2805,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">团队</a>
+                <a href="javascript:void(0)" class="js-tag color5">年度目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">财富自由</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2994,15 +2841,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">考证</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">户外</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CPython</a>
+                <a href="javascript:void(0)" class="js-tag color3">考证</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">团队</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3010,27 +2857,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CPython</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">视频脚本</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">行业热点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">10讲Python自动化办公课程推广文案</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">小编故事</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">30讲Python自动化办公</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">读者交流群</a>
+                <a href="javascript:void(0)" class="js-tag color5">星河计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3038,7 +2873,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">poimage</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3046,7 +2881,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color3">poimage</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3062,11 +2897,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">星河计划</a>
+                <a href="javascript:void(0)" class="js-tag color1">pycon</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pycon</a>
+                <a href="javascript:void(0)" class="js-tag color4">1v1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3074,11 +2909,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">poemail</a>
+                <a href="javascript:void(0)" class="js-tag color4">交流群</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">交流群</a>
+                <a href="javascript:void(0)" class="js-tag color3">poemail</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3086,7 +2921,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">1v1</a>
+                <a href="javascript:void(0)" class="js-tag color5">AI新解</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">通义灵码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">云栖大会</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeBuddy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vibecoding</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3110,43 +2961,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AI新解</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云栖大会</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeBuddy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vibecoding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">通义灵码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">大佬故事</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">pyinstaller</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">程序员晚枫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线上活动</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3158,51 +2977,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内置函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">推广</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">粉丝福利</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度文章</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">恰饭</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">语法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">开源协议</a>
+                <a href="javascript:void(0)" class="js-tag color2">pyinstaller</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">10讲Python自动化办公</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">程序员晚枫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">线上活动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">30讲PythonExcel数据分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">30讲Python+Excel数据分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">7讲Python自动发邮件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3214,15 +3013,51 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">7讲Python自动发邮件</a>
+                <a href="javascript:void(0)" class="js-tag color5">内置函数</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">30讲Python+Excel数据分析</a>
+                <a href="javascript:void(0)" class="js-tag color3">推广</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">30讲PythonExcel数据分析</a>
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">粉丝福利</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">15讲Python基础入门</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">恰饭</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">深度文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">周记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">开源协议</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3234,7 +3069,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">15讲Python基础入门</a>
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3246,19 +3081,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">书单号</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高阶课程</a>
+                <a href="javascript:void(0)" class="js-tag color2">AI制作课程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">AI制作课程</a>
+                <a href="javascript:void(0)" class="js-tag color5">高阶课程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3270,11 +3101,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">转行咨询</a>
+                <a href="javascript:void(0)" class="js-tag color5">技术咨询</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术咨询</a>
+                <a href="javascript:void(0)" class="js-tag color5">转行咨询</a>
               </li>
              
               <li class="article-tag-list-item">
