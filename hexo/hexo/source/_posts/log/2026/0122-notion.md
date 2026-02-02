@@ -29,7 +29,7 @@ tags: 自媒体
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/">
+<a href="https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
         <a href="http://www.python4office.cn/wechat-group/">
@@ -107,7 +107,7 @@ Ivan早就说过，我们总"通过后视镜驶向未来"，早期电话像电�
 
 **AI时代的机会，不会留给停在2023年的人**。
 
-点击课程👉[30讲·AI编程训练营](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)，一起用AI编程解锁创作力，抓住这个"智力白菜价、机会无限量"的时代！
+点击课程👉[30讲·AI编程训练营](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg)，一起用AI编程解锁创作力，抓住这个"智力白菜价、机会无限量"的时代！
 
 ---
 
@@ -120,4 +120,4 @@ Ivan早就说过，我们总"通过后视镜驶向未来"，早期电话像电�
 - [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg)就能上手做AI项目。

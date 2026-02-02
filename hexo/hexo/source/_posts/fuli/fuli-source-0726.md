@@ -31,7 +31,7 @@ tags: 福利
 | 课程链接                                                                    | 配套文档&代码&软件                                                | 读者交流群                                              |
 |-------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
 | [50讲 · Python + 自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)                 | [打开](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)                     | [加入](http://python4office.cn/wechat-group/)        |
-| [10讲 · Python + 微信机器人](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/) | [打开](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/) | [加入](http://python4office.cn/wechat-group/)        |
+| [10讲 · Python + 微信机器人](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg) | [打开](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg) | [加入](http://python4office.cn/wechat-group/)        |
 | [30讲 · Python + 数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)         | [打开](https://mp.weixin.qq.com/s/n5b-C4ZhkhfZmlCTvepM4A)   | [加入](http://python4office.cn/wechat-group/)        |
 | [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)             | [打开](https://www.python-office.com/course-002/5-poocr/5-poocr.html)                  | [加入](http://python4office.cn/wechat-group/)        |
 | [100讲 · Python + 人工智能](https://www.bilibili.com/video/BV1rU4y1u7og/)    | [打开](https://mp.weixin.qq.com/s/P52GVQEJ1bVAN5vPM_t3Jg)                   | [加入](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ)        |
@@ -72,4 +72,4 @@ tags: 福利
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg)就能上手做AI项目。

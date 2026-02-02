@@ -21,7 +21,7 @@ tags: [Python,自动化办公]
     	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
 		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-<a href="http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/">
+<a href="https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -104,7 +104,7 @@ AI不是让你变成“技术大神”，而是让你用最低成本解决工作
 别再让AI躺在你的收藏夹里吃灰了，点击课程链接[30讲·AI编程训练营](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247504529&idx=1&sn=856c1ae8ae3a807ac67ed7d855b72e87&scene=21&poc_token=HNHQcWmj2pMjQ5XuwsH9JD2DKrFWLK1J23agfg7v)，绑定你的工作场景，让AI真正成为你的“效率帮手”！
 
 ## 相关阅读
-- [给小白的《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg)
 - [数据分析从入门到精通，30讲Python+Excel搞定](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [告别加班！50讲Python自动化办公，让你从职场小白变效率达人](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [我的百度数字人，24小时直播中。。。](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
@@ -114,4 +114,4 @@ AI不是让你变成“技术大神”，而是让你用最低成本解决工作
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](http://www.python4office.cn/course/AI%E7%9B%B8%E5%85%B3/AI%E7%BC%96%E7%A8%8B%E8%AE%AD%E7%BB%83%E8%90%A5/ads/260111-30%E8%AE%B2-599/)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg)就能上手做AI项目。
