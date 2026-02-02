@@ -212,6 +212,164 @@ var _hmt = _hmt || [];
               <div id="js-content" class="content-ll">
                 
   
+    <article id="post-course/程序员晚枫/专栏/魔术方法/1-slot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/%E7%A8%8B%E5%BA%8F%E5%91%98%E6%99%9A%E6%9E%AB/%E4%B8%93%E6%A0%8F/%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/1-slot/">深入解析 Python `__slots__`：内存优化与性能提升的利器</a>
+    </h1>
+  
+
+        
+        <a href="/course/%E7%A8%8B%E5%BA%8F%E5%91%98%E6%99%9A%E6%9E%AB/%E4%B8%93%E6%A0%8F/%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/1-slot/" class="archive-article-date">
+  	<time datetime="2025-08-20T16:41:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-08-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在 Python 的世界里，“灵活性”是其核心哲学之一。默认情况下，Python 对象的实例属性都存储在一个动态的字典 <code>__dict__</code> 中，这使得我们可以随时随地、随心所欲地为对象添加新的属性。然而，这种灵活性并非没有代价，它带来了显著的内存开销和相对缓慢的属性访问速度。</p>
+<p>当你需要创建成千上万个对象实例时（例如在科学计算、Web 框架处理大量请求、游戏开发中处理大量实体时），这种开销就会变得不可忽视。这时，<code>__slots__</code> 这个强大的魔术方法就派上了用场。它通过一种声明式的机制，在灵活性和性能之间提供了一个高效的权衡。</p>
+<p>本文将深入探讨 <code>__slots__</code> 的工作原理、使用方法、性能优势以及需要注意的陷阱。</p>
+<h2 id="一、-slots-是什么？"><a href="#一、-slots-是什么？" class="headerlink" title="一、 __slots__ 是什么？"></a>一、 <code>__slots__</code> 是什么？</h2><p><code>__slots__</code> 是一个类变量，它允许开发者显式地声明一个类所允许拥有的实例属性名称。其语法非常简单：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span>:</span><br><span class="line">    __slots__ = (<span class="string">&#x27;attr1&#x27;</span>, <span class="string">&#x27;attr2&#x27;</span>, <span class="string">&#x27;attr3&#x27;</span>)</span><br><span class="line">    <span class="comment"># ... 类的其他定义 ...</span></span><br></pre></td></tr></table></figure>
+
+<p>通过这行声明，你告诉 Python 解释器：<code>MyClass</code> 的实例<strong>只能</strong>拥有 <code>attr1</code>, <code>attr2</code>, <code>attr3</code> 这三个属性。解释器会据此进行内存分配和属性访问管理，而不是使用默认的 <code>__dict__</code> 字典。</p>
+<h2 id="二、-默认行为-vs-slots-行为"><a href="#二、-默认行为-vs-slots-行为" class="headerlink" title="二、 默认行为 vs. __slots__ 行为"></a>二、 默认行为 vs. <code>__slots__</code> 行为</h2><h3 id="1-默认行为：基于-dict-的动态属性"><a href="#1-默认行为：基于-dict-的动态属性" class="headerlink" title="1. 默认行为：基于 __dict__ 的动态属性"></a>1. 默认行为：基于 <code>__dict__</code> 的动态属性</h3><p>在没有 <code>__slots__</code> 的普通类中，每个实例都拥有一个 <code>__dict__</code> 字典来存储其所有属性。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">RegularUser</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, user_id</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.user_id = user_id</span><br><span class="line"></span><br><span class="line">user1 = RegularUser(<span class="string">&#x27;Alice&#x27;</span>, <span class="number">1</span>)</span><br><span class="line">user1.email = <span class="string">&#x27;alice@example.com&#x27;</span> <span class="comment"># 动态添加新属性，完全合法</span></span><br><span class="line"><span class="built_in">print</span>(user1.__dict__)</span><br><span class="line"><span class="comment"># 输出: &#123;&#x27;name&#x27;: &#x27;Alice&#x27;, &#x27;user_id&#x27;: 1, &#x27;email&#x27;: &#x27;alice@example.com&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>优点</strong>：极高的灵活性。<br><strong>缺点</strong>：</p>
+<ul>
+<li>  <strong>内存开销大</strong>：字典本身就需要占用不小的内存，尤其是当实例属性很少时，字典的开销占比会很高。</li>
+<li>  <strong>访问速度慢</strong>：属性访问需要在哈希表（字典）中进行查找，虽然平均时间复杂度是 O(1)，但比直接访问固定偏移量的内存要慢。</li>
+</ul>
+<h3 id="2-slots-行为：基于描述符的固定属性"><a href="#2-slots-行为：基于描述符的固定属性" class="headerlink" title="2. __slots__ 行为：基于描述符的固定属性"></a>2. <code>__slots__</code> 行为：基于描述符的固定属性</h3><p>使用 <code>__slots__</code> 后，Python 不再为每个实例创建 <code>__dict__</code>，而是为整个类创建一个<strong>描述符</strong> (Descriptor)，并为每个实例在 C 层分配一个固定的、紧凑的数组来存储 <code>__slots__</code> 中声明的属性。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SlotsUser</span>:</span><br><span class="line">    __slots__ = (<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;user_id&#x27;</span>) <span class="comment"># 显式声明允许的属性</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, user_id</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.user_id = user_id</span><br><span class="line"></span><br><span class="line">user2 = SlotsUser(<span class="string">&#x27;Bob&#x27;</span>, <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(user2.name) <span class="comment"># 正常工作</span></span><br><span class="line"><span class="comment"># user2.email = &#x27;bob@example.com&#x27; # AttributeError: &#x27;SlotsUser&#x27; object has no attribute &#x27;email&#x27;</span></span><br><span class="line"><span class="comment"># print(user2.__dict__) # AttributeError: &#x27;SlotsUser&#x27; object has no attribute &#x27;__dict__&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>优点</strong>：</p>
+<ul>
+<li>  <strong>内存占用小</strong>：实例不再需要维护一个字典，内存布局是固定的，极大减少了内存消耗。</li>
+<li>  <strong>属性访问更快</strong>：属性访问被转换为对那个固定数组的索引操作，速度更快。</li>
+<li>*缺点**：</li>
+<li>  <strong>失去灵活性</strong>：无法动态添加未在 <code>__slots__</code> 中声明的属性。</li>
+<li>  **某些工具依赖 <code>__dict__</code>**：一些序列化或调试工具可能依赖于 <code>__dict__</code> 的存在。</li>
+</ul>
+<h2 id="三、-内存节省背后的原理"><a href="#三、-内存节省背后的原理" class="headerlink" title="三、 内存节省背后的原理"></a>三、 内存节省背后的原理</h2><p>内存节省主要来自两个方面：</p>
+<ol>
+<li><p> <strong>移除了 <code>__dict__</code>**：一个空的字典在 64 位 Python 解释器下大约占用 240 字节。对于属性数量很少但实例数量极多的类（例如坐标点 <code>Point(x, y)</code>），节省的内存是巨量的。内存节省的不是属性值的空间，而是存储这些属性所用的</strong>数据结构**的空间。</p>
+</li>
+<li><p> <strong>紧凑的内存布局</strong>：Python 解释器会为 <code>__slots__</code> 的实例预分配一块连续的内存空间，每个属性在其中的偏移量是固定的。这比使用字典（需要存储哈希表、键和值指针等）要高效得多。</p>
+</li>
+</ol>
+<h3 id="量化内存节省"><a href="#量化内存节省" class="headerlink" title="量化内存节省"></a>量化内存节省</h3><p>让我们用一个简单的例子来量化这种节省：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PointRegular</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PointSlots</span>:</span><br><span class="line">    __slots__ = (<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建实例</span></span><br><span class="line">p_reg = PointRegular(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">p_slot = PointSlots(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Regular instance size: <span class="subst">&#123;sys.getsizeof(p_reg)&#125;</span> bytes&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Slots instance size: <span class="subst">&#123;sys.getsizeof(p_slot)&#125;</span> bytes&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出可能会类似于（具体数字因Python版本和系统而异）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Regular instance size: 56 bytes</span><br><span class="line">Slots instance size: 48 bytes</span><br></pre></td></tr></table></figure>
+
+<p>单个实例节省了 8 字节。看起来不多？让我们放大规模：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一百万个实例，估算总内存消耗</span></span><br><span class="line">num_instances = <span class="number">1_000_000</span></span><br><span class="line">mem_regular = sys.getsizeof(p_reg) * num_instances</span><br><span class="line">mem_slots = sys.getsizeof(p_slot) * num_instances</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Estimated memory for 1,000,000 Regular instances: <span class="subst">&#123;mem_regular / <span class="number">1024</span>**<span class="number">2</span>:<span class="number">.2</span>f&#125;</span> MB&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Estimated memory for 1,000,000 Slots instances: <span class="subst">&#123;mem_slots / <span class="number">1024</span>**<span class="number">2</span>:<span class="number">.2</span>f&#125;</span> MB&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Memory saved: <span class="subst">&#123;(mem_regular - mem_slots) / <span class="number">1024</span>**<span class="number">2</span>:<span class="number">.2</span>f&#125;</span> MB&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>输出可能类似于：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Estimated memory for 1,000,000 Regular instances: 53.41 MB</span><br><span class="line">Estimated memory for 1,000,000 Slots instances: 45.78 MB</span><br><span class="line">Memory saved: 7.63 MB</span><br></pre></td></tr></table></figure>
+<p><strong>节省了超过 7MB 的内存！</strong> 对于属性更少的类，比例会更加惊人。</p>
+<h2 id="四、-如何使用-slots"><a href="#四、-如何使用-slots" class="headerlink" title="四、 如何使用 __slots__"></a>四、 如何使用 <code>__slots__</code></h2><h3 id="1-基础用法"><a href="#1-基础用法" class="headerlink" title="1. 基础用法"></a>1. 基础用法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Vector2D</span>:</span><br><span class="line">    __slots__ = (<span class="string">&#x27;_x&#x27;</span>, <span class="string">&#x27;_y&#x27;</span>) <span class="comment"># 通常使用元组或列表</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self._x = x</span><br><span class="line">        self._y = y</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">x</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self._x</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">y</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self._y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;Vector2D(<span class="subst">&#123;self.x&#125;</span>, <span class="subst">&#123;self.y&#125;</span>)&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-继承中的使用"><a href="#2-继承中的使用" class="headerlink" title="2. 继承中的使用"></a>2. 继承中的使用</h3><p>使用 <code>__slots__</code> 时，继承链需要小心处理。</p>
+<ul>
+<li>  **如果父类没有 <code>__slots__</code>**：子类使用 <code>__slots__</code> 后，实例仍然会有 <code>__dict__</code>（除非子类的 <code>__slots__</code> 也阻止了它），因为需要容纳父类的潜在动态属性。这会削弱 <code>__slots__</code> 的效果。</li>
+<li>  <strong>如果父类有 <code>__slots__</code>**：子类也需要定义自己的 <code>__slots__</code>，它应该</strong>包含**父类的 <code>__slots__</code>。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span>:</span><br><span class="line">    __slots__ = (<span class="string">&#x27;base_attr&#x27;</span>,)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Derived</span>(<span class="title class_ inherited__">Base</span>):</span><br><span class="line">    __slots__ = (<span class="string">&#x27;derived_attr&#x27;</span>,) <span class="comment"># 不需要重复 base_attr</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.base_attr = <span class="string">&quot;Base&quot;</span></span><br><span class="line">        self.derived_attr = <span class="string">&quot;Derived&quot;</span></span><br><span class="line"></span><br><span class="line">d = Derived()</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-支持弱引用"><a href="#3-支持弱引用" class="headerlink" title="3. 支持弱引用"></a>3. 支持弱引用</h3><p>如果需要对你的类实例使用弱引用 (<code>weakref</code>)，你需要将 <code>&#39;__weakref__&#39;</code>  explicitly 加入到 <code>__slots__</code> 中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">WeakRefableSlots</span>:</span><br><span class="line">    __slots__ = (<span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;__weakref__&#x27;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, data</span>):</span><br><span class="line">        self.data = data</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、-性能测试：内存与速度"><a href="#五、-性能测试：内存与速度" class="headerlink" title="五、 性能测试：内存与速度"></a>五、 性能测试：内存与速度</h2><p>除了内存，<code>__slots__</code> 还能提升属性访问速度。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> timeit</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestRegular</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.x = x</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestSlots</span>:</span><br><span class="line">    __slots__ = (<span class="string">&#x27;x&#x27;</span>,)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.x = x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建实例</span></span><br><span class="line">reg_obj = TestRegular(<span class="number">5</span>)</span><br><span class="line">slot_obj = TestSlots(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试属性访问速度</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_attribute_reg</span>():</span><br><span class="line">    <span class="keyword">return</span> reg_obj.x</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_attribute_slot</span>():</span><br><span class="line">    <span class="keyword">return</span> slot_obj.x</span><br><span class="line"></span><br><span class="line">time_reg = timeit.timeit(get_attribute_reg, number=<span class="number">10_000_000</span>)</span><br><span class="line">time_slot = timeit.timeit(get_attribute_slot, number=<span class="number">10_000_000</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Regular attribute access (10M times): <span class="subst">&#123;time_reg:<span class="number">.3</span>f&#125;</span> seconds&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Slots attribute access (10M times): <span class="subst">&#123;time_slot:<span class="number">.3</span>f&#125;</span> seconds&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Speedup: <span class="subst">&#123;time_reg / time_slot:<span class="number">.2</span>f&#125;</span>x&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>输出可能显示 <code>__slots__</code> 的属性访问有 20%-40% 的速度提升。</p>
+<h2 id="六、-适用场景与注意事项"><a href="#六、-适用场景与注意事项" class="headerlink" title="六、 适用场景与注意事项"></a>六、 适用场景与注意事项</h2><h3 id="何时使用-slots-？"><a href="#何时使用-slots-？" class="headerlink" title="何时使用 __slots__？"></a>何时使用 <code>__slots__</code>？</h3><ol>
+<li> <strong>内存敏感的应用</strong>：当你需要创建大量（数万、数百万）实例时，它是必须考虑的优化手段。</li>
+<li> <strong>属性固定的对象</strong>：例如数据结构（树节点、链表节点、几何图形）、配置项、数据传输对象（DTO）、ORM 中的模型实例（虽然ORM框架通常会自己处理）。</li>
+<li> <strong>需要极致性能的场景</strong>：在紧密循环中频繁访问属性的代码。</li>
+</ol>
+<h3 id="注意事项与陷阱"><a href="#注意事项与陷阱" class="headerlink" title="注意事项与陷阱"></a>注意事项与陷阱</h3><ol>
+<li> <strong>不能动态添加属性</strong>：这是最大的限制。确保你的类在设计阶段就能确定所有需要的属性。</li>
+<li> <strong>与部分库和工具的兼容性</strong>：一些序列化库（如 <code>pickle</code>）可以正常工作，但某些深度依赖 <code>__dict__</code> 或 <code>__dir__</code> 的库或调试工具可能会出现问题。</li>
+<li> <strong>继承链的复杂性</strong>：如前所述，在复杂的继承关系中需要小心管理 <code>__slots__</code>。</li>
+<li> <strong>不要滥用</strong>：如果你的类只会创建几个实例，或者确实需要动态属性，那么使用 <code>__slots__</code> 是自找麻烦。<strong>“明确优于隐晦”，只在真正需要时使用。</strong></li>
+</ol>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p><code>__slots__</code> 是 Python 提供给开发者的一个强大工具，它在牺牲一部分动态灵活性的前提下，换来了显著的内存节省和一定的性能提升。它完美体现了 Python “实用主义” 的哲学：提供机制，让开发者根据实际情况决定策略。</p>
+<p>在开发大型应用、处理海量数据或编写底层基础构件时，善用 <code>__slots__</code> 可以有效地优化程序资源消耗。然而，就像所有优化技巧一样，它的首要原则是 <strong>“不要过早优化”</strong> 。首先保证代码的正确性和清晰度，然后在性能分析工具的指导下，有针对性地使用 <code>__slots__</code> 来解决实际存在的内存或性能瓶颈。</p>
+<h2 id="入门课程-读者群"><a href="#入门课程-读者群" class="headerlink" title="入门课程 + 读者群"></a>入门课程 + 读者群</h2><ul>
+<li>加入学习👉<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA">给小白的《50讲Python自动化办公》</a></li>
+</ul>
+<p>大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇</p>
+<p><img src="https://cos.python-office.com/group/0816.jpg"></p>
+<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">下载</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/%E7%A8%8B%E5%BA%8F%E5%91%98%E6%99%9A%E6%9E%AB/%E4%B8%93%E6%A0%8F/%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/1-slot/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-course/程序员说法/20250820-大模型个人隐私" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -280,11 +438,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">机器人</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ai</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ai</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">机器人</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -2249,105 +2407,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-nanShao/7/10讲/02-自动整理文件夹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/nanShao/7/10%E8%AE%B2/02-%E8%87%AA%E5%8A%A8%E6%95%B4%E7%90%86%E6%96%87%E4%BB%B6%E5%A4%B9/">02-自动整理文件夹</a>
-    </h1>
-  
-
-        
-        <a href="/nanShao/7/10%E8%AE%B2/02-%E8%87%AA%E5%8A%A8%E6%95%B4%E7%90%86%E6%96%87%E4%BB%B6%E5%A4%B9/" class="archive-article-date">
-  	<time datetime="2025-08-05T15:41:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-08-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>哈喽，大家好，今天开始学习我们的第2讲，用Python代码自动整理文件夹。</p>
-<p>首先，还是老规矩，我们要确保自己电脑上已经成功安装了Python和pycharm，以及代码需要使用到的库python-office。</p>
-<p>这里，我们只需要执行一行命令就可以成功安装python-office库，也就是<code>pip install python-office</code>.</p>
-<p>如果你电脑的网速不好，那我推荐你用下面这个命令去执行一下，也就是给下载加上清华源，大家不用管命令是什么意思，直接抄我的命令去执行就好。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install python-office -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
-
-<p>好的，大家看这个目录下，有4个文件，每个文件的类型还不一样，我们的需求是将不同类型的文件自动根据文件类型归类整理到一个文件夹中，也就是说实现的效果是word文件一个文件夹，python文件一个文件夹，excel文件一个文件夹。</p>
-<p>听起来有点复杂是吧，没关系，我们的代码很简单，一行代码就可以搞定，来，我们看一下代码是怎么写的。</p>
-<p>第一行代码是导入我们的库office，第二行是实现功能的关键代码，它只需要传递一个参数，这个参数就是你存放文件的路径位置。</p>
-<p>大家不用手敲，直接像我这样复制即可，不过要记得，在路径前面加上一个小r，否则会报错，这是一个小细节好吧。</p>
-<p>好的，我们来执行一下代码，看下效果。</p>
-<p>怎么运行呢？</p>
-<p>很简单，鼠标右键，找到这个三角形，点击就能运行了。</p>
-<p>好的，运行成功，我们可以看到这里多出来3个文件夹，里面分别存放了整理好的文件。</p>
-<p>那这一讲就到这里，大家课后一定要对着代码敲一遍，加深一下印象，这样下次遇到这个需求时就可以直接去用了。</p>
-<p>行，如果你喜欢视频，可以点赞收藏转发，我们下一讲再见。</p>
-<p>本讲视频代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">@作者  ：晚枫师兄</span></span><br><span class="line"><span class="string">@微信     ：wfdev7</span></span><br><span class="line"><span class="string">@代码日期    ：2025/8/5</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># pip install python-office</span></span><br><span class="line"><span class="comment"># pip install python-office -i https://pypi.tuna.tsinghua.edu.cn/simple</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> office</span><br><span class="line"></span><br><span class="line">office.file.group_by_name(<span class="string">r&#x27;C:\Users\Administrator\Desktop\10讲python自动化办公\02-自动整理文件夹&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg">给小白的《30讲 · AI编程训练营》</a></li>
-</ul>
-<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">10讲Python自动化办公</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/nanShao/7/10%E8%AE%B2/02-%E8%87%AA%E5%8A%A8%E6%95%B4%E7%90%86%E6%96%87%E4%BB%B6%E5%A4%B9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-nanShao/7/10讲/03-制作国旗头像" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -2561,15 +2620,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Pandas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化办公</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">团队介绍</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Pandas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2593,23 +2652,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">电子书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">黑科技导航</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">办公黑科技</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高效办公</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">电子书</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2621,11 +2676,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">机器人</a>
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+                <a href="javascript:void(0)" class="js-tag color3">ai</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">机器人</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2641,15 +2700,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">黑科技导航</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">职场</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">平台</a>
+                <a href="javascript:void(0)" class="js-tag color3">咖啡</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">咖啡</a>
+                <a href="javascript:void(0)" class="js-tag color3">平台</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2677,23 +2740,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">金融</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">代码规范</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">开源项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ai</a>
+                <a href="javascript:void(0)" class="js-tag color3">金融</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2705,7 +2756,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color4">黑科技</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2713,11 +2764,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">自媒体</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">黑科技</a>
+                <a href="javascript:void(0)" class="js-tag color5">代码规范</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">开源项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2737,7 +2796,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">装饰器</a>
+                <a href="javascript:void(0)" class="js-tag color1">spark</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2749,15 +2808,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">spark</a>
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网站开发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2766,6 +2821,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">sqlalchemy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">装饰器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2789,19 +2848,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">社区活动</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">个人网站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">社区活动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2825,15 +2884,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">广告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">原创课程</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">广告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">福利</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">向后一大步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python实战项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2845,15 +2912,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python实战项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">向后一大步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">白开水AI社区</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2861,7 +2924,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color4">关键词</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2873,10 +2936,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">关键词</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">知识付费</a>
               </li>
              
@@ -2885,11 +2944,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">开源</a>
+                <a href="javascript:void(0)" class="js-tag color3">chatgpt</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">chatgpt</a>
+                <a href="javascript:void(0)" class="js-tag color3">开源</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2921,15 +2980,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">免费教程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">知识星球</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">VLOG</a>
+                <a href="javascript:void(0)" class="js-tag color5">免费教程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2945,11 +3000,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">c语言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color5">VLOG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">码匠er</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2965,15 +3028,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">码匠er</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">pobd</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">10讲少儿编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2982,6 +3037,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">国产</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">10讲少儿编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3001,6 +3060,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AI编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">华为</a>
               </li>
              
@@ -3010,10 +3073,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">openai</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AI编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3029,11 +3088,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
+                <a href="javascript:void(0)" class="js-tag color5">自动驾驶</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自动驾驶</a>
+                <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3069,79 +3128,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">资源</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年度目标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">月度总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日志</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年度总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">pdf</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">小编故事</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">热点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">课程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">证书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">中年危机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">知乎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">转行</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">户外</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">考证</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">财富自由</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3161,6 +3156,74 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">年度目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">月度总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日志</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">热点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">年度总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">课程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">知乎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">证书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">转行</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">中年危机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">考证</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">户外</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">财富自由</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">团队</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">CPython</a>
               </li>
              
@@ -3173,15 +3236,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">团队</a>
+                <a href="javascript:void(0)" class="js-tag color5">星河计划</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">量化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">poimage</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3193,19 +3252,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">poimage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">potx-cloud</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">wftools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">星河计划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">联系方式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3225,6 +3280,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">联系方式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">poemail</a>
               </li>
              
@@ -3233,11 +3292,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">仓颉开发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">编程入门教程</a>
+                <a href="javascript:void(0)" class="js-tag color5">云栖大会</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3253,11 +3308,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云栖大会</a>
+                <a href="javascript:void(0)" class="js-tag color5">通义灵码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">通义灵码</a>
+                <a href="javascript:void(0)" class="js-tag color5">仓颉开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">编程入门教程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3270,10 +3329,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AI新解</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">大佬故事</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3301,42 +3356,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">恰饭</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">语法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内置函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">推广</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">粉丝福利</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">10讲Python自动化办公</a>
               </li>
              
@@ -3357,15 +3376,47 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">7讲Python自动发邮件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">15讲Python基础入门</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度文章</a>
+                <a href="javascript:void(0)" class="js-tag color4">7讲Python自动发邮件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内置函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">推广</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">周记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">恰饭</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">粉丝福利</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3377,11 +3428,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">深度文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Python进阶</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">大佬故事</a>
               </li>
              
               <li class="article-tag-list-item">
