@@ -6,7 +6,7 @@ tags: 微信群
 
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
@@ -32,7 +32,7 @@ tags: 微信群
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg">
+<a href="https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg">
@@ -48,7 +48,7 @@ tags: 微信群
 
 你好，我是程序员晚枫。我提供的交流群有3个，有付费的、有免费的，您自己选，不搞割韭菜那一套。
 
-如需学习AI编程，点击直达👉[给小白的AI编程训练营](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg)
+如需学习AI编程，点击直达👉[给小白的AI编程训练营](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)
 
 
 ### 1、AI交流群
@@ -148,7 +148,7 @@ tags: 微信群
 </p>
 
 <p align="center" id='10讲机器人-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg" width="100%"/>
     </a>   
 </p>
@@ -241,4 +241,4 @@ tags: 微信群
 </p>
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/M1jzQowv4Im2OYlvTJF7kg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)就能上手做AI项目。
