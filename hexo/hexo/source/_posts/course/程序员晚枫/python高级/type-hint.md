@@ -34,7 +34,7 @@ tags: [第三方库,pyinstaller]
 	</a>	
 </p>
 <p align="center" name="atomgit">
-	<a href="https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA">
+	<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -230,4 +230,4 @@ type-hint-demo/
 下次录完直接「一键成片」，替换录屏素材即可。
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。

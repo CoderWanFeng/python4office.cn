@@ -33,7 +33,7 @@ tags: python-office
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA">
+<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -164,4 +164,4 @@ poimage.add_watermark(file=r'D:\download\程序员晚枫的图片.jpg', mark='B�
 ![](https://cos.python-office.com/course/50%E8%AE%B2%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/free-link.jpg)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。

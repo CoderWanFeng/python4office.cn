@@ -79,7 +79,7 @@ poexcel.fake2excel(rows=0, path='./test/test.xlsx')
 ## 相关课程
 
 - [2G资料，Pandas处理Excel配套代码，来啦~](https://mp.weixin.qq.com/s/n5b-C4ZhkhfZmlCTvepM4A)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
 - [给小白的《6讲 · Python自动收发邮件》（完结）](https://mp.weixin.qq.com/s/XYIVihTmBUtxGha24QJ-yg)
 
 -----
@@ -89,4 +89,4 @@ poexcel.fake2excel(rows=0, path='./test/test.xlsx')
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。

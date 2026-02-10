@@ -28,7 +28,7 @@ tags: 自媒体
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA">
+<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -62,7 +62,7 @@ tags: 自媒体
 
 并且我们接下来所有的AI编程课的视频，都会用这个软件来录制。我的AI编程课，现在已经扩展到30讲了，秉持加量不加价的原则，大家也可以闭眼入。
 
-- [给小白的《30· AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)
+- [给小白的《30· AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
 
 > 我付费这个软件时发现，这是一个欧洲公司的软件。为什么国产总是做不出这种有创意的东西呢？
 
@@ -149,7 +149,7 @@ FocuSee已支持**一键调整视频尺寸**以适应TikTok、YouTube、Instagra
 
 再给大家说一下，2026年最重磅的课程，也已经发布了，欢迎大家加入，和我一起学习进步！
 
-- 课程链接：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)
+- 课程链接：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
 
 ![热乎](https://raw.atomgit.com/user-images/assets/5027920/c52fb12c-7cb7-4684-8a3e-020a4bec8888/f0501b73cd57eba391ab4fc5a6654669.jpg 'f0501b73cd57eba391ab4fc5a6654669.jpg')
 
@@ -200,7 +200,7 @@ FocuSee已支持**一键调整视频尺寸**以适应TikTok、YouTube、Instagra
 
 > 以下是最近一些有用、开始运行的AI探索：
 - [我也吃上了AI的红利！分享一个邪修思路](https://mp.weixin.qq.com/s/RGakg6tIc_jcYTvjeh3zjw)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
 - [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
 - [AI短视频还有红利！coze书单号，给我冲](https://mp.weixin.qq.com/s/qokwWMcCdr0PSSm3aGhssA)
 - [我用AI写了一个发票批量识别软件，免费分享给大家](https://mp.weixin.qq.com/s/1V6w9CjQV8S8z8NRSc3L_w)
@@ -226,4 +226,4 @@ FocuSee已支持**一键调整视频尺寸**以适应TikTok、YouTube、Instagra
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/gtR2MRs3mQCNXIO6MxUuQA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
