@@ -36,7 +36,7 @@ tags: 自媒体
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg) 🤖
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg) 🤖
 刚刚，国内云厂商正式上线Moltbot（原名：Clawdbot）全套云服务，全面提供Agent所需的算力、模型和消息应用等。
 
 点击查看➡️[Moltbot部署官方文档](https://www.aliyun.com/activity/ecs/clawdbot?userCode=t6duaoe1)

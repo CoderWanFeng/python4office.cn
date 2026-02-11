@@ -56,7 +56,7 @@ tags: 深度文章
 
 ![封面图](https://raw.atomgit.com/user-images/assets/5027920/9f5e8ff2-6696-49bc-94a3-11960d0ccb5f/image.png 'image.png')
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 今天给大家整理一下Python中所有处理PDF的库，并且推荐一个适合小白入手的。
 

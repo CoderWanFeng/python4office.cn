@@ -14,7 +14,7 @@ tags: [第三方库,pip]
 > 这是专栏[优秀的第三方库](http://www.python4office.cn/course/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/all/)的第4篇原创文章。
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 
 `requests` 是一个非常流行的 Python HTTP 库，用于发送各种 HTTP 请求。以下是 `requests` 的一些基本用法：

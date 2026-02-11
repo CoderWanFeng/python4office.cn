@@ -10,7 +10,7 @@ tags: 自动化办公
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/5%E4%B8%AA%E6%9D%80%E6%89%8B%E7%BA%A7Python%E4%BB%A3%E7%A0%81%2F5ge.jpg)
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，小红书也叫这个名字。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，小红书也叫这个名字。
 
 最近在B站更新一套课程：[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)，并且建了一个课程群，用来沟通大家的学习问题和需求。
 

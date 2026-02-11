@@ -44,7 +44,7 @@ tags: python-office
 </p>
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 今天给大家分享一个Python自动化办公的专用库python-office的最新功能：1行代码，实现PPT转为图片。
 

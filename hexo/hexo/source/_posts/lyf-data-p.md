@@ -8,7 +8,7 @@ tags: 大数据
 
 ![](https://www.python-office.com/api/img-cdn/wanfeng/article/lyf/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 今天起来，发现因为众所周知的原因，去年发布的1条视频👇，突然火起来了。🔥
 

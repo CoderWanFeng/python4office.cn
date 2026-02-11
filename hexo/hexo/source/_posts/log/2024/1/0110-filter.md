@@ -5,7 +5,7 @@ tags: 内置函数
 ---
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，又来分享有用的Python知识了。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，又来分享有用的Python知识了。
 
 Python之所以好用，是因为有大量用于科学计算的内置函数和第三方库。用好这些第三方库，可以显著提高我们编程的速度和质量。
 

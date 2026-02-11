@@ -41,7 +41,7 @@ tags: 自动化办公
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，今天给大家分享一个PDF的搞笑技能：**1行代码，批量给PDF加密。**
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，今天给大家分享一个PDF的搞笑技能：**1行代码，批量给PDF加密。**
 
 别人拿到加密的PDF开心不开心我不知道，反正你肯定开心了。
 

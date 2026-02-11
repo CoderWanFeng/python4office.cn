@@ -56,7 +56,7 @@ tags: 自动化办公
 <!-- more -->
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 **第一段：**
 很多人问：搞AI是不是只能用Python？其实这是个误会。Python不是唯一选择，但它确实是现在最主流、最省心的。说白了，Python在AI领域的地位，就像普通话——大家都会，交流方便，但不代表其他语言就不能用。

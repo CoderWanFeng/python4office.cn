@@ -4,7 +4,7 @@ date: 2024-12-10 18:32:08
 tags: [自动化办公,Excel,pandas]
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，之前在B站账号：**Python自动化办公社区**发布了一套关于**Excel + Python实现自动化办公**的教程，目前已经有40w+的播放了。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，之前在B站账号：**Python自动化办公社区**发布了一套关于**Excel + Python实现自动化办公**的教程，目前已经有40w+的播放了。
 
 - [给小白的《30讲 · Python数据分析》：https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 

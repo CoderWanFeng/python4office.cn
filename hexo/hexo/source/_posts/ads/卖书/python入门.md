@@ -39,7 +39,7 @@ tags: 广告
 <!-- more -->
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 刷到一篇文章：[24小时快速入门大热语言Rust！学不会来找我](https://mp.weixin.qq.com/s/CkqyzHKarLmkWs0x963QOw)，我觉得Python应该也来一篇？
 

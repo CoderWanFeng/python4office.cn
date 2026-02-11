@@ -29,7 +29,7 @@ tags: [Python,自动化办公]
 </a>
 </p>
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg) 🤖
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg) 🤖
 
 
 很多人跟风学完AI，转头就吐槽“没用”：学了大模型问答，工作里还是得手动凑数据；背了AI概念，实际问题来了还是无从下手。不是AI没用，而是大多数人踩了“脱离场景学技术”的坑——AI就像一把电钻，你不知道要钻什么孔，再锋利也只是个摆设。

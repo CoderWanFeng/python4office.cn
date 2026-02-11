@@ -6,7 +6,7 @@ tags: python-office
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，读者群👉[点我直达](http://python4office.cn/wechat-group/)
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，读者群👉[点我直达](http://python4office.cn/wechat-group/)
 
 按照惯例，这个周末还是又是周六加班，周天更文。
 

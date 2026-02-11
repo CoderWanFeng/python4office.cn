@@ -47,7 +47,7 @@ tags: ai
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，山东人在重庆。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，山东人在重庆。
 
 - 最新视频👉[淄博烧烤，哪家最好吃？](https://www.bilibili.com/video/BV1sv4y1E76M/?spm_id_from=333.999.0.0&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)
 

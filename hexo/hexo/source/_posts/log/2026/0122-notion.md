@@ -44,7 +44,7 @@ tags: 自媒体
 ![原文地址](https://raw.atomgit.com/user-images/assets/5027920/b3420dcf-7ffc-4d7b-8388-1589ccf3f772/image.png 'image.png')
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg) 🤖
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg) 🤖
 
 ---
 

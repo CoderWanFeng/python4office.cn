@@ -4,7 +4,7 @@ date: 2023-10-22 10:41:04
 tags: [开源项目,自动化办公,wftools]
 ---
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，小破站也叫这个名字。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，小破站也叫这个名字。
 
 今天给大家分享一个实用功能：微信多开。
 

@@ -6,7 +6,7 @@ tags: 福利
 
 云服务器厂商排名，你知道自家服务商排第几吗？
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 国内排名前10的云服务器厂商如下：
 

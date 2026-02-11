@@ -44,7 +44,7 @@ tags: 自媒体
 
 > 凌晨两点，写完最后一行代码，我习惯性地打开社交媒体，记录下今天解决的那个棘手bug和思路，十分钟后，评论区出现了几个同样遭遇此问题的程序员，我们开始了一场深夜技术交流。
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 ---
 

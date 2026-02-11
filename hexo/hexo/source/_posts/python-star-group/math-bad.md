@@ -8,7 +8,7 @@ tags:
 
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/wenda/math-bad/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)，
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，
 
 最近收到最多的问题，没有之一：
 >晚枫，我数学不好，能不能学编程？或者说很多复杂的数学问题呢，我根本就不懂，对我学编程有什么影响？

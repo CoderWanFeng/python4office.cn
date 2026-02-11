@@ -42,7 +42,7 @@ tags: 自动化办公
 
 
 
-大家好，这里是程序员晚枫，正在all in [各种AI项目](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
 
 最近在忙Python中国 · 重庆站的事情（点我查看：[初遇山城｜PyCon China 2023 邀你相约重庆](https://mp.weixin.qq.com/s/wsVnft4jUGU5mZvmkje_4g)），很久没有更新自动化办公的代码了。
 
