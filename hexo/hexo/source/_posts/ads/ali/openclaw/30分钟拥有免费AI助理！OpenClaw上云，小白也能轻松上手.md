@@ -76,11 +76,15 @@ tags: [AI编程]
 
 你只管发指令、用工具就行。
 
+![一学就废](https://raw.atomgit.com/user-images/assets/5027920/9cc762f2-c319-43dd-9f5f-ca4959c35486/image.png 'image.png')
+
 ### 4. 手机电脑都能连，办公更顺手 📱
 
 能直接对接**微信、QQ、钉钉、飞书**，不用来回切换软件。
 
 > 比如在微信上发一句"帮我查下今天的邮件"，它立马就给你整理好，不用再打开电脑操作。
+
+![加入办公软件](https://raw.atomgit.com/user-images/assets/5027920/1c3b3bb1-80a3-4bc3-9b73-63845344c9e0/image.png 'image.png')
 
 ### 5. 花钱少，还能随便升级 💰
 
@@ -97,11 +101,14 @@ tags: [AI编程]
 
 但阿里云电脑的核心优势就是：**即开即用，无需学习任何专业知识，也不用折腾复杂的设置流程**。打开就是一台配好的云电脑，OpenClaw已经帮你装好了，直接用就行。
 
+![打开就能用](https://raw.atomgit.com/user-images/assets/5027920/7e5fb483-76b3-4f4c-827d-ce239e80280b/image.png 'image.png')
+
 其实真的**比装微信还简单**，全程鼠标点一点就能用起来，极速上手：
 
 ### 极速启动：打开就能用，不用懂电脑 ⚡
 
 阿里云已经把OpenClaw准备好了，不用你手动下载、装插件、调设置。打开阿里云电脑，找到OpenClaw专属入口，点击部署，**跟着提示点几下就搞定**，全程不用敲一个字、懂一个专业操作。
+
 
 ### 说话发指令，它就帮你干活 💬
 
@@ -141,6 +148,8 @@ tags: [AI编程]
 
 所有专业的东西阿里云都帮你搞定了，你只需要点几下鼠标，OpenClaw就跑起来了。
 
+![体验一下](https://raw.atomgit.com/user-images/assets/5027920/d377292a-ba5b-41c0-9cd8-5949f485a5af/image.png 'image.png')
+
 ### 3. 配套能力强，AI干活更聪明 🧠
 
 阿里云还提供了"百炼Coding Plan"，搭配使用能让OpenClaw更聪明、干活更快，处理更复杂的任务也不在话下。
@@ -160,5 +169,8 @@ tags: [AI编程]
 心动不如行动，点击下方链接，跟着教程走，马上就能拥有你的专属AI助理：
 
 👉 [阿里云OpenClaw部署教程，点击立即开始](https://help.aliyun.com/zh/edsp/getting-started/quickly-create-openclaw-through-wuying-cloud-computer-personal-edition?source=5176.29345612&userCode=t6duaoe1)
+
+![扫码查看教程](https://raw.atomgit.com/user-images/assets/5027920/0280a855-8033-41a6-8283-01d37da3bf93/image.png 'image.png')
+
 
 > （注：文档部分内容可能由 AI 生成）
