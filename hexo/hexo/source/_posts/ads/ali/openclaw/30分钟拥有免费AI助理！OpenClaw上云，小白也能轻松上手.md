@@ -34,7 +34,7 @@ tags: [AI编程]
 
 <!-- more -->
 
-
+![好用爱用](https://raw.atomgit.com/user-images/assets/5027920/1a78dd04-55d4-4c6d-ac02-15e18491433c/image.png 'image.png')
 
 还在天天做重复工作累得慌？想不想有个**不用休息、随叫随到**，还能帮你干活的AI小助理？
 
@@ -47,6 +47,8 @@ tags: [AI编程]
 但很多人自己在电脑上装，总出问题。今天教你个简单方法，**把它装在阿里云电脑上，即开即用**，从此彻底解放双手！
 
 > 全文分3部分，大白话不绕弯，看完直接能用。
+
+![云电脑适合小白](https://raw.atomgit.com/user-images/assets/5027920/9692c20d-35b6-4748-b7f7-1fde73a6009d/image.png 'image.png')
 
 ---
 
