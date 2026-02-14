@@ -417,6 +417,7 @@ Q：有其他更高级的课程吗？
 - 2023年也加入了Python中国组委会，[2024年加入了Python基金会](https://mp.weixin.qq.com/s/G_Ro4UVdgv2tOE_6pHdnUA)。这是我在Python中国大会的演讲：[非程序员如何学习和使用 Python？](https://mp.weixin.qq.com/s/pJAOgaQ8vA08NrNpJzngFw)
 - 我的开源项目[python-office](https://mp.weixin.qq.com/s/7aA0KoXGJuSFkTns-MZYjA)也获得了：[Github上的1200+star 和 atomgit百大开源项目](https://mp.weixin.qq.com/s/pJAOgaQ8vA08NrNpJzngFw)
 - 有了一套全网播放量过百万的课程：[给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
+- 📝 [三十而立，没有遗憾](https://mp.weixin.qq.com/s/26jJWW3j9PxWISR1n3drfg)
 
 > 以上这些，我把它称为我在all in AI之前的经历。之前建立的Python主题的付费群，也有430多人加入：[Python学习 · 读者交流群](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=8)，如果你是想单纯学习Python的朋友，建议直接加这个Python群。我一直在运营中，也还会继续运营下去。
 

@@ -163,6 +163,8 @@ tags: Pandas
 
 我和自媒体团队的故事👉[点击直达](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMzIwOTgzMA==&action=getalbum&album_id=1861970403066249218&scene=173&from_msgid=2247484814&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 
+- 📝 [三十而立，没有遗憾](https://mp.weixin.qq.com/s/26jJWW3j9PxWISR1n3drfg)
+
 点击支持👉[赞赏码](https://gitee.com/zhaofeng092/python_auto_office/blob/master/%E8%B4%A6%E5%8F%B7%E5%85%B1%E7%94%A8%E8%B5%84%E6%BA%90/image/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg)
 
 有任何问题，欢迎在下方评论告诉我哟~
