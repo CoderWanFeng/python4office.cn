@@ -20,7 +20,7 @@ tags: pandas
 
 
 - [50讲 · Python自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [10讲 · Python微信机器人](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
+- [10讲 · Python微信机器人](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 - [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [6讲 · Python实现自动发邮件](https://www.python-office.com/course-002/poemail/poemail.html)
 
@@ -30,4 +30,4 @@ tags: pandas
 ![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/fuye-info/%E5%B0%81%E9%9D%A2-%E6%A8%AA.jpg)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

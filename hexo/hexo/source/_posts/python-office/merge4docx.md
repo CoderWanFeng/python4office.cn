@@ -33,7 +33,7 @@ tags: 自动化办公
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
+<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -43,7 +43,7 @@ tags: 自动化办公
 </p>
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)。
 
 终于周末了，我和小明又开始了疯狂的考证学习，昨晚通过合法的手段获取了一套学习资料，却遇到了一个问题：
 
@@ -87,4 +87,4 @@ office.word.docx2pdf(path=r'D:\程序员晚枫的文件夹\word-out')
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

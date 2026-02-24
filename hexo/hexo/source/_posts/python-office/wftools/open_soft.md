@@ -4,7 +4,7 @@ date: 2023-10-22 10:41:04
 tags: [开源项目,自动化办公,wftools]
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，小破站也叫这个名字。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，小破站也叫这个名字。
 
 今天给大家分享一个实用功能：微信多开。
 
@@ -42,7 +42,7 @@ Python可以替代你很多日常办公中的工作，但是学会Python不容�
 
 我是一个程序员，利用业余时间，专门为非程序员整理了10个微信机器人的代码，都是1行代码就可以用的。
 
-方便大家快速入门Python，大家可以点击课程进行学习：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
+方便大家快速入门Python，大家可以点击课程进行学习：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)。
 
 这套课程主要教给你Python自动化办公应该怎么用，而不是给你讲深奥的Python编程理论。
 
@@ -53,4 +53,4 @@ Python可以替代你很多日常办公中的工作，但是学会Python不容�
 ![](https://cos.python-office.com/group/0816.jpg)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

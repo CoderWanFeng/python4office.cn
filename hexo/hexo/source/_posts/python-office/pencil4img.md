@@ -6,7 +6,7 @@ tags: python-office
 
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/pencil4img-cover.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，读者交流群🏠[点我直达](http://www.python4office.cn/wechat-group/)
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，读者交流群🏠[点我直达](http://www.python4office.cn/wechat-group/)
 
 之前给大家介绍了：👉[25个Python学习资源（文字版），摸鱼必备，可以用到就业](https://mp.weixin.qq.com/s/-mlsV7PFc27JElOTCskMsg)
 
@@ -57,7 +57,7 @@ office.image.pencil4img(input_img=r'D:\workplace\code\test\down4img\girl.jpg')
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

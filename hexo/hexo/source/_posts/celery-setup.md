@@ -35,7 +35,7 @@ tags: [Linux,Celery]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
+<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -154,4 +154,4 @@ celery -A celery_app_task flower --address=127.0.0.1 --port=5566
 - [ Celery入门与Flower监控](https://blog.csdn.net/u010784605/article/details/119042393?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-2-119042393.pc_agg_new_rank&utm_term=celery+flower+启动&spm=1000.2123.3001.4430)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

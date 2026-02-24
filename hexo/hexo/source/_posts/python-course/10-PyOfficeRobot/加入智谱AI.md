@@ -4,7 +4,7 @@ date: 2024-03-01 23:58:24
 tags: 微信机器人
 ---
 
-去年国庆发布了一套0基础使用微信机器人的课程：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，在课程的末尾留了一个悬念：未来会加入更多免费的GPT智能回复的大模型。
+去年国庆发布了一套0基础使用微信机器人的课程：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，在课程的末尾留了一个悬念：未来会加入更多免费的GPT智能回复的大模型。
 
 <!-- more -->
 
@@ -17,7 +17,7 @@ tags: 微信机器人
 
 在接下来的智能聊天操作之前，你需要学习完我们已经发布的课程，一共就30分钟，课程所有的视频 + 代码 + 文档 + 答疑群，都在下面这个链接里，点击领取，👇
 
-- ⭐[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
+- ⭐[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 
 ## 4个大模型
 
@@ -38,4 +38,4 @@ PyOfficeRobot.chat.chat_by_zhipu(who='程序员晚枫', key="你的智谱大模�
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

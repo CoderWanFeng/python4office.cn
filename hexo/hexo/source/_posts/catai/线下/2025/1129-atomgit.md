@@ -8,7 +8,7 @@ tags: AI
 
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
@@ -32,7 +32,7 @@ tags: AI
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
+<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -113,7 +113,7 @@ tags: AI
 
 - [我也吃上了AI的红利！分享一个邪修思路](https://mp.weixin.qq.com/s/RGakg6tIc_jcYTvjeh3zjw)
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 
 - [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
 
@@ -161,4 +161,4 @@ tags: AI
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

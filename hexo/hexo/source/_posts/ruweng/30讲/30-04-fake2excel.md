@@ -32,7 +32,7 @@ tags: [星河计划]
 	</a>	
 </p>
 <p align="center" name="atomgit">
-	<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
+	<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -93,4 +93,4 @@ office.excel.fake2excel(columns=['name', 'company', 'phone_number'],
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

@@ -41,7 +41,7 @@ tags: 自动化办公
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，今天给大家分享一个PDF的搞笑技能：**1行代码，批量给PDF加密。**
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，今天给大家分享一个PDF的搞笑技能：**1行代码，批量给PDF加密。**
 
 别人拿到加密的PDF开心不开心我不知道，反正你肯定开心了。
 
@@ -116,7 +116,7 @@ office.pdf.encrypt4pdf(path=r'D:\程序员晚枫的文件夹\input_pdf',
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

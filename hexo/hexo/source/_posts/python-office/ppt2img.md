@@ -34,7 +34,7 @@ tags: python-office
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
+<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -44,7 +44,7 @@ tags: python-office
 </p>
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)。
 
 今天给大家分享一个Python自动化办公的专用库python-office的最新功能：1行代码，实现PPT转为图片。
 
@@ -85,4 +85,4 @@ office.ppt.ppt2img(input_path=r'D:\test\py310\ppt_test\程序员晚枫的文档.
 ---
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

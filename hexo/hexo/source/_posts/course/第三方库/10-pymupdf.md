@@ -4,7 +4,7 @@ date: 2024-12-09 10:16:17
 tags: [ 第三方库,自动化办公,pdf ]
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)，今天给大家分享一个PDF自动化办公的第三方库：PyMuPDF。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，今天给大家分享一个PDF自动化办公的第三方库：PyMuPDF。
 
 > 官网地址：[https://pymupdf.readthedocs.io/en/latest/index.html](https://pymupdf.readthedocs.io/en/latest/index.html)
 
@@ -135,7 +135,7 @@ doc.save("encrypted.pdf")
 ## 相关课程
 
 - [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 - [给小白的《5讲 · Python实现发票批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 
 
@@ -153,4 +153,4 @@ doc.save("encrypted.pdf")
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

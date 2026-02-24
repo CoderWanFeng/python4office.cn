@@ -7,7 +7,7 @@ tags: [AI编程]
 
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
@@ -28,7 +28,7 @@ tags: [AI编程]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
+<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -40,7 +40,7 @@ tags: [AI编程]
 
 <!-- more -->
 
-大家好，这里是最近被[AI编程](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)按在地上摩擦的晚枫。
+大家好，这里是最近被[AI编程](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)按在地上摩擦的晚枫。
 
 作为一个维护着几个开源项目、天天跟代码打交道的程序员，我以前总觉得“手动编码”才是技术人的尊严——直到AI编程给了我一记响亮的耳光，让我彻底认怂了。
 
@@ -144,7 +144,7 @@ tags: [AI编程]
 
 如果想知道更多AI编程的进阶技巧（比如怎么让AI贴合你的编码风格、怎么校验AI生成代码的安全性），可以去看看我的《AI编程实战课》，里面全是能直接落地的干货，帮你彻底把AI变成“编程外挂”～
 
-课程链接再放一次：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)
+课程链接再放一次：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 
 
 
@@ -153,4 +153,4 @@ tags: [AI编程]
 有任何问题，欢迎联系我的微信👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。

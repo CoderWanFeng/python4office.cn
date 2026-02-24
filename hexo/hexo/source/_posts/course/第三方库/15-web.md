@@ -33,7 +33,7 @@ tags: 第三方库
 	</a>	
 </p>
 <p align="center" name="atomgit">
-	<a href="https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg">
+	<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -46,7 +46,7 @@ tags: 第三方库
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)。
 
 今天继续给大家更新专栏：[优秀的第三方库](https://atomgit.com/python4office/python4office.cn/edit/main/hexo/hexo/source/_posts/course/第三方库)之3大Web框架。
 
@@ -126,4 +126,4 @@ tags: 第三方库
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/j8C-AsOGGM43vA0hXoCawg)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
