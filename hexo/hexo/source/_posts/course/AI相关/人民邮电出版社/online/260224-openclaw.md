@@ -37,6 +37,9 @@ tags: [AI编程]
 大家好，这里是程序员晚枫，正在 all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw) 🤖
 
 今天给大家更新一个千呼万唤的内容：openclaw的极简部署 + 实战。
+
+![3f6fb03e-1a49-4a5c-a1a9-3961060c7d1d.jpg](https://raw.atomgit.com/user-images/assets/5027920/9208a12d-3f71-4813-a189-48332fe5435a/3f6fb03e-1a49-4a5c-a1a9-3961060c7d1d.jpg '3f6fb03e-1a49-4a5c-a1a9-3961060c7d1d.jpg')
+
 ---
 
 ## 开通云电脑
