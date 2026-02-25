@@ -53,9 +53,9 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 
 所以接下来我就以阿里云的云电脑+openclaw的开通、使用为例，给大家进行手把手演示。
 
-- 云电脑的开通链接：[点我直达](https://www.aliyun.com/product/ecs/gws?scm=20140722.S_card@@%E4%BA%A7%E5%93%81@@534821.S_new~UND~card.ID_card@@%E4%BA%A7%E5%93%81@@534821-RL_%E6%97%A0%E5%BD%B1%E4%BA%91-LOC_2024SPSearchCard-OR_ser-PAR1_213d65d017719195546971410d10db-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)
+- 云电脑的开通链接：[点我直达](https://www.aliyun.com/activity/wuying/Wuying?source=5176.29345612&userCode=t6duaoe1)
 
-https://help.aliyun.com/zh/edsp/getting-started/quickly-create-openclaw-through-wuying-cloud-computer-personal-edition?source=5176.29345612&userCode=t6duaoe1
+- https://help.aliyun.com/zh/edsp/getting-started/quickly-create-openclaw-through-wuying-cloud-computer-personal-edition?source=5176.29345612&userCode=t6duaoe1
 
 
 
