@@ -44,9 +44,11 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 
 > 你在睡觉的时候，万一删除了哪个重要文件、万一给前女友发了什么消息...
 
-今天给大家更新一个千呼万唤的内容：openclaw（云电脑版）的极简部署 + 实战。
+网上很多人为了避免这个问题，使用的是4000多元的Mac Mini电脑，这个成本就太贵了。
 
+我找了一下，有没有学习成本低，使用成本也低的方法呢？
 
+肯定难不倒聪明的中国人，今天给大家分享这个千呼万唤的内容：openclaw（云电脑版）的极简部署 + 实战。
 
 
 ---
@@ -63,17 +65,16 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 
 所以接下来我就以阿里云的云电脑+openclaw的开通、使用为例，给大家进行手把手演示。
 
-在跟着我操作之前，先去把我的专属9折优惠券领了：
+在跟着我操作之前，先去扫码下图→注册好阿里云账号后→把我的专属9折优惠券领了！
 
 - 我的专属优惠券：[点我直达](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 
-![9折优惠](https://raw.atomgit.com/user-images/assets/5027920/3da84983-d8a7-4ba9-9294-1164a3166115/image.png 'image.png')
+![9折优惠](https://raw.atomgit.com/user-images/assets/5027920/6c063161-0a47-49be-8ee7-f0a8b84e80c3/image.png 'image.png')
 
+点击上面的链接，注册完＋我微信：wfdev7，备注：龙虾，领取操作手册和视频。👇
 
-## 找我领取操作手册
-
-点击上面的链接，注册完＋我微信：wfdev7，备注：龙虾，领取操作手册和视频
+![操作手册和视频](https://raw.atomgit.com/user-images/assets/5027920/032d00e7-dc6d-4bcd-ab82-8fb44036d937/image.png 'image.png')
 
 
 本教程仅限加入我AI编程
