@@ -70,7 +70,13 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 
 ![9折优惠](https://raw.atomgit.com/user-images/assets/5027920/3da84983-d8a7-4ba9-9294-1164a3166115/image.png 'image.png')
 
+
+## 找我领取操作手册
+
 点击上面的链接，注册完＋我微信：wfdev7，备注：龙虾，领取操作手册和视频
+
+
+本教程仅限加入我AI编程
 
 
 - 云电脑一键部署OpenClaw的教程：[点我直达](https://help.aliyun.com/zh/edsp/getting-started/quickly-create-openclaw-through-wuying-cloud-computer-personal-edition?source=5176.29345612&userCode=t6duaoe1)
