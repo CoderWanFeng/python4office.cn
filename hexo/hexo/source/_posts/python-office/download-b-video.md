@@ -8,7 +8,7 @@ tags: python-office
 
 ![](https://www.python-office.com/api/img-cdn/python-office/you-get/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)。
 
 本周**知识星球：Python读者圈**里的同学，给我提了一个问题：
 > B站的课程很好，但是上班没有网，也不想用B站的视频缓存功能。**怎么把B站的视频下载下来，存到百度网盘里看？**
@@ -67,7 +67,7 @@ pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

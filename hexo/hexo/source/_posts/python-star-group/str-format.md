@@ -7,7 +7,7 @@ tags:
 
 
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/format/cover.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，**知识星球：Python读者圈。**
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)，**知识星球：Python读者圈。**
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/format/qa.png)
 
 今天我们来讨论一个问题：**python里是如何格式化字符串的？实际工作中使用的是哪一种？**
@@ -115,7 +115,7 @@ sentence = f'你好，我是{name}，今年{age}，是个{job}，喜欢{hobby}�
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

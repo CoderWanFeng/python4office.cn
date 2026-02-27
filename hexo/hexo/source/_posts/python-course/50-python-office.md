@@ -34,7 +34,7 @@ tags: 原创课程
 
 ## AI编程
 
-2025年底，我更新了一套全新的课程：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，大家对编程、AI感兴趣，一定要来看看。
+2025年底，我更新了一套全新的课程：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)，大家对编程、AI感兴趣，一定要来看看。
 
 > 购买了50讲自动化办公的朋友，不论下面的海报价格是多少，大家长期都是149加入！！扫码下图加我，备注：老用户
 
@@ -62,4 +62,4 @@ tags: 原创课程
 <iframe src="//player.bilibili.com/player.html?bvid=BV1p4421U7r8" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100%, height=500> </iframe>
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

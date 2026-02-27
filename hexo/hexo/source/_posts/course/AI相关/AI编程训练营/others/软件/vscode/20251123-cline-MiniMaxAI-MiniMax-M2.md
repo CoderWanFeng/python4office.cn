@@ -18,7 +18,7 @@ tags: [AI编程]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
+<a href="https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -32,7 +32,7 @@ tags: [AI编程]
 <!-- more -->
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
@@ -41,7 +41,7 @@ tags: [AI编程]
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)。
 
 如周五的直播所说，[Qoder、CodeBuddy、Tare](https://mp.weixin.qq.com/s/wgvhnONoyCGEMH0IeQv6Wg)这些AI编程工具，都只能调用单一的大模型。
 
@@ -80,7 +80,7 @@ tags: [AI编程]
 
 ### 2. 安装 Cline 插件
 
-- 打开 VSCode，没有vscode的朋友请加我微信：wfdev7，加入我的[AI编程训练营](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，我都会提供：下载和安装教程。
+- 打开 VSCode，没有vscode的朋友请加我微信：wfdev7，加入我的[AI编程训练营](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)，我都会提供：下载和安装教程。
 - 点击左侧的扩展图标（或使用快捷键 Ctrl/command+Shift+X）。
 - 在搜索框中输入 Cline，找到对应的插件并点击 安装。
 
@@ -96,7 +96,7 @@ tags: [AI编程]
 - API Provider：选择 OpenAI Compatible。
 - Base URL：填写 https://api.siliconflow.cn/v1。
 - API Key：粘贴你在第一步的平台中复制的 API Key。
-- Model ID：填入MiniMaxAI/MiniMax-M2。这里有疑问的，可以看我们[AI编程训练营](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)的视频。
+- Model ID：填入MiniMaxAI/MiniMax-M2。这里有疑问的，可以看我们[AI编程训练营](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)的视频。
 
 配置完成后，点击 Done 保存设置。
 
@@ -154,7 +154,7 @@ tags: [AI编程]
 
 
 <p align="center" id='30个名额'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/71bd2ff3-ac85-43a4-8288-164cc66e119d/image.png" width="350" height='600'/>
     </a>   
 </p>
@@ -163,13 +163,13 @@ tags: [AI编程]
 
 
 <p align="center" id='老粉的认可'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/6d5a3b73-0367-455a-ab69-4b47ca2646af/image.png" width="350" height='600'/>
     </a>   
 </p>
 
 <p align="center" id='学习群的氛围'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/b89b206c-8f44-4e1b-a9e3-4f168531b9da/image.png" width="350" height='600'/>
     </a>   
 </p>
@@ -260,7 +260,7 @@ Q：有其他更高级的课程吗？
 
 - [我也吃上了AI的红利！分享一个邪修思路](https://mp.weixin.qq.com/s/RGakg6tIc_jcYTvjeh3zjw)
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 - [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
 
@@ -310,4 +310,4 @@ Q：有其他更高级的课程吗？
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

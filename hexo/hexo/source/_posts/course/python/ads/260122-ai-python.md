@@ -21,7 +21,7 @@ tags: [Python,自动化办公]
     	<a target="_blank" href='https://gitee.com/CoderWanFeng//PyOfficeRobot/'>
 		<img src='https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
+<a href="https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -29,7 +29,7 @@ tags: [Python,自动化办公]
 </a>
 </p>
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw) 🤖
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ) 🤖
 
 
 很多人跟风学完AI，转头就吐槽“没用”：学了大模型问答，工作里还是得手动凑数据；背了AI概念，实际问题来了还是无从下手。不是AI没用，而是大多数人踩了“脱离场景学技术”的坑——AI就像一把电钻，你不知道要钻什么孔，再锋利也只是个摆设。
@@ -104,7 +104,7 @@ AI不是让你变成“技术大神”，而是让你用最低成本解决工作
 别再让AI躺在你的收藏夹里吃灰了，点击课程链接[30讲·AI编程训练营](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247504529&idx=1&sn=856c1ae8ae3a807ac67ed7d855b72e87&scene=21&poc_token=HNHQcWmj2pMjQ5XuwsH9JD2DKrFWLK1J23agfg7v)，绑定你的工作场景，让AI真正成为你的“效率帮手”！
 
 ## 相关阅读
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 - [数据分析从入门到精通，30讲Python+Excel搞定](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [告别加班！50讲Python自动化办公，让你从职场小白变效率达人](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [我的百度数字人，24小时直播中。。。](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
@@ -114,4 +114,4 @@ AI不是让你变成“技术大神”，而是让你用最低成本解决工作
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

@@ -33,7 +33,7 @@ tags: 大模型
 	</a>	
 </p>
 <p align="center" name="atomgit">
-	<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
+	<a href="https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -62,7 +62,7 @@ tags: 大模型
 - [更新了！微信机器人接入阿里大模型了](https://mp.weixin.qq.com/s/F_DCyPYLNwy7-fU-oN1cOQ)
 - [给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [重磅！公众号接入阿里大模型了！](https://mp.weixin.qq.com/s/dzzZ6iG0ooE2mQUC4YEj6w)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 ## AI交流群
 
@@ -72,4 +72,4 @@ tags: 大模型
 ![](https://cos.python-office.com/group/ai-group.jpg)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

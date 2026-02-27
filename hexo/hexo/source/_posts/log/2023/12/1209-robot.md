@@ -6,7 +6,7 @@ tags: 自动化办公
 
 ![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，只给小白分享有用的**自动化办公**代码。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)，只给小白分享有用的**自动化办公**代码。
 
 上次给大家分享了：[Python终于可以操作Office了](https://mp.weixin.qq.com/s/wwzGFIn-282FufnX9oNC7A)，发现大家很喜欢。
 
@@ -59,9 +59,9 @@ PyOfficeRobot.chat.send_message(who='程序员晚枫', message='你好，我是�
 
 ---
 
-以上所有机器人的功能，我都加入了原创课程:[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
+以上所有机器人的功能，我都加入了原创课程:[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)，都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- 加入学习👉[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 
@@ -72,4 +72,4 @@ PyOfficeRobot.chat.send_message(who='程序员晚枫', message='你好，我是�
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

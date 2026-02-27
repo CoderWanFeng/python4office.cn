@@ -6,7 +6,7 @@ tags: 自动化办公
 
 ![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/poemail/poemail-course.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，今天给大家分享：1行Python代码，自动发送邮件，还可以带附件哟~
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)，今天给大家分享：1行Python代码，自动发送邮件，还可以带附件哟~
 
 > 本文来自在小破站：**Python自动化办公社区**更新的入门系列教程：[给小白的《6讲 · Python实现自动发邮件（更新中）》](https://www.python-office.com/course-002/poemail/poemail.html)。
 
@@ -52,7 +52,7 @@ content (str): 邮件内容，默认为空字符串
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

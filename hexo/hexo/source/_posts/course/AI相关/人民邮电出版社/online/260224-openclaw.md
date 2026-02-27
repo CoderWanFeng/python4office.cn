@@ -5,7 +5,7 @@ tags: [AI编程]
 ---
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
@@ -23,7 +23,7 @@ tags: [AI编程]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
+<a href="https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -34,7 +34,7 @@ tags: [AI编程]
 
 <!-- more -->
 
-大家好，这里是程序员晚枫，正在 all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw) 🤖
+大家好，这里是程序员晚枫，正在 all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ) 🤖
 
 刚才刷到了马斯克的动态，他说本地部署openclaw简直是离谱它妈给离谱开门：离谱到家了！
 
@@ -80,7 +80,7 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 ![操作手册和视频](https://raw.atomgit.com/user-images/assets/5027920/032d00e7-dc6d-4bcd-ab82-8fb44036d937/image.png 'image.png')
 
 
-> 本教程仅限加入我[AI编程实战训练营](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)朋友领取，还没加入课程的朋友，可以继续往下看，加一下课程。
+> 本教程仅限加入我[AI编程实战训练营](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)朋友领取，还没加入课程的朋友，可以继续往下看，加一下课程。
 
 
 ![课程详情](https://raw.atomgit.com/user-images/assets/5027920/9f72b536-3155-4647-b72d-b4abbb6b8027/2edd7c711adf0f69e3e5542035fe29ab.jpg '2edd7c711adf0f69e3e5542035fe29ab.jpg')
@@ -145,4 +145,4 @@ AI时代，优质的AI编程课层出不穷，但**扎实的入门基础，才�
 
 有任何问题，欢迎联系我的微信👉[python-office](http://www.python4office.cn/wechat-qrcode/)
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

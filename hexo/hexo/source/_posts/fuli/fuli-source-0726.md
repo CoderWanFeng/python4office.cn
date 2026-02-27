@@ -31,7 +31,7 @@ tags: 福利
 | 课程链接                                                                    | 配套文档&代码&软件                                                | 读者交流群                                              |
 |-------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
 | [50讲 · Python + 自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)                 | [打开](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)                     | [加入](http://python4office.cn/wechat-group/)        |
-| [10讲 · Python + 微信机器人](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw) | [打开](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw) | [加入](http://python4office.cn/wechat-group/)        |
+| [10讲 · Python + 微信机器人](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ) | [打开](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ) | [加入](http://python4office.cn/wechat-group/)        |
 | [30讲 · Python + 数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)         | [打开](https://mp.weixin.qq.com/s/n5b-C4ZhkhfZmlCTvepM4A)   | [加入](http://python4office.cn/wechat-group/)        |
 | [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)             | [打开](https://www.python-office.com/course-002/5-poocr/5-poocr.html)                  | [加入](http://python4office.cn/wechat-group/)        |
 | [100讲 · Python + 人工智能](https://www.bilibili.com/video/BV1rU4y1u7og/)    | [打开](https://mp.weixin.qq.com/s/P52GVQEJ1bVAN5vPM_t3Jg)                   | [加入](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ)        |
@@ -72,4 +72,4 @@ tags: 福利
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

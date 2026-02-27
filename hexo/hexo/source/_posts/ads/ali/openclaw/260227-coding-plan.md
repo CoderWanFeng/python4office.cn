@@ -5,7 +5,7 @@ tags: [AI编程]
 ---
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9209df5a-99d2-40dc-af34-b10b43be9026/12-ai.jpg" />
     </a>   
 </p>
@@ -23,7 +23,7 @@ tags: [AI编程]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
+<a href="https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="http://www.python4office.cn/wechat-group/">
@@ -37,13 +37,13 @@ tags: [AI编程]
 ![好用爱用](https://raw.atomgit.com/user-images/assets/5027920/1a78dd04-55d4-4c6d-ac02-15e18491433c/image.png 'image.png')
 
 
-大家好，这里是程序员晚枫，正在 all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw) 🤖
+大家好，这里是程序员晚枫，正在 all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ) 🤖
 
 昨天已经给大家分享了用阿里云电脑来部署OpenClaw的方法：
 
-- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)
-
 最近带着大家做 OpenClaw 的直播课，不少零基础的朋友都跟着顺利上手了，终于体会到这款 AI 工具的强大——
+
+- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)
 
 比起咱们之前用的普通 AI，它能做的事多太多了：
 - ✅ 写代码
@@ -59,6 +59,8 @@ tags: [AI编程]
 我自己还有不少同学，刚用 OpenClaw 没几次，就收到了**阿里云百炼的欠费短信**，直接导致服务停摆。
 
 刚燃起的 AI 使用热情，瞬间被浇灭...
+
+- [OpenClaw才是「AI智能机」！玩到欠费才懂它有多强……](https://mp.weixin.qq.com/s/UQ4evoqbIpL38J8x8f0MNA)
 
 ---
 
@@ -100,6 +102,8 @@ OpenClaw 作为更高级的 AI 工具，对算力的消耗和普通 AI 的差距
 
 更划算的是，现在参与阿里云的活动，**每个人都能领 10 元专属优惠券**！
 
+👉 [领10元优惠券](https://www.aliyun.com/benefit/ai/aistar?userCode=u8n0ylko&clubBiz=subTask..12407113..10263..)
+
 叠加新客优惠后性价比直接拉满，不管是自己用还是和朋友一起体验，都能省不少钱。
 
 ---
@@ -114,6 +118,8 @@ OpenClaw 作为更高级的 AI 工具，对算力的消耗和普通 AI 的差距
 - ✅ 不用懂专业代码
 - ✅ 零基础也能轻松对接
 - ✅ 配置完成后就能用套餐额度放心使用
+
+看完下面的链接还不懂的，加我微信：wfdev7，备注：阿里云
 
 ---
 

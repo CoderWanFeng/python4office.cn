@@ -7,7 +7,7 @@ tags:
 ​
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)。
 之前给大家介绍了[如何通过DNS解析把自己的域名绑定到腾讯云服务器上](https://cloud.tencent.com/developer/article/2021770)，在使用的过程中我发现了一个问题：
 > <br/>域名的访问协议有http和https（更加安全）。
 > <br/>我现在有2个域名：python-office.com 和 python4office.cn，在不开启https的情况下，以<br/>① .cn为结尾的python4office.cn所有的浏览器都可以打开；
@@ -90,7 +90,7 @@ cp objs/nginx /usr/local/nginx/sbin/ngin
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

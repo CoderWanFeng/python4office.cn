@@ -5,7 +5,7 @@ tags: 微信机器人
 ---
 
 
-[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)，已经发布了2个月了，大家在学习过程中产生了一些问题，今天这篇文章 统一给大家回复一下~
+[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)，已经发布了2个月了，大家在学习过程中产生了一些问题，今天这篇文章 统一给大家回复一下~
 
 
 ## 小白能不能学习？
@@ -72,7 +72,7 @@ tags: 微信机器人
 
 我把它们放在了下面这个付费链接里，包括：软件、代码、视频教程、答疑群，全部都是付费后自动下载的，长期有效。👇
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 
 
@@ -104,4 +104,4 @@ tags: 微信机器人
 
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。

@@ -11,7 +11,7 @@ tags: [ 第三方库,pip ]
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/%E5%B0%81%E9%9D%A2/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)。
 
 今天给大家分享的第三方库是**Python自动化办公的专用库**：python-office。
 
@@ -80,7 +80,7 @@ office.video.mark2video(video_path=r'D:\download\baiduyun\图片添加水印.mp4
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
 
 
-程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)就能上手做AI项目。
