@@ -212,6 +212,133 @@ var _hmt = _hmt || [];
               <div id="js-content" class="content-ll">
                 
   
+    <article id="post-apscheduler-study" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/apscheduler-study/">Python定时库APScheduler原理及用法</a>
+    </h1>
+  
+
+        
+        <a href="/apscheduler-study/" class="archive-article-date">
+  	<time datetime="2022-02-09T02:16:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center" id="支付宝-banner">
+    <a target="_blank" href="http://www.python4office.cn/fuli/zhifubao-0923/">
+    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%">
+    </a>   
+</p>
+
+
+<p align="center" id="外卖-banner">
+    <a target="_blank" href="https://kzurl19.cn/7CAHjq">
+    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%">
+    </a>   
+</p>
+
+<h2 id="1-APScheduler简介"><a href="#1-APScheduler简介" class="headerlink" title="1. APScheduler简介"></a>1. APScheduler简介</h2><p>APscheduler全称Advanced Python Scheduler</p>
+<p>作用为在指定的时间规则执行指定的任务，指定的任务就是一个Python函数。</p>
+<h2 id="2-APScheduler组件"><a href="#2-APScheduler组件" class="headerlink" title="2. APScheduler组件"></a>2. APScheduler组件</h2><p>核心组件有4个：Job、JobStore、Trigger、Executor<br>除了以下组件，还有Event 事件、 Listener 监听事件、 Scheduler 调度器</p>
+<p>但需要自己操作的，只有</p>
+<ul>
+<li>Job：也就是自定义的函数</li>
+<li>JobStore：存储任务的方式，默认是存在内存，可以选择存储在数据库里，例如：redis</li>
+</ul>
+<h3 id="Job-作业"><a href="#Job-作业" class="headerlink" title="Job 作业"></a>Job 作业</h3><p><strong>作用</strong></p>
+<p>Job作为APScheduler最小执行单位。<br>创建Job时指定执行的函数，函数中所需参数，Job执行时的一些设置信息。</p>
+<p><strong>构建说明</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">id：指定作业的唯一ID</span><br><span class="line"></span><br><span class="line">name：指定作业的名字</span><br><span class="line"></span><br><span class="line">trigger：apscheduler定义的触发器，用于确定Job的执行时间，根据设置的trigger规则，计算得到下次执行此job的</span><br><span class="line">时间， 满足时将会执行</span><br><span class="line"></span><br><span class="line">executor：apscheduler定义的执行器，job创建时设置执行器的名字，根据字符串你名字到scheduler获取到执行此</span><br><span class="line">job的 执行器，执行job指定的函数</span><br><span class="line"></span><br><span class="line">max_instances：执行此job的最大实例数，executor执行job时，根据job的id来计算执行次数，根据设置的最大实例数</span><br><span class="line">来确定是否可执行</span><br><span class="line"></span><br><span class="line">next_run_time：Job下次的执行时间，创建Job时可以指定一个时间[datetime],不指定的话则默认根据trigger获取触</span><br><span class="line">发时间</span><br><span class="line"></span><br><span class="line">misfire_grace_time：Job的延迟执行时间，例如Job的计划执行时间是21:00:00，但因服务重启或其他原因导致</span><br><span class="line">21:00:31才执行，如果设置此key为40,则该job会继续执行，否则将会丢弃此job</span><br><span class="line"></span><br><span class="line">coalesce：Job是否合并执行，是一个bool值。例如scheduler停止20s后重启启动，而job的触发器设置为5s执行</span><br><span class="line">一次，因此此job错过了4个执行时间，如果设置为是，则会合并到一次执行，否则会逐个执行</span><br><span class="line"></span><br><span class="line">func：Job执行的函数</span><br><span class="line"></span><br><span class="line">args：Job执行函数需要的位置参数</span><br><span class="line"></span><br><span class="line">kwargs：Job执行函数需要的关键字参数</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Jobstore-作业存储"><a href="#Jobstore-作业存储" class="headerlink" title="Jobstore 作业存储"></a>Jobstore 作业存储</h3><p>Jobstore在scheduler中初始化，另外也可通过scheduler的add_jobstore动态添加Jobstore。每个jobstore<br>都会绑定一个alias，scheduler在Add Job时，根据指定的jobstore在scheduler中找到相应的jobstore，并<br>将job添加到jobstore中。</p>
+<p>Jobstore主要是通过pickle库的loads和dumps【实现核心是通过python的__getstate__和__setstate__重写<br>实现】，每次变更时将Job动态保存到存储中，使用时再动态的加载出来，作为存储的可以是redis，也可以<br>是数据库【通过sqlarchemy这个库集成多种数据库】，也可以是mongodb等</p>
+<p>目前APScheduler支持的Jobstore：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MemoryJobStore</span><br><span class="line">MongoDBJobStore</span><br><span class="line">RedisJobStore</span><br><span class="line">RethinkDBJobStore</span><br><span class="line">SQLAlchemyJobStore</span><br><span class="line">ZooKeeperJobStore</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Trigger-触发器"><a href="#Trigger-触发器" class="headerlink" title="Trigger 触发器"></a>Trigger 触发器</h3><p>Trigger绑定到Job，在scheduler调度筛选Job时，根据触发器的规则计算出Job的触发时间，然后与当前时间比较<br>确定此Job是否会被执行，总之就是根据trigger规则计算出下一个执行时间。</p>
+<p>Trigger有多种种类，指定时间的DateTrigger，指定间隔时间的IntervalTrigger，像Linux的crontab<br>一样的CronTrigger</p>
+<p>目前APScheduler支持的触发器：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DateTrigger</span><br><span class="line">IntervalTrigger</span><br><span class="line">CronTrigger</span><br></pre></td></tr></table></figure>
+
+<h3 id="Executor-执行器"><a href="#Executor-执行器" class="headerlink" title="Executor 执行器"></a>Executor 执行器</h3><p>Executor在scheduler中初始化，另外也可通过scheduler的add_executor动态添加Executor。<br>每个executor都会绑定一个alias，这个作为唯一标识绑定到Job，在实际执行时会根据Job绑定的executor<br>找到实际的执行器对象，然后根据执行器对象执行Job</p>
+<p>Executor的种类会根据不同的调度来选择，如果选择AsyncIO作为调度的库，那么选择AsyncIOExecutor，如果<br>选择tornado作为调度的库，选择TornadoExecutor，如果选择启动进程作为调度，<br>选择ThreadPoolExecutor或者ProcessPoolExecutor都可以</p>
+<p>Executor的选择需要根据实际的scheduler来选择不同的执行器</p>
+<p>目前APScheduler支持的Executor：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">AsyncIOExecutor</span><br><span class="line">GeventExecutor</span><br><span class="line">ThreadPoolExecutor</span><br><span class="line">ProcessPoolExecutor</span><br><span class="line">TornadoExecutor</span><br><span class="line">TwistedExecutor</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Scheduler工作流程图"><a href="#3-Scheduler工作流程图" class="headerlink" title="3. Scheduler工作流程图"></a>3. Scheduler工作流程图</h2><p><img src="/images/apscheduler-study/add-job.jpg"></p>
+<h2 id="4-代码演示"><a href="#4-代码演示" class="headerlink" title="4.代码演示"></a>4.代码演示</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># File Name: interval.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> apscheduler.jobstores.redis <span class="keyword">import</span> RedisJobStore</span><br><span class="line"><span class="keyword">from</span> apscheduler.schedulers.blocking <span class="keyword">import</span> BlockingScheduler</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">tick</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Tick! The time is: %s&#x27;</span> % datetime.now())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    REDIS = &#123;</span><br><span class="line">        <span class="string">&#x27;host&#x27;</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;port&#x27;</span>: <span class="string">&#x27;6379&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;db&#x27;</span>: <span class="number">14</span>,</span><br><span class="line">        <span class="string">&#x27;password&#x27;</span>: <span class="string">&#x27;Hx$hfcmsrx3&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    SCHEDULER_JOBSTORES = &#123;</span><br><span class="line">        <span class="string">&#x27;redis&#x27;</span>: RedisJobStore(**REDIS)</span><br><span class="line">    &#125;</span><br><span class="line">    scheduler = BlockingScheduler(jobstores=SCHEDULER_JOBSTORES)</span><br><span class="line">    scheduler.add_job(tick, <span class="string">&#x27;interval&#x27;</span>, jobstore=<span class="string">&#x27;redis&#x27;</span>, seconds=<span class="number">5</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Press Ctrl+&#123;0&#125; to exit&#x27;</span>.<span class="built_in">format</span>(<span class="string">&#x27;Break&#x27;</span> <span class="keyword">if</span> os.name == <span class="string">&#x27;nt&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;C    &#x27;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        scheduler.start()</span><br><span class="line">    <span class="keyword">except</span> (KeyboardInterrupt, SystemExit):</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="5-参考链接"><a href="#5-参考链接" class="headerlink" title="5. 参考链接"></a>5. 参考链接</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/95563033">Python定时库APScheduler原理及用法 - 知乎 (zhihu.com)</a></p>
+<hr>
+<p><img src="https://cos.python-office.com/ads/fuli/all-1.jpg"></p>
+<p><img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg"></p>
+<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">APScheduler</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/apscheduler-study/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-coder-contest" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -2544,127 +2671,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-云服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">从0开始，搭建个人网站</a>
-    </h1>
-  
-
-        
-        <a href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2021-12-13T08:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center" id="进群-banner-AI">
-    <a target="_blank" href="http://www.python4office.cn/wechat-group/">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%">
-    </a>   
-</p>
-
-
-<p align="center">
-    👉 <a target="_blank" rel="noopener" href="http://www.python4office.cn/wechat-group/">本开源项目的交流群</a> 👈
-</p>
-
-<p align="center" name="图标-github">
-    <a target="_blank" href="https://github.com/CoderWanFeng/PyOfficeRobot">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg?style=social" alt="github star">
-    </a>
-        <a target="_blank" href="https://gitee.com/CoderWanFeng//PyOfficeRobot/">
-        <img src="https://gitee.com/CoderWanFeng//PyOfficeRobot/badge/star.svg?theme=dark" alt="gitee star">
-    </a>
-<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">
-  <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
-</a>
-        <a target="_blank" rel="noopener" href="http://www.python4office.cn/wechat-group/">
-  <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
-</a>
-</p>
-
-
-
-<h1 id="小白如何从0开始，搭建一个自己的个人网站？"><a href="#小白如何从0开始，搭建一个自己的个人网站？" class="headerlink" title="小白如何从0开始，搭建一个自己的个人网站？"></a>小白如何从0开始，搭建一个自己的个人网站？</h1><p>小白如何从0开始，搭建一个自己的个人网站？</p>
-<p>为了回答这个问题，<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkyMzIwOTgzMA==&action=getalbum&album_id=1861970403066249218&scene=173&from_msgid=2247484693&from_itemidx=1&count=3&nolastread=1#wechat_redirect">晚枫</a>自己从2021年12月开始，开始持续更新这个系列。</p>
-<p>希望可以帮助小白，尤其是本身不是程序员，但是对编程感兴趣的朋友，顺利的搭建起自己的个人网站。</p>
-<ul>
-<li><p>全套教程，点击直达👉<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg3MDU3OTgxMg==&action=getalbum&album_id=2157699521936457730#wechat_redirect">从0开始，搭建个人网站</a></p>
-</li>
-<li><p>搭建好个人网站，你需要把它部署到云服务器上，别人才能访问，这里有2个优惠购买链接👇</p>
-<ul>
-<li>以下链接，长期有效，点击直达。</li>
-<li><a target="_blank" rel="noopener" href="https://www.aliyun.com/minisite/goods?userCode=t6duaoe1">阿里云，速度快</a></li>
-<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/act/cps/redirect?redirect=1077&cps_key=ca76be5a2293ba3906d6d5407aea15ee&from=console">腾讯云，价格低</a></li>
-</ul>
-</li>
-</ul>
-<p>大家在使用过程中，有任何问题，欢迎私信我沟通~我的微信：<a target="_blank" rel="noopener" href="http://www.python4office.cn/wechat-qrcode/">python-office</a></p>
-<p>程序员晚枫专注AI编程培训，小白看完他的教程<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">云服务器</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人网站</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/58/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/57/">57</a><a class="page-number" href="/page/58/">58</a><span class="page-number current">59</span><a class="page-number" href="/page/60/">60</a><a class="extend next" rel="next" href="/page/60/">Next &amp;raquo;</a>
@@ -2844,15 +2850,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ai</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">机器人</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重庆</a>
+                <a href="javascript:void(0)" class="js-tag color3">ai</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2864,11 +2866,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">平台</a>
+                <a href="javascript:void(0)" class="js-tag color3">职场</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">职场</a>
+                <a href="javascript:void(0)" class="js-tag color3">平台</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2880,11 +2882,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pip</a>
+                <a href="javascript:void(0)" class="js-tag color3">重庆</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pip</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2940,10 +2946,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
@@ -2952,7 +2954,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PDF</a>
+                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2968,10 +2970,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">spark</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网站开发</a>
               </li>
              
@@ -2980,11 +2978,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">副业</a>
+                <a href="javascript:void(0)" class="js-tag color1">spark</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">sqlalchemy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">副业</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3001,6 +3003,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微信群</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PDF</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3028,11 +3034,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
+                <a href="javascript:void(0)" class="js-tag color3">工房</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工房</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3040,7 +3046,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python实战项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">第三方库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">微信机器人</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">向后一大步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3056,35 +3082,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">第三方库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python实战项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">向后一大步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">白开水AI社区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">关键词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">白开水AI社区</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3100,11 +3106,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
+                <a href="javascript:void(0)" class="js-tag color3">开源</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">开源</a>
+                <a href="javascript:void(0)" class="js-tag color3">PyCharm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3140,15 +3146,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">下载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">知识星球</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">VLOG</a>
+                <a href="javascript:void(0)" class="js-tag color3">下载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3156,11 +3158,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">短视频</a>
+                <a href="javascript:void(0)" class="js-tag color5">VLOG</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">1对1咨询</a>
+                <a href="javascript:void(0)" class="js-tag color4">短视频</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3169,6 +3171,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">找工作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">1对1咨询</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3188,15 +3194,55 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">pobd</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">有猫的昭意</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">pobd</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">10讲少儿编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">开源新闻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">麓悦江城</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">副业信息差</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AI编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">千里会</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">副业项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">原创文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">程序员说法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人信息</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3208,7 +3254,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">商务合作</a>
+                <a href="javascript:void(0)" class="js-tag color4">pdf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3220,15 +3270,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">商务合作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">deepseek</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">华为</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AI编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3248,59 +3294,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">副业信息差</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自动驾驶</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">腾讯数字人</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">开源新闻</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">原创文章</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">麓悦江城</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">千里会</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">副业项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">程序员说法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人信息</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pdf</a>
+                <a href="javascript:void(0)" class="js-tag color5">年度目标</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">资源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年度目标</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3312,15 +3314,51 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">热点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">年度总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">热点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">小编故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">30讲Python自动化办公</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">读者交流群</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">财富自由</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">10讲Python自动化办公课程推广文案</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CPython</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">团队</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">鸿蒙</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">视频脚本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3348,11 +3386,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color3">考证</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">考证</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3360,51 +3398,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">财富自由</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">小编故事</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">行业热点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">10讲Python自动化办公课程推广文案</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">读者交流群</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">30讲Python自动化办公</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CPython</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">鸿蒙</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">团队</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">视频脚本</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">量化</a>
+                <a href="javascript:void(0)" class="js-tag color3">华为</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">poimage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">量化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3428,7 +3434,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">联系方式</a>
+                <a href="javascript:void(0)" class="js-tag color4">1v1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3436,15 +3442,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">交流群</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">pycon</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">1v1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">交流群</a>
+                <a href="javascript:void(0)" class="js-tag color5">联系方式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3476,6 +3482,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">大佬故事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AI新解</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小报童</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">付费课程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">pyinstaller</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">程序员晚枫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">线上活动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">云栖大会</a>
               </li>
              
@@ -3492,35 +3530,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AI新解</a>
+                <a href="javascript:void(0)" class="js-tag color3">恰饭</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">大佬故事</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小报童</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">付费课程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">pyinstaller</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">程序员晚枫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线上活动</a>
+                <a href="javascript:void(0)" class="js-tag color3">语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3529,14 +3543,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">周记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">恰饭</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3596,10 +3602,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Excel</a>
               </li>
              
@@ -3616,7 +3618,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">书单号</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python进阶</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3625,6 +3627,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高阶课程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">书单号</a>
               </li>
              
               <li class="article-tag-list-item">
