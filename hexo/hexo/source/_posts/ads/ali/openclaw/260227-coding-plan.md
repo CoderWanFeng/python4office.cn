@@ -165,3 +165,13 @@ OpenClaw 作为更高级的 AI 工具，对算力的消耗和普通 AI 的差距
 ![3193b6f3684b9e3b15884cb5ba299b87.png](https://raw.atomgit.com/user-images/assets/5027920/e32fe137-1978-4152-9015-e9f358a05b2d/3193b6f3684b9e3b15884cb5ba299b87.png '3193b6f3684b9e3b15884cb5ba299b87.png')
 
 ![8f90a4b23360bb563af1ed5277e8ba31.png](https://raw.atomgit.com/user-images/assets/5027920/5a3c125f-eb72-4424-a924-039bfa6cfcf1/8f90a4b23360bb563af1ed5277e8ba31.png '8f90a4b23360bb563af1ed5277e8ba31.png')
+
+
+## 拓展阅读
+
+- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
+- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
+- [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/uxCILtn9cfIsJR8PqOxlGQ)
+- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)
