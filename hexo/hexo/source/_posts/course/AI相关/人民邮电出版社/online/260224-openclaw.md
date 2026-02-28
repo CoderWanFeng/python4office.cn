@@ -75,7 +75,7 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 
 ## 找我领取操作手册
 
-点击上面的链接，注册完＋我微信：wfdev7，备注：龙虾，领取操作手册和视频。👇
+点击上面的链接，注册完＋我微信：python-office，备注：龙虾，领取操作手册和视频。👇
 
 ![操作手册和视频](https://raw.atomgit.com/user-images/assets/5027920/032d00e7-dc6d-4bcd-ab82-8fb44036d937/image.png 'image.png')
 
