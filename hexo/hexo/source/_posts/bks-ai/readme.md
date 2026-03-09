@@ -1,0 +1,101 @@
+---
+title: 白开水 AI社区 · 简介
+date: 2025-12-10 20:56:34
+tags: 白开水 AI社区
+---
+
+# 🌊 白开水 AI社区
+
+> 让 AI知识不烫手
+
+**成立时间**：2025 年 12 月  
+**使命**：分享各类 AI教程，降低 AI学习门槛  
+**活动**：每月 2 场 AI直播
+
+---
+
+## 📚 课程中心
+
+> 10 套完整课程，从入门到进阶，总有一套适合你
+
+| 难度 | 课程名称 | 讲数 | 适合人群 |
+|------|---------|------|----------|
+| ⭐ | [给小白的《30 讲·AI编程训练营》](https://www.python-office.com/course-002/AICoding/version-001/all.html) | 30 讲 | 完全零基础 |
+| ⭐ | [AI自动化办公实战](https://python4office.cn/course/AI相关/人民邮电出版社/ads/openclaw/ai-automation-office/) | 12 讲 | 办公室白领 |
+| ⭐ | [AI聊天机器人搭建实战](https://python4office.cn/course/AI相关/人民邮电出版社/ads/openclaw/ai-chatbot/) | 12 讲 | 小老板/电商卖家 |
+| ⭐ | [个人网站搭建实战](https://python4office.cn/course/AI相关/人民邮电出版社/ads/openclaw/personal-website/) | 15 讲 | 想建个人网站 |
+| ⭐ | [Coze(扣子) 工作流基础核心课](https://mall.bilibili.com/neul-next/detailuniversal/detail.html?isMerchant=1&page=detailuniversal_detail&saleType=10&itemsId=40099831&loadingShow=1&noTitleBar=1&msource=merchant_share) | - | 想学扣子工作流 |
+| ⭐⭐ | [Python 基础入门](https://python4office.cn/course/AI相关/人民邮电出版社/ads/python/) | 22 篇 | 想学编程 |
+| ⭐⭐ | [AI短视频书单号](https://mp.weixin.qq.com/s/qokwWMcCdr0PSSm3aGhssA) | - | 想做短视频 |
+| ⭐⭐⭐ | [Python 数据分析](https://python4office.cn/course/AI相关/人民邮电出版社/ads/data-analysis/) | 30 篇 | 想做数据分析 |
+| ⭐⭐⭐ | [AI自动发文智能体](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q) | - | 想自动化发文 |
+| ⭐⭐⭐ | [OpenClaw 入门](https://python4office.cn/course/AI相关/人民邮电出版社/ads/openclaw/openclaw-tutorial/) | 30 讲 | 想部署 AI助手 |
+
+👉 **[查看完整课程学习路线](https://feishu.cn/docx/UNXYdGpVTovoPpxk5zYcV9ljndc)**
+
+---
+
+## 🎥 直播记录
+
+> 第一时间参与直播，和我们一对一的交流沟通
+
+**直播账号**：[Python 自动化办公社区](https://live.bilibili.com/21757459?broadcast_type=0&is_room_feed=1&spm_id_from=333.1387.to_liveroom.0.click&live_from=86002)
+
+**直播群**：
+
+<p align="center">
+    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
+</p>
+
+| 场次 | 直播视频 | 海报 | 文档/资料 | 主讲人 |
+|------|----------|------|-----------|--------|
+| 2025.11 上 | [用 AI开发 PDF 转 Word 办公软件](https://www.bilibili.com/video/BV1RY2vB6Eoa) | — | — | 晚枫 |
+| 2025.11 下 | [我是怎么用 AI自动化写文章、剪视频的？](https://www.bilibili.com/video/BV1qx2WB1E8p) | [查看](https://mp.weixin.qq.com/s/xOHD_5bVcVscFZvSZvHuUA) | [查看](https://mp.weixin.qq.com/s/HkhaGKfIcTO_ypaehuaMdQ) | 晚枫 |
+| 2025.12.14 | [人人都可以 AI编程，10 大功能现场揭秘！](https://www.bilibili.com/video/BV1FDqGBtE3H) | [查看](https://mp.weixin.qq.com/s/oyvaNW_HnlxOIzWOyGzIRw) | [查看](https://mp.weixin.qq.com/s/Dg4HfBnOK9QfZYVHTrqg9Q) | 晚枫 |
+| 2025.12.28 | [讯飞星辰 Agent 平台使用教程](https://www.bilibili.com/video/BV1yYiiBAErw) | [查看](https://mp.weixin.qq.com/s/QHxVoEoqZVvbHZB4EfOyGQ) | [查看](https://www.python4office.cn/bks-ai/科大讯飞/1225-平台信息/) | 晚枫 |
+
+---
+
+## 👥 联合创始人
+
+**晚枫**  
+📺 [B 站](https://space.bilibili.com/259649365) · 📱 [公众号](https://mp.weixin.qq.com/s/rJh-vF4GHG1o-8Dehe8wTg) · 📕 [小红书](https://www.xiaohongshu.com/user/profile/611dcb820000000001014aca)
+
+**昭意**  
+📕 [小红书](https://www.xiaohongshu.com/user/profile/652b97f6000000002a036582) · 📱 [公众号](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww)
+
+---
+
+## 🎪 线下活动
+
+| 时间 | 地点 | 分享主题 |
+|------|------|----------|
+| 2025.11.29 | 重庆光电园 | 待整理 |
+| 2025.12.5 | 西南大学（北碚校区） | [AtomGit"源启高校"活动回顾](https://mp.weixin.qq.com/s/exkUPXHebta5q2m22uc0Mg) |
+| 2025.12.11 | 阿里中心 · 重庆 | [用 Qoder 打造开源项目](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ) |
+| 2025.12.27 | 渝客松 · 重庆 | [我把 Qoder 当同事](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ) |
+
+---
+
+## 📰 媒体报道
+
+- **AtomGit**：[DeepSeek 浪潮下如何撑过 35 岁职场危机？](https://mp.weixin.qq.com/s/RC54o9C4F87fyAebJUE0kg)
+- **脉脉**：[玩赚 AI实验室 × 程序员晚枫](https://mp.weixin.qq.com/s/HHuNGf6nWh-p2zkfm7tnfQ)
+
+---
+
+## 📬 联系我们
+
+**加入 AI学习交流群**：
+
+<p align="center">
+    <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    </a>
+</p>
+
+**更多社区动态**：公众号 - [白开水 AI](https://mp.weixin.qq.com/s/Lh6gCEVXcsCEzO8Otk9mNg)
+
+---
+
+> 程序员晚枫专注 AI编程培训，小白看完他和图灵社区合作的教程 [《30 讲·AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) 就能上手做 AI项目。
