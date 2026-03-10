@@ -232,6 +232,135 @@ var _hmt = _hmt || [];
               <div id="js-content" class="content-ll">
                 
   
+    <article id="post-course/AI/cpython-internal/10-数字类型实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/cpython-internal/10-%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B%E5%AE%9E%E7%8E%B0/">第 10 讲：数字类型实现——int 和 float 的 C 结构体</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/cpython-internal/10-%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2026-03-03T02:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>Python 的 int 可以无限大，float 是双精度，它们在 C 中如何实现？</strong></p>
+<hr>
+<h2 id="🔢-PyLongObject（整数）"><a href="#🔢-PyLongObject（整数）" class="headerlink" title="🔢 PyLongObject（整数）"></a>🔢 PyLongObject（整数）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Include/longintrepr.h</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> _<span class="title">longobject</span> &#123;</span></span><br><span class="line">    PyObject_HEAD</span><br><span class="line">    digit ob_digit[<span class="number">1</span>];  <span class="comment">// 变长数组存储数字</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Python 3 用 2^30 进制存储大整数</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PyLong_SHIFT 30</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="小整数缓存"><a href="#小整数缓存" class="headerlink" title="小整数缓存"></a>小整数缓存</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// -5 到 256 的整数被缓存</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> NSMALLPOSINTS 257</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> NSMALLNEGINTS 5</span></span><br><span class="line"><span class="type">static</span> PyLongObject *small_ints[NSMALLNEGINTS + NSMALLPOSINTS];</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="💧-PyFloatObject（浮点数）"><a href="#💧-PyFloatObject（浮点数）" class="headerlink" title="💧 PyFloatObject（浮点数）"></a>💧 PyFloatObject（浮点数）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Include/floatobject.h</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    PyObject_HEAD</span><br><span class="line">    <span class="type">double</span> ob_fval;  <span class="comment">// C double 类型</span></span><br><span class="line">&#125; PyFloatObject;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p><strong>PyLongObject</strong>：变长数组存储大整数。</p>
+<p><strong>小整数缓存</strong>：-5 到 256 的整数被预创建。</p>
+<p><strong>PyFloatObject</strong>：使用 C double 类型。</p>
+<hr>
+<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<hr>
+<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="09-%E5%B8%B8%E8%A7%81%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4.md">上一讲：常见字节码指令</a> | <a href="11-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%E5%AE%9E%E7%8E%B0.md">下一讲：字符串类型实现</a> →</p>
+<hr>
+<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
+<thead>
+<tr>
+<th>平台</th>
+<th>账号/链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>微信</td>
+<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+</tr>
+<tr>
+<td>B 站</td>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+</tr>
+</tbody></table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CPython</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">int</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">float</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数字类型</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/cpython-internal/10-%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-course/ai-related/posts-people/ads/openclaw/20260303105001-2026 年 AI 趋势：为什么 OpenClaw 代表未来？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -5051,136 +5180,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-course/AI/fluent-python/15-类元编程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/fluent-python/15-%E7%B1%BB%E5%85%83%E7%BC%96%E7%A8%8B/">第 15 讲：类元编程——元类与类创建过程详解</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/fluent-python/15-%E7%B1%BB%E5%85%83%E7%BC%96%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2026-03-03T02:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<blockquote>
-<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
-</blockquote>
-<p><strong>元类是类的类，掌握它，你就能控制类的创建过程，实现强大的框架功能。</strong></p>
-<hr>
-<h2 id="🎯-元类基础"><a href="#🎯-元类基础" class="headerlink" title="🎯 元类基础"></a>🎯 元类基础</h2><h3 id="type-是元类"><a href="#type-是元类" class="headerlink" title="type 是元类"></a>type 是元类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># type 是 Python 的内置元类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(MyClass))  <span class="comment"># &lt;class &#x27;type&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="自定义元类"><a href="#自定义元类" class="headerlink" title="自定义元类"></a>自定义元类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SingletonMeta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;单例元类&quot;&quot;&quot;</span></span><br><span class="line">    _instances = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">cls, *args, **kwargs</span>):</span><br><span class="line">        <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> cls._instances:</span><br><span class="line">            cls._instances[cls] = <span class="built_in">super</span>().__call__(*args, **kwargs)</span><br><span class="line">        <span class="keyword">return</span> cls._instances[cls]</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Database</span>(metaclass=SingletonMeta):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, connection_string</span>):</span><br><span class="line">        self.connection_string = connection_string</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用</span></span><br><span class="line">db1 = Database(<span class="string">&quot;postgresql://localhost&quot;</span>)</span><br><span class="line">db2 = Database(<span class="string">&quot;mysql://remote&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(db1 <span class="keyword">is</span> db2)  <span class="comment"># True - 同一个实例</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🔧-new-和-init"><a href="#🔧-new-和-init" class="headerlink" title="🔧 new__和__init"></a>🔧 <strong>new__和__init</strong></h2><h3 id="自动注册模式"><a href="#自动注册模式" class="headerlink" title="自动注册模式"></a>自动注册模式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">AutoRegisterMeta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;自动注册子类的元类&quot;&quot;&quot;</span></span><br><span class="line">    registry = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__new__</span>(<span class="params">mcs, name, bases, namespace</span>):</span><br><span class="line">        cls = <span class="built_in">super</span>().__new__(mcs, name, bases, namespace)</span><br><span class="line">        <span class="keyword">if</span> name != <span class="string">&#x27;BasePlugin&#x27;</span>:  <span class="comment"># 不注册基类</span></span><br><span class="line">            mcs.registry[name] = cls</span><br><span class="line">        <span class="keyword">return</span> cls</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BasePlugin</span>(metaclass=AutoRegisterMeta):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">EmailPlugin</span>(<span class="title class_ inherited__">BasePlugin</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SMSPlugin</span>(<span class="title class_ inherited__">BasePlugin</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(AutoRegisterMeta.registry)  <span class="comment"># &#123;&#x27;EmailPlugin&#x27;: ..., &#x27;SMSPlugin&#x27;: ...&#125;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p><strong>元类</strong>：控制类的创建过程。</p>
-<p><strong>type</strong>：Python 的内置元类。</p>
-<p><strong>实际应用场景</strong>：单例模式、自动注册、ORM 框架。</p>
-<hr>
-<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
-<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
-<hr>
-<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="14-%E5%8A%A8%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7.md">上一讲：动态属性和特性</a> | <a href="16-%E7%B1%BB%E5%9E%8B%E6%8F%90%E7%A4%BA.md">下一讲：类型提示</a> →</p>
-<hr>
-<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
-<thead>
-<tr>
-<th>平台</th>
-<th>账号/链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>微信</td>
-<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
-</tr>
-<tr>
-<td>B 站</td>
-<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
-</tr>
-</tbody></table>
-<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">type</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流畅的 Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">元类，metaclass</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">元编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/fluent-python/15-%E7%B1%BB%E5%85%83%E7%BC%96%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
@@ -5705,10 +5704,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">wwp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
