@@ -196,7 +196,7 @@ log "开始构建Hexo网站..."
 export NODE_ENV=production
 export HEXO_GENERATE_CONCURRENCY=4
 
-if node --max-old-space-size=4096 node_modules/.bin/hexo generate --draft --silent 2>&1; then
+if node --max-old-space-size=4096 node_modules/hexo/bin/hexo generate --draft --silent 2>&1; then
     log_success "Hexo构建完成"
 else
     log_error "Hexo构建失败"
