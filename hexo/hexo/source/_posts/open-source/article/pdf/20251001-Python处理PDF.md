@@ -54,7 +54,7 @@ tags: 深度文章
 
 <!-- more -->
 
-![封面图](https://raw.atomgit.com/user-images/assets/5027920/9f5e8ff2-6696-49bc-94a3-11960d0ccb5f/image.png 'image.png')
+![封面图](https://raw.atomgit.com/user-images/assets/5027920/9f5e8ff2-6696-49bc-94a3-11960d0ccb5f/image.png)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)。
 
@@ -64,7 +64,7 @@ tags: 深度文章
 
 PDF（Portable Document Format，便携式文档格式）的原理，可以理解为一套为了精确还原文档的“说明书”或“施工蓝图”。它的核心设计目标是：在任何设备、任何操作系统上，打开同一个PDF文件，看到的版面、字体、颜色和图片都完全一致。
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/081ed309-de8c-44bd-94de-81a35ea1aa15/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/081ed309-de8c-44bd-94de-81a35ea1aa15/image.png)
 
 在PDF出现之前，跨平台共享文档是一场噩梦。你把一个用特定字体和排版软件制作的文档发给别人，如果他的电脑上没有相同的字体和软件，打开后就会面目全非。PDF通过“冻结”文档的最终形态，完美解决了格式错乱和依赖缺失的问题。
 
@@ -94,7 +94,7 @@ PDF格式的官方技术规范是由国际标准化组织（ISO） 发布的 ISO
 | **“商业库”**    | `Spire.PDF for Python` | **目标**：一款完全独立的 PDF 开发组件。<br>**取舍**：商业组件，使用需要付费。                                                      | https://www.e-iceblue.cn/Introduce/Spire-PDF-Python.html |
 | **“入门级”工具包** | `popdf`                | **目标**：一行代码，实现pdf操作。<br>**取舍**：适合机械重复的操作，不适合复杂场景。                                                    | https://www.python-office.com/course-002/10-popdf/10-popdf.html|
 
-![针对不同场景](https://raw.atomgit.com/user-images/assets/5027920/7b302e34-96ad-4254-a168-806c01bce94f/image.png 'image.png')
+![针对不同场景](https://raw.atomgit.com/user-images/assets/5027920/7b302e34-96ad-4254-a168-806c01bce94f/image.png)
 
 PDF 库生态就像一个**工具箱**。你不会找到一把能拧所有螺丝、锯所有木头、测量所有尺寸的“万能工具”。你拥有的是一把专门拧螺丝的**螺丝刀**（`pypdf`）、一把精准切割的**锯子**（`pdfplumber`）、和一个功能强大的**电钻**（`PyMuPDF`）。你的任务决定了你需要从工具箱里拿出哪件工具，或者如何组合使用它们。
 
@@ -194,12 +194,12 @@ merge2pdf(pdf_list, "merged.pdf")
 
 > 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
 
-![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png)
 
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg)
   
 
 ![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')

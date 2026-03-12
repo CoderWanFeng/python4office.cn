@@ -65,17 +65,17 @@ tags: 第三方库
 
 ## 二、它们都是怎么来的？
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/4098c588-a6fd-45d4-97fd-cae2e99ea3ec/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/4098c588-a6fd-45d4-97fd-cae2e99ea3ec/image.png)
 
 1. Django（2005 年）  
    当时一群报社程序员天天被老板催“快上线”，干脆一次性把所有常用功能（登录、后台、数据库）打包好，省得每次都从零开始。于是 Django = “懒人救星”。
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/014405c0-c2ec-4a85-b618-ae01ddecdd05/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/014405c0-c2ec-4a85-b618-ae01ddecdd05/image.png)
 
 2. Flask（2010 年）  
    有个德国小哥觉得 Django 太重，写了一行愚人节玩笑代码：“Hello World 只要 5 行！” 结果大家当真了，越玩越大，就成了 Flask。核心就是：别给我多余的东西，我只想要一把瑞士军刀。
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/965efef1-dacc-43ab-a160-5ec13bdb8dae/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/965efef1-dacc-43ab-a160-5ec13bdb8dae/image.png)
 
 3. FastAPI（2018 年）  
    AI 火了，大家发现“机器学习模型”要对外提供服务，传统框架慢得像老牛。于是 FastAPI 来了，专门解决“高并发 + 自动生成接口文档”这两个痛点，一上线就飙车。
@@ -117,9 +117,9 @@ tags: 第三方库
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg)
   
-![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '6d283319df13b09a3f74a9f19bf18a97.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg)
 
 
 

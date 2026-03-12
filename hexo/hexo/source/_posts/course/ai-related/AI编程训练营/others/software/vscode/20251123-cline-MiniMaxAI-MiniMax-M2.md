@@ -74,7 +74,7 @@ tags: [AI编程]
 
 注册后，获取API密钥，如下图所示：
 
-![这里的密钥，下面的插件要用](https://raw.atomgit.com/user-images/assets/5027920/4490bc51-d35f-4129-a1ed-2bf715219a5c/image.png 'image.png')
+![这里的密钥，下面的插件要用](https://raw.atomgit.com/user-images/assets/5027920/4490bc51-d35f-4129-a1ed-2bf715219a5c/image.png)
 
 
 
@@ -84,7 +84,7 @@ tags: [AI编程]
 - 点击左侧的扩展图标（或使用快捷键 Ctrl/command+Shift+X）。
 - 在搜索框中输入 Cline，找到对应的插件并点击 安装。
 
-![install](https://raw.atomgit.com/user-images/assets/5027920/6e622b45-2fd5-4c26-bae9-d88b3852be29/image.png 'image.png')
+![install](https://raw.atomgit.com/user-images/assets/5027920/6e622b45-2fd5-4c26-bae9-d88b3852be29/image.png)
 
 
 ### 3.配置cline
@@ -100,14 +100,14 @@ tags: [AI编程]
 
 配置完成后，点击 Done 保存设置。
 
-![前3个都是固定的](https://raw.atomgit.com/user-images/assets/5027920/189dfcae-d144-4d1e-84eb-cd5970e375f0/image.png 'image.png')
+![前3个都是固定的](https://raw.atomgit.com/user-images/assets/5027920/189dfcae-d144-4d1e-84eb-cd5970e375f0/image.png)
 
 
 ### 4.测试效果
 
 以上配置好以后，就可以使用了。
 
-![直接输入你的命令](https://raw.atomgit.com/user-images/assets/5027920/34a13183-cfa3-466b-a373-d442f16cc96f/image.png 'image.png')
+![直接输入你的命令](https://raw.atomgit.com/user-images/assets/5027920/34a13183-cfa3-466b-a373-d442f16cc96f/image.png)
 
 
 **接下来，就自由的体验你的AI之旅吧！**
@@ -228,7 +228,7 @@ Q：有其他更高级的课程吗？
 
 
 
-![Python群的付费记录](https://raw.atomgit.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png 'image.png')
+![Python群的付费记录](https://raw.atomgit.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png)
 
 
 
@@ -280,7 +280,7 @@ Q：有其他更高级的课程吗？
 
 
 
-![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png)
 
 
 
@@ -290,7 +290,7 @@ Q：有其他更高级的课程吗？
 
 
 
-![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg)
 
   
 

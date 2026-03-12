@@ -41,7 +41,7 @@ tags: [CodeBuddy,vibecoding]
 
 
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/b98e1092-23d0-4b5c-a157-6d22938d2aac/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/b98e1092-23d0-4b5c-a157-6d22938d2aac/image.png)
 
 <!-- more -->
 

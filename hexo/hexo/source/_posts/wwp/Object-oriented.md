@@ -10,7 +10,7 @@ tags: [wwp,c语言]
  **缺点：浪费资源 更新发布麻烦**
  
  # 动态库
- ![image.png](https://raw.atomgit.com/user-images/assets/5027920/5bf4a790-28af-4ddf-80b1-e65055799c95/image.png 'image.png')
+ ![image.png](https://raw.atomgit.com/user-images/assets/5027920/5bf4a790-28af-4ddf-80b1-e65055799c95/image.png)
 
 ## 相关阅读
 
