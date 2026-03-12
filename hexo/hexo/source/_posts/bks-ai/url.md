@@ -10,49 +10,26 @@ tags: 白开水 AI社区
 
 **成立时间**：2025 年 12 月  
 **使命**：分享各类 AI教程，降低 AI学习门槛  
-**活动**：每月 2 场 AI直播
+**活动**：每月 2 场 AI直播，直播账号：[Python自动化办公社区](https://space.bilibili.com/259649365)
 
 ---
 
-## 📚 课程中心
+## 社区网站
 
-> 10 套完整课程，从入门到进阶，总有一套适合你
+- https://www.python4office.cn :AI学习笔记
+- https://www.python-office.com :python课程中心
+- https://www.python4office.cn/ai-nav :AI导航
+- https://www.python-office.com/openclaw :龙虾案例库
 
-| 难度 | 课程名称 | 讲数 | 适合人群 |
-|------|---------|------|----------|
-| ⭐ | [给小白的《30 讲·AI编程训练营》](https://www.python-office.com/course-002/AICoding/version-001/all.html) | 30 讲 | 完全零基础 |
-| ⭐ | [AI自动化办公实战](https://python4office.cn/course/AI相关/人民邮电出版社/ads/openclaw/ai-automation-office/) | 12 讲 | 办公室白领 |
-| ⭐ | [AI聊天机器人搭建实战](https://python4office.cn/course/AI相关/人民邮电出版社/ads/openclaw/ai-chatbot/) | 12 讲 | 小老板/电商卖家 |
-| ⭐ | [个人网站搭建实战](https://python4office.cn/course/AI相关/人民邮电出版社/ads/openclaw/personal-website/) | 15 讲 | 想建个人网站 |
-| ⭐ | [Coze(扣子) 工作流基础核心课](https://mall.bilibili.com/neul-next/detailuniversal/detail.html?isMerchant=1&page=detailuniversal_detail&saleType=10&itemsId=40099831&loadingShow=1&noTitleBar=1&msource=merchant_share) | - | 想学扣子工作流 |
-| ⭐⭐ | [Python 基础入门](https://python4office.cn/course/AI相关/人民邮电出版社/ads/python/) | 22 篇 | 想学编程 |
-| ⭐⭐ | [AI短视频书单号](https://mp.weixin.qq.com/s/qokwWMcCdr0PSSm3aGhssA) | - | 想做短视频 |
-| ⭐⭐⭐ | [Python 数据分析](https://python4office.cn/course/AI相关/人民邮电出版社/ads/data-analysis/) | 30 篇 | 想做数据分析 |
-| ⭐⭐⭐ | [AI自动发文智能体](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q) | - | 想自动化发文 |
-| ⭐⭐⭐ | [OpenClaw 入门](https://python4office.cn/course/AI相关/人民邮电出版社/ads/openclaw/openclaw-tutorial/) | 30 讲 | 想部署 AI助手 |
 
-👉 **[查看完整课程学习路线](https://feishu.cn/docx/UNXYdGpVTovoPpxk5zYcV9ljndc)**
+## 项目地址
 
----
-
-## 🎥 直播记录
-
-> 第一时间参与直播，和我们一对一的交流沟通
-
-**直播账号**：[Python 自动化办公社区](https://live.bilibili.com/21757459?broadcast_type=0&is_room_feed=1&spm_id_from=333.1387.to_liveroom.0.click&live_from=86002)
-
-**直播群**：
-
-<p align="center">
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-</p>
-
-| 场次 | 直播视频 | 海报 | 文档/资料 | 主讲人 |
-|------|----------|------|-----------|--------|
-| 2025.11 上 | [用 AI开发 PDF 转 Word 办公软件](https://www.bilibili.com/video/BV1RY2vB6Eoa) | — | — | 晚枫 |
-| 2025.11 下 | [我是怎么用 AI自动化写文章、剪视频的？](https://www.bilibili.com/video/BV1qx2WB1E8p) | [查看](https://mp.weixin.qq.com/s/xOHD_5bVcVscFZvSZvHuUA) | [查看](https://mp.weixin.qq.com/s/HkhaGKfIcTO_ypaehuaMdQ) | 晚枫 |
-| 2025.12.14 | [人人都可以 AI编程，10 大功能现场揭秘！](https://www.bilibili.com/video/BV1FDqGBtE3H) | [查看](https://mp.weixin.qq.com/s/oyvaNW_HnlxOIzWOyGzIRw) | [查看](https://mp.weixin.qq.com/s/Dg4HfBnOK9QfZYVHTrqg9Q) | 晚枫 |
-| 2025.12.28 | [讯飞星辰 Agent 平台使用教程](https://www.bilibili.com/video/BV1yYiiBAErw) | [查看](https://mp.weixin.qq.com/s/QHxVoEoqZVvbHZB4EfOyGQ) | [查看](https://www.python4office.cn/bks-ai/科大讯飞/1225-平台信息/) | 晚枫 |
+- python-office ：自动化办公专用库，包含了各种办公场景的代码示例，如 Excel 自动化、Word 文档处理、PowerPoint 演示文稿创建等。
+    - 项目链接：https://github.com/CoderWanFeng/python-office
+- poocr ：基于 Python 的 OCR 识别库，支持多种图片格式的文字识别。
+    - 项目链接：https://github.com/CoderWanFeng/poocr
+- popdf ：基于 Python 的 PDF 处理库，支持读取、写入、合并、拆分等操作。
+    - 项目链接：https://github.com/CoderWanFeng/popdf
 
 ---
 
