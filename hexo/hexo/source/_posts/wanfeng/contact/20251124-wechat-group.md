@@ -29,7 +29,7 @@ tags: 联系方式
 
 > 以上这些，我把它称为我在all in AI之前的经历。之前建立的Python主题的付费群，也有430多人加入：[Python学习 · 读者交流群](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=8)，如果你是想单纯学习Python的朋友，建议直接加这个Python群。我一直在运营中，也还会继续运营下去。
 
-![Python群的付费记录](https://raw.atomgit.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png)
+![Python群的付费记录](https://raw.atomgit.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png 'image.png')
 
 ## all in AI
 
