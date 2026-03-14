@@ -283,3 +283,13 @@ OpenClaw 不仅仅是一个消息网关，更是一个 **AI 操作系统**，它
 - [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
 - [别再乱选大模型了！小白也能看懂的「好坏判断指南」，3 分钟避坑](https://mp.weixin.qq.com/s/uPAJewJ-YeRnESEAAwLlkw)
 - [学 AI 编程别瞎忙！3 步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+
+---
+
+## 🎓 推荐课程
+
+包含两门：
+
+- [龙虾安装课（9元） 从软件下载、环境配置到完整部署，一步步教到能正常使用，适合只想先把工具装好的朋友。](https://mp.weixin.qq.com/s/xT6p7mHu5o6aMAqeuXQTXg)
+- [龙虾高级课（199元，前50名优惠） 0基础也能学，从基础操作到进阶用法，教你真正用起来、提高效率，学完就能上手实操。](https://mp.weixin.qq.com/s/UKSwPXVKIeCn4Gh_Spkdfw)
+

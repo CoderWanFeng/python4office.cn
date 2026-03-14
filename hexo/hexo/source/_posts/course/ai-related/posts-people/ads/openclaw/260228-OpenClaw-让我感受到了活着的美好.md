@@ -211,3 +211,13 @@ OpenClaw 让我感受到了活着的美好。
 **也许，你的故事，也会成为别人的光。**
 
 [点击加入](https://www.python4office.cn/wechat-group/)
+
+---
+
+## 🎓 推荐课程
+
+包含两门：
+
+- [龙虾安装课（9元） 从软件下载、环境配置到完整部署，一步步教到能正常使用，适合只想先把工具装好的朋友。](https://mp.weixin.qq.com/s/xT6p7mHu5o6aMAqeuXQTXg)
+- [龙虾高级课（199元，前50名优惠） 0基础也能学，从基础操作到进阶用法，教你真正用起来、提高效率，学完就能上手实操。](https://mp.weixin.qq.com/s/UKSwPXVKIeCn4Gh_Spkdfw)
+
