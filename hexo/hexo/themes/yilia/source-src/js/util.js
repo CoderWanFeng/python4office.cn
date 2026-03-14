@@ -82,6 +82,23 @@ var e = function() {
                     func();
                 }
             }
+        },
+        // 平滑滚动到指定元素
+        smoothScroll: function(target) {
+            var targetElement = document.querySelector(target);
+            if (targetElement) {
+                targetElement.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        },
+        // 平滑滚动到顶部
+        scrollToTop: function() {
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth'
+            });
         }
     }
 }();
