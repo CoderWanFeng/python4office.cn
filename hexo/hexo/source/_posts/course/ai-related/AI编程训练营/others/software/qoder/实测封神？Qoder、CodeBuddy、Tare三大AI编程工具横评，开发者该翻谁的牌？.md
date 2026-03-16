@@ -204,7 +204,7 @@ Qoder能快速“吃透”整个代码库，自动梳理依赖关系、找重构
 
 > 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
 
-![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png)
+![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/41a33db6-85a2-4525-8ff9-18fce0d0397a/img_v3_02vr_8a1f882f-6ee0-4075-b794-7104e93746ag.jpg)
 
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
