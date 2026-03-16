@@ -1,7 +1,8 @@
 ---
 title: 用 OpenClaw 搭建你的多通道 AI 网关：一个命令，让 AI 在所有平台为你工作
 date: 2026-02-28 08:54:00
-tags: 自媒体
+tags: [OpenClaw]
+
 ---
 
 <p align="center" id='进群-banner-AI'>

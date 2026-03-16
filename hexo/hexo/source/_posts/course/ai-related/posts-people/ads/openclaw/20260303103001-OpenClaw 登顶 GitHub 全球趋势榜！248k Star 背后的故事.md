@@ -1,7 +1,7 @@
 ---
 title: OpenClaw 登顶 GitHub 全球趋势榜！248k Star 背后的故事
 date: 2026-03-03 10:30:00
-tags: [OpenClaw, GitHub, AI 助手，开源项目]
+tags: [OpenClaw, 行业分析, 开源生态]
 ---
 
 # OpenClaw 登顶 GitHub 全球趋势榜！248k Star 背后的故事

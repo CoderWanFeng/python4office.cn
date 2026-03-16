@@ -1,7 +1,8 @@
 ---
 title: 新人学习 OpenClaw 完整指南：从入门到精通，看这一篇就够了
 date: 2026-02-28 09:03:00
-tags: 自媒体
+tags: [OpenClaw, 教程, 学习计划]
+
 ---
 
 <p align="center" id='进群-banner-AI'>

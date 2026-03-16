@@ -1,7 +1,7 @@
 ---
 title: ChatGPT 已死？OpenClaw 登顶背后是 AI 助手的范式转移
 date: 2026-03-03 10:40:00
-tags: [OpenClaw, ChatGPT, AI 趋势，行业分析]
+tags: [OpenClaw, 行业分析]
 ---
 
 # ChatGPT 已死？OpenClaw 登顶背后是 AI 助手的范式转移

@@ -1,7 +1,8 @@
 ---
 title: 用上 OpenClaw 后，我第一次感受到了活着的美好
 date: 2026-02-28 09:43:00
-tags: 自媒体
+tags: [OpenClaw]
+
 ---
 
 <!-- more -->
