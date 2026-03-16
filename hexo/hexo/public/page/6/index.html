@@ -226,6 +226,1070 @@ var _hmt = _hmt || [];
               <div id="js-content" class="content-ll">
                 
   
+    <article id="post-course/AI/fluent-python/04-文本与字节" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/fluent-python/04-%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E8%8A%82/">第 4 讲：文本与字节——Unicode 编码与字符串处理的艺术</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/fluent-python/04-%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E8%8A%82/" class="archive-article-date">
+  	<time datetime="2026-03-03T01:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>编码错误是 Python 程序员的噩梦，今天彻底搞懂它！</strong></p>
+<hr>
+<h2 id="🔤-Unicode-与字节"><a href="#🔤-Unicode-与字节" class="headerlink" title="🔤 Unicode 与字节"></a>🔤 Unicode 与字节</h2><h3 id="字符串-vs-字节"><a href="#字符串-vs-字节" class="headerlink" title="字符串 vs 字节"></a>字符串 vs 字节</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字符串（Unicode）</span></span><br><span class="line">s = <span class="string">&#x27;Hello 中文&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 字节序列</span></span><br><span class="line">b = s.encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解码回字符串</span></span><br><span class="line">s2 = b.decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="常见编码问题"><a href="#常见编码问题" class="headerlink" title="常见编码问题"></a>常见编码问题</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    text = some_bytes.decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span> UnicodeDecodeError:</span><br><span class="line">    <span class="comment"># 使用替换或忽略</span></span><br><span class="line">    text = some_bytes.decode(<span class="string">&#x27;gbk&#x27;</span>, errors=<span class="string">&#x27;replace&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="编码选择"><a href="#编码选择" class="headerlink" title="编码选择"></a>编码选择</h3><table>
+<thead>
+<tr>
+<th>编码</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>UTF-8</td>
+<td>通用，兼容 ASCII</td>
+</tr>
+<tr>
+<td>GBK</td>
+<td>中文环境</td>
+</tr>
+<tr>
+<td>Latin-1</td>
+<td>西欧语言</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📝-正则表达式进阶"><a href="#📝-正则表达式进阶" class="headerlink" title="📝 正则表达式进阶"></a>📝 正则表达式进阶</h2><h3 id="编译正则"><a href="#编译正则" class="headerlink" title="编译正则"></a>编译正则</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编译正则（提升性能）</span></span><br><span class="line">pattern = re.<span class="built_in">compile</span>(<span class="string">r&#x27;\d&#123;3&#125;-\d&#123;4&#125;-\d&#123;4&#125;&#x27;</span>)</span><br><span class="line">matches = pattern.findall(text)</span><br></pre></td></tr></table></figure>
+
+<h3 id="分组提取"><a href="#分组提取" class="headerlink" title="分组提取"></a>分组提取</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 提取日期</span></span><br><span class="line"><span class="keyword">match</span> = re.search(<span class="string">r&#x27;(\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)&#x27;</span>, date_string)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">match</span>:</span><br><span class="line">    year, month, day = <span class="keyword">match</span>.groups()</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用模式"><a href="#常用模式" class="headerlink" title="常用模式"></a>常用模式</h3><table>
+<thead>
+<tr>
+<th>模式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\d</td>
+<td>数字</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>字母数字下划线</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>空白字符</td>
+</tr>
+<tr>
+<td>.</td>
+<td>任意字符</td>
+</tr>
+<tr>
+<td>*</td>
+<td>0 次或多次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>1 次或多次</td>
+</tr>
+<tr>
+<td>?</td>
+<td>0 次或 1 次</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p><strong>Unicode</strong>：字符串与字节的转换。</p>
+<p><strong>编码处理</strong>：常见编码问题的解决方案。</p>
+<p><strong>正则表达式</strong>：编译、分组、常用模式。</p>
+<hr>
+<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
+<hr>
+<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="03-%E9%9B%86%E5%90%88%E4%B8%8E%E6%98%A0%E5%B0%84.md">上一讲：集合与映射</a> | <a href="05-%E5%87%BD%E6%95%B0%E5%8D%B3%E5%AF%B9%E8%B1%A1.md">下一讲：函数即对象</a> →</p>
+<hr>
+<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
+<thead>
+<tr>
+<th>平台</th>
+<th>账号/链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>微信</td>
+<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+</tr>
+<tr>
+<td>B 站</td>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+</tr>
+</tbody></table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">正则表达式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流畅的 Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">unicode</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">bytes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/fluent-python/04-%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E8%8A%82/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-course/AI/fluent-python/03-集合与映射" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/fluent-python/03-%E9%9B%86%E5%90%88%E4%B8%8E%E6%98%A0%E5%B0%84/">第 3 讲：集合与映射——高效数据处理的利器</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/fluent-python/03-%E9%9B%86%E5%90%88%E4%B8%8E%E6%98%A0%E5%B0%84/" class="archive-article-date">
+  	<time datetime="2026-03-03T01:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>去重、交集、并集，用 set 一行代码搞定！</strong></p>
+<hr>
+<h2 id="🔥-set-的高效操作"><a href="#🔥-set-的高效操作" class="headerlink" title="🔥 set 的高效操作"></a>🔥 set 的高效操作</h2><h3 id="基础运算"><a href="#基础运算" class="headerlink" title="基础运算"></a>基础运算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 快速去重</span></span><br><span class="line">items = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>]</span><br><span class="line">unique = <span class="built_in">list</span>(<span class="built_in">set</span>(items))  <span class="comment"># [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 集合运算</span></span><br><span class="line">a = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">b = &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a &amp; b)  <span class="comment"># 交集：&#123;2, 3&#125;</span></span><br><span class="line"><span class="built_in">print</span>(a | b)  <span class="comment"># 并集：&#123;1, 2, 3, 4&#125;</span></span><br><span class="line"><span class="built_in">print</span>(a - b)  <span class="comment"># 差集：&#123;1&#125;</span></span><br><span class="line"><span class="built_in">print</span>(a ^ b)  <span class="comment"># 对称差集：&#123;1, 4&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>去重</td>
+<td>set</td>
+<td>O(1) 时间复杂度</td>
+</tr>
+<tr>
+<td>成员检查</td>
+<td>set</td>
+<td>O(1) vs list 的 O(n)</td>
+</tr>
+<tr>
+<td>集合运算</td>
+<td>set</td>
+<td>内置支持</td>
+</tr>
+<tr>
+<td>保持顺序</td>
+<td>dict.fromkeys()</td>
+<td>set 无序</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📊-高级字典类型"><a href="#📊-高级字典类型" class="headerlink" title="📊 高级字典类型"></a>📊 高级字典类型</h2><h3 id="defaultdict"><a href="#defaultdict" class="headerlink" title="defaultdict"></a>defaultdict</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动初始化</span></span><br><span class="line">counts = defaultdict(<span class="built_in">int</span>)</span><br><span class="line"><span class="keyword">for</span> word <span class="keyword">in</span> [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>]:</span><br><span class="line">    counts[word] += <span class="number">1</span>  <span class="comment"># 不需要检查 key 是否存在</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 嵌套字典</span></span><br><span class="line">tree = <span class="keyword">lambda</span>: defaultdict(tree)</span><br><span class="line">users = tree()</span><br><span class="line">users[<span class="string">&#x27;harold&#x27;</span>][<span class="string">&#x27;username&#x27;</span>] = <span class="string">&#x27;bell&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Counter"><a href="#Counter" class="headerlink" title="Counter"></a>Counter</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计数</span></span><br><span class="line">words = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;cherry&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>]</span><br><span class="line">word_counts = Counter(words)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(word_counts.most_common(<span class="number">2</span>))  <span class="comment"># [(&#x27;apple&#x27;, 3), (&#x27;banana&#x27;, 1)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 集合运算</span></span><br><span class="line">c1 = Counter([<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>])</span><br><span class="line">c2 = Counter([<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(c1 &amp; c2)  <span class="comment"># Counter(&#123;&#x27;b&#x27;: 1, &#x27;c&#x27;: 1&#125;)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="OrderedDict"><a href="#OrderedDict" class="headerlink" title="OrderedDict"></a>OrderedDict</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保持插入顺序（Python 3.7+ 普通 dict 也保持顺序）</span></span><br><span class="line">od = OrderedDict()</span><br><span class="line">od[<span class="string">&#x27;a&#x27;</span>] = <span class="number">1</span></span><br><span class="line">od[<span class="string">&#x27;b&#x27;</span>] = <span class="number">2</span></span><br><span class="line">od[<span class="string">&#x27;c&#x27;</span>] = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 移动到最后</span></span><br><span class="line">od.move_to_end(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p><strong>set 操作</strong>：去重、交集、并集、差集。</p>
+<p><strong>defaultdict</strong>：自动初始化的字典。</p>
+<p><strong>Counter</strong>：强大的计数工具。</p>
+<hr>
+<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
+<hr>
+<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="02-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8.md">上一讲：数据容器深度解析</a> | <a href="04-%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E8%8A%82.md">下一讲：文本与字节</a> →</p>
+<hr>
+<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
+<thead>
+<tr>
+<th>平台</th>
+<th>账号/链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>微信</td>
+<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+</tr>
+<tr>
+<td>B 站</td>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+</tr>
+</tbody></table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">dict</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">set</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流畅的 Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">defaultdict</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/fluent-python/03-%E9%9B%86%E5%90%88%E4%B8%8E%E6%98%A0%E5%B0%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-course/AI/fluent-python/02-数据容器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/fluent-python/02-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8/">第 2 讲：数据容器深度解析——列表推导式与生成器表达式</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/fluent-python/02-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2026-03-03T01:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>同样的数据处理，为什么别人的代码更快更省内存？</strong></p>
+<p>秘密就在<strong>列表推导式</strong>和<strong>生成器表达式</strong>。</p>
+<hr>
+<h2 id="🚀-列表推导式"><a href="#🚀-列表推导式" class="headerlink" title="🚀 列表推导式"></a>🚀 列表推导式</h2><h3 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 传统循环</span></span><br><span class="line">squares = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    squares.append(x**<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表推导式（更快更简洁）</span></span><br><span class="line">squares = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 带条件筛选</span></span><br><span class="line">evens = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>) <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 多重循环</span></span><br><span class="line">combinations = [(x, y) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">&#x27;ABC&#x27;</span> <span class="keyword">for</span> y <span class="keyword">in</span> <span class="string">&#x27;123&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="性能对比"><a href="#性能对比" class="headerlink" title="性能对比"></a>性能对比</h3><p>列表推导式比传统循环快 1.5-2 倍，因为：</p>
+<ol>
+<li>避免了反复调用 append 方法</li>
+<li>内部使用优化的 C 代码</li>
+<li>减少了字节码指令数量</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> timeit</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表推导式</span></span><br><span class="line">list_comp_time = timeit.timeit(<span class="string">&#x27;[x**2 for x in range(1000)]&#x27;</span>, number=<span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 普通循环</span></span><br><span class="line">loop_time = timeit.timeit(<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">result = []</span></span><br><span class="line"><span class="string">for x in range(1000):</span></span><br><span class="line"><span class="string">    result.append(x**2)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span>, number=<span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;列表推导式：<span class="subst">&#123;list_comp_time:<span class="number">.4</span>f&#125;</span>s&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;普通循环：<span class="subst">&#123;loop_time:<span class="number">.4</span>f&#125;</span>s&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="💡-生成器表达式"><a href="#💡-生成器表达式" class="headerlink" title="💡 生成器表达式"></a>💡 生成器表达式</h2><h3 id="惰性求值"><a href="#惰性求值" class="headerlink" title="惰性求值"></a>惰性求值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列表推导式（占用内存）</span></span><br><span class="line">large_list = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000000</span>)]  <span class="comment"># 约 8MB</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成器表达式（惰性求值）</span></span><br><span class="line">large_gen = (x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000000</span>))   <span class="comment"># 几乎不占用内存</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用时才计算</span></span><br><span class="line"><span class="keyword">for</span> val <span class="keyword">in</span> large_gen:</span><br><span class="line">    <span class="keyword">if</span> val &gt; <span class="number">100</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需要多次遍历</td>
+<td>列表推导式</td>
+<td>生成器只能遍历一次</td>
+</tr>
+<tr>
+<td>数据量大</td>
+<td>生成器表达式</td>
+<td>节省内存</td>
+</tr>
+<tr>
+<td>需要索引访问</td>
+<td>列表推导式</td>
+<td>生成器不支持索引</td>
+</tr>
+<tr>
+<td>管道处理</td>
+<td>生成器表达式</td>
+<td>惰性求值更适合</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📊-字典技巧"><a href="#📊-字典技巧" class="headerlink" title="📊 字典技巧"></a>📊 字典技巧</h2><h3 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建字典</span></span><br><span class="line">word_lengths = &#123;word: <span class="built_in">len</span>(word) <span class="keyword">for</span> word <span class="keyword">in</span> [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;cherry&#x27;</span>]&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 过滤</span></span><br><span class="line">even_lengths = &#123;word: length <span class="keyword">for</span> word, length <span class="keyword">in</span> word_lengths.items() <span class="keyword">if</span> length % <span class="number">2</span> == <span class="number">0</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并字典（Python-3-9-）"><a href="#合并字典（Python-3-9-）" class="headerlink" title="合并字典（Python 3.9+）"></a>合并字典（Python 3.9+）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>&#125;</span><br><span class="line">dict2 = &#123;<span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number">4</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Python 3.9+</span></span><br><span class="line">merged = dict1 | dict2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 旧版本</span></span><br><span class="line">merged = &#123;**dict1, **dict2&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="setdefault-技巧"><a href="#setdefault-技巧" class="headerlink" title="setdefault 技巧"></a>setdefault 技巧</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计词频</span></span><br><span class="line">counts = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">    counts.setdefault(word, <span class="number">0</span>)</span><br><span class="line">    counts[word] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更优雅的方式</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line">counts = Counter(words)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p><strong>列表推导式</strong>：更快更简洁的数据处理方式。</p>
+<p><strong>生成器表达式</strong>：惰性求值，节省内存。</p>
+<p><strong>字典技巧</strong>：推导式、合并、setdefault 等实用技巧。</p>
+<hr>
+<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
+<hr>
+<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="01-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B.md">上一讲：Python 数据模型</a> | <a href="03-%E9%9B%86%E5%90%88%E4%B8%8E%E6%98%A0%E5%B0%84.md">下一讲：集合与映射</a> →</p>
+<hr>
+<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
+<thead>
+<tr>
+<th>平台</th>
+<th>账号/链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>微信</td>
+<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+</tr>
+<tr>
+<td>B 站</td>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+</tr>
+</tbody></table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流畅的 Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">列表推导式，生成器，字典</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/fluent-python/02-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-course/AI/fluent-python/01-数据模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/fluent-python/01-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/">第 1 讲：Python 数据模型——特殊方法与协议设计</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/fluent-python/01-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2026-03-03T01:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>为什么同样的功能，别人写的代码更优雅？</strong></p>
+<p>答案：<strong>Python 数据模型</strong>。掌握它，让你的类像内置类型一样好用。</p>
+<p>想象一下，你设计了一个向量类 Vector。你希望它能像数字一样相加、相乘，能打印出友好的字符串表示，能用 len() 获取维度。这些功能不是 Python 自动给你的，而是通过实现特殊方法（也叫魔术方法）来实现的。</p>
+<hr>
+<h2 id="🎯-什么是-Python-数据模型？"><a href="#🎯-什么是-Python-数据模型？" class="headerlink" title="🎯 什么是 Python 数据模型？"></a>🎯 什么是 Python 数据模型？</h2><h3 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h3><p>Python 的数据模型是一套协议和约定，它定义了对象如何与 Python 的其他部分交互。通过实现特定的特殊方法，你的对象可以：</p>
+<ul>
+<li>像数字一样运算（+、-、*、/）</li>
+<li>像序列一样索引和切片（[]）</li>
+<li>像函数一样调用（()）</li>
+<li>像上下文管理器一样使用（with）</li>
+<li>像迭代器一样遍历（for）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通写法</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(my_list) &gt; <span class="number">0</span>:</span><br><span class="line">    first = my_list[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Pythonic 写法</span></span><br><span class="line"><span class="keyword">if</span> my_list:  <span class="comment"># 调用__bool__</span></span><br><span class="line">    first = my_list[<span class="number">0</span>]  <span class="comment"># 调用__getitem__</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊方法的命名"><a href="#特殊方法的命名" class="headerlink" title="特殊方法的命名"></a>特殊方法的命名</h3><p>特殊方法都用双下划线开头和结尾，比如：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+<th>触发场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>init</strong></td>
+<td>初始化</td>
+<td>创建对象时</td>
+</tr>
+<tr>
+<td><strong>repr</strong></td>
+<td>官方字符串表示</td>
+<td>repr()、交互式解释器</td>
+</tr>
+<tr>
+<td><strong>str</strong></td>
+<td>用户友好字符串</td>
+<td>str()、print()</td>
+</tr>
+<tr>
+<td><strong>len</strong></td>
+<td>长度</td>
+<td>len()</td>
+</tr>
+<tr>
+<td><strong>getitem</strong></td>
+<td>获取元素</td>
+<td>obj[key]</td>
+</tr>
+<tr>
+<td><strong>setitem</strong></td>
+<td>设置元素</td>
+<td>obj[key] = value</td>
+</tr>
+<tr>
+<td><strong>add</strong></td>
+<td>加法</td>
+<td>a + b</td>
+</tr>
+<tr>
+<td><strong>call</strong></td>
+<td>调用</td>
+<td>obj()</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🔑-关键协议"><a href="#🔑-关键协议" class="headerlink" title="🔑 关键协议"></a>🔑 关键协议</h2><h3 id="序列协议"><a href="#序列协议" class="headerlink" title="序列协议"></a>序列协议</h3><p>实现序列协议，让你的对象像列表一样工作：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Deck</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一副扑克牌&quot;&quot;&quot;</span></span><br><span class="line">    ranks = [<span class="built_in">str</span>(n) <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">11</span>)] + <span class="built_in">list</span>(<span class="string">&#x27;JQKA&#x27;</span>)</span><br><span class="line">    suits = <span class="string">&#x27;♠♥♦♣&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self._cards = [</span><br><span class="line">            (rank, suit) <span class="keyword">for</span> suit <span class="keyword">in</span> self.suits</span><br><span class="line">            <span class="keyword">for</span> rank <span class="keyword">in</span> self.ranks</span><br><span class="line">        ]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__len__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(self._cards)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__getitem__</span>(<span class="params">self, position</span>):</span><br><span class="line">        <span class="keyword">return</span> self._cards[position]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用</span></span><br><span class="line">deck = Deck()</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(deck))      <span class="comment"># 52</span></span><br><span class="line"><span class="built_in">print</span>(deck[<span class="number">0</span>])        <span class="comment"># (&#x27;2&#x27;, &#x27;♠&#x27;)</span></span><br><span class="line"><span class="built_in">print</span>(deck[:<span class="number">5</span>])       <span class="comment"># 切片支持</span></span><br><span class="line"><span class="keyword">for</span> card <span class="keyword">in</span> deck:     <span class="comment"># 迭代支持</span></span><br><span class="line">    <span class="built_in">print</span>(card)</span><br></pre></td></tr></table></figure>
+
+<p>只实现两个方法，Deck 就支持了：</p>
+<ul>
+<li>len() 函数</li>
+<li>索引访问</li>
+<li>切片操作</li>
+<li>for 循环遍历</li>
+<li>in 运算符</li>
+</ul>
+<h3 id="数值协议"><a href="#数值协议" class="headerlink" title="数值协议"></a>数值协议</h3><p>实现数值协议，让你的对象像数字一样运算：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Vector</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&#x27;Vector(<span class="subst">&#123;self.x&#125;</span>, <span class="subst">&#123;self.y&#125;</span>)&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__add__</span>(<span class="params">self, other</span>):</span><br><span class="line">        <span class="keyword">return</span> Vector(self.x + other.x, self.y + other.y)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__mul__</span>(<span class="params">self, scalar</span>):</span><br><span class="line">        <span class="keyword">return</span> Vector(self.x * scalar, self.y * scalar)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__abs__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> (self.x ** <span class="number">2</span> + self.y ** <span class="number">2</span>) ** <span class="number">0.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用</span></span><br><span class="line">v1 = Vector(<span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">v2 = Vector(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(v1 + v2)  <span class="comment"># Vector(4, 6)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">abs</span>(v1))  <span class="comment"># 5.0</span></span><br><span class="line"><span class="built_in">print</span>(v1 * <span class="number">3</span>)   <span class="comment"># Vector(9, 12)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="上下文管理协议"><a href="#上下文管理协议" class="headerlink" title="上下文管理协议"></a>上下文管理协议</h3><p>实现上下文管理协议，让你的对象支持 with 语句：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">FileManager</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, filename</span>):</span><br><span class="line">        self.filename = filename</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        self.file = <span class="built_in">open</span>(self.filename, <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> self.file</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_val, exc_tb</span>):</span><br><span class="line">        self.file.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用</span></span><br><span class="line"><span class="keyword">with</span> FileManager(<span class="string">&#x27;test.txt&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    content = f.read()</span><br><span class="line"><span class="comment"># 自动关闭文件</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="💡-实战技巧"><a href="#💡-实战技巧" class="headerlink" title="💡 实战技巧"></a>💡 实战技巧</h2><h3 id="1-repr-vs-str"><a href="#1-repr-vs-str" class="headerlink" title="1. repr vs str"></a>1. <strong>repr</strong> vs <strong>str</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># 官方表示，用于调试</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;Person(&#x27;<span class="subst">&#123;self.name&#125;</span>&#x27;, <span class="subst">&#123;self.age&#125;</span>)&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># 用户友好表示，用于打印</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> (<span class="subst">&#123;self.age&#125;</span>岁)&quot;</span></span><br><span class="line"></span><br><span class="line">p = Person(<span class="string">&quot;张三&quot;</span>, <span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">repr</span>(p))  <span class="comment"># Person(&#x27;张三&#x27;, 30)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>(p))   <span class="comment"># 张三 (30 岁)</span></span><br><span class="line"><span class="built_in">print</span>(p)        <span class="comment"># 张三 (30 岁) - print 调用__str__</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-让类支持迭代"><a href="#2-让类支持迭代" class="headerlink" title="2. 让类支持迭代"></a>2. 让类支持迭代</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyRange</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, start, end</span>):</span><br><span class="line">        self.start = start</span><br><span class="line">        self.end = end</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__iter__</span>(<span class="params">self</span>):</span><br><span class="line">        self.current = self.start</span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__next__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> self.current &gt;= self.end:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration</span><br><span class="line">        value = self.current</span><br><span class="line">        self.current += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> MyRange(<span class="number">1</span>, <span class="number">5</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)  <span class="comment"># 1, 2, 3, 4</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-鸭子类型"><a href="#3-鸭子类型" class="headerlink" title="3. 鸭子类型"></a>3. 鸭子类型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不关注类型，只关注行为</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">print_length</span>(<span class="params">obj</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">len</span>(obj))  <span class="comment"># 任何有__len__的对象都可以</span></span><br><span class="line"></span><br><span class="line">print_length([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])      <span class="comment"># 3</span></span><br><span class="line">print_length(<span class="string">&quot;hello&quot;</span>)        <span class="comment"># 5</span></span><br><span class="line">print_length(&#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>&#125;)  <span class="comment"># 2</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="⚠️-常见陷阱"><a href="#⚠️-常见陷阱" class="headerlink" title="⚠️ 常见陷阱"></a>⚠️ 常见陷阱</h2><h3 id="1-可变默认参数"><a href="#1-可变默认参数" class="headerlink" title="1. 可变默认参数"></a>1. 可变默认参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 错误示例</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BadExample</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, items=[]</span>):  <span class="comment"># 危险！</span></span><br><span class="line">        self.items = items</span><br><span class="line"></span><br><span class="line"><span class="comment"># 正确做法</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GoodExample</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, items=<span class="literal">None</span></span>):</span><br><span class="line">        self.items = items <span class="keyword">if</span> items <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">else</span> []</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-忘记调用父类方法"><a href="#2-忘记调用父类方法" class="headerlink" title="2. 忘记调用父类方法"></a>2. 忘记调用父类方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 错误示例</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Child</span>(<span class="title class_ inherited__">Parent</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, value</span>):</span><br><span class="line">        self.value = value</span><br><span class="line">        <span class="comment"># 忘记调用 super().__init__()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 正确做法</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Child</span>(<span class="title class_ inherited__">Parent</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, value</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        self.value = value</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p>通过本讲，我们理解了：</p>
+<p><strong>数据模型</strong>：Python 对象交互的协议和约定。</p>
+<p><strong>特殊方法</strong>：让自定义对象像内置类型一样工作。</p>
+<p><strong>关键协议</strong>：序列协议、数值协议、上下文管理协议等。</p>
+<p><strong>实战技巧</strong>：<strong>repr</strong> vs __str__、迭代器实现、鸭子类型。</p>
+<p><strong>常见陷阱</strong>：可变默认参数、忘记调用父类方法。</p>
+<hr>
+<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> - Eric Matthes 著</p>
+<p>Python 零基础入门首选。本书分为基础语法和项目实战两部分，适合完全没有编程经验的读者。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> - Luciano Ramalho 著</p>
+<p>Python 进阶经典之作。深入讲解 Python 的高级特性，包括数据模型、函数式编程、面向对象、元编程等。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong> - Anthony Shaw 著</p>
+<p>本书深入讲解 CPython 内部机制，从内存管理到字节码执行，从对象模型到并发编程。配合本课程学习，效果更佳。</p>
+<p><strong>学习路线建议：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2.md">课程大纲</a> | <a href="02-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8.md">下一讲：数据容器深度解析</a> →</p>
+<hr>
+<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
+<thead>
+<tr>
+<th>平台</th>
+<th>账号/链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>微信</td>
+<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+</tr>
+<tr>
+<td>微博</td>
+<td><a target="_blank" rel="noopener" href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+</tr>
+<tr>
+<td>知乎</td>
+<td><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+</tr>
+<tr>
+<td>抖音</td>
+<td><a target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+</tr>
+<tr>
+<td>小红书</td>
+<td><a target="_blank" rel="noopener" href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+</tr>
+<tr>
+<td>B 站</td>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+</tr>
+</tbody></table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流畅的 Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据模型，魔术方法，协议</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/fluent-python/01-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-course/AI/fluent-python/00-课程大纲" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/fluent-python/00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/">《流畅的 Python》20 讲 · 高阶编程实战课程大纲</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/fluent-python/00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/" class="archive-article-date">
+  	<time datetime="2026-03-03T00:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="《流畅的-Python》20-讲-·-高阶编程实战课程"><a href="#《流畅的-Python》20-讲-·-高阶编程实战课程" class="headerlink" title="《流畅的 Python》20 讲 · 高阶编程实战课程"></a>《流畅的 Python》20 讲 · 高阶编程实战课程</h1><blockquote>
+<p>基于图灵奖级经典著作《Fluent Python》（流畅的 Python）第 2 版<br>专为有基础的 Python 开发者设计，带你从”会用”到”精通”</p>
+</blockquote>
+<p align="center">
+  <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
+  </a>
+  <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office/">
+    <img src="https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark" alt="gitee star">
+  </a>
+  <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
+    <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
+  </a>
+  <a href="https://www.python4office.cn/wechat-group/">
+    <img src="https://img.shields.io/badge/加入-AI 交流群-brightgreen" alt="AI 交流群">
+  </a>
+</p>
+
+<hr>
+<h2 id="📚-课程介绍"><a href="#📚-课程介绍" class="headerlink" title="📚 课程介绍"></a>📚 课程介绍</h2><p>《流畅的 Python》是 Python 进阶领域的经典著作，由 Luciano Ramalho 撰写。本课程基于该书第 2 版，结合 Python 3.10+ 新特性，带你深入理解 Python 的设计哲学和高级特性。</p>
+<p><strong>适合人群</strong>：</p>
+<ul>
+<li>有 1-3 年 Python 使用经验的开发者</li>
+<li>想从”会用 Python”进阶到”精通 Python”</li>
+<li>想写出更 Pythonic、更优雅代码的程序员</li>
+<li>准备面试高级 Python 岗位的求职者</li>
+</ul>
+<p><strong>学完你将掌握</strong>：</p>
+<ul>
+<li>深入理解 Python 数据模型和对象系统</li>
+<li>掌握函数式编程和面向对象的高级用法</li>
+<li>熟练运用元编程、描述符、装饰器等高级特性</li>
+<li>理解并发编程模型和异步编程</li>
+<li>写出性能更优、更易维护的代码</li>
+</ul>
+<hr>
+<h2 id="📖-课程目录（20-讲）"><a href="#📖-课程目录（20-讲）" class="headerlink" title="📖 课程目录（20 讲）"></a>📖 课程目录（20 讲）</h2><h3 id="第一部分：Python-基础与数据模型（第-1-4-讲）"><a href="#第一部分：Python-基础与数据模型（第-1-4-讲）" class="headerlink" title="第一部分：Python 基础与数据模型（第 1-4 讲）"></a>第一部分：Python 基础与数据模型（第 1-4 讲）</h3><p><strong>第 1 讲：Python 数据模型 - 一切皆对象</strong></p>
+<ul>
+<li>特殊方法（魔术方法）的作用</li>
+<li>实现序列和可迭代对象</li>
+<li>不可变对象 vs 可变对象</li>
+</ul>
+<p><strong>第 2 讲：数据容器 - 列表、元组、字典的深度使用</strong></p>
+<ul>
+<li>列表推导式的高级用法</li>
+<li>元组的拆包和命名元组</li>
+<li>字典的内存优化和性能分析</li>
+</ul>
+<p><strong>第 3 讲：集合与映射 - 高效数据处理</strong></p>
+<ul>
+<li>set 和 frozenset 的实际应用</li>
+<li>defaultdict、OrderedDict、Counter 的妙用</li>
+<li>映射视图和集合操作</li>
+</ul>
+<p><strong>第 4 讲：文本与字节 - 字符串处理的艺术</strong></p>
+<ul>
+<li>Unicode 编码详解</li>
+<li>字节序列和内存视图</li>
+<li>正则表达式的高级技巧</li>
+</ul>
+<h3 id="第二部分：函数式编程（第-5-8-讲）"><a href="#第二部分：函数式编程（第-5-8-讲）" class="headerlink" title="第二部分：函数式编程（第 5-8 讲）"></a>第二部分：函数式编程（第 5-8 讲）</h3><p><strong>第 5 讲：函数即对象 - 一等公民的威力</strong></p>
+<ul>
+<li>高阶函数的实际应用</li>
+<li>柯里化和偏函数</li>
+<li>自由变量和闭包</li>
+</ul>
+<p><strong>第 6 讲：装饰器 - 优雅的代码增强</strong></p>
+<ul>
+<li>函数装饰器的实现原理</li>
+<li>参数化装饰器</li>
+<li>类装饰器和装饰器类</li>
+</ul>
+<p><strong>第 7 讲：生成器与协程 - 惰性求值的力量</strong></p>
+<ul>
+<li>生成器函数的进阶用法</li>
+<li>yield from 语法</li>
+<li>协程的概念和实际应用</li>
+</ul>
+<p><strong>第 8 讲：可调用对象 - 超越普通函数</strong></p>
+<ul>
+<li>实现__call__方法</li>
+<li>策略模式与函数对象</li>
+<li>命令模式实战</li>
+</ul>
+<h3 id="第三部分：面向对象编程（第-9-13-讲）"><a href="#第三部分：面向对象编程（第-9-13-讲）" class="headerlink" title="第三部分：面向对象编程（第 9-13 讲）"></a>第三部分：面向对象编程（第 9-13 讲）</h3><p><strong>第 9 讲：对象引用与可变性</strong></p>
+<ul>
+<li>可变对象的陷阱</li>
+<li>防御性编程技巧</li>
+<li>不可变数据结构的设计</li>
+</ul>
+<p><strong>第 10 讲：序列和多态</strong></p>
+<ul>
+<li>实现自定义序列类型</li>
+<li>切片操作的原理</li>
+<li>多态与鸭子类型</li>
+</ul>
+<p><strong>第 11 讲：继承与组合 - 代码复用的艺术</strong></p>
+<ul>
+<li>多重继承和 MRO</li>
+<li> mixins 模式</li>
+<li>组合优于继承的实战</li>
+</ul>
+<p><strong>第 12 讲：接口与协议 - Python 式的抽象</strong></p>
+<ul>
+<li>抽象基类（ABC）的使用</li>
+<li>协议（Protocol）类型提示</li>
+<li>结构子类型化</li>
+</ul>
+<p><strong>第 13 讲：描述符 - 属性访问的魔法</strong></p>
+<ul>
+<li>描述符协议详解</li>
+<li>验证描述符的实现</li>
+<li>描述符与属性的交互</li>
+</ul>
+<h3 id="第四部分：元编程（第-14-16-讲）"><a href="#第四部分：元编程（第-14-16-讲）" class="headerlink" title="第四部分：元编程（第 14-16 讲）"></a>第四部分：元编程（第 14-16 讲）</h3><p><strong>第 14 讲：动态属性和特性</strong></p>
+<ul>
+<li><strong>getattr__和__getattribute</strong></li>
+<li>__slots__的内存优化</li>
+<li>动态属性验证</li>
+</ul>
+<p><strong>第 15 讲：类元编程 - 元类详解</strong></p>
+<ul>
+<li>元类的工作原理</li>
+<li>实现自定义元类</li>
+<li>元类的实际应用场景</li>
+</ul>
+<p><strong>第 16 讲：运行时类型检查与类型提示</strong></p>
+<ul>
+<li>typing 模块深度使用</li>
+<li>泛型和类型变量</li>
+<li>静态类型检查工具</li>
+</ul>
+<h3 id="第五部分：并发与性能（第-17-20-讲）"><a href="#第五部分：并发与性能（第-17-20-讲）" class="headerlink" title="第五部分：并发与性能（第 17-20 讲）"></a>第五部分：并发与性能（第 17-20 讲）</h3><p><strong>第 17 讲：并发编程模型</strong></p>
+<ul>
+<li>线程与进程的选择</li>
+<li>GIL 的影响和应对</li>
+<li>线程安全的数据结构</li>
+</ul>
+<p><strong>第 18 讲：异步编程 - asyncio 实战</strong></p>
+<ul>
+<li>async/await 语法详解</li>
+<li>asyncio 事件循环</li>
+<li>异步 IO 实际应用</li>
+</ul>
+<p><strong>第 19 讲：性能优化技巧</strong></p>
+<ul>
+<li>性能分析工具（cProfile、line_profiler）</li>
+<li>内存优化策略</li>
+<li>使用 C 扩展加速</li>
+</ul>
+<p><strong>第 20 讲：最佳实践与代码规范</strong></p>
+<ul>
+<li>PEP 8 进阶指南</li>
+<li>代码重构技巧</li>
+<li>大型项目的组织方式</li>
+</ul>
+<hr>
+<h2 id="🎁-配套资源"><a href="#🎁-配套资源" class="headerlink" title="🎁 配套资源"></a>🎁 配套资源</h2><p>每讲包含：</p>
+<ul>
+<li>✅ 详细文字教程（本仓库文章）</li>
+<li>✅ 完整代码示例（GitHub 仓库）</li>
+<li>✅ 实战练习题</li>
+<li>✅ 常见问题解答</li>
+</ul>
+<p><strong>代码仓库</strong>：</p>
+<ul>
+<li>GitHub: <a target="_blank" rel="noopener" href="https://github.com/CoderWanFeng/fluent-python-course">https://github.com/CoderWanFeng/fluent-python-course</a></li>
+<li>Gitee: <a target="_blank" rel="noopener" href="https://gitee.com/CoderWanFeng/fluent-python-course">https://gitee.com/CoderWanFeng/fluent-python-course</a></li>
+<li>AtomGit: <a target="_blank" rel="noopener" href="https://atomgit.com/CoderWanFeng/fluent-python-course">https://atomgit.com/CoderWanFeng/fluent-python-course</a></li>
+</ul>
+<hr>
+<h2 id="💬-学习社区"><a href="#💬-学习社区" class="headerlink" title="💬 学习社区"></a>💬 学习社区</h2><p>加入我们的学习交流群，一起讨论、一起进步：</p>
+<p align="center">
+  <a target="_blank" href="https://www.python4office.cn/wechat-group/">
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="80%">
+  </a>
+</p>
+
+<p><strong>微信</strong>：python-office（备注：流畅 Python）</p>
+<hr>
+<h2 id="📅-更新计划"><a href="#📅-更新计划" class="headerlink" title="📅 更新计划"></a>📅 更新计划</h2><ul>
+<li>2026 年 3 月：发布第 1-5 讲</li>
+<li>2026 年 4 月：发布第 6-10 讲</li>
+<li>2026 年 5 月：发布第 11-15 讲</li>
+<li>2026 年 6 月：发布第 16-20 讲</li>
+</ul>
+<hr>
+<h2 id="🔗-相关课程"><a href="#🔗-相关课程" class="headerlink" title="🔗 相关课程"></a>🔗 相关课程</h2><p>本课程与以下课程形成完整体系：</p>
+<ol>
+<li><strong>Python 入门课</strong>：适合零基础学员</li>
+<li><strong>Python 自动化办公</strong>：专注办公场景</li>
+<li><strong>Python 数据分析</strong>：数据科学方向</li>
+<li><strong>Python 高级课</strong>：已发布的进阶内容</li>
+</ol>
+<p>这套《流畅的 Python》课程将更深入地讲解 Python 语言特性和设计哲学。</p>
+<hr>
+<p><strong>程序员晚枫</strong> 专注 AI 编程培训，带你从入门到精通。</p>
+<blockquote>
+<p>关注我，获取更多 Python 和 AI 编程干货！</p>
+</blockquote>
+<hr>
+<h2 id="📚-推荐图书"><a href="#📚-推荐图书" class="headerlink" title="📚 推荐图书"></a>📚 推荐图书</h2><p><strong>购买正版</strong>：<a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></p>
+<hr>
+<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
+<thead>
+<tr>
+<th>平台</th>
+<th>账号/链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>微信</td>
+<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+</tr>
+<tr>
+<td>微博</td>
+<td><a target="_blank" rel="noopener" href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+</tr>
+<tr>
+<td>知乎</td>
+<td><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+</tr>
+<tr>
+<td>抖音</td>
+<td><a target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+</tr>
+<tr>
+<td>小红书</td>
+<td><a target="_blank" rel="noopener" href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+</tr>
+<tr>
+<td>B 站</td>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+</tr>
+</tbody></table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流畅的 Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">高级编程，课程大纲</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/fluent-python/00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-course/ai-related/posts-people/ads/openclaw/260303-0304直播" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1448,409 +2512,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-course/AI/ai-automation-office/20260302021001-第10讲-AI连接各种应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/ai-automation-office/20260302021001-%E7%AC%AC10%E8%AE%B2-AI%E8%BF%9E%E6%8E%A5%E5%90%84%E7%A7%8D%E5%BA%94%E7%94%A8/">第 10 讲：AI 连接各种应用 - 钉钉/飞书/企业微信自动化</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/ai-automation-office/20260302021001-%E7%AC%AC10%E8%AE%B2-AI%E8%BF%9E%E6%8E%A5%E5%90%84%E7%A7%8D%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2026-03-02T08:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
-    </a>
-</p>
-        
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302021001-%E7%AC%AC10%E8%AE%B2-AI%E8%BF%9E%E6%8E%A5%E5%90%84%E7%A7%8D%E5%BA%94%E7%94%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">AI 自动化，工作流，企业应用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302021001-%E7%AC%AC10%E8%AE%B2-AI%E8%BF%9E%E6%8E%A5%E5%90%84%E7%A7%8D%E5%BA%94%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-course/AI/ai-automation-office/20260302020901-第9讲-文档自动化实战" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/ai-automation-office/20260302020901-%E7%AC%AC9%E8%AE%B2-%E6%96%87%E6%A1%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/">第 9 讲：文档自动化实战 - 批量生成与自动归档</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/ai-automation-office/20260302020901-%E7%AC%AC9%E8%AE%B2-%E6%96%87%E6%A1%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/" class="archive-article-date">
-  	<time datetime="2026-03-02T08:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
-    </a>
-</p>
-        
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302020901-%E7%AC%AC9%E8%AE%B2-%E6%96%87%E6%A1%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">AI 自动化，文档管理，批量处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302020901-%E7%AC%AC9%E8%AE%B2-%E6%96%87%E6%A1%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-course/AI/ai-automation-office/20260302020801-第8讲-AI做PPT" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/ai-automation-office/20260302020801-%E7%AC%AC8%E8%AE%B2-AI%E5%81%9APPT/">第 8 讲：AI 做 PPT - 一键生成精美演示文稿</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/ai-automation-office/20260302020801-%E7%AC%AC8%E8%AE%B2-AI%E5%81%9APPT/" class="archive-article-date">
-  	<time datetime="2026-03-02T08:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
-    </a>
-</p>
-        
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302020801-%E7%AC%AC8%E8%AE%B2-AI%E5%81%9APPT/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">AI 自动化，PPT，演示文稿</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302020801-%E7%AC%AC8%E8%AE%B2-AI%E5%81%9APPT/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-course/AI/ai-automation-office/20260302020701-第7讲-AI写Word文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/ai-automation-office/20260302020701-%E7%AC%AC7%E8%AE%B2-AI%E5%86%99Word%E6%96%87%E6%A1%A3/">第 7 讲：AI 写 Word 文档 - 10 分钟搞定工作报告</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/ai-automation-office/20260302020701-%E7%AC%AC7%E8%AE%B2-AI%E5%86%99Word%E6%96%87%E6%A1%A3/" class="archive-article-date">
-  	<time datetime="2026-03-02T08:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
-    </a>
-</p>
-        
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302020701-%E7%AC%AC7%E8%AE%B2-AI%E5%86%99Word%E6%96%87%E6%A1%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">AI 自动化，Word，文档写作</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302020701-%E7%AC%AC7%E8%AE%B2-AI%E5%86%99Word%E6%96%87%E6%A1%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-course/AI/ai-automation-office/20260302020601-第6讲-Excel自动化实战" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/ai-automation-office/20260302020601-%E7%AC%AC6%E8%AE%B2-Excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/">第 6 讲：Excel 自动化实战 - 批量处理与自动邮件</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/ai-automation-office/20260302020601-%E7%AC%AC6%E8%AE%B2-Excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/" class="archive-article-date">
-  	<time datetime="2026-03-02T08:25:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
-    </a>
-</p>
-        
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302020601-%E7%AC%AC6%E8%AE%B2-Excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI 自动化，Excel，批量处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/ai-automation-office/20260302020601-%E7%AC%AC6%E8%AE%B2-Excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/72/">72</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/73/">73</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -2023,15 +2687,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ai</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">机器人</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2383,15 +3047,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">10讲少儿编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">gpt</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">国产</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">10讲少儿编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2688,54 +3352,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">大佬故事</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AI 自动化，办公效率，副业</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">AI 自动化，办公工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AI 自动化，提示词</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI 自动化，Excel，数据处理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI 自动化，Excel，数据报表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI 自动化，Excel，批量处理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">AI 自动化，Word，文档写作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AI 自动化，PPT，演示文稿</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">AI 自动化，文档管理，批量处理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AI 自动化，工作流，企业应用</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI 自动化，工作流设计，效率提升</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AI 自动化，毕业项目，变现</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3395,19 +4011,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AI网关</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">多通道消息</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">安装部署</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AI网关</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">多通道消息</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3420,18 +4036,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AI对话</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">openclaw.json</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">参数调优</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3536,6 +4140,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">负载均衡</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">openclaw.json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">参数调优</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4027,6 +4643,54 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AI 自动化，办公效率，副业</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">AI 自动化，办公工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">AI 自动化，提示词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI 自动化，Excel，数据处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI 自动化，Excel，数据报表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI 自动化，Excel，批量处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">AI 自动化，Word，文档写作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">AI 自动化，PPT，演示文稿</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">AI 自动化，文档管理，批量处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">AI 自动化，工作流，企业应用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI 自动化，工作流设计，效率提升</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AI 自动化，毕业项目，变现</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">项目</a>
               </li>
              
@@ -4159,6 +4823,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">付费咨询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">咨询</a>
               </li>
              
@@ -4227,10 +4895,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">付费咨询</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">大厂对比</a>
               </li>
              
@@ -4244,6 +4908,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">腾讯投资</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">案例库，实战项目，资源分享</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">案例库，AI 编程，行业分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">案例库，使用教程，新手入门</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">案例库，幕后故事，开发心得</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">案例库，学习资源，对比评测</a>
               </li>
             
             <div class="clearfix"></div>
