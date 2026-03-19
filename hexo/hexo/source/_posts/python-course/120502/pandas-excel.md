@@ -22,11 +22,7 @@ tags: pandas
 
 
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 如果你对副业感兴趣，也可以免费订阅我的副业项目专栏：[副业信息差](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk0MjYzNTI3MQ==&action=getalbum&album_id=3342868959406227458&scene=173&subscene=&sessionid=undefined&enterid=0&from_msgid=2247483864&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 
 ## 1对1技术咨询

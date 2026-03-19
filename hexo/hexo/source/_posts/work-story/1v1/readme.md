@@ -83,11 +83,7 @@ tags: 1v1
 
 
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 ## 3、学习资料
 
 下面是我自己原创/整理的，帮助小白快速入门Python的学习资料，您也可以看看。👇

@@ -39,11 +39,7 @@ tags: 社区活动
 
 
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 
 > 如果**群聊超过200人**，更活跃一些，只是不能扫码加入了，需要加入也**可以添加我的微信，我邀请你**，点击直达👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)。一定要备注：进大群。

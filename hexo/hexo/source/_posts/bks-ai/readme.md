@@ -58,11 +58,10 @@ tags: 白开水 AI社区
 
 ## 👥 联合创始人
 
-**晚枫**  
-📺 [B 站](https://space.bilibili.com/259649365) · 📱 [公众号](https://mp.weixin.qq.com/s/rJh-vF4GHG1o-8Dehe8wTg) · 📕 [小红书](https://www.xiaohongshu.com/user/profile/611dcb820000000001014aca)
-
-**昭意**  
-📕 [小红书](https://www.xiaohongshu.com/user/profile/652b97f6000000002a036582) · 📱 [公众号](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww)
+| 创始人 | 简介 | 社交平台 |
+|--------|------|----------|
+| **晚枫** | Python 中国组委会成员<br>腾讯云创作之星<br>专注AI编程培训 | 📺 [B 站@Python 自动化办公社区](https://space.bilibili.com/259649365)<br>📱 [公众号@白开水 AI](https://mp.weixin.qq.com/s/rJh-vF4GHG1o-8Dehe8wTg)<br>📕 [小红书@程序员晚枫](https://www.xiaohongshu.com/user/profile/611dcb820000000001014aca) |
+| **昭意** | 白开水 AI 社区联创<br>AI 应用实战派 | 📕 [小红书](https://www.xiaohongshu.com/user/profile/652b97f6000000002a036582)<br>📱 [公众号](https://mp.weixin.qq.com/s/QIMImQAQxJz8QDUluzY0Ww) |
 
 ---
 
@@ -70,10 +69,12 @@ tags: 白开水 AI社区
 
 | 时间 | 地点 | 分享主题 |
 |------|------|----------|
-| 2025.11.29 | 重庆光电园 | 待整理 |
-| 2025.12.5 | 西南大学（北碚校区） | [AtomGit"源启高校"活动回顾](https://mp.weixin.qq.com/s/exkUPXHebta5q2m22uc0Mg) |
-| 2025.12.11 | 阿里中心 · 重庆 | [用 Qoder 打造开源项目](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ) |
+| 2026.03.15 | 重庆市渝北区 · 三狼公园 6 号大会议室| [重庆AI爱好者集合！"养虾"大会：从入门到实战](https://cloud.tencent.com/developer/salon/salon-2431) |
+| 2026.01.17 | 重庆理工大学（花溪校区） | [重庆理工大学"智汇未来"AI 技术沙龙](https://cs.cqut.edu.cn/info/1035/8680.htm) |
 | 2025.12.27 | 渝客松 · 重庆 | [我把 Qoder 当同事](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ) |
+| 2025.12.11 | 阿里中心 · 重庆 | [用 Qoder 打造开源项目](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ) |
+| 2025.12.5 | 西南大学（北碚校区） | [AtomGit"源启高校"活动回顾](https://mp.weixin.qq.com/s/exkUPXHebta5q2m22uc0Mg) |
+| 2025.11.29 | 重庆市渝北区 · 三狼公园 6 号大会议室 | [G-Star Gathering Day · 重庆站：AI × 开源实践](https://blog.csdn.net/csdn_codechina/article/details/154834970) |
 
 ---
 

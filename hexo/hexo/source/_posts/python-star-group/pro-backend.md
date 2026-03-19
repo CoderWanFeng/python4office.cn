@@ -38,11 +38,7 @@ tags:
 
 
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 ##　我的1对1答疑服务
 你好，我是Python程序员晚枫，我的微信：[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)

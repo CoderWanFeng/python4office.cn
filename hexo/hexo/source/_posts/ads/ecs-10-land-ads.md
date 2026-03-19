@@ -40,11 +40,7 @@ tags: 福利
 以上仅是简单介绍，如果想要了解更多信息，可以加入读者交流群。👇
 
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 ## 相关阅读
 

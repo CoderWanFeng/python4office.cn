@@ -29,11 +29,7 @@ tags: 原创课程
 
 
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 # 读者福利
 
 做了几年自媒体了，整理了一些互联网撸羊毛的方法，长期有效。👇

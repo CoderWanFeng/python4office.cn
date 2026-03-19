@@ -336,11 +336,7 @@ AI自动化的核心，从来不是拥有工具，而是让工具真正落地干
 🔗 **官网直达**：[https://www.python-office.com/openclaw/](https://www.python-office.com/openclaw/)  
 💬 **交流互动**：扫码加入OpenClaw中文交流群，一起解锁更多玩法～  
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 
 ---

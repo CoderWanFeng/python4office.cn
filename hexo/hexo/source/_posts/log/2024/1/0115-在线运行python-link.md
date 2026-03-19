@@ -22,11 +22,7 @@ tags: 自动化办公
 进群可以**领取Python课程**
 
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 ## 相关阅读
 

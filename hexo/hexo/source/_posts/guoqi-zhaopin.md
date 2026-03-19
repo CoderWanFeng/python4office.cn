@@ -51,11 +51,7 @@ tags: 招聘
 
 
 
-<p align="center" id='AI交流群'>
-    <a>
-    <img src="https://cos.python-office.com/group%2Ffree-group.jpg" width="250" height='350'/>
-    </a>   
-</p>
+![](https://cos.python-office.com/group%2Ffree-group.jpg)
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
