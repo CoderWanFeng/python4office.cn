@@ -14,4 +14,4 @@ tags: [wwp,c语言]
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)

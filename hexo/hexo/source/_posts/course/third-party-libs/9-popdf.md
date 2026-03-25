@@ -4,7 +4,7 @@ date: 2024-12-08 10:16:17
 tags: [ 第三方库,自动化办公,pdf ]
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)，今天给大家分享一个PDF自动化办公的第三方库：popdf。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，今天给大家分享一个PDF自动化办公的第三方库：popdf。
 
 > 源码地址：[https://github.com/CoderWanFeng/popdf](https://github.com/CoderWanFeng/popdf)
 
@@ -77,7 +77,7 @@ popdf.add_text_watermark(input_file='你的PDF文件路径.pdf', point=(50, 50),
 ## 相关课程
 
 - [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 - [给小白的《5讲 · Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 
 ---
@@ -94,4 +94,4 @@ popdf.add_text_watermark(input_file='你的PDF文件路径.pdf', point=(50, 50),
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。

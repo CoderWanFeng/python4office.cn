@@ -157,7 +157,7 @@ OpenClaw 是一个让你重新掌控时间的开始，一个让你**重新感受
 ## 延伸阅读
 
 - [新人学习 OpenClaw 完整指南](https://mp.weixin.qq.com/s/xxx)
-- [学 AI 编程别瞎忙！3 步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学 AI 编程别瞎忙！3 步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 
 ---
 
@@ -189,7 +189,7 @@ OpenClaw 只是一个开始。
 > "晚枫的课程，最大的特点不是教你写代码，而是教你**用 AI 解决问题**。"
 > —— 已毕业学员反馈
 
-**👉 [点击了解详情，开启你的 AI 编程之旅](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
+**👉 [点击了解详情，开启你的 AI 编程之旅](https://www.bilibili.com/cheese/play/ss982042944)**
 
 ---
 
@@ -201,7 +201,7 @@ OpenClaw 让我感受到了活着的美好。
 
 期待在训练营见到你，一起成为**AI 时代的主人**，而不是旁观者。
 
-[点击报名](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+[点击报名](https://www.bilibili.com/cheese/play/ss982042944)
 
 ---
 

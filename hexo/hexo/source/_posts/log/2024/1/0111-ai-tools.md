@@ -5,7 +5,7 @@ tags: AI
 ---
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai/%E7%9B%98%E7%82%B92023/cover.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)，今天给大家分享3个我用过的AI工具。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，今天给大家分享3个我用过的AI工具。
 
 国外的工具这里就不推荐了，推荐了你也不能用。今天只推荐几个国内也能用的。
 
@@ -66,7 +66,7 @@ AI绘画很火，也很好玩，但是国内开放接口给大家的，腾讯估
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。

@@ -4,7 +4,7 @@ date: 2024-05-29 01:25:17
 tags: python-office
 ---
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)，有一个10w+关注的B站账号：Python自动化办公社区，帮助小白快速学习Python。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，有一个10w+关注的B站账号：Python自动化办公社区，帮助小白快速学习Python。
 
 2年前发布了一个开源项目：python-office，目前在GitHub上有800+⭐，最近在开发新功能时感觉Python知识有点不够用了。
 
@@ -88,7 +88,7 @@ tags: python-office
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。
