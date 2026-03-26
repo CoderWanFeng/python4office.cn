@@ -14,6 +14,21 @@ tags: 白开水 AI社区
 
 ---
 
+## 🌐 专属网站
+
+> 白开水 AI 社区自建工具矩阵，覆盖 AI 导航、排版工具、课程中心等
+
+| 类别 | 网站名称 | 地址 | 功能说明 |
+|------|----------|------|----------|
+| 🧠 AI 导航 | 白开水 AI 导航站 | [python4office.cn/ai-nav](https://python4office.cn/ai-nav/) | 500+ AI 工具分类聚合，快速找到所需工具 |
+| ✂️ 排版工具 | Markdown 转公众号 | [python4office.cn/md2mp](https://python4office.cn/md2mp/) | Markdown 一键转微信公众号排版 |
+| 📚 课程中心 | 全部课程 | [python4office.cn/bks-ai/course/all](https://python4office.cn/bks-ai/course/all/) | 10 套完整课程，从入门到进阶 |
+| 💻 项目官网 | Python 办公自动化 | [python-office.com](https://www.python-office.com/) | 60 套 Python 课程合集 + 开源项目 |
+| 🦞 OpenClaw | OpenClaw 教程 | [python-office.com/openclaw](https://www.python-office.com/openclaw/) | AI 智能助手部署与使用教程 |
+| 📈 博客主站 | python4office.cn | [python4office.cn](https://www.python4office.cn/) | 技术文章、教程、资源合集 |
+
+---
+
 ## 📚 课程中心
 
 > 10 套完整课程，从入门到进阶，总有一套适合你
