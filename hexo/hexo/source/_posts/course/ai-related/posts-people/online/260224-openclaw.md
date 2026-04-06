@@ -83,7 +83,7 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 > 本教程仅限加入我[AI编程实战训练营](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)朋友领取，还没加入课程的朋友，可以继续往下看，加一下课程。
 
 
-![课程详情](https://raw.atomgit.com/user-images/assets/5027920/9f72b536-3155-4647-b72d-b4abbb6b8027/2edd7c711adf0f69e3e5542035fe29ab.jpg '2edd7c711adf0f69e3e5542035fe29ab.jpg')
+![课程详情](https://raw.atomgit.com/user-images/assets/5027920/9f72b536-3155-4647-b72d-b4abbb6b8027/2edd7c711adf0f69e3e5542035fe29ab.jpg)
 
 
 ---
