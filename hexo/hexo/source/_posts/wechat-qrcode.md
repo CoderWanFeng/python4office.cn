@@ -34,14 +34,15 @@ tags: 联系我
 关于我：
 - 985硕士，编程博主，开源作者
 - Python中国组委会成员、PSF Memeber
-- 全网粉丝40w+，Python教程播放量200w+，5年+转行程序员的咨询经验
+- 全网粉丝40w+，视频教程播放量1000w+
 
 
 # 1、加我好友
 
-直接扫码添加好友，备注里，请**说明来意**，否则不通过。
+添加好友，备注里请**说明来意**，否则不通过。
 
-![点我查看微信二维码](https://cos.python-office.com/wechat/wechat.jpg)
+- 商务合作，请添加微信号：python-office，这个号只聊付费合作。非合作，只需咨询/交流，请加入⬇️群后私信群主
+- 读者粉丝，请加入AI 学习交流群：[点我加入](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)
 
 
 # 2、AI编程

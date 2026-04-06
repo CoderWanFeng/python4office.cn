@@ -57,11 +57,7 @@ tags: 微信群
 
 
 
-
-![](https://cos.python-office.com/group%2Ffree-group.jpg)
-
-
-> AI 和 编程 学习资料：[点我领取](https://www.python-office.com/)
+> AI 学习交流群：[点我加入](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)
 
 
 ## AI 学习交流
