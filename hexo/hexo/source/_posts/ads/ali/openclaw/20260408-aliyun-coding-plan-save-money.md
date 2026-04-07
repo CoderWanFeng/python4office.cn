@@ -214,7 +214,7 @@ AI是杠杆，不是对手。
 
 对了，如果你想更系统地学习怎么用AI工具省钱、怎么搭建高性价比的AI工作流，**4月12日我会在郑州参加腾讯云社区的"龙虾公开课"**，现场分享《一人公司的AI实战指南》。
 
-👉 **报名链接：https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg**
+👉 **[点击报名龙虾公开课](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)**
 
 选择权在你手里。
 

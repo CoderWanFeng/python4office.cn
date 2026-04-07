@@ -187,7 +187,7 @@ AI是杠杆，不是对手。
 
 欢迎来现场当面聊。
 
-👉 **报名链接：https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg**
+👉 **[点击报名龙虾公开课](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)**
 
 选择权在你手里。
 

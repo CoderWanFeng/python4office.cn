@@ -282,7 +282,7 @@ def process_data(data):
 ## 五、怎么体验？
 
 ### 阿里云Coding Plan
-👉 **https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1**
+👉 **[点击订阅阿里云Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1)**
 
 一个订阅，通义千问全系列随便用。
 

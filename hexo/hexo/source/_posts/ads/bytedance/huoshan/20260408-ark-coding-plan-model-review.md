@@ -284,7 +284,7 @@ AI是杠杆，不是对手。
 
 对了，如果你想现场看我演示这些模型的使用技巧，**4月12日我会在郑州参加腾讯云社区的"龙虾公开课"**，现场对比各大AI模型的实战表现。
 
-👉 **报名链接：https://mp.weixin.qq.com/s/NL5AiWf2BfhSInwjREjxJg**
+👉 **[点击报名龙虾公开课](https://mp.weixin.qq.com/s/NL5AiWf2BfhSInwjREjxJg)**
 
 选择权在你手里。
 
