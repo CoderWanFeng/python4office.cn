@@ -165,7 +165,7 @@ AI时代，纯编码的价值在下降，但以下能力更值钱：
 
 ### 2019年：零基础学Python
 
-那时候我还是一个法学硕士，在北京一家科技公司做数据合规。白天处理法律文件，晚上自学Python。
+那时候我还是一个法律硕士，在北京一家科技公司做数据合规。白天处理法律文件，晚上自学Python。
 
 没有AI辅助，全靠啃文档、看视频、做项目。记得有一次，为了搞懂一个Excel自动化的问题，我连续3个晚上查到凌晨2点。
 
@@ -272,7 +272,7 @@ ChatGPT出来的时候，我正在为python-office写一个复杂的PDF处理功
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/1f021b1e-f401-4afa-bfa5-f1b289d351a7/599.jpg" width="80%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" width="80%"/>
     </a>   
 </p>
 
@@ -307,4 +307,4 @@ ChatGPT出来的时候，我正在为python-office写一个复杂的PDF处理功
 
 ---
 
-程序员晚枫，专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫，专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
