@@ -18,7 +18,7 @@ tags: AI
 
 **因为这意味着，程序员这个职业，终于要进化了。**
 
-说到这儿，想起我自己的经历。3年前，我还是一个法学硕士，在北京一家科技公司做数据合规。那时候我连Python都不会写，更别说什么AI Agent了。
+说到这儿，想起我自己的经历。3年前，我还是一个法律硕士，在北京一家科技公司做数据合规。那时候我连Python都不会写，更别说什么AI Agent了。
 
 但就是在那段时间，我开始利用业余时间开发 **python-office** 这个开源项目——一个让职场人用一行代码实现办公自动化的Python库。
 
@@ -160,7 +160,7 @@ Agent能帮你解决问题，但前提是你能**清晰地定义问题**。
 
 说到这儿，我想多说两句。
 
-很多人知道我是程序员，但不知道我其实是法学硕士毕业，研究方向是大数据与人工智能相关法律。
+很多人知道我是程序员，但不知道我其实是法律硕士毕业，研究方向是大数据与人工智能相关法律。
 
 这个跨界背景，让我在AI时代有了独特的优势：
 - 我懂技术，知道AI能做什么
@@ -211,7 +211,7 @@ Agent也是一样。它帮你写代码、处理数据、生成报告，不是为
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/1f021b1e-f401-4afa-bfa5-f1b289d351a7/599.jpg" width="80%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" width="80%"/>
     </a>   
 </p>
 
@@ -246,4 +246,4 @@ Agent也是一样。它帮你写代码、处理数据、生成报告，不是为
 
 ---
 
-程序员晚枫，专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫，专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。

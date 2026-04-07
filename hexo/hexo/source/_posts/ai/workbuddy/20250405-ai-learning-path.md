@@ -16,7 +16,7 @@ tags: AI
 
 **我的看法是：学习AI没有捷径，但有方法。**
 
-说到这儿，想起我自己的经历。2019年，我还是一个法学硕士，在北京一家科技公司做数据合规。那时候我对编程一窍不通，连Python是什么都不知道。
+说到这儿，想起我自己的经历。2019年，我还是一个法律硕士，在北京一家科技公司做数据合规。那时候我对编程一窍不通，连Python是什么都不知道。
 
 **我不是天赋异禀，我只是比大多数人更愿意花时间去试错。**
 
@@ -356,7 +356,7 @@ AI技术发展很快，要保持学习。
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/'>
-    <img src="https://raw.gitcode.com/user-images/assets/5027920/1f021b1e-f401-4afa-bfa5-f1b289d351a7/599.jpg" width="80%"/>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" width="80%"/>
     </a>   
 </p>
 
@@ -391,4 +391,4 @@ AI技术发展很快，要保持学习。
 
 ---
 
-程序员晚枫，专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫，专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
