@@ -21,7 +21,7 @@ categories: [AI编程, 省钱攻略]
 - 年付更划算：36×12=432元/年
 
 ### 订阅链接
-👉 https://volcengine.com/L/a6sqe8YHzWo/
+👉 [点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)
 
 ### 邀请码福利
 使用邀请码：**GF2QJX3V**

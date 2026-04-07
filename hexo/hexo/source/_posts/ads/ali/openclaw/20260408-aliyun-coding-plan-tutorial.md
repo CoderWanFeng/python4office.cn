@@ -12,7 +12,7 @@ categories: [AI编程, 教程]
 ## 一、订阅Coding Plan
 
 ### 第一步：打开订阅页面
-访问：https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1
+访问：[阿里云Coding Plan订阅页面](https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1)
 
 ### 第二步：选择套餐
 - 按量付费：适合轻度使用
