@@ -1,5 +1,5 @@
 ---
-title: 0 代码半天上线！我用 WorkBuddy 做了个 OPC 一人商业闭环官网，普通人也能直接复刻
+title: 0代码半天上线！我用WorkBuddy做了个OPC一人商业闭环官网，普通人直接复刻就能赚钱
 date: 2026-04-01 15:01:00
 tags: [WorkBuddy,AI 编程，前端开发，个人网站]
 categories: [AI 编程，工具测评]

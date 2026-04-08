@@ -5,7 +5,7 @@ tags: 微信机器人
 ---
 
 
-[给小白的《30讲 · AI编程训练营》](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)，已经发布了2个月了，大家在学习过程中产生了一些问题，今天这篇文章 统一给大家回复一下~
+[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)，已经发布了2个月了，大家在学习过程中产生了一些问题，今天这篇文章 统一给大家回复一下~
 
 
 ## 小白能不能学习？
@@ -72,7 +72,7 @@ tags: 微信机器人
 
 我把它们放在了下面这个付费链接里，包括：软件、代码、视频教程、答疑群，全部都是付费后自动下载的，长期有效。👇
 
-- [给小白的《30讲 · AI编程训练营》](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
 
 
 
@@ -104,4 +104,4 @@ tags: 微信机器人
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。

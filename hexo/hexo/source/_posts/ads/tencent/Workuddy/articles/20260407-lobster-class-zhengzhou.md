@@ -177,7 +177,7 @@ AI是杠杆，不是对手。
 ## 📚 想系统学习AI编程？
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/1f021b1e-f401-4afa-bfa5-f1f289d351a7/599.jpg" width="80%"/>
     </a>   
 </p>
