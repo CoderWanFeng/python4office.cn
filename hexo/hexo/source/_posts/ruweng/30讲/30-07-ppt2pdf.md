@@ -32,7 +32,7 @@ tags: [星河计划]
 	</a>	
 </p>
 <p align="center" name="atomgit">
-	<a href="https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/">
+	<a href="https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -88,4 +88,4 @@ office.ppt.ppt2pdf(path=r'./test_files/30-07-ppt2pdf/input/程序员晚枫.pptx'
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。

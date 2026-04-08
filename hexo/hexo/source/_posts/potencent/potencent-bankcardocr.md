@@ -8,7 +8,7 @@ tags:
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/potencent%2FBankCardOCR%2Fcover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)，
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)，
 昨天我们学习了：[实战案例！用1行Python代码识别增值税发票，然后将数据自动录入系统](https://mp.weixin.qq.com/s/agsF8ttwxOiZyizsTKBxMQ)。
 
 今天我们继续学习Python自动化办公：每次有新员工入职，都要收集大量的工资卡信息，并且生成Excel文档，能不能用Python**准确、快速**地解决呢？
@@ -98,7 +98,7 @@ res_df.to_excel(r"./银行卡信息（程序员晚枫）.xlsx")
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。

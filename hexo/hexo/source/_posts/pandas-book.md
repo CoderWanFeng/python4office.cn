@@ -7,7 +7,7 @@ tags:
 
 学习pandas应该看哪本书？pandas创始人，推荐了1本《利用Python进行数据分析》
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)。
 
 我最近在原创一个系列👉[pandas玩转excel，从入门到精通](https://mp.weixin.qq.com/s/YkON0ROI7WPt0EefGYSEpg)
 
@@ -109,7 +109,7 @@ pandas主要是用来处理数据的，但excel数据只是数据的一种，这
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.python4office.cn/course/ai-related/posts-people/ads/260405-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6AI%E7%BC%96%E7%A8%8B/)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。
