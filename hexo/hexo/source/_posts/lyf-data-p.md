@@ -8,7 +8,7 @@ tags: 大数据
 
 ![](https://www.python-office.com/api/img-cdn/wanfeng/article/lyf/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)。
 
 今天起来，发现因为众所周知的原因，去年发布的1条视频👇，突然火起来了。🔥
 
@@ -74,7 +74,7 @@ tags: 大数据
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)
+- [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。

@@ -130,7 +130,7 @@ server {
 
 - [刻意练习比1万小时更重要](https://www.python4office.cn/tobeu/)
 - [程序员学习方法论](https://www.python4office.cn/)
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)
+- [《30讲·AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 ---
 

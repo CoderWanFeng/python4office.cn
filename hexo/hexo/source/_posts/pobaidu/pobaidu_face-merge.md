@@ -8,7 +8,7 @@ tags:
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai%2Fface_merge%2Fcover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)。
 
 之前**杨幂换脸事件**登上了热搜，让大家关注到AI换脸这件事，并且有部分网友担心：这要是被用到爱情动作片里去可该咋整？
 
@@ -57,7 +57,7 @@ pobaidu.face.face_merge(
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)
+- [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。
