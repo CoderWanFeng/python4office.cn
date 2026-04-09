@@ -35,7 +35,7 @@ Python安装包
 如果安装完了还不过瘾，大家可以学习以下入门课程，都是适合小白的实用案例课：
 
 - [50讲 · Python + 自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B)
-- [10讲 · Python + 微信机器人](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)
+- [10讲 · Python + 微信机器人](https://www.bilibili.com/cheese/play/ss982042944)
 - [30讲 · Python + 数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [100讲 · Python + 人工智能](https://www.bilibili.com/video/BV1rU4y1u7og/)
@@ -59,7 +59,7 @@ Python安装包
 
 
 <p align="center" id='10讲机器人-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg" width="100%"/>
     </a>   
 </p>
@@ -87,4 +87,4 @@ Python安装包
 </p>
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。
