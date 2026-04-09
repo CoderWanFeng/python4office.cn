@@ -5,6 +5,12 @@ tags: [火山方舟Coding Plan教程, 方舟Coding Plan怎么用, 火山引擎AI
 categories: [AI编程, 教程]
 ---
 
+> 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
+> 
+> 邀请码：**GF2QJX3V**
+> 
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://r7up9.xetslk.com/s/1uP5YW)**
+
 大家好，这里是程序员晚枫。
 
 买了火山方舟Coding Plan不知道怎么用？今天这篇教程手把手教你，从订阅到上手，完整流程一次讲清楚。

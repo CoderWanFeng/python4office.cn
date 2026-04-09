@@ -5,6 +5,12 @@ tags: [火山引擎, 方舟CodingPlan, AI编程, Doubao, DeepSeek]
 categories: [AI编程, 工具测评]
 ---
 
+> 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
+> 
+> 邀请码：**GF2QJX3V**（可能有额外福利）
+> 
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://r7up9.xetslk.com/s/1uP5YW)**
+
 大家好，这里是程序员晚枫。
 
 最近，字节跳动旗下的火山引擎推出了**方舟 Coding Plan**，一站式解决开发者的 AI 编程需求。

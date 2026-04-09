@@ -1,11 +1,9 @@
 ---
-title: 每天打开ChatGPT，不知道该干嘛
+title: 小白学AI编程：每天打开ChatGPT不知道干嘛？零基础入门指南
 date: 2026-04-06 10:11:00
 categories:
   - AI编程
-tags:
-  - AI编程
-  - 效率
+tags: [AI编程, AI入门, 零基础学AI, 小白学AI, Python编程, 龙虾AI, AI工具, ChatGPT教程]
 ---
 
 你有没有这种感觉：
