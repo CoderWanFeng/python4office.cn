@@ -170,7 +170,7 @@ AI是杠杆，不是对手。
 - 一人公司创业路线图
 - 被动收入模式案例集
 
-👉 [点击免费领取](https://www.python4office.cn/free-resources)
+👉 [点击免费领取](https://www.python-office.com/openclaw/)
 
 ---
 

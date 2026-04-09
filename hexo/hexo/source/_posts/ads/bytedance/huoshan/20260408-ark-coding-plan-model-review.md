@@ -297,7 +297,7 @@ AI是杠杆，不是对手。
 - Prompt优化技巧
 - 模型切换最佳实践
 
-👉 [点击免费领取](https://www.python4office.cn/free-resources)
+👉 [点击免费领取](https://www.python-office.com/openclaw/)
 
 ---
 

@@ -162,7 +162,7 @@ AI是杠杆，不是对手。
 - 各工具安装配置教程
 - 选择决策树
 
-👉 [点击免费领取](https://www.python4office.cn/free-resources)
+👉 [点击免费领取](https://www.python-office.com/openclaw/)
 
 ---
 

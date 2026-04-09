@@ -157,7 +157,7 @@ AI是杠杆，不是对手。
 - 通义千问编程技巧
 - API接入代码示例
 
-👉 [点击免费领取](https://www.python4office.cn/free-resources)
+👉 [点击免费领取](https://www.python-office.com/openclaw/)
 
 ---
 

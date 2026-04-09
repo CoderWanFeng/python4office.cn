@@ -198,7 +198,7 @@ AI是杠杆，不是对手。
 - VS Code配置模板
 - 推荐模型参数设置
 
-👉 [点击免费领取](https://www.python4office.cn/free-resources)
+👉 [点击免费领取](https://www.python-office.com/openclaw/)
 
 ---
 
