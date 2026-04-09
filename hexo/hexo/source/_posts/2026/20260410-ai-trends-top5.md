@@ -148,7 +148,7 @@ categories: ["AI工具"]
 
 **限时特惠价：¥49**
 
-👉 **[点击立即学习 →](https://r7up9.xetslk.com/s/1uP5YW)**
+👉 **[点击立即学习 →](https://www.bilibili.com/cheese/play/ss982042944)**
 
 ---
 
