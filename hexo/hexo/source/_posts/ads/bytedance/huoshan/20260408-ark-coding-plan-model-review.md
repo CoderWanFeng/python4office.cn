@@ -5,6 +5,12 @@ tags: [火山方舟Coding Plan模型评测, Doubao代码能力, DeepSeek编程, 
 categories: [AI编程, 模型评测]
 ---
 
+> 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
+> 
+> 邀请码：**GF2QJX3V**
+> 
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://r7up9.xetslk.com/s/1uP5YW)**
+
 大家好，这里是程序员晚枫。
 
 火山方舟Coding Plan最大的卖点是什么？

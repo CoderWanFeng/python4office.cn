@@ -1,105 +1,149 @@
 ---
-title: 成为你自己 · 配套测试&课程
+title: "武志红心理学课程合集 | 自我成长视频+配套心理测试(免费领取)"
 date: 2022-01-12 22:11:09
-tags:
+tags: ["武志红", "心理学", "自我成长", "心理测试", "原生家庭", "心理咨询"]
+categories: ["心理学课程"]
+description: "武志红心理学课程合集，包含《成为你自己》《超越原生家庭》等热门视频，以及配套的心理测试。发现自己，认识自己，成为更好的自己。
 ---
 
+# 武志红心理学课程合集 | 自我成长视频+配套心理测试(免费领取)
 
+> 发现自己，认识自己，成为更好的自己。
 
-<p align="center" id='支付宝-banner'>
-    <a target="_blank" href='https://www.python4office.cn/fuli/zhifubao-0923/'>
-    <img src="https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg" width="100%"/>
-    </a>   
-</p>
+---
 
+## 前言
 
-<p align="center" id='外卖-banner'>
-    <a target="_blank" href='https://kzurl19.cn/7CAHjq'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
-    </a>   
-</p>
+武志红是中国著名心理学家，其课程帮助无数人走出心理困境，实现自我成长。
 
+本文整理了武志红老师的热门课程和配套心理测试，希望能帮助你更好地认识自己。
 
+---
 
-> 以下所有蓝色链接，都可以点击。
->以下内容包含：
->1、探索心理测试
->2、更多心理视频
->3、武志红的图书
->4、心理交流群
+## 热门心理视频课程
 
+### 🔥 自我成长系列
 
+| 课程名称 | 时长 | 内容简介 |
+|----------|------|----------|
+| [武志红《成为你自己》](https://www.bilibili.com/video/BV1mi4y1j7DF) | 45分钟 | 如何成为真实的自己 |
+| [超越原生家庭，活出全新自我](http://www.urlort.cn/2VT445) | 60分钟 | 摆脱原生家庭的束缚 |
+| [21天摆脱抑郁困扰](http://www.urlort.cn/2VSXI9) | 21讲 | 走出坏情绪的困扰 |
 
-## 1、心理测试的链接
+### 💕 亲密关系系列
 
-```
-需要课程相关的心理测试，请点击下面这些蓝色链接。
-如果需要更多心理课程，请看本文第2部分
-```
+| 课程名称 | 时长 | 内容简介 |
+|----------|------|----------|
+| [李一帆《解决你的恋爱难题》](http://gk.link/a/113yv) | 30分钟 | 恋爱中的常见问题 |
+| [哈佛亲密关系攻略](http://www.urlort.cn/2VSZD6) | 52讲 | 越吵越亲密的秘诀 |
 
-- 个人成长：
-    - 💘[潜在心理创伤测试](http://www.urlort.cn/2SIUm2)
-    - [你心底有哪些隐藏的偏见？](http://www.urlort.cn/2UJxkf)
-    - [童年阴影评估](http://www.urlort.cn/2Qbuge)
-    - 😥[习惯性重复：你在重复家庭的伤害吗？](http://www.urlort.cn/2UJxt0)
-    - [原生家庭影响评估](http://www.urlort.cn/2VT4Q3)
-    - [🙋发现你最突出的5项天赋](https://mp.weixin.qq.com/s/zblwUazPpVjTMapNCG2nhg)
+### 💪 职场与生活
 
+| 课程名称 | 时长 | 内容简介 |
+|----------|------|----------|
+| [发现属于自己的职场优势](http://www.urlort.cn/2S7zo0) | 20分钟 | 找到你的核心竞争力 |
+| [52堂犯罪心理学](http://url.newrank.cn/3ed0a9) | 52讲 | 读懂人心的智慧 |
 
+---
 
-- 爱的能力：
-    - [恋爱心理成熟度评估](http://www.urlort.cn/2SIV69)
-    - 👬[面对伴侣，你是哪种依恋类型？](http://www.urlort.cn/2UJuC7)
-    - [异性魅力评估](http://www.urlort.cn/2UJv93)
-    - [什么样的异性最适合你？](http://url.newrank.cn/353MW6)
-    - [爱情智商评估](http://url.newrank.cn/353N5e)
-    - [测试你的出轨倾向](http://url.newrank.cn/353LH8)
+## 配套心理测试
 
+### 🧠 自我认知类
 
+| 测试名称 | 类型 | 链接 |
+|----------|------|------|
+| 潜在心理创伤测试 | 深度分析 | [开始测试](http://www.urlort.cn/2SIUm2) |
+| 童年阴影评估 | 原生家庭 | [开始测试](http://www.urlort.cn/2Qbuge) |
+| 习惯性重复评估 | 行为模式 | [开始测试](http://www.urlort.cn/2UJxt0) |
+| 原生家庭影响评估 | 家庭分析 | [开始测试](http://www.urlort.cn/2VT4Q3) |
+| 气质类型评估 | 性格分析 | [开始测试](http://www.urlort.cn/2UJvh8) |
 
-- 面对生活：
-    - [气质类型评估](http://www.urlort.cn/2UJvh8)
-    - 🏃[发现属于自己的职场优势](http://www.urlort.cn/2S7zo0)
-    - [情商测试「专业版」](http://www.urlort.cn/2UJvx1)
-    - [你能从人际关系中获得多少支持？](http://www.urlort.cn/2UJx8c)
-    - [家庭-工作平衡度评估](http://www.urlort.cn/2VT4V5)
-    - [硅谷精英的冥想课](http://url.newrank.cn/9QmU5c)
+### ❤️ 亲密关系类
 
-## 2、心理视频的链接
+| 测试名称 | 类型 | 链接 |
+|----------|------|------|
+| 恋爱心理成熟度评估 | 感情评估 | [开始测试](http://www.urlort.cn/2SIV69) |
+| 依恋类型测试 | 依恋模式 | [开始测试](http://www.urlort.cn/2UJuC7) |
+| 异性魅力评估 | 魅力分析 | [开始测试](http://www.urlort.cn/2UJv93) |
+| 爱情智商评估 | 情商测试 | [开始测试](http://url.newrank.cn/353N5e) |
 
-```
-需要听更多心理分析的课程，发现最真实的自己，请点击下面这些蓝色链接
-```
+### 🏃 生活平衡类
 
-- 与自己对话
-    1. 🔥[武志红《成为你自己》](https://www.bilibili.com/video/BV1mi4y1j7DF)
-    2. 👨‍👩‍👧‍👦[超越原生家庭，活出全新自我](http://www.urlort.cn/2VT445)
-    3. [21天摆脱抑郁困扰：别让坏情绪拖累你的人生](http://www.urlort.cn/2VSXI9)
-    4. [说出你的故事：怎样讲一个能影响别人的好故事？](http://gk.link/a/113zd)
-    5. 📺[施琪嘉创伤30讲：走出心理阴影，重塑强大内心](http://url.newrank.cn/3ed0n3)
+| 测试名称 | 类型 | 链接 |
+|----------|------|------|
+| 情商测试（专业版） | EQ评估 | [开始测试](http://www.urlort.cn/2UJvx1) |
+| 人际关系支持度 | 社交分析 | [开始测试](http://www.urlort.cn/2UJx8c) |
+| 家庭工作平衡度 | 生活质量 | [开始测试](http://www.urlort.cn/2VT4V5) |
 
+---
 
+## 武志红推荐书单
 
-- 和别人相处
-    1. [李一帆《解决你的恋爱难题》](http://gk.link/a/113yv)
-    2. [实用人格手册：读懂自己与他人的必备指南](http://www.urlort.cn/2VT0wc)
-    3. 🍭[给90后女生的关系课](http://www.urlort.cn/2VT6gc)
-    4. [越吵越亲密的哈佛亲密关系攻略](http://www.urlort.cn/2VSZD6)
-    5. [人人必修的52堂犯罪心理学](http://url.newrank.cn/3ed0a9)
+### 必读经典
 
+| 书名 | 作者 | 简介 |
+|------|------|------|
+| 《为何家会影响我一生》 | 武志红 | 原生家庭的影响 |
+| 《身体知道答案》 | 武志红 | 身心连接的智慧 |
+| 《感谢自己的不完美》 | 武志红 | 接纳负面情绪 |
+| 《巨婴国》 | 武志红 | 国民性心理分析 |
 
+### 延伸阅读
 
-## 3、心理分析的交流群
+| 书名 | 作者 | 简介 |
+|------|------|------|
+| 《非暴力沟通》 | 马歇尔·卢森堡 | 有效沟通技巧 |
+| 《亲密关系》 | 克里斯多福·孟 | 通往灵魂的桥梁 |
+| 《原生家庭》 | 苏珊·福沃德 | 如何修复创伤 |
 
-👉扫码下图添加我的微信：[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)，验证消息请填写：**心理分析**，即可加入群聊~
+---
 
+## 课程推荐
 
-![点我查看微信二维码](https://cos.python-office.com/wechat/qr-code.jpg)
+### 施琪嘉创伤系列
 
+- [施琪嘉创伤30讲：走出心理阴影，重塑强大内心](http://url.newrank.cn/3ed0n3)
 
-## 相关阅读
+### 魅力提升系列
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)
+- [给90后女生的关系课](http://www.urlort.cn/2VT6gc)
+- [异性魅力提升指南](http://www.urlort.cn/2UJv93)
 
+---
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)就能上手做AI项目。
+## 加入学习交流群
+
+扫码添加我的微信，验证消息请填写：**心理分析**，即可加入交流群~
+
+![微信二维码](https://cos.python-office.com/wechat/qr-code.jpg)
+
+---
+
+## 延伸学习
+
+### 程序员成长
+
+- [刻意练习比一万小时更重要](https://www.python4office.cn/tobeu/)
+- [程序员学习方法论](https://www.python4office.cn/)
+
+### AI编程入门
+
+- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)
+- [Python自动化办公实战](https://www.python4office.cn/)
+
+---
+
+## 总结
+
+> "成为你自己，不是自私，而是对自己负责，也是对世界负责。" —— 武志红
+
+希望这些课程和测试能帮助你：
+
+1. ✅ 更好地认识自己
+2. ✅ 理解自己的行为模式
+3. ✅ 走出心理困境
+4. ✅ 成为更好的自己
+
+---
+
+*程序员晚枫专注AI编程培训，帮助10000+学员从零基础到能做实战项目。*

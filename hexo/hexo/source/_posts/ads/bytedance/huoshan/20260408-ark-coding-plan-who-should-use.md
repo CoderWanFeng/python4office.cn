@@ -5,6 +5,12 @@ tags: [火山方舟Coding Plan适合谁, Coding Plan用户群体, AI编程工具
 categories: [AI编程, 工具推荐]
 ---
 
+> 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
+> 
+> 邀请码：**GF2QJX3V**
+> 
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://r7up9.xetslk.com/s/1uP5YW)**
+
 大家好，这里是程序员晚枫。
 
 火山方舟Coding Plan确实便宜（36元/月），但它真的适合你吗？
