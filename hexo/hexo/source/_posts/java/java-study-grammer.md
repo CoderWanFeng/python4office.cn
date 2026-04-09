@@ -238,7 +238,7 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-<a href="https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A">
+<a href="https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -247,7 +247,7 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
 </p>
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" width="300" height='400'/>
     </a>   
 </p>
@@ -259,4 +259,4 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
 </p>
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)就能上手做AI项目。
