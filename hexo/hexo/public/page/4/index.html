@@ -226,6 +226,629 @@ var _hmt = _hmt || [];
               <div id="js-content" class="content-ll">
                 
   
+    <article id="post-ai-skills/course-beginner-to-pro/04-practice/20260406-13-pdf" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/ai-skills/course-beginner-to-pro/04-practice/20260406-13-pdf/">第13讲：PDF 智能处理 Skill 开发</a>
+    </h1>
+  
+
+        
+        <a href="/ai-skills/course-beginner-to-pro/04-practice/20260406-13-pdf/" class="archive-article-date">
+  	<time datetime="2026-04-06T22:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-04-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第13讲：PDF-智能处理-Skill-开发"><a href="#第13讲：PDF-智能处理-Skill-开发" class="headerlink" title="第13讲：PDF 智能处理 Skill 开发"></a>第13讲：PDF 智能处理 Skill 开发</h1><blockquote>
+<p>掌握 PDF 文档的自动化处理技能，实现内容提取、格式转换、合并拆分等操作，让 PDF 处理不再繁琐。</p>
+</blockquote>
+<h2 id="一、场景分析"><a href="#一、场景分析" class="headerlink" title="一、场景分析"></a>一、场景分析</h2><h3 id="1-1-用户痛点"><a href="#1-1-用户痛点" class="headerlink" title="1.1 用户痛点"></a>1.1 用户痛点</h3><p>PDF 是办公中最常用的文档格式之一，但处理起来往往很麻烦：</p>
+<ul>
+<li><strong>内容提取困难</strong>：PDF 是固定格式，无法直接复制编辑，需要专门工具提取文字</li>
+<li><strong>格式转换复杂</strong>：PDF 转 Word/Excel 时经常排版错乱</li>
+<li><strong>合并拆分繁琐</strong>：多个 PDF 需要合并，或者一个大 PDF 需要拆分成多个小文件</li>
+<li><strong>批量处理低效</strong>：几百个 PDF 需要统一加水印或加密，手动操作不现实</li>
+<li><strong>信息检索不便</strong>：在大量 PDF 中搜索特定内容效率低下</li>
+</ul>
+<h3 id="1-2-典型应用场景"><a href="#1-2-典型应用场景" class="headerlink" title="1.2 典型应用场景"></a>1.2 典型应用场景</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>需求描述</th>
+<th>Skill 价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>合同管理</td>
+<td>批量提取合同关键信息（金额、日期、条款）</td>
+<td>自动化信息提取</td>
+</tr>
+<tr>
+<td>发票处理</td>
+<td>识别发票 PDF 内容，录入财务系统</td>
+<td>OCR + 数据提取</td>
+</tr>
+<tr>
+<td>报告合并</td>
+<td>将多个部门报告合并为一份完整文档</td>
+<td>一键合并</td>
+</tr>
+<tr>
+<td>文档归档</td>
+<td>按规则拆分扫描件，分类存储</td>
+<td>智能拆分归档</td>
+</tr>
+<tr>
+<td>内容审核</td>
+<td>检查 PDF 中的敏感信息</td>
+<td>自动扫描标记</td>
+</tr>
+</tbody></table>
+<h2 id="二、核心功能设计"><a href="#二、核心功能设计" class="headerlink" title="二、核心功能设计"></a>二、核心功能设计</h2><h3 id="2-1-Skill-功能架构"><a href="#2-1-Skill-功能架构" class="headerlink" title="2.1 Skill 功能架构"></a>2.1 Skill 功能架构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">📄 PDF 智能助手</span><br><span class="line">├── 内容提取</span><br><span class="line">│   ├── 文字提取</span><br><span class="line">│   ├── 表格提取</span><br><span class="line">│   ├── 图片提取</span><br><span class="line">│   └── 元数据读取</span><br><span class="line">├── 格式转换</span><br><span class="line">│   ├── PDF → Word</span><br><span class="line">│   ├── PDF → Excel</span><br><span class="line">│   ├── PDF → 图片</span><br><span class="line">│   └── PDF → HTML</span><br><span class="line">├── 文档操作</span><br><span class="line">│   ├── 合并 PDF</span><br><span class="line">│   ├── 拆分 PDF</span><br><span class="line">│   ├── 旋转页面</span><br><span class="line">│   └── 重新排序</span><br><span class="line">├── 文档保护</span><br><span class="line">│   ├── 添加水印</span><br><span class="line">│   ├── 加密保护</span><br><span class="line">│   ├── 权限设置</span><br><span class="line">│   └── 数字签名</span><br><span class="line">└── 智能处理</span><br><span class="line">    ├── 内容搜索</span><br><span class="line">    ├── 批量重命名</span><br><span class="line">    ├── 压缩优化</span><br><span class="line">    └── 质量检测</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-技术选型"><a href="#2-2-技术选型" class="headerlink" title="2.2 技术选型"></a>2.2 技术选型</h3><p>PDF 处理的核心技术栈：</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>Python 库</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>基础操作</td>
+<td>PyPDF2 / pypdf</td>
+<td>合并、拆分、旋转</td>
+</tr>
+<tr>
+<td>内容提取</td>
+<td>pdfplumber / PyMuPDF</td>
+<td>文字、表格提取</td>
+</tr>
+<tr>
+<td>格式转换</td>
+<td>pdf2docx / pdf2image</td>
+<td>转 Word/图片</td>
+</tr>
+<tr>
+<td>OCR 识别</td>
+<td>pytesseract + pdf2image</td>
+<td>扫描件识别</td>
+</tr>
+<tr>
+<td>高级处理</td>
+<td>ReportLab</td>
+<td>生成 PDF、加水印</td>
+</tr>
+</tbody></table>
+<h2 id="三、技术实现"><a href="#三、技术实现" class="headerlink" title="三、技术实现"></a>三、技术实现</h2><h3 id="3-1-Coze-平台实现"><a href="#3-1-Coze-平台实现" class="headerlink" title="3.1 Coze 平台实现"></a>3.1 Coze 平台实现</h3><h4 id="3-1-1-基础操作代码"><a href="#3-1-1-基础操作代码" class="headerlink" title="3.1.1 基础操作代码"></a>3.1.1 基础操作代码</h4><p><strong>PDF 合并功能：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pypdf <span class="keyword">import</span> PdfReader, PdfWriter</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">merge_pdfs</span>(<span class="params">file_list, output_path</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    合并多个 PDF 文件</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        file_list: PDF 文件路径列表</span></span><br><span class="line"><span class="string">        output_path: 输出文件路径</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    writer = PdfWriter()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> file_path <span class="keyword">in</span> file_list:</span><br><span class="line">        reader = PdfReader(file_path)</span><br><span class="line">        <span class="keyword">for</span> page <span class="keyword">in</span> reader.pages:</span><br><span class="line">            writer.add_page(page)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(output_path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> output_file:</span><br><span class="line">        writer.write(output_file)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> output_path</span><br></pre></td></tr></table></figure>
+
+<p><strong>PDF 拆分功能：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">split_pdf</span>(<span class="params">file_path, split_config</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    拆分 PDF 文件</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        file_path: 源 PDF 路径</span></span><br><span class="line"><span class="string">        split_config: 拆分配置</span></span><br><span class="line"><span class="string">            - type: &#x27;range&#x27; 按页码范围 / &#x27;every&#x27; 每N页拆分</span></span><br><span class="line"><span class="string">            - pages: 页码范围列表（如 [[0,5], [5,10]]）</span></span><br><span class="line"><span class="string">            - every_n: 每N页拆分</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    reader = PdfReader(file_path)</span><br><span class="line">    total_pages = <span class="built_in">len</span>(reader.pages)</span><br><span class="line">    output_files = []</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> split_config[<span class="string">&#x27;type&#x27;</span>] == <span class="string">&#x27;range&#x27;</span>:</span><br><span class="line">        <span class="comment"># 按指定范围拆分</span></span><br><span class="line">        <span class="keyword">for</span> i, (start, end) <span class="keyword">in</span> <span class="built_in">enumerate</span>(split_config[<span class="string">&#x27;pages&#x27;</span>]):</span><br><span class="line">            writer = PdfWriter()</span><br><span class="line">            <span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(start, <span class="built_in">min</span>(end, total_pages)):</span><br><span class="line">                writer.add_page(reader.pages[page_num])</span><br><span class="line">            </span><br><span class="line">            output_file = <span class="string">f&quot;<span class="subst">&#123;file_path.replace(<span class="string">&#x27;.pdf&#x27;</span>, <span class="string">&#x27;&#x27;</span>)&#125;</span>_part<span class="subst">&#123;i+<span class="number">1</span>&#125;</span>.pdf&quot;</span></span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(output_file, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                writer.write(f)</span><br><span class="line">            output_files.append(output_file)</span><br><span class="line">            </span><br><span class="line">    <span class="keyword">elif</span> split_config[<span class="string">&#x27;type&#x27;</span>] == <span class="string">&#x27;every&#x27;</span>:</span><br><span class="line">        <span class="comment"># 每 N 页拆分</span></span><br><span class="line">        n = split_config[<span class="string">&#x27;every_n&#x27;</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, total_pages, n):</span><br><span class="line">            writer = PdfWriter()</span><br><span class="line">            <span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(i, <span class="built_in">min</span>(i + n, total_pages)):</span><br><span class="line">                writer.add_page(reader.pages[page_num])</span><br><span class="line">            </span><br><span class="line">            output_file = <span class="string">f&quot;<span class="subst">&#123;file_path.replace(<span class="string">&#x27;.pdf&#x27;</span>, <span class="string">&#x27;&#x27;</span>)&#125;</span>_part<span class="subst">&#123;i//n+<span class="number">1</span>&#125;</span>.pdf&quot;</span></span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(output_file, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                writer.write(f)</span><br><span class="line">            output_files.append(output_file)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> output_files</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-1-2-内容提取代码"><a href="#3-1-2-内容提取代码" class="headerlink" title="3.1.2 内容提取代码"></a>3.1.2 内容提取代码</h4><p><strong>文字提取：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pdfplumber</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_text</span>(<span class="params">file_path, options=<span class="literal">None</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    提取 PDF 文字内容</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        file_path: PDF 文件路径</span></span><br><span class="line"><span class="string">        options: 提取选项</span></span><br><span class="line"><span class="string">            - pages: 指定页码列表，None 表示全部</span></span><br><span class="line"><span class="string">            - preserve_layout: 是否保留布局</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    options = options <span class="keyword">or</span> &#123;&#125;</span><br><span class="line">    pages = options.get(<span class="string">&#x27;pages&#x27;</span>)</span><br><span class="line">    preserve_layout = options.get(<span class="string">&#x27;preserve_layout&#x27;</span>, <span class="literal">True</span>)</span><br><span class="line">    </span><br><span class="line">    extracted_content = []</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">with</span> pdfplumber.<span class="built_in">open</span>(file_path) <span class="keyword">as</span> pdf:</span><br><span class="line">        page_numbers = pages <span class="keyword">if</span> pages <span class="keyword">else</span> <span class="built_in">range</span>(<span class="built_in">len</span>(pdf.pages))</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> page_num <span class="keyword">in</span> page_numbers:</span><br><span class="line">            <span class="keyword">if</span> page_num &lt; <span class="built_in">len</span>(pdf.pages):</span><br><span class="line">                page = pdf.pages[page_num]</span><br><span class="line">                text = page.extract_text(</span><br><span class="line">                    layout=preserve_layout</span><br><span class="line">                )</span><br><span class="line">                extracted_content.append(&#123;</span><br><span class="line">                    <span class="string">&#x27;page&#x27;</span>: page_num + <span class="number">1</span>,</span><br><span class="line">                    <span class="string">&#x27;text&#x27;</span>: text</span><br><span class="line">                &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> extracted_content</span><br></pre></td></tr></table></figure>
+
+<p><strong>表格提取：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">extract_tables</span>(<span class="params">file_path, page_num=<span class="literal">None</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    提取 PDF 中的表格</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        file_path: PDF 文件路径</span></span><br><span class="line"><span class="string">        page_num: 指定页码，None 表示全部页面</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    tables = []</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">with</span> pdfplumber.<span class="built_in">open</span>(file_path) <span class="keyword">as</span> pdf:</span><br><span class="line">        pages_to_process = [pdf.pages[page_num]] <span class="keyword">if</span> page_num <span class="keyword">else</span> pdf.pages</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i, page <span class="keyword">in</span> <span class="built_in">enumerate</span>(pages_to_process):</span><br><span class="line">            page_tables = page.extract_tables()</span><br><span class="line">            <span class="keyword">for</span> table <span class="keyword">in</span> page_tables:</span><br><span class="line">                tables.append(&#123;</span><br><span class="line">                    <span class="string">&#x27;page&#x27;</span>: page_num + <span class="number">1</span> <span class="keyword">if</span> page_num <span class="keyword">else</span> i + <span class="number">1</span>,</span><br><span class="line">                    <span class="string">&#x27;data&#x27;</span>: table</span><br><span class="line">                &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> tables</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-1-3-格式转换代码"><a href="#3-1-3-格式转换代码" class="headerlink" title="3.1.3 格式转换代码"></a>3.1.3 格式转换代码</h4><p><strong>PDF 转 Word：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pdf2docx <span class="keyword">import</span> Converter</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">pdf_to_word</span>(<span class="params">pdf_path, output_path=<span class="literal">None</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    PDF 转换为 Word</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        pdf_path: PDF 文件路径</span></span><br><span class="line"><span class="string">        output_path: 输出 Word 路径，默认同名</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> output_path:</span><br><span class="line">        output_path = pdf_path.replace(<span class="string">&#x27;.pdf&#x27;</span>, <span class="string">&#x27;.docx&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    cv = Converter(pdf_path)</span><br><span class="line">    cv.convert(output_path, start=<span class="number">0</span>, end=<span class="literal">None</span>)</span><br><span class="line">    cv.close()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> output_path</span><br></pre></td></tr></table></figure>
+
+<p><strong>PDF 转图片：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pdf2image <span class="keyword">import</span> convert_from_path</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">pdf_to_images</span>(<span class="params">pdf_path, output_dir=<span class="literal">None</span>, dpi=<span class="number">200</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    PDF 转换为图片</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        pdf_path: PDF 文件路径</span></span><br><span class="line"><span class="string">        output_dir: 输出目录</span></span><br><span class="line"><span class="string">        dpi: 图片分辨率</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> output_dir:</span><br><span class="line">        output_dir = os.path.dirname(pdf_path)</span><br><span class="line">    </span><br><span class="line">    images = convert_from_path(pdf_path, dpi=dpi)</span><br><span class="line">    image_paths = []</span><br><span class="line">    </span><br><span class="line">    base_name = os.path.basename(pdf_path).replace(<span class="string">&#x27;.pdf&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i, image <span class="keyword">in</span> <span class="built_in">enumerate</span>(images):</span><br><span class="line">        image_path = os.path.join(output_dir, <span class="string">f&quot;<span class="subst">&#123;base_name&#125;</span>_page<span class="subst">&#123;i+<span class="number">1</span>&#125;</span>.png&quot;</span>)</span><br><span class="line">        image.save(image_path, <span class="string">&#x27;PNG&#x27;</span>)</span><br><span class="line">        image_paths.append(image_path)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> image_paths</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-1-4-文档保护代码"><a href="#3-1-4-文档保护代码" class="headerlink" title="3.1.4 文档保护代码"></a>3.1.4 文档保护代码</h4><p><strong>添加水印：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pypdf <span class="keyword">import</span> PdfReader, PdfWriter</span><br><span class="line"><span class="keyword">from</span> reportlab.pdfgen <span class="keyword">import</span> canvas</span><br><span class="line"><span class="keyword">from</span> reportlab.lib.pagesizes <span class="keyword">import</span> letter</span><br><span class="line"><span class="keyword">import</span> io</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_watermark</span>(<span class="params">text, opacity=<span class="number">0.3</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建水印 PDF&quot;&quot;&quot;</span></span><br><span class="line">    packet = io.BytesIO()</span><br><span class="line">    c = canvas.Canvas(packet, pagesize=letter)</span><br><span class="line">    c.setFont(<span class="string">&quot;Helvetica&quot;</span>, <span class="number">60</span>)</span><br><span class="line">    c.setFillColorRGB(<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>, alpha=opacity)</span><br><span class="line">    c.saveState()</span><br><span class="line">    c.translate(<span class="number">300</span>, <span class="number">400</span>)</span><br><span class="line">    c.rotate(<span class="number">45</span>)</span><br><span class="line">    c.drawCentredString(<span class="number">0</span>, <span class="number">0</span>, text)</span><br><span class="line">    c.restoreState()</span><br><span class="line">    c.save()</span><br><span class="line">    packet.seek(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> PdfReader(packet)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add_watermark</span>(<span class="params">input_path, output_path, watermark_text</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    为 PDF 添加水印</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        input_path: 源 PDF 路径</span></span><br><span class="line"><span class="string">        output_path: 输出路径</span></span><br><span class="line"><span class="string">        watermark_text: 水印文字</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    watermark = create_watermark(watermark_text)</span><br><span class="line">    writer = PdfWriter()</span><br><span class="line">    </span><br><span class="line">    reader = PdfReader(input_path)</span><br><span class="line">    watermark_page = watermark.pages[<span class="number">0</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> reader.pages:</span><br><span class="line">        page.merge_page(watermark_page)</span><br><span class="line">        writer.add_page(page)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(output_path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> output_file:</span><br><span class="line">        writer.write(output_file)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> output_path</span><br></pre></td></tr></table></figure>
+
+<p><strong>加密保护：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt_pdf</span>(<span class="params">input_path, output_path, password</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    加密 PDF 文件</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        input_path: 源 PDF 路径</span></span><br><span class="line"><span class="string">        output_path: 输出路径</span></span><br><span class="line"><span class="string">        password: 密码</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    reader = PdfReader(input_path)</span><br><span class="line">    writer = PdfWriter()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> reader.pages:</span><br><span class="line">        writer.add_page(page)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 设置加密</span></span><br><span class="line">    writer.encrypt(password)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(output_path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> output_file:</span><br><span class="line">        writer.write(output_file)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> output_path</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-OpenClaw-平台实现"><a href="#3-2-OpenClaw-平台实现" class="headerlink" title="3.2 OpenClaw 平台实现"></a>3.2 OpenClaw 平台实现</h3><p>OpenClaw 的 PDF Skill 更加简洁：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> openclaw <span class="keyword">import</span> Skill, Tool</span><br><span class="line"><span class="keyword">import</span> pdfplumber</span><br><span class="line"><span class="keyword">from</span> pypdf <span class="keyword">import</span> PdfReader, PdfWriter</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PDFSkill</span>(<span class="title class_ inherited__">Skill</span>):</span><br><span class="line">    name = <span class="string">&quot;PDF智能助手&quot;</span></span><br><span class="line">    description = <span class="string">&quot;自动化处理 PDF 文档&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @Tool</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">extract_text</span>(<span class="params">self, file: <span class="built_in">str</span>, pages: <span class="built_in">list</span> = <span class="literal">None</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;提取 PDF 文字内容&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">with</span> pdfplumber.<span class="built_in">open</span>(file) <span class="keyword">as</span> pdf:</span><br><span class="line">            text = <span class="string">&quot;&quot;</span></span><br><span class="line">            page_range = pages <span class="keyword">or</span> <span class="built_in">range</span>(<span class="built_in">len</span>(pdf.pages))</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> page_range:</span><br><span class="line">                text += <span class="string">f&quot;\n--- 第<span class="subst">&#123;i+<span class="number">1</span>&#125;</span>页 ---\n&quot;</span></span><br><span class="line">                text += pdf.pages[i].extract_text()</span><br><span class="line">        <span class="keyword">return</span> text</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @Tool</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">merge</span>(<span class="params">self, files: <span class="built_in">list</span>, output: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;合并多个 PDF&quot;&quot;&quot;</span></span><br><span class="line">        writer = PdfWriter()</span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> files:</span><br><span class="line">            reader = PdfReader(f)</span><br><span class="line">            <span class="keyword">for</span> page <span class="keyword">in</span> reader.pages:</span><br><span class="line">                writer.add_page(page)</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(output, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            writer.write(f)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;已合并到 <span class="subst">&#123;output&#125;</span>&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @Tool</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">split</span>(<span class="params">self, file: <span class="built_in">str</span>, pages: <span class="built_in">list</span>, output_prefix: <span class="built_in">str</span></span>) -&gt; <span class="built_in">list</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;按页码拆分 PDF&quot;&quot;&quot;</span></span><br><span class="line">        reader = PdfReader(file)</span><br><span class="line">        output_files = []</span><br><span class="line">        <span class="keyword">for</span> i, (start, end) <span class="keyword">in</span> <span class="built_in">enumerate</span>(pages):</span><br><span class="line">            writer = PdfWriter()</span><br><span class="line">            <span class="keyword">for</span> p <span class="keyword">in</span> <span class="built_in">range</span>(start, end):</span><br><span class="line">                writer.add_page(reader.pages[p])</span><br><span class="line">            output_file = <span class="string">f&quot;<span class="subst">&#123;output_prefix&#125;</span>_part<span class="subst">&#123;i+<span class="number">1</span>&#125;</span>.pdf&quot;</span></span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(output_file, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                writer.write(f)</span><br><span class="line">            output_files.append(output_file)</span><br><span class="line">        <span class="keyword">return</span> output_files</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、Prompt-设计"><a href="#四、Prompt-设计" class="headerlink" title="四、Prompt 设计"></a>四、Prompt 设计</h2><h3 id="4-1-系统-Prompt"><a href="#4-1-系统-Prompt" class="headerlink" title="4.1 系统 Prompt"></a>4.1 系统 Prompt</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">你是 PDF 智能助手，专门帮助用户处理 PDF 文档。</span><br><span class="line"></span><br><span class="line">你可以执行以下操作：</span><br><span class="line">1. 内容提取：提取文字、表格、图片</span><br><span class="line">2. 格式转换：PDF ↔ Word/Excel/图片</span><br><span class="line">3. 文档操作：合并、拆分、旋转、重排序</span><br><span class="line">4. 文档保护：添加水印、加密、权限设置</span><br><span class="line">5. 智能处理：内容搜索、批量重命名、压缩</span><br><span class="line"></span><br><span class="line">处理流程：</span><br><span class="line">1. 理解用户的 PDF 处理需求</span><br><span class="line">2. 询问必要的参数（文件路径、页码范围等）</span><br><span class="line">3. 确认操作内容</span><br><span class="line">4. 执行处理</span><br><span class="line">5. 返回处理结果和文件</span><br><span class="line"></span><br><span class="line">注意事项：</span><br><span class="line">- 处理前确认文件可访问</span><br><span class="line">- 大文件处理时提示等待时间</span><br><span class="line">- 提供处理摘要（处理了多少页、提取了什么内容）</span><br><span class="line">- 涉及敏感文档时提醒用户注意安全</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-意图识别示例"><a href="#4-2-意图识别示例" class="headerlink" title="4.2 意图识别示例"></a>4.2 意图识别示例</h3><table>
+<thead>
+<tr>
+<th>用户输入</th>
+<th>识别意图</th>
+<th>提取参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>“把这几个 PDF 合并成一个”</td>
+<td>合并</td>
+<td>文件列表</td>
+</tr>
+<tr>
+<td>“提取这个 PDF 的前5页”</td>
+<td>拆分</td>
+<td>文件路径、页码范围</td>
+</tr>
+<tr>
+<td>“把 PDF 转成 Word”</td>
+<td>格式转换</td>
+<td>源文件、目标格式</td>
+</tr>
+<tr>
+<td>“给这个 PDF 加上机密水印”</td>
+<td>加水印</td>
+<td>文件路径、水印文字</td>
+</tr>
+<tr>
+<td>“提取这个合同里的表格”</td>
+<td>表格提取</td>
+<td>文件路径、页码</td>
+</tr>
+</tbody></table>
+<h2 id="五、实战案例"><a href="#五、实战案例" class="headerlink" title="五、实战案例"></a>五、实战案例</h2><h3 id="5-1-案例一：合同信息提取"><a href="#5-1-案例一：合同信息提取" class="headerlink" title="5.1 案例一：合同信息提取"></a>5.1 案例一：合同信息提取</h3><p><strong>场景</strong>：法务部门需要从大量合同 PDF 中提取关键信息（金额、日期、签约方）。</p>
+<p><strong>解决方案</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> pdfplumber</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_contract_info</span>(<span class="params">pdf_path</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;提取合同关键信息&quot;&quot;&quot;</span></span><br><span class="line">    info = &#123;</span><br><span class="line">        <span class="string">&#x27;amount&#x27;</span>: <span class="literal">None</span>,</span><br><span class="line">        <span class="string">&#x27;dates&#x27;</span>: [],</span><br><span class="line">        <span class="string">&#x27;parties&#x27;</span>: [],</span><br><span class="line">        <span class="string">&#x27;duration&#x27;</span>: <span class="literal">None</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">with</span> pdfplumber.<span class="built_in">open</span>(pdf_path) <span class="keyword">as</span> pdf:</span><br><span class="line">        full_text = <span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="keyword">for</span> page <span class="keyword">in</span> pdf.pages:</span><br><span class="line">            full_text += page.extract_text()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 提取金额（匹配人民币格式）</span></span><br><span class="line">    amount_pattern = <span class="string">r&#x27;(?:人民币|¥|￥)\s*([\d,\.]+)(?:元|万元)?&#x27;</span></span><br><span class="line">    amounts = re.findall(amount_pattern, full_text)</span><br><span class="line">    <span class="keyword">if</span> amounts:</span><br><span class="line">        info[<span class="string">&#x27;amount&#x27;</span>] = amounts[<span class="number">0</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 提取日期</span></span><br><span class="line">    date_pattern = <span class="string">r&#x27;(\d&#123;4&#125;年\d&#123;1,2&#125;月\d&#123;1,2&#125;日|\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;)&#x27;</span></span><br><span class="line">    info[<span class="string">&#x27;dates&#x27;</span>] = re.findall(date_pattern, full_text)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 提取签约方（甲方、乙方）</span></span><br><span class="line">    party_pattern = <span class="string">r&#x27;([甲乙]方|[买卖]方)：\s*([^\n]+)&#x27;</span></span><br><span class="line">    parties = re.findall(party_pattern, full_text)</span><br><span class="line">    info[<span class="string">&#x27;parties&#x27;</span>] = [p[<span class="number">1</span>].strip() <span class="keyword">for</span> p <span class="keyword">in</span> parties]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> info</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-案例二：发票批量处理"><a href="#5-2-案例二：发票批量处理" class="headerlink" title="5.2 案例二：发票批量处理"></a>5.2 案例二：发票批量处理</h3><p><strong>场景</strong>：财务部门每月需要处理大量发票 PDF，提取信息录入系统。</p>
+<p><strong>解决方案</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">batch_process_invoices</span>(<span class="params">pdf_folder</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;批量处理发票 PDF&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">import</span> os</span><br><span class="line">    <span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">    </span><br><span class="line">    results = []</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(pdf_folder):</span><br><span class="line">        <span class="keyword">if</span> filename.endswith(<span class="string">&#x27;.pdf&#x27;</span>):</span><br><span class="line">            pdf_path = os.path.join(pdf_folder, filename)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 提取发票信息</span></span><br><span class="line">            invoice_info = extract_invoice_info(pdf_path)</span><br><span class="line">            invoice_info[<span class="string">&#x27;filename&#x27;</span>] = filename</span><br><span class="line">            results.append(invoice_info)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 导出为 Excel</span></span><br><span class="line">    df = pd.DataFrame(results)</span><br><span class="line">    output_path = os.path.join(pdf_folder, <span class="string">&#x27;发票汇总.xlsx&#x27;</span>)</span><br><span class="line">    df.to_excel(output_path, index=<span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> output_path</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_invoice_info</span>(<span class="params">pdf_path</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;提取单张发票信息&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 使用 OCR 识别扫描件发票</span></span><br><span class="line">    <span class="comment"># 或使用 pdfplumber 提取电子发票</span></span><br><span class="line">    <span class="comment"># 这里简化处理</span></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="string">&#x27;invoice_no&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;date&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;amount&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;seller&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;buyer&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、实战练习"><a href="#六、实战练习" class="headerlink" title="六、实战练习"></a>六、实战练习</h2><h3 id="练习-1：PDF-合并工具"><a href="#练习-1：PDF-合并工具" class="headerlink" title="练习 1：PDF 合并工具"></a>练习 1：PDF 合并工具</h3><p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>接收多个 PDF 文件</li>
+<li>按文件名排序后合并</li>
+<li>生成目录页（显示各文件起始页码）</li>
+<li>返回合并后的文件</li>
+</ol>
+<h3 id="练习-2：PDF-内容搜索"><a href="#练习-2：PDF-内容搜索" class="headerlink" title="练习 2：PDF 内容搜索"></a>练习 2：PDF 内容搜索</h3><p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>在多个 PDF 中搜索关键词</li>
+<li>返回包含关键词的文件列表</li>
+<li>显示关键词出现的页码和上下文</li>
+<li>生成搜索结果报告</li>
+</ol>
+<h3 id="练习-3：批量加水印"><a href="#练习-3：批量加水印" class="headerlink" title="练习 3：批量加水印"></a>练习 3：批量加水印</h3><p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>接收文件夹路径和水印文字</li>
+<li>为文件夹内所有 PDF 添加水印</li>
+<li>支持自定义水印透明度</li>
+<li>保存到新文件夹，保留原文件</li>
+</ol>
+<h2 id="七、常见问题"><a href="#七、常见问题" class="headerlink" title="七、常见问题"></a>七、常见问题</h2><h3 id="Q1：扫描件-PDF-无法提取文字怎么办？"><a href="#Q1：扫描件-PDF-无法提取文字怎么办？" class="headerlink" title="Q1：扫描件 PDF 无法提取文字怎么办？"></a>Q1：扫描件 PDF 无法提取文字怎么办？</h3><p><strong>解决方案</strong>：</p>
+<ul>
+<li>使用 OCR 技术识别扫描件</li>
+<li>推荐库：<code>pytesseract</code> + <code>pdf2image</code></li>
+<li>先转图片再识别文字</li>
+</ul>
+<h3 id="Q2：PDF-转-Word-后排版错乱怎么办？"><a href="#Q2：PDF-转-Word-后排版错乱怎么办？" class="headerlink" title="Q2：PDF 转 Word 后排版错乱怎么办？"></a>Q2：PDF 转 Word 后排版错乱怎么办？</h3><p><strong>解决方案</strong>：</p>
+<ul>
+<li>使用 <code>pdf2docx</code> 库，保留原排版</li>
+<li>对于复杂排版，考虑使用专业工具</li>
+<li>转换后手动微调</li>
+</ul>
+<h3 id="Q3：如何处理加密的-PDF？"><a href="#Q3：如何处理加密的-PDF？" class="headerlink" title="Q3：如何处理加密的 PDF？"></a>Q3：如何处理加密的 PDF？</h3><p><strong>解决方案</strong>：</p>
+<ul>
+<li>请求用户提供密码</li>
+<li>使用 <code>pypdf</code> 的解密功能</li>
+<li>注意：仅处理用户有权访问的文件</li>
+</ul>
+<h2 id="八、下节预告"><a href="#八、下节预告" class="headerlink" title="八、下节预告"></a>八、下节预告</h2><p>下一讲我们将学习 <strong>PPT 智能生成 Skill 开发</strong>，包括：</p>
+<ul>
+<li>PPT 内容自动生成</li>
+<li>模板应用与样式统一</li>
+<li>图表自动插入</li>
+<li>批量幻灯片处理</li>
+</ul>
+<hr>
+<h2 id="加入学习群"><a href="#加入学习群" class="headerlink" title="加入学习群"></a>加入学习群</h2><p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">加入AI编程学习交流群</a></strong></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" alt="点击加入"></p>
+<hr>
+<p><em>本讲是《AI Skills 从入门到实践》系列课程的第13讲。</em></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">办公自动化</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pdf</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AI Skill</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/AI-Skills-课程//" class="article-tag-list-link color3">AI Skills 课程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/ai-skills/course-beginner-to-pro/04-practice/20260406-13-pdf/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ai-skills/course-beginner-to-pro/04-practice/20260406-12-excel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/ai-skills/course-beginner-to-pro/04-practice/20260406-12-excel/">第12讲：Excel 自动化 Skill 开发</a>
+    </h1>
+  
+
+        
+        <a href="/ai-skills/course-beginner-to-pro/04-practice/20260406-12-excel/" class="archive-article-date">
+  	<time datetime="2026-04-06T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-04-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第12讲：Excel-自动化-Skill-开发"><a href="#第12讲：Excel-自动化-Skill-开发" class="headerlink" title="第12讲：Excel 自动化 Skill 开发"></a>第12讲：Excel 自动化 Skill 开发</h1><blockquote>
+<p>掌握 Excel 场景的 Skill 开发，实现数据清洗、报表生成、格式转换等自动化操作，让繁琐的表格处理工作变得轻松高效。</p>
+</blockquote>
+<h2 id="一、场景分析"><a href="#一、场景分析" class="headerlink" title="一、场景分析"></a>一、场景分析</h2><h3 id="1-1-用户痛点"><a href="#1-1-用户痛点" class="headerlink" title="1.1 用户痛点"></a>1.1 用户痛点</h3><p>在日常办公中，Excel 处理是最耗时的工作之一：</p>
+<ul>
+<li><strong>数据清洗痛苦</strong>：从各部门收集的数据格式不统一，需要手动整理、去重、填充空值</li>
+<li><strong>报表制作繁琐</strong>：每周/每月需要重复制作相同格式的报表，复制粘贴容易出错</li>
+<li><strong>格式转换困难</strong>：需要将 Excel 转换为 PDF、CSV 等其他格式，操作步骤多</li>
+<li><strong>数据合并复杂</strong>：多个表格需要按条件合并，VLOOKUP 公式写起来头大</li>
+<li><strong>批量处理低效</strong>：几百个文件需要统一修改格式，手动操作不现实</li>
+</ul>
+<h3 id="1-2-典型应用场景"><a href="#1-2-典型应用场景" class="headerlink" title="1.2 典型应用场景"></a>1.2 典型应用场景</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>需求描述</th>
+<th>Skill 价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>销售报表</td>
+<td>汇总各区域销售数据，生成可视化图表</td>
+<td>一键生成，自动更新</td>
+</tr>
+<tr>
+<td>财务报表</td>
+<td>合并多个科目表，计算汇总数据</td>
+<td>减少人工计算错误</td>
+</tr>
+<tr>
+<td>人事统计</td>
+<td>统计考勤、绩效、薪资数据</td>
+<td>自动化数据处理</td>
+</tr>
+<tr>
+<td>库存管理</td>
+<td>跟踪库存变动，预警低库存商品</td>
+<td>实时监控，自动提醒</td>
+</tr>
+<tr>
+<td>数据迁移</td>
+<td>将旧系统数据转换为新系统格式</td>
+<td>批量转换，格式校验</td>
+</tr>
+</tbody></table>
+<h2 id="二、核心功能设计"><a href="#二、核心功能设计" class="headerlink" title="二、核心功能设计"></a>二、核心功能设计</h2><h3 id="2-1-Skill-功能清单"><a href="#2-1-Skill-功能清单" class="headerlink" title="2.1 Skill 功能清单"></a>2.1 Skill 功能清单</h3><p>一个完整的 Excel 自动化 Skill 应该具备以下功能：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">📊 Excel 智能助手</span><br><span class="line">├── 数据清洗</span><br><span class="line">│   ├── 去除重复行</span><br><span class="line">│   ├── 填充空值</span><br><span class="line">│   ├── 格式统一化</span><br><span class="line">│   └── 异常数据标记</span><br><span class="line">├── 报表生成</span><br><span class="line">│   ├── 数据透视表</span><br><span class="line">│   ├── 图表生成</span><br><span class="line">│   ├── 条件格式</span><br><span class="line">│   └── 自动汇总</span><br><span class="line">├── 格式转换</span><br><span class="line">│   ├── Excel ↔ CSV</span><br><span class="line">│   ├── Excel ↔ PDF</span><br><span class="line">│   ├── Excel ↔ JSON</span><br><span class="line">│   └── 批量转换</span><br><span class="line">├── 数据合并</span><br><span class="line">│   ├── 多表合并</span><br><span class="line">│   ├── 按条件汇总</span><br><span class="line">│   ├── 数据对比</span><br><span class="line">│   └── 差异报告</span><br><span class="line">└── 批量处理</span><br><span class="line">    ├── 批量重命名</span><br><span class="line">    ├── 批量格式调整</span><br><span class="line">    ├── 批量公式填充</span><br><span class="line">    └── 批量保护设置</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-用户交互流程"><a href="#2-2-用户交互流程" class="headerlink" title="2.2 用户交互流程"></a>2.2 用户交互流程</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">用户输入 → 意图识别 → 参数提取 → 执行操作 → 结果返回</span><br><span class="line">   ↓           ↓           ↓           ↓           ↓</span><br><span class="line">&quot;帮我合并    识别为      提取文件     调用合并     返回合并</span><br><span class="line">这三个表&quot;   合并操作    路径和规则    功能模块     后的文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、技术实现"><a href="#三、技术实现" class="headerlink" title="三、技术实现"></a>三、技术实现</h2><h3 id="3-1-技术选型"><a href="#3-1-技术选型" class="headerlink" title="3.1 技术选型"></a>3.1 技术选型</h3><p>Excel 处理的核心技术栈：</p>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>技术方案</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Coze</td>
+<td>Python + openpyxl/xlrd</td>
+<td>功能全面，支持复杂操作</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>Python + pandas</td>
+<td>数据处理能力强</td>
+</tr>
+<tr>
+<td>飞书 CLI</td>
+<td>飞书表格 API</td>
+<td>与飞书生态深度集成</td>
+</tr>
+</tbody></table>
+<h3 id="3-2-Coze-平台实现"><a href="#3-2-Coze-平台实现" class="headerlink" title="3.2 Coze 平台实现"></a>3.2 Coze 平台实现</h3><h4 id="3-2-1-插件配置"><a href="#3-2-1-插件配置" class="headerlink" title="3.2.1 插件配置"></a>3.2.1 插件配置</h4><p>在 Coze 中创建 Excel 处理 Skill，需要配置以下插件：</p>
+<ol>
+<li><strong>代码执行节点</strong>：使用 Python 处理 Excel 文件</li>
+<li><strong>文件处理节点</strong>：读取和保存 Excel 文件</li>
+<li><strong>大模型节点</strong>：理解用户意图，提取处理参数</li>
+</ol>
+<h4 id="3-2-2-核心代码示例"><a href="#3-2-2-核心代码示例" class="headerlink" title="3.2.2 核心代码示例"></a>3.2.2 核心代码示例</h4><p><strong>数据清洗功能代码：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"><span class="keyword">from</span> openpyxl.styles <span class="keyword">import</span> PatternFill, Font</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">clean_excel</span>(<span class="params">file_path, operations</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Excel 数据清洗主函数</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        file_path: Excel 文件路径</span></span><br><span class="line"><span class="string">        operations: 清洗操作列表</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">        清洗后的文件路径</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 读取 Excel 文件</span></span><br><span class="line">    df = pd.read_excel(file_path)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> op <span class="keyword">in</span> operations:</span><br><span class="line">        <span class="keyword">if</span> op[<span class="string">&#x27;type&#x27;</span>] == <span class="string">&#x27;remove_duplicates&#x27;</span>:</span><br><span class="line">            <span class="comment"># 去除重复行</span></span><br><span class="line">            subset = op.get(<span class="string">&#x27;columns&#x27;</span>, <span class="literal">None</span>)</span><br><span class="line">            df = df.drop_duplicates(subset=subset)</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">elif</span> op[<span class="string">&#x27;type&#x27;</span>] == <span class="string">&#x27;fill_na&#x27;</span>:</span><br><span class="line">            <span class="comment"># 填充空值</span></span><br><span class="line">            strategy = op.get(<span class="string">&#x27;strategy&#x27;</span>, <span class="string">&#x27;forward&#x27;</span>)</span><br><span class="line">            <span class="keyword">if</span> strategy == <span class="string">&#x27;forward&#x27;</span>:</span><br><span class="line">                df = df.fillna(method=<span class="string">&#x27;ffill&#x27;</span>)</span><br><span class="line">            <span class="keyword">elif</span> strategy == <span class="string">&#x27;backward&#x27;</span>:</span><br><span class="line">                df = df.fillna(method=<span class="string">&#x27;bfill&#x27;</span>)</span><br><span class="line">            <span class="keyword">elif</span> strategy == <span class="string">&#x27;value&#x27;</span>:</span><br><span class="line">                fill_value = op.get(<span class="string">&#x27;value&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">                df = df.fillna(fill_value)</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">elif</span> op[<span class="string">&#x27;type&#x27;</span>] == <span class="string">&#x27;standardize&#x27;</span>:</span><br><span class="line">            <span class="comment"># 格式统一化</span></span><br><span class="line">            column = op[<span class="string">&#x27;column&#x27;</span>]</span><br><span class="line">            format_type = op[<span class="string">&#x27;format&#x27;</span>]</span><br><span class="line">            <span class="keyword">if</span> format_type == <span class="string">&#x27;date&#x27;</span>:</span><br><span class="line">                df[column] = pd.to_datetime(df[column])</span><br><span class="line">            <span class="keyword">elif</span> format_type == <span class="string">&#x27;number&#x27;</span>:</span><br><span class="line">                df[column] = pd.to_numeric(df[column], errors=<span class="string">&#x27;coerce&#x27;</span>)</span><br><span class="line">            <span class="keyword">elif</span> format_type == <span class="string">&#x27;text&#x27;</span>:</span><br><span class="line">                df[column] = df[column].astype(<span class="built_in">str</span>).<span class="built_in">str</span>.strip()</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">elif</span> op[<span class="string">&#x27;type&#x27;</span>] == <span class="string">&#x27;mark_anomaly&#x27;</span>:</span><br><span class="line">            <span class="comment"># 标记异常数据</span></span><br><span class="line">            column = op[<span class="string">&#x27;column&#x27;</span>]</span><br><span class="line">            condition = op[<span class="string">&#x27;condition&#x27;</span>]</span><br><span class="line">            df[<span class="string">f&#x27;<span class="subst">&#123;column&#125;</span>_is_anomaly&#x27;</span>] = df.<span class="built_in">eval</span>(condition)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 保存结果</span></span><br><span class="line">    output_path = file_path.replace(<span class="string">&#x27;.xlsx&#x27;</span>, <span class="string">&#x27;_cleaned.xlsx&#x27;</span>)</span><br><span class="line">    df.to_excel(output_path, index=<span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> output_path</span><br></pre></td></tr></table></figure>
+
+<p><strong>报表生成功能代码：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">generate_report</span>(<span class="params">data_file, report_config</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    自动生成数据报表</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        data_file: 数据源文件</span></span><br><span class="line"><span class="string">        report_config: 报表配置</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    df = pd.read_excel(data_file)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 创建透视表</span></span><br><span class="line">    pivot = pd.pivot_table(</span><br><span class="line">        df,</span><br><span class="line">        values=report_config[<span class="string">&#x27;values&#x27;</span>],</span><br><span class="line">        index=report_config[<span class="string">&#x27;index&#x27;</span>],</span><br><span class="line">        columns=report_config.get(<span class="string">&#x27;columns&#x27;</span>),</span><br><span class="line">        aggfunc=report_config.get(<span class="string">&#x27;aggfunc&#x27;</span>, <span class="string">&#x27;sum&#x27;</span>)</span><br><span class="line">    )</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 生成图表</span></span><br><span class="line">    <span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">    plt.figure(figsize=(<span class="number">10</span>, <span class="number">6</span>))</span><br><span class="line">    pivot.plot(kind=<span class="string">&#x27;bar&#x27;</span>)</span><br><span class="line">    plt.title(report_config[<span class="string">&#x27;title&#x27;</span>])</span><br><span class="line">    plt.tight_layout()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 保存图表</span></span><br><span class="line">    chart_path = data_file.replace(<span class="string">&#x27;.xlsx&#x27;</span>, <span class="string">&#x27;_chart.png&#x27;</span>)</span><br><span class="line">    plt.savefig(chart_path)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 保存报表</span></span><br><span class="line">    report_path = data_file.replace(<span class="string">&#x27;.xlsx&#x27;</span>, <span class="string">&#x27;_report.xlsx&#x27;</span>)</span><br><span class="line">    <span class="keyword">with</span> pd.ExcelWriter(report_path, engine=<span class="string">&#x27;openpyxl&#x27;</span>) <span class="keyword">as</span> writer:</span><br><span class="line">        df.to_excel(writer, sheet_name=<span class="string">&#x27;原始数据&#x27;</span>, index=<span class="literal">False</span>)</span><br><span class="line">        pivot.to_excel(writer, sheet_name=<span class="string">&#x27;透视表&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="string">&#x27;report_file&#x27;</span>: report_path,</span><br><span class="line">        <span class="string">&#x27;chart_file&#x27;</span>: chart_path</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>多表合并功能代码：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">merge_excel_files</span>(<span class="params">file_list, merge_config</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    合并多个 Excel 文件</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        file_list: 文件路径列表</span></span><br><span class="line"><span class="string">        merge_config: 合并配置</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    dataframes = []</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> file_path <span class="keyword">in</span> file_list:</span><br><span class="line">        df = pd.read_excel(file_path)</span><br><span class="line">        df[<span class="string">&#x27;source_file&#x27;</span>] = file_path  <span class="comment"># 标记数据来源</span></span><br><span class="line">        dataframes.append(df)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 根据配置选择合并方式</span></span><br><span class="line">    merge_type = merge_config.get(<span class="string">&#x27;type&#x27;</span>, <span class="string">&#x27;concat&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> merge_type == <span class="string">&#x27;concat&#x27;</span>:</span><br><span class="line">        <span class="comment"># 纵向拼接</span></span><br><span class="line">        result = pd.concat(dataframes, ignore_index=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">elif</span> merge_type == <span class="string">&#x27;merge&#x27;</span>:</span><br><span class="line">        <span class="comment"># 按条件合并</span></span><br><span class="line">        result = dataframes[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> df <span class="keyword">in</span> dataframes[<span class="number">1</span>:]:</span><br><span class="line">            result = pd.merge(</span><br><span class="line">                result, df,</span><br><span class="line">                on=merge_config[<span class="string">&#x27;on&#x27;</span>],</span><br><span class="line">                how=merge_config.get(<span class="string">&#x27;how&#x27;</span>, <span class="string">&#x27;inner&#x27;</span>)</span><br><span class="line">            )</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 去重</span></span><br><span class="line">    <span class="keyword">if</span> merge_config.get(<span class="string">&#x27;remove_duplicates&#x27;</span>, <span class="literal">False</span>):</span><br><span class="line">        result = result.drop_duplicates()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 保存</span></span><br><span class="line">    output_path = merge_config[<span class="string">&#x27;output_path&#x27;</span>]</span><br><span class="line">    result.to_excel(output_path, index=<span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> output_path</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-OpenClaw-平台实现"><a href="#3-3-OpenClaw-平台实现" class="headerlink" title="3.3 OpenClaw 平台实现"></a>3.3 OpenClaw 平台实现</h3><p>OpenClaw 的 Excel Skill 开发更加简洁：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> openclaw <span class="keyword">import</span> Skill, Tool</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ExcelSkill</span>(<span class="title class_ inherited__">Skill</span>):</span><br><span class="line">    name = <span class="string">&quot;Excel智能助手&quot;</span></span><br><span class="line">    description = <span class="string">&quot;自动化处理 Excel 文件&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @Tool</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">clean_data</span>(<span class="params">self, file: <span class="built_in">str</span>, operations: <span class="built_in">list</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;清洗 Excel 数据&quot;&quot;&quot;</span></span><br><span class="line">        df = pd.read_excel(file)</span><br><span class="line">        <span class="comment"># 执行清洗操作...</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;清洗完成&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @Tool</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">merge_files</span>(<span class="params">self, files: <span class="built_in">list</span>, output: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;合并多个 Excel 文件&quot;&quot;&quot;</span></span><br><span class="line">        dfs = [pd.read_excel(f) <span class="keyword">for</span> f <span class="keyword">in</span> files]</span><br><span class="line">        result = pd.concat(dfs)</span><br><span class="line">        result.to_excel(output, index=<span class="literal">False</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;已合并到 <span class="subst">&#123;output&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-飞书-CLI-实现"><a href="#3-4-飞书-CLI-实现" class="headerlink" title="3.4 飞书 CLI 实现"></a>3.4 飞书 CLI 实现</h3><p>飞书 CLI 可以直接操作飞书表格：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lark_cli <span class="keyword">import</span> Skill, SpreadsheetAPI</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">FeishuExcelSkill</span>(<span class="title class_ inherited__">Skill</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.api = SpreadsheetAPI()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sync_data</span>(<span class="params">self, spreadsheet_token: <span class="built_in">str</span>, data: <span class="built_in">list</span></span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;同步数据到飞书表格&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 写入数据</span></span><br><span class="line">        self.api.write_range(</span><br><span class="line">            spreadsheet_token=spreadsheet_token,</span><br><span class="line">            <span class="built_in">range</span>=<span class="string">&quot;Sheet1!A1&quot;</span>,</span><br><span class="line">            values=data</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;同步成功&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">generate_chart</span>(<span class="params">self, spreadsheet_token: <span class="built_in">str</span>, config: <span class="built_in">dict</span></span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在飞书表格中生成图表&quot;&quot;&quot;</span></span><br><span class="line">        chart = self.api.create_chart(</span><br><span class="line">            spreadsheet_token=spreadsheet_token,</span><br><span class="line">            chart_type=config[<span class="string">&#x27;type&#x27;</span>],</span><br><span class="line">            data_range=config[<span class="string">&#x27;range&#x27;</span>]</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> chart</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、Prompt-设计"><a href="#四、Prompt-设计" class="headerlink" title="四、Prompt 设计"></a>四、Prompt 设计</h2><h3 id="4-1-系统-Prompt"><a href="#4-1-系统-Prompt" class="headerlink" title="4.1 系统 Prompt"></a>4.1 系统 Prompt</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">你是 Excel 智能助手，专门帮助用户自动化处理 Excel 文件。</span><br><span class="line"></span><br><span class="line">你可以执行以下操作：</span><br><span class="line">1. 数据清洗：去重、填充空值、格式统一、异常标记</span><br><span class="line">2. 报表生成：透视表、图表、汇总统计</span><br><span class="line">3. 格式转换：Excel ↔ CSV/PDF/JSON</span><br><span class="line">4. 数据合并：多表合并、条件汇总</span><br><span class="line">5. 批量处理：批量重命名、格式调整</span><br><span class="line"></span><br><span class="line">处理流程：</span><br><span class="line">1. 理解用户的 Excel 处理需求</span><br><span class="line">2. 询问必要的参数（文件路径、处理规则等）</span><br><span class="line">3. 确认操作内容</span><br><span class="line">4. 执行处理</span><br><span class="line">5. 返回处理结果和文件</span><br><span class="line"></span><br><span class="line">注意事项：</span><br><span class="line">- 处理前备份原始文件</span><br><span class="line">- 大数据量时提示用户可能需要等待</span><br><span class="line">- 提供处理摘要（处理了多少行、哪些变更）</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-意图识别示例"><a href="#4-2-意图识别示例" class="headerlink" title="4.2 意图识别示例"></a>4.2 意图识别示例</h3><table>
+<thead>
+<tr>
+<th>用户输入</th>
+<th>识别意图</th>
+<th>提取参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>“帮我把这个表里的重复数据删掉”</td>
+<td>数据清洗-去重</td>
+<td>文件路径、去重列</td>
+</tr>
+<tr>
+<td>“把这三个销售表合并成一个”</td>
+<td>数据合并</td>
+<td>文件列表、合并方式</td>
+</tr>
+<tr>
+<td>“生成一个按月份汇总的报表”</td>
+<td>报表生成</td>
+<td>数据源、汇总维度</td>
+</tr>
+<tr>
+<td>“把 Excel 转成 PDF”</td>
+<td>格式转换</td>
+<td>源文件、目标格式</td>
+</tr>
+</tbody></table>
+<h2 id="五、实战案例"><a href="#五、实战案例" class="headerlink" title="五、实战案例"></a>五、实战案例</h2><h3 id="5-1-案例一：销售数据清洗"><a href="#5-1-案例一：销售数据清洗" class="headerlink" title="5.1 案例一：销售数据清洗"></a>5.1 案例一：销售数据清洗</h3><p><strong>场景</strong>：销售部门每月收到各区域提交的 Excel 报表，需要合并并清洗。</p>
+<p><strong>解决方案</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Skill 执行流程</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">process_sales_data</span>(<span class="params">file_list</span>):</span><br><span class="line">    <span class="comment"># 1. 合并所有区域报表</span></span><br><span class="line">    merged = merge_excel_files(file_list, &#123;</span><br><span class="line">        <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;concat&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;remove_duplicates&#x27;</span>: <span class="literal">True</span></span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 2. 数据清洗</span></span><br><span class="line">    cleaned = clean_excel(merged, [</span><br><span class="line">        &#123;<span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;remove_duplicates&#x27;</span>, <span class="string">&#x27;columns&#x27;</span>: [<span class="string">&#x27;订单号&#x27;</span>]&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;fill_na&#x27;</span>, <span class="string">&#x27;strategy&#x27;</span>: <span class="string">&#x27;value&#x27;</span>, <span class="string">&#x27;value&#x27;</span>: <span class="number">0</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;standardize&#x27;</span>, <span class="string">&#x27;column&#x27;</span>: <span class="string">&#x27;日期&#x27;</span>, <span class="string">&#x27;format&#x27;</span>: <span class="string">&#x27;date&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;mark_anomaly&#x27;</span>, <span class="string">&#x27;column&#x27;</span>: <span class="string">&#x27;金额&#x27;</span>, <span class="string">&#x27;condition&#x27;</span>: <span class="string">&#x27;金额 &lt; 0&#x27;</span>&#125;</span><br><span class="line">    ])</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 3. 生成汇总报表</span></span><br><span class="line">    report = generate_report(cleaned, &#123;</span><br><span class="line">        <span class="string">&#x27;values&#x27;</span>: [<span class="string">&#x27;金额&#x27;</span>, <span class="string">&#x27;数量&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;index&#x27;</span>: [<span class="string">&#x27;区域&#x27;</span>, <span class="string">&#x27;月份&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;aggfunc&#x27;</span>: <span class="string">&#x27;sum&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;title&#x27;</span>: <span class="string">&#x27;销售数据汇总&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> report</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-案例二：财务报表自动化"><a href="#5-2-案例二：财务报表自动化" class="headerlink" title="5.2 案例二：财务报表自动化"></a>5.2 案例二：财务报表自动化</h3><p><strong>场景</strong>：财务每月需要从多个系统导出数据，生成管理报表。</p>
+<p><strong>解决方案</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">generate_finance_report</span>(<span class="params">config</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;自动生成财务报表&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 读取各系统数据</span></span><br><span class="line">    gl_data = pd.read_excel(config[<span class="string">&#x27;general_ledger&#x27;</span>])</span><br><span class="line">    ar_data = pd.read_excel(config[<span class="string">&#x27;ar_file&#x27;</span>])</span><br><span class="line">    ap_data = pd.read_excel(config[<span class="string">&#x27;ap_file&#x27;</span>])</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 数据校验</span></span><br><span class="line">    validate_data(gl_data, ar_data, ap_data)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 生成各类报表</span></span><br><span class="line">    reports = &#123;</span><br><span class="line">        <span class="string">&#x27;资产负债表&#x27;</span>: generate_balance_sheet(gl_data),</span><br><span class="line">        <span class="string">&#x27;利润表&#x27;</span>: generate_income_statement(gl_data),</span><br><span class="line">        <span class="string">&#x27;现金流量表&#x27;</span>: generate_cash_flow(gl_data),</span><br><span class="line">        <span class="string">&#x27;应收账款分析&#x27;</span>: generate_ar_analysis(ar_data),</span><br><span class="line">        <span class="string">&#x27;应付账款分析&#x27;</span>: generate_ap_analysis(ap_data)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 导出为 PDF</span></span><br><span class="line">    pdf_path = export_to_pdf(reports, config[<span class="string">&#x27;output_pdf&#x27;</span>])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> pdf_path</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、多平台适配对比"><a href="#六、多平台适配对比" class="headerlink" title="六、多平台适配对比"></a>六、多平台适配对比</h2><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>Coze</th>
+<th>OpenClaw</th>
+<th>飞书 CLI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本地文件处理</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>飞书表格操作</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>复杂数据处理</td>
+<td>✅</td>
+<td>✅</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>图表生成</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PDF 转换</td>
+<td>✅</td>
+<td>✅</td>
+<td>需插件</td>
+</tr>
+<tr>
+<td>批量处理</td>
+<td>✅</td>
+<td>✅</td>
+<td>中等</td>
+</tr>
+</tbody></table>
+<h2 id="七、实战练习"><a href="#七、实战练习" class="headerlink" title="七、实战练习"></a>七、实战练习</h2><h3 id="练习-1：基础数据清洗"><a href="#练习-1：基础数据清洗" class="headerlink" title="练习 1：基础数据清洗"></a>练习 1：基础数据清洗</h3><p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>读取用户上传的 Excel 文件</li>
+<li>自动检测并去除重复行</li>
+<li>填充所有空值为 0</li>
+<li>将日期列统一为 YYYY-MM-DD 格式</li>
+<li>返回清洗后的文件</li>
+</ol>
+<h3 id="练习-2：销售报表生成"><a href="#练习-2：销售报表生成" class="headerlink" title="练习 2：销售报表生成"></a>练习 2：销售报表生成</h3><p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>读取销售数据</li>
+<li>按产品类别和月份生成透视表</li>
+<li>生成柱状图展示销售额</li>
+<li>标记销售额超过 10 万的记录</li>
+<li>导出为 PDF 报表</li>
+</ol>
+<h3 id="练习-3：多表合并工具"><a href="#练习-3：多表合并工具" class="headerlink" title="练习 3：多表合并工具"></a>练习 3：多表合并工具</h3><p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>接收多个 Excel 文件</li>
+<li>按指定列（如”客户ID”）合并</li>
+<li>处理列名冲突（添加前缀区分来源）</li>
+<li>生成合并报告（显示合并前后的行数）</li>
+<li>返回合并后的文件</li>
+</ol>
+<h2 id="八、常见问题"><a href="#八、常见问题" class="headerlink" title="八、常见问题"></a>八、常见问题</h2><h3 id="Q1：处理大文件时内存不足怎么办？"><a href="#Q1：处理大文件时内存不足怎么办？" class="headerlink" title="Q1：处理大文件时内存不足怎么办？"></a>Q1：处理大文件时内存不足怎么办？</h3><p><strong>解决方案</strong>：</p>
+<ul>
+<li>使用 <code>pandas.read_excel()</code> 的 <code>chunksize</code> 参数分块读取</li>
+<li>只读取需要的列：<code>usecols=[&#39;列A&#39;, &#39;列B&#39;]</code></li>
+<li>考虑使用 Dask 进行分布式处理</li>
+</ul>
+<h3 id="Q2：如何保留-Excel-的格式和公式？"><a href="#Q2：如何保留-Excel-的格式和公式？" class="headerlink" title="Q2：如何保留 Excel 的格式和公式？"></a>Q2：如何保留 Excel 的格式和公式？</h3><p><strong>解决方案</strong>：</p>
+<ul>
+<li>使用 <code>openpyxl</code> 而不是 <code>pandas</code> 处理格式</li>
+<li>读取时保留公式：<code>data_only=False</code></li>
+<li>复制单元格样式到新的工作簿</li>
+</ul>
+<h3 id="Q3：中文乱码怎么处理？"><a href="#Q3：中文乱码怎么处理？" class="headerlink" title="Q3：中文乱码怎么处理？"></a>Q3：中文乱码怎么处理？</h3><p><strong>解决方案</strong>：</p>
+<ul>
+<li>明确指定编码：<code>encoding=&#39;utf-8&#39;</code> 或 <code>&#39;gbk&#39;</code></li>
+<li>CSV 文件添加 BOM：<code>encoding=&#39;utf-8-sig&#39;</code></li>
+<li>检查源文件的编码格式</li>
+</ul>
+<h2 id="九、下节预告"><a href="#九、下节预告" class="headerlink" title="九、下节预告"></a>九、下节预告</h2><p>下一讲我们将学习 <strong>PDF 智能处理 Skill 开发</strong>，包括：</p>
+<ul>
+<li>PDF 内容提取与解析</li>
+<li>PDF 合并、拆分、旋转</li>
+<li>PDF 与 Word/Excel 互转</li>
+<li>OCR 文字识别集成</li>
+</ul>
+<hr>
+<h2 id="加入学习群"><a href="#加入学习群" class="headerlink" title="加入学习群"></a>加入学习群</h2><p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">加入AI编程学习交流群</a></strong></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" alt="点击加入"></p>
+<hr>
+<p><em>本讲是《AI Skills 从入门到实践》系列课程的第12讲。</em></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">办公自动化</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AI Skill</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">excel</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/AI-Skills-课程//" class="article-tag-list-link color3">AI Skills 课程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/ai-skills/course-beginner-to-pro/04-practice/20260406-12-excel/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ads/tencent/Workuddy/articles/20260407-qclaw-vs-workbuddy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -3922,232 +4545,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/ai-skills/platform-guides/20260406-platform-comparison/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ai-skills/platform-guides/20260406-feishu-cli-guide" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/ai-skills/platform-guides/20260406-feishu-cli-guide/">飞书 CLI 办公 Skill 快速上手：19个官方Skill让AI接管你的工作</a>
-    </h1>
-  
-
-        
-        <a href="/ai-skills/platform-guides/20260406-feishu-cli-guide/" class="archive-article-date">
-  	<time datetime="2026-04-06T02:34:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-04-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://github.com/larksuite/lark-cli">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
-    </a>
-</p>
-        
-          <a class="article-more-a" href="/ai-skills/platform-guides/20260406-feishu-cli-guide/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Skill</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">飞书</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CLI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Lark</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AI办公</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AI-Skills//" class="article-tag-list-link color5">AI Skills</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AI-Skills/平台攻略//" class="article-tag-list-link color5">平台攻略</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/ai-skills/platform-guides/20260406-feishu-cli-guide/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ai-skills/platform-guides/20260406-openclaw-skill-guide" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/ai-skills/platform-guides/20260406-openclaw-skill-guide/">OpenClaw Skill 安装与管理指南：1700+技能等你探索</a>
-    </h1>
-  
-
-        
-        <a href="/ai-skills/platform-guides/20260406-openclaw-skill-guide/" class="archive-article-date">
-  	<time datetime="2026-04-06T02:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-04-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p align="center">
-    <a target="_blank" href="https://github.com/claw-ai/openclaw">
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
-    </a>
-</p>
-        
-          <a class="article-more-a" href="/ai-skills/platform-guides/20260406-openclaw-skill-guide/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Skill</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AI办公</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">OpenClaw</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ClawHub</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AI-Skills//" class="article-tag-list-link color5">AI Skills</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AI-Skills/平台攻略//" class="article-tag-list-link color5">平台攻略</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/ai-skills/platform-guides/20260406-openclaw-skill-guide/">展开全文 >></a>
         </p>
       
 
