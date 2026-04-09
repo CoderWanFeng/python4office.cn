@@ -156,7 +156,7 @@ AI 是杠杆，不是对手。
 - 模型选择建议
 - API接入代码示例
 
-👉 [点击免费领取](https://www.python4office.cn/free-resources)
+👉 [点击免费领取](https://www.python-office.com/openclaw/)
 
 ---
 
