@@ -34,7 +34,7 @@ tags: [第三方库,pyinstaller]
 	</a>	
 </p>
 <p align="center" name="atomgit">
-	<a href="https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A">
+	<a href="https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -47,7 +47,7 @@ tags: [第三方库,pyinstaller]
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)，全网同名。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)，全网同名。
 
 
 ——用 GitHub Actions 在 5 分钟内同时产出 Win / macOS / Linux 三系统可执行文件
@@ -244,4 +244,4 @@ act -j build --matrix os:ubuntu-latest
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)就能上手做AI项目。

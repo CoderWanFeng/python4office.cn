@@ -5,7 +5,7 @@ tags:
 ---
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)。
 
 今年下半年开始，我打算做一个知识星球，和你一起学习。
 
@@ -115,7 +115,7 @@ tags:
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/TPjhtvaoWaJ7mVuPBymLhQ)就能上手做AI项目。
