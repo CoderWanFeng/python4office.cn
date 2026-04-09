@@ -9,7 +9,7 @@ categories: [AI编程, 教程]
 > 
 > 邀请码：**GF2QJX3V**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://r7up9.xetslk.com/s/1uP5YW)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
 
 大家好，这里是程序员晚枫。
 
@@ -96,7 +96,7 @@ Cursor + 火山方舟Coding Plan，是目前性价比最高的AI编程组合。
 
 ## 📚 想系统学习AI编程？
 
-👉 **[点击了解AI编程训练营](https://r7up9.xetslk.com/s/1uP5YW)**
+👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
 
 **《30讲 · AI编程训练营》** —— 从0到1掌握AI编程实战。
 

@@ -9,7 +9,7 @@ categories: [AI编程, 团队管理]
 > 
 > 邀请码：**GF2QJX3V**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://r7up9.xetslk.com/s/1uP5YW)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
 
 大家好，这里是程序员晚枫。
 
@@ -95,7 +95,7 @@ categories: [AI编程, 团队管理]
 
 ## 📚 想系统学习AI编程？
 
-👉 **[点击了解AI编程训练营](https://r7up9.xetslk.com/s/1uP5YW)**
+👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
 
 **《30讲 · AI编程训练营》** —— 团队AI编程最佳实践。
 
