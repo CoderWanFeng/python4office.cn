@@ -1,7 +1,7 @@
 ---
 title: 腾讯云OpenClaw来了！云端一键部署AI助手，还能接入微信
-keywords: '腾讯云OpenClaw,OpenClaw部署,AI助手,微信机器人,腾讯云轻量服务器,AI智能助手'
-description: '腾讯云轻量应用服务器首发支持OpenClaw一键部署，秒级搭建AI助手，支持微信、QQ、企业微信、飞书、钉钉全平台接入，7x24小时稳定在线。'
+keywords: 程序员晚枫, 腾讯云OpenClaw, OpenClaw部署, AI助手搭建, 微信机器人, 腾讯云轻量服务器
+description: 程序员晚枫推荐：腾讯云OpenClaw一键部署AI助手，支持微信、QQ、企业微信、飞书、钉钉全平台接入，7x24小时稳定在线。
 date: 2026-04-08 10:00:00
 categories:
   - AI工具
@@ -12,7 +12,12 @@ tags:
   - 腾讯云
   - 微信机器人
   - 智能助手
+  - 程序员晚枫
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 # 腾讯云OpenClaw来了！云端一键部署AI助手，还能接入微信
 

@@ -1,9 +1,15 @@
 ---
 title: 火山方舟Coding Plan适合什么人？这5类人最适合
+keywords: 程序员晚枫, 火山方舟Coding Plan适合谁, AI编程工具推荐, Coding Plan用户群体, 程序员工具选择
+description: 程序员晚枫分析：火山方舟Coding Plan适合什么人？5类最适合的用户群体，帮你判断这款AI编程工具是否适合你。
 date: 2026-04-08 00:23:00
-tags: [火山方舟Coding Plan适合谁, Coding Plan用户群体, AI编程工具推荐, 程序员工具选择, 火山引擎用户]
+tags: [火山方舟Coding Plan适合谁, Coding Plan用户群体, AI编程工具推荐, 程序员工具选择, 火山引擎用户, 程序员晚枫]
 categories: [AI编程, 工具推荐]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
 > 

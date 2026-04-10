@@ -1,9 +1,15 @@
 ---
 title: 火山方舟Coding Plan API调用详解：代码接入实战
+keywords: 程序员晚枫, 火山方舟Coding Plan API, AI编程API接入, 代码调用示例, API教程
+description: 程序员晚枫详解：火山方舟Coding Plan API调用实战，代码接入示例，手把手教你用API实现AI编程。
 date: 2026-04-10 00:05:00
-tags: [火山方舟Coding Plan API, 火山引擎API接入, AI编程API, 代码调用示例, API教程]
+tags: [火山方舟Coding Plan API, 火山引擎API接入, AI编程API, 代码调用示例, API教程, 程序员晚枫]
 categories: [AI编程, API教程]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
 > 

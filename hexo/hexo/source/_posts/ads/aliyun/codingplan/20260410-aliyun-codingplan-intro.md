@@ -1,9 +1,15 @@
 ---
 title: 阿里云Coding Plan来了！首月7.9元起，千问+Kimi+GLM多模型随心用
+keywords: 程序员晚枫, 阿里云Coding Plan, 阿里云百炼Coding Plan, 千问代码模型, AI编程工具推荐
+description: 程序员晚枫推荐：阿里云Coding Plan首月7.9元起，千问+Kimi+GLM多模型随心用，国产AI编程性价比之选。
 date: 2026-04-10 02:56:00
-tags: [阿里云Coding Plan, 阿里云百炼Coding Plan, 通义灵码, AI编程工具, 千问代码模型, Qwen Coder]
+tags: [阿里云Coding Plan, 阿里云百炼Coding Plan, 通义灵码, AI编程工具, 千问代码模型, Qwen Coder, 程序员晚枫]
 categories: [AI编程, 工具推荐]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击了解阿里云Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&source=5176.29345612&userCode=t6duaoe1)**
 > 
