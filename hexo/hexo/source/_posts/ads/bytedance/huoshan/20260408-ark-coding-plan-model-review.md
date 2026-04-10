@@ -1,9 +1,15 @@
 ---
 title: 火山方舟Coding Plan五大模型实测：Doubao、GLM、DeepSeek、Kimi、MiniMax哪个最强？
+keywords: 程序员晚枫, 火山方舟Coding Plan模型评测, AI编程模型对比, Doubao代码能力, DeepSeek编程评测
+description: 程序员晚枫实测：火山方舟Coding Plan五大模型对比评测，Doubao、GLM、DeepSeek、Kimi、MiniMax哪个最适合编程？
 date: 2026-04-08 00:24:00
-tags: [火山方舟Coding Plan模型评测, Doubao代码能力, DeepSeek编程, GLM-4评测, Kimi长文本, MiniMax创意]
+tags: [火山方舟Coding Plan模型评测, Doubao代码能力, DeepSeek编程, GLM-4评测, Kimi长文本, MiniMax创意, 程序员晚枫]
 categories: [AI编程, 模型评测]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
 > 

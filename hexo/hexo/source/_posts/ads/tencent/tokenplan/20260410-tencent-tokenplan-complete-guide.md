@@ -1,9 +1,15 @@
 ---
 title: 腾讯云TOKEN Plan完全指南：告别CODING Plan套餐束缚，按量计费更自由
+keywords: 程序员晚枫, 腾讯云TOKEN Plan指南, CODING Plan替代方案, AI编程按量计费, TOKEN Plan使用教程
+description: 程序员晚枫出品：腾讯云TOKEN Plan完全指南，告别CODING Plan套餐束缚，按量计费更自由，AI编程灵活新选择。
 date: 2026-04-10 02:53:00
-tags: [腾讯云TOKEN Plan指南, TOKEN Plan怎么用, CODING Plan替代方案, AI编程按量计费, 腾讯云AI编程]
+tags: [腾讯云TOKEN Plan指南, TOKEN Plan怎么用, CODING Plan替代方案, AI编程按量计费, 腾讯云AI编程, 程序员晚枫]
 categories: [AI编程, 完整指南]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击了解腾讯云TOKEN Plan](https://curl.qcloud.com/Z9TkzRuj)**
 > 

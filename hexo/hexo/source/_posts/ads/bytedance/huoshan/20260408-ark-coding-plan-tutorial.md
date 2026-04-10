@@ -1,9 +1,15 @@
 ---
 title: 火山方舟Coding Plan使用教程：从订阅到上手，完整指南
+keywords: 程序员晚枫, 火山方舟Coding Plan教程, AI编程入门, 方舟Coding Plan怎么用, AI编程工具教程
+description: 程序员晚枫出品：火山方舟Coding Plan完整使用教程，从订阅到配置Cursor/VS Code，手把手教你上手AI编程。
 date: 2026-04-08 00:21:00
-tags: [火山方舟Coding Plan教程, 方舟Coding Plan怎么用, 火山引擎AI编程, Coding Plan入门, AI编程工具教程]
+tags: [火山方舟Coding Plan教程, 方舟Coding Plan怎么用, 火山引擎AI编程, Coding Plan入门, AI编程工具教程, 程序员晚枫]
 categories: [AI编程, 教程]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
 > 

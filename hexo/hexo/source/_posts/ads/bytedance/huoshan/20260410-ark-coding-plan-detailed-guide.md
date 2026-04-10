@@ -1,9 +1,15 @@
 ---
 title: 火山方舟Coding Plan完全指南：6大模型、多工具支持、8.91元上车
+keywords: 程序员晚枫, 火山方舟Coding Plan指南, AI编程完全攻略, 豆包代码模型, AI编程工具教程
+description: 程序员晚枫出品：火山方舟Coding Plan完全指南，6大模型详解、工具配置、套餐选择，8.91元上车的AI编程全攻略。
 date: 2026-04-10 02:46:00
-tags: [火山方舟Coding Plan指南, 豆包代码模型, Kimi编程, DeepSeek代码, GLM-4, AI编程完整攻略]
+tags: [火山方舟Coding Plan指南, 豆包代码模型, Kimi编程, DeepSeek代码, GLM-4, AI编程完整攻略, 程序员晚枫]
 categories: [AI编程, 完整指南]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
 > 

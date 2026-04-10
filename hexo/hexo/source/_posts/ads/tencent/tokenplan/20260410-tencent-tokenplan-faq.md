@@ -1,9 +1,15 @@
 ---
 title: 腾讯云TOKEN Plan常见问题FAQ：CODING Plan用户最关心的20个问题
+keywords: 程序员晚枫, 腾讯云TOKEN Plan FAQ, CODING Plan对比, AI编程按量计费问题, TOKEN Plan使用问答
+description: 程序员晚枫整理：腾讯云TOKEN Plan常见问题FAQ，CODING Plan用户最关心的20个问题，按量计费、模型选择、工具配置全解答。
 date: 2026-04-10 02:54:00
-tags: [腾讯云TOKEN Plan FAQ, TOKEN Plan常见问题, CODING Plan对比, AI编程按量计费问题, TOKEN Plan怎么用]
+tags: [腾讯云TOKEN Plan FAQ, TOKEN Plan常见问题, CODING Plan对比, AI编程按量计费问题, TOKEN Plan怎么用, 程序员晚枫]
 categories: [AI编程, 常见问题]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击了解腾讯云TOKEN Plan](https://curl.qcloud.com/Z9TkzRuj)**
 > 

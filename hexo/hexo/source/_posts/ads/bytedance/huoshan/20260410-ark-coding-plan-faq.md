@@ -1,9 +1,15 @@
 ---
 title: 火山方舟Coding Plan常见问题FAQ：你关心的都在这里
+keywords: 程序员晚枫, 火山方舟Coding Plan FAQ, AI编程常见问题, Coding Plan问题解答, 火山引擎使用帮助
+description: 程序员晚枫整理：火山方舟Coding Plan常见问题FAQ，订阅、模型、工具、用量等问题一次性解答。
 date: 2026-04-10 00:08:00
-tags: [火山方舟Coding Plan FAQ, Coding Plan常见问题, 火山引擎问题解答, AI编程工具问题, 使用帮助]
+tags: [火山方舟Coding Plan FAQ, Coding Plan常见问题, 火山引擎问题解答, AI编程工具问题, 使用帮助, 程序员晚枫]
 categories: [AI编程, FAQ]
 ---
+
+> **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
+> 
+> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
 > 
