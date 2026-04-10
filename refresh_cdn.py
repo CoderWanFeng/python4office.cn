@@ -37,21 +37,19 @@ def refresh_cdn_cache():
         # 创建CDN客户端
         client = cdn_client.CdnClient(cred, "")
         
-        # 创建刷新请求
-        req = models.PurgeUrlsCacheRequest()
+        # 创建目录刷新请求（会刷新目录及所有子目录）
+        req = models.PurgePathCacheRequest()
         
-        # 设置要刷新的URL列表
-        urls = [
-            "https://www.python4office.cn/",
+        # 设置要刷新的目录列表
+        req.Paths = [
             "https://www.python4office.cn/",
             "https://www.python-office.com/",
-            "https://python-office.com/"
-            "cos.python-office.com"
+            "https://cos.python-office.com/"
         ]
-        req.Urls = urls
+        req.FlushType = "flush"
         
         # 发送刷新请求
-        resp = client.PurgeUrlsCache(req)
+        resp = client.PurgePathCache(req)
         
         print("CDN缓存刷新成功！")
         print(f"任务ID: {resp.TaskId}")
