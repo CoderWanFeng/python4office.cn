@@ -9,7 +9,7 @@ categories: [AI编程, 模型评测]
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
-> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
+> 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
 > 

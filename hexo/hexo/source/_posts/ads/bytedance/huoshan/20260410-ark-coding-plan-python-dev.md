@@ -9,7 +9,7 @@ categories: [AI编程, Python]
 
 > **本文作者：程序员晚枫 | Python开源项目python-office作者 | AI编程布道者**
 > 
-> 全网50万+粉丝，专注Python与AI编程教学
+> 全网40万+粉丝，专注Python与AI编程教学
 
 > 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
 > 
