@@ -9,7 +9,7 @@ categories: [AI编程, 常见问题]
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
-> 全网50万+粉丝，6年Python开发经验，开源项目python-office作者
+> 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
 > 📢 **先上链接**：👉 **[点击了解阿里云Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&source=5176.29345612&userCode=t6duaoe1)**
 > 
@@ -211,7 +211,7 @@ categories: [AI编程, 常见问题]
 
 **关于作者**
 
-程序员晚枫，6年Python开发经验，5年技术自媒体创作，全网50万+粉丝。
+程序员晚枫，6年Python开发经验，5年技术自媒体创作，全网40万+粉丝。
 
 专注AI编程工具测评与教学，帮你用最低成本掌握最先进的开发工具。
 
