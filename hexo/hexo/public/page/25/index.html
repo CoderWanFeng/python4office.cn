@@ -226,1203 +226,6 @@ var _hmt = _hmt || [];
               <div id="js-content" class="content-ll">
                 
   
-    <article id="post-course/AI/fluent-python/15-类元编程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/fluent-python/15-%E7%B1%BB%E5%85%83%E7%BC%96%E7%A8%8B/">第 15 讲：Python 类元编程 | 元类、__init_subclass__、__class_getitem__ 与 ABCMeta</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/fluent-python/15-%E7%B1%BB%E5%85%83%E7%BC%96%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2026-03-03T02:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<blockquote>
-<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
-</blockquote>
-<p><strong>元类是”类的类”。理解元类，你就能控制类的创建过程——这是 Django ORM、SQLAlchemy、pytest 等框架的底层秘密。</strong></p>
-<p>但《流畅的Python（第2版）》也说了一句话：”如果你不确定是否需要元类，那你就不需要元类。” 先学会什么时候用，再学怎么用。</p>
-<hr>
-<h2 id="🏗️-类的创建过程"><a href="#🏗️-类的创建过程" class="headerlink" title="🏗️ 类的创建过程"></a>🏗️ 类的创建过程</h2><h3 id="type-是一切类的起点"><a href="#type-是一切类的起点" class="headerlink" title="type 是一切类的起点"></a>type 是一切类的起点</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通类创建</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>:</span><br><span class="line">    species = <span class="string">&quot;Canis lupus&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name: <span class="built_in">str</span></span>):</span><br><span class="line">        self.name = name</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">bark</span>(<span class="params">self</span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> says Woof!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等价的 type() 动态创建</span></span><br><span class="line">Dog2 = <span class="built_in">type</span>(</span><br><span class="line">    <span class="string">&#x27;Dog&#x27;</span>,                  <span class="comment"># 类名</span></span><br><span class="line">    (<span class="built_in">object</span>,),             <span class="comment"># 基类元组</span></span><br><span class="line">    &#123;                      <span class="comment"># 命名空间（属性和方法）</span></span><br><span class="line">        <span class="string">&#x27;species&#x27;</span>: <span class="string">&#x27;Canis lupus&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;__init__&#x27;</span>: <span class="keyword">lambda</span> self, name: <span class="built_in">setattr</span>(self, <span class="string">&#x27;name&#x27;</span>, name),</span><br><span class="line">        <span class="string">&#x27;bark&#x27;</span>: <span class="keyword">lambda</span> self: <span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> says Woof!&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">d1 = Dog(<span class="string">&quot;Rex&quot;</span>)</span><br><span class="line">d2 = Dog2(<span class="string">&quot;Max&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(d1.bark())   <span class="comment"># Rex says Woof!</span></span><br><span class="line"><span class="built_in">print</span>(d2.bark())   <span class="comment"># Max says Woof!</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(Dog))   <span class="comment"># &lt;class &#x27;type&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(Dog2))  <span class="comment"># &lt;class &#x27;type&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="类创建的完整流程"><a href="#类创建的完整流程" class="headerlink" title="类创建的完整流程"></a>类创建的完整流程</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python 执行 class 语句时，内部步骤：</span></span><br><span class="line"><span class="comment"># 1. 调用 type.__prepare__() 创建命名空间</span></span><br><span class="line"><span class="comment"># 2. 执行类体，填充命名空间</span></span><br><span class="line"><span class="comment"># 3. 调用 metaclass(name, bases, namespace) 创建类对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Meta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__prepare__</span>(<span class="params">mcs, name, bases, **kwargs</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;步骤1：准备命名空间（Python 3.3+）&quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;__prepare__ called for <span class="subst">&#123;name&#125;</span>&quot;</span>)</span><br><span class="line">        namespace = <span class="built_in">super</span>().__prepare__(name, bases, **kwargs)</span><br><span class="line">        <span class="keyword">return</span> namespace</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__new__</span>(<span class="params">mcs, name, bases, namespace, **kwargs</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;步骤3：创建类对象&quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;__new__ called for <span class="subst">&#123;name&#125;</span>&quot;</span>)</span><br><span class="line">        cls = <span class="built_in">super</span>().__new__(mcs, name, bases, namespace)</span><br><span class="line">        <span class="keyword">return</span> cls</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">cls, name, bases, namespace, **kwargs</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;步骤4：初始化类对象&quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;__init__ called for <span class="subst">&#123;name&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">super</span>().__init__(name, bases, namespace)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span>(metaclass=Meta):</span><br><span class="line">    x = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出：</span></span><br><span class="line"><span class="comment"># __prepare__ called for MyClass</span></span><br><span class="line"><span class="comment"># __new__ called for MyClass</span></span><br><span class="line"><span class="comment"># __init__ called for MyClass</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🔑-实用元类模式"><a href="#🔑-实用元类模式" class="headerlink" title="🔑 实用元类模式"></a>🔑 实用元类模式</h2><h3 id="1-单例模式"><a href="#1-单例模式" class="headerlink" title="1. 单例模式"></a>1. 单例模式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SingletonMeta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;保证一个类只有一个实例的元类&quot;&quot;&quot;</span></span><br><span class="line">    _instances: <span class="built_in">dict</span> = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">cls, *args, **kwargs</span>):</span><br><span class="line">        <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> cls._instances:</span><br><span class="line">            <span class="comment"># 调用 type.__call__，完成实例创建</span></span><br><span class="line">            cls._instances[cls] = <span class="built_in">super</span>().__call__(*args, **kwargs)</span><br><span class="line">        <span class="keyword">return</span> cls._instances[cls]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DatabaseConnection</span>(metaclass=SingletonMeta):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, dsn: <span class="built_in">str</span></span>):</span><br><span class="line">        self.dsn = dsn</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;连接到 <span class="subst">&#123;dsn&#125;</span>&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">query</span>(<span class="params">self, sql: <span class="built_in">str</span></span>) -&gt; <span class="built_in">list</span>:</span><br><span class="line">        <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试</span></span><br><span class="line">db1 = DatabaseConnection(<span class="string">&quot;postgresql://localhost/mydb&quot;</span>)  <span class="comment"># 打印：连接到...</span></span><br><span class="line">db2 = DatabaseConnection(<span class="string">&quot;mysql://remote/otherdb&quot;</span>)      <span class="comment"># 不再打印！返回同一个对象</span></span><br><span class="line"><span class="built_in">print</span>(db1 <span class="keyword">is</span> db2)   <span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(db1.dsn)      <span class="comment"># postgresql://localhost/mydb</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-自动注册插件"><a href="#2-自动注册插件" class="headerlink" title="2. 自动注册插件"></a>2. 自动注册插件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> ClassVar</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PluginMeta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;自动将子类注册到 registry 的元类&quot;&quot;&quot;</span></span><br><span class="line">    registry: ClassVar[<span class="built_in">dict</span>[<span class="built_in">str</span>, <span class="built_in">type</span>]] = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__new__</span>(<span class="params">mcs, name, bases, namespace</span>):</span><br><span class="line">        cls = <span class="built_in">super</span>().__new__(mcs, name, bases, namespace)</span><br><span class="line">        <span class="comment"># 跳过基类本身</span></span><br><span class="line">        <span class="keyword">if</span> bases:</span><br><span class="line">            mcs.registry[cls.__name__] = cls</span><br><span class="line">        <span class="keyword">return</span> cls</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BaseProcessor</span>(metaclass=PluginMeta):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;处理器基类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">self, data: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">UpperProcessor</span>(<span class="title class_ inherited__">BaseProcessor</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">self, data: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">return</span> data.upper()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ReverseProcessor</span>(<span class="title class_ inherited__">BaseProcessor</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">self, data: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">return</span> data[::-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TrimProcessor</span>(<span class="title class_ inherited__">BaseProcessor</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">self, data: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">return</span> data.strip()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动发现所有已注册的处理器</span></span><br><span class="line"><span class="built_in">print</span>(PluginMeta.registry)</span><br><span class="line"><span class="comment"># &#123;&#x27;UpperProcessor&#x27;: &lt;class ...&gt;, &#x27;ReverseProcessor&#x27;: &lt;class ...&gt;, ...&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_processor</span>(<span class="params">name: <span class="built_in">str</span></span>) -&gt; BaseProcessor:</span><br><span class="line">    cls = PluginMeta.registry.get(name)</span><br><span class="line">    <span class="keyword">if</span> cls <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">f&quot;未知的处理器：<span class="subst">&#123;name&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> cls()</span><br><span class="line"></span><br><span class="line">proc = create_processor(<span class="string">&quot;UpperProcessor&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(proc.process(<span class="string">&quot;hello&quot;</span>))  <span class="comment"># HELLO</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-属性验证元类（ORM-风格）"><a href="#3-属性验证元类（ORM-风格）" class="headerlink" title="3. 属性验证元类（ORM 风格）"></a>3. 属性验证元类（ORM 风格）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ModelMeta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;ORM 风格：自动收集字段定义的元类&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__new__</span>(<span class="params">mcs, name, bases, namespace</span>):</span><br><span class="line">        fields = &#123;&#125;</span><br><span class="line">        <span class="comment"># 收集当前类中的字段定义</span></span><br><span class="line">        <span class="keyword">for</span> key, value <span class="keyword">in</span> namespace.items():</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">isinstance</span>(value, Field):</span><br><span class="line">                fields[key] = value</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 继承父类字段</span></span><br><span class="line">        <span class="keyword">for</span> base <span class="keyword">in</span> bases:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">hasattr</span>(base, <span class="string">&#x27;_fields&#x27;</span>):</span><br><span class="line">                fields.update(base._fields)</span><br><span class="line">        </span><br><span class="line">        namespace[<span class="string">&#x27;_fields&#x27;</span>] = fields</span><br><span class="line">        cls = <span class="built_in">super</span>().__new__(mcs, name, bases, namespace)</span><br><span class="line">        <span class="keyword">return</span> cls</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Field</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, field_type: <span class="built_in">type</span>, required: <span class="built_in">bool</span> = <span class="literal">True</span></span>):</span><br><span class="line">        self.field_type = field_type</span><br><span class="line">        self.required = required</span><br><span class="line">        self.name = <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set_name__</span>(<span class="params">self, owner, name</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">if</span> instance <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> self</span><br><span class="line">        <span class="keyword">return</span> instance.__dict__.get(self.name)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set__</span>(<span class="params">self, instance, value</span>):</span><br><span class="line">        <span class="keyword">if</span> value <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">and</span> self.required:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> 不能为 None&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> value <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(value, self.field_type):</span><br><span class="line">            <span class="keyword">raise</span> TypeError(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> 必须是 <span class="subst">&#123;self.field_type.__name__&#125;</span>&quot;</span>)</span><br><span class="line">        instance.__dict__[self.name] = value</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Model</span>(metaclass=ModelMeta):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">        fields = &#123;k: <span class="built_in">getattr</span>(self, k) <span class="keyword">for</span> k <span class="keyword">in</span> self._fields&#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;<span class="subst">&#123;<span class="built_in">type</span>(self).__name__&#125;</span>(<span class="subst">&#123;fields&#125;</span>)&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>(<span class="title class_ inherited__">Model</span>):</span><br><span class="line">    name = Field(<span class="built_in">str</span>)</span><br><span class="line">    age = Field(<span class="built_in">int</span>)</span><br><span class="line">    email = Field(<span class="built_in">str</span>, required=<span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name: <span class="built_in">str</span>, age: <span class="built_in">int</span>, email: <span class="built_in">str</span> = <span class="literal">None</span></span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.email = email</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">u = User(<span class="string">&quot;张三&quot;</span>, <span class="number">25</span>)</span><br><span class="line"><span class="built_in">print</span>(u)                <span class="comment"># User(&#123;&#x27;name&#x27;: &#x27;张三&#x27;, &#x27;age&#x27;: 25, &#x27;email&#x27;: None&#125;)</span></span><br><span class="line"><span class="built_in">print</span>(User._fields)    <span class="comment"># &#123;&#x27;name&#x27;: ..., &#x27;age&#x27;: ..., &#x27;email&#x27;: ...&#125;</span></span><br><span class="line"></span><br><span class="line">u.age = <span class="string">&quot;abc&quot;</span>          <span class="comment"># TypeError: age 必须是 int</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🌟-现代替代方案：-init-subclass"><a href="#🌟-现代替代方案：-init-subclass" class="headerlink" title="🌟 现代替代方案：__init_subclass__"></a>🌟 现代替代方案：__init_subclass__</h2><p>Python 3.6+ 提供了更简洁的方式实现很多元类功能，<strong>优先考虑用这个代替元类</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">PluginBase</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;用 __init_subclass__ 替代元类实现插件注册&quot;&quot;&quot;</span></span><br><span class="line">    _registry: <span class="built_in">dict</span>[<span class="built_in">str</span>, <span class="built_in">type</span>] = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init_subclass__</span>(<span class="params">cls, plugin_name: <span class="built_in">str</span> = <span class="literal">None</span>, **kwargs</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init_subclass__(**kwargs)</span><br><span class="line">        <span class="comment"># 每当有子类定义时，自动调用</span></span><br><span class="line">        name = plugin_name <span class="keyword">or</span> cls.__name__</span><br><span class="line">        PluginBase._registry[name] = cls</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;注册插件：<span class="subst">&#123;name&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ImagePlugin</span>(PluginBase, plugin_name=<span class="string">&quot;image&quot;</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">self</span>): <span class="keyword">return</span> <span class="string">&quot;processing image&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">VideoPlugin</span>(PluginBase, plugin_name=<span class="string">&quot;video&quot;</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">self</span>): <span class="keyword">return</span> <span class="string">&quot;processing video&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(PluginBase._registry)</span><br><span class="line"><span class="comment"># &#123;&#x27;image&#x27;: &lt;class &#x27;ImagePlugin&#x27;&gt;, &#x27;video&#x27;: &lt;class &#x27;VideoPlugin&#x27;&gt;&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="init-subclass-vs-元类"><a href="#init-subclass-vs-元类" class="headerlink" title="__init_subclass__ vs 元类"></a>__init_subclass__ vs 元类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 元类：控制整个类创建过程（权力最大，复杂度最高）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ControlledMeta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__new__</span>(<span class="params">mcs, name, bases, namespace</span>):</span><br><span class="line">        <span class="comment"># 可以修改命名空间、拒绝创建等</span></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line"><span class="comment"># __init_subclass__：只关注子类创建（简单，推荐）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init_subclass__</span>(<span class="params">cls, **kwargs</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init_subclass__(**kwargs)</span><br><span class="line">        <span class="comment"># 只能观察/修改已创建的子类</span></span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🔧-类装饰器：元类的轻量替代"><a href="#🔧-类装饰器：元类的轻量替代" class="headerlink" title="🔧 类装饰器：元类的轻量替代"></a>🔧 类装饰器：元类的轻量替代</h2><p>很多情况下，类装饰器比元类更简单：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">Any</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">singleton</span>(<span class="params">cls</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;单例装饰器（比元类实现更简单）&quot;&quot;&quot;</span></span><br><span class="line">    instances = &#123;&#125;</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @functools.wraps(<span class="params">cls</span>)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_instance</span>(<span class="params">*args, **kwargs</span>):</span><br><span class="line">        <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> instances:</span><br><span class="line">            instances[cls] = cls(*args, **kwargs)</span><br><span class="line">        <span class="keyword">return</span> instances[cls]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> get_instance</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@singleton</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Config</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, host: <span class="built_in">str</span> = <span class="string">&quot;localhost&quot;</span></span>):</span><br><span class="line">        self.host = host</span><br><span class="line"></span><br><span class="line">c1 = Config(<span class="string">&quot;server1&quot;</span>)</span><br><span class="line">c2 = Config(<span class="string">&quot;server2&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(c1 <span class="keyword">is</span> c2)   <span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(c1.host)    <span class="comment"># server1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">auto_repr</span>(<span class="params">cls</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;自动生成 __repr__ 的类装饰器&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">        fields = &#123;k: <span class="built_in">getattr</span>(self, k) <span class="keyword">for</span> k <span class="keyword">in</span> self.__init__.__code__.co_varnames[<span class="number">1</span>:] </span><br><span class="line">                  <span class="keyword">if</span> <span class="built_in">hasattr</span>(self, k)&#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;<span class="subst">&#123;cls.__name__&#125;</span>(<span class="subst">&#123;<span class="string">&#x27;, &#x27;</span>.join(<span class="string">f&#x27;<span class="subst">&#123;k&#125;</span>=<span class="subst">&#123;v!r&#125;</span>&#x27;</span> <span class="keyword">for</span> k, v <span class="keyword">in</span> fields.items())&#125;</span>)&quot;</span></span><br><span class="line">    </span><br><span class="line">    cls.__repr__ = __repr__</span><br><span class="line">    <span class="keyword">return</span> cls</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@auto_repr</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x: <span class="built_in">float</span>, y: <span class="built_in">float</span></span>):</span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line"></span><br><span class="line">p = Point(<span class="number">1.0</span>, <span class="number">2.0</span>)</span><br><span class="line"><span class="built_in">print</span>(p)  <span class="comment"># Point(x=1.0, y=2.0)</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="📊-三种方式对比"><a href="#📊-三种方式对比" class="headerlink" title="📊 三种方式对比"></a>📊 三种方式对比</h2><table>
-<thead>
-<tr>
-<th>方式</th>
-<th>适用场景</th>
-<th>复杂度</th>
-<th>Python 版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>类装饰器</td>
-<td>修改/增强已有类</td>
-<td>低</td>
-<td>2.6+</td>
-</tr>
-<tr>
-<td><code>__init_subclass__</code></td>
-<td>监控/验证子类</td>
-<td>低</td>
-<td>3.6+</td>
-</tr>
-<tr>
-<td>元类</td>
-<td>控制类创建全过程</td>
-<td>高</td>
-<td>全版本</td>
-</tr>
-</tbody></table>
-<p><strong>选择原则</strong>（按优先级）：</p>
-<ol>
-<li>能用类装饰器解决 → 用类装饰器</li>
-<li>需要控制子类 → 用 <code>__init_subclass__</code></li>
-<li>确实需要控制类创建的底层过程 → 才用元类</li>
-</ol>
-<hr>
-<h2 id="⚠️-常见陷阱"><a href="#⚠️-常见陷阱" class="headerlink" title="⚠️ 常见陷阱"></a>⚠️ 常见陷阱</h2><h3 id="1-元类冲突"><a href="#1-元类冲突" class="headerlink" title="1. 元类冲突"></a>1. 元类冲突</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Meta1</span>(<span class="title class_ inherited__">type</span>): <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Meta2</span>(<span class="title class_ inherited__">type</span>): <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>(metaclass=Meta1): <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>(metaclass=Meta2): <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ❌ 元类冲突！</span></span><br><span class="line"><span class="comment"># class C(A, B): pass  # TypeError: metaclass conflict</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ✅ 解决：创建同时继承两个元类的新元类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Meta3</span>(Meta1, Meta2): <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">C</span>(A, B, metaclass=Meta3): <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-误把类方法写成普通方法"><a href="#2-误把类方法写成普通方法" class="headerlink" title="2. 误把类方法写成普通方法"></a>2. 误把类方法写成普通方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Meta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line">    <span class="comment"># ❌ 错误：应该用 mcs，不是 self</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__new__</span>(<span class="params">self, name, bases, namespace</span>):</span><br><span class="line">        ...</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># ✅ 正确：元类中 self 通常写成 mcs 或 cls</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__new__</span>(<span class="params">mcs, name, bases, namespace</span>):</span><br><span class="line">        cls = <span class="built_in">super</span>().__new__(mcs, name, bases, namespace)</span><br><span class="line">        <span class="keyword">return</span> cls</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p><strong>type 的三重身份</strong>：普通函数（返回对象类型）、元类（所有类的默认元类）、动态创建类。</p>
-<p><strong>类创建流程</strong>：<code>__prepare__</code> → 执行类体 → <code>__new__</code> → <code>__init__</code>，元类可以介入每个阶段。</p>
-<p><strong>元类实用模式</strong>：单例、插件自动注册、ORM 字段验证、框架约束。</p>
-<p><strong>现代推荐</strong>：优先用 <code>__init_subclass__</code>（3.6+）和类装饰器，它们更简单；只有必要时才用元类。</p>
-<p><strong>何时用元类</strong>：需要控制类创建的底层细节时（比如修改命名空间、拦截属性赋值、实现 ORM）。</p>
-<hr>
-<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
-<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
-<hr>
-<h2 id="🎓-加入《流畅的-Python》直播共读营"><a href="#🎓-加入《流畅的-Python》直播共读营" class="headerlink" title="🎓 加入《流畅的 Python》直播共读营"></a>🎓 加入《流畅的 Python》直播共读营</h2><p>学到这里，如果你想系统吃透这本书——欢迎加入我的直播共读课。</p>
-<ul>
-<li>每周直播精讲，逐章拆解核心知识点</li>
-<li>专属学习群，随时答疑交流</li>
-<li>试运营特惠：<del>499 元</del> → <strong>299 元</strong></li>
-</ul>
-<p>👉 <strong>【立即报名《流畅的 Python》共读课】</strong>：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/OOMsQ96mH9LGQzuPz_wD9Q">https://mp.weixin.qq.com/s/OOMsQ96mH9LGQzuPz_wD9Q</a></p>
-<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="14-%E5%8A%A8%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7.md">上一讲：动态属性和特性</a> | <a href="16-%E7%B1%BB%E5%9E%8B%E6%8F%90%E7%A4%BA.md">下一讲：类型提示</a> →</p>
-<hr>
-<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
-<thead>
-<tr>
-<th>平台</th>
-<th>账号/链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>微信</td>
-<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
-</tr>
-<tr>
-<td>B 站</td>
-<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
-</tr>
-</tbody></table>
-<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">流畅的Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python进阶</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python元类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">metaclass</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">__init_subclass__</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">__class_getitem__</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ABCMeta</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Python元编程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Python高级特性</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/fluent-python/15-%E7%B1%BB%E5%85%83%E7%BC%96%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-course/AI/cpython-internal/01-CPython-概览" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/cpython-internal/01-CPython-%E6%A6%82%E8%A7%88/">第 1 讲：CPython 概览与源码编译——开启解释器源码探索之旅</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/cpython-internal/01-CPython-%E6%A6%82%E8%A7%88/" class="archive-article-date">
-  	<time datetime="2026-03-03T02:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<blockquote>
-<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
-</blockquote>
-<p><strong>当你写下 <code>print(&quot;Hello World&quot;)</code>，按下回车的那一刻，计算机内部究竟发生了什么？</strong></p>
-<p>这行看似简单的代码，在 CPython 解释器内部经历了一场复杂而精妙的旅程。从你键盘敲下的字符，到屏幕上显示的绿色文字，中间经过了词法分析、语法分析、编译成字节码、虚拟机执行等多个阶段。理解这个过程，是掌握 Python 底层原理的第一步。</p>
-<p>想象一下，你是一位翻译官。有人给你一句中文”你好世界”，你需要把它翻译成英文”Hello World”。这个翻译过程大致分为几步：首先理解每个词的含义，然后理解句子的语法结构，最后用目标语言重新组织表达。CPython 的工作与此类似，只不过它翻译的是从人类可读的 Python 代码到机器可执行的字节码。</p>
-<hr>
-<h2 id="🏗️-CPython-整体架构：从源代码到执行结果"><a href="#🏗️-CPython-整体架构：从源代码到执行结果" class="headerlink" title="🏗️ CPython 整体架构：从源代码到执行结果"></a>🏗️ CPython 整体架构：从源代码到执行结果</h2><p>CPython 是 Python 语言的参考实现，也是世界上使用最广泛的 Python 解释器。它由荷兰程序员 Guido van Rossum 于 1991 年创建，名字中的”C”表示它是用 C 语言编写的。这个选择非常明智——C 语言既足够底层可以操作系统资源，又足够高级便于人类编写和维护。</p>
-<h3 id="解释器的工作流程"><a href="#解释器的工作流程" class="headerlink" title="解释器的工作流程"></a>解释器的工作流程</h3><p>让我们用更通俗的方式来理解 CPython 的工作流程：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">第一步：词法分析</span><br><span class="line">源代码字符流 → Token 序列</span><br><span class="line">（把代码&quot;切&quot;成有意义的单词）</span><br><span class="line"></span><br><span class="line">第二步：语法分析</span><br><span class="line">Token 序列 → 抽象语法树 (AST)</span><br><span class="line">（理解单词如何组成句子）</span><br><span class="line"></span><br><span class="line">第三步：编译</span><br><span class="line">抽象语法树 → 字节码</span><br><span class="line">（把句子翻译成中间语言）</span><br><span class="line"></span><br><span class="line">第四步：执行</span><br><span class="line">字节码 → 执行结果</span><br><span class="line">（运行中间语言得到结果）</span><br></pre></td></tr></table></figure>
-
-<p>这个流程设计得非常精妙。为什么需要这么多步骤？直接执行源代码不行吗？</p>
-<p>答案是：可以，但效率很低。早期的 BASIC 解释器就是这么做的——逐行读取、解析、执行。但这种方式有个致命缺陷：循环中的代码每次执行都要重新解析一遍。想象一下，一个执行 1000 次的 for 循环，里面的代码就要被解析 1000 次，这是巨大的浪费。</p>
-<p>CPython 采用编译 + 执行的两阶段模式，完美解决了这个问题。代码只编译一次，生成的字节码可以重复执行。这也是为什么 Python 程序第二次运行通常会更快——字节码可以被缓存到.pyc 文件中。</p>
-<h3 id="各组件的职责详解"><a href="#各组件的职责详解" class="headerlink" title="各组件的职责详解"></a>各组件的职责详解</h3><p><strong>词法分析器（Tokenizer）</strong> 是整个流程的第一道工序。它的任务非常简单但重要：把连续的字符流切成一个个有意义的”单词”，也就是 Token。比如 <code>x = 1 + 2</code> 这行代码，会被切成 <code>NAME(x)</code>、<code>EQ(=)</code>、<code>NUMBER(1)</code>、<code>PLUS(+)</code>、<code>NUMBER(2)</code> 五个 Token。</p>
-<p>这个过程看似简单，实则有很多细节需要处理。比如如何区分 <code>==</code>（比较运算符）和两个单独的 <code>=</code>（赋值运算符）？如何处理字符串中的转义字符？如何识别 Python 特有的缩进结构？Tokenizer 需要处理所有这些边界情况。</p>
-<p><strong>语法分析器（Parser）</strong> 接收 Token 序列，输出抽象语法树（AST）。如果说词法分析是”认字”，那么语法分析就是”造句”。它要判断这些 Token 组成的句子是否符合 Python 的语法规则。</p>
-<p>比如 <code>x = 1 +</code> 这个句子，词法分析没问题，但语法分析会报错——加号后面缺少操作数。语法分析器不仅要检查语法正确性，还要构建出能反映代码语义结构的 AST。</p>
-<p><strong>编译器（Compiler）</strong> 将 AST 转换成字节码。字节码是一种中间语言，比机器码抽象，但比源代码更接近机器。它的设计目标是在可读性和执行效率之间取得平衡。</p>
-<p><strong>虚拟机（VM）</strong> 是最后一步，负责执行字节码。CPython 使用的是栈式虚拟机，这意味着它使用栈数据结构来管理运算过程中的临时值。这种设计简单、可靠，是许多解释器的首选方案。</p>
-<hr>
-<h2 id="📁-源码目录结构：一座精心设计的城市"><a href="#📁-源码目录结构：一座精心设计的城市" class="headerlink" title="📁 源码目录结构：一座精心设计的城市"></a>📁 源码目录结构：一座精心设计的城市</h2><p>如果把 CPython 源码比作一座城市，那么每个目录就是一个功能区。理解这个”城市”的规划，是探索源码的第一步。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">cpython/</span><br><span class="line">├── Include/          <span class="comment"># 头文件目录（城市的&quot;规划局&quot;）</span></span><br><span class="line">│   ├── Python.h      <span class="comment"># 主头文件</span></span><br><span class="line">│   ├── object.h      <span class="comment"># 对象模型定义</span></span><br><span class="line">│   └── ...</span><br><span class="line">├── Objects/          <span class="comment"># 内置类型的 C 实现（&quot;工厂区&quot;）</span></span><br><span class="line">│   ├── listobject.c  <span class="comment"># 列表实现</span></span><br><span class="line">│   ├── dictobject.c  <span class="comment"># 字典实现</span></span><br><span class="line">│   └── ...</span><br><span class="line">├── Python/           <span class="comment"># 解释器核心（&quot;总装车间&quot;）</span></span><br><span class="line">│   ├── ceval.c       <span class="comment"># 虚拟机主循环</span></span><br><span class="line">│   ├── compile.c     <span class="comment"># 编译器</span></span><br><span class="line">│   └── ...</span><br><span class="line">├── Parser/           <span class="comment"># 词法和语法分析（&quot;质检部门&quot;）</span></span><br><span class="line">│   ├── tokenizer.c   <span class="comment"># 词法分析器</span></span><br><span class="line">│   └── parser.c      <span class="comment"># 语法分析器</span></span><br><span class="line">├── Modules/          <span class="comment"># 标准库模块的 C 实现</span></span><br><span class="line">│   ├── gcmodule.c    <span class="comment"># 垃圾回收</span></span><br><span class="line">│   └── ...</span><br><span class="line">├── Lib/              <span class="comment"># 标准库的 Python 实现</span></span><br><span class="line">├── Grammar/          <span class="comment"># 语法定义文件</span></span><br><span class="line">└── Programs/         <span class="comment"># 可执行程序入口</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="核心区域详解"><a href="#核心区域详解" class="headerlink" title="核心区域详解"></a>核心区域详解</h3><p><strong>Include 目录</strong> 存放所有的头文件。头文件定义了 CPython 的”公共接口”——各种结构体、宏、函数声明。最重要的文件是 <code>Python.h</code>，它是编写 Python 扩展模块时必须包含的头文件。</p>
-<p>可以把 Include 目录想象成城市的”规划局”，这里存放着所有建筑的蓝图。任何想要与 CPython 交互的代码，都需要先了解这些蓝图。</p>
-<p><strong>Objects 目录</strong> 包含所有内置类型的 C 语言实现。列表、字典、字符串、整数……你在 Python 中使用的每一个类型，都在这里有一个对应的.c 文件。比如 <code>listobject.c</code> 实现了列表类型，<code>dictobject.c</code> 实现了字典类型。</p>
-<p>这个目录是 CPython 的”工厂区”，所有 Python 对象都在这里被制造出来。理解 Objects 目录，你就理解了 Python 对象的本质。</p>
-<p><strong>Python 目录</strong> 是解释器的核心。这里包含了编译器（<code>compile.c</code>）、虚拟机（<code>ceval.c</code>）、解释器状态管理（<code>pystate.c</code>）等关键组件。如果把 CPython 比作一家工厂，Python 目录就是”总装车间”——所有零部件在这里组装成最终产品。</p>
-<p><strong>Parser 目录</strong> 包含词法分析器和语法分析器的实现。这是 CPython 的”质检部门”——所有进入的代码都要在这里接受检查，确保语法正确。</p>
-<h3 id="为什么这样组织？"><a href="#为什么这样组织？" class="headerlink" title="为什么这样组织？"></a>为什么这样组织？</h3><p>这种目录结构不是随意设计的，它反映了软件工程的经典原则：<strong>关注点分离</strong>。</p>
-<table>
-<thead>
-<tr>
-<th>目录</th>
-<th>职责</th>
-<th>比喻</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Include</td>
-<td>定义数据结构和接口</td>
-<td>规划局</td>
-</tr>
-<tr>
-<td>Objects</td>
-<td>实现各种数据类型</td>
-<td>工厂区</td>
-</tr>
-<tr>
-<td>Python</td>
-<td>实现核心逻辑</td>
-<td>总装车间</td>
-</tr>
-<tr>
-<td>Parser</td>
-<td>检查语法正确性</td>
-<td>质检部门</td>
-</tr>
-<tr>
-<td>Modules</td>
-<td>提供扩展功能</td>
-<td>外部协作</td>
-</tr>
-</tbody></table>
-<p>理解这个组织结构，你在浏览源码时就不会迷失方向。想找列表的实现？去 Objects 目录。想看字节码怎么执行？去 Python 目录。</p>
-<hr>
-<h2 id="🔧-从源码编译：亲手打造你的-Python"><a href="#🔧-从源码编译：亲手打造你的-Python" class="headerlink" title="🔧 从源码编译：亲手打造你的 Python"></a>🔧 从源码编译：亲手打造你的 Python</h2><p>阅读源码最好的方式不是”看”，而是”玩”。编译一个调试版本的 Python，设置断点，单步执行，观察变量的变化——这种体验比读十遍源码都有效。</p>
-<h3 id="为什么需要调试版本？"><a href="#为什么需要调试版本？" class="headerlink" title="为什么需要调试版本？"></a>为什么需要调试版本？</h3><p>平时我们从官网下载的 Python 是”发布版本”，经过了各种优化。而”调试版本”包含了额外的调试信息，可以在关键位置打印日志，帮助理解内部运行机制。</p>
-<p>编译调试版本的关键参数是 <code>--with-pydebug</code>。这个参数会启用一系列调试功能：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载源码</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/python/cpython.git</span><br><span class="line"><span class="built_in">cd</span> cpython</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置调试版本</span></span><br><span class="line">./configure --with-pydebug --prefix=/opt/python3.11-debug</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编译（使用 8 个线程加速）</span></span><br><span class="line">make -j8</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行测试</span></span><br><span class="line">make <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装（可选）</span></span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-
-<h3 id="编译过程的本质"><a href="#编译过程的本质" class="headerlink" title="编译过程的本质"></a>编译过程的本质</h3><p>编译 CPython 的过程，本质上是将 C 源代码转换成机器可执行文件的过程。这个过程分为三步：</p>
-<p><strong>预处理</strong>：处理所有的宏定义和包含指令。比如 <code>#include &lt;Python.h&gt;</code> 会被替换成 Python.h 的实际内容。</p>
-<p><strong>编译</strong>：将预处理后的 C 代码转换成汇编代码，再转换成目标文件（.o 文件）。每个.c 文件都会生成一个对应的.o 文件。</p>
-<p><strong>链接</strong>：将所有目标文件和依赖库链接在一起，生成最终的可执行文件。</p>
-<p>这个过程看似复杂，但 Makefile 已经帮我们处理好了所有细节。我们只需要运行 <code>make</code> 命令即可。</p>
-<h3 id="常见问题与解决"><a href="#常见问题与解决" class="headerlink" title="常见问题与解决"></a>常见问题与解决</h3><p>编译过程中可能遇到各种问题，以下是几种常见情况：</p>
-<p><strong>缺少依赖库</strong>：如果提示找不到某个头文件或库文件，通常是因为缺少开发包。比如在 Ubuntu 上，需要安装 <code>libssl-dev</code>、<code>zlib1g-dev</code> 等包。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Ubuntu/Debian 安装依赖</span></span><br><span class="line">sudo apt-get install -y build-essential libssl-dev zlib1g-dev \</span><br><span class="line">    libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \</span><br><span class="line">    libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev \</span><br><span class="line">    liblzma-dev python-openssl git</span><br></pre></td></tr></table></figure>
-
-<p><strong>编译失败</strong>：如果编译过程中出现错误，首先检查错误信息。大多数情况下是因为缺少依赖或者版本不兼容。</p>
-<p><strong>测试失败</strong>：<code>make test</code> 可能会有一些测试失败，这通常是正常的。CPython 的测试套件非常庞大，某些测试可能因为环境差异而失败。</p>
-<hr>
-<h2 id="🐛-调试环境搭建：与源码”对话”"><a href="#🐛-调试环境搭建：与源码”对话”" class="headerlink" title="🐛 调试环境搭建：与源码”对话”"></a>🐛 调试环境搭建：与源码”对话”</h2><p>编译完成后，下一步是搭建调试环境。GDB 是 Linux 下最常用的调试工具，它可以让你单步执行 C 代码，查看变量值，设置断点。</p>
-<h3 id="GDB-基础使用"><a href="#GDB-基础使用" class="headerlink" title="GDB 基础使用"></a>GDB 基础使用</h3><p>启动 GDB 后，常用的命令包括：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动 GDB</span></span><br><span class="line">gdb ./python</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置断点</span></span><br><span class="line">(gdb) <span class="built_in">break</span> PyLong_FromLong</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行程序</span></span><br><span class="line">(gdb) run -c <span class="string">&quot;x = 100&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 单步执行</span></span><br><span class="line">(gdb) next</span><br><span class="line">(gdb) step</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看变量</span></span><br><span class="line">(gdb) <span class="built_in">print</span> op</span><br><span class="line">(gdb) bt  <span class="comment"># 显示调用栈</span></span><br></pre></td></tr></table></figure>
-
-<p>这些命令可以让你像”时间旅行者”一样，在代码执行过程中暂停、观察、继续。</p>
-<h3 id="调试实战：追踪一个整数对象"><a href="#调试实战：追踪一个整数对象" class="headerlink" title="调试实战：追踪一个整数对象"></a>调试实战：追踪一个整数对象</h3><p>让我们设计一个具体的调试场景：追踪整数对象 <code>100</code> 从创建到销毁的完整生命周期。</p>
-<p>首先，在 <code>PyLong_FromLong</code> 函数设置断点。这个函数负责创建整数对象。然后运行一个简单的 Python 脚本 <code>x = 100</code>。</p>
-<p>当断点触发时，你可以：</p>
-<ol>
-<li>查看参数 <code>ival</code> 的值（应该是 100）</li>
-<li>单步执行，观察内存分配过程</li>
-<li>查看返回的对象结构</li>
-<li>继续执行，观察对象何时被销毁</li>
-</ol>
-<p>这种调试体验是无价的。通过亲眼看到代码如何执行，你对 CPython 的理解会从”知道”升级为”理解”。</p>
-<hr>
-<h2 id="💡-第一个源码实验：小整数缓存机制"><a href="#💡-第一个源码实验：小整数缓存机制" class="headerlink" title="💡 第一个源码实验：小整数缓存机制"></a>💡 第一个源码实验：小整数缓存机制</h2><p>理论学习需要实践来巩固。让我们设计一个简单的实验，验证 CPython 的小整数缓存机制。</p>
-<h3 id="现象观察"><a href="#现象观察" class="headerlink" title="现象观察"></a>现象观察</h3><p>在 Python 交互环境中执行以下代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 小整数（-5 到 256）被缓存</span></span><br><span class="line">a = <span class="number">100</span></span><br><span class="line">b = <span class="number">100</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b)  <span class="comment"># True，同一个对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 大整数不被缓存</span></span><br><span class="line">c = <span class="number">1000</span></span><br><span class="line">d = <span class="number">1000</span></span><br><span class="line"><span class="built_in">print</span>(c <span class="keyword">is</span> d)  <span class="comment"># False，不同对象</span></span><br></pre></td></tr></table></figure>
-
-<p>为什么 100 的 <code>is</code> 比较返回 True，而 1000 返回 False？这背后是 CPython 的优化策略。</p>
-<h3 id="原理解析"><a href="#原理解析" class="headerlink" title="原理解析"></a>原理解析</h3><p>CPython 发现，程序中频繁使用的小整数（-5 到 256）总是被重复创建和销毁。为了优化这种情况，解释器在启动时就预先创建了这些整数对象，并缓存起来。每次需要这些小整数时，直接返回缓存的对象，而不是创建新对象。</p>
-<p>这个优化有两个好处：</p>
-<ol>
-<li><strong>节省内存</strong>：避免重复创建相同的小整数</li>
-<li><strong>提升性能</strong>：省去了内存分配和初始化的开销</li>
-</ol>
-<h3 id="源码验证"><a href="#源码验证" class="headerlink" title="源码验证"></a>源码验证</h3><p>如果你想从源码层面验证这个机制，可以查看 <code>Objects/longobject.c</code> 文件中的 <code>PyLong_FromLong</code> 函数。你会看到类似这样的代码：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 检查是否在小整数范围内</span></span><br><span class="line"><span class="keyword">if</span> (-NSMALLNEGINTS &lt;= ival &amp;&amp; ival &lt; NSMALLPOSINTS) &#123;</span><br><span class="line">    <span class="comment">// 直接返回缓存的对象</span></span><br><span class="line">    <span class="keyword">return</span> small_ints[ival + NSMALLNEGINTS];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 大整数需要新建</span></span><br></pre></td></tr></table></figure>
-
-<p>这段代码清晰地展示了小整数缓存的逻辑。</p>
-<hr>
-<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p>通过本讲，我们建立了 CPython 的整体认知框架：</p>
-<p><strong>架构层面</strong>：理解了从源代码到执行结果的完整流程，以及每个组件的职责。</p>
-<p><strong>组织层面</strong>：了解了源码目录的结构设计原则，知道去哪里找什么内容。</p>
-<p><strong>实践层面</strong>：掌握了从源码编译和调试的方法，可以亲手探索 CPython 的内部机制。</p>
-<p><strong>实验层面</strong>：通过小整数缓存实验，学会了如何从现象追溯到源码实现。</p>
-<p>这些知识是后续学习的基础。下一讲我们将深入 Python 对象模型，理解”一切皆对象”的底层实现。</p>
-<hr>
-<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> - Eric Matthes 著</p>
-<p>Python 零基础入门首选。本书分为基础语法和项目实战两部分，适合完全没有编程经验的读者。学完可掌握 Python 基础，为后续进阶打下坚实基础。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> - Luciano Ramalho 著</p>
-<p>Python 进阶经典之作。深入讲解 Python 的高级特性，包括数据模型、函数式编程、面向对象、元编程等。建议在掌握基础后阅读，为学习 CPython 源码做好准备。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong> - Anthony Shaw 著</p>
-<p>本书深入讲解 CPython 内部机制，从内存管理到字节码执行，从对象模型到并发编程。配合本课程学习，效果更佳。</p>
-<p><strong>学习路线建议：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2.md">课程大纲</a> | <a href="02-Python-%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B.md">下一讲：Python 对象模型深度解析</a> →</p>
-<hr>
-<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
-<thead>
-<tr>
-<th>平台</th>
-<th>账号/链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>微信</td>
-<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
-</tr>
-<tr>
-<td>微博</td>
-<td><a target="_blank" rel="noopener" href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
-</tr>
-<tr>
-<td>知乎</td>
-<td><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
-</tr>
-<tr>
-<td>抖音</td>
-<td><a target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
-</tr>
-<tr>
-<td>小红书</td>
-<td><a target="_blank" rel="noopener" href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
-</tr>
-<tr>
-<td>B 站</td>
-<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
-</tr>
-</tbody></table>
-<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CPython</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">解释器，源码结构，编译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/cpython-internal/01-CPython-%E6%A6%82%E8%A7%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-course/AI/fluent-python/14-动态属性和特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/fluent-python/14-%E5%8A%A8%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">第 14 讲：Python 动态属性与特性 | __getattr__, __setattr__, __slots__ 与对象构建协议</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/fluent-python/14-%E5%8A%A8%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/" class="archive-article-date">
-  	<time datetime="2026-03-03T02:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<blockquote>
-<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
-</blockquote>
-<p><strong>动态创建属性、拦截属性访问、减少内存占用，这些高级技巧让你的代码更灵活。</strong></p>
-<hr>
-<h2 id="🎯-getattr-和-getattribute"><a href="#🎯-getattr-和-getattribute" class="headerlink" title="🎯 getattr__和__getattribute"></a>🎯 <strong>getattr__和__getattribute</strong></h2><h3 id="延迟加载"><a href="#延迟加载" class="headerlink" title="延迟加载"></a>延迟加载</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LazyObject</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;延迟加载属性&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self._data = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__getattr__</span>(<span class="params">self, name</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;属性不存在时调用&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> name.startswith(<span class="string">&#x27;load_&#x27;</span>):</span><br><span class="line">            key = name[<span class="number">5</span>:]  <span class="comment"># load_data -&gt; data</span></span><br><span class="line">            value = <span class="string">f&quot;Loaded <span class="subst">&#123;key&#125;</span>&quot;</span></span><br><span class="line">            <span class="built_in">setattr</span>(self, name, value)</span><br><span class="line">            <span class="keyword">return</span> value</span><br><span class="line">        <span class="keyword">raise</span> AttributeError(<span class="string">f&quot;&#x27;<span class="subst">&#123;self.__class__.__name__&#125;</span>&#x27; has no attribute &#x27;<span class="subst">&#123;name&#125;</span>&#x27;&quot;</span>)</span><br><span class="line"></span><br><span class="line">obj = LazyObject()</span><br><span class="line"><span class="built_in">print</span>(obj.load_user)  <span class="comment"># Loaded user</span></span><br><span class="line"><span class="built_in">print</span>(obj.load_user)  <span class="comment"># 从缓存读取，不再调用__getattr__</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>触发时机</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>__getattr__</code></td>
-<td>属性不存在时</td>
-</tr>
-<tr>
-<td><code>__getattribute__</code></td>
-<td>每次访问属性时</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="💾-slots-内存优化"><a href="#💾-slots-内存优化" class="headerlink" title="💾 __slots__内存优化"></a>💾 __slots__内存优化</h2><h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通类（使用__dict__）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用__slots__（节省内存）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">EfficientPerson</span>:</span><br><span class="line">    __slots__ = [<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>]  <span class="comment"># 预定义属性</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line"><span class="comment"># 效果：数百万实例时可节省大量内存</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">p1 = Person(<span class="string">&quot;Alice&quot;</span>, <span class="number">30</span>)</span><br><span class="line">p2 = EfficientPerson(<span class="string">&quot;Alice&quot;</span>, <span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(sys.getsizeof(p1))  <span class="comment"># 约 56 字节</span></span><br><span class="line"><span class="built_in">print</span>(sys.getsizeof(p2))  <span class="comment"># 约 40 字节</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="何时使用slots"><a href="#何时使用slots" class="headerlink" title="何时使用slots"></a>何时使用<strong>slots</strong></h3><ul>
-<li>创建大量实例</li>
-<li>属性固定</li>
-<li>内存敏感场景</li>
-</ul>
-<hr>
-<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p><strong><strong>getattr</strong></strong>：属性不存在时调用。</p>
-<p><strong><strong>getattribute</strong></strong>：每次访问属性时调用。</p>
-<p><strong><strong>slots</strong></strong>：预定义属性，节省内存。</p>
-<hr>
-<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
-<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
-<hr>
-<h2 id="🎓-加入《流畅的-Python》直播共读营"><a href="#🎓-加入《流畅的-Python》直播共读营" class="headerlink" title="🎓 加入《流畅的 Python》直播共读营"></a>🎓 加入《流畅的 Python》直播共读营</h2><p>学到这里，如果你想系统吃透这本书——欢迎加入我的直播共读课。</p>
-<ul>
-<li>每周直播精讲，逐章拆解核心知识点</li>
-<li>专属学习群，随时答疑交流</li>
-<li>试运营特惠：<del>499 元</del> → <strong>299 元</strong></li>
-</ul>
-<p>👉 <strong>【立即报名《流畅的 Python》共读课】</strong>：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/OOMsQ96mH9LGQzuPz_wD9Q">https://mp.weixin.qq.com/s/OOMsQ96mH9LGQzuPz_wD9Q</a></p>
-<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="13-%E6%8F%8F%E8%BF%B0%E7%AC%A6.md">上一讲：描述符</a> | <a href="15-%E7%B1%BB%E5%85%83%E7%BC%96%E7%A8%8B.md">下一讲：类元编程</a> →</p>
-<hr>
-<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
-<thead>
-<tr>
-<th>平台</th>
-<th>账号/链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>微信</td>
-<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
-</tr>
-<tr>
-<td>B 站</td>
-<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
-</tr>
-</tbody></table>
-<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">流畅的Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python进阶</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Python元编程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Python动态属性</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">__getattr__</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">__setattr__</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">__slots__</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">__delattr__</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Python对象模型</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/fluent-python/14-%E5%8A%A8%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-course/AI/cpython-internal/00-课程大纲" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/cpython-internal/00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/">CPython 设计与实现 - 20 讲 Python 解释器底层原理实战课</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/cpython-internal/00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/" class="archive-article-date">
-  	<time datetime="2026-03-03T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CPython-设计与实现-20-讲-Python-解释器底层原理实战课"><a href="#CPython-设计与实现-20-讲-Python-解释器底层原理实战课" class="headerlink" title="CPython 设计与实现 - 20 讲 Python 解释器底层原理实战课"></a>CPython 设计与实现 - 20 讲 Python 解释器底层原理实战课</h1><blockquote>
-<p>深入 Python 解释器源码，理解 CPython 的内部工作机制<br>基于经典著作《CPython 设计与实现》+ Python 3.10+ 源码分析</p>
-</blockquote>
-<p align="center">
-  <a target="_blank" href="https://github.com/CoderWanFeng/python-office">
-    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star">
-  </a>
-  <a target="_blank" href="https://gitee.com/CoderWanFeng/python-office/">
-    <img src="https://gitee.com/CoderWanFeng/python-office/badge/star.svg?theme=dark" alt="gitee star">
-  </a>
-  <a target="_blank" href="https://atomgit.com/CoderWanFeng1/python-office">
-    <img src="https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark" alt="atomgit star">
-  </a>
-  <a target="_blank" rel="noopener" href="https://www.bilibili.com/cheese/play/ss982042944">
-    <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
-  </a>
-  <a href="https://www.python4office.cn/wechat-group/">
-    <img src="https://img.shields.io/badge/加入-AI 交流群-brightgreen" alt="AI 交流群">
-  </a>
-</p>
-
-<hr>
-<h2 id="📚-课程简介"><a href="#📚-课程简介" class="headerlink" title="📚 课程简介"></a>📚 课程简介</h2><p>本课程带你深入 CPython 解释器源码，理解 Python 代码是如何被编译、执行和管理的。适合想从”会用 Python”进阶到”理解 Python”的开发者。</p>
-<p><strong>适合人群</strong>：</p>
-<ul>
-<li>✅ 有 3 年以上 Python 使用经验的开发者</li>
-<li>✅ 想深入理解 Python 内部工作原理</li>
-<li>✅ 准备面试高级/专家 Python 岗位</li>
-<li>✅ 想参与 CPython 开源项目贡献</li>
-<li>✅ 对编译原理和解释器设计感兴趣</li>
-</ul>
-<p><strong>学完你将掌握</strong>：</p>
-<ul>
-<li>🎯 CPython 解释器的整体架构</li>
-<li>🎯 Python 对象的底层 C 实现</li>
-<li>🎯 字节码编译和执行机制</li>
-<li>🎯 内存管理和垃圾回收原理</li>
-<li>🎯 GIL 全局解释器锁的工作机制</li>
-<li>🎯 模块导入和包管理机制</li>
-<li>🎯 多线程和多进程底层实现</li>
-<li>🎯 性能分析和优化技巧</li>
-</ul>
-<hr>
-<h2 id="📖-课程目录（20-讲）"><a href="#📖-课程目录（20-讲）" class="headerlink" title="📖 课程目录（20 讲）"></a>📖 课程目录（20 讲）</h2><h3 id="第一部分：CPython-基础（第-1-4-讲）"><a href="#第一部分：CPython-基础（第-1-4-讲）" class="headerlink" title="第一部分：CPython 基础（第 1-4 讲）"></a>第一部分：CPython 基础（第 1-4 讲）</h3><p><strong>第 1 讲：CPython 解释器概览</strong></p>
-<ul>
-<li>CPython 项目结构</li>
-<li>源码目录组织</li>
-<li>编译和安装 CPython</li>
-<li>调试工具介绍</li>
-</ul>
-<p><strong>第 2 讲：Python 对象模型</strong></p>
-<ul>
-<li>PyObject 结构体</li>
-<li>引用计数机制</li>
-<li>类型对象系统</li>
-<li>对象的创建和销毁</li>
-</ul>
-<p><strong>第 3 讲：内存管理基础</strong></p>
-<ul>
-<li>Python 内存池</li>
-<li>小对象分配器</li>
-<li>大对象分配</li>
-<li>内存对齐和优化</li>
-</ul>
-<p><strong>第 4 讲：垃圾回收机制</strong></p>
-<ul>
-<li>引用计数垃圾回收</li>
-<li>循环垃圾回收</li>
-<li>分代回收算法</li>
-<li>GC 调优技巧</li>
-</ul>
-<h3 id="第二部分：编译与执行（第-5-9-讲）"><a href="#第二部分：编译与执行（第-5-9-讲）" class="headerlink" title="第二部分：编译与执行（第 5-9 讲）"></a>第二部分：编译与执行（第 5-9 讲）</h3><p><strong>第 5 讲：词法分析</strong></p>
-<ul>
-<li>Tokenizer 工作原理</li>
-<li>词法单元类型</li>
-<li>缩进处理机制</li>
-<li>编码检测和处理</li>
-</ul>
-<p><strong>第 6 讲：语法分析</strong></p>
-<ul>
-<li>LL(1) 文法</li>
-<li>抽象语法树（AST）</li>
-<li>语法树遍历</li>
-<li>自定义语法扩展</li>
-</ul>
-<p><strong>第 7 讲：字节码编译</strong></p>
-<ul>
-<li>编译器架构</li>
-<li>符号表生成</li>
-<li>字节码生成过程</li>
-<li>优化策略</li>
-</ul>
-<p><strong>第 8 讲：字节码执行</strong></p>
-<ul>
-<li>虚拟机架构</li>
-<li>栈帧结构</li>
-<li>指令执行循环</li>
-<li>特殊指令处理</li>
-</ul>
-<p><strong>第 9 讲：常见字节码指令解析</strong></p>
-<ul>
-<li>LOAD_NAME/STORE_NAME</li>
-<li>CALL_FUNCTION</li>
-<li>BUILD_LIST/BUILD_DICT</li>
-<li>控制流指令</li>
-</ul>
-<h3 id="第三部分：核心对象实现（第-10-13-讲）"><a href="#第三部分：核心对象实现（第-10-13-讲）" class="headerlink" title="第三部分：核心对象实现（第 10-13 讲）"></a>第三部分：核心对象实现（第 10-13 讲）</h3><p><strong>第 10 讲：数字类型实现</strong></p>
-<ul>
-<li>PyLongObject 大整数</li>
-<li>PyFloatObject 浮点数</li>
-<li>数值运算实现</li>
-<li>精度和溢出处理</li>
-</ul>
-<p><strong>第 11 讲：字符串类型实现</strong></p>
-<ul>
-<li>PyUnicodeObject 结构</li>
-<li>字符串编码存储</li>
-<li>字符串操作优化</li>
-<li>驻留机制</li>
-</ul>
-<p><strong>第 12 讲：容器类型实现</strong></p>
-<ul>
-<li>PyListObject 列表</li>
-<li>PyDictObject 字典</li>
-<li>PyTupleObject 元组</li>
-<li>PySetObject 集合</li>
-</ul>
-<p><strong>第 13 讲：函数与类实现</strong></p>
-<ul>
-<li>PyFunctionObject 函数对象</li>
-<li>PyMethodObject 方法对象</li>
-<li>PyClassObject 类对象</li>
-<li>描述符协议实现</li>
-</ul>
-<h3 id="第四部分：运行时系统（第-14-17-讲）"><a href="#第四部分：运行时系统（第-14-17-讲）" class="headerlink" title="第四部分：运行时系统（第 14-17 讲）"></a>第四部分：运行时系统（第 14-17 讲）</h3><p><strong>第 14 讲：栈帧与调用约定</strong></p>
-<ul>
-<li>PyFrameObject 栈帧</li>
-<li>局部变量存储</li>
-<li>函数调用约定</li>
-<li>生成器帧实现</li>
-</ul>
-<p><strong>第 15 讲：GIL 全局解释器锁</strong></p>
-<ul>
-<li>GIL 的作用</li>
-<li>锁获取和释放</li>
-<li>I/O 操作时的 GIL</li>
-<li>多核 CPU 影响</li>
-</ul>
-<p><strong>第 16 讲：线程与并发</strong></p>
-<ul>
-<li>Python 线程实现</li>
-<li>线程调度机制</li>
-<li>线程安全原语</li>
-<li>并发编程最佳实践</li>
-</ul>
-<p><strong>第 17 讲：模块导入系统</strong></p>
-<ul>
-<li>导入机制流程</li>
-<li>模块缓存</li>
-<li>导入钩子</li>
-<li>自定义导入器</li>
-</ul>
-<h3 id="第五部分：高级主题（第-18-20-讲）"><a href="#第五部分：高级主题（第-18-20-讲）" class="headerlink" title="第五部分：高级主题（第 18-20 讲）"></a>第五部分：高级主题（第 18-20 讲）</h3><p><strong>第 18 讲：C 扩展编程</strong></p>
-<ul>
-<li>C API 基础</li>
-<li>编写 C 扩展模块</li>
-<li>类型转换</li>
-<li>性能优化</li>
-</ul>
-<p><strong>第 19 讲：性能分析与优化</strong></p>
-<ul>
-<li>cProfile 原理</li>
-<li>性能瓶颈定位</li>
-<li>代码优化技巧</li>
-<li>JIT 编译简介</li>
-</ul>
-<p><strong>第 20 讲：CPython 贡献指南</strong></p>
-<ul>
-<li>源码阅读技巧</li>
-<li>Bug 提交流程</li>
-<li>PR 编写指南</li>
-<li>社区参与方式</li>
-</ul>
-<hr>
-<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong>主教材</strong>：<a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></p>
-<p><strong>辅助资源</strong>：</p>
-<ul>
-<li>CPython 官方源码：<a target="_blank" rel="noopener" href="https://github.com/python/cpython">https://github.com/python/cpython</a></li>
-<li>Python 开发者指南：<a target="_blank" rel="noopener" href="https://devguide.python.org/">https://devguide.python.org/</a></li>
-</ul>
-<hr>
-<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
-<thead>
-<tr>
-<th>平台</th>
-<th>账号/链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>微信</td>
-<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
-</tr>
-<tr>
-<td>微博</td>
-<td><a target="_blank" rel="noopener" href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
-</tr>
-<tr>
-<td>知乎</td>
-<td><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
-</tr>
-<tr>
-<td>抖音</td>
-<td><a target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
-</tr>
-<tr>
-<td>小红书</td>
-<td><a target="_blank" rel="noopener" href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
-</tr>
-<tr>
-<td>B 站</td>
-<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
-</tr>
-</tbody></table>
-<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
-<hr>
-<h2 id="📅-更新计划"><a href="#📅-更新计划" class="headerlink" title="📅 更新计划"></a>📅 更新计划</h2><ul>
-<li>2026 年 3 月：发布第 1-5 讲</li>
-<li>2026 年 4 月：发布第 6-10 讲</li>
-<li>2026 年 5 月：发布第 11-15 讲</li>
-<li>2026 年 6 月：发布第 16-20 讲</li>
-</ul>
-<hr>
-<p><strong>程序员晚枫</strong> 专注 AI 编程培训，带你从入门到精通。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CPython</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">解释器原理，底层实现，课程大纲</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/cpython-internal/00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-course/AI/fluent-python/13-描述符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/course/AI/fluent-python/13-%E6%8F%8F%E8%BF%B0%E7%AC%A6/">第 13 讲：Python 描述符完全指南 | __get__, __set__, 描述符协议与 property 底层原理</a>
-    </h1>
-  
-
-        
-        <a href="/course/AI/fluent-python/13-%E6%8F%8F%E8%BF%B0%E7%AC%A6/" class="archive-article-date">
-  	<time datetime="2026-03-03T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<blockquote>
-<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
-</blockquote>
-<p><strong>你有没有想过，<code>obj.age = -1</code> 时是谁在拦截这次赋值、抛出 ValueError？<code>property</code> 的底层到底在做什么？Django ORM 的字段验证又是怎么实现的？</strong></p>
-<p>答案只有一个词：<strong>描述符（Descriptor）</strong>。</p>
-<p>描述符是 Python 属性访问的核心机制，也是 <code>property</code>、<code>classmethod</code>、<code>staticmethod</code>、甚至槽（<code>__slots__</code>）的底层实现。理解它，你就真正理解了 Python 的对象模型。</p>
-<hr>
-<h2 id="🎯-什么是描述符？"><a href="#🎯-什么是描述符？" class="headerlink" title="🎯 什么是描述符？"></a>🎯 什么是描述符？</h2><h3 id="描述符协议"><a href="#描述符协议" class="headerlink" title="描述符协议"></a>描述符协议</h3><p>一个对象，只要定义了以下三个方法中的至少一个，就是一个描述符：</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>作用</th>
-<th>触发场景</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>__get__(self, instance, owner)</code></td>
-<td>获取属性值</td>
-<td><code>obj.attr</code> 或 <code>Class.attr</code></td>
-</tr>
-<tr>
-<td><code>__set__(self, instance, value)</code></td>
-<td>设置属性值</td>
-<td><code>obj.attr = value</code></td>
-</tr>
-<tr>
-<td><code>__delete__(self, instance)</code></td>
-<td>删除属性</td>
-<td><code>del obj.attr</code></td>
-</tr>
-</tbody></table>
-<p>还有一个辅助方法：</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>作用</th>
-<th>触发场景</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>__set_name__(self, owner, name)</code></td>
-<td>绑定名称</td>
-<td>类定义时（Python 3.6+）</td>
-</tr>
-</tbody></table>
-<h3 id="数据描述符-vs-非数据描述符"><a href="#数据描述符-vs-非数据描述符" class="headerlink" title="数据描述符 vs 非数据描述符"></a>数据描述符 vs 非数据描述符</h3><p>这是理解描述符优先级的关键：</p>
-<ul>
-<li><strong>数据描述符</strong>：同时定义了 <code>__get__</code> 和 <code>__set__</code>（或 <code>__delete__</code>）——优先级高于实例 <code>__dict__</code></li>
-<li><strong>非数据描述符</strong>：只定义了 <code>__get__</code>——优先级低于实例 <code>__dict__</code></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据描述符（有 __set__）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DataDescriptor</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">return</span> instance.__dict__.get(<span class="string">&#x27;_value&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set__</span>(<span class="params">self, instance, value</span>):</span><br><span class="line">        instance.__dict__[<span class="string">&#x27;_value&#x27;</span>] = value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 非数据描述符（只有 __get__）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">NonDataDescriptor</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">42</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🔑-实战：验证描述符"><a href="#🔑-实战：验证描述符" class="headerlink" title="🔑 实战：验证描述符"></a>🔑 实战：验证描述符</h2><p>这是描述符最典型的应用——自动校验属性值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Validator</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;通用验证描述符基类&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set_name__</span>(<span class="params">self, owner, name</span>):</span><br><span class="line">        <span class="comment"># Python 3.6+，类定义时自动调用</span></span><br><span class="line">        self.public_name = name</span><br><span class="line">        self.private_name = <span class="string">&#x27;_&#x27;</span> + name  <span class="comment"># 存储到实例的私有属性</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">if</span> instance <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="comment"># 通过类访问时，返回描述符本身</span></span><br><span class="line">            <span class="keyword">return</span> self</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">getattr</span>(instance, self.private_name, <span class="literal">None</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set__</span>(<span class="params">self, instance, value</span>):</span><br><span class="line">        self.validate(value)</span><br><span class="line">        <span class="built_in">setattr</span>(instance, self.private_name, value)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">validate</span>(<span class="params">self, value</span>):</span><br><span class="line">        <span class="keyword">pass</span>  <span class="comment"># 子类覆写</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PositiveNumber</span>(<span class="title class_ inherited__">Validator</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;验证正数&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">validate</span>(<span class="params">self, value</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(value, (<span class="built_in">int</span>, <span class="built_in">float</span>)):</span><br><span class="line">            <span class="keyword">raise</span> TypeError(<span class="string">f&#x27;<span class="subst">&#123;self.public_name&#125;</span> 必须是数字，得到 <span class="subst">&#123;<span class="built_in">type</span>(value).__name__&#125;</span>&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> value &lt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">f&#x27;<span class="subst">&#123;self.public_name&#125;</span> 必须是正数，得到 <span class="subst">&#123;value&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">NonBlankString</span>(<span class="title class_ inherited__">Validator</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;验证非空字符串&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">validate</span>(<span class="params">self, value</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(value, <span class="built_in">str</span>):</span><br><span class="line">            <span class="keyword">raise</span> TypeError(<span class="string">f&#x27;<span class="subst">&#123;self.public_name&#125;</span> 必须是字符串&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> value.strip():</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">f&#x27;<span class="subst">&#123;self.public_name&#125;</span> 不能为空字符串&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LineItem</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;商品条目（ORM 字段验证典型用例）&quot;&quot;&quot;</span></span><br><span class="line">    description = NonBlankString()</span><br><span class="line">    weight = PositiveNumber()</span><br><span class="line">    price = PositiveNumber()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, description, weight, price</span>):</span><br><span class="line">        self.description = description  <span class="comment"># 触发 NonBlankString.__set__</span></span><br><span class="line">        self.weight = weight            <span class="comment"># 触发 PositiveNumber.__set__</span></span><br><span class="line">        self.price = price</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">subtotal</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.weight * self.price</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试</span></span><br><span class="line">item = LineItem(<span class="string">&#x27;有机苹果&#x27;</span>, <span class="number">1.5</span>, <span class="number">10.0</span>)</span><br><span class="line"><span class="built_in">print</span>(item.description)   <span class="comment"># 有机苹果</span></span><br><span class="line"><span class="built_in">print</span>(item.subtotal)      <span class="comment"># 15.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证生效</span></span><br><span class="line">item.weight = -<span class="number">1</span>  <span class="comment"># ValueError: weight 必须是正数，得到 -1</span></span><br><span class="line">item.price = <span class="string">&#x27;abc&#x27;</span>  <span class="comment"># TypeError: price 必须是数字，得到 str</span></span><br><span class="line">item.description = <span class="string">&#x27;  &#x27;</span>  <span class="comment"># ValueError: description 不能为空字符串</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🔧-property-的本质"><a href="#🔧-property-的本质" class="headerlink" title="🔧 property 的本质"></a>🔧 property 的本质</h2><p><code>property</code> 其实是一个<strong>内置的描述符类</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 传统写法</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Circle</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, radius</span>):</span><br><span class="line">        self._radius = radius</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">radius</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self._radius</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @radius.setter</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">radius</span>(<span class="params">self, value</span>):</span><br><span class="line">        <span class="keyword">if</span> value &lt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">&#x27;半径不能为负数&#x27;</span>)</span><br><span class="line">        self._radius = value</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @radius.deleter</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">radius</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">del</span> self._radius</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等价的描述符写法（理解 property 的本质）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RadiusDescriptor</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">if</span> instance <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> self</span><br><span class="line">        <span class="keyword">return</span> instance._radius</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set__</span>(<span class="params">self, instance, value</span>):</span><br><span class="line">        <span class="keyword">if</span> value &lt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">&#x27;半径不能为负数&#x27;</span>)</span><br><span class="line">        instance._radius = value</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Circle2</span>:</span><br><span class="line">    radius = RadiusDescriptor()  <span class="comment"># 和 @property 效果完全相同</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, radius</span>):</span><br><span class="line">        self.radius = radius</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🔍-属性查找顺序"><a href="#🔍-属性查找顺序" class="headerlink" title="🔍 属性查找顺序"></a>🔍 属性查找顺序</h2><p>这是理解描述符的关键。当你访问 <code>obj.attr</code> 时，Python 的查找顺序是：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. type(obj).__mro__ 中找到数据描述符（有 __set__/__delete__）→ 直接调用其 __get__</span><br><span class="line">2. obj.__dict__ 中的实例属性</span><br><span class="line">3. type(obj).__mro__ 中找到非数据描述符或类属性 → 调用 __get__（如果有）</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DataDesc</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;data descriptor&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set__</span>(<span class="params">self, instance, value</span>):</span><br><span class="line">        <span class="keyword">pass</span>  <span class="comment"># 让它成为数据描述符</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">NonDataDesc</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;non-data descriptor&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span>:</span><br><span class="line">    data = DataDesc()</span><br><span class="line">    non_data = NonDataDesc()</span><br><span class="line"></span><br><span class="line">obj = MyClass()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据描述符优先于实例 __dict__</span></span><br><span class="line">obj.__dict__[<span class="string">&#x27;data&#x27;</span>] = <span class="string">&#x27;instance value&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(obj.data)      <span class="comment"># &quot;data descriptor&quot; ← 描述符胜出！</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 非数据描述符被实例 __dict__ 覆盖</span></span><br><span class="line">obj.__dict__[<span class="string">&#x27;non_data&#x27;</span>] = <span class="string">&#x27;instance value&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(obj.non_data)  <span class="comment"># &quot;instance value&quot; ← 实例属性胜出！</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🏗️-描述符工厂：动态生成描述符"><a href="#🏗️-描述符工厂：动态生成描述符" class="headerlink" title="🏗️ 描述符工厂：动态生成描述符"></a>🏗️ 描述符工厂：动态生成描述符</h2><p>当多个字段需要相似的验证逻辑时，可以用<strong>工厂函数</strong>简化：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quantity</span>(<span class="params">storage_name</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;数量字段描述符工厂&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">qty_getter</span>(<span class="params">instance</span>):</span><br><span class="line">        <span class="keyword">return</span> instance.__dict__[storage_name]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">qty_setter</span>(<span class="params">instance, value</span>):</span><br><span class="line">        <span class="keyword">if</span> value &gt; <span class="number">0</span>:</span><br><span class="line">            instance.__dict__[storage_name] = value</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">f&#x27;<span class="subst">&#123;storage_name&#125;</span> 必须大于 0&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">property</span>(qty_getter, qty_setter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LineItem</span>:</span><br><span class="line">    weight = quantity(<span class="string">&#x27;weight&#x27;</span>)</span><br><span class="line">    price = quantity(<span class="string">&#x27;price&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, description, weight, price</span>):</span><br><span class="line">        self.description = description</span><br><span class="line">        self.weight = weight</span><br><span class="line">        self.price = price</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🗄️-ORM-原理揭秘"><a href="#🗄️-ORM-原理揭秘" class="headerlink" title="🗄️ ORM 原理揭秘"></a>🗄️ ORM 原理揭秘</h2><p>Django ORM 字段验证、SQLAlchemy Column 的核心实现，都基于描述符：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Field</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;模拟 ORM 字段描述符&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, field_type, nullable=<span class="literal">True</span>, default=<span class="literal">None</span></span>):</span><br><span class="line">        self.field_type = field_type</span><br><span class="line">        self.nullable = nullable</span><br><span class="line">        self.default = default</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set_name__</span>(<span class="params">self, owner, name</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.column_name = name  <span class="comment"># 数据库列名</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">if</span> instance <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> self  <span class="comment"># 类访问，返回字段对象本身</span></span><br><span class="line">        <span class="keyword">return</span> instance.__dict__.get(self.name, self.default)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set__</span>(<span class="params">self, instance, value</span>):</span><br><span class="line">        <span class="keyword">if</span> value <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">and</span> <span class="keyword">not</span> self.nullable:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">f&#x27;<span class="subst">&#123;self.name&#125;</span> 不能为 None&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> value <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(value, self.field_type):</span><br><span class="line">            <span class="keyword">raise</span> TypeError(</span><br><span class="line">                <span class="string">f&#x27;<span class="subst">&#123;self.name&#125;</span> 应为 <span class="subst">&#123;self.field_type.__name__&#125;</span>，&#x27;</span></span><br><span class="line">                <span class="string">f&#x27;得到 <span class="subst">&#123;<span class="built_in">type</span>(value).__name__&#125;</span>&#x27;</span></span><br><span class="line">            )</span><br><span class="line">        instance.__dict__[self.name] = value</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Model</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;简单 ORM 基类&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_fields</span>(<span class="params">cls</span>):</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            name: field </span><br><span class="line">            <span class="keyword">for</span> name, field <span class="keyword">in</span> cls.__dict__.items()</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">isinstance</span>(field, Field)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>(<span class="title class_ inherited__">Model</span>):</span><br><span class="line">    name = Field(<span class="built_in">str</span>, nullable=<span class="literal">False</span>)</span><br><span class="line">    age = Field(<span class="built_in">int</span>, default=<span class="number">0</span>)</span><br><span class="line">    email = Field(<span class="built_in">str</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age=<span class="number">0</span>, email=<span class="literal">None</span></span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.email = email</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&#x27;User(name=<span class="subst">&#123;self.name!r&#125;</span>, age=<span class="subst">&#123;self.age&#125;</span>, email=<span class="subst">&#123;self.email!r&#125;</span>)&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用</span></span><br><span class="line">user = User(<span class="string">&#x27;张三&#x27;</span>, <span class="number">25</span>, <span class="string">&#x27;zhang@example.com&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(user)           <span class="comment"># User(name=&#x27;张三&#x27;, age=25, email=&#x27;zhang@example.com&#x27;)</span></span><br><span class="line"><span class="built_in">print</span>(user.name)      <span class="comment"># 张三</span></span><br><span class="line"></span><br><span class="line">user.name = <span class="literal">None</span>      <span class="comment"># ValueError: name 不能为 None</span></span><br><span class="line">user.age = <span class="string">&#x27;abc&#x27;</span>      <span class="comment"># TypeError: age 应为 int，得到 str</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过类访问字段对象</span></span><br><span class="line"><span class="built_in">print</span>(User.name)      <span class="comment"># &lt;Field object&gt;  ← __get__ 返回 self（instance is None）</span></span><br><span class="line"><span class="built_in">print</span>(User.get_fields())  <span class="comment"># &#123;&#x27;name&#x27;: ..., &#x27;age&#x27;: ..., &#x27;email&#x27;: ...&#125;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="💡-实战技巧"><a href="#💡-实战技巧" class="headerlink" title="💡 实战技巧"></a>💡 实战技巧</h2><h3 id="1-用-set-name-避免重复配置（Python-3-6-）"><a href="#1-用-set-name-避免重复配置（Python-3-6-）" class="headerlink" title="1. 用 __set_name__ 避免重复配置（Python 3.6+）"></a>1. 用 <code>__set_name__</code> 避免重复配置（Python 3.6+）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 旧写法：需要手动指定名称（容易出错）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">OldClass</span>:</span><br><span class="line">    age = Validator(<span class="string">&#x27;age&#x27;</span>, <span class="number">0</span>, <span class="number">150</span>)  <span class="comment"># 必须重复写字段名</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新写法：__set_name__ 自动注入</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">NewClass</span>:</span><br><span class="line">    age = Validator(<span class="number">0</span>, <span class="number">150</span>)  <span class="comment"># 描述符自动知道自己叫 &#x27;age&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-描述符中用实例-dict-存储，避免无限递归"><a href="#2-描述符中用实例-dict-存储，避免无限递归" class="headerlink" title="2. 描述符中用实例 __dict__ 存储，避免无限递归"></a>2. 描述符中用实例 <code>__dict__</code> 存储，避免无限递归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Descriptor</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">if</span> instance <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> self</span><br><span class="line">        <span class="comment"># ✅ 直接操作 __dict__，不会触发描述符本身</span></span><br><span class="line">        <span class="keyword">return</span> instance.__dict__.get(self.name)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__set__</span>(<span class="params">self, instance, value</span>):</span><br><span class="line">        <span class="comment"># ✅ 正确</span></span><br><span class="line">        instance.__dict__[self.name] = value</span><br><span class="line">        <span class="comment"># ❌ 错误：会触发自身的 __set__，造成无限递归</span></span><br><span class="line">        <span class="comment"># setattr(instance, self.name, value)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-类访问时返回描述符自身"><a href="#3-类访问时返回描述符自身" class="headerlink" title="3. 类访问时返回描述符自身"></a>3. 类访问时返回描述符自身</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">    <span class="keyword">if</span> instance <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">return</span> self  <span class="comment"># 类访问时返回描述符对象，便于内省</span></span><br><span class="line">    <span class="keyword">return</span> instance.__dict__.get(self.name)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="⚠️-常见陷阱"><a href="#⚠️-常见陷阱" class="headerlink" title="⚠️ 常见陷阱"></a>⚠️ 常见陷阱</h2><h3 id="1-忘记处理-instance-is-None-的情况"><a href="#1-忘记处理-instance-is-None-的情况" class="headerlink" title="1. 忘记处理 instance is None 的情况"></a>1. 忘记处理 <code>instance is None</code> 的情况</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 错误：通过类访问时会报 AttributeError</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BadDescriptor</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">return</span> instance._value  <span class="comment"># instance 可能是 None！</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 正确</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GoodDescriptor</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">if</span> instance <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> self</span><br><span class="line">        <span class="keyword">return</span> instance._value</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-描述符必须定义在类中，不能在实例中"><a href="#2-描述符必须定义在类中，不能在实例中" class="headerlink" title="2. 描述符必须定义在类中，不能在实例中"></a>2. 描述符必须定义在<strong>类</strong>中，不能在实例中</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyDescriptor</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">42</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span>:</span><br><span class="line">    attr = MyDescriptor()  <span class="comment"># ✅ 定义在类中，有效</span></span><br><span class="line"></span><br><span class="line">obj = MyClass()</span><br><span class="line">obj.attr2 = MyDescriptor()  <span class="comment"># ❌ 定义在实例中，描述符协议不生效！</span></span><br><span class="line"><span class="built_in">print</span>(obj.attr2)  <span class="comment"># 直接返回描述符对象，而不是调用 __get__</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-非数据描述符会被实例属性遮蔽"><a href="#3-非数据描述符会被实例属性遮蔽" class="headerlink" title="3. 非数据描述符会被实例属性遮蔽"></a>3. 非数据描述符会被实例属性遮蔽</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Method</span>:  <span class="comment"># 模拟函数描述符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__get__</span>(<span class="params">self, instance, owner</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">lambda</span>: <span class="string">&quot;method result&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span>:</span><br><span class="line">    my_method = Method()</span><br><span class="line"></span><br><span class="line">obj = MyClass()</span><br><span class="line"><span class="built_in">print</span>(obj.my_method())  <span class="comment"># &quot;method result&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 但一旦设置同名实例属性：</span></span><br><span class="line">obj.__dict__[<span class="string">&#x27;my_method&#x27;</span>] = <span class="string">&#x27;instance value&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(obj.my_method)    <span class="comment"># &quot;instance value&quot; ← 非数据描述符被覆盖了！</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🎯-本讲总结"><a href="#🎯-本讲总结" class="headerlink" title="🎯 本讲总结"></a>🎯 本讲总结</h2><p><strong>描述符协议</strong>：实现 <code>__get__</code>、<code>__set__</code>、<code>__delete__</code> 的对象，能够拦截属性访问。</p>
-<p><strong>数据 vs 非数据描述符</strong>：有 <code>__set__</code> 的数据描述符优先级高于实例 <code>__dict__</code>；只有 <code>__get__</code> 的非数据描述符会被实例属性覆盖。</p>
-<p><strong>属性查找顺序</strong>：数据描述符 → 实例 <code>__dict__</code> → 非数据描述符/类属性。</p>
-<p><strong><code>property</code> 本质</strong>：内置的数据描述符类，三个方法（getter/setter/deleter）对应 <code>__get__</code>/<code>__set__</code>/<code>__delete__</code>。</p>
-<p><strong>实际应用</strong>：属性验证、ORM 字段、缓存属性（<code>functools.cached_property</code> 就是非数据描述符）。</p>
-<p>**<code>__set_name__</code>**：Python 3.6+ 新增，让描述符自动感知所属类和属性名，告别硬编码。</p>
-<hr>
-<h2 id="📚-推荐教材"><a href="#📚-推荐教材" class="headerlink" title="📚 推荐教材"></a>📚 推荐教材</h2><p><strong><a target="_blank" rel="noopener" href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a target="_blank" rel="noopener" href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
-<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
-<hr>
-<h2 id="🎓-加入《流畅的-Python》直播共读营"><a href="#🎓-加入《流畅的-Python》直播共读营" class="headerlink" title="🎓 加入《流畅的 Python》直播共读营"></a>🎓 加入《流畅的 Python》直播共读营</h2><p>学到这里，如果你想系统吃透这本书——欢迎加入我的直播共读课。</p>
-<ul>
-<li>每周直播精讲，逐章拆解核心知识点</li>
-<li>专属学习群，随时答疑交流</li>
-<li>试运营特惠：<del>499 元</del> → <strong>299 元</strong></li>
-</ul>
-<p>👉 <strong>【立即报名《流畅的 Python》共读课】</strong>：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/OOMsQ96mH9LGQzuPz_wD9Q">https://mp.weixin.qq.com/s/OOMsQ96mH9LGQzuPz_wD9Q</a></p>
-<h2 id="🔗-课程导航"><a href="#🔗-课程导航" class="headerlink" title="🔗 课程导航"></a>🔗 课程导航</h2><p>← <a href="12-%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%8D%8F%E8%AE%AE.md">上一讲：接口与协议</a> | <a href="14-%E5%8A%A8%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7.md">下一讲：动态属性和特性</a> →</p>
-<hr>
-<h2 id="💬-联系我"><a href="#💬-联系我" class="headerlink" title="💬 联系我"></a>💬 联系我</h2><table>
-<thead>
-<tr>
-<th>平台</th>
-<th>账号/链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>微信</td>
-<td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
-</tr>
-<tr>
-<td>B 站</td>
-<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
-</tr>
-</tbody></table>
-<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">流畅的Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python进阶</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Python描述符</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Python descriptor</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">__get__</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">__set__</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">描述符协议</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">property</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Python ORM原理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Django ORM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/course/AI/fluent-python/13-%E6%8F%8F%E8%BF%B0%E7%AC%A6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-course/AI/fluent-python/ads/sales-plan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -4357,9 +3160,409 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-course/AI/ai-chatbot/20260302031201-第12讲-毕业项目与变现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/ai-chatbot/20260302031201-%E7%AC%AC12%E8%AE%B2-%E6%AF%95%E4%B8%9A%E9%A1%B9%E7%9B%AE%E4%B8%8E%E5%8F%98%E7%8E%B0/">第 12 讲：毕业项目与变现 - 从学习到赚钱</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/ai-chatbot/20260302031201-%E7%AC%AC12%E8%AE%B2-%E6%AF%95%E4%B8%9A%E9%A1%B9%E7%9B%AE%E4%B8%8E%E5%8F%98%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2026-03-02T09:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center">
+    <a target="_blank" href="https://www.bilibili.com/cheese/play/ss982042944">
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
+    </a>
+</p>
+        
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302031201-%E7%AC%AC12%E8%AE%B2-%E6%AF%95%E4%B8%9A%E9%A1%B9%E7%9B%AE%E4%B8%8E%E5%8F%98%E7%8E%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">AI 聊天机器人，毕业项目，变现</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302031201-%E7%AC%AC12%E8%AE%B2-%E6%AF%95%E4%B8%9A%E9%A1%B9%E7%9B%AE%E4%B8%8E%E5%8F%98%E7%8E%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-course/AI/ai-chatbot/20260302031101-第11讲-知识问答机器人" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/ai-chatbot/20260302031101-%E7%AC%AC11%E8%AE%B2-%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E6%9C%BA%E5%99%A8%E4%BA%BA/">第 11 讲：知识问答机器人 - 基于文档的智能问答</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/ai-chatbot/20260302031101-%E7%AC%AC11%E8%AE%B2-%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="archive-article-date">
+  	<time datetime="2026-03-02T09:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center">
+    <a target="_blank" href="https://www.bilibili.com/cheese/play/ss982042944">
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
+    </a>
+</p>
+        
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302031101-%E7%AC%AC11%E8%AE%B2-%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E6%9C%BA%E5%99%A8%E4%BA%BA/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AI 聊天机器人，知识问答，文档问答</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302031101-%E7%AC%AC11%E8%AE%B2-%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E6%9C%BA%E5%99%A8%E4%BA%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-course/AI/ai-chatbot/20260302031001-第10讲-电商客服机器人" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/ai-chatbot/20260302031001-%E7%AC%AC10%E8%AE%B2-%E7%94%B5%E5%95%86%E5%AE%A2%E6%9C%8D%E6%9C%BA%E5%99%A8%E4%BA%BA/">第 10 讲：电商客服机器人 - 自动回答客户问题</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/ai-chatbot/20260302031001-%E7%AC%AC10%E8%AE%B2-%E7%94%B5%E5%95%86%E5%AE%A2%E6%9C%8D%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="archive-article-date">
+  	<time datetime="2026-03-02T09:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center">
+    <a target="_blank" href="https://www.bilibili.com/cheese/play/ss982042944">
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
+    </a>
+</p>
+        
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302031001-%E7%AC%AC10%E8%AE%B2-%E7%94%B5%E5%95%86%E5%AE%A2%E6%9C%8D%E6%9C%BA%E5%99%A8%E4%BA%BA/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AI 聊天机器人，电商客服，实战案例</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302031001-%E7%AC%AC10%E8%AE%B2-%E7%94%B5%E5%95%86%E5%AE%A2%E6%9C%8D%E6%9C%BA%E5%99%A8%E4%BA%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-course/AI/ai-chatbot/20260302030901-第9讲-机器人个性化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/ai-chatbot/20260302030901-%E7%AC%AC9%E8%AE%B2-%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%AA%E6%80%A7%E5%8C%96/">第 9 讲：机器人个性化 - 打造独特人设</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/ai-chatbot/20260302030901-%E7%AC%AC9%E8%AE%B2-%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%AA%E6%80%A7%E5%8C%96/" class="archive-article-date">
+  	<time datetime="2026-03-02T09:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center">
+    <a target="_blank" href="https://www.bilibili.com/cheese/play/ss982042944">
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
+    </a>
+</p>
+        
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302030901-%E7%AC%AC9%E8%AE%B2-%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%AA%E6%80%A7%E5%8C%96/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI 聊天机器人，人设打造，品牌化</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302030901-%E7%AC%AC9%E8%AE%B2-%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%AA%E6%80%A7%E5%8C%96/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-course/AI/ai-chatbot/20260302030801-第8讲-连接外部服务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/course/AI/ai-chatbot/20260302030801-%E7%AC%AC8%E8%AE%B2-%E8%BF%9E%E6%8E%A5%E5%A4%96%E9%83%A8%E6%9C%8D%E5%8A%A1/">第 8 讲：连接外部服务 - 让机器人能办事</a>
+    </h1>
+  
+
+        
+        <a href="/course/AI/ai-chatbot/20260302030801-%E7%AC%AC8%E8%AE%B2-%E8%BF%9E%E6%8E%A5%E5%A4%96%E9%83%A8%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
+  	<time datetime="2026-03-02T09:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2026-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p align="center">
+    <a target="_blank" href="https://www.bilibili.com/cheese/play/ss982042944">
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg">
+    </a>
+</p>
+        
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302030801-%E7%AC%AC8%E8%AE%B2-%E8%BF%9E%E6%8E%A5%E5%A4%96%E9%83%A8%E6%9C%8D%E5%8A%A1/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">AI 聊天机器人，API 调用，外部服务</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/course/AI/ai-chatbot/20260302030801-%E7%AC%AC8%E8%AE%B2-%E8%BF%9E%E6%8E%A5%E5%A4%96%E9%83%A8%E6%9C%8D%E5%8A%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/24/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/93/">93</a><a class="extend next" rel="next" href="/page/26/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/24/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/92/">92</a><a class="extend next" rel="next" href="/page/26/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -4872,15 +4075,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">更新日志</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">lm-vlog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目动态</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4892,19 +4087,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SEO优化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">md2mp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信公众号</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工具更新</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4912,31 +4095,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">建站案例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内容更新</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">how-to-digital-nomad</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数字游民</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">征稿</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">openclaw</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术更新</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -9321,6 +8484,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">1对1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">吐槽</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">方舟 Coding Plan</a>
               </li>
             
             <div class="clearfix"></div>
