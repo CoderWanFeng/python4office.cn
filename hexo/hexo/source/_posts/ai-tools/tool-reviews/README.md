@@ -82,5 +82,5 @@ description: "一句话说明这个工具是干嘛的"
 
 ## 🔗 相关链接
 
-- 🧭 白开水AI导航：[https://nav.python4office.cn](https://nav.python4office.cn)
+- 🧭 白开水AI导航：[https://www.python-office.com/ai-nav](https://www.python-office.com/ai-nav)
 - 📹 视频脚本库：[../video-scripts/README.md](../video-scripts/README.md)

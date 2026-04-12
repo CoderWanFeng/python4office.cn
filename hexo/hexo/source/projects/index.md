@@ -13,7 +13,7 @@ comment: false
 
 | 项目 | 描述 | 链接 |
 |-----|------|------|
-| 🧭 白开水AI导航 | AI工具导航站 | [访问](https://nav.python4office.cn) |
+| 🧭 白开水AI导航 | AI工具导航站 | [访问](https://www.python-office.com/ai-nav) |
 | 🦞 OpenClaw | AI助手平台 | [访问](https://www.python-office.com/openclaw/) |
 
 ## 🐍 Python开发
@@ -27,7 +27,7 @@ comment: false
 
 | 项目 | 描述 | 链接 |
 |-----|------|------|
-| 🌐 数字游民签证 | 全球签证政策汇总 | [访问](https://digital.python4office.cn) |
+| 🌐 数字游民签证 | 全球签证政策汇总 | [访问](https://www.python-office.com/how-to-digital-nomad) |
 | 🎬 晚枫和小明Vlog | B站/B站生活记录 | [访问](https://lm.python4office.cn) |
 
 ## 📝 创作工具
@@ -35,7 +35,7 @@ comment: false
 | 项目 | 描述 | 链接 |
 |-----|------|------|
 | ✍️ md2mp | 微信公众号编辑器 | [访问](https://md.python4office.cn) |
-| 🏗️ 建站教程 | 个人网站搭建指南 | [访问](https://opc.python4office.cn) |
+| 🏗️ 建站教程 | 个人网站搭建指南 | [访问](https://www.python-office.com/opc) |
 
 ---
 
