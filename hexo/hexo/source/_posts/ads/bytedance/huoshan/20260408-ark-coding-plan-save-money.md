@@ -209,7 +209,7 @@ AI是杠杆，不是对手。
 - 学生免费资源清单
 - 团队订阅最优方案
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/)
+👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
 
 ---
 

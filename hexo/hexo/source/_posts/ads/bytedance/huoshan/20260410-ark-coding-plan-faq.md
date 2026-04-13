@@ -164,6 +164,17 @@ ChatGPT Plus主要是聊天工具，Coding Plan是编程专用。
 
 ---
 
+## 🎁 福利时间
+
+送你一份**《火山方舟Coding Plan常见问题汇总》**：
+- 20个常见问题解答
+- 配置避坑指南
+- 订阅选择建议
+
+👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)**
+
+---
+
 ## 📚 想系统学习AI编程？
 
 👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**

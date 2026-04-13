@@ -163,6 +163,8 @@ categories: [AI编程, 完整指南]
 
 👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
 
+👉 [点击免费领取《火山方舟Coding Plan配置指南》](https://www.python-office.com/openclaw/coding-plan/)**
+
 ---
 
 **关于作者**

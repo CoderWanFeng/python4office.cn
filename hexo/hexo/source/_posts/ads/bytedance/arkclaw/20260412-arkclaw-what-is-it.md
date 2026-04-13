@@ -169,6 +169,17 @@ def read_excel(path):
 
 ---
 
+## 🎁 福利时间
+
+送你一份**《ArkClaw 快速上手指南》**：
+- 零基础注册教程
+- 首月省钱攻略
+- 7×24 使用技巧
+
+👉 [点击免费领取](https://www.python-office.com/openclaw/deploy/)
+
+---
+
 ## 更新记录
 
 - 2026-04-12：初稿发布
