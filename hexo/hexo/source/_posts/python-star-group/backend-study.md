@@ -3,6 +3,7 @@ title: backend-study
 date: 2022-08-12 17:36:31
 tags:
 ---
+<!-- more -->
 害！非科班出身的程序员，到底差在哪里？
 
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/wenda/backend/cover.jpg)

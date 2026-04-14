@@ -6,6 +6,7 @@ tags: python-office
 
 
 
+<!-- more -->
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，读者群👉[点我直达](https://www.python4office.cn/wechat-group/)
 
 按照惯例，这个周末还是又是周六加班，周天更文。

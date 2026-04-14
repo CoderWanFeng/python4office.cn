@@ -7,6 +7,7 @@ tags: [火山方舟体验, Claude使用, Copilot替代, 国产AI编程, AI编程
 categories: [AI编程, 工具测评]
 ---
 
+<!-- more -->
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者

@@ -3,6 +3,7 @@ title: 用Python实现亚马逊自动上货，跨境电商YYDS
 date: 2023-08-06 22:22:05
 tags: 1v1
 ---
+<!-- more -->
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>

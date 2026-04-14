@@ -5,6 +5,7 @@ tags: ["AI Skill", "进阶开发", "性能优化"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第21讲：性能优化与监控
 
 > 掌握 Skill 的性能优化和监控技巧，确保 Skill 高效稳定运行。

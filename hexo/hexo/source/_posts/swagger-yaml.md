@@ -4,6 +4,7 @@ date: 2022-06-08 15:11:04
 tags: Swagger
 ---
 
+<!-- more -->
 ```shell
 #必要字段！Swagger规范版本，必须填2.0，否则该YAML将不能用于Swagger其他组件
 swagger: '2.0'

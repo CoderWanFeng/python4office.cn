@@ -5,6 +5,7 @@ tags: 知识星球
 ---
 
 
+<!-- more -->
 大家好，这里是Python程序员晚枫，[知识星球：Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)。
 
 最近在星球收到一个提问，直击打工人的灵魂👇

@@ -6,6 +6,7 @@ tags:
 
 
 
+<!-- more -->
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/format/cover.jpg)
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，**知识星球：Python读者圈。**
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/format/qa.png)

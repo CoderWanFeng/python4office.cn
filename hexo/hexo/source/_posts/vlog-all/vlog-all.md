@@ -5,6 +5,7 @@ tags: VLOG
 ---
 
 
+<!-- more -->
 - [【VLOG.01】重庆程序员的周末，从给女朋友做早餐开始](https://www.bilibili.com/video/BV1mz4y177j1/)
 - [【VLOG.02】重庆上班，来回通勤3个小时](https://www.bilibili.com/video/BV1PV4y1t7Jc/?t=80.570515&spm_id_from=333.1350.jump_directly&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)
 - [【VLOG.03】阿里云送的新年礼物，大家看看怎么样？](https://www.bilibili.com/video/BV1Uc411s7hj/?spm_id_from=333.999.0.0&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)

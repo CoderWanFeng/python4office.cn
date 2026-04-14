@@ -4,6 +4,7 @@ date: 2022-05-13 00:25:59
 tags: 自动化办公
 ---
 
+<!-- more -->
 <p align="center">
     <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/github-nav.jpg" alt="github license"/>

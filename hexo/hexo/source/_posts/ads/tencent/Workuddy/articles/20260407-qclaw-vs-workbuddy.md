@@ -6,6 +6,7 @@ tags: [QClaw, WorkBuddy, AI, 办公工具, 腾讯]
 description: 详细对比QClaw和WorkBuddy的区别，帮助你选择适合自己的AI工具
 ---
 
+<!-- more -->
 # QClaw和WorkBuddy，傻傻分不清楚？一文讲清楚！
 
 ## 一、你是不是也分不清？

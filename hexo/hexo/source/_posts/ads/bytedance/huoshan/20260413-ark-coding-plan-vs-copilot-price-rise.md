@@ -7,6 +7,7 @@ tags: [Copilot涨价, GitHub Copilot, 火山方舟Coding Plan, AI编程工具替
 categories: [AI编程, 工具测评]
 ---
 
+<!-- more -->
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者

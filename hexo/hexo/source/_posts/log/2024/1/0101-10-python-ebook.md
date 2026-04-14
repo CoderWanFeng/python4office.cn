@@ -5,6 +5,7 @@ tags: 电子书
 ---
 
 
+<!-- more -->
 ## 相关阅读
 
 - [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)

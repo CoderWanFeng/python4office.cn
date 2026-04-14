@@ -4,6 +4,7 @@ date: 2024-08-24 00:24:04
 tags: 1v1
 ---
 
+<!-- more -->
 这个文档是1v1学习的总结，每次沟通后更新，请收藏此链接：[点我查看](https://www.python4office.cn/work-story/1v1/2024/8/20240824-python-lijia/)。
 
 # 第1讲（2024-08-24）

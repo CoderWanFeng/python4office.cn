@@ -7,6 +7,7 @@ tags: 机器人
 
 
 
+<!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/pyrobotoffice/get_group_list/cover.jpg)
 
 大家好，这里是Python程序员晚枫。

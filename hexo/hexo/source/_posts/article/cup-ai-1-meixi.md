@@ -7,6 +7,7 @@ tags: 人工智能
 
 
 
+<!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/%E4%B8%96%E7%95%8C%E6%9D%AF%E5%86%A0%E5%86%9B%2Fcover.jpg)
 
 今天凌晨，夺冠热门阿根廷终于赢球了，梅西也打进了自己本届世界杯的第一粒进球！你熬夜看这场比赛了吗？

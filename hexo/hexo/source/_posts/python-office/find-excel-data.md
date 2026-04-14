@@ -6,6 +6,7 @@ tags: python-office
 
 
 
+<!-- more -->
 ![](https://www.python-office.com/api/img-cdn/python-office/find_excel_data/cover.jpg)
 
 

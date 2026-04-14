@@ -4,6 +4,7 @@ date: 2026-03-03 10:30:00
 tags: [OpenClaw, 行业分析, 开源生态]
 ---
 
+<!-- more -->
 # OpenClaw 登顶 GitHub 全球趋势榜！248k Star 背后的故事
 
 > 大家好，我是正在实战各种 AI 项目的程序员晚枫。

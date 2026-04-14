@@ -4,6 +4,7 @@ date: 2024-1-11 21:16:17
 tags: AI
 ---
 
+<!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai/%E7%9B%98%E7%82%B92023/cover.jpg)
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，今天给大家分享3个我用过的AI工具。
 

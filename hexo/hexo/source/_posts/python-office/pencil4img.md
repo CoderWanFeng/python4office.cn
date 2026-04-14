@@ -5,6 +5,7 @@ tags: python-office
 ---
 
 
+<!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/pencil4img-cover.jpg)
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，读者交流群🏠[点我直达](https://www.python4office.cn/wechat-group/)
 

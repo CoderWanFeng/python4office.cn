@@ -4,6 +4,7 @@ date: 2025-04-26 14:15:17
 tags: [pobd]
 ---
 
+<!-- more -->
 <span style="font-size:20px;"><span style="color:#66a3e0;">哈喽啊，不知道你们发现没有，百度又有新功能了。话不多说，上图！ </span></span>
 ![community_de705ef.png](https://raw.atomgit.com/user-images/assets/5027920/bfd0034d-7009-415c-892f-fc6dcc5c2f45/community_de705ef.png 'community_de705ef.png')
 

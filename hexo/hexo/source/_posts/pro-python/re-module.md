@@ -4,6 +4,7 @@ date: 2022-07-13 14:25:03
 tags: 正则表达式
 ---
 
+<!-- more -->
 ![](https://www.python-office.com/api/img-cdn/pro-python/re.py/re-cover.jpg)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)。

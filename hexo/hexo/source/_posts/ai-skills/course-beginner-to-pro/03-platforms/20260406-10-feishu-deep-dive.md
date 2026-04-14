@@ -5,6 +5,7 @@ tags: ["AI Skill", "飞书", "Feishu", "CLI", "企业"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第10讲：飞书 CLI 平台深度解析
 
 > 掌握企业级 Skill 平台飞书 CLI，开发团队协作 Skill。

@@ -5,6 +5,7 @@ tags: ["AI Skill", "交互设计", "Prompt", "用户体验"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第5讲：Skill 的交互设计：让对话更自然
 
 > 掌握 Skill 交互设计的核心技巧，让你的 Skill 像真人一样自然流畅。

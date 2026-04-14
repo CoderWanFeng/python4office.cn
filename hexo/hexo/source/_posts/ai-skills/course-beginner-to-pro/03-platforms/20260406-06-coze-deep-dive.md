@@ -5,6 +5,7 @@ tags: ["AI Skill", "Coze", "扣子", "平台"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第6讲：Coze 扣子平台深度解析
 
 > 全面掌握 Coze 平台的核心功能和高级技巧。

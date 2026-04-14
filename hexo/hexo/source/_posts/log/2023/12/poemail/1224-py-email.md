@@ -4,6 +4,7 @@ date: 2023-12-24 01:16:17
 tags: 自动化办公
 ---
 
+<!-- more -->
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)。
 
 今天给大家分享一个可以**用1行代码**自动收发邮件的Python第三方库：``poemail``。

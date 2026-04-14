@@ -5,6 +5,7 @@ tags: spark
 ---
 
 
+<!-- more -->
 ## 1、Python学习社区
 
 你好，我是Python程序员晚枫，我的微信：[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)

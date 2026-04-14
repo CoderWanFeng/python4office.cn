@@ -3,6 +3,7 @@ title: 又一个微信聊天机器人横空出世了，人人可用！
 date: 2022-09-12 15:50:11
 tags:
 ---
+<!-- more -->
 又一个微信聊天机器人横空出世了，人人可用！
 
 ![](https://www.python-office.com/api/img-cdn/robot/wechat/cover.jpg)

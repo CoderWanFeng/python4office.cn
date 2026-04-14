@@ -7,6 +7,7 @@ tags: [腾讯云TOKEN Plan指南, TOKEN Plan怎么用, CODING Plan替代方案, 
 categories: [AI编程, 完整指南]
 ---
 
+<!-- more -->
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者

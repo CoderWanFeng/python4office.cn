@@ -5,6 +5,7 @@ tags: ["AI Skill", "入门", "课程"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第1讲：什么是 AI Skill？为什么现在必须学？
 
 > 本讲是整个课程的起点，带你建立对 AI Skill 的完整认知。

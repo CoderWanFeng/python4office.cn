@@ -5,6 +5,7 @@ tags: C++
 ---
 
 
+<!-- more -->
 下载mingw：https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/
 
 ## 相关阅读

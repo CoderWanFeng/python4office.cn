@@ -5,6 +5,7 @@ tags: 知识星球
 ---
 
 
+<!-- more -->
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/gaoxin-nan/cover.jpg)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)。

@@ -4,6 +4,7 @@ date: 2022-02-10 10:45:09
 tags: JavaScript
 ---
 
+<!-- more -->
 ### 你好呀，我是[程序员晚枫](https://www.python4office.cn/wechat-qrcode/)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
