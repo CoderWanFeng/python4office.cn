@@ -139,13 +139,13 @@ X生态处于快速变化期，AI程序员可以：
 
 ### 针对"双线并行"策略
 
-**1. [AI自动化办公课程](/course/AI/ai-automation-office/)**
+**1. [AI自动化办公课程](https://r7up9.xetslk.com/s/1uP5YW)**
 ✓ 微信小程序开发基础
 ✓ AI能力接入实战
 ✓ 商业化变现技巧
 ✓ 适合新手到进阶
 
-**2. [OpenClaw深度课程](/course/AI/openclaw-tutorial/)**
+**2. [OpenClaw深度课程](https://r7up9.xetslk.com/s/1uP5YW)**
 ✓ AI编程全流程
 ✓ X生态适配策略
 ✓ 高级AI应用开发
@@ -153,7 +153,7 @@ X生态处于快速变化期，AI程序员可以：
 
 ### 专属服务
 
-**[个人网站 python-office.com](/)** 提供：
+**[个人网站 python-office.com](https://www.python-office.com/)** 提供：
 - X生态最新API解读
 - 成功案例分析
 - 1对1项目咨询
@@ -195,8 +195,8 @@ X vs 微信，不是二选一的问题。
 
 **今天学AI编程，明天就是X生态的先行者。**
 
-> 🔥 [立即开始学习](/course/AI/ai-automation-office/)
-> 📖 [深度技术文章](/)
+> 🔥 [立即开始学习](https://r7up9.xetslk.com/s/1uP5YW)
+> 📖 [深度技术文章](https://www.python-office.com/)
 > 💬 [加入开发者社区](/contact)
 
 **AI时代，选择比努力更重要，但能力决定选择权。**
