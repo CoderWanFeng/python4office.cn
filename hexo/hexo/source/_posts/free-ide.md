@@ -3,7 +3,7 @@ title: "JetBrains全家桶永久免费使用 | PyCharm/IDEA官方正版免费教
 date: 2022-04-22 15:01:00
 tags: ["JetBrains", "PyCharm", "IDEA", "IDE安装", "Python开发工具", "免费IDE"]
 categories: ["开发工具"]
-description: "JetBrains全家桶永久免费使用教程！PyCharm、IDEA等IDE官方正版免费申请方法，附详细图文教程和常见问题解答。
+description: "JetBrains全家桶永久免费使用教程！PyCharm、IDEA等IDE官方正版免费申请方法，附详细图文教程和常见问题解答。"
 ---
 
 <!-- more -->
