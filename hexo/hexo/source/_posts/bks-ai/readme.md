@@ -25,6 +25,7 @@ tags: 白开水 AI社区
 | 📚 课程中心 | 全部课程 | [python-office.com/course](https://python-office.com/course/) | 10+ 套完整课程，从入门到进阶 |
 | 💻 项目官网 | Python 办公自动化 | [python-office.com](https://www.python-office.com/) | 60+ 套 Python 课程合集 + 开源项目 |
 | 🦞 OpenClaw | OpenClaw 教程 | [python-office.com/openclaw](https://www.python-office.com/openclaw/) | AI 智能助手部署与使用教程 |
+| 🦞 腾讯"龙虾"WorkBuddy | WorkBuddy 使用指南 | [查看](https://mp.weixin.qq.com/s/_s-n1zVp6Vw4VOpsBhwBlw) | 一人公司效率提升工具使用教程 |
 | 📈 博客主站 | python4office.cn | [python4office.cn](https://www.python4office.cn/) | 技术文章、教程、资源合集 |
 | 📚 知识科普 | OPC 一人公司指南 | [python-office.com/how-to-opc](https://www.python-office.com/how-to-opc/#/) | 一人独资有限公司科普指南 |
 
@@ -72,6 +73,7 @@ tags: 白开水 AI社区
 | AI写作变现指南 | - | ⏳ 待开发 | 想通过AI写作赚钱 | - |
 | AI小红书运营 | - | ⏳ 待开发 | 想做小红书AI内容 | - |
 | AI电商运营实战 | - | ⏳ 待开发 | 电商从业者想用AI提效 | - |
+| 腾讯"龙虾"WorkBuddy使用指南 | - | ✅ 已完成 | 想提升工作效率的一人公司创业者 | [查看](https://mp.weixin.qq.com/s/_s-n1zVp6Vw4VOpsBhwBlw) |
 
 ---
 
@@ -128,6 +130,8 @@ tags: 白开水 AI社区
 
 - **AtomGit**：[DeepSeek 浪潮下如何撑过 35 岁职场危机？](https://mp.weixin.qq.com/s/RC54o9C4F87fyAebJUE0kg)
 - **脉脉**：[玩赚 AI实验室 × 程序员晚枫](https://mp.weixin.qq.com/s/HHuNGf6nWh-p2zkfm7tnfQ)
+- **微信公众号**：[我用腾讯"龙虾"WorkBuddy，一个人干了一个公司的活（郑州）](https://mp.weixin.qq.com/s/_s-n1zVp6Vw4VOpsBhwBlw)
+- **微信公众号**：[我用腾讯"龙虾"WorkBuddy，一个人干了一个公司的活（流畅）](https://mp.weixin.qq.com/s/OOMsQ96mH9LGQzuPz_wD9Q)
 
 ---
 
