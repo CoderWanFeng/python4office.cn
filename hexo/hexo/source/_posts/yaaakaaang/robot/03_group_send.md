@@ -4,6 +4,7 @@ date: 2025-05-22 13:05:32
 tags: [PyOfficeRobot]
 ---
 
+<!-- more -->
 #  一、自定义发送给谁
 
 双击鼠标左键打开 群发对象 excel 表

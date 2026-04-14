@@ -4,6 +4,7 @@ date: 2023-03-12 15:39:13
 tags: 1对1咨询
 ---
 
+<!-- more -->
 ![](https://files.mdnice.com/user/26656/93723c14-cba5-42d2-a359-752690733212.jpg)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，又来分享程序员的职场故事了~

@@ -11,6 +11,7 @@ tags:
 description: "方舟 Coding Plan 支持那么多模型，Doubao、GLM、DeepSeek、Kimi、MiniMax...但36块一个月，根本不够用啊"
 ---
 
+<!-- more -->
 # 方舟 Coding Plan 说工具不限，但36块真的不够用...
 
 ## 先说结论

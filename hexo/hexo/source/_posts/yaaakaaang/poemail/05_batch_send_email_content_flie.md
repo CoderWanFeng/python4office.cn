@@ -4,6 +4,7 @@ date: 2025-05-14 10:50:32
 tags: [poemail]
 ---
 
+<!-- more -->
 <span style="font-size:20px;"><span style="color:#66a3e0;">昨天收到一个客户的咨询，可以群发邮件吗？而且还要发送附件。 </span></span>
 
 <span style="font-size:20px;"><span style="color:#66a3e0;">我就想到一定还有很多人被这事困扰着，所以我今天写了这篇文章。下面就让我们从既费时，又容易出错的重复性工作中解脱出来吧！ </span></span>

@@ -5,6 +5,7 @@ tags: ["AI Skill", "Coze", "实战", "办公助手"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第7讲：Coze 实战：搭建办公助手 Skill
 
 > 动手搭建一个完整的办公助手，掌握 Coze 实战开发。

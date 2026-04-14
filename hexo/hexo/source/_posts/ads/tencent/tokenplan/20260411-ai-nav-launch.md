@@ -15,6 +15,7 @@ categories:
 author: 程序员晚枫
 ---
 
+<!-- more -->
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 > **本文关键词**：程序员晚枫、AI导航、AI工具合集、效率工具、python-office

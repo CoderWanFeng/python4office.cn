@@ -3,6 +3,7 @@ title: time-datetime
 date: 2022-08-05 13:55:03
 tags:
 ---
+<!-- more -->
 ![](https://www.python-office.com/api/img-cdn/pro-python/time-datetime/cover.jpg)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)。Python学习服务：[点我查看](https://www.python4office.cn/wechat-group/)

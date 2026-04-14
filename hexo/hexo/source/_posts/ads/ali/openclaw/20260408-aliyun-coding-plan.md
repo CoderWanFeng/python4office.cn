@@ -5,6 +5,7 @@ tags: [阿里云CodingPlan, 百炼CodingPlan, 通义千问, AI编程, 阿里云A
 categories: [AI编程, 工具测评]
 ---
 
+<!-- more -->
 大家好，这里是程序员晚枫。
 
 阿里云终于也入局AI编程订阅了！

@@ -5,6 +5,7 @@ tags: [AI, Skill, 课程, 教程]
 description: 一套完整的 AI Skill 学习路径，从零基础到独立开发、部署、变现
 ---
 
+<!-- more -->
 # Skills 从入门到实践 - 系统课程
 
 > 一套完整的 AI Skill 学习路径，从零基础到独立开发、部署、变现

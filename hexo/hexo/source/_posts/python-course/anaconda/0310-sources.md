@@ -4,6 +4,7 @@ date: 2024-03-10 13:49:42
 tags: 人工智能
 ---
 
+<!-- more -->
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，抖音/快手/小红书/微博，都叫这个名字。
 
 Python学习网站：[www.python-office.com](www.python-office.com)

@@ -4,6 +4,7 @@ date: 2025-06-04 16:15:32
 tags: [pobd]
 ---
 
+<!-- more -->
 #  一、获取百度ocr的账号密码
 
 [点击获取](https://blog.csdn.net/2301_81016982/article/details/147276083?spm=1001.2014.3001.5502)

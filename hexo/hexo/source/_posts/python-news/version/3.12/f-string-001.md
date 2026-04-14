@@ -4,6 +4,7 @@ date: 2023-02-27 01:07:57
 tags: 3.12
 ---
 
+<!-- more -->
 ## 相关阅读
 
 - [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)

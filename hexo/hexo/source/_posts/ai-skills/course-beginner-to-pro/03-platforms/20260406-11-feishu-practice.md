@@ -5,6 +5,7 @@ tags: ["AI Skill", "飞书", "实战", "团队协作"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第11讲：飞书 CLI 实战：团队协作 Skill
 
 > 动手开发企业级团队协作 Skill，掌握飞书生态开发。

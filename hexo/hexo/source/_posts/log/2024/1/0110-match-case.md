@@ -5,6 +5,7 @@ tags: 电子书
 ---
 
 
+<!-- more -->
 https://cloud.tencent.com/developer/article/2306031
 1、修改文章标题，可将此文章改为Python判断语句之类相关的
 2、扩写此文章，增加 if 、elif等条件判断语句的定义、讲解，让初学者看见这篇文章后，可以学会判断语句这一类知识

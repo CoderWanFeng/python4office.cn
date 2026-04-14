@@ -4,6 +4,7 @@ date: 2025-05-14 12:50:32
 tags: [poemail]
 ---
 
+<!-- more -->
 <span style="font-size:20px;"><span style="color:#66a3e0;">如果你是教师或培训师，会收到大量学生提交的作业或项目文件； </span></span>
 
 <span style="font-size:20px;"><span style="color:#66a3e0;">如果你参与了一个项目，团队成员会给你发送大量设计稿、文档等； </span></span>

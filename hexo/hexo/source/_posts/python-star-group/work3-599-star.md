@@ -4,6 +4,7 @@ date: 2022-10-10 10:41:54
 tags: 知识星球
 ---
 
+<!-- more -->
 你好，我是在重庆的程序员晚枫，今天讲讲自己的经历。个人微信👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)
 
 

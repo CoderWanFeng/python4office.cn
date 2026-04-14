@@ -6,6 +6,7 @@ categories:
 tags: [AI编程, AI入门, 零基础学AI, 小白学AI, Python编程, 龙虾AI, AI工具, ChatGPT教程]
 ---
 
+<!-- more -->
 你有没有这种感觉：
 
 AI工具装了十几个，ChatGPT、Claude、Midjourney、文心一言，全注册了。

@@ -6,6 +6,7 @@ tags:
 
 
 
+<!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai%2Fface_merge%2Fcover.jpg)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)。

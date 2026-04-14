@@ -5,6 +5,7 @@ tags: [PyOfficeRobot]
 ---
 
 
+<!-- more -->
 #  一、先打开微信群
 
 首先点开要收集的微信群

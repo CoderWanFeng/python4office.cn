@@ -6,6 +6,7 @@ tags: 1v1
 
 
 
+<!-- more -->
 <p align="center" name="'github">
     <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>

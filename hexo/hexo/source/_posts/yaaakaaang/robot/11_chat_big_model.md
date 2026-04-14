@@ -4,6 +4,7 @@ date: 2025-05-24 12:05:32
 tags: [PyOfficeRobot]
 ---
 
+<!-- more -->
 # 一、chat  gpt
 
 找到左边 【大模型聊天】 这个文件，双击鼠标左键打开 

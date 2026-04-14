@@ -4,6 +4,7 @@ date: 2025-07-03 9:00:00
 tags: [wwp,c语言]
 ---
 
+<!-- more -->
 # 静态库
 ![1751510480(1).png](https://raw.atomgit.com/user-images/assets/5027920/aa41708b-00ed-4c5f-a1bf-ba8932cd2ee2/1751510480_1_.png '1751510480(1).png')
 

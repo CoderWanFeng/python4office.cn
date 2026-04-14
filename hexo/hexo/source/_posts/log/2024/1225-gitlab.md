@@ -5,6 +5,7 @@ tags: 热点
 ---
 
 
+<!-- more -->
 近日，全球知名的代码托管平台 GitLab 发布了一则重要通知《Important Change to Your GitLab.com Account》，宣布将不再为位于中国大陆、澳门和香港的用户提供 GitLab.com 账户服务。
 
 至于背后的原因是什么，别在评论区问，答应我。

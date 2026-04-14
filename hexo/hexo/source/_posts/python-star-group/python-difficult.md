@@ -6,6 +6,7 @@ tags:
 
 
 
+<!-- more -->
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，[https://www.python4office.cn/wechat-qrcode/Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
 
 昨晚收到一个常见的星球提问，今天来详细回复一下。

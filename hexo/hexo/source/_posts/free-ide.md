@@ -6,6 +6,7 @@ categories: ["开发工具"]
 description: "JetBrains全家桶永久免费使用教程！PyCharm、IDEA等IDE官方正版免费申请方法，附详细图文教程和常见问题解答。
 ---
 
+<!-- more -->
 # JetBrains全家桶永久免费使用 | PyCharm/IDEA官方正版免费教程(2024最新)
 
 > 还在找破解版IDE？JetBrains官方提供免费使用方式，本文手把手教你申请！

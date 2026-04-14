@@ -5,6 +5,7 @@ tags: ["AI Skill", "OpenClaw", "平台", "开源"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第8讲：OpenClaw 平台深度解析
 
 > 掌握开源 Skill 平台 OpenClaw，实现更灵活的 Skill 开发。

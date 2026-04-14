@@ -4,6 +4,7 @@ date: 2023-01-25 22:14:07
 tags:
 ---
 
+<!-- more -->
 腾讯云+Pandas，批量识别银行卡号码并且写入Excel，小白也可以轻松使用
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/potencent%2FBankCardOCR%2Fcover.jpg)

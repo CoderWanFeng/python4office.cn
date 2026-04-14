@@ -5,6 +5,7 @@ tags: ["AI Skill", "OpenClaw", "实战", "数据处理"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第9讲：OpenClaw 实战：开发数据处理 Skill
 
 > 动手开发一个完整的数据处理 Skill，掌握 OpenClaw 实战技巧。

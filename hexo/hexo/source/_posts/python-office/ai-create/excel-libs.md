@@ -5,6 +5,7 @@ tags: python-office
 ---
 
 
+<!-- more -->
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，有一个10w+关注的B站账号：Python自动化办公社区，帮助小白快速学习Python。
 
 2年前发布了一个开源项目：python-office，目前在GitHub上有800+⭐，最近在开发新功能时感觉Python知识有点不够用了。

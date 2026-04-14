@@ -8,6 +8,7 @@ tags:
 description: "python-office官网 最新更新播报"
 ---
 
+<!-- more -->
 # 🐍 python-office官网 更新啦！
 
 > 2026-04-13

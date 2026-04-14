@@ -6,6 +6,7 @@ tags: 开源项目
 
 
 
+<!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poimage/flag2profile/cover.png)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，B站/小红书/知乎，都叫这个名。

@@ -5,6 +5,7 @@ tags: [阿里云CodingPlan教程, 百炼CodingPlan怎么用, 通义千问编程,
 categories: [AI编程, 教程]
 ---
 
+<!-- more -->
 大家好，这里是程序员晚枫。
 
 买了阿里云Coding Plan不知道怎么用？今天这篇教程手把手教你，从订阅到上手，完整流程一次讲清楚。

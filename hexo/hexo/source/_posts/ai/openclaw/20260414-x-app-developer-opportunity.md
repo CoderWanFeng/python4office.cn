@@ -12,6 +12,7 @@ categories:
 cover: /img/ai/x-app-opportunity.jpg
 ---
 
+<!-- more -->
 # 马斯克X应用开放平台，这是普通人年入百万的机会吗？
 
 X应用对标微信的消息刷屏了，但你可能错过了更重要的信息：

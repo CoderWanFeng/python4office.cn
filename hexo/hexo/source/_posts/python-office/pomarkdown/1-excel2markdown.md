@@ -4,6 +4,7 @@ date: 2024-12-08 10:16:17
 tags: [ 第三方库,自动化办公,markdown ]
 ---
 
+<!-- more -->
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>

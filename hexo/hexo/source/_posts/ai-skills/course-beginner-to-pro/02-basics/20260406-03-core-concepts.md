@@ -5,6 +5,7 @@ tags: ["AI Skill", "入门", "核心概念"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第3讲：Skill 的核心概念：Intent、Action、Tool
 
 > 理解 Skill 的三大核心概念，建立正确的技术认知框架。

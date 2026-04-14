@@ -5,6 +5,7 @@ tags:
 ---
 
 
+<!-- more -->
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/bi-course/cover.jpg)
 
 大家好，这里是Python程序员晚枫。

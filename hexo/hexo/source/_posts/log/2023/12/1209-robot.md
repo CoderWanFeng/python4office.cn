@@ -4,6 +4,7 @@ date: 2023-12-9 13:16:17
 tags: 自动化办公
 ---
 
+<!-- more -->
 ![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，只给小白分享有用的**自动化办公**代码。

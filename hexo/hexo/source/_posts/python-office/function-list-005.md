@@ -3,6 +3,7 @@ title: 整理了27个自动化办公的案例，假期有的玩了
 date: 2023-09-28 01:25:17
 tags: python-office
 ---
+<!-- more -->
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>

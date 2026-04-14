@@ -4,6 +4,7 @@ date: 2023-01-22 15:18:26
 tags: [pobaidu,AI]
 ---
 
+<!-- more -->
 # 错误信息 - 官方文档
 
 https://ai.baidu.com/ai-doc/IMAGEPROCESS/xk3bcltuz

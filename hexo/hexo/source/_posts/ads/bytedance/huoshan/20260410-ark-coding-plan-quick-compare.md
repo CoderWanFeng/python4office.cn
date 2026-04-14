@@ -7,6 +7,7 @@ tags: [火山方舟Coding Plan, Coding Plan对比, Lite轻量版, Pro专业版, 
 categories: [AI编程, 工具对比]
 ---
 
+<!-- more -->
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者

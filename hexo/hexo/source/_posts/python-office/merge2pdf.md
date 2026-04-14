@@ -4,6 +4,7 @@ date: 2022-05-17 00:11:17
 tags: python-office
 ---
 
+<!-- more -->
 <p align="center">
     <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
     <img src="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/github-nav.jpg" alt="github license"/>

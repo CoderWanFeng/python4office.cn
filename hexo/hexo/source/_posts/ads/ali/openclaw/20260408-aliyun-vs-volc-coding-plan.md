@@ -5,6 +5,7 @@ tags: [阿里云CodingPlan, 火山方舟CodingPlan, 国产AI编程工具对比, 
 categories: [AI编程, 工具测评]
 ---
 
+<!-- more -->
 大家好，这里是程序员晚枫。
 
 最近国产AI编程工具扎堆上线，很多粉丝问我：**阿里云Coding Plan和火山方舟Coding Plan到底选哪个？**

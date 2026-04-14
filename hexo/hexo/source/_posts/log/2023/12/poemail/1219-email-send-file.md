@@ -4,6 +4,7 @@ date: 2023-12-19 10:16:17
 tags: 自动化办公
 ---
 
+<!-- more -->
 ![](https://course-1300615378.cos.ap-guangzhou.myqcloud.com/poemail/poemail-course.jpg)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，今天给大家分享：1行Python代码，自动发送邮件，还可以带附件哟~

@@ -5,6 +5,7 @@ tags: 课程资料
 ---
 
 
+<!-- more -->
 本页内容，已经升级为以下链接👇
 
 点击直达：[https://www.python-office.com/guide/init.html](https://www.python-office.com/guide/init.html)

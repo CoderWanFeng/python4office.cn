@@ -5,6 +5,7 @@ tags: [个人网站,开源]
 --- 
 
 
+<!-- more -->
 ![](https://www.python4office.cn/images/open-source/course/20250421-potx-cloud-开发/pypi.png)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，全网同名。

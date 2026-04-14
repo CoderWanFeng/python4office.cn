@@ -4,6 +4,7 @@ date: 2023-08-16 00:24:04
 tags: 广告
 ---
 
+<!-- more -->
 AI又帮我赚钱了！
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，小红书也叫这个名。

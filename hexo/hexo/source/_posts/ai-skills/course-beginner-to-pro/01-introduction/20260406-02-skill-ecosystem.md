@@ -5,6 +5,7 @@ tags: ["AI Skill", "生态", "平台对比"]
 categories: ["AI Skills 课程"]
 ---
 
+<!-- more -->
 # 第2讲：Skill 生态全景图：平台、开发者、用户
 
 > 了解 Skill 生态的参与者，找到你的定位和机会。

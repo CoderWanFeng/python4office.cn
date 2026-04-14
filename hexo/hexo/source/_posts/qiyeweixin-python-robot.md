@@ -6,6 +6,7 @@ tags: 机器人
 
 
 
+<!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/poai/poqywx/001/cover.jpg)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，个人网址：[python-office.com](https://www.python-office.com)
