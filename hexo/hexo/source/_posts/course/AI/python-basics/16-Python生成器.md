@@ -1,0 +1,306 @@
+﻿---
+title: Python生成器：我处理10万条数据，内存只占了1MB
+date: 2026-02-28 19:01:00
+tags: [Python基础, 生成器, 内存优化]
+---
+
+<p align="center" id='扫码查看 AI 编程训练营'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
+    </a>   
+</p>
+
+<p align="center" name="atomgit">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+    	<a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
+		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='atomgit star'/>
+	</a>	
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
+<img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
+</a>
+<a href="https://www.bilibili.com/cheese/play/ss982042944">
+  <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
+</a>
+    	<a href="https://www.python4office.cn/wechat-group/">
+  <img src="https://img.shields.io/badge/加入-AI 交流群-brightgreen" alt="AI 交流群">
+</a>
+
+</p>
+
+<!-- more -->
+
+大家好，我是正在实战各种AI项目的程序员晚枫。
+
+今天分享一个让我处理大数据时内存占用减少90%的技术——**生成器（Generator）**。
+
+你可能遇到过这种情况：要处理几万、几十万条数据，程序直接卡死或报MemoryError。这时候生成器就是你的救星。
+
+看完这篇文章，你会理解为什么生成器被称为"省内存的神器"。
+
+---
+
+## 问题：列表太占内存
+
+假设你要处理100万个数字：
+
+```python
+# 创建一个包含100万个数字的列表
+def get_numbers(n):
+    result = []
+    for i in range(n):
+        result.append(i * i)
+    return result
+
+numbers = get_numbers(1000000)
+# 这个列表占用约38MB内存！
+
+for num in numbers:
+    print(num)  # 处理每个数字
+```
+
+**问题**：所有数据一次性加载到内存，数据量大了就崩溃。
+
+---
+
+## 解决方案：生成器
+
+### 什么是生成器？
+
+生成器是一种特殊的迭代器，它**按需生成数据，而不是一次性全部生成**。
+
+就像自动售货机，你要一个它给一个，而不是先把所有商品堆在你面前。
+
+### 创建生成器的两种方式
+
+#### 方式1：生成器函数（yield）
+```python
+def get_numbers_generator(n):
+    for i in range(n):
+        yield i * i  # 用yield代替return
+
+numbers = get_numbers_generator(1000000)
+# 几乎不占内存！
+
+for num in numbers:
+    print(num)  # 每次只生成一个数字
+```
+
+#### 方式2：生成器表达式
+```python
+# 列表推导式（占内存）
+squares_list = [i * i for i in range(1000000)]
+
+# 生成器表达式（省内存）
+squares_gen = (i * i for i in range(1000000))
+```
+
+---
+
+## yield的工作原理
+
+```python
+def simple_generator():
+    print("开始")
+    yield 1
+    print("继续")
+    yield 2
+    print("结束")
+    yield 3
+
+gen = simple_generator()
+print(next(gen))  # 输出：开始 \n 1
+print(next(gen))  # 输出：继续 \n 2
+print(next(gen))  # 输出：结束 \n 3
+# print(next(gen))  # StopIteration异常
+```
+
+**关键点**：
+- 遇到`yield`暂停，保存当前状态
+- `next()`被调用时，从暂停处继续执行
+- 函数执行完毕抛出`StopIteration`
+
+---
+
+## 实战案例
+
+### 案例1：读取大文件
+
+```python
+# 传统方式（可能内存爆炸）
+def read_lines_bad(filename):
+    with open(filename, 'r') as f:
+        return f.readlines()  # 一次性读入所有行
+
+# 生成器方式（一行一行读）
+def read_lines_good(filename):
+    with open(filename, 'r') as f:
+        for line in f:
+            yield line.strip()
+
+# 使用
+for line in read_lines_good('huge_file.txt'):
+    process(line)  # 每次只处理一行
+```
+
+### 案例2：无限序列
+
+```python
+def fibonacci():
+    """生成无限的斐波那契数列"""
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+# 使用
+fib = fibonacci()
+for _ in range(10):
+    print(next(fib))  # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+```
+
+### 案例3：数据管道
+
+```python
+def read_log_file(filename):
+    """读取日志文件"""
+    with open(filename, 'r') as f:
+        for line in f:
+            yield line.strip()
+
+def filter_errors(lines):
+    """过滤错误日志"""
+    for line in lines:
+        if 'ERROR' in line:
+            yield line
+
+def parse_timestamp(lines):
+    """解析时间戳"""
+    for line in lines:
+        # 假设格式：[2024-01-01 10:00:00] ERROR ...
+        timestamp = line[1:20]
+        yield {'time': timestamp, 'message': line}
+
+# 组合成管道
+logs = read_log_file('app.log')
+errors = filter_errors(logs)
+parsed = parse_timestamp(errors)
+
+for error in parsed:
+    print(error)
+    # 全程内存占用极小！
+```
+
+---
+
+## 生成器 vs 迭代器
+
+| 特性 | 生成器 | 迭代器 |
+|-----|-------|-------|
+| 创建方式 | yield或生成器表达式 | __iter__和__next__方法 |
+| 代码复杂度 | 简单 | 较复杂 |
+| 内存占用 | 极低 | 低 |
+| 可重用性 | 一次性 | 一次性 |
+
+**结论**：能用生成器就用生成器，代码简洁又高效。
+
+---
+
+## 常用内置生成器函数
+
+```python
+# enumerate - 带索引的遍历
+for i, value in enumerate(['a', 'b', 'c']):
+    print(i, value)  # 0 a, 1 b, 2 c
+
+# zip - 并行遍历多个序列
+names = ['Alice', 'Bob']
+ages = [25, 30]
+for name, age in zip(names, ages):
+    print(name, age)  # Alice 25, Bob 30
+
+# map - 对每个元素应用函数
+squares = map(lambda x: x**2, [1, 2, 3, 4])
+print(list(squares))  # [1, 4, 9, 16]
+
+# filter - 过滤元素
+evens = filter(lambda x: x % 2 == 0, [1, 2, 3, 4])
+print(list(evens))  # [2, 4]
+
+# range - 本身就是生成器
+for i in range(1000000):  # 不占用内存
+    pass
+```
+
+---
+
+## 推荐：AI Python零基础实战营
+
+想系统学习Python高级特性？
+
+**课程内容：**
+- ✅ Python基础语法
+- ✅ 生成器与迭代器详解
+- ✅ 内存优化技巧
+- ✅ 大数据处理实战
+
+🎁 **限时福利**：送《Python编程从入门到实践》实体书
+
+👉 **[点击了解详情](https://www.bilibili.com/cheese/play/ss982042944)**
+
+---
+
+## 相关阅读
+
+- [Python列表推导式：一行代码搞定循环](/course/AI相关/人民邮电出版社/ads/openclaw/python/07-Python列表推导式/)
+- [Python装饰器：给函数加功能的黑魔法](/course/AI相关/人民邮电出版社/ads/openclaw/python/11-Python装饰器/)
+- [Python文件操作：读写文件的10种姿势](/course/AI相关/人民邮电出版社/ads/openclaw/python/13-Python文件操作/)
+
+---
+
+*PS：生成器是Python的高级特性之一，掌握它，你就能优雅地处理大数据。*
+
+---
+
+
+---
+
+## 📚 推荐教材
+
+**主教材**：[《Python 编程从入门到实践（第 3 版）》](https://u.jd.com/NGMHz3T)
+
+
+---
+
+## 📚 推荐：Python 零基础实战营
+
+**系统学习Python，推荐这个免费入门课程 👇**
+
+| 特点 | 说明 |
+|-----|------|
+| 🎯 专为0基础设计 | 门槛低，上手快 |
+| 📹 配套视频讲解 | 配合文章学习效果更好 |
+| 💬 专属答疑群 | 遇到问题有人带 |
+| 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
+
+👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
+
+
+## 💬 联系我
+
+| 平台 | 账号/链接 |
+|------|----------|
+| 微信 | [扫码加好友](https://www.python4office.cn/wechat-qrcode/) |
+| 微博 | [@程序员晚枫](https://weibo.com/u/7726957925) |
+| 知乎 | [@程序员晚枫](https://www.zhihu.com/people/CoderWanFeng) |
+| 抖音 | [@程序员晚枫](https://www.douyin.com/user/MS4wLjABAAAA259649365) |
+| 小红书 | [@程序员晚枫](https://xhslink.com/m/4i8OhkfTvW3) |
+| B 站 | [Python 自动化办公社区](https://space.bilibili.com/259649365) |
+
+**主营业务**：AI 编程培训、企业内训、技术咨询
+
+
