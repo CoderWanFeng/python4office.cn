@@ -1,4 +1,4 @@
----
+﻿---
 title: Python零基础入门：写下你的第一行代码，开启编程之旅
 date: 2026-02-28 19:54:00
 tags: [Python基础, 入门, 零基础]
@@ -202,6 +202,23 @@ print("第一行")
 
 ---
 
+
+---
+
+## 📚 推荐：Python 零基础实战营
+
+**系统学习Python，推荐这个免费入门课程 👇**
+
+| 特点 | 说明 |
+|-----|------|
+| 🎯 专为0基础设计 | 门槛低，上手快 |
+| 📹 配套视频讲解 | 配合文章学习效果更好 |
+| 💬 专属答疑群 | 遇到问题有人带 |
+| 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
+
+👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
+
+
 ## 下节预告
 
 下一篇我们将学习**变量和数据类型**，这是编程的基础概念。
@@ -211,7 +228,7 @@ print("第一行")
 - Python有哪些数据类型
 - 如何进行基本的数学运算
 
-👉 **[继续阅读：Python变量与数据类型完全指南](/course/AI相关/人民邮电出版社/ads/openclaw/python/20260228195501-Python变量与数据类型完全指南/)**
+👉 **[继续阅读：Python变量与数据类型完全指南](/course/AI相关/人民邮电出版社/ads/openclaw/python/02-Python变量与数据类型/)**
 
 ---
 
@@ -233,7 +250,7 @@ print("第一行")
 
 ## 相关阅读
 
-- [Python变量与数据类型完全指南](/course/AI相关/人民邮电出版社/ads/openclaw/python/20260228195501-Python变量与数据类型完全指南/)
+- [Python变量与数据类型完全指南](/course/AI相关/人民邮电出版社/ads/openclaw/python/02-Python变量与数据类型/)
 - [零基础学AI编程：30天速成计划](/course/AI相关/人民邮电出版社/ads/openclaw/python/20260228171202-零基础学AI编程-30天速成计划/)
 
 ---
@@ -261,3 +278,5 @@ print("第一行")
 | B 站 | [Python 自动化办公社区](https://space.bilibili.com/259649365) |
 
 **主营业务**：AI 编程培训、企业内训、技术咨询
+
+

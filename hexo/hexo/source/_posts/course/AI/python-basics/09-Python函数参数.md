@@ -1,4 +1,4 @@
----
+﻿---
 title: Python函数参数*args和**kwargs：我面试挂3次后才搞懂的知识点
 date: 2026-02-28 17:28:00
 tags: [Python基础, 函数, 面试题]
@@ -257,9 +257,9 @@ A：`1 (3, 4) 5 {'c': 6, 'd': 7}`
 
 ## 相关阅读
 
-- [Python列表推导式：一行代码搞定循环](/course/AI相关/人民邮电出版社/ads/openclaw/20260228172601-Python列表推导式-一行代码搞定循环/)
-- [Python字典：我用这个数据结构，把查询速度提升了100倍](/course/AI相关/人民邮电出版社/ads/openclaw/20260228172701-Python字典-被低估的数据结构/)
-- [Python装饰器：给函数加功能的黑魔法](/course/AI相关/人民邮电出版社/ads/openclaw/20260228173001-Python装饰器-给函数加功能的黑魔法/)
+- [Python列表推导式：一行代码搞定循环](/course/AI相关/人民邮电出版社/ads/openclaw/07-Python列表推导式/)
+- [Python字典：我用这个数据结构，把查询速度提升了100倍](/course/AI相关/人民邮电出版社/ads/openclaw/08-Python字典/)
+- [Python装饰器：给函数加功能的黑魔法](/course/AI相关/人民邮电出版社/ads/openclaw/11-Python装饰器/)
 
 ---
 
@@ -274,6 +274,23 @@ A：`1 (3, 4) 5 {'c': 6, 'd': 7}`
 
 **主教材**：[《Python 编程从入门到实践（第 3 版）》](https://u.jd.com/NGMHz3T)
 
+
+---
+
+## 📚 推荐：Python 零基础实战营
+
+**系统学习Python，推荐这个免费入门课程 👇**
+
+| 特点 | 说明 |
+|-----|------|
+| 🎯 专为0基础设计 | 门槛低，上手快 |
+| 📹 配套视频讲解 | 配合文章学习效果更好 |
+| 💬 专属答疑群 | 遇到问题有人带 |
+| 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
+
+👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
+
+
 ## 💬 联系我
 
 | 平台 | 账号/链接 |
@@ -286,3 +303,5 @@ A：`1 (3, 4) 5 {'c': 6, 'd': 7}`
 | B 站 | [Python 自动化办公社区](https://space.bilibili.com/259649365) |
 
 **主营业务**：AI 编程培训、企业内训、技术咨询
+
+

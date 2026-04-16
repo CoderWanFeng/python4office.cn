@@ -1,4 +1,4 @@
----
+﻿---
 title: Python实战项目：我写了50行代码，自动整理乱糟糟的下载文件夹
 date: 2026-02-28 21:09:00
 tags: [Python实战, 自动化, 文件整理]
@@ -47,13 +47,15 @@ tags: [Python实战, 自动化, 文件整理]
 ### 问题
 下载文件夹通常很乱：文档、图片、视频混在一起，找文件很困难。
 
+> 💡 **场景**：你下载了一堆东西，有PDF报告、照片、压缩包，每次要找某个文件都要翻半天。
+
 ### 解决方案
 按文件类型自动分类：
 - 图片 → Images/
 - 文档 → Documents/
 - 视频 → Videos/
 - 压缩包 → Archives/
-- 其他 → Others/
+- 代码 → Code/
 
 ---
 
@@ -73,7 +75,7 @@ def organize_downloads(download_path=None):
     else:
         download_path = Path(download_path)
     
-    # 文件类型映射
+    # 文件类型映射（按后缀分类）
     file_types = {
         'Images': ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp'],
         'Documents': ['.pdf', '.doc', '.docx', '.txt', '.xls', '.xlsx', '.ppt', '.pptx'],
@@ -126,10 +128,12 @@ def organize_downloads(download_path=None):
             stats['Others'] += 1
     
     # 打印统计
-    print("\n整理完成！统计信息：")
+    print("\n" + "="*30)
+    print("整理完成！统计信息：")
     for category, count in stats.items():
         if count > 0:
             print(f"  {category}: {count}个文件")
+    print("="*30)
 
 # 运行
 if __name__ == "__main__":
@@ -138,69 +142,124 @@ if __name__ == "__main__":
 
 ---
 
-## 代码解析
+## 运行效果
 
-### 1. 导入模块
-```python
-import os          # 操作系统接口
-import shutil      # 高级文件操作（移动、复制）
-from pathlib import Path  # 面向对象的路径处理
+**运行前，下载文件夹是这样的：**
+
+```
+Downloads/
+  ├── 报告.pdf
+  ├── 照片.jpg
+  ├── 视频.mp4
+  ├── 小说.txt
+  ├── 资料.zip
+  ├── 论文.docx
+  └── 代码.py
 ```
 
-### 2. 文件类型映射
-用字典定义每种文件类型对应的扩展名，方便扩展和维护。
+**运行程序：**
 
-### 3. 自动创建文件夹
-```python
-folder_path.mkdir(exist_ok=True)  # exist_ok=True表示如果存在就不报错
+```bash
+python organize_downloads.py
 ```
 
-### 4. 处理重名文件
-如果目标位置已有同名文件，自动添加序号：
-```python
-file.txt → file_1.txt → file_2.txt
+**运行后：**
+
+```
+移动: 报告.pdf -> Documents/
+移动: 照片.jpg -> Images/
+移动: 视频.mp4 -> Videos/
+移动: 小说.txt -> Documents/
+移动: 资料.zip -> Archives/
+移动: 论文.docx -> Documents/
+移动: 代码.py -> Code/
+
+==============================
+整理完成！统计信息：
+  Images: 1个文件
+  Documents: 3个文件
+  Videos: 1个文件
+  Audio: 0个文件
+  Archives: 1个文件
+  Code: 1个文件
+==============================
 ```
 
-### 5. 主程序入口
-```python
-if __name__ == "__main__":
-    organize_downloads()
+**最终目录结构：**
+
 ```
-这是Python的惯用法，确保直接运行脚本时才执行。
+Downloads/
+  ├── Images/
+  │   └── 照片.jpg
+  ├── Documents/
+  │   ├── 报告.pdf
+  │   ├── 小说.txt
+  │   └── 论文.docx
+  ├── Videos/
+  │   └── 视频.mp4
+  ├── Audio/
+  ├── Archives/
+  │   └── 资料.zip
+  ├── Code/
+  │   └── 代码.py
+  └── organize_downloads.py
+```
+
+---
+
+## 代码关键点解析
+
+### 1. pathlib.Path - 优雅的路径操作
+
+```python
+from pathlib import Path
+
+# 拼接路径
+path = Path.home() / "Downloads" / "Images"
+
+# 获取后缀
+ext = "报告.pdf".suffix  # ".pdf"
+
+# 检查存在
+path.exists()
+```
+
+### 2. 处理重名文件
+
+如果目标文件夹已有同名文件，自动加序号：
+
+```
+报告.pdf → 报告_1.pdf → 报告_2.pdf
+```
+
+### 3. 跳过正在运行的脚本
+
+```python
+if item.name == os.path.basename(__file__):
+    continue  # 不要把自己也移动了！
+```
 
 ---
 
 ## 进阶功能
 
-### 添加更多文件类型
-```python
-file_types['Ebooks'] = ['.epub', '.mobi', '.azw3']
-file_types['Data'] = ['.csv', '.json', '.xml', '.sql']
-```
-
 ### 按日期分类
+
 ```python
 from datetime import datetime
 
 # 获取文件修改时间
 mtime = datetime.fromtimestamp(item.stat().st_mtime)
-date_folder = mtime.strftime('%Y-%m')
+date_folder = mtime.strftime('%Y-%m')  # 2024-01
+
 target = download_path / date_folder / folder / item.name
 ```
 
-### 定时自动运行（Windows）
-创建一个批处理文件 `organize.bat`：
-```batch
-@echo off
-python C:\path\to\organize_downloads.py
-```
+### 添加更多文件类型
 
-然后用任务计划程序设置每天运行。
-
----
-
-## 运行效果
-
+```python
+file_types['Ebooks'] = ['.epub', '.mobi', '.azw3']
+file_types['Data'] = ['.csv', '.json', '.xml']
 ```
 
 ---
@@ -208,19 +267,50 @@ python C:\path\to\organize_downloads.py
 
 ---
 
-## 📚 推荐教材
+## 📚 推荐：Python 零基础实战营
 
-**主教材**：[《Python 编程从入门到实践（第 3 版）》](https://u.jd.com/NGMHz3T)
+**系统学习Python，推荐这个免费入门课程 👇**
 
-## 💬 联系我
+| 特点 | 说明 |
+|-----|------|
+| 🎯 专为0基础设计 | 门槛低，上手快 |
+| 📹 配套视频讲解 | 配合文章学习效果更好 |
+| 💬 专属答疑群 | 遇到问题有人带 |
+| 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
 
-| 平台 | 账号/链接 |
-|------|----------|
-| 微信 | [扫码加好友](https://www.python4office.cn/wechat-qrcode/) |
-| 微博 | [@程序员晚枫](https://weibo.com/u/7726957925) |
-| 知乎 | [@程序员晚枫](https://www.zhihu.com/people/CoderWanFeng) |
-| 抖音 | [@程序员晚枫](https://www.douyin.com/user/MS4wLjABAAAA259649365) |
-| 小红书 | [@程序员晚枫](https://xhslink.com/m/4i8OhkfTvW3) |
-| B 站 | [Python 自动化办公社区](https://space.bilibili.com/259649365) |
+👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
 
-**主营业务**：AI 编程培训、企业内训、技术咨询
+
+## 本讲小结
+
+用到的知识：
+
+| 知识 | 用途 |
+|-----|------|
+| `pathlib.Path` | 路径操作 |
+| `os.listdir` / `iterdir` | 遍历文件 |
+| `dict` 字典 | 文件类型映射 |
+| `for` 循环 | 遍历每个文件 |
+| `if` 条件判断 | 判断文件类型 |
+| `shutil.move` | 移动文件 |
+
+---
+
+## 下节预告
+
+第二个实战项目是**自动发送邮件报告**——每天自动生成数据报告发给老板！
+
+👉 **[继续阅读：Python实战项目-自动发送邮件报告](./21-Python实战项目-自动发送邮件报告.md)**
+
+---
+
+## 课程导航
+
+**上一篇：** [Python常用标准库](./19-Python常用标准库.md)
+
+**下一篇：** [Python实战项目-自动发送邮件报告](./21-Python实战项目-自动发送邮件报告.md)
+
+---
+
+*PS：文件自动化整理是每个程序员都应该会的技能。学会这个，节省大量找文件的时间！*
+

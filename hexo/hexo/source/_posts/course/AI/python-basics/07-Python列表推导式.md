@@ -1,4 +1,4 @@
----
+﻿---
 title: Python列表推导式：我用一行代码替代了10行循环，效率翻倍
 date: 2026-02-28 17:26:00
 tags: [Python基础, 列表推导式, 编程技巧]
@@ -201,8 +201,8 @@ result = [y for x in data for y in x if y > 0 if y % 2 == 0]
 ## 相关阅读
 
 - [零基础学AI编程：30天速成计划](/course/AI相关/人民邮电出版社/ads/openclaw/20260228171202-零基础学AI编程-30天速成计划/)
-- [Python字典使用技巧大全](/course/AI相关/人民邮电出版社/ads/openclaw/20260228172701-Python字典-被低估的数据结构/)
-- [Python函数参数*args和**kwargs详解](/course/AI相关/人民邮电出版社/ads/openclaw/20260228172801-Python函数参数-args-kwargs-终极指南/)
+- [Python字典使用技巧大全](/course/AI相关/人民邮电出版社/ads/openclaw/08-Python字典/)
+- [Python函数参数*args和**kwargs详解](/course/AI相关/人民邮电出版社/ads/openclaw/09-Python函数参数/)
 
 ---
 
@@ -217,6 +217,23 @@ result = [y for x in data for y in x if y > 0 if y % 2 == 0]
 
 **主教材**：[《Python 编程从入门到实践（第 3 版）》](https://u.jd.com/NGMHz3T)
 
+
+---
+
+## 📚 推荐：Python 零基础实战营
+
+**系统学习Python，推荐这个免费入门课程 👇**
+
+| 特点 | 说明 |
+|-----|------|
+| 🎯 专为0基础设计 | 门槛低，上手快 |
+| 📹 配套视频讲解 | 配合文章学习效果更好 |
+| 💬 专属答疑群 | 遇到问题有人带 |
+| 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
+
+👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
+
+
 ## 💬 联系我
 
 | 平台 | 账号/链接 |
@@ -229,3 +246,5 @@ result = [y for x in data for y in x if y > 0 if y % 2 == 0]
 | B 站 | [Python 自动化办公社区](https://space.bilibili.com/259649365) |
 
 **主营业务**：AI 编程培训、企业内训、技术咨询
+
+
