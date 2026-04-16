@@ -21,6 +21,8 @@ tags: [python, 流畅的Python, 共读营, Python进阶, 程序员晚枫]
 > **《流畅的Python（第2版）》共读营，正式开营。**
 > 用20周的时间，每周直播讲解一章，带你把这本Python进阶圣经从头到尾读透。
 
+![fluent-python.png](https://raw.atomgit.com/user-images/assets/5027920/4f7696ff-fbef-423c-8874-38dfb05b165f/fluent-python.png 'fluent-python.png')
+
 ---
 
 ## 共读营怎么学？
