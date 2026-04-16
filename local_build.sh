@@ -178,17 +178,23 @@ else
     log_success "依赖已是最新，跳过安装"
 fi
 
-# 智能清理策略
-log "检查是否需要清理..."
-if [ ! -d "public" ] || [ "db.json" -nt "public" ] || [ "_config.yml" -nt "public" ]; then
-    log "执行Hexo清理..."
-    if yarn run clean 2>&1; then
-        log_success "清理完成"
-    else
-        log_warning "清理过程中出现警告，但继续执行"
-    fi
+# 智能清理策略（增量构建时跳过清理）
+INCREMENTAL=${INCREMENTAL:-true}
+
+if [ "$INCREMENTAL" = "true" ] && [ -d "public" ]; then
+    log_success "增量构建模式：跳过清理，使用 --detect 只重新生成有变化的文件"
 else
-    log_success "public目录已是最新，跳过清理"
+    log "检查是否需要清理..."
+    if [ ! -d "public" ] || [ "db.json" -nt "public" ] || [ "_config.yml" -nt "public" ]; then
+        log "执行Hexo清理..."
+        if yarn run clean 2>&1; then
+            log_success "清理完成"
+        else
+            log_warning "清理过程中出现警告，但继续执行"
+        fi
+    else
+        log_success "public目录已是最新，跳过清理"
+    fi
 fi
 
 # 构建网站
@@ -196,11 +202,23 @@ log "开始构建Hexo网站..."
 export NODE_ENV=production
 export HEXO_GENERATE_CONCURRENCY=4
 
-if node --max-old-space-size=8192 node_modules/hexo/bin/hexo generate --draft --silent 2>&1; then
+BUILD_CMD="node --max-old-space-size=8192 node_modules/hexo/bin/hexo generate --draft --silent"
+if [ "$INCREMENTAL" = "true" ] && [ -d "public" ]; then
+    BUILD_CMD="$BUILD_CMD --detect"
+    log "增量构建模式已启用（设置 INCREMENTAL=false 可切换为全量构建）"
+fi
+
+if $BUILD_CMD 2>&1; then
     log_success "Hexo构建完成"
 else
-    log_error "Hexo构建失败"
-    exit 1
+    log_warning "增量构建失败，尝试全量构建..."
+    yarn run clean 2>&1 || true
+    if node --max-old-space-size=8192 node_modules/hexo/bin/hexo generate --draft --silent 2>&1; then
+        log_success "全量构建完成"
+    else
+        log_error "Hexo构建失败"
+        exit 1
+    fi
 fi
 
 # 检查构建结果
