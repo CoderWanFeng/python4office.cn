@@ -188,3 +188,5 @@ Flask 的路由装饰器、Django 的 ORM 字段、asyncio 的事件循环……
 | B 站 | [Python 自动化办公社区](https://space.bilibili.com/259649365) |
 
 **开始学习**：[第 1 讲：Python 数据模型](../01-数据模型/)
+
+![fluent-python.png](https://raw.atomgit.com/user-images/assets/5027920/4f7696ff-fbef-423c-8874-38dfb05b165f/fluent-python.png 'fluent-python.png')
