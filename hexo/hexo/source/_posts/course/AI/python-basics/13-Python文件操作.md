@@ -1,4 +1,4 @@
----
+﻿---
 title: Python文件操作：我总结了读写文件的10种姿势，最后一种最优雅
 date: 2026-02-28 18:58:00
 tags: [Python基础, 文件操作, IO]
@@ -258,9 +258,9 @@ batch_process_txt('./documents')
 
 ## 相关阅读
 
-- [Python字符串：我被忽略的20个实用方法](/course/AI相关/人民邮电出版社/ads/openclaw/python/20260228185701-Python字符串-被忽略的20个实用方法/)
-- [Python字典：我用这个数据结构，把查询速度提升了100倍](/course/AI相关/人民邮电出版社/ads/openclaw/python/20260228172701-Python字典-被低估的数据结构/)
-- [Python列表推导式：一行代码搞定循环](/course/AI相关/人民邮电出版社/ads/openclaw/python/20260228172601-Python列表推导式-一行代码搞定循环/)
+- [Python字符串：我被忽略的20个实用方法](/course/AI相关/人民邮电出版社/ads/openclaw/python/12-Python字符串/)
+- [Python字典：我用这个数据结构，把查询速度提升了100倍](/course/AI相关/人民邮电出版社/ads/openclaw/python/08-Python字典/)
+- [Python列表推导式：一行代码搞定循环](/course/AI相关/人民邮电出版社/ads/openclaw/python/07-Python列表推导式/)
 
 ---
 
@@ -275,6 +275,23 @@ batch_process_txt('./documents')
 
 **主教材**：[《Python 编程从入门到实践（第 3 版）》](https://u.jd.com/NGMHz3T)
 
+
+---
+
+## 📚 推荐：Python 零基础实战营
+
+**系统学习Python，推荐这个免费入门课程 👇**
+
+| 特点 | 说明 |
+|-----|------|
+| 🎯 专为0基础设计 | 门槛低，上手快 |
+| 📹 配套视频讲解 | 配合文章学习效果更好 |
+| 💬 专属答疑群 | 遇到问题有人带 |
+| 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
+
+👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
+
+
 ## 💬 联系我
 
 | 平台 | 账号/链接 |
@@ -287,3 +304,5 @@ batch_process_txt('./documents')
 | B 站 | [Python 自动化办公社区](https://space.bilibili.com/259649365) |
 
 **主营业务**：AI 编程培训、企业内训、技术咨询
+
+
