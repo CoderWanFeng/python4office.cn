@@ -51,9 +51,10 @@ tags: [AI编程, openclaw]
 
 🎯 **这篇文章只做一件事：帮你找到最便宜、最适合你的AI编程方案。**
 
-> 查看所有大厂的AI Coding Plan和Token价格：``https://www.python-office.com/openclaw/coding-plan``
+> 查看下图，所有大厂的AI Coding Plan和Token价格，请在浏览器打开：``https://www.python-office.com/openclaw/coding-plan``
 
 
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/8ef7745c-8355-418c-bb7a-1a41cc20b005/image.png 'image.png')
 
 
 ## 一、AI编程IDE订阅计划对比（Coding Plan）
