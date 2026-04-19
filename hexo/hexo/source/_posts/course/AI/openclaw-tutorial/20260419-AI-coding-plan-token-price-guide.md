@@ -39,9 +39,9 @@ tags: [AI编程, openclaw]
 
 <!-- more -->
 
-大家好，这里是程序员晚枫，2026继续[all in AI](https://www.python4office.cn/wechat-group/)。
+大家好，这里是程序员晚枫，2026继续[all in AI](https://mp.weixin.qq.com/s/KQsXQzDgJjAu-wD4NS3TEA)。
 
-我用AI编程快2年了，在[AI编程课](https://www.bilibili.com/cheese/play/ss982042944)的交流群里，被问得最多的一个问题不是"怎么学AI编程"，而是：
+我用AI编程快2年了，在[AI编程课](https://mp.weixin.qq.com/s/Z3WhrmYeavrCw_FOXgiDPA)的交流群里，被问得最多的一个问题不是"怎么学AI编程"，而是：
 
 > **"晚枫，AI编程工具太多了，到底哪个便宜？哪个划算？Token去哪买最便宜？"**
 
@@ -50,6 +50,10 @@ tags: [AI编程, openclaw]
 所以我花了1周时间，把市面上**所有主流大厂的AI Coding Plan和Token价格**全部整理出来了。
 
 🎯 **这篇文章只做一件事：帮你找到最便宜、最适合你的AI编程方案。**
+
+> 查看所有大厂的AI Coding Plan和Token价格：``https://www.python-office.com/openclaw/coding-plan``
+
+
 
 
 ## 一、AI编程IDE订阅计划对比（Coding Plan）
