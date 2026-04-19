@@ -146,8 +146,8 @@ Python不仅是门语言，更是一种思维方式。
 
 ## 相关课程
 
-- [AI编程训练营](https://www.python4office.cn/course/ai-coding/)
-- [50讲自动化办公](https://www.python4office.cn/course/office-automation/)
+- [AI编程训练营](https://www.python4office.cn/course/ai-related/AI编程训练营/main/0/)
+- [50讲自动化办公](https://www.python4office.cn/course/AI/ai-automation-office/)
 
 ---
 
