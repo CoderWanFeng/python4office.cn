@@ -132,6 +132,9 @@ tags: [AI编程]
 - [我决定用AI重写这个34.7万次下载的Python库](https://mp.weixin.qq.com/s/4-spiPBgTKMu--Uw8yWQ8A)
 - [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
 
+前3讲可以试听，试听链接：https://www.bilibili.com/cheese/play/ss982042944
+
+
 
 ## 写在最后
 

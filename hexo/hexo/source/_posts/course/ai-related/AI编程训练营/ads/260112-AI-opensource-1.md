@@ -146,6 +146,10 @@ tags: [AI编程]
 
 课程链接再放一次：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
 
+## 🎬 免费试听
+前3讲可以免费试听：[点击去B站免费试听前3讲](https://www.bilibili.com/cheese/play/ss982042944)
+
+
 
 
 #### 联系我

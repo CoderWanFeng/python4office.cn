@@ -69,6 +69,9 @@ categories: [Python, 职场故事]
 
 ## 30讲课程帮你什么
 
+前3讲可以试听，试听链接：https://www.bilibili.com/cheese/play/ss982042944
+
+
 这门课专门为零基础设计：
 
 ✅ Python基础入门  

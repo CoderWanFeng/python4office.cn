@@ -64,6 +64,9 @@ office.file.replace4filename(r'./文件夹', '旧名字', '新名字')
 
 ## 30讲课程讲什么
 
+前3讲可以试听，试听链接：https://www.bilibili.com/cheese/play/ss982042944
+
+
 ### 第1部分：基础入门（5讲）
 - Python安装
 - 第一个程序

@@ -84,6 +84,9 @@ tags: [AI编程]
 - 点击左侧的扩展图标（或使用快捷键 Ctrl/command+Shift+X）。
 - 在搜索框中输入 Cline，找到对应的插件并点击 安装。
 
+前3讲可以试听，试听链接：https://www.bilibili.com/cheese/play/ss982042944
+
+
 ![install](https://raw.atomgit.com/user-images/assets/5027920/6e622b45-2fd5-4c26-bae9-d88b3852be29/image.png)
 
 

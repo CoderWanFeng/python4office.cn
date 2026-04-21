@@ -82,6 +82,9 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 
 > 本教程仅限加入我[AI编程实战训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)朋友领取，还没加入课程的朋友，可以继续往下看，加一下课程。
 
+前3讲可以试听，试听链接：https://www.bilibili.com/cheese/play/ss982042944
+
+
 
 ![课程详情](https://raw.atomgit.com/user-images/assets/5027920/9f72b536-3155-4647-b72d-b4abbb6b8027/2edd7c711adf0f69e3e5542035fe29ab.jpg)
 

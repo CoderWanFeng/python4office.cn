@@ -129,7 +129,7 @@ AI时代的编程路径：
 
 ## 立即开始学习
 
-🎬 **课程试听地址**：https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA
+🎬 **前3讲可以免费试听**：[点击去B站免费试听前3讲](https://www.bilibili.com/cheese/play/ss982042944)
 
 先试听，看看风格是否适合你，再决定是否系统学习。
 

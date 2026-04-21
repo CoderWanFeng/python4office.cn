@@ -54,6 +54,7 @@ tags: [python-office, 自动化办公, AI编程, 程序员晚枫]
 
 ### 推荐课程
 - 《30讲 · AI编程训练营》
+  - 🎬 前3讲可以免费试听：[点击去B站免费试听前3讲](https://www.bilibili.com/cheese/play/ss982042944)
 - 《Python自动化办公实战》
 - 《AI在办公领域的应用》
 
