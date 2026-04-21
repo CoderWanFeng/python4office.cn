@@ -133,7 +133,7 @@ AI时代的编程路径：
 
 先试听，看看风格是否适合你，再决定是否系统学习。
 
-📚 **课程学习地址**：https://r7up9.xetslk.com/s/1uP5YW
+📚 **课程学习地址**：``https://r7up9.xetslk.com/s/1uP5YW``
 
 ---
 

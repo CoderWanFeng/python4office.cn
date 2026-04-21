@@ -277,7 +277,7 @@ AI编程只需要：
 
 🎬 **课程试听**：https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A
 
-📚 **系统学习**：https://r7up9.xetslk.com/s/1uP5YW
+📚 **系统学习**：``https://r7up9.xetslk.com/s/1uP5YW``
 
 ---
 
