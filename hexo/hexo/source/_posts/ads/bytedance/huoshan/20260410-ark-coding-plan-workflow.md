@@ -15,7 +15,7 @@ categories: [AI编程, 实战分享]
 > 
 > 邀请码：**GF2QJX3V**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
 
 大家好，这里是程序员晚枫。
 
@@ -200,7 +200,7 @@ AI生成的代码都要 review，确保：
 
 ## 📚 想系统学习AI编程？
 
-👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
 
 **《30讲 · AI编程训练营》** —— 打造你的AI编程工作流。
 

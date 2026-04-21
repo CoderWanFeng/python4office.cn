@@ -185,8 +185,8 @@ description: "一万小时定律真的有用吗？程序员晚枫告诉你：刻
 
 - [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
-- [《30讲·AI编程训练营》- 零基础入门AI编程](https://www.bilibili.com/cheese/play/ss982042944)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
+- [《30讲·AI编程训练营》- 零基础入门AI编程](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
 
 ---
 

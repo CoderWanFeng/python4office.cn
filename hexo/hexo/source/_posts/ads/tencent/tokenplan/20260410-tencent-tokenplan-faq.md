@@ -14,7 +14,7 @@ categories: [AI编程, 常见问题]
 
 > 📢 **先上链接**：👉 **[点击了解腾讯云TOKEN Plan](https://curl.qcloud.com/Z9TkzRuj)**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
 
 大家好，这里是程序员晚枫。
 
@@ -205,7 +205,7 @@ TOKEN Plan解决了CODING Plan的最大痛点——**套餐束缚**。
 - 成本控制与优化策略
 - 企业级AI编程实践
 
-👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
 
 ---
 

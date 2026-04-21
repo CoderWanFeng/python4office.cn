@@ -16,7 +16,7 @@ categories: [AI编程, 常见问题]
 > 
 > 邀请码：**GF2QJX3V**（可能有额外福利）
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
 
 大家好，这里是程序员晚枫。
 
@@ -212,7 +212,7 @@ Claude Code支持自定义API，配置火山方舟的API信息后，即可使用
 - Prompt工程与代码生成技巧
 - 企业级项目实战案例
 
-👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
 
 👉 [点击免费领取《火山方舟FAQ速查表》](https://www.python-office.com/openclaw/coding-plan/)**
 

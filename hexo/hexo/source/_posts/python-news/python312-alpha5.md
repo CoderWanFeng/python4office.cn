@@ -9,7 +9,7 @@ tags: 下载
 <!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/python3.7%2FSnipaste_2023-02-21_22-42-22.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)。
 
 今天给大家分享一个来自Python官网的重要消息：Python3.12正式版将于2023.10.2发布！
 
@@ -49,7 +49,7 @@ tags: 下载
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
 
 ### 参考链接
 
@@ -59,4 +59,4 @@ tags: 下载
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。
