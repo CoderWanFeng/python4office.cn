@@ -1,5 +1,5 @@
 ---
-title: Claude Code在大陆可以免费用！只需接入便宜的国产大模型
+title: Claude Code现在可以免费用！还可以接入便宜的国产大模型
 date: 2026-04-20 19:08:00
 tags: [AI编程, openclaw, claude-code]
 ---
