@@ -368,3 +368,10 @@ AI（Cursor）：
 
 上一讲：[什么是AI克隆声音？](./27-ai-voice-clone)
 下一讲：[什么是Claude？](./29-claude)
+
+
+---
+
+## 相关阅读
+
+- [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)

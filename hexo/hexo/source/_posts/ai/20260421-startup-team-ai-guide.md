@@ -319,6 +319,8 @@ AI模型：DeepSeek + 火山方舟（免费额度）
 ---
 
 **往期推荐：**
+
+- [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 - [开发者省钱指南：2026年如何零成本使用AI大模型？]()
 - [2026年最全AI编程工具对比：ChatGPT vs Claude vs DeepSeek]()
 

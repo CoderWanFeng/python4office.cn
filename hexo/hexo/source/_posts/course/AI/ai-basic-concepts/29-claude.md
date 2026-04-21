@@ -391,3 +391,10 @@ Claude的核心技术：Constitutional AI（宪法AI）
 > 📢 **程序员晚枫**专注分享：程序员副业、AI工具、Python办公自动化。关注公众号【程序员晚枫】，回复【AI词汇】，获取全套课程原文。
 
 上一讲：[什么是Cursor？](./28-cursor)
+
+
+---
+
+## 相关阅读
+
+- [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)

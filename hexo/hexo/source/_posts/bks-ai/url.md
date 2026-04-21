@@ -77,3 +77,10 @@ tags: 白开水 AI社区
 ---
 
 > 程序员晚枫专注 AI编程培训，小白看完他和图灵社区合作的教程 [《30 讲·AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944) 就能上手做 AI项目。
+
+
+---
+
+## 相关阅读
+
+- [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)

@@ -337,3 +337,10 @@ AI克隆声音把"声音验证"这件事彻底打破了。
 
 上一讲：[什么是AI办公？](./26-ai-office)
 下一讲：[什么是Cursor？](./28-cursor)
+
+
+---
+
+## 相关阅读
+
+- [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
