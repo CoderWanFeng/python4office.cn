@@ -317,7 +317,7 @@ Claude Pro订阅费：20美元/月
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [刚刚！DeepSeek发布最强办公助手，普通人用它效率提升10倍]()
-- [AI Agent浪潮来袭：2026年职场人必备的10个AI工具清单]()
+- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
 
 **END**

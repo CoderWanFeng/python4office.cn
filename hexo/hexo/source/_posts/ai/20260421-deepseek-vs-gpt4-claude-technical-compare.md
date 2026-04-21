@@ -452,7 +452,7 @@ def calculate_average(data):
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [2026年AI大模型能力对比：GPT-4o、DeepSeek-V3、Claude 3.5、Kimi谁更强？]()
-- [开发者省钱指南：2026年如何零成本使用AI大模型？]()
+- [Claude Code现在可以免费用！还可以接入便宜的国产大模型](https://python-office.com/openclaw)
+- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)
 
 **END**

@@ -350,7 +350,7 @@ ROI提升：3-5倍
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [创业团队必看：2026年如何用免费AI额度快速搭建产品原型？]()
-- [开发者省钱指南：2026年如何零成本使用AI大模型？]()
+- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)
+- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)
 
 **END**

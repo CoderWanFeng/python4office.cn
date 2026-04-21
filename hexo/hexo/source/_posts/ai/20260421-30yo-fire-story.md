@@ -253,7 +253,7 @@ HR说话的时候，眼神刻意回避我。
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [从月薪5000到副业过万：一个普通人的AI变现之路]()
-- [刚刚！DeepSeek发布最强办公助手，普通人用它效率提升10倍]()
+- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
+- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
 
 **END**

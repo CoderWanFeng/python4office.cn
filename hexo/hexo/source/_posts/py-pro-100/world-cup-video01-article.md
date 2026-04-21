@@ -53,9 +53,9 @@ def play_song(song):
     pygame.mixer.music.stop()
 ```
 ## 3、相关阅读
-- []()
-- []()
-- []()
+- [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
+- [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
+- [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 - [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
 
 

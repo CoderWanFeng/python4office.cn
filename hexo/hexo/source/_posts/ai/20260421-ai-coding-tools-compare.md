@@ -276,7 +276,7 @@ description: 2026年最全AI编程工具对比：ChatGPT、Claude、DeepSeek、K
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [刚刚！DeepSeek发布最强办公助手，普通人用它效率提升10倍]()
-- [Claude 4实测：程序员用它写代码，效率直接翻倍]()
+- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [Claude Code现在可以免费用！还可以接入便宜的国产大模型](https://python-office.com/openclaw)
 
 **END**

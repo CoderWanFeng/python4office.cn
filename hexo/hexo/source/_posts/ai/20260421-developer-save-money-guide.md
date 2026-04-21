@@ -309,7 +309,7 @@ client = OpenAI(
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [2026年最全AI编程工具对比：ChatGPT vs Claude vs DeepSeek]()
-- [2026年免费AI API大盘点：DeepSeek、火山方舟、智谱哪家强？]()
+- [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 
 **END**
