@@ -15,7 +15,7 @@ categories: [AI编程, 学生专区]
 > 
 > 邀请码：**GF2QJX3V**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 大家好，这里是程序员晚枫。
 
@@ -141,7 +141,7 @@ Prompt: 请用通俗易懂的方式解释Docker的工作原理，
 
 ## 📚 想系统学习AI编程？
 
-👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 **《30讲 · AI编程训练营》** —— 学生党专属优惠，咨询客服了解详情。
 

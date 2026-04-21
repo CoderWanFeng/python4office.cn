@@ -15,7 +15,7 @@ categories: [AI编程, API教程]
 > 
 > 邀请码：**GF2QJX3V**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 大家好，这里是程序员晚枫。
 
@@ -194,7 +194,7 @@ API调用让火山方舟Coding Plan的应用场景大大扩展。
 
 ## 📚 想系统学习AI编程？
 
-👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 **《30讲 · AI编程训练营》** —— API开发实战课程。
 

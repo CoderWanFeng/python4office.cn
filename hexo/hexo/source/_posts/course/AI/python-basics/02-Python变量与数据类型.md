@@ -5,7 +5,7 @@ tags: [Python基础, 变量, 数据类型]
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>   
 </p>
@@ -23,7 +23,7 @@ tags: [Python基础, 变量, 数据类型]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A">
+<a href="https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA">
   <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">

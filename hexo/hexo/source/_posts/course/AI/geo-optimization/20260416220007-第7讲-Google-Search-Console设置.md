@@ -17,7 +17,7 @@ tags: [GEO优化, SEO, Google Search Console, 网站管理]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A">
+<a href="https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA">
   <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -28,7 +28,7 @@ tags: [GEO优化, SEO, Google Search Console, 网站管理]
 
 <!-- more -->
 
-大家好，我是正在实战各种<a href="https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A" target="_blank">AI 项目</a>的程序员晚枫。
+大家好，我是正在实战各种<a href="https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA" target="_blank">AI 项目</a>的程序员晚枫。
 
 上一讲我们讲了技术层面的 GEO 优化，这一讲我们聚焦最重要的工具：
 
@@ -428,7 +428,7 @@ GSC → 索引 → 网页
 
 🎁 **限时福利**：送《利用 Python 进行数据分析》实体书
 
-👉 **[点击了解详情](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+👉 **[点击了解详情](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 ---
 

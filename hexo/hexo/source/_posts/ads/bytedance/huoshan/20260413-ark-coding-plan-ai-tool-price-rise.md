@@ -16,7 +16,7 @@ categories: [AI编程, 省钱攻略]
 > 
 > 邀请码：**GF2QJX3V**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 大家好，这里是程序员晚枫。
 
@@ -208,7 +208,7 @@ Anthropic的API价格也在调整。
 
 ## 📚 想系统学习AI编程？
 
-👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 **《30讲 · AI编程训练营》** —— 从0到1掌握AI编程实战。
 

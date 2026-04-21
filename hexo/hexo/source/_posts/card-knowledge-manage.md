@@ -198,7 +198,7 @@ Python语法、算法要点、技术名词
 ## 学习资源推荐
 
 ### Python学习
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
+- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
 - [Python自动化办公实战](https://www.python4office.cn/)
 
 ### 效率工具

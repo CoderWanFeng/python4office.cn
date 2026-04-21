@@ -275,7 +275,7 @@ AI编程只需要：
 - 💼 不仅教技术，更教赚钱
 - 👥 专属社群，有问题随时问
 
-🎬 **课程试听**：https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A
+🎬 **课程试听**：https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA
 
 📚 **系统学习**：``https://r7up9.xetslk.com/s/1uP5YW``
 

@@ -36,7 +36,7 @@ tags: 找工作
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A">
+<a href="https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -48,7 +48,7 @@ tags: 找工作
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)，今天分享一位读者的投稿~有想投稿的朋友，可以后台联系我。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)，今天分享一位读者的投稿~有想投稿的朋友，可以后台联系我。
 
 
 
@@ -104,4 +104,4 @@ tags: 找工作
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)就能上手做AI项目。

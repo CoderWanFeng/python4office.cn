@@ -260,7 +260,7 @@ AI生成的代码基于海量优质代码训练，基础质量有保障。传统
 - 💼 **变现指导** - 不仅教技术，更教如何赚钱
 - 👥 **社群支持** - 专属学习群，有问题随时问
 
-🎬 **课程试听**：https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A
+🎬 **课程试听**：https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA
 
 📚 **系统学习**：``https://r7up9.xetslk.com/s/1uP5YW``
 

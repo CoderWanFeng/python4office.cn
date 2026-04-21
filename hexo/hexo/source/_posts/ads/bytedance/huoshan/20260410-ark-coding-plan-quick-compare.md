@@ -16,7 +16,7 @@ categories: [AI编程, 工具对比]
 > 
 > 邀请码：**GF2QJX3V**（可能有额外福利）
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 大家好，这里是程序员晚枫。
 
@@ -108,7 +108,7 @@ categories: [AI编程, 工具对比]
 - Prompt工程与代码生成
 - 企业级项目实战
 
-👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
 
 ---
 

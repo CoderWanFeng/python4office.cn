@@ -24,14 +24,14 @@ tags: 白开水 AI社区
 
 2.｜工作流系列 
 帮你提高做事效率、自动化流程： 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
 - 工作流书单号：专门针对书单号项目的流程搭建
 - 工作流公众号：针对公众号运营的自动化工作流，适合想解放双手、少做重复工作的朋友。
 
 
 3.｜AI编程系列 
 偏实用、能落地的技能：
-①[AI编程：基础入门（人邮社）：系统打基础，适合零基础入门](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A?channel_id=1515397)
+①[AI编程：基础入门（人邮社）：系统打基础，适合零基础入门](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA?channel_id=1515397)
 ②[AI编程：自动化办公：用AI+编程搞定Excel、文件、表格等办公自动化](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 ③[AI编程：项目实战：多个真实项目案例，边做边学](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 ④AI编程：个人网站：用AI快速搭建属于自己的个人网站
@@ -107,7 +107,7 @@ tags: 白开水 AI社区
 
 ---
 
-> 程序员晚枫专注 AI编程培训，小白看完他和图灵社区合作的教程 [《30 讲·AI编程训练营》](https://mp.weixin.qq.com/s/UHvLPWCqmx_zeoCjky7u8A) 就能上手做 AI项目。
+> 程序员晚枫专注 AI编程培训，小白看完他和图灵社区合作的教程 [《30 讲·AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA) 就能上手做 AI项目。
 
 
 ---
