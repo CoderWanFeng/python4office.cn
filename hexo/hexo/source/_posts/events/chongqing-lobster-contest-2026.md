@@ -13,7 +13,16 @@ categories: 活动
 
 本次大赛依托 AtomGit 开源平台，打造线上全国赛道 + 线下重庆专场双轨养虾达人，让开发者在沉浸式编程氛围中，用大模型 + 智能体快速落地创意，一起体验 AI 赋能编码的无限可能！
 
-> ⚠️ 奖金触发条件：满足 30 人报名、20 名有效投稿即刻启动奖金发放！
+![报名请扫码](https://raw.atomgit.com/user-images/assets/5027920/445f160e-1951-4272-9379-83d44d4637cc/e8930297d20cb8ba0c4abe8b16413b57.png 'e8930297d20cb8ba0c4abe8b16413b57.png')
+
+
+![点击报名参赛](https://raw.atomgit.com/user-images/assets/5027920/33ffab80-e7cb-4fcf-b0e0-515f70833ebd/38e660d290a33eed05c30f799a3f797c.png '38e660d290a33eed05c30f799a3f797c.png')
+
+![观众和参赛者，都要填写这个问卷](https://raw.atomgit.com/user-images/assets/5027920/07f7ef06-1337-40f6-9235-c07f1c50f8d2/4ec27308e2c5960a9330695575f6f94a.png '4ec27308e2c5960a9330695575f6f94a.png')
+
+![提交作品](https://raw.atomgit.com/user-images/assets/5027920/4ee552f2-fa69-460f-942a-b30e6df68dd4/image.png 'image.png')
+
+![如果群实效，请添加微信：python-office，备注：龙虾大赛，我拉你进群](https://raw.atomgit.com/user-images/assets/5027920/1e4a206b-d4ec-4a3d-a3d1-be5ffc6671f3/7776ec491029b8d73799fe5a40cdd64a.jpg '7776ec491029b8d73799fe5a40cdd64a.jpg')
 
 ---
 
