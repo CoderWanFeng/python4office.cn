@@ -238,7 +238,7 @@ for animal in animals:
 
 **现在报名还有专属优惠**，扫码添加我的微信咨询：
 
-微信号：**python-office**
+微信号：**aiwf365**
 
 或者访问我的网站了解更多：**https://www.python4office.cn/course/AI/python-basics/01-Python零基础入门/01-Python零基础入门/
 

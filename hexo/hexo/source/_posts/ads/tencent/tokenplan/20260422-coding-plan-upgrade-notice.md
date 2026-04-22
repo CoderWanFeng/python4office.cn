@@ -1,6 +1,6 @@
 ---
 title: 重要更新：腾讯云Coding Plan已全面升级为Token Plan，更便宜、更灵活！
-date: 2026-04-22
+date: 2026-04-22 15:54:00
 tags:
   - 腾讯云
   - Coding Plan

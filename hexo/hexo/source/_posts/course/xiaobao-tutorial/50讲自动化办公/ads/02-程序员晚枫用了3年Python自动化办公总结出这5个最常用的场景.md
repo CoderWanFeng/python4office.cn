@@ -118,7 +118,7 @@ for f in os.listdir("./下载文件夹"):
 **如果你也是每天被这些重复工作折磨的职场人，真的建议你花点时间学一下Python自动化。学完之后你会发现：原来我可以这么早下班。**
 
 👇 扫码添加微信，咨询课程详情
-微信号：python-office
+微信号：aiwf365
 
 或者访问我的网站了解更多：https://www.python4office.cn/course/xiaobao-tutorial/50讲自动化办公/01/
 

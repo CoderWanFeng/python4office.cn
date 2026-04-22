@@ -124,7 +124,7 @@ pyinstaller -F your_script.py
 - ✅ 实际项目的打包案例
 
 👇 扫码添加微信，咨询课程详情
-微信号：python-office
+微信号：aiwf365
 
 ## 相关阅读
 - [用PyInstaller打包Python程序，踩过的10个坑和解决方案](02-用PyInstaller打包Python程序踩过的10个坑和解决方案.md)

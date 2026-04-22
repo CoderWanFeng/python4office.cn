@@ -171,7 +171,7 @@ AI客服接待
 
 **现在报名还有专属优惠**，扫码添加我的微信咨询：
 
-微信号：**python-office**
+微信号：**aiwf365**
 
 或者访问我的网站了解更多：**https://www.python4office.cn/course/AI/ai-chatbot/20260302030101-第1讲-为什么每个人都应该有自己的AI聊天机器人/
 

@@ -122,7 +122,7 @@ pyinstaller -F -n "我的工具" hello.py
 - ✅ 实际项目打包案例
 
 👇 扫码添加微信，咨询课程详情
-微信号：python-office
+微信号：aiwf365
 
 ## 相关阅读
 - [写好的Python程序怎么分享给别人？PyInstaller打包教程](01-写好的Python程序怎么分享给别人PyInstaller打包教程.md)

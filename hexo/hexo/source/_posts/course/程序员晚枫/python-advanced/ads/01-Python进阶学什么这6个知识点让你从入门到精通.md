@@ -177,7 +177,7 @@ print(my_list)           # SmartList(3个元素)
 在「Python进阶」课程里，我对每个知识点都有详细的讲解和实战练习。
 
 👇 扫码添加微信，咨询Python进阶课程
-微信号：python-office
+微信号：aiwf365
 
 ## 相关阅读
 - [会Python和精通Python，差距到底在哪里？](02-会Python和精通Python差距到底在哪里.md)

@@ -164,7 +164,7 @@ categories: Python数据分析
 
 **现在报名还有专属优惠**，扫码添加我的微信咨询：
 
-微信号：**python-office**
+微信号：**aiwf365**
 
 或者访问我的网站了解更多：**https://www.python4office.cn/course/AI/data-analysis/20260228231601-Python数据分析课程大纲-从数据小白到分析专家/20260228231601-Python数据分析课程大纲-从数据小白到分析专家/
 

@@ -107,7 +107,7 @@ popdf.split4pdf(input_path="大文件.pdf", output_folder="./拆分结果/", pag
 Python自动化办公没有你想象的那么难。你不需要成为程序员，只需要掌握几个核心库，就能处理90%的办公场景。
 
 👇 扫码添加微信，咨询报名
-微信号：python-office
+微信号：aiwf365
 
 或者访问我的网站了解更多：https://www.python4office.cn/course/xiaobao-tutorial/50讲自动化办公/01/
 
