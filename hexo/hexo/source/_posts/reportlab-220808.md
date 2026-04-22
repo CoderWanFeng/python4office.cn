@@ -81,7 +81,7 @@ if __name__ == '__main__':
     content.append(Graphs.draw_img('资料全集.jpg'))  
     
     # 添加段落文字  
-    content.append(Graphs.draw_text('众所周知，大数据分析师岗位是香饽饽，近几年数据分析热席卷了整个互联网行业，与数据分析的相关的岗位招聘、培训数不胜数。很多人前赴后继，想要参与到这波红利当中。那么数据分析师就业前景到底怎么样呢？需要学习Python + 大数据分析，可以添加我的微信：python-office'))   
+    content.append(Graphs.draw_text('众所周知，大数据分析师岗位是香饽饽，近几年数据分析热席卷了整个互联网行业，与数据分析的相关的岗位招聘、培训数不胜数。很多人前赴后继，想要参与到这波红利当中。那么数据分析师就业前景到底怎么样呢？需要学习Python + 大数据分析，可以添加我的微信：aiwf365'))   
     
     # 添加小标题  
     content.append(Graphs.draw_title(''))  

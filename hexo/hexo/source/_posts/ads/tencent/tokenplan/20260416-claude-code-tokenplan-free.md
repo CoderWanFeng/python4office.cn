@@ -264,7 +264,7 @@ claude
 
 想聊聊 CC 使用技巧或有配置问题？
 
-**加我微信：python-office**，我拉你进群。
+**加我微信：aiwf365**，我拉你进群。
 
 群里很多同学都在用这套方案，经验共享，一起薅最划算的羊毛。
 
@@ -295,3 +295,14 @@ Claude Code 是个好工具，不应该因为价格把人挡在门外。
 ---
 
 > ⚠️ **利益说明**：本文含推广链接，通过链接购买不会增加你的费用，但可能为我带来推荐收益。
+
+---
+
+## 相关阅读
+
+- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
+- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
+- [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)

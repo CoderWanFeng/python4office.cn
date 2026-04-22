@@ -80,7 +80,7 @@ tags: [AI编程]
 
 ### 2. 安装 Cline 插件
 
-- 打开 VSCode，没有vscode的朋友请加我微信：python-office，加入我的[AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，我都会提供：下载和安装教程。
+- 打开 VSCode，没有vscode的朋友请加我微信：aiwf365，加入我的[AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，我都会提供：下载和安装教程。
 - 点击左侧的扩展图标（或使用快捷键 Ctrl/command+Shift+X）。
 - 在搜索框中输入 Cline，找到对应的插件并点击 安装。
 
