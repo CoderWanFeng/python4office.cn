@@ -231,7 +231,7 @@ description: "咖啡种类大全！详解拿铁、卡布奇诺、摩卡、美式
 ## 延伸学习
 
 - [刻意练习比一万小时更重要](https://www.python4office.cn/tobeu/)
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [Python自动化办公实战](https://www.python4office.cn/)
 
 ---

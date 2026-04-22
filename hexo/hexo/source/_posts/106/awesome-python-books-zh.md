@@ -125,10 +125,10 @@ tags: 电子书
 
 ## Other Awesome Lists
 - [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。

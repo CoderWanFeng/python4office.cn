@@ -15,7 +15,7 @@ categories: [AI编程, Python]
 > 
 > 邀请码：**GF2QJX3V**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 大家好，这里是程序员晚枫。
 
@@ -148,7 +148,7 @@ Python + 火山方舟Coding Plan，开发效率提升明显。
 
 ## 📚 想系统学习AI编程？
 
-👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 **《30讲 · AI编程训练营》** —— Python开发者专属AI编程课。
 

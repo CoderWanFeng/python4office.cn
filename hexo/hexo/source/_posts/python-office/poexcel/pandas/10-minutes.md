@@ -5,7 +5,7 @@ tags: [自动化办公,Excel,pandas]
 ---
 
 <!-- more -->
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)，之前在B站账号：**Python自动化办公社区**发布了一套关于**Excel + Python实现自动化办公**的教程，目前已经有40w+的播放了。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，之前在B站账号：**Python自动化办公社区**发布了一套关于**Excel + Python实现自动化办公**的教程，目前已经有40w+的播放了。
 
 - [给小白的《30讲 · Python数据分析》：https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 
@@ -167,7 +167,7 @@ platform_df.to_excel('D:\\work\\程序员晚枫的账号.xlsx',sheet_name='sheet
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。

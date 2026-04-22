@@ -295,6 +295,6 @@ DeepSeek办公助手刚发布，内测阶段门槛低、福利多。
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 - [批量识别发票自动保存到Excel中](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 
 **END**

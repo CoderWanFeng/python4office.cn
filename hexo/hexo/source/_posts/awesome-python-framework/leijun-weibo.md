@@ -7,7 +7,7 @@ tags: Python实战项目
 
 <!-- more -->
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E5%8D%9A%E7%88%AC%E8%99%AB%2Fweibo.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)，今天给大家分享一个爬取微博的项目。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，今天给大家分享一个爬取微博的项目。
 
 
 ## 使用的框架
@@ -62,7 +62,7 @@ python run_spider.py search
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。

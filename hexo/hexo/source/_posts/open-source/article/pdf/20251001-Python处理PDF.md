@@ -34,7 +34,7 @@ tags: 深度文章
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA">
+<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -56,7 +56,7 @@ tags: 深度文章
 
 ![封面图](https://raw.atomgit.com/user-images/assets/5027920/9f5e8ff2-6696-49bc-94a3-11960d0ccb5f/image.png)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)。
 
 今天给大家整理一下Python中所有处理PDF的库，并且推荐一个适合小白入手的。
 
@@ -184,7 +184,7 @@ merge2pdf(pdf_list, "merged.pdf")
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" />
     </a>   
 </p>
@@ -210,4 +210,4 @@ merge2pdf(pdf_list, "merged.pdf")
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。

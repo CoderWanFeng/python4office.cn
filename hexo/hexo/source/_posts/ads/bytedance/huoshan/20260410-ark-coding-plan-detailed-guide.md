@@ -16,7 +16,7 @@ categories: [AI编程, 完整指南]
 > 
 > 邀请码：**GF2QJX3V**（可能有额外福利）
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 大家好，这里是程序员晚枫。
 
@@ -162,7 +162,7 @@ categories: [AI编程, 完整指南]
 - 对AI编程感兴趣的技术人员
 - 希望降低开发成本的技术团队
 
-👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 👉 [点击免费领取《火山方舟Coding Plan配置指南》](https://www.python-office.com/openclaw/coding-plan/)**
 

@@ -309,7 +309,7 @@ vercel
 - ✅ 项目部署和运维知识
 - ✅ 专属答疑社群
 
-🎬 **课程试听**：https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA
+🎬 **课程试听**：https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw
 
 📚 **系统学习**：``https://r7up9.xetslk.com/s/1uP5YW``
 

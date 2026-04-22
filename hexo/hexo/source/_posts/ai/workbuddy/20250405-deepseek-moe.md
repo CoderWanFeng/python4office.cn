@@ -236,7 +236,7 @@ DeepSeek的MoE架构，让我看到了国产AI的希望。
 ## 📚 想系统学习AI编程？
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" width="80%"/>
     </a>   
 </p>

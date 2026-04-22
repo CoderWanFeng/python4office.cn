@@ -15,7 +15,7 @@ categories: [AI编程, 教程]
 > 
 > 邀请码：**GF2QJX3V**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 大家好，这里是程序员晚枫。
 
@@ -131,7 +131,7 @@ VS Code + 火山方舟Coding Plan，是目前性价比最高的AI编程方案。
 
 ## 📚 想系统学习AI编程？
 
-👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 **《30讲 · AI编程训练营》** —— VS Code AI编程最佳实践。
 

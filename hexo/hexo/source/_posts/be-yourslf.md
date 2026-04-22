@@ -129,7 +129,7 @@ description: "武志红心理学课程合集，包含《成为你自己》《超
 
 ### AI编程入门
 
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [Python自动化办公实战](https://www.python4office.cn/)
 
 ---

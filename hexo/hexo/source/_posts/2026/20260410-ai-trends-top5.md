@@ -149,7 +149,7 @@ categories: ["AI工具"]
 
 **限时特惠价：¥49**
 
-👉 **[点击立即学习 →](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+👉 **[点击立即学习 →](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 ---
 

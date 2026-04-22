@@ -5,7 +5,7 @@ tags: 第三方库
 ---
 
 <!-- more -->
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)，上周刚给大家发布了一个功能：[仅需1行代码，Excel秒变Markdown！](https://mp.weixin.qq.com/s/ISE2SLf-F6k_38SEQqTGPg)
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，上周刚给大家发布了一个功能：[仅需1行代码，Excel秒变Markdown！](https://mp.weixin.qq.com/s/ISE2SLf-F6k_38SEQqTGPg)
 
 打算本周再增加更多文件转Markdown的功能，在检索实现方案的过程中，我突然发现：就在前几天，微软自己开源了一个工具：MarkItDown。
 
@@ -106,7 +106,7 @@ tags: 第三方库
 ## 相关课程
 
 - [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [给小白的《5讲 · Python实现发票批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 
 
@@ -124,4 +124,4 @@ tags: 第三方库
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。

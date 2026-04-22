@@ -25,7 +25,7 @@ https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA
 
 ## 3、django：
 【免费版】https://www.bilibili.com/video/BV1NL41157ph
-【付费版】https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA
+【付费版】https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw
 
 ## 4、pyinstaller：
 
@@ -39,7 +39,7 @@ https://pyinstaller.org/en/stable/
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。

@@ -14,7 +14,7 @@ categories: [AI编程, 完整指南]
 
 > 📢 **先上链接**：👉 **[点击了解腾讯云TOKEN Plan](https://curl.qcloud.com/Z9TkzRuj)**
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 大家好，这里是程序员晚枫。
 
@@ -206,7 +206,7 @@ TOKEN Plan支持主流AI编程工具：
 - 对AI编程感兴趣的技术人员
 - 希望降低开发成本的技术团队
 
-👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/Bt_SctzYsPNxLnrK5F9HZA)**
+👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
 
 ---
 
