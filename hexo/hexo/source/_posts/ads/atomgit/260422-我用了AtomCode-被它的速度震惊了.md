@@ -137,6 +137,7 @@ AtomCode 让我回到了一个状态：**我说话，它就动，中间没有停
 ## 怎么体验？
 
 👉 官网：[https://atomcode.atomgit.com](https://atomcode.atomgit.com/)
+👉 B站演示：[https://www.bilibili.com/video/BV1tVoxBfEX7](https://www.bilibili.com/video/BV1tVoxBfEX7)
 
 支持 macOS、Linux、Windows，终端输入 `atomcode` 就能用。
 

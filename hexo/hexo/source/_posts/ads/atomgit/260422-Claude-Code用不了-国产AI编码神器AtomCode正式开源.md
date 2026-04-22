@@ -157,6 +157,7 @@ AtomCode 会先拆解任务逻辑，确认方向再动手。
 ## 怎么安装？
 
 👉 官网：[https://atomcode.atomgit.com](https://atomcode.atomgit.com/)
+👉 B站演示：[https://www.bilibili.com/video/BV1tVoxBfEX7](https://www.bilibili.com/video/BV1tVoxBfEX7)
 
 支持 macOS、Linux、Windows，终端输入 `atomcode` 就能用。
 

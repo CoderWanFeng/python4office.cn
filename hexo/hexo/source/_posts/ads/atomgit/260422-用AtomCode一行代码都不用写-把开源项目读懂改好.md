@@ -164,6 +164,7 @@ AtomCode 帮我改了代码，改完还自动跑通了测试。
 ## 怎么安装？
 
 👉 官网：[https://atomcode.atomgit.com](https://atomcode.atomgit.com/)
+👉 B站演示：[https://www.bilibili.com/video/BV1tVoxBfEX7](https://www.bilibili.com/video/BV1tVoxBfEX7)
 
 支持 macOS、Linux、Windows。
 
