@@ -1,6 +1,6 @@
 ---
 title: "MiniMax TOKEN Plan vs Azure OpenAI：国内开发者选哪个？2026年深度对比"
-date: 2026-04-22
+date: 2026-04-22 00:00:00
 categories:
   - AI工具横评
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "Trae 免费版 vs 付费版：功能差距有多大？实测告诉你"
-date: 2026-04-12
+date: 2026-04-12 00:00:00
 categories:
   - AI工具评测
 tags:

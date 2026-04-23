@@ -1,6 +1,6 @@
 ---
 title: "Trae 免费模式排队太久？换个思路，便宜又快"
-date: 2026-04-12
+date: 2026-04-12 00:00:00
 categories:
   - AI工具评测
 tags:

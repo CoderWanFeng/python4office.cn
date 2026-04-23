@@ -1,6 +1,6 @@
 ---
 title: "40块的ArkClaw，根本不够用啊..."
-date: 2026-04-12
+date: 2026-04-12 00:00:00
 categories:
   - AI工具评测
 tags:

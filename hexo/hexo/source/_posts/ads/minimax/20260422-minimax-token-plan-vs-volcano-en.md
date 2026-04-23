@@ -1,6 +1,6 @@
 ---
 title: "MiniMax TOKEN Plan vs 火山方舟：哪个更划算？真实对比测评"
-date: 2026-04-22
+date: 2026-04-22 00:00:00
 categories:
   - AI工具评测
 tags:

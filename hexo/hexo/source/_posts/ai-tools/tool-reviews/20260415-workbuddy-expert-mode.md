@@ -1,6 +1,6 @@
 ---
 title: "WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的"
-date: 2026-04-15
+date: 2026-04-15 00:00:00
 categories:
   - AI工具评测
 tags:

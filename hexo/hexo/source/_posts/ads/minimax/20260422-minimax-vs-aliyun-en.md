@@ -1,6 +1,6 @@
 ---
 title: "MiniMax TOKEN Plan vs 阿里云百炼 Coding Plan：2026年最全对比测评"
-date: 2026-04-22
+date: 2026-04-22 00:00:00
 categories:
   - AI工具横评
 tags:

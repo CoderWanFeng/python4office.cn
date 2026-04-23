@@ -1,6 +1,6 @@
 ---
 title: "MiniMax TOKEN Plan 收费揭秘：按次收费居然这么划算"
-date: 2026-04-22
+date: 2026-04-22 00:00:00
 categories:
   - AI工具评测
 tags:

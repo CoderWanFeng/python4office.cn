@@ -142,7 +142,7 @@
 ```markdown
 ---
 title: Python Excel批量处理：从3小时到3分钟
-date: 2026-04-16
+date: 2026-04-16 00:00:00
 tags: [Python, Excel, 自动化]
 keywords: [python excel批量处理, python处理excel]
 description: 使用Python批量处理Excel文件，将3小时的人工工作压缩到3分钟，附完整代码下载。

@@ -1,6 +1,6 @@
 ---
 title: "MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比"
-date: 2026-04-22
+date: 2026-04-22 00:00:00
 categories:
   - AI工具横评
 tags:

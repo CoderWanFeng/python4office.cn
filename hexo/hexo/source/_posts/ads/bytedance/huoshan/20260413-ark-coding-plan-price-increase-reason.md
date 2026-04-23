@@ -1,6 +1,6 @@
 ---
 title: 为什么Claude和Copilot越来越贵？国内程序员的应对策略
-date: 2026-04-13
+date: 2026-04-13 00:00:00
 tags:
   - Claude
   - Copilot

@@ -1,6 +1,6 @@
 ---
 title: "用 Trae 做了一个爬虫：真实记录全过程"
-date: 2026-04-12
+date: 2026-04-12 00:00:00
 categories:
   - AI工具评测
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Claude Code太贵？我把月费从500元压到了36元（附省钱攻略）
-date: 2026-04-16
+date: 2026-04-16 00:00:00
 tags:
   - Claude Code
   - CC

@@ -1,6 +1,6 @@
 ---
 title: "MiniMax TOKEN Plan vs 科大讯飞星火大模型：2026年最新对比测评"
-date: 2026-04-22
+date: 2026-04-22 00:00:00
 categories:
   - AI工具横评
 tags:

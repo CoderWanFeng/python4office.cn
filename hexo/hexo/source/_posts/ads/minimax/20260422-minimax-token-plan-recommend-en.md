@@ -1,6 +1,6 @@
 ---
 title: "程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？"
-date: 2026-04-22
+date: 2026-04-22 00:00:00
 categories:
   - AI工具评测
 tags:
