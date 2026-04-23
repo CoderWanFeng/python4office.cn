@@ -1,4 +1,4 @@
-﻿---
+---
 title: Python循环：我用for和while自动化处理1000份文件
 date: 2026-02-28 19:58:00
 tags: [Python基础, 循环, for, while]
@@ -36,6 +36,35 @@ tags: [Python基础, 循环, for, while]
 
 大家好，我是正在实战各种AI项目的程序员晚枫。
 
+## 一个真实的故事
+
+2023年，有个财务小姐姐找我求助：
+
+> "晚枫老师，我每个月要处理1000多个Excel文件，每个都要打开、复制数据、粘贴到汇总表...一天都做不完，有没有办法？"
+
+我看了一眼，给了她一个脚本：
+
+```python
+import os
+import pandas as pd
+
+# 读取所有Excel文件并合并
+all_data = []
+for filename in os.listdir("文件夹路径"):
+    if filename.endswith(".xlsx"):
+        data = pd.read_excel(filename)
+        all_data.append(data)
+
+# 合并并保存
+result = pd.concat(all_data)
+result.to_excel("汇总.xlsx", index=False)
+print("完成！共处理", len(all_data), "个文件")
+```
+
+**原本一天的工作，变成了3秒钟。**
+
+这就是循环的力量——**让程序自动重复做事，批量处理大量数据**。
+
 上篇我们学了条件判断，程序能做选择了。这篇来学**循环**——让程序自动重复做事。
 
 学完这篇，你就能批量处理100条、1000条、10000条数据，真正实现自动化办公。
@@ -52,7 +81,7 @@ tags: [Python基础, 循环, for, while]
 print("欢迎张三！")
 print("欢迎李四！")
 print("欢迎王五！")
-# ... 还要写97次
+# ... 还要写97次，手都要断了...
 ```
 
 **用循环（优雅模式）：**
@@ -65,6 +94,22 @@ for name in names:
 ```
 
 **一句话，循环帮你省了99%的重复代码。**
+
+### 循环的本质
+
+循环就是让计算机帮你做重复的事：
+
+```
+人：做这件事100次 → 累死
+计算机：做这件事100次 → 毫秒级完成
+```
+
+**循环的应用场景：**
+- 批量处理文件（1000个Excel合并）
+- 批量发送消息（100封邮件群发）
+- 批量数据处理（爬取100页数据）
+- 批量重命名（给500个文件加前缀）
+- 批量下载（下载整个相册）
 
 ---
 
@@ -97,49 +142,116 @@ fruits 的每个元素，依次取出，命名为 fruit
 我要吃：橙子
 ```
 
+### for循环的执行流程
+
+```python
+names = ["张三", "李四", "王五"]
+
+for name in names:     # 第1次：name = "张三"
+    print(name)        # 执行：打印"张三"
+                       # 第2次：name = "李四"
+                       # 执行：打印"李四"
+                       # 第3次：name = "王五"
+                       # 执行：打印"王五"
+                       # 没有元素了，结束循环
+```
+
+### 遍历不同类型的数据
+
+```python
+# 遍历字符串
+for char in "Python":
+    print(char)
+# P y t h o n
+
+# 遍历列表
+for num in [1, 2, 3, 4, 5]:
+    print(num * 2)
+# 2 4 6 8 10
+
+# 遍历元组
+for item in (1, 2, 3):
+    print(item)
+# 1 2 3
+
+# 遍历集合
+for fruit in {"苹果", "香蕉", "橙子"}:
+    print(fruit)
+# 注意：集合无序，顺序可能不同
+
+# 遍历字典的键
+person = {"name": "张三", "age": 25}
+for key in person:
+    print(key)
+# name age
+```
+
 ---
 
 ## range函数：生成数字序列
 
-如果想按顺序执行5次，用 `range()` 生成数字序列：
+如果想按顺序执行N次，用 `range()` 生成数字序列：
+
+### range的三种用法
 
 ```python
-# range(5) 生成：0, 1, 2, 3, 4
+# 1. range(n)：生成0到n-1
 for i in range(5):
-    print(f"第{i + 1}次执行")
+    print(i)
+# 0 1 2 3 4
 
-# range(2, 6) 生成：2, 3, 4, 5（从2开始，到6之前结束）
+# 2. range(start, end)：生成start到end-1
 for i in range(2, 6):
     print(i)
+# 2 3 4 5
 
-# range(0, 11, 2) 生成：0, 2, 4, 6, 8, 10（步长为2）
+# 3. range(start, end, step)：指定步长
 for i in range(0, 11, 2):
-    print(f"偶数：{i}")
+    print(i)
+# 0 2 4 6 8 10（偶数）
+
+# 倒序：步长为负数
+for i in range(5, 0, -1):
+    print(i)
+# 5 4 3 2 1
 ```
 
-**运行结果：**
+### range的实际应用
 
+```python
+# 执行某操作N次
+for i in range(10):
+    print("Hello!")
+
+# 生成1-100
+for i in range(1, 101):
+    print(i)
+
+# 遍历列表索引
+fruits = ["苹果", "香蕉", "橙子"]
+for i in range(len(fruits)):
+    print(f"第{i+1}个水果：{fruits[i]}")
+
+# 批量创建文件名
+for i in range(1, 6):
+    filename = f"报告_{i:03d}.txt"  # 001, 002, 003...
+    print(filename)
+# 报告_001.txt 报告_002.txt 报告_003.txt 报告_004.txt 报告_005.txt
 ```
-第1次执行
-第2次执行
-第3次执行
-第4次执行
-第5次执行
 
-2
-3
-4
-5
+### range的性能优势
 
-偶数：0
-偶数：2
-偶数：4
-偶数：6
-偶数：8
-偶数：10
+```python
+# range是惰性的，不会立即生成所有数字
+r = range(1000000)  # 不占用内存
+print(r)  # range(0, 1000000)
+
+# 只有遍历时才生成
+for i in r:
+    if i > 5:
+        break
+    print(i)
 ```
-
-> 💡 **记住**：`range(5)` 是从0开始的，到5之前结束，不包含5。如果想要1到5，用 `range(1, 6)`。
 
 ---
 
@@ -147,36 +259,93 @@ for i in range(0, 11, 2):
 
 `for` 适合知道要循环多少次的情况。`while` 适合**不知道要循环多少次，只要条件满足就一直做**的情况。
 
+### 基本语法
+
+```python
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+# 0 1 2 3 4
+```
+
 ### 场景举例：猜数字游戏
 
 你不知道对方要猜几次，只能一直猜，直到猜对为止：
 
 ```python
-secret = 7       # 正确答案
-guess = 0        # 一开始猜的是0
+import random
 
-while guess != secret:   # 只要没猜对，就继续
-    guess = int(input("猜一个数字（1-10）："))
+secret = random.randint(1, 100)  # 随机生成1-100的数字
+guess = 0
+attempts = 0
+
+print("猜数字游戏（1-100）")
+
+while guess != secret:
+    guess = int(input("请输入你的猜测："))
+    attempts += 1
+    
     if guess < secret:
         print("太小了，再大一点")
     elif guess > secret:
         print("太大了，再小一点")
 
-print("恭喜猜对了！")
+print(f"恭喜猜对了！答案就是{secret}，你用了{attempts}次")
 ```
 
-**运行结果（假设正确答案7）：**
+### while的应用场景
 
-```
-猜一个数字（1-10）：3
-太小了，再大一点
-猜一个数字（1-10）：8
-太大了，再小一点
-猜一个数字（1-10）：7
-恭喜猜对了！
+```python
+# 1. 等待用户输入正确
+while True:
+    password = input("请输入密码：")
+    if password == "123456":
+        print("密码正确！")
+        break
+    print("密码错误，请重试")
+
+# 2. 读取数据直到结束
+data = []
+while True:
+    line = input("请输入数据（输入q结束）：")
+    if line == 'q':
+        break
+    data.append(line)
+
+# 3. 重试机制
+max_retries = 3
+retry_count = 0
+
+while retry_count < max_retries:
+    success = send_email()  # 假设的发送函数
+    if success:
+        print("发送成功！")
+        break
+    retry_count += 1
+    print(f"发送失败，重试第{retry_count}次...")
+
+if retry_count == max_retries:
+    print("发送失败，请稍后重试")
 ```
 
-> ⚠️ **while的坑**：必须确保循环条件最终会变成`False`，否则会陷入**无限循环**（程序卡死）。每次循环结束，必须让条件朝着False的方向变化。
+### while的陷阱：无限循环
+
+```python
+# ❌ 危险：无限循环
+count = 0
+while count < 5:
+    print(count)
+    # 忘记写 count += 1
+    # count永远是0，条件永远为True
+    # 程序卡死！Ctrl+C强制退出
+
+# ✅ 正确：确保条件会变化
+count = 0
+while count < 5:
+    print(count)
+    count += 1  # 每次加1，最终会退出
+```
 
 ---
 
@@ -187,20 +356,26 @@ print("恭喜猜对了！")
 遇到某个条件就不做了，直接跳出整个循环：
 
 ```python
-for i in range(10):
-    if i == 5:
-        break    # 遇到5就停止
-    print(i)
+# 找到第一个负数就停止
+numbers = [1, 3, 5, -2, 7, 9]
+
+for num in numbers:
+    if num < 0:
+        print(f"发现负数：{num}")
+        break
+    print(f"处理：{num}")
+
+print("循环结束")
 ```
 
 **运行结果：**
 
 ```
-0
-1
-2
-3
-4
+处理：1
+处理：3
+处理：5
+发现负数：-2
+循环结束
 ```
 
 ### continue：跳过这次
@@ -208,71 +383,158 @@ for i in range(10):
 遇到某个条件跳过这一次，继续下一个：
 
 ```python
-for i in range(5):
-    if i == 2:
-        continue   # 遇到2就跳过
+# 只打印奇数
+for i in range(10):
+    if i % 2 == 0:  # 偶数跳过
+        continue
     print(i)
 ```
 
 **运行结果：**
 
 ```
-0
 1
 3
-4
-（2被跳过了，没有打印）
+5
+7
+9
+```
+
+### break vs continue
+
+```python
+# break：退出整个循环
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+# 输出：0 1 2
+
+# continue：跳过当前这次，继续下一次
+for i in range(5):
+    if i == 3:
+        continue
+    print(i)
+# 输出：0 1 2 4
+```
+
+### 实际应用
+
+```python
+# 1. 验证用户输入
+while True:
+    age = input("请输入年龄：")
+    if not age.isdigit():
+        print("请输入数字！")
+        continue
+    age = int(age)
+    if age < 0 or age > 150:
+        print("年龄不合理，请重新输入")
+        continue
+    print(f"你的年龄是{age}岁")
+    break
+
+# 2. 查找数据
+students = [
+    {"name": "张三", "score": 85},
+    {"name": "李四", "score": 92},
+    {"name": "王五", "score": 78}
+]
+
+target = "李四"
+for student in students:
+    if student["name"] == target:
+        print(f"找到{target}，分数：{student['score']}")
+        break
+else:
+    print(f"没找到{target}")
 ```
 
 ---
 
-## for和while：什么时候用哪个？
+## for-else和while-else
 
-| 场景 | 用哪个 | 原因 |
-|-----|:---:|------|
-| 遍历列表 | `for` | 已知有多少个元素 |
-| 执行固定次数 | `for` + `range` | 知道要执行几次 |
-| 不知道要几次 | `while` | 等某个条件满足 |
-| 用户输入验证 | `while True` | 等用户输对为止 |
-
----
-
-## 遍历字典：顺便取出名字和值
+Python特有的语法：循环正常结束（没有break）时执行else：
 
 ```python
-person = {"姓名": "张三", "年龄": 25, "城市": "北京"}
-
-for key in person:            # 遍历键
-    print(key)
-
-for value in person.values():  # 遍历值
-    print(value)
-
-for key, value in person.items():  # 同时取键和值
-    print(f"{key}：{value}")
+# 查找质数
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(f"{n} = {x} × {n//x}")
+            break
+    else:
+        print(f"{n} 是质数")
 ```
 
 **运行结果：**
 
 ```
-姓名
-年龄
-城市
+2 是质数
+3 是质数
+4 = 2 × 2
+5 是质数
+6 = 2 × 3
+7 是质数
+8 = 2 × 4
+9 = 3 × 3
+```
 
-张三
-25
-北京
+**注意：** else在循环正常结束时执行，如果break退出了，else不会执行。
 
-姓名：张三
-年龄：25
-城市：北京
+---
+
+## 遍历字典：键、值、键值对
+
+```python
+person = {"姓名": "张三", "年龄": 25, "城市": "北京"}
+
+# 1. 遍历键（默认）
+for key in person:
+    print(key)
+# 姓名 年龄 城市
+
+# 2. 显式遍历键
+for key in person.keys():
+    print(key)
+# 姓名 年龄 城市
+
+# 3. 遍历值
+for value in person.values():
+    print(value)
+# 张三 25 北京
+
+# 4. 同时遍历键和值（推荐）
+for key, value in person.items():
+    print(f"{key}：{value}")
+# 姓名：张三
+# 年龄：25
+# 城市：北京
+```
+
+### 嵌套字典的遍历
+
+```python
+students = {
+    "张三": {"语文": 85, "数学": 92, "英语": 78},
+    "李四": {"语文": 90, "数学": 88, "英语": 95},
+    "王五": {"语文": 75, "数学": 85, "英语": 82}
+}
+
+# 遍历每个学生的成绩
+for name, scores in students.items():
+    print(f"\n{name}的成绩：")
+    for subject, score in scores.items():
+        print(f"  {subject}：{score}")
+    avg = sum(scores.values()) / len(scores)
+    print(f"  平均分：{avg:.1f}")
 ```
 
 ---
 
-## 同时遍历两个列表：zip
+## 同时遍历多个序列：zip
 
-如果有名字列表和年龄列表，想合并显示：
+### 基本用法
 
 ```python
 names = ["张三", "李四", "王五"]
@@ -290,11 +552,70 @@ for name, age in zip(names, ages):
 王五，28岁
 ```
 
+### zip的特性
+
+```python
+# zip以最短的序列为准
+list1 = [1, 2, 3, 4, 5]
+list2 = ['a', 'b', 'c']
+
+for num, char in zip(list1, list2):
+    print(num, char)
+# 1 a  2 b  3 c  （4和5被忽略）
+
+# 同时遍历三个列表
+names = ["张三", "李四", "王五"]
+ages = [25, 30, 28]
+cities = ["北京", "上海", "广州"]
+
+for name, age, city in zip(names, ages, cities):
+    print(f"{name}，{age}岁，来自{city}")
+```
+
+### 创建字典
+
+```python
+keys = ['name', 'age', 'city']
+values = ['张三', 25, '北京']
+
+person = dict(zip(keys, values))
+print(person)
+# {'name': '张三', 'age': 25, 'city': '北京'}
+```
+
 ---
 
-## 嵌套循环：九九乘法表
+## enumerate：获取索引和值
 
-一个循环里再套一个循环：
+```python
+fruits = ["苹果", "香蕉", "橙子"]
+
+# 普通方式
+for i in range(len(fruits)):
+    print(f"{i}：{fruits[i]}")
+
+# enumerate方式（更优雅）
+for index, fruit in enumerate(fruits):
+    print(f"{index}：{fruit}")
+
+# 指定起始索引
+for index, fruit in enumerate(fruits, start=1):
+    print(f"第{index}个：{fruit}")
+```
+
+**运行结果：**
+
+```
+第1个：苹果
+第2个：香蕉
+第3个：橙子
+```
+
+---
+
+## 嵌套循环：循环里的循环
+
+### 九九乘法表
 
 ```python
 for i in range(1, 10):       # 外层：1到9
@@ -310,7 +631,91 @@ for i in range(1, 10):       # 外层：1到9
 1×2=2	2×2=4	
 1×3=3	2×3=6	3×3=9	
 1×4=4	2×4=8	3×4=12	4×4=16	
+1×5=5	2×5=10	3×5=15	4×5=20	5×5=25	
 ...
+```
+
+### 遍历嵌套结构
+
+```python
+# 二维列表
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for row in matrix:
+    for item in row:
+        print(item, end=" ")
+    print()
+
+# 查找元素
+target = 5
+found = False
+for i, row in enumerate(matrix):
+    for j, item in enumerate(row):
+        if item == target:
+            print(f"找到{target}，位置：第{i}行第{j}列")
+            found = True
+            break
+    if found:
+        break
+```
+
+### 打印各种图案
+
+```python
+# 直角三角形
+for i in range(1, 6):
+    print("*" * i)
+
+# 倒三角形
+for i in range(5, 0, -1):
+    print("*" * i)
+
+# 等腰三角形
+n = 5
+for i in range(1, n + 1):
+    spaces = " " * (n - i)
+    stars = "*" * (2 * i - 1)
+    print(spaces + stars)
+```
+
+---
+
+## 列表推导式：一行写循环
+
+Python特有的简洁写法：
+
+```python
+# 传统循环
+squares = []
+for i in range(10):
+    squares.append(i ** 2)
+
+# 列表推导式
+squares = [i ** 2 for i in range(10)]
+
+# 带条件的列表推导式
+evens = [i for i in range(20) if i % 2 == 0]
+
+# 嵌套推导式
+matrix = [[i * j for j in range(1, 4)] for i in range(1, 4)]
+# [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
+```
+
+### 字典推导式
+
+```python
+# 创建平方字典
+squares = {i: i**2 for i in range(5)}
+# {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# 键值互换
+original = {'a': 1, 'b': 2, 'c': 3}
+swapped = {v: k for k, v in original.items()}
+# {1: 'a', 2: 'b', 3: 'c'}
 ```
 
 ---
@@ -323,7 +728,7 @@ for i in range(1, 10):       # 外层：1到9
 count = 0
 while count < 5:
     print(count)
-    # ❌ 忘记写 count += 1，程序会永远卡在0，进入无限循环！
+    # ❌ 忘记写 count += 1，程序会永远卡在0
 
 # ✅ 正确做法：
 count = 0
@@ -341,59 +746,203 @@ for num in numbers:
     if num % 2 == 0:
         numbers.remove(num)   # ❌ 危险！可能导致某些元素被跳过
 
-# ✅ 正确：创建新列表
-numbers = [1, 2, 3, 4, 5]
+# ✅ 方法1：创建新列表
 numbers = [num for num in numbers if num % 2 != 0]
-print(numbers)  # [1, 3, 5]
+
+# ✅ 方法2：遍历副本
+for num in numbers[:]:  # 注意[:]
+    if num % 2 == 0:
+        numbers.remove(num)
+```
+
+### ❌ 坑3：range的边界
+
+```python
+# ❌ 错误：range(5)不包含5
+for i in range(5):
+    print(i)  # 0 1 2 3 4，没有5
+
+# ✅ 如果想要1-5
+for i in range(1, 6):
+    print(i)  # 1 2 3 4 5
+```
+
+### ❌ 坑4：无限循环无法退出
+
+```python
+# ❌ 危险
+while True:
+    user_input = input("输入q退出：")
+    # 忘记检查退出条件！
+
+# ✅ 正确
+while True:
+    user_input = input("输入q退出：")
+    if user_input == 'q':
+        break
+```
+
+### ❌ 坑5：浮点数循环
+
+```python
+# ❌ 不要用浮点数做循环变量
+i = 0
+while i != 1:
+    i += 0.1
+    # 可能永远不等1（精度问题）
+
+# ✅ 用整数或比较
+i = 0
+while i < 10:
+    i += 1
+    x = i / 10
 ```
 
 ---
 
-## 实战练习：批量重命名文件夹里的文件
+## 性能对比：不同的循环方式
 
-把下载文件夹里的文件统一加上日期前缀：
+```python
+import time
+
+# 方法1：普通for循环
+def method1():
+    result = []
+    for i in range(10000):
+        result.append(i ** 2)
+    return result
+
+# 方法2：列表推导式
+def method2():
+    return [i ** 2 for i in range(10000)]
+
+# 方法3：map函数
+def method3():
+    return list(map(lambda x: x ** 2, range(10000)))
+
+# 测试
+start = time.time()
+method1()
+print(f"普通for循环: {time.time() - start:.4f}秒")
+
+start = time.time()
+method2()
+print(f"列表推导式: {time.time() - start:.4f}秒")
+
+start = time.time()
+method3()
+print(f"map函数: {time.time() - start:.4f}秒")
+```
+
+**结论：** 列表推导式通常最快，也最易读。
+
+---
+
+## 实战练习：批量重命名文件
 
 ```python
 import os
+from datetime import datetime
 
-def batch_rename(folder, prefix):
-    """给文件夹里的文件加前缀"""
-    files = os.listdir(folder)  # 获取所有文件名
+def batch_rename(folder, prefix=None, suffix=None):
+    """批量重命名文件"""
+    if not os.path.exists(folder):
+        print("文件夹不存在")
+        return
+    
+    files = [f for f in os.listdir(folder) if os.path.isfile(os.path.join(folder, f))]
     count = 0
-
-    for filename in files:
-        filepath = os.path.join(folder, filename)
-
-        # 跳过文件夹，只处理文件
-        if os.path.isdir(filepath):
-            continue
-
-        # 新文件名 = 前缀_原名
-        new_name = f"{prefix}_{filename}"
+    
+    print(f"找到 {len(files)} 个文件")
+    print("-" * 40)
+    
+    for i, filename in enumerate(files, 1):
+        # 获取文件名和扩展名
+        name, ext = os.path.splitext(filename)
+        
+        # 构建新文件名
+        parts = []
+        if prefix:
+            parts.append(prefix)
+        parts.append(name)
+        if suffix:
+            parts.append(suffix)
+        
+        new_name = "_".join(parts) + ext
         new_path = os.path.join(folder, new_name)
-
-        os.rename(filepath, new_path)
+        old_path = os.path.join(folder, filename)
+        
+        # 重命名
+        os.rename(old_path, new_path)
         count += 1
-        print(f"  {filename} → {new_name}")
+        print(f"{i}. {filename} → {new_name}")
+    
+    print("-" * 40)
+    print(f"✅ 完成，共处理 {count} 个文件")
 
-    print(f"\n✅ 完成，共处理 {count} 个文件")
-
-# 假设给当前目录下的文件加前缀
-# batch_rename(".", "2026-04-16")
+# 使用示例
+# batch_rename("下载文件夹", prefix="2026-04-23", suffix="晚枫")
 ```
 
-**运行结果（模拟）：**
+### 实战练习：批量处理Excel
 
+```python
+import pandas as pd
+import os
+
+def merge_excel_files(folder, output_file="汇总.xlsx"):
+    """合并文件夹中的所有Excel文件"""
+    all_data = []
+    
+    # 遍历文件夹
+    for filename in os.listdir(folder):
+        if filename.endswith(('.xlsx', '.xls')):
+            filepath = os.path.join(folder, filename)
+            try:
+                # 读取Excel
+                df = pd.read_excel(filepath)
+                # 添加来源列
+                df['来源文件'] = filename
+                all_data.append(df)
+                print(f"✓ 已读取：{filename}（{len(df)}行）")
+            except Exception as e:
+                print(f"✗ 读取失败：{filename}，错误：{e}")
+    
+    if not all_data:
+        print("没有找到Excel文件")
+        return
+    
+    # 合并所有数据
+    result = pd.concat(all_data, ignore_index=True)
+    
+    # 保存
+    result.to_excel(output_file, index=False)
+    print("-" * 40)
+    print(f"✅ 合并完成！共 {len(result)} 行数据")
+    print(f"📄 保存到：{output_file}")
+
+# 使用示例
+# merge_excel_files("月度报表")
 ```
-  报告.docx → 2026-04-16_报告.docx
-  数据.xlsx → 2026-04-16_数据.xlsx
-  照片.jpg → 2026-04-16_照片.jpg
 
-✅ 完成，共处理 3 个文件
+### 实战练习：进度条效果
+
+```python
+import time
+
+def progress_bar(total, task_name="处理中"):
+    """显示进度条"""
+    for i in range(total + 1):
+        percent = i / total * 100
+        bar_length = int(percent / 2)
+        bar = '█' * bar_length + '░' * (50 - bar_length)
+        print(f'\r{task_name}: [{bar}] {percent:.1f}%', end='')
+        time.sleep(0.05)
+    print()
+
+# 使用
+progress_bar(100, "下载文件")
 ```
-
----
-
 
 ---
 
@@ -410,6 +959,7 @@ def batch_rename(folder, prefix):
 
 👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
 
+---
 
 ## 本讲小结
 
@@ -422,12 +972,21 @@ def batch_rename(folder, prefix):
 | `continue` | 跳过本次，进入下一次 |
 | `.items()` | 同时遍历字典的键和值 |
 | `zip(a, b)` | 同时遍历两个列表 |
+| `enumerate()` | 获取索引和值 |
+| 列表推导式 | `[x for x in 列表 if 条件]` |
 
 ---
 
 ## 下节预告
 
 掌握了循环，下一篇来学**函数**——把一段代码打包成一个工具，想用就用，让代码复用更方便。
+
+你将学会：
+- 函数的定义和调用
+- 参数和返回值
+- 默认参数和关键字参数
+- 变量作用域
+- 递归函数
 
 👉 **[继续阅读：Python函数基础](./06-Python函数基础.md)**
 
@@ -441,5 +1000,13 @@ def batch_rename(folder, prefix):
 
 ---
 
-*PS：循环是自动化的核心——搞定了循环，你就搞定了批量处理。生活中有什么重复性的事，试试用循环来实现吧！*
+## 相关阅读
 
+- [Python运算符与表达式](./03-Python运算符与表达式.md)
+- [零基础学AI编程：30天速成计划](/course/AI相关/人民邮电出版社/ads/openclaw/python/20260228171202-零基础学AI编程-30天速成计划/)
+
+---
+
+*PS：循环是自动化的核心——搞定了循环，你就搞定了批量处理。生活中有什么重复性的事，试试用循环来实现吧！记住：程序员最讨厌的事就是重复做同样的事，所以我们发明了循环。*
+
+*2026-04-23 更新 by 程序员晚枫*

@@ -36,7 +36,7 @@ categories: [AI编程, 教程]
 
 ### 第一步：访问官网
 
-**👉 [点击查看讯飞星火 Coding Plan 详情](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [点击查看讯飞星火 Coding Plan 详情](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
 
 找到讯飞星火入口，点击进入。
 
@@ -133,3 +133,12 @@ AI 会记住之前的上下文。
 ---
 
 *作者：程序员晚枫，全网同名，专注 AI 工具测评与 Python 自动化办公教学。*
+
+---
+
+## 🤖 开发者效率工具推荐
+
+👉 想体验 **MiniMax Token Plan**？[点击这里享受 9 折优惠](https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link)
+
+💡 **按次计费，非常划算！** 想象成去菜市场买菜——买张门票进去，菜随便拿。按使用次数收费，不限额度，用多少付多少，特别适合开发者！
+

@@ -353,3 +353,12 @@ AI自动化的核心，从来不是拥有工具，而是让工具真正落地干
 | B 站 | [Python 自动化办公社区](https://space.bilibili.com/259649365) |
 
 **主营业务**：AI 编程培训、企业内训、技术咨询
+
+---
+
+## 🤖 开发者效率工具推荐
+
+👉 想体验 **MiniMax Token Plan**？[点击这里享受 9 折优惠](https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link)
+
+💡 **按次计费，非常划算！** 想象成去菜市场买菜——买张门票进去，菜随便拿。按使用次数收费，不限额度，用多少付多少，特别适合开发者！
+

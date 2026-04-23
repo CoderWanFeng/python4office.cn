@@ -222,3 +222,12 @@ Claude 3.5 Sonnet 涨价，Claude 3.7 直接加了"高级推理"附加费。
 ---
 
 > ⚠️ **利益说明**：本文含推广链接，通过链接购买不会增加你的费用，但可能为我带来推荐收益。
+
+---
+
+## 🤖 开发者效率工具推荐
+
+👉 想体验 **MiniMax Token Plan**？[点击这里享受 9 折优惠](https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link)
+
+💡 **按次计费，非常划算！** 想象成去菜市场买菜——买张门票进去，菜随便拿。按使用次数收费，不限额度，用多少付多少，特别适合开发者！
+

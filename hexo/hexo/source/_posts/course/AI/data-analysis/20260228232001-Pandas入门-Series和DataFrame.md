@@ -275,6 +275,229 @@ print(dept_stats)
 
 ---
 
+
+### 性能对比：DataFrame vs Excel vs SQL
+
+```python
+import pandas as pd
+import numpy as np
+import time
+
+# 10万行数据，分组+聚合
+df = pd.DataFrame({
+    'category': np.random.choice(['A', 'B', 'C', 'D'], 100000),
+    'value': np.random.randn(100000) * 100 + 500
+})
+
+# Pandas方式
+start = time.time()
+result = df.groupby('category')['value'].agg(['mean', 'sum', 'count'])
+print(f"Pandas: {time.time()-start:.4f}秒")
+
+# Excel方式：手动操作约5分钟（如果没崩溃的话）
+# SQL方式：写查询约1分钟
+```
+
+| 操作 | Excel | SQL | Pandas |
+|------|-------|-----|--------|
+| 10万行分组聚合 | 5分钟 | 30秒 | 0.01秒 |
+| 多条件筛选 | 2分钟 | 15秒 | 0.005秒 |
+| 数据透视表 | 3分钟 | N/A | 0.02秒 |
+
+## 进阶用法
+
+### DataFrame的链式操作
+
+```python
+# 链式操作（pipe风格）——代码更优雅
+result = (df
+    .query('age >= 18')
+    .assign(income_k=lambda x: x['income'] / 1000)
+    .groupby('city')
+    .agg({'income_k': ['mean', 'std'], 'age': 'median'})
+    .round(2)
+)
+```
+
+### MultiIndex多层索引
+
+```python
+# 创建多层索引
+index = pd.MultiIndex.from_product([
+    ['华东', '华南', '华北'],
+    ['Q1', 'Q2', 'Q3', 'Q4']
+], names=['区域', '季度'])
+
+data = pd.Series(np.random.randint(100, 1000, 12), index=index)
+print(data)
+
+# 选取特定区域
+print(data.loc['华东'])
+
+# 选取特定季度（所有区域）
+print(data.loc[:, 'Q1'])
+
+# 展开为DataFrame
+df = data.unstack()  # 区域为行，季度为列
+```
+
+## 避坑指南
+
+### ❌ 坑1：SettingWithCopyWarning
+
+```python
+# 错误写法（触发警告，修改可能无效）
+subset = df[df['age'] > 30]  # 这可能返回视图
+subset['score'] = 100  # Warning! 可能没生效
+
+# 正确写法1：显式copy
+subset = df[df['age'] > 30].copy()
+subset['score'] = 100  # 安全
+
+# 正确写法2：用loc直接修改原表
+df.loc[df['age'] > 30, 'score'] = 100
+```
+
+### ❌ 坑2：索引重置陷阱
+
+```python
+# 筛选后索引不连续
+filtered = df[df['score'] > 80]
+print(filtered.index)  # 可能是 [0, 3, 7, 15, ...]
+
+# 用iloc按位置取和用loc按标签取结果不同
+print(filtered.iloc[0])   # 第1行
+print(filtered.loc[0])    # 标签为0的行（可能不存在！）
+
+# 解决：重置索引
+filtered = filtered.reset_index(drop=True)
+```
+
+## 实战案例：分析在线教育平台学员数据
+
+```python
+import pandas as pd
+import numpy as np
+
+# 模拟学员数据
+np.random.seed(42)
+n = 5000
+df = pd.DataFrame({
+    'user_id': range(10001, 10001 + n),
+    'course': np.random.choice(['Python入门', '数据分析', 'AI编程', '自动化办公'], n),
+    'progress': np.random.uniform(0, 100, n).round(1),
+    'score': np.random.normal(75, 15, n).clip(0, 100).round(1),
+    'study_hours': np.random.exponential(20, n).round(1),
+    'signup_date': pd.date_range('2025-01-01', periods=n, freq='2H'),
+    'is_vip': np.random.choice([True, False], n, p=[0.3, 0.7]),
+    'city': np.random.choice(['北京', '上海', '广州', '深圳', '成都', '重庆'], n)
+})
+
+# 1. 数据概览
+print(f"学员总数: {len(df)}")
+print(f"\n各课程人数:")
+print(df['course'].value_counts())
+print(f"\n平均学习进度: {df['progress'].mean():.1f}%")
+
+# 2. VIP vs 普通学员对比
+print(f"\nVIP学员平均进度: {df[df['is_vip']]['progress'].mean():.1f}%")
+print(f"普通学员平均进度: {df[~df['is_vip']]['progress'].mean():.1f}%")
+
+# 3. 城市分布
+print(f"\n各城市学员数:")
+print(df['city'].value_counts())
+
+# 4. 各课程完成率（进度>80%视为完成）
+completion = df.assign(completed=df['progress'] > 80).groupby('course')['completed'].mean()
+print(f"\n各课程完成率:")
+print((completion * 100).round(1).astype(str) + '%')
+```
+
+
+
+### DataFrame的常用属性和方法速查
+
+```python
+# 创建示例DataFrame
+df = pd.DataFrame({
+    'name': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'],
+    'age': [25, 30, 35, 28, 32],
+    'city': ['北京', '上海', '广州', '深圳', '成都'],
+    'salary': [15000, 20000, 25000, 18000, 22000]
+})
+
+# 形状和维度
+print(df.shape)     # (5, 4) - 5行4列
+print(df.ndim)      # 2 - 二维
+print(df.size)      # 20 - 总元素数
+
+# 列和索引
+print(df.columns)   # 列名
+print(df.index)     # 行索引
+print(df.dtypes)    # 每列数据类型
+
+# 查看数据
+print(df.head(3))       # 前3行
+print(df.tail(3))       # 后3行
+print(df.sample(2))     # 随机2行
+print(df.describe())    # 统计摘要
+print(df.info())        # 数据概览
+
+# 转换
+print(df.values)        # 转为NumPy数组
+print(df.to_dict())     # 转为字典
+print(df.to_csv())      # 转为CSV字符串
+```
+
+### DataFrame数据选取速查
+
+```python
+# 选取列
+df['name']             # 单列，返回Series
+df[['name', 'age']]    # 多列，返回DataFrame
+
+# 按位置选取（iloc）
+df.iloc[0]             # 第1行
+df.iloc[0:3]           # 前3行
+df.iloc[:, 0:2]        # 前2列
+df.iloc[[0, 2], [1, 3]] # 指定行和列
+
+# 按标签选取（loc）
+df.loc[0]              # 索引为0的行
+df.loc[0:2]            # 索引0到2的行（含2）
+df.loc[:, 'name':'age'] # name到age列
+df.loc[df['age'] > 30]  # 条件筛选
+
+# at和iat（取单个值，更快）
+df.at[0, 'name']       # 按标签
+df.iat[0, 0]           # 按位置
+```
+
+### Series vs DataFrame对比
+
+```python
+# Series是一维，DataFrame是二维
+s = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+
+# Series运算
+s + 10           # 广播
+s * 2            # 广播
+s > 2            # 布尔索引
+
+# Series常用方法
+s.value_counts()  # 值计数
+s.unique()        # 唯一值
+s.sort_values()   # 排序
+s.isna()          # 检查缺失
+s.fillna(0)       # 填充缺失
+s.astype(float)   # 类型转换
+
+# DataFrame的每列都是Series
+type(df['A'])     # pandas.core.series.Series
+```
+
+
 ## 下节预告
 
 下一课我们将学习**Pandas数据读取与保存**，掌握如何导入导出各种格式的数据。
