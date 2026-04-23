@@ -1,5 +1,5 @@
 ---
-title: 合并excel
+title: "Python合并Excel：1键合并100个表格，支持多Sheet自动汇总，数据不丢失" 
 date: 2025-08-22 00:00:00
 tags: [星河计划]
 ---

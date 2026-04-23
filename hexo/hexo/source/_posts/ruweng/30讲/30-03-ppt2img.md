@@ -1,5 +1,5 @@
 ---
-title: ppt转图片
+title: "Python PPT转图片：1键导出所有页面为高清图片，支持PNG/JPG格式"
 date: 2025-08-14 00:41:49
 tags: [星河计划]
 ---

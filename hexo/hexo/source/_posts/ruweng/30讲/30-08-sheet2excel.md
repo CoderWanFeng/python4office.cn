@@ -1,5 +1,5 @@
 ---
-title: sheet转为单独excel
+title: "Python Excel拆分工作表：一键把1个Sheet拆成100个文件，自动命名" 
 date: 2025-08-22 00:00:00
 tags: [星河计划]
 ---

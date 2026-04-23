@@ -1,5 +1,5 @@
 ---
-title: excel转pdf
+title: "Python Excel转PDF：批量导出高清PDF，表格格式不跑偏，支持分页自动调整" 
 date: 2025-08-22 00:00:00
 tags: [星河计划]
 ---

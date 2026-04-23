@@ -1,5 +1,5 @@
 ---
-title: pdf转word
+title: "Python PDF转Word：3行代码搞定，自动提取表格图片，格式不乱"
 date: 2025-08-22 00:00:00
 tags: [星河计划]
 ---

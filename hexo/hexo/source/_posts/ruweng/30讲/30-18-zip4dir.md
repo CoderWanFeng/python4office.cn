@@ -1,5 +1,5 @@
 ---
-title: zip4dir
+title: "Python压缩文件夹：1键批量压缩，支持ZIP/RAR格式，自动排除冗余文件" 
 date: 2025-08-22 00:00:00
 tags: [星河计划]
 ---
