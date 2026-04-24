@@ -1,9 +1,9 @@
 ---
-title: "Claude Code用不了？国产AI编码神器AtomCode正式开源！"
+title: "Claude Code也能接国产大模型！AtomCode：免费+稳定+中文友好"
 date: 2026-04-22 14:00:00
 tags: ["AI编程", "AtomCode", "开源工具"]
 categories: ["AI工具"]
-description: "Claude Code用不了？国产AI编码神器AtomCode正式开源！"
+description: "Claude Code也能接国产大模型！AtomCode：免费+稳定+中文友好"
 ---
 
 <p align="center" id='进群-banner-AI'>
@@ -13,10 +13,10 @@ description: "Claude Code用不了？国产AI编码神器AtomCode正式开源！
 </p>
 
 <p align="center">
-	👉 <a target="_blank" href="https://www.python-office.com/">项目官网：https://www.python-office.com/</a> 👈
+	👉 <a target="_blank" href='https://www.python-office.com/'>项目官网：https://www.python-office.com/</a> 👈
 </p>
 <p align="center">
-	👉 <a target="_blank" href="https://www.python4office.cn/wechat-group/">本开源项目的交流群</a> 👈
+	👉 <a target="_blank" href='https://www.python4office.cn/wechat-group/'>本开源项目的交流群</a> 👈
 </p>
 
 <p align="center" name="atomgit">
@@ -39,119 +39,133 @@ description: "Claude Code用不了？国产AI编码神器AtomCode正式开源！
 
 <!-- more -->
 
-兄弟们！！！
+大家好，这里是程序员晚枫。
 
-说一件让我又爱又恨的事：**Claude Code。**
+先说个事实：Claude Code 是开源的，它当然能用。
 
-好用吗？真的好用。我用它维护python-office项目，帮我读代码、改bug、写文档，省了不知道多少时间。
+但它默认接的是 Claude 大模型——这个模型对国内开发者来说有几个现实问题：网络访问不稳定、Token 按量付费成本高、数据要上传到云端处理。
 
-**但用起来有多难受，懂的人都懂——**
+有些人会去折腾代理、花钱买额度，心里还要担心代码安全问题。但其实有更省心的选择。
 
-- 账号封了一个又一个
-- 网络不稳定，用着用着就断
-- 按量计费，一不小心就超额
-- 每次出问题，都要重新折腾一遍
+4月18号，有个叫 AtomCode 的国产 AI 编程工具开源了。它跟 Claude Code 是类似的产品，但专门为国内开发者优化。我用了一周，感觉确实不错。
 
-我一直想问：**有没有一个国产的、稳定的、不用翻墙的替代品？**
+- [告别等待，永远在状态｜AtomCode 正式开源，重塑开发新范式](https://mp.weixin.qq.com/s/9ZrCt1m5vevTwll4T0j4Eg)
+---
 
-4月18日，我在**北京**找到了答案。
+## 先说结论
 
-我是程序员晚枫，全网30万+粉丝，python-office开源作者。
+Claude Code 能用，AtomCode 也能用。区别在于：
+
+- 如果你愿意折腾代理、愿意付费、代码安全问题不Care——继续用你的方式就好
+- 如果你想**免费、国内直连、代码不上传**——AtomCode 值得试试
 
 ---
 
-## 🔥 AtomCode，我用了一周，真实感受
+## 为什么 Claude Code 对国内开发者不够"友好"？
 
-4月18日，AtomCode在北京开了发布会，正式开源。
+先声明，Claude Code 本身是个好工具，我不是在黑它。只是有些现实问题，确实存在。
 
-我去了现场，回来用了一周，说说真实感受。
+### 问题一：钱的问题
 
-<p align="center">
-	<img src="https://dynamic-image.yesky.com/1200x-/uploadImages/2026/110/37/LSHK79341151.jpg" width="80%"/>
-</p>
+Claude 的 API 是按 Token 收费的。
 
-**先说结论：**
+我自己的体验是，每天正常使用的话，一个月大概要花 200-300 块。不算特别夸张，但对个人开发者和学生党来说，确实是一笔开销。
 
-> 简单任务，和Claude Code差不多。
-> 复杂任务，还有差距，但差距在缩小。
-> 日常使用，完全够用，而且稳多了。
+### 问题二：网络的问题
 
----
+默认情况下，Claude 的服务在国内访问不稳定。需要代理，而且代理质量参差不齐，有时候转圈圈转半天，很影响心情。
 
-## 💪 和Claude Code比，AtomCode赢在哪里？
+### 问题三：代码安全的问题
 
-| 对比项 | Claude Code | AtomCode |
-|--------|------------|----------|
-| 开源 | ❌ 闭源 | ✅ MIT开源 |
-| 国产模型 | ❌ 不支持 | ✅ DeepSeek/Qwen/智谱GLM |
-| Token费用 | 💰 按量付费 | 🆓 长期限免 |
-| 网络 | ⚠️ 需翻墙 | ✅ 国内直连 |
-| 包体大小 | 较大 | < 50MB |
-| 启动速度 | 一般 | 秒级 |
-
-最打动我的有三点：
-
-**第一，Token免费。**
-
-用Claude Code最大的心理负担就是：这次对话花了多少钱？
-
-AtomCode直接说：**Token长期限免**。不用算钱，放开用。
-
-**第二，国产模型随便切。**
-
-DeepSeek、Qwen、智谱GLM，想用哪个用哪个。
-
-做复杂推理用DeepSeek，做代码补全用Qwen，**哪个好用用哪个**，真正的"模型自由"。
-
-**第三，本地运行，数据不上传。**
-
-代码不会传到任何服务器。python-office的代码，我不想让任何人看到。本地运行，这让我安心。
+这个看情况。如果你写的是个人项目，问题不大。但如果是公司项目、对代码安全有要求，那就得掂量一下了——代码是要发到云端处理的。
 
 ---
 
-## 🎯 它是怎么做到稳定的？
+## AtomCode 解决了什么问题？
 
-AtomCode内置了三个机制：
+### 方案一：Token 限免
 
-| 机制 | 作用 |
-|------|------|
-| **强制规划** | 先想清楚再动手，不容易跑偏 |
-| **诊断压缩** | 出错了精准定位，不乱猜 |
-| **JSON修复** | 格式错误自动修，保证跑完 |
+AtomCode 目前是 Token 限免的。
 
----
+不是永久免费，但至少现在用不要钱。对于想尝试 AI 编程但又不想花钱的朋友，很友好。
 
-## 🚀 适合谁用？
+### 方案二：国内直连
 
-| 人群 | 说明 |
-|------|------|
-| ✅ 用Claude Code被封号的 | 直接换AtomCode，稳多了 |
-| ✅ Python开发者 | 维护项目、写脚本、处理数据，都能用 |
-| ✅ 想学AI编程的小白 | 中文交互，门槛低 |
-| ✅ 企业开发者 | 本地运行，数据安全 |
+这个是最让我惊喜的。
 
----
+AtomCode 不需要代理，打开就能用。不管是在家、在公司、还是在咖啡馆，只要能上网就行。再也不用折腾网络环境了。
 
-## 💡 怎么安装？
+### 方案三：本地运行
 
-👉 官网：[https://atomcode.atomgit.com](https://atomcode.atomgit.com/)
-👉 B站演示：[https://www.bilibili.com/video/BV1tVoxBfEX7](https://www.bilibili.com/video/BV1tVoxBfEX7)
+AtomCode 支持本地模式，代码不会上传到云端。
 
-支持macOS、Linux、Windows，终端输入 `atomcode` 就能用。
+对于公司项目或者对代码安全敏感的场景，这个功能很实用。代码在自己电脑上跑，数据不离开本地。
+
+### 方案四：支持多模型切换
+
+AtomCode 支持 DeepSeek、Qwen、智谱 GLM 等国产大模型，可以根据不同场景选择最合适的。
+
+Claude Code 本身也支持切换模型，但 AtomCode 在国产模型的适配上做得更细致一些。
 
 ---
 
-## 💡 最后
+## 跟 Claude Code 比，AtomCode 怎么样？
 
-我不是说AtomCode已经全面超越了Claude Code。
+说实话，这个问题要看场景。
 
-但对国内开发者来说，它解决了最核心的问题：**稳定、免费、不用翻墙、支持国产模型。**
+### 简单任务：差不多
 
-这三点，对我来说比"性能最强"更重要。
+像写函数、补代码、解释逻辑这些简单任务，两者表现差不多。速度、效果都够用。
 
-**记住一点：科技不高冷，AI很好用。我是程序员晚枫，关注我，带你玩转AI编程！**
+### 复杂任务：Claude Code 稍强
 
-去试试吧，用一周，你自己会有判断。
+复杂推理、架构设计这类任务，Claude 的模型确实更强一些。
+
+但 AtomCode 的多模型切换是个优势——写 Python 用 Qwen，复杂推理用 DeepSeek，中文理解用 GLM。组合起来也挺能打。
+
+### 中文理解：AtomCode 更顺手
+
+AtomCode 对中文的适配更好一些。毕竟是国产的，更懂我们说话的方式，写注释、取变量名这些更自然。
+
+---
+
+## 适合谁用？
+
+**AtomCode 适合：**
+
+- **学生党**：想学 AI 编程但不想花钱的，免费真香
+- **个人开发者**：想省点 API 费用的，能省则省
+- **公司程序员**：对代码安全有要求的，本地模式更安心
+- **不想折腾的**：受够了代理不稳定的，打开就用，不香吗？
+
+**AtomCode 可能不太适合：**
+
+- 需要处理特别复杂架构设计的高级用户
+- 对 Claude 模型有强烈依赖的
+
+---
+
+## 怎么安装？
+
+官网：[https://atomcode.atomgit.com](https://atomcode.atomgit.com/)
+
+支持 macOS、Linux、Windows，终端输入 `atomcode` 就能用。
+
+B站教程：[https://www.bilibili.com/video/BV1tVoxBfEX7](https://www.bilibili.com/video/BV1tVoxBfEX7)
+
+---
+
+## 最后说几句
+
+Claude Code 是个好东西，AtomCode 也是。
+
+没有哪个工具是万能的，关键是看哪个更适合你的场景。
+
+如果你用 Claude Code 用得顺手、愿意折腾、也不差钱——完全没必要换。
+
+但如果你想**免费、省心、中文友好**——AtomCode 是个不错的选择。
+
+**科技不高冷，AI很好用。我是程序员晚枫，关注我，带你玩转AI编程！**
 
 有问题？👉 加我微信：**aiwf365**，备注：AtomCode
 
