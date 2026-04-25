@@ -1,0 +1,58 @@
+---
+title: "Volcano Ark Coding Plan Prompt Skills: Make AI Generate Better Code"
+keywords: Programmer Wan Feng, Volcano Ark Coding Plan Prompt Skills, AI Programming Prompt Skills, Prompt Engineering, Code Generation Optimization
+description: Shared by Programmer Wan Feng: Volcano Ark Coding Plan Prompt skills, help generate better code, practical tips to improve AI programming efficiency.
+date: 2026-04-10 00:04:00
+tags: [Volcano Ark Coding Plan Prompt, AI Programming Prompt Skills, Prompt Engineering, Code Generation Optimization, Volcano Engine Tips, Programmer Wan Feng]
+categories: [AI Programming, Prompt Engineering]
+---
+
+<!-- more -->
+> **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
+
+> 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
+
+> 📢 **Link First**: 👉 **[Click to subscribe Volcano Ark Coding Plan](https://volcengine.com/L/a6sqe8YHzWo/)**
+
+> Invitation Code: **GF2QJX3V**
+
+> 💡 **Want to systematically learn AI programming?** 👉 **[Click to learn AI Programming Training Camp](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
+
+Hello everyone, this is programmer Wan Feng.
+
+Same Volcano Ark Coding Plan, why do some people use it flying high, others find it so-so?
+
+**The difference is in Prompt.**
+
+Today sharing Prompt skills I've summarized, help generate better code.
+
+<!-- more -->
+
+## Skill 1: Clear Role Setting
+
+**❌ Bad Prompt:**
+```
+Write a login function
+```
+
+**✅ Good Prompt:**
+```
+You are a backend engineer with 10 years of experience, please write a user login function with Python.
+Requirements:
+1. Use JWT authentication
+2. Password needs encrypted storage
+3. Include input validation
+4. Complete error handling
+```
+
+## Skill 2: Provide Context
+
+**❌ Bad Prompt:**
+```
+
+Write Python code
+```
+
+**✅ Good Prompt:**
+```
+```

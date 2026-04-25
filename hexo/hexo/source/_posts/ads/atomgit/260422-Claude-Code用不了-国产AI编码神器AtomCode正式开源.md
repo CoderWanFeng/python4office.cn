@@ -1,5 +1,5 @@
 ---
-title: "Claude Code也能接国产大模型！AtomCode：免费+稳定+中文友好"
+title: Claude Code也能接国产大模型！AtomCode：免费+稳定+中文友好
 date: 2026-04-22 14:00:00
 tags: ["AI编程", "AtomCode", "开源工具"]
 categories: ["AI工具"]
@@ -38,6 +38,8 @@ description: "Claude Code也能接国产大模型！AtomCode：免费+稳定+中
 </p>
 
 <!-- more -->
+
+> 原文链接：https://mp.weixin.qq.com/s/r1TOcVuTU3uuOCFVO_d8jg
 
 大家好，这里是程序员晚枫。
 
