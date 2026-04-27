@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: GPT是什么意思？揭秘ChatGPT背后的"大脑"
 date: 2026-04-16 16:57:00
@@ -6,9 +6,11 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [AI编程, ChatGPT, OpenAI]
-- GPT
+tags:
+- AI编程
 - ChatGPT
+- OpenAI
+- GPT
 order: 4
 description: 大家都说ChatGPT，但GPT到底是什么意思？程序员晚枫用大白话拆解G-P-T三个字母，让你真正看懂AI"大脑"的进化史！
 

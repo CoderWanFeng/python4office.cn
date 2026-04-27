@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是Claude？
 date: 2026-04-16 17:32:00
@@ -6,7 +6,10 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [AI工具, AI编程, Claude Code]
+tags:
+- AI工具
+- AI编程
+- Claude Code
 - Claude
 - Anthropic
 - AI聊天

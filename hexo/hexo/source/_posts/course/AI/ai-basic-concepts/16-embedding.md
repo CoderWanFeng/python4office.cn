@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是嵌入？AI是怎么"理解"文字含义的
 date: 2026-04-16 17:15:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - Embedding
 - 向量
 - 语义搜索

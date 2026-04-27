@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是提示词？为什么AI有时候很"笨"
 date: 2026-04-16 16:59:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - 提示词
 - Prompt
 order: 6

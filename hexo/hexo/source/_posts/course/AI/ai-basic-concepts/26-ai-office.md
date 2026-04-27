@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是AI办公？AI帮你写PPT做表格
 date: 2026-04-16 17:25:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - AI办公
 - WPS AI
 - Office Copilot

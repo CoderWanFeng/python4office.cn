@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是AI Agent？让AI从"聊天机器"变成"数字员工"
 date: 2026-04-16 17:11:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - AI Agent
 - 智能体
 - 自动化

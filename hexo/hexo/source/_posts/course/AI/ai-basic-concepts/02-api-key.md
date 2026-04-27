@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 想用AI写代码？先申请个"API Key"身份证
 date: 2026-04-16 16:55:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - API Key
 - API
 order: 2
