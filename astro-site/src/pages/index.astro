@@ -1,25 +1,31 @@
 ---
 import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const posts = await getCollection('blog');
+posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>程序员晚枫 - Python自动化办公与AI编程</title>
-  </head>
-  <body>
-    <h1>程序员晚枫 - Python自动化办公与AI编程</h1>
-    <ul>
-      {posts.map((post) => (
-        <li>
-          <a href={`/${post.slug}/`}>{post.data.title}</a>
-          <br />
-          <small>{post.data.date.toLocaleDateString('zh-CN')}</small>
-        </li>
-      ))}
-    </ul>
-  </body>
-</html>
+<BaseLayout title="程序员晚枫 - Python自动化办公与AI编程">
+  <h1 style="margin-bottom: 30px;">📚 最新文章 ({posts.length} 篇)</h1>
+  
+  <ul class="post-list">
+    {posts.slice(0, 50).map((post) => (
+      <li class="post-item">
+        <h2><a href={`/${post.slug}/`}>{post.data.title}</a></h2>
+        <span class="date">{new Date(post.data.date).toLocaleDateString('zh-CN')}</span>
+        {post.data.tags && post.data.tags.length > 0 && (
+          <span style="margin-left: 15px; color: #667eea;">
+            🏷️ {post.data.tags.slice(0, 3).join(', ')}
+          </span>
+        )}
+      </li>
+    ))}
+  </ul>
+  
+  {posts.length > 50 && (
+    <p style="margin-top: 30px; color: #666; text-align: center;">
+      ... 还有 {posts.length - 50} 篇文章
+    </p>
+  )}
+</BaseLayout>
