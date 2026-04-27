@@ -1,8 +1,11 @@
----
+﻿---
+
 title: 腾讯云+Pandas，批量识别银行卡号码并且写入Excel，小白也可以轻松使用
 date: 2023-01-25 22:14:07
-tags:
+tags: [Python自动化办公, Excel自动化, pandas, Python数据分析]
+
 ---
+
 
 <!-- more -->
 腾讯云+Pandas，批量识别银行卡号码并且写入Excel，小白也可以轻松使用

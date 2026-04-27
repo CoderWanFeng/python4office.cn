@@ -1,16 +1,19 @@
----
+﻿---
+
 title: 什么是多模态？让AI同时拥有"眼耳口鼻"的神奇能力
 date: 2026-04-16 17:10:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - 多模态
 - Multimodal
 order: 11
 description: 为什么现在AI能看图、能听声音、还能说话？程序员晚枫用大白话揭秘多模态AI，让你理解AI的"全能进化"！
+
 ---
+
 
 > **作者：程序员晚枫**
 

@@ -1,8 +1,9 @@
----
+﻿---
+
 title: 马斯克X应用开放平台，这是普通人年入百万的机会吗？
 date: 2026-04-14 10:55:00
 author: 晚枫
-tags:
+tags: [Python, AI编程]
   - AI
   - 马斯克
   - X应用
@@ -10,7 +11,9 @@ tags:
 categories:
   - ai
 cover: /img/ai/x-app-opportunity.jpg
+
 ---
+
 
 <!-- more -->
 # 马斯克X应用开放平台，这是普通人年入百万的机会吗？

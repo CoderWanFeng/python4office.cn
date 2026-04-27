@@ -1,8 +1,11 @@
----
+﻿---
+
 title: go-setup-scoop
 date: 2022-08-09 15:24:09
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 <!-- more -->
 安装scoop：https://www.freesion.com/article/5185635713/

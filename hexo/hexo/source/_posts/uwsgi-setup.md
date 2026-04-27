@@ -1,8 +1,11 @@
----
+﻿---
+
 title: uwsgi-setup
 date: 2022-03-16 09:48:50
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 <!-- more -->
 服务器超时

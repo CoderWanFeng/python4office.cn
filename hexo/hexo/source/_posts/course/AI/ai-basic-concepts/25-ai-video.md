@@ -1,18 +1,21 @@
----
+﻿---
+
 title: 什么是AI视频？一句话生成视频
 date: 2026-04-16 17:24:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - AI视频
 - Sora
 - 可灵
 - 视频生成
 order: 25
 description: 为什么Sora这么火？程序员晚枫用大白话揭秘AI视频，让你了解文字生成视频的魔法！
+
 ---
+
 
 > **作者：程序员晚枫**
 

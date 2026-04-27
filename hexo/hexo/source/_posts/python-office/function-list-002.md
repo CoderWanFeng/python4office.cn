@@ -1,8 +1,11 @@
----
+﻿---
+
 title: function-list-002
 date: 2022-05-10 10:40:30
-tags:
+tags: [Python, AI编程]
+
 ---
+
 <!-- more -->
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>

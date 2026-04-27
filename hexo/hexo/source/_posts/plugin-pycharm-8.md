@@ -1,8 +1,11 @@
----
+﻿---
+
 title: 8个雪梨 - pycharm软件和插件
 date: 2022-11-20 21:36:47
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 <!-- more -->
 <p align="center" id='支付宝-banner'>

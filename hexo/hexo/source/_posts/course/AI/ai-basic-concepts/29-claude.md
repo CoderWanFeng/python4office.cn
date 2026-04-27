@@ -1,11 +1,12 @@
----
+﻿---
+
 title: 什么是Claude？
 date: 2026-04-16 17:32:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [AI工具, AI编程, Claude Code]
 - Claude
 - Anthropic
 - AI聊天
@@ -13,7 +14,9 @@ tags:
 - 大模型
 order: 29
 description: 什么是Claude？程序员晚枫用通俗语言解释，Anthropic出品的AI助手和ChatGPT有什么区别。
+
 ---
+
 
 # 什么是Claude？
 

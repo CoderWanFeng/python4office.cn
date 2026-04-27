@@ -1,16 +1,19 @@
----
+﻿---
+
 title: "程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？"
 date: 2026-04-22 00:00:00
 categories:
   - AI工具评测
-tags:
+tags: [大模型, Token Plan, AI编程, MiniMax, 腾讯云]
   - MiniMax
   - TOKEN Plan
   - 推荐
   - 程序员
   - 晚枫
 description: "程序员晚枫推荐：这款 AI 助手按次收费、响应快、24小时在线，29元/月就能用"
+
 ---
+
 
 <!-- more -->
 

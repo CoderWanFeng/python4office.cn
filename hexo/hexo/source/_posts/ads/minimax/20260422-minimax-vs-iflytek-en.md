@@ -1,9 +1,10 @@
----
+﻿---
+
 title: "MiniMax TOKEN Plan vs 科大讯飞星火大模型：2026年最新对比测评"
 date: 2026-04-22 00:00:00
 categories:
   - AI工具横评
-tags:
+tags: [大模型, Token Plan, AI编程, MiniMax, 腾讯云]
   - MiniMax
   - 科大讯飞
   - 星火大模型
@@ -17,7 +18,9 @@ keywords:
   - AI大模型对比
   - 讯飞API
   - 2026 AI工具
+
 ---
+
 
 <!-- more -->
 

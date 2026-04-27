@@ -1,7 +1,8 @@
----
+﻿---
+
 title: Claude Code太贵？我把月费从500元压到了36元（附省钱攻略）
 date: 2026-04-16 00:00:00
-tags:
+tags: [AI工具, AI编程, Claude Code]
   - Claude Code
   - CC
   - AI编程
@@ -10,7 +11,9 @@ tags:
   - 性价比
 categories:
   - AI工具
+
 ---
+
 
 > 上个月我看了一眼账单，Claude Code + Claude API 花了我 547 元。
 

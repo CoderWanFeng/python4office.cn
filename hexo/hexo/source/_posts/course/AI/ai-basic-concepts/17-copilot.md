@@ -1,17 +1,20 @@
----
+﻿---
+
 title: 什么是Copilot？程序员的AI"副驾驶"
 date: 2026-04-16 17:16:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [GitHub Copilot, AI编程]
 - Copilot
 - AI编程
 - GitHub Copilot
 order: 17
 description: 程序员为什么现在写代码这么快？程序员晚枫用大白话揭秘Copilot，让你了解AI编程助手！
+
 ---
+
 
 > **作者：程序员晚枫**
 

@@ -1,8 +1,11 @@
----
+﻿---
+
 title: 5个有趣的 Python 自动化办公程序，建议收藏！超实用~
 date: 2022-05-06 13:31:42
-tags:
+tags: [Python, AI编程]
+
 ---
+
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>

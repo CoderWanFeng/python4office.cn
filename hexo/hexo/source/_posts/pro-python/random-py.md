@@ -1,8 +1,11 @@
----
+﻿---
+
 title: 如何生成1亿个手机号码？Python生成随机数的22种方法
 date: 2022-07-01 13:11:25
-tags:
+tags: [Python, AI编程]
+
 ---
+
 ![](https://www.python-office.com/api/img-cdn/pro-python/random.py/covage-water.jpg)
 大家好，这里是Python程序员晚枫。
 

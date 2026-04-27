@@ -1,8 +1,11 @@
----
+﻿---
+
 title: 用Python制作一个大屏数据可视化系统
 date: 2022-08-16 16:13:12
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 
 <!-- more -->

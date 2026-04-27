@@ -1,17 +1,20 @@
----
+﻿---
+
 title: AI是怎么收你钱的？揭秘Token计费
 date: 2026-04-16 17:13:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - Token
 - 计费
 - API价格
 order: 14
 description: 用AI要花钱，到底按什么算的？程序员晚枫用大白话揭秘Token计费，让你看懂AI的账单！
+
 ---
+
 
 > **作者：程序员晚枫**
 

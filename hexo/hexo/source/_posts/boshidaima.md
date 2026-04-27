@@ -1,8 +1,11 @@
----
+﻿---
+
 title: 还原复旦博士OCR代码
 date: 2022-04-21 18:28:13
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 <!-- more -->
 # 

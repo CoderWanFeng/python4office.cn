@@ -1,8 +1,11 @@
----
+﻿---
+
 title: backend-study
 date: 2022-08-12 17:36:31
-tags:
+tags: [Python, AI编程]
+
 ---
+
 <!-- more -->
 害！非科班出身的程序员，到底差在哪里？
 

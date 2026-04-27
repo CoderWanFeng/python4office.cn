@@ -1,8 +1,11 @@
----
+﻿---
+
 title: pandas常用操作
 date: 2022-04-14 11:28:34
-tags:
+tags: [Python数据分析, pandas]
+
 ---
+
 
 <!-- more -->
 - 查看所有列的数据类型

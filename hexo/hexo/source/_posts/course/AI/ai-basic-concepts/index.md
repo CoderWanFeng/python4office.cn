@@ -1,11 +1,12 @@
----
+﻿---
+
 title: AI基础概念全29讲
 date: 2026-04-16 17:00:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - AI基础
 - 入门教程
 - AI词汇
@@ -14,7 +15,9 @@ tags:
 - AI入门
 order: 0
 description: AI基础概念全29讲，用大白话解释你会在新闻里看到的AI词汇。程序员晚枫出品，0基础也能看懂。
+
 ---
+
 
 # AI基础概念全29讲
 
