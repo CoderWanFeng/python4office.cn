@@ -4,8 +4,10 @@ title: "WorkBuddy Launches Expert Mode, They Take Naming AI Seriously"
 date: 2026-04-15 00:00:00
 categories:
   - AI Tools Review
-tags: [AI工具, WorkBuddy, 腾讯云]
+tags:
+  - AI工具
   - WorkBuddy
+  - 腾讯云
   - AI Expert
   - AI Tools
   - Product Review

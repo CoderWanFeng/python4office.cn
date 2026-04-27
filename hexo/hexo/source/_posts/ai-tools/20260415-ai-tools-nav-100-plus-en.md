@@ -4,12 +4,15 @@ title: "Most Complete AI Tools Navigation 2026: 100+ Free AI Software - ChatGPT,
 date: 2026-04-15 00:00:00
 categories:
   - AI Tools
-tags: [AI编程, AI工具, Cursor, ChatGPT, OpenAI]
+tags:
+  - AI编程
+  - AI工具
+  - Cursor
+  - ChatGPT
+  - OpenAI
   - AI Tools Navigation
   - AI Tools Collection
-  - ChatGPT
   - Midjourney
-  - Cursor
   - DeepSeek
   - Kimi
   - Doubao

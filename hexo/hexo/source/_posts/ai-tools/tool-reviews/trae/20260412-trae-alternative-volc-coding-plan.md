@@ -4,9 +4,10 @@ title: "Trae 免费模式排队太久？换个思路，便宜又快"
 date: 2026-04-12 00:00:00
 categories:
   - AI工具评测
-tags: [Trae, AI工具, AI编程]
-  - AI编程
+tags:
   - Trae
+  - AI工具
+  - AI编程
   - 火山方舟
   - Coding Plan
 description: "Trae 免费模式排队？火山方舟 Coding Plan 了解一下，便宜又快"

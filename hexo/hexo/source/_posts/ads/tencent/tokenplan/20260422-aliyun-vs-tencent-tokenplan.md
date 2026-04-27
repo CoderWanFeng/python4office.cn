@@ -2,12 +2,13 @@
 
 title: "【硬核对比】阿里云 Coding Plan vs 腾讯云 Token Plan，选错亏几千！"
 date: 2026-04-22 16:50:00
-tags: [大模型, Token Plan, AI编程, 腾讯云, Coding Plan]
+tags:
+  - 大模型
+  - Token Plan
   - AI编程
   - 腾讯云
-  - 阿里云
   - Coding Plan
-  - Token Plan
+  - 阿里云
   - Claude Code
   - Cursor
 categories: AI工具

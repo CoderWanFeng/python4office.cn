@@ -4,8 +4,12 @@ title: "MiniMax TOKEN Plan vs 智谱AI GLM：2026年最新价格对比测评"
 date: 2026-04-22 00:00:00
 categories:
   - AI工具横评
-tags: [大模型, Token Plan, AI编程, MiniMax, 腾讯云]
+tags:
+  - 大模型
+  - Token Plan
+  - AI编程
   - MiniMax
+  - 腾讯云
   - 智谱AI
   - GLM
   - ChatGLM

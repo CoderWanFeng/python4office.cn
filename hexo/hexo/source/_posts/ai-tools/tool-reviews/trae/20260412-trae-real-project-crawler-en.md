@@ -4,9 +4,11 @@ title: "Built a Crawler with Trae: Real Record of the Whole Process"
 date: 2026-04-12 00:00:00
 categories:
   - AI Tools Review
-tags: [Trae, AI工具, AI编程]
-  - AI Coding
+tags:
   - Trae
+  - AI工具
+  - AI编程
+  - AI Coding
   - Crawler
   - Practice
 description: "Used Trae AI coding to build a crawler, recording the whole process and real impressions"

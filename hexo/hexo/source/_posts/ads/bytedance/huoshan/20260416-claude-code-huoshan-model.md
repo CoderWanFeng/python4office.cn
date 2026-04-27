@@ -2,11 +2,13 @@
 
 title: Claude Code国内能装但用不了？接上火山方舟的模型，真香！
 date: 2026-04-16 00:00:00
-tags: [AI编程, Claude Code, AI工具, 火山方舟, 字节]
-  - Claude Code
-  - CC
+tags:
   - AI编程
+  - Claude Code
+  - AI工具
   - 火山方舟
+  - 字节
+  - CC
   - 国产替代
   - 模型配置
 categories:

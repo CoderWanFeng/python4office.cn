@@ -1,17 +1,17 @@
-﻿---
-
+---
 title: "Trae vs Cursor vs Windsurf：3大AI编程工具横评，帮你选"
 date: 2026-04-12 00:00:00
 categories:
   - AI工具评测
-tags: [Trae, AI编程, Python, AI工具, Cursor]
-  - AI编程
+tags:
   - Trae
+  - AI编程
+  - Python
+  - AI工具
   - Cursor
   - Windsurf
   - 工具对比
 description: "Trae vs Cursor vs Windsurf，3大AI编程工具横向对比，帮你找到最适合你的那一款"
-
 ---
 
 

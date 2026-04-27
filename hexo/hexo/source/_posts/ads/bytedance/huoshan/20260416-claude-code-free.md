@@ -2,10 +2,11 @@
 
 title: 2026年，Claude Code在国内其实可以免费用（附完整教程）
 date: 2026-04-16 00:00:00
-tags: [AI工具, AI编程, Claude Code]
+tags:
+  - AI工具
+  - AI编程
   - Claude Code
   - CC
-  - AI编程
   - 免费
   - 火山方舟
   - 白嫖

@@ -7,9 +7,9 @@ date: 2026-04-08 10:00:00
 categories:
   - AI工具
   - 腾讯云
-tags: [AI助手, OpenClaw, 腾讯云]
-  - OpenClaw
+tags:
   - AI助手
+  - OpenClaw
   - 腾讯云
   - 微信机器人
   - 智能助手

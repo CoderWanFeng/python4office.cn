@@ -2,10 +2,13 @@
 
 title: 为什么Claude和Copilot越来越贵？国内程序员的应对策略
 date: 2026-04-13 00:00:00
-tags: [GitHub Copilot, AI工具, AI编程, Claude Code]
+tags:
+  - GitHub Copilot
+  - AI工具
+  - AI编程
+  - Claude Code
   - Claude
   - Copilot
-  - AI编程
   - 火山方舟
   - 省钱
 categories:
