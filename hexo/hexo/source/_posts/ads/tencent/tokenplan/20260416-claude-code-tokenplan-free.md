@@ -2,13 +2,14 @@
 
 title: 2026年，Claude Code在国内其实可以免费用（腾讯云Token Plan版）
 date: 2026-04-16 00:00:00
-tags: [Token Plan, AI编程, Claude Code, AI工具, 腾讯云]
-  - Claude Code
-  - CC
-  - AI编程
-  - 免费
-  - 腾讯云
+tags:
   - Token Plan
+  - AI编程
+  - Claude Code
+  - AI工具
+  - 腾讯云
+  - CC
+  - 免费
   - 白嫖
 categories:
   - AI工具

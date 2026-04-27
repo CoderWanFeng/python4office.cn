@@ -3,7 +3,9 @@
 title: 马斯克出手了！X应用对标微信，AI时代超级应用之战打响
 date: 2026-04-14 10:50:00
 author: 晚枫
-tags: [Python, AI编程]
+tags:
+  - Python
+  - AI编程
   - AI
   - 马斯克
   - X应用

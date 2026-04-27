@@ -2,12 +2,13 @@
 
 title: Claude Code国内能装但用不了？接上腾讯云Token Plan的模型，真香！
 date: 2026-04-16 00:00:00
-tags: [Token Plan, AI编程, Claude Code, AI工具, 腾讯云]
-  - Claude Code
-  - CC
-  - AI编程
-  - 腾讯云
+tags:
   - Token Plan
+  - AI编程
+  - Claude Code
+  - AI工具
+  - 腾讯云
+  - CC
   - 国产替代
   - 模型配置
 categories:

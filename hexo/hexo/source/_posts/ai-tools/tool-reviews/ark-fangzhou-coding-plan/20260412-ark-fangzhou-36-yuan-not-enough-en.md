@@ -4,7 +4,12 @@ title: "Ark Coding Plan Says Unlimited Tools, But 36 Yuan Really Isn't Enough...
 date: 2026-04-12 00:00:00
 categories:
   - AI Tools Review
-tags: [大模型, AI编程, 火山方舟, 字节, Coding Plan]
+tags:
+  - 大模型
+  - AI编程
+  - 火山方舟
+  - 字节
+  - Coding Plan
   - Volcano Ark
   - Ark Coding Plan
   - Rant

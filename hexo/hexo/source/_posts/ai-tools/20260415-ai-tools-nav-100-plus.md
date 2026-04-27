@@ -4,19 +4,21 @@ title: "2026年最全AI工具导航：100+免费AI软件一网打尽（含ChatGP
 date: 2026-04-15 00:00:00
 categories:
   - AI工具
-tags: [AI编程, AI工具, Cursor, ChatGPT, OpenAI]
+tags:
+  - AI编程
+  - AI工具
+  - Cursor
+  - ChatGPT
+  - OpenAI
   - AI工具导航
   - AI工具大全
-  - ChatGPT
   - Midjourney
-  - Cursor
   - DeepSeek
   - Kimi
   - 豆包
   - Claude
   - AI办公
   - AI绘画
-  - AI编程
   - AI视频
   - AI搜索
   - GitHub Copilot

@@ -2,7 +2,8 @@
 
 title: 为什么最近程序员的AI编程工具都在集体涨价？
 date: 2026-04-13 00:00:00
-tags: [Python, AI编程]
+tags:
+  - Python
   - AI编程
   - Copilot涨价
   - 火山方舟
