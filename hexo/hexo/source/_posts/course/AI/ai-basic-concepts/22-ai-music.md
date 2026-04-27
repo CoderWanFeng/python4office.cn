@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是AI音乐？文字生成音乐的魔法
 date: 2026-04-16 17:21:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - AI音乐
 - Suno
 - Udio

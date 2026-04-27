@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是深度学习？让AI从"玩具"变成"超能力"的技术
 date: 2026-04-16 17:03:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - 深度学习
 - Deep Learning
 order: 10

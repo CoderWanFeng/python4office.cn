@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是微调？让通用AI变成你的"专属专家"
 date: 2026-04-16 17:14:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - Fine-tuning
 - 微调
 - 定制AI

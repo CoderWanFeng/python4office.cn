@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: Hermes是什么？和龙虾有啥区别？一个会"长大"的AI助手
 date: 2026-04-22 17:58:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - Hermes
 - AI Agent
 - OpenClaw

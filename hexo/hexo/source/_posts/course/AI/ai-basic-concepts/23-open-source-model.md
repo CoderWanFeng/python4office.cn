@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是开源大模型？免费的AI
 date: 2026-04-16 17:22:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - 开源大模型
 - 开源AI
 - DeepSeek

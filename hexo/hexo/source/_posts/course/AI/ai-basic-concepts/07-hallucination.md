@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 为什么AI会一本正经地胡说八道？揭秘"AI幻觉"
 date: 2026-04-16 17:00:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - AI幻觉
 - Hallucination
 order: 7

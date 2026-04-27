@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 为什么AI需要那么贵的显卡？揭秘GPU
 date: 2026-04-16 17:01:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - GPU
 - 显卡
 order: 8

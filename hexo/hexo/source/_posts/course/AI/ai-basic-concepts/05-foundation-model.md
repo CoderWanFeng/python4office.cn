@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是大模型？为什么AI圈总提这个概念
 date: 2026-04-16 16:58:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - 大模型
 - Foundation Model
 order: 5

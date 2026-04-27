@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: 什么是神经网络？AI的"大脑"是怎么工作的
 date: 2026-04-16 17:02:00
@@ -6,7 +6,9 @@ author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
+tags:
+- Python
+- AI编程
 - 神经网络
 - Neural Network
 order: 9
