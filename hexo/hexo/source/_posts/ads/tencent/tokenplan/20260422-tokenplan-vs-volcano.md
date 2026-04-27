@@ -1,7 +1,8 @@
----
+﻿---
+
 title: 腾讯云Token Plan vs 火山方舟：同样几十块，选哪个更值？
 date: 2026-04-22 16:39:00
-tags:
+tags: [Token Plan, AI编程, 火山方舟, 字节, 腾讯云]
   - 腾讯云
   - Token Plan
   - 火山方舟
@@ -10,7 +11,9 @@ tags:
   - 选型指南
 categories:
   - AI工具
+
 ---
+
 
 > 最近很多朋友问我："晚枫，腾讯云 Token Plan 和火山方舟 Coding Plan 都是几十块一个月，到底选哪个？"
 

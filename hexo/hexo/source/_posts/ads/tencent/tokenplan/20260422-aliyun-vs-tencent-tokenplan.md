@@ -1,7 +1,8 @@
----
+﻿---
+
 title: "【硬核对比】阿里云 Coding Plan vs 腾讯云 Token Plan，选错亏几千！"
 date: 2026-04-22 16:50:00
-tags:
+tags: [大模型, Token Plan, AI编程, 腾讯云, Coding Plan]
   - AI编程
   - 腾讯云
   - 阿里云
@@ -10,7 +11,9 @@ tags:
   - Claude Code
   - Cursor
 categories: AI工具
+
 ---
+
 
 > 最近阿里云和腾讯云都推出了 AI 编程订阅套餐，但很多同学不知道怎么选。今天我就从**价格、模型、功能**三个维度做个硬核对比，看完你就知道该选哪个了。
 

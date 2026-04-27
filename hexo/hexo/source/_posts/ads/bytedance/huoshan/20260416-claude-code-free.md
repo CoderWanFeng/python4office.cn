@@ -1,7 +1,8 @@
----
+﻿---
+
 title: 2026年，Claude Code在国内其实可以免费用（附完整教程）
 date: 2026-04-16 00:00:00
-tags:
+tags: [AI工具, AI编程, Claude Code]
   - Claude Code
   - CC
   - AI编程
@@ -10,7 +11,9 @@ tags:
   - 白嫖
 categories:
   - AI工具
+
 ---
+
 
 > "Claude Code 太贵了，一个月好几百，学生党真的用不起。"
 

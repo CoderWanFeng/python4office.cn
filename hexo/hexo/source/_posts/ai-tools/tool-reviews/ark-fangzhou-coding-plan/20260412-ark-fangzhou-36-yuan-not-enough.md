@@ -1,15 +1,18 @@
----
+﻿---
+
 title: "方舟 Coding Plan 说工具不限，但36块真的不够用..."
 date: 2026-04-12 00:00:00
 categories:
   - AI工具评测
-tags:
+tags: [大模型, Coding Plan, AI编程]
   - 火山方舟
   - 方舟 Coding Plan
   - 吐槽
   - AI编程
 description: "方舟 Coding Plan 支持那么多模型，Doubao、GLM、DeepSeek、Kimi、MiniMax...但36块一个月，根本不够用啊"
+
 ---
+
 
 <!-- more -->
 # 方舟 Coding Plan 说工具不限，但36块真的不够用...

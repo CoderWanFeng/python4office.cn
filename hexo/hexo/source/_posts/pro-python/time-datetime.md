@@ -1,8 +1,11 @@
----
+﻿---
+
 title: time-datetime
 date: 2022-08-05 13:55:03
-tags:
+tags: [Python, AI编程]
+
 ---
+
 <!-- more -->
 ![](https://www.python-office.com/api/img-cdn/pro-python/time-datetime/cover.jpg)
 

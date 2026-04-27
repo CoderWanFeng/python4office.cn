@@ -1,8 +1,11 @@
----
+﻿---
+
 title: 想当程序员吗？这11所大学计算机专业堪称国内顶级，高考考生千万不要错过
 date: 2022-06-07 11:30:24
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 
 <p align="center" id='进群-banner-AI'>

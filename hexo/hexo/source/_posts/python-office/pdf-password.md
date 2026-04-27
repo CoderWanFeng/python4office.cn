@@ -1,8 +1,11 @@
----
+﻿---
+
 title: 1行python代码，实现PDF加密、解密
 date: 2022-05-09 19:44:42
-tags:
+tags: [Python自动化办公, Python, PDF自动化, AI编程]
+
 ---
+
 
 <!-- more -->
 <p align="center">

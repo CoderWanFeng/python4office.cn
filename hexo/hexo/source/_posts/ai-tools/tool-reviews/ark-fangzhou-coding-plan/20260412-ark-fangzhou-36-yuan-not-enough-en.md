@@ -1,15 +1,18 @@
----
+﻿---
+
 title: "Ark Coding Plan Says Unlimited Tools, But 36 Yuan Really Isn't Enough..."
 date: 2026-04-12 00:00:00
 categories:
   - AI Tools Review
-tags:
+tags: [大模型, AI编程, 火山方舟, 字节, Coding Plan]
   - Volcano Ark
   - Ark Coding Plan
   - Rant
   - AI Coding
 description: "Ark Coding Plan supports so many models, Doubao, GLM, DeepSeek, Kimi, MiniMax... but 36 yuan per month, I can't last a week"
+
 ---
+
 
 <!-- more -->
 # Ark Coding Plan Says Unlimited Tools, But 36 Yuan Really Isn't Enough...

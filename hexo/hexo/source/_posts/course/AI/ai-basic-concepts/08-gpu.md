@@ -1,16 +1,19 @@
----
+﻿---
+
 title: 为什么AI需要那么贵的显卡？揭秘GPU
 date: 2026-04-16 17:01:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - GPU
 - 显卡
 order: 8
 description: 新闻总说GPU短缺、显卡涨价，到底是怎么回事？程序员晚枫用大白话揭秘GPU，让你看懂为什么AI离不开这块"昂贵的心脏"！
+
 ---
+
 
 > **作者：程序员晚枫**
 

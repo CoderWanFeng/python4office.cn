@@ -1,16 +1,19 @@
----
+﻿---
+
 title: 什么是大模型？为什么AI圈总提这个概念
 date: 2026-04-16 16:58:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - 大模型
 - Foundation Model
 order: 5
 description: 新闻总说"百亿参数大模型"、"千亿级模型"，到底有多大？程序员晚枫用大白话帮你搞懂大模型，看完就明白为什么有的AI这么贵！
+
 ---
+
 
 > **作者：程序员晚枫**
 

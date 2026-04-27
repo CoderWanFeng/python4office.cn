@@ -1,8 +1,11 @@
----
+﻿---
+
 title: pys-test
 date: 2022-12-17 03:16:55
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 <!-- more -->
 ## 相关阅读

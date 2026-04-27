@@ -1,14 +1,17 @@
----
+﻿---
+
 title: AtomCode是什么？Claude Code的开源替代，用自然语言写代码
 date: 2026-04-22 00:00:00
 categories:
 - AI基础概念
-tags:
+tags: [AI工具, AI编程, Claude Code]
 - AtomCode
 - AI编程
 - Claude Code
 - 开源
+
 ---
+
 
 你有没有过这种感觉——想做一个工具，但一想到要写代码就放弃了？或者拿到一个开源项目，看了两眼就关掉了，因为根本不知道从哪入手？
 

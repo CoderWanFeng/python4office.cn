@@ -1,7 +1,8 @@
----
+﻿---
+
 title: 为什么Claude和Copilot越来越贵？国内程序员的应对策略
 date: 2026-04-13 00:00:00
-tags:
+tags: [GitHub Copilot, AI工具, AI编程, Claude Code]
   - Claude
   - Copilot
   - AI编程
@@ -9,7 +10,9 @@ tags:
   - 省钱
 categories:
   - AI工具
+
 ---
+
 
 > 最近看到一句话："2025年是AI编程工具元年，2026年是AI编程工具涨价年。"
 

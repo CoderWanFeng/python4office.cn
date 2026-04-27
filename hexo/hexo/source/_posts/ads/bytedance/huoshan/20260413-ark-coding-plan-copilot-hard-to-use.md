@@ -1,7 +1,8 @@
----
+﻿---
+
 title: 2026年了，为什么GitHub Copilot反而越来越难用了？
 date: 2026-04-13 00:00:00
-tags:
+tags: [GitHub Copilot, 开源, AI编程, GitHub]
   - Copilot
   - GitHub
   - AI编程
@@ -9,7 +10,9 @@ tags:
   - 国内替代
 categories:
   - AI工具
+
 ---
+
 
 > "Copilot涨价了，我忍了。但最近连基本的补全都卡成PPT，这就忍不了了啊！"
 

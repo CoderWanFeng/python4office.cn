@@ -1,8 +1,11 @@
----
+﻿---
+
 title: "533-Page PDF: Python 3 Programmer's Guide (Second Edition)"
 date: 2022-12-10 04:33:56
-tags: []
+tags: [Python自动化办公, Python, PDF自动化, AI编程]
+
 ---
+
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>

@@ -1,16 +1,19 @@
----
+﻿---
+
 title: "Trae vs Cursor vs Windsurf: 3 Major AI Coding Tools Comparison, Help You Choose"
 date: 2026-04-12 00:00:00
 categories:
   - AI Tools Review
-tags:
+tags: [Trae, AI工具, AI编程, Cursor]
   - AI Coding
   - Trae
   - Cursor
   - Windsurf
   - Tool Comparison
 description: "Trae vs Cursor vs Windsurf, horizontal comparison of 3 major AI coding tools, help you find the one best for you"
+
 ---
+
 
 <!-- more -->
 # Trae vs Cursor vs Windsurf: 3 Major AI Coding Tools Comparison, Help You Choose

@@ -1,17 +1,20 @@
----
+﻿---
+
 title: 什么是嵌入？AI是怎么"理解"文字含义的
 date: 2026-04-16 17:15:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - Embedding
 - 向量
 - 语义搜索
 order: 16
 description: AI是怎么理解"苹果"既是水果又是手机的？程序员晚枫用大白话揭秘嵌入技术！
+
 ---
+
 
 > **作者：程序员晚枫**
 

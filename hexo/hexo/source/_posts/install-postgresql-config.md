@@ -1,8 +1,11 @@
----
+﻿---
+
 title: install-postgresql-config
 date: 2022-09-09 10:37:00
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 <!-- more -->
 查看用户和密码

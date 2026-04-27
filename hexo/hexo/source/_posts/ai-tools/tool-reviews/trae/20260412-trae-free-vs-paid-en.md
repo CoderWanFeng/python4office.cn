@@ -1,15 +1,18 @@
----
+﻿---
+
 title: "Trae Free vs Paid: How Big is the Feature Gap? Real Test Tells You"
 date: 2026-04-12 00:00:00
 categories:
   - AI Tools Review
-tags:
+tags: [Trae, AI工具, AI编程]
   - AI Coding
   - Trae
   - Free
   - Paid
 description: "What's the difference between Trae free and paid? Is it worth upgrading? Real comparison tells you"
+
 ---
+
 
 <!-- more -->
 # Trae Free vs Paid: How Big is the Feature Gap? Real Test Tells You

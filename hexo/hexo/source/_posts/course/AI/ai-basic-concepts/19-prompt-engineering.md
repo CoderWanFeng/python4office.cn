@@ -1,17 +1,20 @@
----
+﻿---
+
 title: 什么是提示词工程？让AI听懂你的高级技巧
 date: 2026-04-16 17:18:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - 提示词
 - Prompt
 - 提示词工程
 order: 19
 description: 为什么同样的AI，别人用得那么溜？程序员晚枫用大白话揭秘提示词工程，让你掌握和AI高效沟通的秘诀！
+
 ---
+
 
 > **作者：程序员晚枫**
 

@@ -1,11 +1,12 @@
----
+﻿---
+
 title: 什么是Cursor？
 date: 2026-04-16 17:31:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [AI工具, AI编程, Cursor]
 - Cursor
 - AI编程
 - AI写代码
@@ -13,7 +14,9 @@ tags:
 - Copilot
 order: 28
 description: 什么是Cursor？程序员晚枫用通俗语言解释，这个让程序员效率翻倍的AI编程工具到底是什么。
+
 ---
+
 
 # 什么是Cursor？
 

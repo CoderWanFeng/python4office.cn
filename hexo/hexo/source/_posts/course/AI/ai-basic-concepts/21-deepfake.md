@@ -1,17 +1,20 @@
----
+﻿---
+
 title: 什么是AI换脸？假视频的时代来了
 date: 2026-04-16 17:20:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - AI换脸
 - Deepfake
 - AIGC
 order: 21
 description: 视频里的人是真的吗？程序员晚枫用大白话揭秘AI换脸，让你学会识别假视频！
+
 ---
+
 
 > **作者：程序员晚枫**
 

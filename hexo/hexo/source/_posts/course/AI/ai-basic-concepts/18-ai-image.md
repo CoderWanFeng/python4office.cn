@@ -1,11 +1,12 @@
----
+﻿---
+
 title: 什么是AI画图？文字生成图片的魔法
 date: 2026-04-16 17:17:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags:
+tags: [Python, AI编程]
 - AI画图
 - AI绘图
 - AIGC
@@ -13,7 +14,9 @@ tags:
 - Stable Diffusion
 order: 18
 description: 为什么AI能画画？程序员晚枫用大白话揭秘AI画图技术，让你了解文字生成图片的魔法！
+
 ---
+
 
 > **作者：程序员晚枫**
 

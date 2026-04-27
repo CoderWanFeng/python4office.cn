@@ -1,8 +1,11 @@
----
+﻿---
+
 title: mac-on-win
 date: 2022-08-01 00:02:21
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 <!-- more -->
 - 安装vmware

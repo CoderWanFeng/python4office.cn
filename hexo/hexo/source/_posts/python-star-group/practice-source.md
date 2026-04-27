@@ -1,8 +1,11 @@
----
+﻿---
+
 title: practice-source
 date: 2022-07-11 14:12:57
-tags:
+tags: [Python, AI编程]
+
 ---
+
 
 <!-- more -->
 我学习Python的时候，也会遇到这个问题。

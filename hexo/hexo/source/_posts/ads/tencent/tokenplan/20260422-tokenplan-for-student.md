@@ -1,7 +1,8 @@
----
+﻿---
+
 title: 学生党必看：我是如何用腾讯云Token Plan从零开始学AI编程的
 date: 2026-04-22 16:39:00
-tags:
+tags: [Python, 腾讯云, Token Plan, AI编程]
   - 腾讯云
   - Token Plan
   - 学生党
@@ -10,7 +11,9 @@ tags:
   - 学习指南
 categories:
   - 教程
+
 ---
+
 
 > "晚枫，我是计算机专业的学生，想学 AI 编程，但 Copilot 太贵了，有没有适合学生的方案？"
 
