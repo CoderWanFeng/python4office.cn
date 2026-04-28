@@ -131,6 +131,9 @@ cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&
 
 > 原价 ¥799，限时立减 ¥300！
 
+### 🎁 首发福利
+前50名报名的同学，**免费赠送《Python编程：从入门到实践（第3版）》实体书1本**！
+
 ### 扫码立即报名
 
 ![Python编程：从入门到实践（第3版） .png](https://raw.atomgit.com/user-images/assets/5027920/a8bdeb7d-f6a8-4ad5-8020-e206055dd039/Python编程：从入门到实践_第3版__.png 'Python编程：从入门到实践（第3版） .png')
