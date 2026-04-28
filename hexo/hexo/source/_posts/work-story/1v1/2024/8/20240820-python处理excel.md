@@ -2,6 +2,7 @@
 title: 写一个Excel数据分析的软件，应该怎么学习？
 date: 2024-08-20 00:24:04
 tags: 1v1
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

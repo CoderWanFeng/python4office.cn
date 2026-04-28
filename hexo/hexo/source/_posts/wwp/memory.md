@@ -2,6 +2,7 @@
 title: C语言学习笔记
 date: 2025-06-29 8:56:36
 tags: [wwp,c语言]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

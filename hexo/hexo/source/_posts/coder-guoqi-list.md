@@ -2,6 +2,7 @@
 title: 值得程序员加入的173家国企汇总，网友：这下彻底躺平了！
 date: 2022-11-25 20:27:54
 tags: 职场
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

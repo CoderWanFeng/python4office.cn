@@ -2,6 +2,7 @@
 title: 开源项目同步不再难！一招搞定GitHub、Gitee、atomgit三平台
 date: 2025-04-16 23:25:17
 tags: 开源
+cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
 
 

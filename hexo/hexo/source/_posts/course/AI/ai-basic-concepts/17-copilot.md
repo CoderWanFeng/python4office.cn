@@ -13,6 +13,7 @@ tags:
 order: 17
 description: 程序员为什么现在写代码这么快？程序员晚枫用大白话揭秘Copilot，让你了解AI编程助手！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

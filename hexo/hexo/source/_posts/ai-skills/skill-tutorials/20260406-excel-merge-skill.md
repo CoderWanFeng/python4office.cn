@@ -3,6 +3,7 @@ title: Excel批量合并Skill使用指南：3分钟合并100个表格
 date: 2026-04-06 10:38:00
 tags: [Excel, Skill, 批量合并, AI办公, 教程]
 categories: [AI Skills, Skill使用教程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center">

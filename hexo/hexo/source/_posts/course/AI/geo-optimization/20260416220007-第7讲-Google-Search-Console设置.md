@@ -2,6 +2,7 @@
 title: 第 7 讲：Google Search Console 设置
 date: 2026-04-16 22:06:00
 tags: [GEO优化, SEO, Google Search Console, 网站管理]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" name="atomgit">

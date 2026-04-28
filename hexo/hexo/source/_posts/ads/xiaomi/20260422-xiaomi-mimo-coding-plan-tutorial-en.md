@@ -5,6 +5,7 @@ description: "Programmer Wanfeng's hands-on guide to Xiaomi MiMo Coding Plan —
 date: 2026-04-22 21:45:00
 tags: ["Xiaomi", "MiMo", "Coding Plan Tutorial", "Xiaomi Ecosystem Development"]
 categories: ["AI Programming", "Tutorial"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

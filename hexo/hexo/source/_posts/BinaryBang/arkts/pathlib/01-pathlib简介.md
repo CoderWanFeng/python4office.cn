@@ -2,6 +2,7 @@
 title: 鸿蒙ArkUI开发|文件路径管理好帮手pathlib
 date: 2025-07-05 23:46:00 
 tags: [鸿蒙开发,pathlib,文件管理]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

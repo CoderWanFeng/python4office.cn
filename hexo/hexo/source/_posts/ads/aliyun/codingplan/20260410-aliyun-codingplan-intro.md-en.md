@@ -5,6 +5,7 @@ description: Programmer Wan Feng recommends: Alibaba Cloud Coding Plan starts at
 date: 2026-04-10 02:56:00
 tags: [Alibaba Cloud Coding Plan, Alibaba Cloud Bailian Coding Plan, Tongyi Lingma, AI Programming Tool, Qianwen Code Model, Qwen Coder, Programmer Wan Feng]
 categories: [AI Programming, Tool Recommendation]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

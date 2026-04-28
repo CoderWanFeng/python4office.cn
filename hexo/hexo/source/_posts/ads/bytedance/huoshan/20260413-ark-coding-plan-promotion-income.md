@@ -5,6 +5,7 @@ description: 程序员晚枫真实分享：我如何通过推广火山方舟Codi
 date: 2026-04-13 00:00:00
 tags: [AI工具推广, 火山方舟推广, 副业赚钱, 推广佣金, AI编程副业, 程序员晚枫]
 categories: [AI编程, 副业变现]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

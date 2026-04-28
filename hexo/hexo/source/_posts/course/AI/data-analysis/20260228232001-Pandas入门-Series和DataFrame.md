@@ -2,6 +2,7 @@
 title: Pandas入门：我用2个数据结构，搞定了所有表格数据处理
 date: 2026-02-28 23:20:00
 tags: [数据分析, Pandas, Series, DataFrame]
+cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

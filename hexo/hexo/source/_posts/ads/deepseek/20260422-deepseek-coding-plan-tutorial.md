@@ -4,6 +4,7 @@ date: 2026-04-22 19:25:00
 tags: ["deepseek", "coding plan教程", "api调用", "本地部署", "开源"]
 categories: ["DeepSeek实战"]
 description: "程序员晚枫手把手教你玩DeepSeek Coding Plan，API调用和本地部署两种玩法，总有一款适合你。"
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

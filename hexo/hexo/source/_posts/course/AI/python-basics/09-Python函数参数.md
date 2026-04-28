@@ -2,6 +2,7 @@
 title: Python函数参数*args和**kwargs：我面试挂3次后才搞懂的知识点
 date: 2026-02-28 17:28:00
 tags: [Python基础, 函数, 面试题]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

@@ -2,6 +2,7 @@
 title: siri-chatgpt-github
 date: 2023-02-28 21:46:32
 tags: AI
+cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
 
 

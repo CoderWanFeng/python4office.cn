@@ -2,6 +2,7 @@
 title: 免费搭建一个有脾气的聊天机器人,1行Python代码就够了！
 date: 2023-06-30 22:24:23
 tags: 机器人
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

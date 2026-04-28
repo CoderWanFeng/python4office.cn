@@ -5,6 +5,7 @@ description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng re
 date: 2026-04-22 22:45:00
 tags: [Huawei, Baidu Smart Cloud, Ernie Bot, Coding Plan, Programmer Wan Feng]
 categories: [AI Programming, Tool Review]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

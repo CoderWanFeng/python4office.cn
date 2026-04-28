@@ -2,6 +2,7 @@
 title: 月薪20k的Python开发，面试必问的5个问题
 date: 2022-10-31 01:24:25
 tags: 面试
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

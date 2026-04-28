@@ -2,6 +2,7 @@
 title: "Python PPT转图片：1键导出所有页面为高清图片，支持PNG/JPG格式"
 date: 2025-08-14 00:41:49
 tags: [星河计划]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -2,6 +2,7 @@
 title: pipreqs：快速准确生成当前项目的requirements.txt，还有和freeze的对比
 date: 2024-11-10 00:41:49
 tags: [第三方库,pip]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

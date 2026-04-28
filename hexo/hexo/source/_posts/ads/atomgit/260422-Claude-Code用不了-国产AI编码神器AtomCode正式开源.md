@@ -4,6 +4,7 @@ date: 2026-04-22 14:00:00
 tags: ["AI编程", "AtomCode", "开源工具"]
 categories: ["AI工具"]
 description: "Claude Code也能接国产大模型！AtomCode：免费+稳定+中文友好"
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='进群-banner-AI'>

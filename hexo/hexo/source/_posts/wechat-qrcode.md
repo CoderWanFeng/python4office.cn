@@ -2,6 +2,7 @@
 title: 我的微信二维码
 date: 2022-03-26 16:42:38
 tags: 联系我
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

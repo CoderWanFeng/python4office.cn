@@ -2,6 +2,7 @@
 title: 使用Python为 PDF 增加目录
 date: 2022-02-15 09:34:57
 tags: PDF
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 对于需要归档收集的人而言，PDF 无疑是一个绝佳的选择，但有些我们转换或下载的 PDF 可能出现没有目录的情况，这对于快速查找十分的不便。

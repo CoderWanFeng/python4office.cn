@@ -3,6 +3,7 @@ title: "Daily Report Auto-Generation Skill Configuration Tutorial: Save 30 Minut
 date: 2026-04-06 10:44:00
 tags: [Daily Report, Automation, Skill, AI Office, Work Report, Tutorial]
 categories: [AI Skills, Skill Tutorial]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center">

@@ -2,6 +2,7 @@
 title: 我用AI做副业，月入过万：5个普通人也能上手的AI变现方法
 date: 2025-04-05 17:30:00
 tags: AI
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

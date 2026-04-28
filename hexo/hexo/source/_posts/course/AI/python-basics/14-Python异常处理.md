@@ -2,6 +2,7 @@
 title: Python异常处理：我写了5年代码，总结的异常处理最佳实践
 date: 2026-02-28 18:59:00
 tags: [Python基础, 异常处理, 调试]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

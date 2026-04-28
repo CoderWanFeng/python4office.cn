@@ -3,6 +3,7 @@ title: "2026年AI搜索量暴涨的5个关键词，第2个让人意想不到！"
 date: 2026-04-10 02:40:00
 tags: ["AI", "DeepSeek", "AI Agent", "豆包", "AI副业", "AI办公"]
 categories: ["AI工具"]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

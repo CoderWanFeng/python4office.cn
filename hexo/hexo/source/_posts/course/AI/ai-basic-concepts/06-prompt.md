@@ -14,6 +14,7 @@ tags:
 order: 6
 description: 为什么AI有时候很"笨"？可能是你没问好！程序员晚枫用大白话教你写好提示词，让AI听懂你的话、干出你想要的事！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

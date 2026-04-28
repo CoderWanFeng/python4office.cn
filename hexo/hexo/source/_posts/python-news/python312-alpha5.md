@@ -2,6 +2,7 @@
 title: 定了！Python3.12将于今年发布，附体验版下载地址
 date: 2023-02-25 01:07:57
 tags: 下载
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -3,6 +3,7 @@ title: Skills 从入门到实践 - 系统课程
 date: 2026-04-08 00:00:00
 tags: [AI, Skill, 课程, 教程]
 description: 一套完整的 AI Skill 学习路径，从零基础到独立开发、部署、变现
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

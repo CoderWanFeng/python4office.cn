@@ -5,6 +5,7 @@ description: 程序员晚枫深度解析：华为云虽然没有 Coding Plan，�
 date: 2026-04-22 20:25:00
 tags: [华为云, 盘古大模型, 昇腾 AI, 开发者服务]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

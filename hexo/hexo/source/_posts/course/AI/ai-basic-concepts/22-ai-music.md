@@ -16,6 +16,7 @@ tags:
 order: 22
 description: 为什么AI能作曲唱歌？程序员晚枫用大白话揭秘AI音乐，让你了解文字生成音乐的魔法！
 
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 

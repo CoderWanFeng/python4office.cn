@@ -5,6 +5,7 @@ description: 华为暂时没有 Coding Plan？程序员晚枫推荐 Moonshot Kim
 date: 2026-04-22 23:15:00
 tags: [华为, Moonshot, Kimi, Coding Plan, 长文本]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

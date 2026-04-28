@@ -2,6 +2,7 @@
 title: 第一讲：从「跑在开发机」到「交付给任何人」——pyinstaller 的初心与路线图
 date: 2025-07-14 01:41:49
 tags: [第三方库,pyinstaller]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

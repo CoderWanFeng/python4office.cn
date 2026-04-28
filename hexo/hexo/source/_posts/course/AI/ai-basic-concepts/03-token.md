@@ -13,6 +13,7 @@ tags:
 order: 3
 description: 新闻总说Token计费、32K上下文窗口，到底是个啥？程序员晚枫用大白话帮你3分钟搞懂AI的计费逻辑，看完再也不怕被坑！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

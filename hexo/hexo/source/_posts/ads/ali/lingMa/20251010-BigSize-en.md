@@ -2,6 +2,7 @@
 title: Tongyi Lingma is Great, But It's Too Large
 date: 2025-10-10 16:24:04
 tags: Tongyi Lingma
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

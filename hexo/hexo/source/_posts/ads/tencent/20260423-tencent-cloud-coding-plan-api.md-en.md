@@ -5,6 +5,7 @@ description: Programmer Wan Feng teaches you: Tencent Cloud Coding Plan API inte
 date: 2026-04-23 15:00:00
 tags: [Tencent Cloud, Tencent Hunyuan, API Tutorial, AI Programming]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

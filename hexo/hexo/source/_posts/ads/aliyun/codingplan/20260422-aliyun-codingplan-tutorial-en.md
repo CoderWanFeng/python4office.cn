@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["Alibaba Cloud", "coding plan", "ai programming", "tutorial"]
 categories: ["Alibaba Cloud Coding Plan"]
 description: "Alibaba Cloud Coding Plan practical tutorial: from registration to usage, this one article is enough. Includes registration steps, usage methods, and notes."
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

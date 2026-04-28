@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["ai agent", "ai programming", "openclaw", "coze"]
 categories: ["2026 Hot Topics"]
 description: "AI Agent actual landing cases (5), manufacturing, insurance, banking, logistics, e-commerce, you'll know how to use them after reading."
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

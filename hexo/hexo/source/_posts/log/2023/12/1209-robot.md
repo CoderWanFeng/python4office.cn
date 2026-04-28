@@ -2,6 +2,7 @@
 title: Python终于可以操作微信了
 date: 2023-12-9 13:16:17
 tags: 自动化办公
+cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

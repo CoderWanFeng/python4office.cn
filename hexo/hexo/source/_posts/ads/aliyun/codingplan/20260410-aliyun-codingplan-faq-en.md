@@ -4,6 +4,7 @@ tags: [Alibaba Cloud Coding Plan FAQ, Alibaba Cloud Bailian Coding Plan Question
 categories: [AI Programming, Common Questions]
 date: 2026-04-10 02:58:00
 description: Programmer Wanfeng's compilation: Alibaba Cloud Coding Plan FAQ, all 20 questions you want to know are here, covering subscription, models, tools, and usage.
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: Gitlab下架了，国内有哪些替代平台？
 date: 2024-12-25 03:16:36
 tags: 热点
+cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
 
 

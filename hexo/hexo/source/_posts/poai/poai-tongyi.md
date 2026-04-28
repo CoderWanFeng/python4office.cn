@@ -2,6 +2,7 @@
 title: 1行Python代码，对话通义大模型，网友：太方便了！
 date: 2023-02-08 23:09:03
 tags: [人工智能,chatgpt]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 

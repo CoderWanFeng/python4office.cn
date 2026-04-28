@@ -5,6 +5,7 @@ description: 程序员晚枫出品：腾讯云TOKEN Plan完全指南，告别COD
 date: 2026-04-10 02:53:00
 tags: [腾讯云TOKEN Plan指南, TOKEN Plan怎么用, CODING Plan替代方案, AI编程按量计费, 腾讯云AI编程, 程序员晚枫]
 categories: [AI编程, 完整指南]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

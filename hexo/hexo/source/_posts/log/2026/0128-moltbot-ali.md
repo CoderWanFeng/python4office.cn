@@ -2,6 +2,7 @@
 title: Moltbot（原名：Clawdbot）全套国内部署教程
 date: 2026-01-28 20:55:56
 tags: 自媒体
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='进群-banner-AI'>

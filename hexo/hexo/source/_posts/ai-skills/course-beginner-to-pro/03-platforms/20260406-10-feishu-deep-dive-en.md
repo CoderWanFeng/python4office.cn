@@ -3,6 +3,7 @@ title: "Lecture 10: Feishu CLI Platform Deep Dive"
 date: 2026-04-06 16:00:00
 tags: ["AI Skill", "Feishu", "CLI", "Enterprise"]
 categories: ["AI Skills Course"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

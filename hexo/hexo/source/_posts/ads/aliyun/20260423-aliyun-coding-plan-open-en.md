@@ -4,6 +4,7 @@ tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, Coding Plan Tutorial, AI Programm
 categories: [AI Programming, Tutorial]
 date: 2026-04-23 17:30:00
 description: Programmer Wanfeng teaches you step by step how to activate Alibaba Cloud Bailian Coding Plan, experience Tongyi Qianwen large model for 29 yuan/month, with detailed guide and images.
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

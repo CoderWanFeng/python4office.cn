@@ -5,6 +5,7 @@ tags: [裁员, 职场, 30岁, 人生感悟]
 categories: [成长故事]
 keywords: [30岁裁员, 职场危机, 程序员被裁, 人生感悟]
 description: 一个30岁程序员被裁员后的真实记录，那一夜他想了什么，后来又做了什么。
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 # 30岁，我被裁员了：那一夜，我终于想明白了一件事

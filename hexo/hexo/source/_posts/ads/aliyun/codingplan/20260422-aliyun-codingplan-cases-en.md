@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["Alibaba Cloud", "coding plan", "user cases"]
 categories: ["Alibaba Cloud Coding Plan"]
 description: "Alibaba Cloud Coding Plan user cases: 3 real stories of students, office workers, and entrepreneurs. You'll know how to use it after reading."
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

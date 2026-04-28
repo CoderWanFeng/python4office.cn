@@ -2,6 +2,7 @@
 title: 梅西进球了！用Python预测世界杯冠军竟然是 ... 网友：痛，太痛了！
 date: 2022-11-27 05:44:23
 tags: 人工智能
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1000&auto=format&fit=crop
 ---
 
 

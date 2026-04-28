@@ -2,6 +2,7 @@
 title: "409-Page PDF: Python - Automate the Boring Stuff"
 date: 2022-11-20 23:44:09
 tags: ["E-book"]
+cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='进群-banner-AI'>

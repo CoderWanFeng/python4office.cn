@@ -3,6 +3,7 @@ title: Coze工作流让你一个人顶一个团队
 date: 2026-04-19 11:00:00
 tags: [Coze, 工作流, AI自动化, 效率提升]
 categories: [AI工具, 工作流自动化]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 # Coze工作流让你一个人顶一个团队

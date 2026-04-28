@@ -2,6 +2,7 @@
 title: 2025年，程序员还需要学编程吗？我的答案可能和你想的不一样
 date: 2025-04-05 17:00:00
 tags: AI
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: 第 15 讲：GIL 全局解释器锁——原理、影响与应对策略
 date: 2026-03-03 11:15:00
 tags: [python, CPython, GIL, 全局解释器锁]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

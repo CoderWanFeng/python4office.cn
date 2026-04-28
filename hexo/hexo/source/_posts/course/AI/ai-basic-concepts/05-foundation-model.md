@@ -14,6 +14,7 @@ tags:
 order: 5
 description: 新闻总说"百亿参数大模型"、"千亿级模型"，到底有多大？程序员晚枫用大白话帮你搞懂大模型，看完就明白为什么有的AI这么贵！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

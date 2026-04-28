@@ -2,6 +2,7 @@
 title: Python程序员面试会问啥？
 date: 2022-02-14 21:15:40
 tags: 面试
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <div align="center">

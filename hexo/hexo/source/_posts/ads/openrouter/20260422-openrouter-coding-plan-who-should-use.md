@@ -5,6 +5,7 @@ description: 程序员晚枫分析：OpenRouter Coding Plan 适合哪些人？�
 date: 2026-04-22 20:50:00
 tags: [OpenRouter, Coding Plan 选购, 全球模型, 选购建议]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

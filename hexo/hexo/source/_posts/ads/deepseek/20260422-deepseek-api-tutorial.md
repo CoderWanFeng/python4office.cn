@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: [deepseek,api,ai编程
 categories: [ai工具]
 description: DeepSeek API完整教程：从注册到使用，看这一篇就够了。包含注册步骤、使用方法、代码示例、注意事项。
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

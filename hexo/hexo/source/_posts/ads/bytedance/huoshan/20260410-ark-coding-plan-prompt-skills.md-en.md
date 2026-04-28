@@ -5,6 +5,7 @@ description: Shared by Programmer Wan Feng: Volcano Ark Coding Plan Prompt skill
 date: 2026-04-10 00:04:00
 tags: [Volcano Ark Coding Plan Prompt, AI Programming Prompt Skills, Prompt Engineering, Code Generation Optimization, Volcano Engine Tips, Programmer Wan Feng]
 categories: [AI Programming, Prompt Engineering]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

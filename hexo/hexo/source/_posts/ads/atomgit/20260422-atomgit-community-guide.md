@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["atomgit", "ai编程", "社区"]
 categories: ["AI工具"]
 description: "AtomGit AI编程社区入驻指南！手把手教你加入~"
+cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

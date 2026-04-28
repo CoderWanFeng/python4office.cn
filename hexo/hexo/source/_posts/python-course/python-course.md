@@ -2,6 +2,7 @@
 title: Python知识图谱+免费资源整合
 date: 2022-06-06 13:49:42
 tags: 免费教程
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: 白开水AI社区，AI创作汇总
 date: 2026-01-16 16:30:10
 tags: [个人网站]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

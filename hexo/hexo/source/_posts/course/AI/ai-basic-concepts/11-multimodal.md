@@ -14,6 +14,7 @@ tags:
 order: 11
 description: 为什么现在AI能看图、能听声音、还能说话？程序员晚枫用大白话揭秘多模态AI，让你理解AI的"全能进化"！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

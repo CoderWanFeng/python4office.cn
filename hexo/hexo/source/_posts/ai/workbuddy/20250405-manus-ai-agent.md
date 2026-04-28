@@ -2,6 +2,7 @@
 title: Manus爆火背后：AI Agent正在重新定义"程序员"这个职业
 date: 2025-04-05 15:30:00
 tags: AI
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

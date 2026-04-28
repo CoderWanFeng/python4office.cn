@@ -2,6 +2,7 @@
 title: 临危受命给学生上Python课，怎么办？我很捉急
 date: 2025-02-22 22:22:05
 tags: 1v1
+cover: https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1200&auto=format&fit=crop
 ---
 
 

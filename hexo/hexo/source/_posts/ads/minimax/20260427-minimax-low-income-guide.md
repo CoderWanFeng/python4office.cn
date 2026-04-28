@@ -5,6 +5,7 @@ description: 程序员晚枫推荐：月薪3000也能用上AI编程！MiniMax 26
 date: 2026-04-27 14:35:00
 tags: [月薪3000, MiniMax, AI编程, 26元/月, 程序员晚枫]
 categories: [AI编程, 省钱攻略]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

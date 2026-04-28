@@ -5,6 +5,7 @@ description: 程序员晚枫省钱攻略：腾讯云 Coding Plan 49元/月，怎
 date: 2026-04-23 16:00:00
 tags: [腾讯云, 腾讯混元, 省钱攻略, AI编程]
 categories: [AI编程, 教程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

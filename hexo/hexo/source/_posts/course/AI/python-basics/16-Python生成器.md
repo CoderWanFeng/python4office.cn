@@ -2,6 +2,7 @@
 title: Python生成器：我处理10万条数据，内存只占了1MB
 date: 2026-02-28 19:01:00
 tags: [Python基础, 生成器, 内存优化]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

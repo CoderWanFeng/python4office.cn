@@ -2,6 +2,7 @@
 title: 高学历在重庆，想转行程序员，怎么做？
 date: 2023-07-20 20:31:27
 tags: 1对1咨询
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

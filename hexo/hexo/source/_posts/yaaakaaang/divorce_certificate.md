@@ -2,6 +2,7 @@
 title: 新功能！百度OCR可以识别离婚证了！
 date: 2025-04-26 14:15:17
 tags: [pobd]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

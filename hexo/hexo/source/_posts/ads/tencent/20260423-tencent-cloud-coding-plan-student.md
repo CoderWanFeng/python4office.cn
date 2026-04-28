@@ -5,6 +5,7 @@ description: 学生党福利！腾讯云 Coding Plan 学生专属优惠，49元/
 date: 2026-04-23 14:00:00
 tags: [腾讯云, 腾讯混元, 学生优惠, AI编程, 程序员晚枫]
 categories: [AI编程, 教程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

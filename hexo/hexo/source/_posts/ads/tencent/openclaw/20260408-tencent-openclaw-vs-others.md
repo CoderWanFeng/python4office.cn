@@ -7,6 +7,7 @@ sidebar:
   - toc
 hide:
   - toc
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

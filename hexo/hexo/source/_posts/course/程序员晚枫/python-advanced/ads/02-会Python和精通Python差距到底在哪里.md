@@ -3,6 +3,7 @@ title: 会Python和精通Python，差距到底在哪里？
 date: 2026-04-17 22:20:00
 tags: [Python进阶, Python, 编程思维, 代码质量]
 categories: Python进阶
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 ## 两种Python程序员

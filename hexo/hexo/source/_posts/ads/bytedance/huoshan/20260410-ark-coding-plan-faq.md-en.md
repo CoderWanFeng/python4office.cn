@@ -5,6 +5,7 @@ description: Compiled by Programmer Wan Feng: Volcano Ark Coding Plan FAQ, subsc
 date: 2026-04-10 00:08:00
 tags: [Volcano Ark Coding Plan FAQ, Common Questions, Volcano Engine Questions Answered, AI Programming Tool Questions, Help, Programmer Wan Feng]
 categories: [AI Programming, FAQ]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

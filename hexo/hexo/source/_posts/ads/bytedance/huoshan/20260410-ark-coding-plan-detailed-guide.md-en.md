@@ -5,6 +5,7 @@ description: By Programmer Wan Feng: Complete guide to Volcano Ark Coding Plan, 
 date: 2026-04-10 02:46:00
 tags: [Volcano Ark Coding Plan Guide, Doubao Code Model, Kimi Programming, DeepSeek Code, GLM-4, AI Programming Complete Guide, Programmer Wan Feng]
 categories: [AI Programming, Complete Guide]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: 一篇说人话的文章，告诉你 Django、Flask、FastAPI 到底怎么选
 date: 2025-07-19 16:24:04
 tags: 第三方库
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

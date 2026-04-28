@@ -2,6 +2,7 @@
 title: Python面试题
 date: 2021-12-28 10:40:08
 tags: [程序员,面试]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

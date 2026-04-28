@@ -17,6 +17,7 @@ tags:
 order: 26
 description: 为什么现在办公这么快了？程序员晚枫用大白话揭秘AI办公，让你了解AI帮你做PPT写Word处理Excel！
 
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -5,6 +5,7 @@ description: 程序员晚枫深度对比：讯飞星火 Coding Plan 3.9元/月 v
 date: 2026-04-23 11:00:00
 tags: [讯飞星火, 火山方舟, Coding Plan 对比, AI编程, 性价比]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

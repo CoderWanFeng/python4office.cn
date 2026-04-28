@@ -5,6 +5,7 @@ description: Shared by Programmer Wan Feng: How can small teams use Volcano Ark 
 date: 2026-04-10 00:02:00
 tags: [Volcano Coding Plan Team, Team AI Tools, Small Team AI Programming, AI Tool Management, Programmer Wan Feng]
 categories: [AI Programming, Team Management]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

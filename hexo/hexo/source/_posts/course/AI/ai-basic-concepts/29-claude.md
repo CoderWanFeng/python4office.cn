@@ -18,6 +18,7 @@ tags:
 order: 29
 description: 什么是Claude？程序员晚枫用通俗语言解释，Anthropic出品的AI助手和ChatGPT有什么区别。
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

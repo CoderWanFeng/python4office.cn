@@ -15,6 +15,7 @@ tags:
 order: 21
 description: 视频里的人是真的吗？程序员晚枫用大白话揭秘AI换脸，让你学会识别假视频！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

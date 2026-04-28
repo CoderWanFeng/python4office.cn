@@ -2,6 +2,7 @@
 title: 实战案例！用1行Python代码识别增值税发票，然后用爬虫将数据自动录入系统
 date: 2023-01-25 01:18:40
 tags: [potencent,AI]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

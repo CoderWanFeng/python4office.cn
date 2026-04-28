@@ -5,6 +5,7 @@ description: 程序员晚枫真实经历：Copilot突然涨价后，我为什么
 date: 2026-04-13 00:00:00
 tags: [Copilot涨价, GitHub Copilot, 火山方舟Coding Plan, AI编程工具替代, 国产AI编程, 程序员晚枫]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

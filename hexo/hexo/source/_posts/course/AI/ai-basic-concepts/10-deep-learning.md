@@ -14,6 +14,7 @@ tags:
 order: 10
 description: 为什么AI突然变强了？程序员晚枫用大白话揭秘深度学习，让你理解让AI从"玩具"变成"超能力"的关键技术！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

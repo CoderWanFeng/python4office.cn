@@ -5,6 +5,7 @@ description: Programmer Wan Feng hand-holds you: Volcano Ark Coding Plan + Curso
 date: 2026-04-10 00:01:00
 tags: [Volcano Ark Coding Plan, Cursor Configuration, AI Programming Environment, Cursor Tutorial, Volcano Engine Access, Programmer Wan Feng]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

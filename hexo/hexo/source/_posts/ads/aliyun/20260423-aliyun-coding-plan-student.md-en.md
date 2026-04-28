@@ -5,6 +5,7 @@ description: Student benefits! Alibaba Cloud Bailian Coding Plan student exclusi
 date: 2026-04-23 19:00:00
 tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, Student Discount, AI Programming]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: ChatGPT 聊天机器人
 date: 2022-12-07 08:29:20
 tags: 机器人
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1000&auto=format&fit=crop
 ---
 
 

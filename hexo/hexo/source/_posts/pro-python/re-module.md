@@ -2,6 +2,7 @@
 title: 这1道华为笔试题，让我陷入了沉思，整理了Python里的正则表达式的12种写法
 date: 2022-07-13 14:25:03
 tags: 正则表达式
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

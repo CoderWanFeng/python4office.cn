@@ -5,6 +5,7 @@ description: Programmer Wan Feng analyzes: Who is Tencent Cloud Coding Plan suit
 date: 2026-04-23 13:00:00
 tags: [Tencent Cloud, Tencent Hunyuan, Coding Plan Selection, AI Programming]
 categories: [AI Programming, Tool Review]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: 我睡觉时，openclaw偷偷给前女友发了消息…马斯克都说：离谱到家了
 date: 2026-02-25 23:59:00
 tags: [AI编程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看AI编程训练营'>

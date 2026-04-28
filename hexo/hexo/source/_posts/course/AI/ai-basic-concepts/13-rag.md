@@ -14,6 +14,7 @@ tags:
 order: 13
 description: 为什么AI回答问题时会"瞎编"？程序员晚枫用大白话揭秘RAG，让你了解如何让AI准确回答你的问题！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

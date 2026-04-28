@@ -3,6 +3,7 @@ title: Python + AI Agent = 2026年普通人的搞钱新机会
 date: 2026-04-11 08:00:00
 tags: [AI编程, Python, Agent, 副业, 赚钱]
 categories: 观点洞察
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 > 大家好，我是程序员晚枫。

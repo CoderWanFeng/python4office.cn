@@ -14,6 +14,7 @@ tags:
 order: 7
 description: AI有时候说谎说得跟真的一样！程序员晚枫用大白话揭秘"AI幻觉"，让你学会辨别AI的错误，避免被坑！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

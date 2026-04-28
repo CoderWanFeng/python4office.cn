@@ -2,6 +2,7 @@
 title: 老大给了个新需求：如何将汉字转换成拼音字母？1行Python代码搞定！
 date: 2023-06-24 23:51:25
 tags: 开源
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

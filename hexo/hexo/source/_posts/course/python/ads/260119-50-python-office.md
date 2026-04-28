@@ -2,6 +2,7 @@
 title: 告别加班！50讲Python让你从职场小白变效率达人
 date: 2026-01-19 16:30:10
 tags: [Python,自动化办公]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

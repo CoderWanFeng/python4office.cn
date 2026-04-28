@@ -2,6 +2,7 @@
 title: 用腾讯云 AI 录音文件识别 实现短视频字幕批量处理
 date: 2022-09-29 14:22:18
 tags: python-office
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

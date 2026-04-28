@@ -5,6 +5,7 @@ description: "Programmer Wanfeng's analysis: Who is Xiaomi MiMo Coding Plan best
 date: 2026-04-22 21:50:00
 tags: ["Xiaomi", "MiMo", "Coding Plan Purchase", "Ecosystem Development"]
 categories: ["AI Programming", "Tool Review"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

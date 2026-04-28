@@ -5,6 +5,7 @@ description: 程序员晚枫吐槽：国产AI越来越聪明了，但想用的�
 date: 2026-04-27 17:45:00
 tags: [国产AI, Coding Plan, 选购, 程序员晚枫]
 categories: [AI编程, 吐槽]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

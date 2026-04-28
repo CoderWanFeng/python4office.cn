@@ -2,6 +2,7 @@
 title: 专科毕业，有机会转行程序员吗？
 date: 2023-07-02 17:02:16
 tags: 1对1咨询
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

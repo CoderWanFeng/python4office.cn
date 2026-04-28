@@ -2,6 +2,7 @@
 title: DeepSeek Complete Deployment Resources
 date: 2025-02-05 23:16:36
 tags: [ai,gpt,large model,domestic,robot]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

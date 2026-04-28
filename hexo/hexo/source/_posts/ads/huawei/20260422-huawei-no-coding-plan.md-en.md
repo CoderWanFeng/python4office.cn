@@ -5,6 +5,7 @@ description: Programmer Wan Feng discovers: Huawei Cloud currently doesn't have 
 date: 2026-04-22 20:20:00
 tags: [Huawei Cloud, Coding Plan, AI Programming, HarmonyOS Development, Programmer Wan Feng]
 categories: [AI Programming, Tool Review]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

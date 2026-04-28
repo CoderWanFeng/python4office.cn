@@ -2,6 +2,7 @@
 title: AI画画到什么水平了？1行代码生成素描画，又一批人要失业啦！
 date: 2022-10-20 22:34:33
 tags: python-office
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

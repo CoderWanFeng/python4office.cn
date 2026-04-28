@@ -15,6 +15,7 @@ tags:
 order: 19
 description: 为什么同样的AI，别人用得那么溜？程序员晚枫用大白话揭秘提示词工程，让你掌握和AI高效沟通的秘诀！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

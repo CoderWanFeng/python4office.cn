@@ -2,6 +2,7 @@
 title: Do You Have to Learn Python for AI?
 date: 2026-01-10 04:38:37
 tags: Automated Office
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -2,6 +2,7 @@
 title: Python自动化办公（课程资料）
 date: 2023-12-30 10:08:24
 tags: 原创课程
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

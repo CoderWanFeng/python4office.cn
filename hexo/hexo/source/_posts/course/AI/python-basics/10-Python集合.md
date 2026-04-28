@@ -2,6 +2,7 @@
 title: Python集合：我用这个数据结构，去重只要1行代码
 date: 2026-02-28 17:29:00
 tags: [Python基础, 集合, 数据结构]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

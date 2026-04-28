@@ -5,6 +5,7 @@ description: Student benefits! Tencent Cloud Coding Plan student exclusive disco
 date: 2026-04-23 14:00:00
 tags: [Tencent Cloud, Tencent Hunyuan, Student Discount, AI Programming, 程序员晚枫]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

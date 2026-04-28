@@ -2,6 +2,7 @@
 title: 学了AI却用不上？真相是你没找对“落地姿势”
 date: 2026-01-22 19:30:10
 tags: [Python,自动化办公]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

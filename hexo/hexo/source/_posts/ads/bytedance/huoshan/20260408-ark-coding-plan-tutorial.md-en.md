@@ -5,6 +5,7 @@ description: By Programmer Wan Feng: Complete tutorial on Volcano Ark Coding Pla
 date: 2026-04-08 00:21:00
 tags: [Volcano Ark Coding Plan Tutorial, How to Use Ark Coding Plan, Volcano Engine AI Programming, Coding Plan Getting Started, AI Programming Tool Tutorial, Programmer Wan Feng]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

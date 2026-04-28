@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["Alibaba Cloud", "coding plan", "student discounts"]
 categories: ["Alibaba Cloud Coding Plan"]
 description: "Alibaba Cloud Coding Plan student discount guide: how to认证, how to apply, what discounts are available, money-saving tips, must-read for students."
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

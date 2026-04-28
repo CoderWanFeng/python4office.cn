@@ -2,6 +2,7 @@
 title: 给小白的《30讲 · Python数据分析》
 date: 2022-04-21 17:20:40
 tags: pandas
+cover: https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1000&auto=format&fit=crop
 ---
 
 

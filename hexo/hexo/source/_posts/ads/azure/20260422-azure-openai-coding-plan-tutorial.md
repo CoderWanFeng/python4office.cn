@@ -5,6 +5,7 @@ description: 程序员晚枫手把手教你用 Azure OpenAI Coding Plan，企业
 date: 2026-04-22 22:05:00
 tags: [Azure OpenAI, Coding Plan 教程, GPT-4, API接入]
 categories: [AI编程, 教程]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

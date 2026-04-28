@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["阿里云", "腾讯云", "火山引擎", "ai编程", "对比"]
 categories: ["阿里云Coding Plan"]
 description: "阿里云vs腾讯vs火山：哪个更划算？价格、功能、生态、用户体验，对比完你就知道了。"
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

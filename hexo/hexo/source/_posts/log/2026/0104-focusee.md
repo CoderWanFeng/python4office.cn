@@ -2,6 +2,7 @@
 title: 屏幕录制太枯燥？我又付费了一款AI神器，让视频“电影感”拉满！
 date: 2026-01-04 00:51:51
 tags: 自媒体
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='进群-banner-AI'>

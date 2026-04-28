@@ -2,6 +2,7 @@
 title: 行政文员学Python第1个月就涨薪了她的秘诀是什么
 date: 2026-04-17 14:00:00
 tags: [Python自动化办公, 职场, 涨薪, 50讲]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 大家好，这里是程序员晚枫，专注Python自动化办公5年了。

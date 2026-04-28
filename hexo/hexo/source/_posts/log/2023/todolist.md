@@ -2,6 +2,7 @@
 title: 2023年想完成的事情
 date: 2023-12-8 14:16:17
 tags: 年度目标
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: 以最简洁的方式打包发布你自己的pip项目
 date: 2022-01-05 16:03:35
 tags: 开源项目
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

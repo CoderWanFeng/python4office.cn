@@ -5,6 +5,7 @@ description: Programmer Wan Feng's money-saving guide: Alibaba Cloud Bailian Cod
 date: 2026-04-23 20:30:00
 tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, Money-Saving Guide, AI Programming]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

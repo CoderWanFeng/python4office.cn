@@ -5,6 +5,7 @@ tags: [个人成长, 创作感悟, 自媒体, 程序员晚枫]
 categories: [创作感悟]
 keywords: [自媒体, 内容创作, 营销, 客服, 内容为王]
 description: 做自媒体、做博主，我们的价值就是靠内容说话。如果客户来了不信任我们，还需要我们去声嘶力竭介绍自己的优点，那我们的文章岂不是白写了？
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

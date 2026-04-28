@@ -2,6 +2,7 @@
 title: 电脑没有联网，怎么用pip安装依赖的第三方库？
 date: 2022-02-11 10:31:00
 tags: [Linux,Python,pip]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -5,6 +5,7 @@ description: "Programmer Wanfeng's recommendation: JD Cloud Coding Plan, powered
 date: 2026-04-22 18:00:00
 tags: ["JD Cloud", "JD Cloud", "Coding Plan", "AI Programming", "Jingdiandian"]
 categories: ["AI Programming", "Tool Review"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

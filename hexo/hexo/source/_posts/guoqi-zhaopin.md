@@ -2,6 +2,7 @@
 title: 国庆招聘渠道汇总
 date: 2022-11-14 17:13:43
 tags: 招聘
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

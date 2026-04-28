@@ -5,6 +5,7 @@ description: "Huawei temporarily has no Coding Plan? Programmer Wanfeng recommen
 date: 2026-04-22 23:00:00
 tags: ["Huawei", "JD Cloud", "Coding Plan", "Domestic Cloud Service", "程序员晚枫"]
 categories: ["AI Programming", "Tool Review"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

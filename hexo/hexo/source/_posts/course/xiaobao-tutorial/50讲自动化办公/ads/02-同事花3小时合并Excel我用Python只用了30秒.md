@@ -2,6 +2,7 @@
 title: 同事花3小时合并Excel我用Python只用了30秒
 date: 2026-04-17 10:00:00
 tags: [Python自动化办公, Excel, 效率, 50讲]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 大家好，这里是程序员晚枫，专注Python自动化办公5年了。

@@ -2,6 +2,7 @@
 title: 大模型聊天
 date: 2025-05-24 12:05:32
 tags: [PyOfficeRobot]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

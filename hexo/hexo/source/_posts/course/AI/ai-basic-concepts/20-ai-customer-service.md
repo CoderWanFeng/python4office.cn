@@ -15,6 +15,7 @@ tags:
 order: 20
 description: 为什么现在客服响应这么快？程序员晚枫用大白话揭秘AI客服，让你了解企业如何用AI省钱！
 
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 

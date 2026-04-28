@@ -5,6 +5,7 @@ description: 程序员晚枫推荐：百度智能云 Baidu Cloud Coding Plan，�
 date: 2026-04-22 20:00:00
 tags: [百度智能云, Baidu Cloud, Coding Plan, 文心一言, AI编程]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

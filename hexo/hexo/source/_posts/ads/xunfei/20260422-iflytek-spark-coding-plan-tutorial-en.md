@@ -10,6 +10,7 @@ hreflang:
   zh: /20260422-iflytek-spark-coding-plan-tutorial/
 canonical: /20260422-iflytek-spark-coding-plan-tutorial/
 translation: complete
+cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

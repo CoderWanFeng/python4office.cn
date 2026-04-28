@@ -5,6 +5,7 @@ description: Programmer Wan Feng hand-holds you through activating Tencent Cloud
 date: 2026-04-23 12:30:00
 tags: [Tencent Cloud, Tencent Hunyuan, Coding Plan Tutorial, AI Programming Getting Started]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

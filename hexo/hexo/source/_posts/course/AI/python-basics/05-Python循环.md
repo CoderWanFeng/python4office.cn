@@ -2,6 +2,7 @@
 title: Python循环：我用for和while自动化处理1000份文件
 date: 2026-02-28 19:58:00
 tags: [Python基础, 循环, for, while]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

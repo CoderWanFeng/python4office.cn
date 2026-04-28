@@ -2,6 +2,7 @@
 title: Python常用标准库：我每天都在用的10个内置模块，效率翻倍
 date: 2026-02-28 21:05:00
 tags: [Python基础, 标准库, 实用工具]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

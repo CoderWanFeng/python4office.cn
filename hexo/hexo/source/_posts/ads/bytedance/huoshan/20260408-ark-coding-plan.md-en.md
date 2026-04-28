@@ -5,6 +5,7 @@ description: Programmer Wan Feng recommends: ByteDance Volcano Ark Coding Plan, 
 date: 2026-04-08 00:15:00
 tags: [Volcano Engine, Ark CodingPlan, AI Programming, Doubao, DeepSeek, Programmer Wan Feng, AI Programming Tool]
 categories: [AI Programming, Tool Review]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

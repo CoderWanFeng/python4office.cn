@@ -2,6 +2,7 @@
 title: "Python Add Flag to Avatar: One-Click Generate World Cup/Olympic Style Avatar, Supports Multiple Country Flags Auto-Overlay"
 date: 2025-08-22 00:00:00
 tags: [星河计划]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

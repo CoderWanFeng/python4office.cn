@@ -5,6 +5,7 @@ description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng re
 date: 2026-04-22 22:40:00
 tags: [Huawei, Volcano Ark, ByteDance, Coding Plan, Programmer Wan Feng]
 categories: [AI Programming, Tool Review]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

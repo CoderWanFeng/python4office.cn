@@ -2,6 +2,7 @@
 title: 85本电子书、视频教程和读者群
 date: 2023-10-03 10:29:42
 tags: 电子书
+cover: https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1200&auto=format&fit=crop
 ---
 
 

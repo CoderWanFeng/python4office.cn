@@ -5,6 +5,7 @@ description: "Programmer Wanfeng's hands-on guide to China Mobile Cloud Coding P
 date: 2026-04-22 21:25:00
 tags: ["China Mobile", "Jiutian LLM", "Coding Plan Tutorial", "API Integration"]
 categories: ["AI Programming", "Tutorial"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

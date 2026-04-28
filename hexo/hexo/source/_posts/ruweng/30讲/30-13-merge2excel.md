@@ -2,6 +2,7 @@
 title: "Python合并Excel：1键合并100个表格，支持多Sheet自动汇总，数据不丢失" 
 date: 2025-08-22 00:00:00
 tags: [星河计划]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

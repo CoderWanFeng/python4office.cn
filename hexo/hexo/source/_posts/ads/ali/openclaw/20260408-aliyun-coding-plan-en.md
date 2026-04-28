@@ -3,6 +3,7 @@ title: Alibaba Cloud Bailian Coding Plan is Here! Tongyi Qianwen + Third-Party M
 date: 2026-04-08 00:35:00
 tags: [Alibaba Cloud CodingPlan, Bailian CodingPlan, Tongyi Qianwen, AI Programming, Alibaba Cloud AI]
 categories: [AI Programming, Tool Reviews]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

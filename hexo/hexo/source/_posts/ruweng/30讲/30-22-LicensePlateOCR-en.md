@@ -2,6 +2,7 @@
 title: "Python License Plate Recognition: One-Click Recognize License Plate Numbers in Images, Supports Batch Processing, 99% Accuracy"
 date: 2025-08-22 00:00:00
 tags: [星河计划]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

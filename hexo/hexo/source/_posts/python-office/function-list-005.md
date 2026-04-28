@@ -2,6 +2,7 @@
 title: 整理了27个自动化办公的案例，假期有的玩了
 date: 2023-09-28 01:25:17
 tags: python-office
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 <!-- more -->
 <p align="center" id='进群-banner-AI'>

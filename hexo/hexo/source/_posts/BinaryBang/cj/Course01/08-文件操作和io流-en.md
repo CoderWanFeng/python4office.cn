@@ -2,6 +2,7 @@
 title: "File Operations and IO Streams"
 date: 2025-07-21 07:15:00
 tags: [Cangjie Development, Programming Beginner Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

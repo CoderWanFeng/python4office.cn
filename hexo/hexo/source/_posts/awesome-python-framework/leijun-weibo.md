@@ -2,6 +2,7 @@
 title: 用Python爬了雷军的微博，我发现了什么？网友：不OK，绝对不OK！
 date: 2022-10-31 01:28:00
 tags: Python实战项目
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

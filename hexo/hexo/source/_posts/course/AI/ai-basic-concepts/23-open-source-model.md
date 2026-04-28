@@ -16,6 +16,7 @@ tags:
 order: 23
 description: 为什么DeepSeek火了？程序员晚枫用大白话揭秘开源大模型，让你了解免费用AI的新方式！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

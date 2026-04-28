@@ -5,6 +5,7 @@ description: 程序员晚枫整理：腾讯云TOKEN Plan常见问题FAQ，CODING
 date: 2026-04-10 02:54:00
 tags: [腾讯云TOKEN Plan FAQ, TOKEN Plan常见问题, CODING Plan对比, AI编程按量计费问题, TOKEN Plan怎么用, 程序员晚枫]
 categories: [AI编程, 常见问题]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

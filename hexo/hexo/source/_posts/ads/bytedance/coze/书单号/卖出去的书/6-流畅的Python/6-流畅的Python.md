@@ -2,6 +2,7 @@
 title: 流畅的Python（第2版）
 date: 2025-08-26 23:24:04
 tags: 书单号
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -5,6 +5,7 @@ description: 程序员晚枫推荐：智谱 AI GLM Coding Plan，国产大模型
 date: 2026-04-22 18:40:00
 tags: [智谱 AI, GLM, Coding Plan, AI编程, 国产大模型]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

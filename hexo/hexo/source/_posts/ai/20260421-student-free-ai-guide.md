@@ -5,6 +5,7 @@ tags: [学生免费AI, AI学习资源, Coding Plan, DeepSeek, 学生优惠]
 categories: [AI工具]
 keywords: [学生免费AI, AI学习资源, Coding Plan学生, DeepSeek学生, 免费API]
 description: 学生党福音：2026年免费AI开发资源大全，附详细申请教程。学生认证后可获得更多免费额度，零成本学习AI开发。
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 # 学生党福音：2026年免费AI开发资源大全（附申请教程）

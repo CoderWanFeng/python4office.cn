@@ -5,6 +5,7 @@ description: 程序员晚枫提醒：AI编程工具集体涨价，Copilot、Clau
 date: 2026-04-13 00:00:00
 tags: [AI编程工具涨价, Copilot涨价, Claude涨价, 省钱攻略, 火山方舟Coding Plan, 程序员晚枫]
 categories: [AI编程, 省钱攻略]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

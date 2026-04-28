@@ -5,6 +5,7 @@ description: "Programmer Wanfeng's recommendation: Xiaomi MiMo Coding Plan, Xiao
 date: 2026-04-22 21:40:00
 tags: ["Xiaomi", "MiMo", "Coding Plan", "AI Programming", "Xiaomi Ecosystem"]
 categories: ["AI Programming", "Tool Review"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

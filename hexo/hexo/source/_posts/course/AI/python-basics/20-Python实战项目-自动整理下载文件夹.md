@@ -2,6 +2,7 @@
 title: Python实战项目：我写了50行代码，自动整理乱糟糟的下载文件夹
 date: 2026-02-28 21:09:00
 tags: [Python实战, 自动化, 文件整理]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

@@ -2,6 +2,7 @@
 title: 278页PDF：《Python数据分析基础》，0基础入门专用~
 date: 2022-11-16 17:26:30
 tags: 电子书
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 
