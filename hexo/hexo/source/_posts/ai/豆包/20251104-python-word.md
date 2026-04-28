@@ -54,7 +54,7 @@ tags: 自动化办公
 </div>
 
 
-![word库](https://raw.atomgit.com/user-images/assets/5027920/417c757d-0369-4473-bcdd-f6a56c26c8a1/image.png 'image.png')
+![word库](https://raw.atomgit.com/user-images/assets/5027920/417c757d-0369-4473-bcdd-f6a56c26c8a1/image.png)
 
 <!-- more -->
 
@@ -64,7 +64,7 @@ tags: 自动化办公
 
 ## 一、python-docx：新手入门的“百搭款”
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/a8176309-3524-4787-8c1e-e78e4fb8ecf1/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/a8176309-3524-4787-8c1e-e78e4fb8ecf1/image.png)
 
 划重点：Python处理Word入门首选，新手零门槛！
 
@@ -106,7 +106,7 @@ doc.save('自动化文档.docx')
 
 ## 二、Spire.Doc for Python：全格式兼容的“全能选手”
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/79d23f55-73fa-42ea-8956-68cd5c09c06a/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/79d23f55-73fa-42ea-8956-68cd5c09c06a/image.png)
 
 ### （一）啥场景需要它？
 
@@ -143,7 +143,7 @@ doc.Close()
 
 ## 三、docxtpl：模板生成的“效率王者”
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/1fff7d75-2bf0-4a14-8919-24c4fc60030d/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/1fff7d75-2bf0-4a14-8919-24c4fc60030d/image.png)
 
 ### （一）它有多香？批量生成文档神器
 
@@ -178,7 +178,7 @@ tpl.save('张三入职通知.docx')
 
 ## 四、pywin32：Windows专属的“终极操控者”
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/9fb1715f-6a14-42a0-9a78-657a05e20006/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/9fb1715f-6a14-42a0-9a78-657a05e20006/image.png)
 
 ### （一）它的底气：直接操控Office本尊
 
@@ -222,7 +222,7 @@ print('转换完成！')
 
 ## 五、docxcompose：文档合并专家
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/2dade4b1-4c13-47e4-9077-03ab08b1a027/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/2dade4b1-4c13-47e4-9077-03ab08b1a027/image.png)
 
 ### （一）专攻文档合并的“拼接大师”
 
@@ -368,7 +368,7 @@ Q：有其他更高级的课程吗？
 
 > 以上这些，我把它称为我在all in AI之前的经历。之前建立的Python主题的付费群，也有430多人加入：[Python学习 · 读者交流群](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=8)，如果你是想单纯学习Python的朋友，建议直接加这个Python群。我一直在运营中，也还会继续运营下去。
 
-![Python群的付费记录](https://raw.atomgit.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png 'image.png')
+![Python群的付费记录](https://raw.atomgit.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png)
 
 从2023年接触到AI开始，我看到了AI和各行各业结合的机会，以及我作为一个博主可以分享、创作的方向，并且和小伙伴一起创立了：白开水AI社区。
 
@@ -394,17 +394,17 @@ Q：有其他更高级的课程吗？
 
 > 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
 
-![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png)
 
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg)
   
 
-![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg)
 
-![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg)
 
 
 

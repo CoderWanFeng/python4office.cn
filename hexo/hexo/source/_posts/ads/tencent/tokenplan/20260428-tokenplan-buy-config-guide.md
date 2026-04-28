@@ -39,7 +39,7 @@ Coding Plan 就是 AI 编程工具的"月租房"。
 
 > 💡 **一句话理解**：Coding Plan = 算力套餐 = 用 AI 的"月卡"
 
-![云服务商CodingPlan对比概览](https://raw.atomgit.com/user-images/assets/5027920/fbef16c6-2d2a-441b-8099-3081471f0c9b/01-云服务商CodingPlan对比概览.png '01-云服务商CodingPlan对比概览.png')
+![云服务商CodingPlan对比概览](https://raw.atomgit.com/user-images/assets/5027920/fbef16c6-2d2a-441b-8099-3081471f0c9b/01-云服务商CodingPlan对比概览.png)
 
 ## 二、为什么是腾讯云？
 
@@ -51,7 +51,7 @@ Coding Plan 就是 AI 编程工具的"月租房"。
 
 因为三个字：**好上手**。
 
-![腾讯云大模型TokenPlan首页](https://raw.atomgit.com/user-images/assets/5027920/f31f169b-5d2e-423a-9644-8a61aec90b30/02-腾讯云大模型TokenPlan首页.png '02-腾讯云大模型TokenPlan首页.png')
+![腾讯云大模型TokenPlan首页](https://raw.atomgit.com/user-images/assets/5027920/f31f169b-5d2e-423a-9644-8a61aec90b30/02-腾讯云大模型TokenPlan首页.png)
 
 你想象一下这个场景：
 
@@ -73,7 +73,7 @@ Coding Plan 就是 AI 编程工具的"月租房"。
 
 **我的回答是：看你的使用场景。**
 
-![套餐详情与价格对比](https://raw.atomgit.com/user-images/assets/5027920/006d46d2-a17a-4730-abff-81268993f8f8/05-套餐详情与价格对比.png '05-套餐详情与价格对比.png')
+![套餐详情与价格对比](https://raw.atomgit.com/user-images/assets/5027920/006d46d2-a17a-4730-abff-81268993f8f8/05-套餐详情与价格对比.png)
 
 ### 价格一览
 
@@ -111,7 +111,7 @@ Coding Plan 就是 AI 编程工具的"月租房"。
 
 智谱涨了，MiniMax 涨了，火山方舟也涨了。
 
-![主流模型切换支持](https://raw.atomgit.com/user-images/assets/5027920/6793fb9e-0e85-4819-9ba7-42e71a2378a0/07-主流模型切换支持.png '07-主流模型切换支持.png')
+![主流模型切换支持](https://raw.atomgit.com/user-images/assets/5027920/6793fb9e-0e85-4819-9ba7-42e71a2378a0/07-主流模型切换支持.png)
 
 **为什么？**
 
@@ -135,7 +135,7 @@ Coding Plan 就是 AI 编程工具的"月租房"。
 
 看到页面上的"立即购买"按钮了吗？点它。
 
-![套餐升级选项](https://raw.atomgit.com/user-images/assets/5027920/520857af-8827-4880-95b7-4e22ede975e1/09-套餐升级选项.png '09-套餐升级选项.png')
+![套餐升级选项](https://raw.atomgit.com/user-images/assets/5027920/520857af-8827-4880-95b7-4e22ede975e1/09-套餐升级选项.png)
 
 ### 第二步：选套餐
 
@@ -159,7 +159,7 @@ Coding Plan 就是 AI 编程工具的"月租房"。
 
 这是整个教程最关键的一步，请认真看。
 
-![12-API密钥管理界面.png](https://raw.atomgit.com/user-images/assets/5027920/870ed8f6-12b0-4dd1-86bb-46dc1fc58a19/12-API密钥管理界面.png '12-API密钥管理界面.png')
+![12-API密钥管理界面.png](https://raw.atomgit.com/user-images/assets/5027920/870ed8f6-12b0-4dd1-86bb-46dc1fc58a19/12-API密钥管理界面.png)
 
 ### 操作步骤
 
@@ -214,7 +214,7 @@ API Key = 你的银行卡密码 × 10
 
 打开你的 AI 编程工具，在设置里找到「添加模型」或「添加自定义模型」。
 
-![15-添加自定义模型配置.png](https://raw.atomgit.com/user-images/assets/5027920/8da83e1d-4acd-4341-84e8-6f56568448ce/15-添加自定义模型配置.png '15-添加自定义模型配置.png')
+![15-添加自定义模型配置.png](https://raw.atomgit.com/user-images/assets/5027920/8da83e1d-4acd-4341-84e8-6f56568448ce/15-添加自定义模型配置.png)
 
 #### 步骤 2：选择腾讯云
 
@@ -231,13 +231,13 @@ API Key = 你的银行卡密码 × 10
 
 > ⚠️ **重点**：必须点复制按钮，不能手动输入！手动输入容易出错，一旦输错，配置 100% 失败。
 
-![16-快速接入指引步骤.png](https://raw.atomgit.com/user-images/assets/5027920/e0ad6eda-8e2e-467f-9125-18b2b48a52da/16-快速接入指引步骤.png '16-快速接入指引步骤.png')
+![16-快速接入指引步骤.png](https://raw.atomgit.com/user-images/assets/5027920/e0ad6eda-8e2e-467f-9125-18b2b48a52da/16-快速接入指引步骤.png)
 
 #### 步骤 4：粘贴 Model ID
 
 把刚才复制的 ID 粘贴到工具的「模型 ID」输入框。
 
-![17-输入模型ID与API密钥.png](https://raw.atomgit.com/user-images/assets/5027920/2e0d0206-c53a-4f2e-8f47-6e14948b8564/17-输入模型ID与API密钥.png '17-输入模型ID与API密钥.png')
+![17-输入模型ID与API密钥.png](https://raw.atomgit.com/user-images/assets/5027920/2e0d0206-c53a-4f2e-8f47-6e14948b8564/17-输入模型ID与API密钥.png)
 
 #### 步骤 5：粘贴 API Key
 
@@ -249,7 +249,7 @@ API Key = 你的银行卡密码 × 10
 
 > ⚠️ **重点**：URL 前后不能有空格，不能多输任何字符。
 
-![19-获取URL配置信息.png](https://raw.atomgit.com/user-images/assets/5027920/8f8b33f9-f77d-4d3d-989a-63239213f512/19-获取URL配置信息.png '19-获取URL配置信息.png')
+![19-获取URL配置信息.png](https://raw.atomgit.com/user-images/assets/5027920/8f8b33f9-f77d-4d3d-989a-63239213f512/19-获取URL配置信息.png)
 
 #### 步骤 7：保存，完事！
 
@@ -270,7 +270,7 @@ API Key = 你的银行卡密码 × 10
 
 配置成功后，你就可以开始用了。
 
-![20-PDF转Word代码示例.png](https://raw.atomgit.com/user-images/assets/5027920/77677d99-f9ef-49e2-bc9e-da9c430e6047/20-PDF转Word代码示例.png '20-PDF转Word代码示例.png')
+![20-PDF转Word代码示例.png](https://raw.atomgit.com/user-images/assets/5027920/77677d99-f9ef-49e2-bc9e-da9c430e6047/20-PDF转Word代码示例.png)
 
 ### 日常对话
 

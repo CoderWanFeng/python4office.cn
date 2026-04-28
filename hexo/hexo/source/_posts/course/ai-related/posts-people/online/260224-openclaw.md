@@ -38,7 +38,7 @@ tags: [AI编程]
 
 刚才刷到了马斯克的动态，他说本地部署openclaw简直是离谱它妈给离谱开门：离谱到家了！
 
-![马斯克](https://raw.atomgit.com/user-images/assets/5027920/9208a12d-3f71-4813-a189-48332fe5435a/3f6fb03e-1a49-4a5c-a1a9-3961060c7d1d.jpg '3f6fb03e-1a49-4a5c-a1a9-3961060c7d1d.jpg')
+![马斯克](https://raw.atomgit.com/user-images/assets/5027920/9208a12d-3f71-4813-a189-48332fe5435a/3f6fb03e-1a49-4a5c-a1a9-3961060c7d1d.jpg)
 
 openclaw非常火，但是部署在自己电脑上，等于给了它管理员的权限，你能放心让它24小时自动运行吗？
 

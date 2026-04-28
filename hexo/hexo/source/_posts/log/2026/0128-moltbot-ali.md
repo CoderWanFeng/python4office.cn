@@ -44,7 +44,7 @@ tags: 自媒体
 云服务器部署教程，扫码直达👇
 
 
-![扫码](https://raw.atomgit.com/user-images/assets/5027920/2deec84b-178c-49a8-804f-a3aa1bf57f2f/b298484da07516247d213af2774057e6.png 'b298484da07516247d213af2774057e6.png')
+![扫码](https://raw.atomgit.com/user-images/assets/5027920/2deec84b-178c-49a8-804f-a3aa1bf57f2f/b298484da07516247d213af2774057e6.png)
 
 
 ## 相关阅读

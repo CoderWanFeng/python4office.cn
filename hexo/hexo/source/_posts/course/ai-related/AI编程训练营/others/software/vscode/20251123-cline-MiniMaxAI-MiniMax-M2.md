@@ -55,7 +55,7 @@ tags: [AI编程]
 
 今天我们就一起看一下：如何通过一个简单的方法，调用最近火爆的**MiniMax-M2**。
 
-![MiniMax-M2](https://raw.atomgit.com/user-images/assets/5027920/c62b4984-cb88-4623-a0e1-25615d119dc5/878d22d5-1e2f-4d9d-bab5-6a084c2f29db.png '878d22d5-1e2f-4d9d-bab5-6a084c2f29db.png')
+![MiniMax-M2](https://raw.atomgit.com/user-images/assets/5027920/c62b4984-cb88-4623-a0e1-25615d119dc5/878d22d5-1e2f-4d9d-bab5-6a084c2f29db.png)
 
 ## 实操步骤
 
@@ -70,7 +70,7 @@ tags: [AI编程]
 手机用户也可以直接扫码：
 
 
-![2000万tokens](https://raw.atomgit.com/user-images/assets/5027920/7213612f-3e76-4e23-ba43-ac48110f02e2/厂商合作.jpg '厂商合作.jpg')
+![2000万tokens](https://raw.atomgit.com/user-images/assets/5027920/7213612f-3e76-4e23-ba43-ac48110f02e2/厂商合作.jpg)
 
 注册后，获取API密钥，如下图所示：
 
@@ -299,11 +299,11 @@ Q：有其他更高级的课程吗？
 
 
 
-![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg)
 
 
 
-![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg)
 
 
 

@@ -53,7 +53,7 @@ tags: 自动化办公
     <a href="https://www.python4office.cn/wechat-group/"> <img src="https://badgen.net/badge/join/%E4%BA%A4%E6%B5%81%E7%BE%A4?icon=atom&color=yellow"></a>
 </div>
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/4f517dd7-c189-4f62-b937-2e37aef2b96d/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/4f517dd7-c189-4f62-b937-2e37aef2b96d/image.png)
 
 
 <!-- more -->
@@ -66,7 +66,7 @@ tags: 自动化办公
 
 openpyxl是Python处理Excel 2010+版本（.xlsx/.xlsm）的“入门界顶流”——纯Python开发，Windows、Mac、Linux都能用，API设计得清爽不绕弯，官方文档还带详细示例。新手花半小时跟着示例敲代码，就能搞定基础操作，日常办公的读写、改格式需求基本都能cover。
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/aa664ffc-bede-4660-a1a8-073cb8e83059/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/aa664ffc-bede-4660-a1a8-073cb8e83059/image.png)
 
 ### 核心功能
 
@@ -117,7 +117,7 @@ wb.save("程序员晚枫的员工信息表.xlsx")
 
 xlrd和xlwt是处理“老古董”.xls文件的“黄金搭档”——分工超明确：xlrd负责读.xls数据，xlwt负责写.xls文件，再配个xlutils库，还能改已有.xls文件，完美解决旧格式兼容问题。重点提醒：xlrd 2.0以上版本不支持.xlsx，要处理旧文件得装1.2.0版本。
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/1a4ee732-8800-406c-bb78-2e656c2320c7/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/1a4ee732-8800-406c-bb78-2e656c2320c7/image.png)
 
 ### 核心功能
 
@@ -160,7 +160,7 @@ for row in range(1, worksheet.nrows):
 
 pandas虽不是专门为Excel设计的，但处理Excel批量数据的能力，堪称办公界的“天花板”！它能用“DataFrame”表格格式加载Excel数据，筛选、排序、汇总都是秒级完成，再搭openpyxl或xlrd当“引擎”，新旧格式都能搞定。
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/af7adb77-7ee0-4462-a73d-a09f4efac457/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/af7adb77-7ee0-4462-a73d-a09f4efac457/image.png)
 
 ### 核心功能
 
@@ -207,7 +207,7 @@ print("汇总完成！直接打开‘季度销售汇总.xlsx’看结果～")
 
 xlsxwriter是Excel“颜值担当”——虽然不能读Excel文件，但做格式美化和图表的能力拉满！单元格格式、条件格式、数据验证都能精细控制，还能做折线图、柱状图这些专业图表，生成的Excel报表堪比专业排版，拿去给老板汇报超有面。
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/98e756d5-c245-488c-b8ca-b2d957e92bdf/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/98e756d5-c245-488c-b8ca-b2d957e92bdf/image.png)
 
 ### 核心功能
 
@@ -280,7 +280,7 @@ print("报表生成完成！打开‘业绩报表.xlsx’看效果～")
 
 pywin32是Windows用户的“Excel全能遥控器”——靠调用本地Microsoft Excel的COM接口干活，相当于用Python替你手动点鼠标操作Excel。所以Excel能做的事，它全能干，宏、密码保护、高级图表这些都不在话下，堪称“无上限”工具。
 
-![image.png](https://raw.atomgit.com/user-images/assets/5027920/a9a65d37-6226-4b78-87c4-959433d261c3/image.png 'image.png')
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/a9a65d37-6226-4b78-87c4-959433d261c3/image.png)
 
 ### 核心功能
 
@@ -421,7 +421,7 @@ Q：有其他更高级的课程吗？
 
 > 以上这些，我把它称为我在all in AI之前的经历。之前建立的Python主题的付费群，也有430多人加入：[Python学习 · 读者交流群](https://mp.weixin.qq.com/s/0GrWWSQ8sKs-WA8WoN3Ztg?payreadticket=HPsk3SM42QLKkwlPgzoQN00eTUDy7x7I70-jcY9jIG2bWFmjZvB7r1mF10OiNSkxknfiN08&scene=1&click_id=8)，如果你是想单纯学习Python的朋友，建议直接加这个Python群。我一直在运营中，也还会继续运营下去。
 
-![Python群的付费记录](https://raw.atomgit.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png 'image.png')
+![Python群的付费记录](https://raw.atomgit.com/user-images/assets/5027920/4926e0f9-3647-45da-accb-34d132eb1385/image.png)
 
 从2023年接触到AI开始，我看到了AI和各行各业结合的机会，以及我作为一个博主可以分享、创作的方向，并且和小伙伴一起创立了：白开水AI社区。
 
@@ -447,17 +447,17 @@ Q：有其他更高级的课程吗？
 
 > 另外，大家去给小明的小红书👇账号点点赞吧~！我不想努力了，想吃软饭了。
 
-![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+![小红书：爱吃火锅的小明](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png)
 
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg '6152d8017a3595256e51cbd9e08e148b.png')
+![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg)
   
 
-![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg)
 
-![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg)
 
 
 

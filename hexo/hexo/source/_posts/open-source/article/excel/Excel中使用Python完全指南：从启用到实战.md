@@ -62,7 +62,7 @@ tags: 自动化办公
 
 在做资料检索的过程中，我有了一个意外发现：微软的Excel，已经支持Python了？！
 
-![微信图片_20251028232905_898_47.png](https://raw.atomgit.com/user-images/assets/5027920/25a8f48c-052d-4253-a808-008779ba1a82/微信图片_20251028232905_898_47.png '微信图片_20251028232905_898_47.png')
+![微信图片_20251028232905_898_47.png](https://raw.atomgit.com/user-images/assets/5027920/25a8f48c-052d-4253-a808-008779ba1a82/微信图片_20251028232905_898_47.png)
 
   
 
@@ -268,9 +268,9 @@ Q：有其他更高级的课程吗？
 ![扫一扫，领红包](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg)
   
 
-![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+![美团红包](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg)
 
-![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+![滴滴红包](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg)
 
 
 

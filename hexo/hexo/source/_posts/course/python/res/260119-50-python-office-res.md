@@ -183,7 +183,7 @@ tags: [Python,自动化办公]
 
 **扫描下方二维码，立即购买课程。**
 
-![给小白的50讲自动化办公](https://raw.atomgit.com/user-images/assets/5027920/b60313fe-1578-4b91-9155-1c92f25e1466/50讲.jpg '50讲.jpg')
+![给小白的50讲自动化办公](https://raw.atomgit.com/user-images/assets/5027920/b60313fe-1578-4b91-9155-1c92f25e1466/50讲.jpg)
 
 
 或者添加微信：aiwf365，备注"50讲"，即可获取购买链接。

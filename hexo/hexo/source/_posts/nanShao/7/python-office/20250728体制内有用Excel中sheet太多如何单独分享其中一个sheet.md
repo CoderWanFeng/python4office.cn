@@ -11,7 +11,7 @@ tags: [50讲Python自动化办公]
 之前，我不是跟大家说过，我们的课程销售数据都要进行表格汇总和统计嘛。
 
 而晚枫老师教我的方法就是在一个Excel工作簿中建立多个sheet工作表，类似于下图：
-![37d32aae785d8e293e5304b4b52d6ef3.png](https://raw.atomgit.com/user-images/assets/5027920/da396cb6-b4f6-465b-b4f0-cca580e2d188/37d32aae785d8e293e5304b4b52d6ef3.png '37d32aae785d8e293e5304b4b52d6ef3.png')
+![37d32aae785d8e293e5304b4b52d6ef3.png](https://raw.atomgit.com/user-images/assets/5027920/da396cb6-b4f6-465b-b4f0-cca580e2d188/37d32aae785d8e293e5304b4b52d6ef3.png)
 
 
 所以，我就在想，未来做的项目变多，一个工作簿中的sheet表格太多的话就不利于分享和展示了。
