@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ end }}
+<div class="post-list">
+    {{ range $pages }}
+    <article class="post-card">
+        {{ if .Params.cover }}
+        <img src="{{ .Params.cover }}" alt="{{ .Title }}" class="post-cover">
+        {{ end }}
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="post-meta">
+            <span>{{ .Date.Format "2006-01-02" }}</span>
+            {{ if .Params.categories }}
+            <span> · </span>
+            {{ range first 1 .Params.categories }}
+            <span class="category">{{ . }}</span>
+            {{ end }}
+            {{ end }}
+        </div>
+        <div class="post-excerpt">
+            {{ if .Description }}
+            {{ .Description }}
+            {{ else }}
+            {{ .Summary }}
+            {{ end }}
+        </div>
+        {{ if .Params.tags }}
+        <div class="tags">
+            {{ range first 5 .Params.tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </article>
+    {{ end }}
+</div>
+{{ end }}
