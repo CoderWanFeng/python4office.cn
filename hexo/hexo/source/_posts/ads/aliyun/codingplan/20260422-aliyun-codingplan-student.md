@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["阿里云", "coding plan", "学生优惠"]
 categories: ["阿里云Coding Plan"]
 description: "阿里云Coding Plan学生优惠指南：怎么认证、怎么申请、有哪些优惠，省钱攻略，学生党必看。"
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

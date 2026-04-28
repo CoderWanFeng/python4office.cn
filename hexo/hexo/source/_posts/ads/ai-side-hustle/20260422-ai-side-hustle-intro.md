@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["ai副业", "ai编程", "副业变现"]
 categories: ["AI副业变现"]
 description: "AI副业入门：5个普通人可以做的方向，AI代写、AI设计、AI培训、AI开发Skill、AI数字人，看完你就知道怎么开始了。"
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -5,6 +5,7 @@ description: 程序员晚枫分享：我的AI编程工作流，火山方舟Codin
 date: 2026-04-10 00:09:00
 tags: [火山方舟Coding Plan工作流, AI编程工作流, 程序员日常, 火山引擎实战, AI提效, 程序员晚枫]
 categories: [AI编程, 实战分享]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

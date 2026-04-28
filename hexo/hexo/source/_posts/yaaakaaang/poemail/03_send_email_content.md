@@ -2,6 +2,7 @@
 title: 发送纯文字邮件
 date: 2025-05-13 19:50:32
 tags: [poemail]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

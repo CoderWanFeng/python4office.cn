@@ -12,6 +12,7 @@ tags:
   - Windsurf
   - 工具对比
 description: "Trae vs Cursor vs Windsurf，3大AI编程工具横向对比，帮你找到最适合你的那一款"
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

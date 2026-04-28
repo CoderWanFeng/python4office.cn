@@ -2,6 +2,7 @@
 title: python-office库中，pdf转word怎么用？
 date: 2026-01-10 06:25:17
 tags: python-office
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

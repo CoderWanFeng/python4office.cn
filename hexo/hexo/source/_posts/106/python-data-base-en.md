@@ -2,6 +2,7 @@
 title: "278-Page PDF: Python Data Analysis Basics - Perfect for Beginners"
 date: 2022-11-16 17:26:30
 tags: ["E-book"]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='支付宝-banner'>

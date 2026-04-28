@@ -2,6 +2,7 @@
 title: 阿里杀疯了！能自动帮你写代码，居然还免费？
 date: 2023-10-32 21:13:55
 tags: 资源
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

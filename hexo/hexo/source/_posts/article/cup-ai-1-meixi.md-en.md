@@ -2,6 +2,7 @@
 title: "Messi Scored! Using Python to Predict World Cup Champion Turned Out to Be... Netizens: Pain, Too Painful!"
 date: 2022-11-27 06:44:04
 tags: 人工智能
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 

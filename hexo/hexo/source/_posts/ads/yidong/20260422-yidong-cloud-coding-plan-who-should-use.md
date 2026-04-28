@@ -5,6 +5,7 @@ description: 程序员晚枫分析：移动云 Coding Plan 适合哪些人？政
 date: 2026-04-22 21:30:00
 tags: [移动云, 中国移动, Coding Plan 选购, 政企客户, 企业用户]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

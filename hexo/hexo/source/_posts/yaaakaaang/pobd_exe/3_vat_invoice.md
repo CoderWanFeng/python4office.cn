@@ -2,6 +2,7 @@
 title: 识别增值税发票
 date: 2025-06-05 13:15:32
 tags: [pobd]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -5,6 +5,7 @@ description: "Programmer Wanfeng's recommendation: Zhipu AI GLM Coding Plan, dom
 date: 2026-04-22 18:40:00
 tags: ["Zhipu AI", "GLM", "Coding Plan", "AI Programming", "Domestic LLM"]
 categories: ["AI Programming", "Tool Review"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

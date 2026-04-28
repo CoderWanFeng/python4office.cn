@@ -14,6 +14,7 @@ tags:
 order: 1
 description: 开源到底是什么？为什么AI圈总提"开源大模型"？程序员晚枫用大白话帮你搞懂开源，看完就明白为什么有的AI能免费用了！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

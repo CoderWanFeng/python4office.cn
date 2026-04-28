@@ -5,6 +5,7 @@ tags: [Layoff, Career, 30 Years Old, Life Reflections]
 categories: [Growth Story]
 keywords: [30-year-old layoff, Career crisis, Programmer laid off, Life reflections]
 description: A real record of a 30-year-old programmer after being laid off. What did he think that night, and what did he do later?
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 # At 30, I Was Laid Off: That Night, I Finally Understood Something

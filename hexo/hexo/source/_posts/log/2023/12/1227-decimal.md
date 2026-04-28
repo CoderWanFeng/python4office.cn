@@ -2,6 +2,7 @@
 title: 震惊！0.1+0.2≠0.3，Python也有Bug吗？
 date: 2023-12-27 14:16:17
 tags: 语法
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

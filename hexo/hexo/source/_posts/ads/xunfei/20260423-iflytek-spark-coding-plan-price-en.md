@@ -5,6 +5,7 @@ description: Tested by Programmer Wanfeng: iFLYTEK Spark Coding Plan starts at o
 date: 2026-04-23 10:00:00
 tags: [iFLYTEK Spark, iFLYTEK Spark, Coding Plan price, voice programming, AI programming]
 categories: [AI programming, tool evaluation]
+cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -5,6 +5,7 @@ description: "Programmer Wanfeng's hands-on guide to Zhipu AI GLM Coding Plan â€
 date: 2026-04-22 18:45:00
 tags: ["Zhipu AI", "GLM", "Coding Plan Tutorial", "API Getting Started"]
 categories: ["AI Programming", "Tutorial"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

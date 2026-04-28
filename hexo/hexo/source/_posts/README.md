@@ -2,6 +2,7 @@
 title: Python自动化办公社区 · 团队介绍
 date: 2021-11-15 20:06:34
 tags: [自动化办公,团队介绍]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

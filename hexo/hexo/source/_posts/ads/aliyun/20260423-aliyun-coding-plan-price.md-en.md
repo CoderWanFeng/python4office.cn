@@ -5,6 +5,7 @@ description: Programmer Wan Feng's actual test: Alibaba Cloud Bailian Coding Pla
 date: 2026-04-23 17:00:00
 tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, Coding Plan Price, AI Programming]
 categories: [AI Programming, Tool Review]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

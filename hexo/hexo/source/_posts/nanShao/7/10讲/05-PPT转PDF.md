@@ -2,6 +2,7 @@
 title: 05-PPT转PDF
 date: 2025-08-05 23:41:49
 tags: [10讲Python自动化办公]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 <!-- more -->
 哈喽，大家好，今天开始学习我们的第5讲，用Python代码将PPT文件转换成PDF文件。

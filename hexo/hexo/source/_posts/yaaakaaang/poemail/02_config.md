@@ -2,6 +2,7 @@
 title: 获取qq邮箱授权码与安装运行环境依赖包
 date: 2025-05-13 19:15:32
 tags: [poemail]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

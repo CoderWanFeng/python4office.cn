@@ -2,6 +2,7 @@
 title: 从兴趣出发学习Python，到底能走多远？
 date: 2024-07-26 21:24:04
 tags: 1v1
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

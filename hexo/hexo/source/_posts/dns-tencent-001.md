@@ -2,6 +2,7 @@
 title: 【DNS 解析】使用腾讯云DNS解析 + Github Pages，免费搭建个人网站 （给小白的保姆级教程）
 date: 2022-06-09 16:43:24
 tags: [DNS,腾讯云,GitHub]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -5,6 +5,7 @@ description: 学生党福利！阿里云百炼 Coding Plan 学生专属优惠，
 date: 2026-04-23 19:00:00
 tags: [阿里云, 百炼, 通义千问, 学生优惠, AI编程]
 categories: [AI编程, 教程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

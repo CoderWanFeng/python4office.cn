@@ -2,6 +2,7 @@
 title: 108个Python精选库，建议收藏留用！
 date: 2022-06-08 14:25:46
 tags: 第三方库
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 大家好，我是Python程序员 晚枫。

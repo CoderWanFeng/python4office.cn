@@ -5,6 +5,7 @@ description: Programmer Wan Feng compares: Tencent Cloud Coding Plan (49 yuan/mo
 date: 2026-04-23 15:30:00
 tags: [Tencent Cloud, Volcano Ark, Coding Plan Comparison, AI Programming]
 categories: [AI Programming, Tool Review]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

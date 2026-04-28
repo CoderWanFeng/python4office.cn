@@ -2,6 +2,7 @@
 title: 如何参与1个python的开源项目？
 date: 2022-01-05 15:32:10
 tags: 开源项目
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

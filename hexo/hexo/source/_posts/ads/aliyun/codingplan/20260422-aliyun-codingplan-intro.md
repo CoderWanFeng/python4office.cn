@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["阿里云", "coding plan", "ai编程", "通义千问"]
 categories: ["阿里云Coding Plan"]
 description: "阿里云Coding Plan来了！通义千问加持，程序员的新选择。"
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

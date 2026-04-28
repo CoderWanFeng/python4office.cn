@@ -5,6 +5,7 @@ description: 程序员晚枫手把手教你用百度智能云 Coding Plan，文�
 date: 2026-04-22 20:05:00
 tags: [百度智能云, 文心一言, 飞桨, Coding Plan 教程]
 categories: [AI编程, 教程]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -3,6 +3,7 @@ title: 同事花3小时处理Excel，你用Python只用了5分钟：差距在哪
 date: 2026-04-17 22:10:00
 tags: [Python, 自动化办公, Excel, 效率提升]
 categories: 50讲自动化办公
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 ## 一个真实的故事

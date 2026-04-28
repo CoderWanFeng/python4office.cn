@@ -5,6 +5,7 @@ description: Recommended by Programmer Wanfeng: Azure OpenAI Coding Plan, GPT-4 
 date: 2026-04-22 22:00:00
 tags: [Azure OpenAI, Coding Plan, GPT-4, Enterprise-level AI, Programmer Wanfeng]
 categories: [AI Programming, Tool Evaluation]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

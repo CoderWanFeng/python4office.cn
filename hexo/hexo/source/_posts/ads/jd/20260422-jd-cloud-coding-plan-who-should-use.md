@@ -5,6 +5,7 @@ description: 程序员晚枫分析：京东云 JD Cloud Coding Plan 适合哪些
 date: 2026-04-22 18:10:00
 tags: [京东云, JD Cloud, Coding Plan 选购, AI编程, 京点点]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

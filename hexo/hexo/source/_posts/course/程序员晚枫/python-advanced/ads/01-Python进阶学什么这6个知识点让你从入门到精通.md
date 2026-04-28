@@ -3,6 +3,7 @@ title: Python进阶学什么？这6个知识点让你从入门到精通
 date: 2026-04-17 22:10:00
 tags: [Python进阶, Python, 编程技巧, 装饰器, 生成器]
 categories: Python进阶
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 ## 学完Python基础之后，下一步怎么走？

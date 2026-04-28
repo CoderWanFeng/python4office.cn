@@ -15,6 +15,7 @@ tags:
 order: 24
 description: 为什么AI搜索这么火？程序员程序员晚枫用大白话揭秘AI搜索，让你了解不用翻网页的搜索方式！
 
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 

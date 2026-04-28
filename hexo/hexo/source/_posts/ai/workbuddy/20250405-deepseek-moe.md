@@ -2,6 +2,7 @@
 title: DeepSeek的MoE架构有多牛？一文看懂为什么它能用1/10成本做出GPT-4级模型
 date: 2025-04-05 16:30:00
 tags: AI
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

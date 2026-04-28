@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["ai工具", "deepseek", "ai agent", "2026年", "ai编程"]
 categories: ["2026热点"]
 description: "2026年第一季度AI工具大盘点，DeepSeek、AI Agent、豆包、AI办公自动化、AI副业变现，5大热点一网打尽。"
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -5,6 +5,7 @@ description: 程序员晚枫实测对比：26元/月的 MiniMax 和 72元/月的
 date: 2026-04-27 14:25:00
 tags: [MiniMax, GitHub Copilot, AI编程对比, 26元/月, 程序员晚枫]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

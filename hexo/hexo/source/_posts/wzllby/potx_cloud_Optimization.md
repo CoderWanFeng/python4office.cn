@@ -2,6 +2,7 @@
 title: potx-cloud 库全面升级:让发票识别体验直接起飞
 date: 2025-04-15 01:25:17
 tags: 码匠er
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

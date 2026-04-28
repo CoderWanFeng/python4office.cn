@@ -2,6 +2,7 @@
 title: pandas创始人：我写了1本《利用Python进行数据分析》，提供全套代码
 date: 2022-07-04 08:55:45
 tags: 数据分析
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

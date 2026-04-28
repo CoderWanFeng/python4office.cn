@@ -2,6 +2,7 @@
 title: Google Python开源项目风格指南——中文版
 date: 2021-12-30 14:41:27
 tags: [代码规范,开源项目]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

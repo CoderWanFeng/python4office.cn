@@ -5,6 +5,7 @@ description: Recommended by Programmer Wanfeng: Baidu Cloud Coding Plan, Wenxin 
 date: 2026-04-22 20:00:00
 tags: [Baidu Cloud, Coding Plan, Wenxin Yiyan, AI Programming]
 categories: [AI Programming, Tool Evaluation]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: 副业信息差 · 项目汇总
 date: 2024-02-25 10:41:49
 tags: [副业,副业信息差]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='进群-banner-AI'>

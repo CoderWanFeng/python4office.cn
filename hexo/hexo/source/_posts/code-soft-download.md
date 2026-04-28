@@ -2,6 +2,7 @@
 title: 最受欢迎的11个Python开发软件
 date: 2022-11-27 07:09:50
 tags: 软件
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

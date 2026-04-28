@@ -5,6 +5,7 @@ description: 程序员晚枫解答：腾讯云 Coding Plan 常见问题汇总，
 date: 2026-04-23 14:30:00
 tags: [腾讯云, 腾讯混元, Coding Plan FAQ, AI编程]
 categories: [AI编程, 教程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

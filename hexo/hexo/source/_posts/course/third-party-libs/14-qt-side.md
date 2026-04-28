@@ -2,6 +2,7 @@
 title: PySide vs PyQt：Python GUI开发史诗级对决，谁才是王者？
 date: 2025-05-13 16:24:04
 tags: 第三方库
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

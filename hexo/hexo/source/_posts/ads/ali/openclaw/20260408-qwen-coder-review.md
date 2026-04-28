@@ -3,6 +3,7 @@ title: 通义千问代码能力实测：Qwen3-Coder系列到底有多强？
 date: 2026-04-08 00:42:00
 tags: [通义千问代码能力, Qwen3Coder评测, 阿里云CodingPlan, 通义千问编程, 国产AI编程模型]
 categories: [AI编程, 模型评测]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

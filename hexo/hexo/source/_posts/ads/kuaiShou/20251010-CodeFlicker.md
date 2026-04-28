@@ -2,6 +2,7 @@
 title: 快手竟然也做AI编程工具？CodeFlicker杀入开发者赛道背后的野心
 date: 2025-10-10 02:24:04
 tags: AI编程
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

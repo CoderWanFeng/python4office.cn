@@ -14,6 +14,7 @@ tags:
 order: 8
 description: 新闻总说GPU短缺、显卡涨价，到底是怎么回事？程序员晚枫用大白话揭秘GPU，让你看懂为什么AI离不开这块"昂贵的心脏"！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

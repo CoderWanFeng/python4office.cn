@@ -2,6 +2,7 @@
 title: 分享10个免费的Python代码仓库，轻松实现自动化办公（下）
 date: 2023-10-22 01:25:17
 tags: python-office
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

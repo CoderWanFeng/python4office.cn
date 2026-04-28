@@ -2,6 +2,7 @@
 title: Python 3.12 抢先看——关于 f-string 的改动
 date: 2023-02-27 01:07:57
 tags: 3.12
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

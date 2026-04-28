@@ -5,6 +5,7 @@ description: 程序员晚枫推荐：移动云 Coding Plan，中国移动大模�
 date: 2026-04-22 21:20:00
 tags: [移动云, 中国移动, Coding Plan, AI编程, 程序员晚枫]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

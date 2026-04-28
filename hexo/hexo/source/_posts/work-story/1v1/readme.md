@@ -2,6 +2,7 @@
 title: 如需1对1咨询，请读完本文后+我微信（见文中）
 date: 2023-07-23 23:21:47
 tags: 1v1
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

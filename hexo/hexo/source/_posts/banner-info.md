@@ -2,6 +2,7 @@
 title: 网站通用banner代码
 date: 2019-11-19 01:46:16
 tags: banner
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -2,6 +2,7 @@
 title: Python模块与包：我从混乱到井井有条，全靠这5个组织原则
 date: 2026-02-28 19:02:00
 tags: [Python基础, 模块化, 工程化]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

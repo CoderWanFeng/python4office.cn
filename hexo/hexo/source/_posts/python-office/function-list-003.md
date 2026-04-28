@@ -2,6 +2,7 @@
 title: 5 个 Python 代码来自动化你的日常工作，网友：早知道就好了
 date: 2022-10-31 01:25:17
 tags: python-office
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

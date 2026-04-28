@@ -2,6 +2,7 @@
 title: Python自动化办公社区 · 资源仓库
 date: 2021-01-05 15:06:34
 tags: 自动化办公
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 <div align="center">
     <a href="https://github.com/CoderWanFeng"> <img src="https://badgen.net/badge/Github/%E7%A8%8B%E5%BA%8F%E5%91%98?icon=github&color=red"></a>

@@ -5,6 +5,7 @@ description: 程序员晚枫手把手教你用智谱 AI GLM Coding Plan，从 AP
 date: 2026-04-22 18:45:00
 tags: [智谱 AI, GLM, Coding Plan 教程, API 入门]
 categories: [AI编程, 教程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

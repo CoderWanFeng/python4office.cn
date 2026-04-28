@@ -5,6 +5,7 @@ description: 程序员晚枫真诚分享：为什么我选择火山方舟Coding 
 date: 2026-04-10 00:10:00
 tags: [火山方舟Coding Plan选择, 为什么选火山方舟, AI编程工具选择, 程序员工具推荐, 火山引擎评测, 程序员晚枫]
 categories: [AI编程, 工具评测]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

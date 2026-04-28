@@ -5,6 +5,7 @@ description: Programmer Wan Feng hand-holds you through Tencent Cloud Coding Pla
 date: 2026-04-22 21:05:00
 tags: [Tencent Cloud, Tencent Hunyuan, Coding Plan Tutorial, API Integration]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

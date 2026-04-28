@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["deepseek", "省钱技巧", "api"]
 categories: ["DeepSeek实战"]
 description: "DeepSeek省钱技巧合集：优化prompt、缓存、批量请求、监控使用量，一年能省下好几千。"
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

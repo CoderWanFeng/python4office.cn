@@ -3,6 +3,7 @@ title: "Participate in AI Programming Competition with Zero Foundation? Start fr
 date: 2026-04-14 08:00:00
 tags: [AI Programming, Zero Foundation, Competition Guide, Python, Beginner Guide]
 categories: Beginner Guide
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 > Hello everyone, I'm Programmer Wanfeng.

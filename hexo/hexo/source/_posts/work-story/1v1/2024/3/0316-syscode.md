@@ -2,6 +2,7 @@
 title: 从0开始，掌握优秀的Python嗅觉
 date: 2024-03-17 00:22:05
 tags: 1v1
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

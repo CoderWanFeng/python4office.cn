@@ -2,6 +2,7 @@
 title: 给程序加个进度条吧！1行Python代码，快速搞定~
 date: 2023-03-23 22:11:12
 tags: 开源
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

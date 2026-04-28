@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["atomgit", "atomcode", "claude code", "ai编程"]
 categories: ["AI工具"]
 description: "AtomCode vs Claude Code对比！价格、功能、编程能力、开源、性价比，深度对比，看完就知道选哪个。"
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

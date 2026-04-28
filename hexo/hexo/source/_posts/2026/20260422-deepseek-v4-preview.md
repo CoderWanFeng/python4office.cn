@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["deepseek", "ai编程", "大模型", "开源", "claude"]
 categories: ["2026热点"]
 description: "DeepSeek V4 即将发布，100万Token上下文+完全开源，编程能力超越Claude和GPT-4，推理成本仅为GPT-4的1/70。这篇文章告诉你这对程序员意味着什么。"
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

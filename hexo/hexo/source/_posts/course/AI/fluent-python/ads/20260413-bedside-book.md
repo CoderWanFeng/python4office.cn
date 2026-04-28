@@ -2,6 +2,7 @@
 title: 这本书在我床头放了7年，我终于决定把它读透
 date: 2026-04-13 16:00:00
 tags: [python, 流畅的 Python, Python 进阶, 程序员晚枫]
+cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

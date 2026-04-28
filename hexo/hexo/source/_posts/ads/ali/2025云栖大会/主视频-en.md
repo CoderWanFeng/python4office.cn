@@ -2,6 +2,7 @@
 title: Hardcore Exhibition Tour of 2025 Cloud Computing Conference
 date: 2025-08-26 23:24:04
 tags: Cloud Computing Conference
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

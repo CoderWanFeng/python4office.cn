@@ -3,6 +3,7 @@ title: "Invoice OCR Recognition Skill Practice: Auto-Extract Information to Gene
 date: 2026-04-06 10:42:00
 tags: [OCR, Invoice Recognition, Skill, AI Office, Finance Automation, Tutorial]
 categories: [AI Skills, Skill Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center">

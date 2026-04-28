@@ -12,6 +12,7 @@ tags:
   - 爬虫
   - 实战
 description: "用 Trae AI 编程做了一个爬虫，记录全过程和真实感受"
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

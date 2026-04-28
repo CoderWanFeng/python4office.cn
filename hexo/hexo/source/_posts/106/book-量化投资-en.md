@@ -2,6 +2,7 @@
 title: "550-Page PDF: Quantitative Investment Using Python"
 date: 2024-03-13 21:29:42
 tags: ["E-book"]
+cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='外卖-banner'>

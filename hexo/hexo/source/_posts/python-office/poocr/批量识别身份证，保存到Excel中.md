@@ -2,6 +2,7 @@
 title: 入门案例！批量识别身份证自动保存为Excel文件，1行Python代码实现
 date: 2024-04-24 23:33:40
 tags: [poocr,python-office,开源项目]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

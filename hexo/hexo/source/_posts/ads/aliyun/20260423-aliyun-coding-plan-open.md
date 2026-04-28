@@ -5,6 +5,7 @@ description: 程序员晚枫手把手教你开通阿里云百炼 Coding Plan，2
 date: 2026-04-23 17:30:00
 tags: [阿里云, 百炼, 通义千问, Coding Plan 教程, AI编程入门]
 categories: [AI编程, 教程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

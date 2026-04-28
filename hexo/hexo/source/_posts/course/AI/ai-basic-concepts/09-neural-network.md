@@ -14,6 +14,7 @@ tags:
 order: 9
 description: AI的"大脑"是怎么工作的？程序员晚枫用大白话揭秘神经网络，让你理解AI是怎么"思考"、怎么学习的！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

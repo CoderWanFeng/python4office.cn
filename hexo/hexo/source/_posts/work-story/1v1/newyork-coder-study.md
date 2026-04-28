@@ -2,6 +2,7 @@
 title: 在纽约想转行程序员，学什么方向？
 date: 2023-08-014 22:22:05
 tags: 1v1
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 

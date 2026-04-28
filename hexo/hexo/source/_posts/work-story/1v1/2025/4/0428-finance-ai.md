@@ -2,6 +2,7 @@
 title: 财务工作的30+打工人，想转码可行吗？
 date: 2025-04-28 22:22:05
 tags: 1v1
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

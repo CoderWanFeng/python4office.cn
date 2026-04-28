@@ -5,6 +5,7 @@ description: 程序员晚枫实测：国产AI写代码，效果已经接近GPT-4
 date: 2026-04-27 17:50:00
 tags: [国产AI, GPT-4, Coding Plan, 购买流程, 程序员晚枫]
 categories: [AI编程, 实测]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

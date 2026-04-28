@@ -2,6 +2,7 @@
 title: CentOS8下Redis的安装
 date: 2022-02-07 14:11:29
 tags: [CentOS,Linux,Redis]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <div align="center">

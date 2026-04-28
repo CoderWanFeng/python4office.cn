@@ -3,6 +3,7 @@ title: OpenClaw 案例库 vs GitHub vs 官方文档：哪个更适合学习？
 date: 2026-03-16 16:36:00
 tags: [OpenClaw, 案例库，学习资源，对比评测]
 categories: [AI 编程，资源对比]
+cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

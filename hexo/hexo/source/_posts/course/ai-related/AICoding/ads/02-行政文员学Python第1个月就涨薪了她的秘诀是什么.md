@@ -3,6 +3,7 @@ title: 行政文员学Python，第1个月就涨薪了，她的秘诀是什么
 date: 2026-04-19 11:00:00
 tags: [Python, 转行, 涨薪, 职场故事]
 categories: [Python, 职场故事]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 # 行政文员学Python，第1个月就涨薪了，她的秘诀是什么

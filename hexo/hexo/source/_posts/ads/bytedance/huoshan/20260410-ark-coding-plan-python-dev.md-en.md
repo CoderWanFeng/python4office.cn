@@ -5,6 +5,7 @@ description: Shared by Programmer Wan Feng (Python open source project author): 
 date: 2026-04-10 00:03:00
 tags: [Volcano Ark Coding Plan Python, Python AI Programming, Volcano Engine Python, Doubao Python, AI Writing Python, Programmer Wan Feng]
 categories: [AI Programming, Python]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

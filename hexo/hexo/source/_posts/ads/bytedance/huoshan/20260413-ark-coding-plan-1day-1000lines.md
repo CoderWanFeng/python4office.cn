@@ -5,6 +5,7 @@ description: 程序员晚枫实测：用火山方舟Coding Plan，1天写了1000
 date: 2026-04-13 00:00:00
 tags: [AI编程效率, 火山方舟效率, 代码生成, AI编程实测, 程序员效率, 程序员晚枫]
 categories: [AI编程, 实测报告]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

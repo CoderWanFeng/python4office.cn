@@ -15,6 +15,7 @@ tags:
 order: 16
 description: AI是怎么理解"苹果"既是水果又是手机的？程序员晚枫用大白话揭秘嵌入技术！
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

@@ -2,6 +2,7 @@
 title: 重磅！复旦大学发布中国版ChatGPT，名字来自《流浪地球》，赶紧免费体验一下~
 date: 2023-02-22 22:11:55
 tags: ai
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 

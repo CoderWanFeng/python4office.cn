@@ -3,6 +3,7 @@ title: 一个Python脚本变成独立exe，只需要这3步
 date: 2026-04-17 22:30:00
 tags: [PyInstaller, Python, exe, 打包, 新手教程]
 categories: PyInstaller打包
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 ## 最简单的PyInstaller打包教程

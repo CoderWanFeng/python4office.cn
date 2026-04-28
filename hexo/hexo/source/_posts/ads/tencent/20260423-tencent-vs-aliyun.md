@@ -5,6 +5,7 @@ description: 程序员晚枫硬核对比：腾讯云 Coding Plan（49元/月）v
 date: 2026-04-23 13:30:00
 tags: [腾讯云, 阿里云, Coding Plan 对比, 腾讯混元, 通义千问]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

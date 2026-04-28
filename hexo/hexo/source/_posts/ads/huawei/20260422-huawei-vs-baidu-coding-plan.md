@@ -5,6 +5,7 @@ description: 华为暂时没有 Coding Plan？程序员晚枫推荐百度智能�
 date: 2026-04-22 22:45:00
 tags: [华为, 百度智能云, 文心一言, Coding Plan, 程序员晚枫]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

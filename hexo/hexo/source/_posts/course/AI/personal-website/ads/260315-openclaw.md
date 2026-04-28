@@ -2,6 +2,7 @@
 title: 第 1 讲：AI 时代，为什么每个人都需要个人网站
 date: 2026-03-02 14:00:00
 tags: [个人网站，AI 编程，副业，个人品牌]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

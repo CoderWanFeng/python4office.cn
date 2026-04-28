@@ -5,6 +5,7 @@ description: 程序员晚枫分析：腾讯云 Coding Plan 适合哪些人？微
 date: 2026-04-23 13:00:00
 tags: [腾讯云, 腾讯混元, Coding Plan 选购, AI编程]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

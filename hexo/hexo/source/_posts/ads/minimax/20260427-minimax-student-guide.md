@@ -5,6 +5,7 @@ description: 学生党想学 AI 编程？MiniMax 26元/月，性价比炸裂！�
 date: 2026-04-27 14:20:00
 tags: [学生党, MiniMax, AI编程, 26元/月, 程序员晚枫]
 categories: [AI编程, 学生党]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

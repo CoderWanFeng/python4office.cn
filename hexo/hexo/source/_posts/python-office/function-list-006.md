@@ -2,6 +2,7 @@
 title: 盘点10个Python自动化办公操作，1行代码搞定，小白也能用
 date: 2023-09-30 01:25:17
 tags: python-office
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

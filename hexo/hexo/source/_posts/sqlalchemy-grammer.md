@@ -2,6 +2,7 @@
 title: sqlalchemy常用语法
 date: 2022-02-10 14:17:07
 tags: sqlalchemy
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

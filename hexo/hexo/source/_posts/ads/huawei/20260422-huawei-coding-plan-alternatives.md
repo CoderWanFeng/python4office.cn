@@ -5,6 +5,7 @@ description: 程序员晚枫的华为云 Coding Plan 选购指南：虽然华为
 date: 2026-04-22 20:30:00
 tags: [华为云, Coding Plan 选购, 替代方案, AI编程]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

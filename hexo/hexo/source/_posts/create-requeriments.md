@@ -2,6 +2,7 @@
 title: Python 生成requirements.txt文件的两种方式以及使用
 date: 2022-01-24 08:48:39
 tags: [Linux,Python,pip]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

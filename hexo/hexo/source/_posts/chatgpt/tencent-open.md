@@ -2,6 +2,7 @@
 title: 腾讯混元大模型
 date: 2024-05-18 20:56:34
 tags: 大模型
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

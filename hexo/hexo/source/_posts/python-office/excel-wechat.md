@@ -2,6 +2,7 @@
 title: Python办公实战！​按姓名拆分Excel为单独文件，微信自动发给相应联系人
 date: 2022-09-28 20:30:14
 tags: python-office
+cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&auto=format&fit=crop
 ---
 
 

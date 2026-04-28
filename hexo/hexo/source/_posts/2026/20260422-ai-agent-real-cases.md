@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["ai agent", "ai编程", "openclaw", "coze"]
 categories: ["2026热点"]
 description: "AI Agent实际落地案例（5个），制造业、保险、银行、物流、电商，看完你就知道怎么用了。"
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

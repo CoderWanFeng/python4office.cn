@@ -2,6 +2,7 @@
 title: 用Python破解WiFi密码，只需要1行代码，太刺激了！
 date: 2022-09-03 15:18:25
 tags: python-office
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

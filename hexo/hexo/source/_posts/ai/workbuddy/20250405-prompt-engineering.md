@@ -2,6 +2,7 @@
 title: 我整理了100个优质Prompt后，发现高手都在用这5个技巧
 date: 2025-04-05 19:00:00
 tags: AI
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -3,6 +3,7 @@ title: 用PyInstaller打包Python程序，踩过的10个坑和解决方案
 date: 2026-04-17 22:20:00
 tags: [PyInstaller, Python, 打包, 坑, 解决方案]
 categories: PyInstaller打包
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 ## 写在前面

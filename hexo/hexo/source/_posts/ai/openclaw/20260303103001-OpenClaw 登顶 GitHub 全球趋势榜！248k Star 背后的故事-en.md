@@ -2,6 +2,7 @@
 title: "OpenClaw Tops GitHub Global Trending! The Story Behind 248k Stars"
 date: 2026-03-03 10:30:00
 tags: [OpenClaw, Industry Analysis, Open Source Ecosystem]
+cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

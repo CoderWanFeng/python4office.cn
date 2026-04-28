@@ -4,6 +4,7 @@ tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, Coding Plan Update, AI Programmin
 categories: [AI Programming, News]
 date: 2026-04-23 21:00:00
 description: Programmer Wanfeng's tracking: 2026 Alibaba Cloud Bailian Coding Plan new features summary, Tongyi Qianwen large model update overview.
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

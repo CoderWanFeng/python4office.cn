@@ -2,6 +2,7 @@
 title: 用CodeBuddy CLI开发了几个脚本，太丝滑了
 date: 2025-10-31 00:24:04
 tags: [CodeBuddy,vibecoding]
+cover: https://images.unsplash.com/photo-1547658719-da2b51169186?q=80&w=1200&auto=format&fit=crop
 ---
 
 

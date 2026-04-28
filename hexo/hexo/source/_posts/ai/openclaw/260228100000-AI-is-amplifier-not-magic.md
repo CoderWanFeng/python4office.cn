@@ -2,6 +2,7 @@
 title: 别再幻想AI无中生有：它只是你业务的放大器，不是摇钱树
 date: 2026-02-28 10:00:00
 tags: [AI 编程]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

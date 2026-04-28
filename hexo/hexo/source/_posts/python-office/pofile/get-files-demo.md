@@ -2,6 +2,7 @@
 title: 如何拿到当前文件夹下的所有文件？1行Python代码搞定
 date: 2023-04-01 17:59:15
 tags: 自动化办公
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

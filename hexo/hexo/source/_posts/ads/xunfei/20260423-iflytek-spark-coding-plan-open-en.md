@@ -5,6 +5,7 @@ description: Programmer Wanfeng shows you how to activate iFLYTEK Spark Coding P
 date: 2026-04-23 10:30:00
 tags: [iFLYTEK Spark, iFLYTEK Spark, Coding Plan activation, voice programming tutorial, AI programming]
 categories: [AI programming, tutorial]
+cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

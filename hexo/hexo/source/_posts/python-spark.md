@@ -2,6 +2,7 @@
 title: 2022年Python+大数据学习路线图，源码笔记，最优学习资源
 date: 2022-07-31 22:38:06
 tags: spark
+cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1000&auto=format&fit=crop
 ---
 
 

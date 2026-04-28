@@ -5,6 +5,7 @@ description: Programmer Wan Feng shares: My AI programming workflow, one day of 
 date: 2026-04-10 00:09:00
 tags: [Volcano Coding Plan Workflow, AI Programming Workflow, Programmer Daily Life, Volcano Engine Practice, AI Efficiency, Programmer Wan Feng]
 categories: [AI Programming, Practice Sharing]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**

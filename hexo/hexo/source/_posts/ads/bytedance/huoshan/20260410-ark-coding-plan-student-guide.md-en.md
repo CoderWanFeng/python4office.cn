@@ -5,6 +5,7 @@ description: By Programmer Wan Feng: Student-exclusive Volcano Ark Coding Plan g
 date: 2026-04-10 00:06:00
 tags: [Volcano Coding Plan Student, Student AI Programming, Education Discount, Volcano Engine Student, Programming Learning Tool, Programmer Wan Feng]
 categories: [AI Programming, Student Zone]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: 硅谷百亿创始人：AI让智力变成了白菜价
 date: 2026-01-22 20:51:51
 tags: 自媒体
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='进群-banner-AI'>

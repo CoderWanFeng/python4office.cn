@@ -2,6 +2,7 @@
 title: Python运算符与表达式：我总结的运算规则，让你写出高效代码
 date: 2026-02-28 19:56:00
 tags: [Python基础, 运算符, 表达式]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

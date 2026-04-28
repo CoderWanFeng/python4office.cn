@@ -2,6 +2,7 @@
 title: 毕业后想在重庆工作，有何建议或推荐企业？
 date: 2021-03-30 21:49:05
 tags: 重庆
+cover: https://images.unsplash.com/photo-1579208578152-875549830880?q=80&w=1000&auto=format&fit=crop
 ---
 
 ![100-2](/images/chongqing-company/cq-light.jpg)

@@ -3,6 +3,7 @@ title: "PDF Merge Split Skill Complete Tutorial: One-Click Process Hundreds of P
 date: 2026-04-06 10:40:00
 tags: [PDF, Skill, Merge, Split, AI Office, Tutorial]
 categories: [AI Skills, Skill Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center">

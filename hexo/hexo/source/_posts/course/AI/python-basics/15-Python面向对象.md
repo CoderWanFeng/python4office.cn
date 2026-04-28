@@ -2,6 +2,7 @@
 title: Python面向对象：我从零学会类和对象，全靠这7个核心概念
 date: 2026-02-28 19:00:00
 tags: [Python基础, 面向对象, OOP]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

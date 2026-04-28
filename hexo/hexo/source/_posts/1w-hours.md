@@ -4,6 +4,7 @@ date: 2022-05-11 20:56:36
 tags: ["刻意练习", "学习方法", "程序员成长", "一万小时定律", "编程学习"]
 categories: ["学习方法"]
 description: "一万小时定律真的有用吗？程序员晚枫告诉你：刻意练习比1万小时更重要。附编程学习正确姿势和实用建议。"
+cover: https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop
 ---
 
 <!-- more -->

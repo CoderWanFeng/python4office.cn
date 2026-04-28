@@ -2,6 +2,7 @@
 title: Python学了3年还在写增删改查？掌握这些高级特性薪资翻倍
 date: 2026-04-17 08:00:00
 tags: [Python进阶, 高级特性, 元类, 装饰器]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

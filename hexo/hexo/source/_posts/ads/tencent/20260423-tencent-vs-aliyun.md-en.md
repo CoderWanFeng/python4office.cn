@@ -5,6 +5,7 @@ description: Programmer Wan Feng's hardcore comparison: Tencent Cloud Coding Pla
 date: 2026-04-23 13:30:00
 tags: [Tencent Cloud, Alibaba Cloud, Coding Plan Comparison, Tencent Hunyuan, Tongyi Qianwen]
 categories: [AI Programming, Tool Review]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

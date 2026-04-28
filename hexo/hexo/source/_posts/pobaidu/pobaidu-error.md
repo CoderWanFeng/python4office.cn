@@ -2,6 +2,7 @@
 title: 百度AI平台 - 调用错误的信息
 date: 2023-01-22 15:18:26
 tags: [pobaidu,AI]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

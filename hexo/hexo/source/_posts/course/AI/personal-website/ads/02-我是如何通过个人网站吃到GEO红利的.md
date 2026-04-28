@@ -2,6 +2,7 @@
 title: 我是如何通过个人网站吃到GEO红利的
 date: 2026-04-17 10:00:00
 tags: [个人网站, GEO, 流量, 变现]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

@@ -2,6 +2,7 @@
 title: Python为什么不能多线程加速？搞懂GIL只需这一篇
 date: 2026-04-17 10:00:00
 tags: [Python进阶, GIL, 并发, 多线程]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

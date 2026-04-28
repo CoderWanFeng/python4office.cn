@@ -2,6 +2,7 @@
 title: 时长2个月的爬虫学习计划
 date: 2023-02-16 00:03:01
 tags: 爬虫
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

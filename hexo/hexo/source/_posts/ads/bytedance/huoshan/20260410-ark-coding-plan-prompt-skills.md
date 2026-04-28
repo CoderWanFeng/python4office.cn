@@ -5,6 +5,7 @@ description: 程序员晚枫分享：火山方舟Coding Plan Prompt技巧，让A
 date: 2026-04-10 00:04:00
 tags: [火山方舟Coding Plan Prompt, AI编程Prompt技巧, Prompt工程, 代码生成优化, 火山引擎技巧, 程序员晚枫]
 categories: [AI编程, Prompt工程]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

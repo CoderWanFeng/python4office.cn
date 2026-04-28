@@ -15,6 +15,7 @@ tags:
 order: 30
 description: Hermes最近全网爆火！它和龙虾（OpenClaw）到底有啥区别？程序员晚枫用大白话告诉你：一个让AI"活"了，一个让AI"长大"了。
 
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

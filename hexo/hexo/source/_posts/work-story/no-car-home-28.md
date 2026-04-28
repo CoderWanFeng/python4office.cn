@@ -2,6 +2,7 @@
 title: 28岁小公司程序员，无车无房不敢结婚，要不要转行？
 date: 2023-03-12 15:39:13
 tags: 1对1咨询
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

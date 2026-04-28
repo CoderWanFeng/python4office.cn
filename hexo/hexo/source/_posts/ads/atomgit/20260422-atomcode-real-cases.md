@@ -4,6 +4,7 @@ date: 2026-04-22 00:00:00
 tags: ["atomgit", "atomcode", "ai编程"]
 categories: ["AI工具"]
 description: "AtomCode实战案例！5个真实场景，开源项目、代码审查、文档生成、教学、团队协作，看完就知道怎么用。"
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

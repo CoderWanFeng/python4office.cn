@@ -2,6 +2,7 @@
 title: Claude Code现在可以免费用！还可以接入便宜的国产大模型
 date: 2026-04-20 19:08:00
 tags: [AI编程, openclaw, claude code]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看AI编程训练营'>

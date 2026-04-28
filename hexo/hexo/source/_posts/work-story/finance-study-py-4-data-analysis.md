@@ -2,6 +2,7 @@
 title: 财务 + Python的学习计划
 date: 2023-04-05 09:42:38
 tags: 学习计划
+cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

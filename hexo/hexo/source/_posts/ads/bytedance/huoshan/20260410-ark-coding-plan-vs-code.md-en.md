@@ -5,6 +5,7 @@ description: Tutorial by Programmer Wan Feng: VS Code + Volcano Coding Plan conf
 date: 2026-04-10 00:07:00
 tags: [Volcano Coding Plan VS Code, VS Code AI Programming, Continue Plugin, Volcano Engine VS Code, Free AI Programming, Programmer Wan Feng]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**

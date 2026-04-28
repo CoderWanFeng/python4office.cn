@@ -4,6 +4,7 @@ date: 2026-04-07 00:00:00
 categories: [广告, 腾讯, WorkBuddy]
 tags: [QClaw, WorkBuddy, AI, 办公工具, 腾讯]
 description: 详细对比QClaw和WorkBuddy的区别，帮助你选择适合自己的AI工具
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

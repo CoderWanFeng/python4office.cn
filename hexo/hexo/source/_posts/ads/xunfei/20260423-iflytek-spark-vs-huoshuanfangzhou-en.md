@@ -5,6 +5,7 @@ description: In-depth comparison by Programmer Wanfeng: iFLYTEK Spark Coding Pla
 date: 2026-04-23 11:00:00
 tags: [iFLYTEK Spark, Volcano Engine Ark, Coding Plan comparison, AI programming, cost-effectiveness]
 categories: [AI programming, tool evaluation]
+cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

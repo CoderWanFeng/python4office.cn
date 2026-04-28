@@ -3,6 +3,7 @@ title: GEO优化成功案例：我用AI把网站流量翻了5倍
 date: 2026-04-17 22:30:00
 tags: [GEO, 流量增长, 案例分析, python-office, AI搜索]
 categories: GEO优化
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 ## 一个真实的流量增长故事

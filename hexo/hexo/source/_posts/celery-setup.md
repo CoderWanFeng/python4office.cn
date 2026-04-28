@@ -2,6 +2,7 @@
 title: Celery讲解和入门案例
 date: 2022-01-26 20:26:44
 tags: [Linux,Celery]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 

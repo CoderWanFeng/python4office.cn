@@ -3,6 +3,7 @@ title: 阿里云Coding Plan适合什么人？这5类人最适合
 date: 2026-04-08 00:43:00
 tags: [阿里云CodingPlan适合谁, 百炼CodingPlan用户, 通义千问适合什么人, 阿里云AI编程推荐, 国产AI编程工具]
 categories: [AI编程, 工具推荐]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -5,6 +5,7 @@ tags: [Claude, AI编程, 程序员, 效率工具]
 categories: [AI工具]
 keywords: [Claude 4, AI编程, 程序员工具, 效率提升]
 description: Claude 4实测体验，程序员用它写代码、Debug、做架构设计，效率提升200%。
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 # Claude 4深夜炸场！程序员用它写代码，效率直接翻倍

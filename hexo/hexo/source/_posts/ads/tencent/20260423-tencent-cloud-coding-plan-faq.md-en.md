@@ -5,6 +5,7 @@ description: Programmer Wan Feng answers: Tencent Cloud Coding Plan common quest
 date: 2026-04-23 14:30:00
 tags: [Tencent Cloud, Tencent Hunyuan, Coding Plan FAQ, AI Programming]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

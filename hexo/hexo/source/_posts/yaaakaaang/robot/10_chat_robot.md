@@ -2,6 +2,7 @@
 title: 智能聊天
 date: 2025-05-23 12:05:32
 tags: [PyOfficeRobot]
+cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop
 ---
 
 

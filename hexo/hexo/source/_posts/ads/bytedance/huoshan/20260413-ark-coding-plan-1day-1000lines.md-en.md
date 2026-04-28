@@ -5,6 +5,7 @@ description: Programmer Wan Feng's real test: Wrote 1000 lines of effective code
 date: 2026-04-13 00:00:00
 tags: [AI Programming Efficiency, Volcano Efficiency, Code Generation, Real Test]
 categories: [AI Programming, Real Test Report]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

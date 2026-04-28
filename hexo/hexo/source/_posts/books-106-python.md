@@ -2,6 +2,7 @@
 title: 106本Python电子书：一网打尽全网Python学习资源~！
 date: 2022-02-21 12:26:49
 tags: [Python,电子书]
+cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?w=1000&auto=format&fit=crop
 ---
 <p align="center" id='支付宝-banner'>
     <a target="_blank" href='https://www.python4office.cn/fuli/zhifubao-0923/'>

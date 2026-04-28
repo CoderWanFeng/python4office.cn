@@ -2,6 +2,7 @@
 title: Python字符串：我被忽略的20个实用方法，效率提升3倍
 date: 2026-02-28 18:57:00
 tags: [Python基础, 字符串, 编程技巧]
+cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
 <p align="center" id='扫码查看 AI 编程训练营'>

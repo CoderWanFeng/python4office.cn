@@ -5,6 +5,7 @@ description: Programmer Wanfeng teaches you how to use Azure OpenAI Coding Plan,
 date: 2026-04-22 22:05:00
 tags: [Azure OpenAI, Coding Plan Tutorial, GPT-4, API Access]
 categories: [AI Programming, Tutorial]
+cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

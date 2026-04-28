@@ -5,6 +5,7 @@ description: "Huawei temporarily has no Coding Plan? Programmer Wanfeng recommen
 date: 2026-04-22 23:30:00
 tags: ["Huawei", "China Mobile Cloud", "China Mobile", "Coding Plan", "SOE"]
 categories: ["AI Programming", "Tool Review"]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

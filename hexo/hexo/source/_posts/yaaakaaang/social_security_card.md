@@ -2,6 +2,7 @@
 title: 识别社保卡信息，手动整理效率低，OCR 和 Python 来帮你！
 date: 2025-04-15 21:56:17
 tags: [pobd]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

@@ -2,6 +2,7 @@
 title: Python0基础，如何识别照片信息并且保存在Excel中？
 date: 2023-04-25 22:32:02
 tags: 1对1咨询
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 学习Python知识，实现：识别照片中的数字和姓名，保存到Excel中。

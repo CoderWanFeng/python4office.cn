@@ -2,6 +2,7 @@
 title: Cursor vs Claude Code vs Copilot：我花了3个月实测，告诉你该选哪个
 date: 2025-04-05 16:00:00
 tags: AI
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->

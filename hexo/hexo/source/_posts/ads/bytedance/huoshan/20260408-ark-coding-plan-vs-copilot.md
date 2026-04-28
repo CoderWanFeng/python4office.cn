@@ -5,6 +5,7 @@ description: 程序员晚枫深度对比：火山方舟Coding Plan vs GitHub Cop
 date: 2026-04-08 00:20:00
 tags: [火山方舟Coding Plan, GitHub Copilot, AI编程工具对比, 代码补全工具, 国产AI编程, 程序员晚枫]
 categories: [AI编程, 工具测评]
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 <!-- more -->
