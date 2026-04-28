@@ -116,17 +116,17 @@ Come join us and change the way you work with Python!
 
 > Also, please go like Xiao Ming's Xiaohongshu account below! I'm tired of working hard and want to leech off someone.
 
-![Xiaohongshu: Xiao Ming Who Loves Hotpot](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png 'image.png')
+![Xiaohongshu: Xiao Ming Who Loves Hotpot](https://raw.atomgit.com/user-images/assets/5027920/24fb7a85-b1f1-43ab-a208-7ebf008933b2/image.png)
 
 
 ![](https://cos.python-office.com/ads/gzh/sub-py.jpg)
 
-![Scan for Red Packets](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg '6152d8017a3595256e51cbd9e08e148b.png')
+![Scan for Red Packets](https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg)
   
 
-![Meituan Red Packets](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg '4dbea2fec93c415c75311666f19a1022.jpg')
+![Meituan Red Packets](https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg)
 
-![Didi Red Packets](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg 'c14141a45d3b671ae94a11bd0556d1dc.jpg')
+![Didi Red Packets](https://raw.atomgit.com/user-images/assets/5027920/d79c7834-a008-4512-a8ca-88a0b5a990a5/c14141a45d3b671ae94a11bd0556d1dc.jpg)
 
 
 

@@ -105,4 +105,4 @@ tags: [python, 流畅的Python, 共读营, 学习社群, 程序员晚枫]
 
 
 
-![fluent-python.png](https://raw.atomgit.com/user-images/assets/5027920/4f7696ff-fbef-423c-8874-38dfb05b165f/fluent-python.png 'fluent-python.png')
+![fluent-python.png](https://raw.atomgit.com/user-images/assets/5027920/4f7696ff-fbef-423c-8874-38dfb05b165f/fluent-python.png)

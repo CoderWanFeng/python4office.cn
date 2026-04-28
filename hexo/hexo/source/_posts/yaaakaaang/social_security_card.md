@@ -53,11 +53,11 @@ df 就是使用pandas 把数据转换为 DataFrame。这样得到的信息不仅
 
 我们还使用了进度条，可以实时了解工作进度。
 
-![community_476e8db.png](https://raw.atomgit.com/user-images/assets/5027920/551c6205-a1d7-47e4-a7af-0d72ec891cab/community_476e8db.png 'community_476e8db.png')
+![community_476e8db.png](https://raw.atomgit.com/user-images/assets/5027920/551c6205-a1d7-47e4-a7af-0d72ec891cab/community_476e8db.png)
 
 最后，就是我们的excel 表格展示啦。
 
-![community_5e2bc74.png](https://raw.atomgit.com/user-images/assets/5027920/ae4f58bd-ed88-48c7-9420-cd132c5d74b9/community_5e2bc74.png 'community_5e2bc74.png')
+![community_5e2bc74.png](https://raw.atomgit.com/user-images/assets/5027920/ae4f58bd-ed88-48c7-9420-cd132c5d74b9/community_5e2bc74.png)
 
 ## 相关阅读
 

@@ -6,7 +6,7 @@ tags: [pobd]
 
 <!-- more -->
 <span style="font-size:20px;"><span style="color:#66a3e0;">哈喽啊，不知道你们发现没有，百度又有新功能了。话不多说，上图！ </span></span>
-![community_de705ef.png](https://raw.atomgit.com/user-images/assets/5027920/bfd0034d-7009-415c-892f-fc6dcc5c2f45/community_de705ef.png 'community_de705ef.png')
+![community_de705ef.png](https://raw.atomgit.com/user-images/assets/5027920/bfd0034d-7009-415c-892f-fc6dcc5c2f45/community_de705ef.png)
 
 我们从长期趋势来看，很多国家和地区的离婚率越来越高，对应的也加重了我们的工作量。辣么有没有什么办法可以帮助我们从冗杂的工作中解放出来呢？     	**答案是有滴！** 
 
@@ -67,7 +67,7 @@ df.to_excel('离婚证信息.xlsx', index=False)
 ```
 以上，就完成工作啦。
 
-![11c61c8.jpeg](https://raw.atomgit.com/user-images/assets/5027920/d744769a-6c9b-4c8a-99f3-2d165ab5f6e9/11c61c8.jpeg '11c61c8.jpeg')
+![11c61c8.jpeg](https://raw.atomgit.com/user-images/assets/5027920/d744769a-6c9b-4c8a-99f3-2d165ab5f6e9/11c61c8.jpeg)
 
 ## 相关阅读
 
