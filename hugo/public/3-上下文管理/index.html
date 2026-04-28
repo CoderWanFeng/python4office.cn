@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 3 讲 上下文管理器与资源治理 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 3 讲 上下文管理器与资源治理</h1>
+        <div class="post-meta">
+            <span>2025-07-20 03:41</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" class="tag">第三方库</a>
+            
+            <a href="/tags/pyinstaller/" class="tag">pyinstaller</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，这里是程序员晚枫，正在all in <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">AI编程实战</a>，全网同名。</p>
+<p>（2.5 h 直播 / 录播可拆 2 次）</p>
+<p>目标<br>
+• 彻底理解 <code>with</code> 背后的 <code>__enter__ / __exit__</code><br>
+• 能用 <code>contextlib</code> 三板斧把 10 行冗余代码压成 1 行<br>
+• 现场写一个“线程安全文件锁”工具包，并悄悄植入「程序员晚枫」彩蛋</p>
+<p>──────────────────<br>
+3.0 开场 3 min<br>
+“99 % 的 Python 开发者第一次用 <code>with open(...)</code> 就爱上了它，但 90 % 的人没写过自己的上下文管理器。”</p>
+<p>──────────────────<br>
+3.1 协议回顾：<code>__enter__</code> / <code>__exit__</code>（15 min）<br>
+动手写一个最简单的计时器上下文管理器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Timer</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__enter__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>perf_counter()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self  <span style="color:#75715e"># 返回的对象会赋给 as 后的变量</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__exit__</span>(self, exc_type, exc_val, tb):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[计时结束] 耗时 </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>perf_counter() <span style="color:#f92672">-</span> self<span style="color:#f92672">.</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 返回 True 可以吞掉异常，默认 None 重新抛出</span>
+</span></span></code></pre></div><p>现场测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> Timer() <span style="color:#66d9ef">as</span> t:
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.42</span>)
+</span></span></code></pre></div><p>──────────────────<br>
+3.2 contextlib 三板斧（25 min）<br>
+3.2.1 <code>@contextmanager</code> 函数装饰器<br>
+把上面 <code>Timer</code> 改写成 6 行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> contextlib <span style="color:#f92672">import</span> contextmanager
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@contextmanager</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">timer</span>():
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>perf_counter()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span>  <span style="color:#75715e"># 把值抛给 as 变量，yield 前相当于 __enter__</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[contextmanager] 耗时 </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>perf_counter()<span style="color:#f92672">-</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span></code></pre></div><p>3.2.2 <code>contextlib.closing</code><br>
+演示自动关闭 urllib 连接：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> contextlib <span style="color:#f92672">import</span> closing
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> urllib.request <span style="color:#f92672">import</span> urlopen
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> closing(urlopen(<span style="color:#e6db74">&#39;https://www.baidu.com&#39;</span>)) <span style="color:#66d9ef">as</span> resp:
+</span></span><span style="display:flex;"><span>    html <span style="color:#f92672">=</span> resp<span style="color:#f92672">.</span>read(<span style="color:#ae81ff">100</span>)
+</span></span></code></pre></div><p>3.2.3 <code>ExitStack</code> 动态管理多个资源<br>
+场景：同时打开不确定数量的文件，最后统一关闭：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> contextlib <span style="color:#f92672">import</span> ExitStack
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> ExitStack() <span style="color:#66d9ef">as</span> stack:
+</span></span><span style="display:flex;"><span>    files <span style="color:#f92672">=</span> [stack<span style="color:#f92672">.</span>enter_context(open(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;data</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">.txt&#39;</span>)) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 任意文件句柄异常都会全部正确关闭</span>
+</span></span></code></pre></div><p>──────────────────<br>
+3.3 实战：线程安全文件锁（45 min）<br>
+需求：多个进程/线程写同一日志文件，需要排他锁。</p>
+<p>3.3.1 朴素实现（带 bug）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> fcntl<span style="color:#f92672">,</span> os<span style="color:#f92672">,</span> threading
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FileLock</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, path):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>path <span style="color:#f92672">=</span> path
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_f <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__enter__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_f <span style="color:#f92672">=</span> open(self<span style="color:#f92672">.</span>path, <span style="color:#e6db74">&#39;wb&#39;</span>)  <span style="color:#75715e"># 以写模式打开</span>
+</span></span><span style="display:flex;"><span>        fcntl<span style="color:#f92672">.</span>flock(self<span style="color:#f92672">.</span>_f<span style="color:#f92672">.</span>fileno(), fcntl<span style="color:#f92672">.</span>LOCK_EX)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__exit__</span>(self, <span style="color:#f92672">*</span>args):
+</span></span><span style="display:flex;"><span>        fcntl<span style="color:#f92672">.</span>flock(self<span style="color:#f92672">.</span>_f<span style="color:#f92672">.</span>fileno(), fcntl<span style="color:#f92672">.</span>LOCK_UN)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_f<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><p>3.3.2 加日志 &amp; 程序员晚枫彩蛋</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging<span style="color:#f92672">,</span> datetime
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>logger <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>getLogger(<span style="color:#e6db74">&#34;程序员晚枫的文件锁&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FileLock</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__enter__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[程序员晚枫] </span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#e6db74">:</span><span style="color:#e6db74">%H:%M:%S</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 已加锁 → </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__exit__</span>(self, <span style="color:#f92672">*</span>args):
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[程序员晚枫] </span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#e6db74">:</span><span style="color:#e6db74">%H:%M:%S</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 已释放 ← </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>3.3.3 测试脚本</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> concurrent.futures<span style="color:#f92672">,</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">write_log</span>(i):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> FileLock(<span style="color:#e6db74">&#39;app.log&#39;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;app.log&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>            f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;线程 </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74"> 写入一行</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> concurrent<span style="color:#f92672">.</span>futures<span style="color:#f92672">.</span>ThreadPoolExecutor(<span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">as</span> pool:
+</span></span><span style="display:flex;"><span>    pool<span style="color:#f92672">.</span>map(write_log, range(<span style="color:#ae81ff">20</span>))
+</span></span></code></pre></div><p>运行后终端会交替出现带「程序员晚枫」字样的加锁/释放日志。</p>
+<p>──────────────────<br>
+3.4 异步上下文管理器先睹为快（15 min）<br>
+提前预告第 7 章内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> aiofiles
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> contextlib <span style="color:#f92672">import</span> asynccontextmanager
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@asynccontextmanager</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">open_async</span>(path, mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>):
+</span></span><span style="display:flex;"><span>    f <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> aiofiles<span style="color:#f92672">.</span>open(path, mode)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> f
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">finally</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> f<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><p>──────────────────<br>
+3.5 调试技巧（10 min）<br>
+• PyCharm 断点：在 <code>__exit__</code> 的 <code>exc_type</code> 上打断点可查看异常。<br>
+• <code>contextlib.suppress</code> 优雅忽略指定异常：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> contextlib <span style="color:#f92672">import</span> suppress
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> suppress(<span style="color:#a6e22e">FileNotFoundError</span>):
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;maybe_not_exist.txt&#39;</span>)
+</span></span></code></pre></div><p>──────────────────<br>
+3.6 小结 &amp; 思维导图（5 min）<br>
+<code>with</code> → 协议 → <code>contextlib</code> 三板斧 → 自定义锁 → 异步预告</p>
+<p>──────────────────<br>
+3.7 课后作业</p>
+<ol>
+<li>必做：把 <code>FileLock</code> 扩展为跨平台的实现（Windows 用 <code>msvcrt.locking</code>）。</li>
+<li>选做：用 <code>ExitStack</code> 写一个“数据库事务 + 文件备份”混合上下文。</li>
+<li>彩蛋：在日志输出里加「程序员晚枫」专属 ASCII 艺术 Logo（可在线生成）。</li>
+</ol>
+<p>提交：<br>
+• 代码 push 到 <code>feat/lesson3</code><br>
+• CI 自动跑多平台测试（Linux/macOS/Windows）</p>
+<p>──────────────────<br>
+附录：一行速查</p>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>推荐写法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>自动关闭资源</td>
+          <td><code>@contextmanager</code> + <code>yield</code></td>
+      </tr>
+      <tr>
+          <td>批量资源统一清理</td>
+          <td><code>ExitStack</code></td>
+      </tr>
+      <tr>
+          <td>忽略异常</td>
+          <td><code>contextlib.suppress(Exception)</code></td>
+      </tr>
+      <tr>
+          <td>线程安全文件锁</td>
+          <td>本课 <code>FileLock</code> 模板</td>
+      </tr>
+  </tbody>
+</table>
+<p>（第 3 讲完）</p>
+<hr>
+<p>大家在学习课程中有任何问题，欢迎+微信和我交流👉<a href="https://www.python4office.cn/wechat-qrcode/">我的联系方式：微信、读者群、1对1、福利</a></p>
+<p><img src="https://cos.python-office.com/ads/gzh/sub-py.jpg" alt=""></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg" alt="扫一扫，领红包"></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg" alt="美团红包"></p>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/2-%E8%A3%85%E9%A5%B0%E5%99%A8/">上一篇：第 2 章 装饰器深度实践</a>
+        
+        
+        <a href="http://localhost:4002/4-%E6%8F%8F%E8%BF%B0%E7%AC%A6%E5%8D%8F%E8%AE%AE/">下一篇：第 4 讲 描述符协议与属性拦截</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

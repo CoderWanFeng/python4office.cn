@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 7 讲：让机器人更智能 - 多轮对话与个性化 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 7 讲：让机器人更智能 - 多轮对话与个性化</h1>
+        <div class="post-meta">
+            <span>2026-03-02 17:30</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/ai-%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%A4%9A%E8%BD%AE%E5%AF%B9%E8%AF%9D%E4%B8%AA%E6%80%A7%E5%8C%96/" class="tag">AI 聊天机器人，多轮对话，个性化</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+<p>你有没有这种感觉：机器人能回答问题了，但总觉得&quot;差点意思&quot;？</p>
+<p>用户问一句，它答一句，<strong>像在跟一台自动售货机说话</strong>——冷冰冰的，没有连续性，问完就走。</p>
+<p>这就是多轮对话和个性化没做好。</p>
+<p>这一讲，我教你让机器人<strong>能真正&quot;聊天&quot;，记住上下文，给个性化回复</strong>。</p>
+<hr>
+<h2 id="-先说说什么是智能机器人">🎯 先说说什么是&quot;智能&quot;机器人</h2>
+<h3 id="对比一下">对比一下</h3>
+<pre tabindex="0"><code>❌ 普通机器人（单轮对话）：
+用户：你们课程多少钱？
+机器人：299元。
+
+用户：那能用 Mac 吗？
+机器人：Mac是什么？（一脸问号）
+
+用户：那课程呢？
+机器人：您想问什么？（彻底懵了）
+
+✅ 智能机器人（多轮对话 + 上下文）：
+用户：你们课程多少钱？
+机器人：我们课程299元~
+
+用户：那能用 Mac 吗？
+机器人：可以的！我们软件支持 Windows/Mac/Linux 全平台 😊
+
+用户：那课程呢？
+机器人：哦您问的还是课程！课程299元，包含全套学习内容~
+        有问题加微信：aiwf365
+</code></pre><p><strong>区别在哪里？</strong></p>
+<pre tabindex="0"><code>普通机器人：每句话独立理解，不记得之前说了什么
+智能机器人：记住上下文，理解代词/省略，推理用户意图
+</code></pre><hr>
+<h2 id="-多轮对话设计">💬 多轮对话设计</h2>
+<h3 id="什么是多轮对话">什么是多轮对话？</h3>
+<p><strong>多轮对话 = 机器人能在一个话题里和用户多轮交流</strong></p>
+<pre tabindex="0"><code>单轮：用户问一句 → 机器人答一句 → 结束
+多轮：用户问 → 机器人答/追问 → 用户补充 → 机器人继续 → 直到解决问题
+</code></pre><h3 id="多轮对话的典型场景">多轮对话的典型场景</h3>
+<p><strong>场景1：需求挖掘（销售必备）</strong></p>
+<pre tabindex="0"><code>用户：我想买一个课
+机器人：好的，请问您是什么基础呢？
+        ① 零基础，想入门
+        ② 有基础，想进阶
+        ③ 想系统学习某个方向
+
+用户：零基础
+
+机器人：零基础的话，推荐 Python 基础入门课~
+        请问您学习是为了什么呢？
+        ① 工作需要（办公自动化）
+        ② 转行就业
+        ③ 纯属兴趣
+
+用户：工作需要
+
+机器人：工作需要的话，这个课非常适合您！
+        主要教 Python 自动化办公，可以：
+        📊 自动处理 Excel
+        📄 自动生成 Word 文档
+        📧 自动发送邮件
+        💰 课程299元，现在报名还送配套素材~
+
+用户：那怎么报名？
+
+机器人：报名很简单：
+        ① 加微信 aiwf365
+        ② 说明来意
+        ③ 付款后开通学习权限
+        要现在报名吗？😊
+</code></pre><p><strong>场景2：预约登记（任务型）</strong></p>
+<pre tabindex="0"><code>用户：我想预约明天的咨询
+机器人：好的，请问您贵姓？
+
+用户：王
+
+机器人：王先生，请问您的联系电话是？
+
+用户：138xxxx1234
+
+机器人：好的，已记录。请问您方便几点？
+
+用户：下午3点
+
+机器人：确认一下您的预约信息：
+        📅 日期：明天（X月X日）
+        ⏰ 时间：下午3点
+        👤 姓名：王先生
+        📞 电话：138xxxx1234
+        
+        确认无误的话，我会发送短信提醒您~
+
+用户：没问题
+
+机器人：✅ 预约成功！已发送短信确认。
+        明天 15:00 不见不散~有变化随时联系我！
+</code></pre><p><strong>场景3：问题诊断（客服必备）</strong></p>
+<pre tabindex="0"><code>用户：我的软件打不开了
+机器人：别急，我来帮您排查~请问是什么情况？
+        ① 完全打不开
+        ② 打开后闪退
+        ③ 打开后卡住了
+
+用户：打不开
+
+机器人：请问启动时有什么提示吗？
+        ① 报错弹窗
+        ② 白屏/黑屏
+        ③ 完全没反应
+
+用户：白屏
+
+机器人：明白了，这个我们排查过很多次~
+        可能是显卡驱动的问题。请试试：
+        1. 更新显卡驱动
+        2. 重启软件
+        3. 还是不行的话，加微信 aiwf365 我帮你远程看看
+</code></pre><h3 id="在扣子中配置多轮对话">在扣子中配置多轮对话</h3>
+<p><strong>第一步：开启上下文记忆</strong></p>
+<pre tabindex="0"><code>扣子后台 → 设置 → 多轮对话
+→ 开启「上下文记忆」
+→ 设置记忆轮数：建议 3-5 轮
+</code></pre><p><strong>第二步：设计多轮工作流</strong></p>
+<pre tabindex="0"><code>工作流设计示例（预约场景）：
+
+┌─────────────┐
+│    开始     │
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│  询问姓名   │
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│  记录姓名   │ ───→ 存入变量 user_name
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│  询问时间   │
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│  记录时间   │ ───→ 存入变量 appointment_time
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│  确认信息   │
+│  发送短信   │
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│    结束     │
+└─────────────┘
+</code></pre><p><strong>第三步：用变量记住信息</strong></p>
+<pre tabindex="0"><code>在对话中，使用变量来记住用户信息：
+
+问题：请问您贵姓？
+↓ 用户回答：「王」
+
+机器人：[把&#34;王&#34;存入变量 user_name]
+
+↓ 下一次对话
+
+机器人：好的，王先生，请问您想预约什么时间？
+
+↓ 变量被调用，回复自动带上&#34;王先生&#34;
+</code></pre><h3 id="用-ai-设计多轮对话提示词模板">用 AI 设计多轮对话（提示词模板）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名专业的对话设计师。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>我要做一个 [机器人类型]，需要多轮对话。
+</span></span><span style="display:flex;"><span>场景：[描述场景]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>需要收集的信息：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> [信息1]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> [信息2]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> [信息3]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>请帮我设计多轮对话流程：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 对话步骤（从开始到结束）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 每一步机器人的提问
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 每一步用户可能的回答
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 条件分支（如果用户回答不同怎么办）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 确认和结束流程
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输出格式：流程图 + 对话示例
+</span></span></code></pre></div><hr>
+<h2 id="-上下文理解">🧠 上下文理解</h2>
+<h3 id="什么是上下文理解">什么是上下文理解？</h3>
+<p><strong>让机器人能理解&quot;上下文&quot;，而不是每句话独立理解。</strong></p>
+<pre tabindex="0"><code>❌ 没有上下文理解：
+用户：北京天气怎么样？
+机器人：北京今天晴，25度。
+
+用户：上海呢？
+机器人：上海是哪个？（懵了）
+
+✅ 有上下文理解：
+用户：北京天气怎么样？
+机器人：北京今天晴，25度。
+
+用户：上海呢？
+机器人：上海今天多云，28度~
+</code></pre><h3 id="上下文理解的核心场景">上下文理解的核心场景</h3>
+<p><strong>场景1：代词理解</strong></p>
+<pre tabindex="0"><code>用户：你们的价格是多少？
+机器人：299元。
+
+用户：那质量呢？（&#34;那&#34;=价格）
+机器人：我们课程质量非常好，课程好评率 98%！
+
+用户：和 XX 机构比呢？（&#34;比&#34;=比较）
+机器人：我们和其他机构的主要区别是...
+</code></pre><p><strong>场景2：省略理解</strong></p>
+<pre tabindex="0"><code>用户：课程多少钱？
+机器人：299元。
+
+用户：有优惠吗？（省略了&#34;课程&#34;）
+机器人：有的！现在报名送配套素材~
+</code></pre><p><strong>场景3：连续追问</strong></p>
+<pre tabindex="0"><code>用户：课程包含什么内容？
+机器人：包含视频课程、配套源码、学习答疑群~
+
+用户：答疑是多久？
+机器人：有效期是1年，1年内都可以提问~
+
+用户：那能分期吗？（连续追问）
+机器人：可以的！支持花呗/信用卡分期~
+</code></pre><h3 id="在扣子中配置上下文">在扣子中配置上下文</h3>
+<pre tabindex="0"><code>步骤：
+1. 设置 → 多轮对话 → 开启「上下文记忆」
+2. 设置记忆轮数（建议 3-5 轮）
+
+💡 注意：
+- 轮数越多，消耗越大
+- 轮数太少，上下文中断
+- 3-5 轮是平衡点
+</code></pre><h3 id="上下文提示词让大模型更好地理解">上下文提示词（让大模型更好地理解）</h3>
+<pre tabindex="0"><code>在机器人人设设定中补充：
+
+【上下文理解要求】
+1. 记住对话历史，不要重复询问已获取的信息
+2. 理解&#34;那&#34;&#34;这个&#34;&#34;它&#34;等代词指代的内容
+3. 理解用户的省略表达（如&#34;有优惠吗&#34;省略了&#34;课程&#34;）
+4. 如果上下文不够，需要追问确认
+5. 在回复中适当引用之前的信息
+</code></pre><hr>
+<h2 id="-个性化回复">🎭 个性化回复</h2>
+<h3 id="为什么要个性化">为什么要个性化？</h3>
+<p><strong>因为用户喜欢被&quot;特殊对待&quot;的感觉。</strong></p>
+<pre tabindex="0"><code>❌ 没有个性化：
+用户：课程多少钱？
+机器人：299元。
+
+用户：我是老学员，能便宜吗？
+机器人：不好意思，我们没有老学员优惠。
+
+✅ 有个性化：
+用户：课程多少钱？
+机器人：299元。
+
+用户：我是老学员，能便宜吗？
+机器人：哇，老学员！感谢支持 😊
+        我们为老学员准备了专属福利：
+        🎁 续课 8 折优惠
+        🎁 新课优先体验资格
+        🎁 老带新返现 50 元
+        要了解下新课吗？
+</code></pre><h3 id="个性化的三个维度">个性化的三个维度</h3>
+<p><strong>维度1：称呼个性化</strong></p>
+<pre tabindex="0"><code>收集用户姓名后，后续称呼用户：
+
+❌ 不称呼：
+&#34;我们课程299元。&#34;
+
+✅ 称呼：
+&#34;王先生，我们课程299元~&#34;（友好）
+&#34;小王同学，299元哦~&#34;（亲切）
+</code></pre><p><strong>维度2：身份个性化</strong></p>
+<pre tabindex="0"><code>根据用户身份，给不同回复：
+
+❌ 所有用户一样回复：
+&#34;课程299元。&#34;
+
+✅ 不同用户不同回复：
+用户是新客户 → &#34;我们的课程299元，有什么可以帮您？&#34;
+用户是老客户 → &#34;欢迎回来！之前您学的是基础课，要继续深入学习吗？&#34;
+用户是会员 → &#34;会员专属价格：239元~ 还剩 3 节课没看完，加油哦！💪&#34;
+</code></pre><p><strong>维度3：历史行为个性化</strong></p>
+<pre tabindex="0"><code>根据用户历史行为推荐：
+
+用户A：之前问过Python基础课程
+→ 再次咨询时 → 推荐进阶课程
+
+用户B：之前购买过
+→ 再次咨询时 → 展示续课优惠
+
+用户C：之前咨询过没买
+→ 再次咨询时 → 询问顾虑，给优惠
+</code></pre><h3 id="在扣子中实现个性化">在扣子中实现个性化</h3>
+<p><strong>方法1：用变量记住用户信息</strong></p>
+<pre tabindex="0"><code>工作流中收集信息 → 存入变量
+→ 用户姓名
+→ 用户需求
+→ 用户身份
+→ 历史记录
+
+后续回复中调用变量：
+&#34;好的，{user_name}，根据您的需求{user_need}...&#34;
+</code></pre><p><strong>方法2：用知识库区分用户</strong></p>
+<pre tabindex="0"><code>知识库中配置：
+问：老学员有什么优惠？
+答：感谢支持！老学员专属福利：
+    - 续课 8 折
+    - 新课优先
+    - 老带新返现
+    （需要先确认是老学员身份）
+
+问：新学员有什么优惠？
+答：新人专属福利：
+    - 配套素材赠送
+    - 学习群答疑
+    - 7天无理由退款
+</code></pre><p><strong>方法3：设置用户标签</strong></p>
+<pre tabindex="0"><code>用户标签系统：
+- 新用户：首次咨询
+- 老用户：购买过的
+- 会员用户：付费会员
+- 高价值用户：多次购买
+
+根据标签，在人设中设定不同回复逻辑。
+</code></pre><h3 id="个性化提示词模板">个性化提示词模板</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名专业的对话设计师。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>我要实现个性化回复。需要：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 收集用户信息（姓名、需求、身份）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 记住用户历史行为
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 根据不同情况给不同回复
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>请帮我设计：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 信息收集流程
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 变量定义
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 个性化回复模板（3-5个场景）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 在扣子中的实现方式
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输出格式：结构化文档
+</span></span></code></pre></div><hr>
+<h2 id="-高级技巧">🚀 高级技巧</h2>
+<h3 id="技巧1情绪识别">技巧1：情绪识别</h3>
+<p><strong>让机器人能感知用户情绪，调整回复方式。</strong></p>
+<pre tabindex="0"><code>❌ 不识别情绪：
+用户：太贵了！（生气）
+机器人：299元，价格合理。
+
+✅ 识别情绪：
+用户：太贵了！（生气）
+机器人：理解理解，299确实不算便宜 😊
+        不过您买到的不只是视频，还有：
+        📚 配套源码
+        👥 一年答疑
+        🎁 持续更新
+        如果预算有限，我们也有分期付款~
+        要不我帮您申请一个学员优惠？
+</code></pre><p><strong>情绪识别配置</strong>：</p>
+<pre tabindex="0"><code>人设设定中补充：
+【情绪识别】
+- 如果用户情绪激动（用了&#34;！&#34;或表达不满），语气要更温和
+- 如果用户多次表达不满，快速引导转人工
+- 如果用户表示感谢，主动推荐下一步
+</code></pre><h3 id="技巧2主动营销">技巧2：主动营销</h3>
+<p><strong>在合适的时机主动推荐，不生硬。</strong></p>
+<pre tabindex="0"><code>❌ 生硬推荐：
+用户：课程多少钱？
+机器人：299元。另外我们还有进阶课699元，要不要一起买？
+
+✅ 主动推荐（自然）：
+用户：课程多少钱？
+机器人：299元~ 是我们的入门课程。
+
+用户：不错
+机器人：谢谢认可！💪 这个课特别适合打基础~
+        学完之后推荐继续学「自动化办公实战」，把技能用起来~
+        现在两课联报只要 899，省 99 元~ 要了解一下吗？
+</code></pre><h3 id="技巧3流失挽回">技巧3：流失挽回</h3>
+<p><strong>用户要走的时候，主动挽留。</strong></p>
+<pre tabindex="0"><code>用户：好的，我先看看
+机器人：好的，理解~ 
+        如果有任何问题，随时加我：aiwf365
+        我们的课程 7 天无理由退款保障，不用担心风险 😊
+        下次想学的时候，记得来找我就好~
+</code></pre><hr>
+<h2 id="-多轮对话避坑">⚠️ 多轮对话避坑</h2>
+<pre tabindex="0"><code>❌ 坑1：轮次太多，用户不耐烦
+   → 3-5 轮就差不多了
+   → 不要问太多问题
+
+❌ 坑2：上下文记忆混淆
+   → 如果机器人记错信息，要及时修正
+   → 可以让用户确认关键信息
+
+❌ 坑3：个性化变成骚扰
+   → 不要太频繁推荐
+   → 给用户选择权
+</code></pre><hr>
+<h2 id="-本讲作业">🛠️ 本讲作业</h2>
+<pre tabindex="0"><code>✅ 作业1：设计一个多轮对话场景
+   → 选择一个场景（预约/登记/诊断）
+   → 画出对话流程
+   → 在扣子中配置
+
+✅ 作业2：开启上下文记忆
+   → 扣子设置中开启
+   → 测试代词理解、省略理解
+   → 记录效果
+
+✅ 作业3：设计个性化回复
+   → 确定要收集的用户信息
+   → 设计个性化回复模板
+   → 配置到扣子
+</code></pre><hr>
+<h2 id="下一步">下一步</h2>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/ai-chatbot/%E7%AC%AC8%E8%AE%B2-%E8%BF%9E%E6%8E%A5%E5%A4%96%E9%83%A8%E6%9C%8D%E5%8A%A1/">第八讲：连接外部服务</a></strong></p>
+<p>下一讲我们会聊：</p>
+<ul>
+<li>🔌 什么是插件</li>
+<li>📡 如何调用 API</li>
+<li>🛒 连接订单系统、支付系统</li>
+</ul>
+<p><strong>让机器人从&quot;能说话&quot;变成&quot;能办事&quot;！</strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入学习群，分享你的智能机器人：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<hr>
+<p><em>让机器人更智能，用户体验会更好。多轮对话和个性化是提升体验的关键。记住：好的对话体验是让用户感觉&quot;在跟一个懂我的人聊天&quot;，而不是&quot;在跟机器说话&quot;。加油！💪</em></p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260302030601-%E7%AC%AC6%E8%AE%B2-%E5%8F%91%E5%B8%83%E5%88%B0%E5%BE%AE%E4%BF%A1%E7%BD%91%E9%A1%B5/">上一篇：第 6 讲：发布到微信/网页 - 多渠道发布</a>
+        
+        
+        <a href="http://localhost:4002/20260302030801-%E7%AC%AC8%E8%AE%B2-%E8%BF%9E%E6%8E%A5%E5%A4%96%E9%83%A8%E6%9C%8D%E5%8A%A1/">下一篇：第 8 讲：连接外部服务 - 让机器人能办事</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

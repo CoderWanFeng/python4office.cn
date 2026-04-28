@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>假设检验入门：我用t检验和卡方检验，证明了产品改版确实有效 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>假设检验入门：我用t检验和卡方检验，证明了产品改版确实有效</h1>
+        <div class="post-meta">
+            <span>2026-03-01 00:11</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" class="tag">统计学</a>
+            
+            <a href="/tags/%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="tag">假设检验</a>
+            
+            <a href="/tags/t%E6%A3%80%E9%AA%8C/" class="tag">t检验</a>
+            
+            <a href="/tags/%E5%8D%A1%E6%96%B9%E6%A3%80%E9%AA%8C/" class="tag">卡方检验</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天学习<strong>假设检验</strong>，这是用数据验证猜想的科学方法。</p>
+<p>A/B测试显示新界面转化率更高，是真的有效还是偶然？假设检验帮你做出判断。</p>
+<hr>
+<h2 id="什么是假设检验">什么是假设检验？</h2>
+<h3 id="核心思想">核心思想</h3>
+<p>通过样本数据，判断某个假设是否成立。</p>
+<h3 id="基本步骤">基本步骤</h3>
+<ol>
+<li><strong>提出假设</strong>：原假设H₀（通常是无效果）vs 备择假设H₁</li>
+<li><strong>选择检验方法</strong>：根据数据类型选择t检验、卡方检验等</li>
+<li><strong>计算p值</strong>：在原假设成立时，观察到当前结果的概率</li>
+<li><strong>做出决策</strong>：p &lt; 0.05则拒绝原假设，认为有显著差异</li>
+</ol>
+<h3 id="关键概念">关键概念</h3>
+<ul>
+<li><strong>p值</strong>：小于0.05通常认为&quot;统计显著&quot;</li>
+<li><strong>置信度</strong>：1 - p，如95%置信度</li>
+<li><strong>第一类错误</strong>：假阳性（实际没效果但认为有）</li>
+<li><strong>第二类错误</strong>：假阴性（实际有效果但没发现）</li>
+</ul>
+<hr>
+<h2 id="t检验比较两组均值">t检验：比较两组均值</h2>
+<h3 id="独立样本t检验">独立样本t检验</h3>
+<p>比较两个独立组的均值是否有差异。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景：A/B测试，新旧界面的转化率</span>
+</span></span><span style="display:flex;"><span>old_version <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">0.12</span>, <span style="color:#ae81ff">0.02</span>, <span style="color:#ae81ff">1000</span>)  <span style="color:#75715e"># 旧版转化率12%</span>
+</span></span><span style="display:flex;"><span>new_version <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">0.15</span>, <span style="color:#ae81ff">0.02</span>, <span style="color:#ae81ff">1000</span>)  <span style="color:#75715e"># 新版转化率15%</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 独立样本t检验</span>
+</span></span><span style="display:flex;"><span>t_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_ind(new_version, old_version)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;t统计量: </span><span style="color:#e6db74">{</span>t_stat<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> p_value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;结论：新版本转化率显著高于旧版本（p &lt; 0.05）&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;结论：差异不显著，可能是随机波动&#34;</span>)
+</span></span></code></pre></div><h3 id="配对样本t检验">配对样本t检验</h3>
+<p>同一组对象前后对比。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景：培训前后的考试成绩</span>
+</span></span><span style="display:flex;"><span>before <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">72</span>, <span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">74</span>])
+</span></span><span style="display:flex;"><span>after <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">72</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">74</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">83</span>, <span style="color:#ae81ff">88</span>, <span style="color:#ae81ff">76</span>, <span style="color:#ae81ff">80</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_rel(after, before)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;平均提升: </span><span style="color:#e6db74">{</span>(after <span style="color:#f92672">-</span> before)<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">分&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> p_value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;培训效果显著！&#34;</span>)
+</span></span></code></pre></div><h3 id="单样本t检验">单样本t检验</h3>
+<p>与已知值比较。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景：今年平均分是否高于去年（去年平均75）</span>
+</span></span><span style="display:flex;"><span>this_year <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">77</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">81</span>, <span style="color:#ae81ff">76</span>, <span style="color:#ae81ff">84</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_1samp(this_year, <span style="color:#ae81ff">75</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;今年平均分: </span><span style="color:#e6db74">{</span>this_year<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="卡方检验分类变量关联性">卡方检验：分类变量关联性</h2>
+<h3 id="卡方独立性检验">卡方独立性检验</h3>
+<p>检验两个分类变量是否独立。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.stats <span style="color:#f92672">import</span> chi2_contingency
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景：性别和购买偏好是否有关</span>
+</span></span><span style="display:flex;"><span>observed <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;购买&#39;</span>: [<span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">150</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;未购买&#39;</span>: [<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">50</span>]
+</span></span><span style="display:flex;"><span>}, index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;男性&#39;</span>, <span style="color:#e6db74">&#39;女性&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chi2, p_value, dof, expected <span style="color:#f92672">=</span> chi2_contingency(observed)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;观察值:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(observed)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">期望值（如果独立）:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(pd<span style="color:#f92672">.</span>DataFrame(expected, index<span style="color:#f92672">=</span>observed<span style="color:#f92672">.</span>index, columns<span style="color:#f92672">=</span>observed<span style="color:#f92672">.</span>columns))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">卡方值: </span><span style="color:#e6db74">{</span>chi2<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> p_value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;结论：性别和购买行为有关联&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;结论：性别和购买行为无关&#34;</span>)
+</span></span></code></pre></div><h3 id="卡方拟合优度检验">卡方拟合优度检验</h3>
+<p>检验观测分布是否符合期望分布。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.stats <span style="color:#f92672">import</span> chisquare
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景：骰子是否公平</span>
+</span></span><span style="display:flex;"><span>observed <span style="color:#f92672">=</span> [<span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">62</span>]  <span style="color:#75715e"># 各面出现次数</span>
+</span></span><span style="display:flex;"><span>expected <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>]  <span style="color:#75715e"># 公平情况下应该各50次</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chi2, p_value <span style="color:#f92672">=</span> chisquare(observed, expected)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;卡方值: </span><span style="color:#e6db74">{</span>chi2<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> p_value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;骰子可能不公平！&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="实战完整的ab测试分析">实战：完整的A/B测试分析</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模拟A/B测试数据</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>group_a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>binomial(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0.12</span>, <span style="color:#ae81ff">5000</span>)  <span style="color:#75715e"># A组：5000人，转化率12%</span>
+</span></span><span style="display:flex;"><span>group_b <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>binomial(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0.135</span>, <span style="color:#ae81ff">5000</span>)  <span style="color:#75715e"># B组：5000人，转化率13.5%</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 基础统计</span>
+</span></span><span style="display:flex;"><span>conv_a <span style="color:#f92672">=</span> group_a<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>conv_b <span style="color:#f92672">=</span> group_b<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== A/B测试结果 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;A组转化率: </span><span style="color:#e6db74">{</span>conv_a<span style="color:#e6db74">:</span><span style="color:#e6db74">.2%</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;B组转化率: </span><span style="color:#e6db74">{</span>conv_b<span style="color:#e6db74">:</span><span style="color:#e6db74">.2%</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;相对提升: </span><span style="color:#e6db74">{</span>(conv_b <span style="color:#f92672">-</span> conv_a) <span style="color:#f92672">/</span> conv_a<span style="color:#e6db74">:</span><span style="color:#e6db74">.2%</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 假设检验</span>
+</span></span><span style="display:flex;"><span>t_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_ind(group_b, group_a)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">t统计量: </span><span style="color:#e6db74">{</span>t_stat<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 效应量（Cohen&#39;s d）</span>
+</span></span><span style="display:flex;"><span>pooled_std <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sqrt(((len(group_a)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>group_a<span style="color:#f92672">.</span>var() <span style="color:#f92672">+</span> (len(group_b)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>group_b<span style="color:#f92672">.</span>var()) <span style="color:#f92672">/</span> 
+</span></span><span style="display:flex;"><span>                     (len(group_a) <span style="color:#f92672">+</span> len(group_b) <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>cohens_d <span style="color:#f92672">=</span> (conv_b <span style="color:#f92672">-</span> conv_a) <span style="color:#f92672">/</span> pooled_std
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;效应量(Cohen&#39;s d): </span><span style="color:#e6db74">{</span>cohens_d<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;  小效应: 0.2, 中效应: 0.5, 大效应: 0.8&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 置信区间</span>
+</span></span><span style="display:flex;"><span>se <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sqrt(conv_a<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>conv_a)<span style="color:#f92672">/</span>len(group_a) <span style="color:#f92672">+</span> conv_b<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>conv_b)<span style="color:#f92672">/</span>len(group_b))
+</span></span><span style="display:flex;"><span>ci_lower <span style="color:#f92672">=</span> (conv_b <span style="color:#f92672">-</span> conv_a) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1.96</span> <span style="color:#f92672">*</span> se
+</span></span><span style="display:flex;"><span>ci_upper <span style="color:#f92672">=</span> (conv_b <span style="color:#f92672">-</span> conv_a) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1.96</span> <span style="color:#f92672">*</span> se
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">95%置信区间: [</span><span style="color:#e6db74">{</span>ci_lower<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{</span>ci_upper<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">]&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 结论</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">=== 结论 ===&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> p_value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;✓ B组显著优于A组 (p=</span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> &lt; 0.05)&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> cohens_d <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0.2</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;✓ 效应量为</span><span style="color:#e6db74">{</span>cohens_d<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">，实际意义明显&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;建议：全面推广B方案&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;效应量较小，需权衡成本收益&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;✗ 差异不显著 (p=</span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;建议：继续观察或增加样本量&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 可视化</span>
+</span></span><span style="display:flex;"><span>fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>groups <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;A组&#39;</span>, <span style="color:#e6db74">&#39;B组&#39;</span>]
+</span></span><span style="display:flex;"><span>conversions <span style="color:#f92672">=</span> [conv_a, conv_b]
+</span></span><span style="display:flex;"><span>colors <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;#3498db&#39;</span>, <span style="color:#e6db74">&#39;#e74c3c&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bars <span style="color:#f92672">=</span> ax<span style="color:#f92672">.</span>bar(groups, conversions, color<span style="color:#f92672">=</span>colors, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>, edgecolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加数值标签</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> bar, conv <span style="color:#f92672">in</span> zip(bars, conversions):
+</span></span><span style="display:flex;"><span>    height <span style="color:#f92672">=</span> bar<span style="color:#f92672">.</span>get_height()
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>text(bar<span style="color:#f92672">.</span>get_x() <span style="color:#f92672">+</span> bar<span style="color:#f92672">.</span>get_width()<span style="color:#f92672">/</span><span style="color:#ae81ff">2.</span>, height,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>conv<span style="color:#e6db74">:</span><span style="color:#e6db74">.2%</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>, ha<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, va<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bottom&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">14</span>, fontweight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;转化率&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;A/B测试结果 (p=</span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">14</span>, fontweight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>, max(conversions) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1.2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 标注显著性</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> p_value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>:
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>annotate(<span style="color:#e6db74">&#39;*&#39;</span>, xy<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>, conv_b), xytext<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>, conv_b <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.01</span>),
+</span></span><span style="display:flex;"><span>                fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, ha<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;ab_test_result.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><hr>
+<h3 id="性能对比scipy-vs-手动计算">性能对比：scipy vs 手动计算</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>group_a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">1000</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>group_b <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">1000</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">5.5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># scipy一行代码</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit stats<span style="color:#f92672">.</span>ttest_ind(group_a, group_b)  <span style="color:#75715e"># 约0.5ms</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 手动计算</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit <span style="color:#f92672">...</span>  <span style="color:#75715e"># 需要写几十行代码</span>
+</span></span></code></pre></div><h2 id="进阶用法">进阶用法</h2>
+<h3 id="常用检验速查表">常用检验速查表</h3>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>检验方法</th>
+          <th>scipy函数</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>两组均值比较</td>
+          <td>独立样本t检验</td>
+          <td>ttest_ind</td>
+      </tr>
+      <tr>
+          <td>配对样本比较</td>
+          <td>配对t检验</td>
+          <td>ttest_rel</td>
+      </tr>
+      <tr>
+          <td>多组均值比较</td>
+          <td>方差分析(ANOVA)</td>
+          <td>f_oneway</td>
+      </tr>
+      <tr>
+          <td>分类变量关联</td>
+          <td>卡方检验</td>
+          <td>chi2_contingency</td>
+      </tr>
+      <tr>
+          <td>正态性检验</td>
+          <td>Shapiro-Wilk</td>
+          <td>shapiro</td>
+      </tr>
+      <tr>
+          <td>非参数两组比较</td>
+          <td>Mann-Whitney U</td>
+          <td>mannwhitneyu</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 独立样本t检验</span>
+</span></span><span style="display:flex;"><span>t_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_ind(group_a, group_b)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 配对t检验（同一组人前后对比）</span>
+</span></span><span style="display:flex;"><span>t_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_rel(before, after)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 单样本t检验（样本与理论值比较）</span>
+</span></span><span style="display:flex;"><span>t_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_1samp(sample, popmean<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方差分析（3组以上）</span>
+</span></span><span style="display:flex;"><span>f_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>f_oneway(group_a, group_b, group_c)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 卡方检验（分类变量）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.stats <span style="color:#f92672">import</span> chi2_contingency
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>crosstab(df[<span style="color:#e6db74">&#39;gender&#39;</span>], df[<span style="color:#e6db74">&#39;purchase&#39;</span>])
+</span></span><span style="display:flex;"><span>chi2, p_value, dof, expected <span style="color:#f92672">=</span> chi2_contingency(table)
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1p值误解">❌ 坑1：p值误解</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># p值不是&#34;原假设为真的概率&#34;！</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># p值是：如果原假设为真，观察到当前或更极端结果的概率</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># p &lt; 0.05 → 拒绝原假设 → 结果有统计显著性</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 但不代表效果一定大！还要看效应量</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 计算效应量（Cohen&#39;s d）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cohens_d</span>(group1, group2):
+</span></span><span style="display:flex;"><span>    n1, n2 <span style="color:#f92672">=</span> len(group1), len(group2)
+</span></span><span style="display:flex;"><span>    d <span style="color:#f92672">=</span> (group1<span style="color:#f92672">.</span>mean() <span style="color:#f92672">-</span> group2<span style="color:#f92672">.</span>mean()) <span style="color:#f92672">/</span> np<span style="color:#f92672">.</span>sqrt(
+</span></span><span style="display:flex;"><span>        ((n1<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>group1<span style="color:#f92672">.</span>std()<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (n2<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>group2<span style="color:#f92672">.</span>std()<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> (n1<span style="color:#f92672">+</span>n2<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>effect <span style="color:#f92672">=</span> cohens_d(group_a, group_b)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;效应量: </span><span style="color:#e6db74">{</span>effect<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 0.2=小, 0.5=中, 0.8=大</span>
+</span></span></code></pre></div><h3 id="-坑2多重比较问题">❌ 坑2：多重比较问题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 做20次检验，每次α=0.05，至少一次假阳性概率 = 1-0.95^20 = 64%！</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决方案：Bonferroni校正</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> statsmodels.stats.multitest <span style="color:#f92672">import</span> multipletests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p_values <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.01</span>, <span style="color:#ae81ff">0.03</span>, <span style="color:#ae81ff">0.04</span>, <span style="color:#ae81ff">0.06</span>, <span style="color:#ae81ff">0.12</span>]
+</span></span><span style="display:flex;"><span>reject, corrected_p, _, _ <span style="color:#f92672">=</span> multipletests(p_values, method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bonferroni&#39;</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.05</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;校正后显著的: </span><span style="color:#e6db74">{</span>reject<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h2 id="实战案例ab测试分析">实战案例：A/B测试分析</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A/B测试：新版页面 vs 旧版页面</span>
+</span></span><span style="display:flex;"><span>ab_test <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user_id&#39;</span>: range(n),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;group&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;control&#39;</span>, <span style="color:#e6db74">&#39;treatment&#39;</span>], n),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;converted&#39;</span>: np<span style="color:#f92672">.</span>where(
+</span></span><span style="display:flex;"><span>        np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.35</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># 基础转化率35%</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 新版多5%转化率</span>
+</span></span><span style="display:flex;"><span>ab_test<span style="color:#f92672">.</span>loc[ab_test[<span style="color:#e6db74">&#39;group&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;treatment&#39;</span>, <span style="color:#e6db74">&#39;converted&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(
+</span></span><span style="display:flex;"><span>    np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.40</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 各组转化率</span>
+</span></span><span style="display:flex;"><span>conv_rate <span style="color:#f92672">=</span> ab_test<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;group&#39;</span>)[<span style="color:#e6db74">&#39;converted&#39;</span>]<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== A/B测试结果 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>print(conv_rate)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;提升: </span><span style="color:#e6db74">{</span>(conv_rate[<span style="color:#e6db74">&#39;treatment&#39;</span>] <span style="color:#f92672">-</span> conv_rate[<span style="color:#e6db74">&#39;control&#39;</span>]) <span style="color:#f92672">/</span> conv_rate[<span style="color:#e6db74">&#39;control&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 卡方检验</span>
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>crosstab(ab_test[<span style="color:#e6db74">&#39;group&#39;</span>], ab_test[<span style="color:#e6db74">&#39;converted&#39;</span>])
+</span></span><span style="display:flex;"><span>chi2, p_value, dof, expected <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>chi2_contingency(table)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">卡方检验: chi2=</span><span style="color:#e6db74">{</span>chi2<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, p=</span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;结论: </span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;显著&#39;</span> <span style="color:#66d9ef">if</span> p_value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;不显著&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 置信区间</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> statsmodels.stats.proportion <span style="color:#f92672">import</span> proportion_confint
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> group <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;control&#39;</span>, <span style="color:#e6db74">&#39;treatment&#39;</span>]:
+</span></span><span style="display:flex;"><span>    n_group <span style="color:#f92672">=</span> (ab_test[<span style="color:#e6db74">&#39;group&#39;</span>] <span style="color:#f92672">==</span> group)<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>    n_conv <span style="color:#f92672">=</span> ab_test[ab_test[<span style="color:#e6db74">&#39;group&#39;</span>] <span style="color:#f92672">==</span> group][<span style="color:#e6db74">&#39;converted&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>    ci_low, ci_high <span style="color:#f92672">=</span> proportion_confint(n_conv, n_group, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.05</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>group<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>n_conv<span style="color:#f92672">/</span>n_group<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> [</span><span style="color:#e6db74">{</span>ci_low<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{</span>ci_high<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">]&#34;</span>)
+</span></span></code></pre></div><h3 id="假设检验完整流程">假设检验完整流程</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 标准的假设检验流程</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hypothesis_test</span>(sample1, sample2, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.05</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39;完整的假设检验流程&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Step 1: 检查正态性</span>
+</span></span><span style="display:flex;"><span>    _, p1 <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>shapiro(sample1[:<span style="color:#ae81ff">5000</span>])  <span style="color:#75715e"># Shapiro限制样本量</span>
+</span></span><span style="display:flex;"><span>    _, p2 <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>shapiro(sample2[:<span style="color:#ae81ff">5000</span>])
+</span></span><span style="display:flex;"><span>    is_normal <span style="color:#f92672">=</span> (p1 <span style="color:#f92672">&gt;</span> alpha) <span style="color:#f92672">and</span> (p2 <span style="color:#f92672">&gt;</span> alpha)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Step 2: 选择检验方法</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> is_normal:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 正态分布：用参数检验</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 检查方差齐性</span>
+</span></span><span style="display:flex;"><span>        _, p_var <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>levene(sample1, sample2)
+</span></span><span style="display:flex;"><span>        equal_var <span style="color:#f92672">=</span> p_var <span style="color:#f92672">&gt;</span> alpha
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># t检验</span>
+</span></span><span style="display:flex;"><span>        t_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_ind(sample1, sample2, equal_var<span style="color:#f92672">=</span>equal_var)
+</span></span><span style="display:flex;"><span>        test_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;t检验&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 非正态：用非参数检验</span>
+</span></span><span style="display:flex;"><span>        u_stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>mannwhitneyu(sample1, sample2)
+</span></span><span style="display:flex;"><span>        test_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mann-Whitney U检验&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Step 3: 判断结果</span>
+</span></span><span style="display:flex;"><span>    significant <span style="color:#f92672">=</span> p_value <span style="color:#f92672">&lt;</span> alpha
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Step 4: 计算效应量</span>
+</span></span><span style="display:flex;"><span>    effect_size <span style="color:#f92672">=</span> (sample1<span style="color:#f92672">.</span>mean() <span style="color:#f92672">-</span> sample2<span style="color:#f92672">.</span>mean()) <span style="color:#f92672">/</span> np<span style="color:#f92672">.</span>sqrt(
+</span></span><span style="display:flex;"><span>        ((len(sample1)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>sample1<span style="color:#f92672">.</span>std()<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (len(sample2)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>sample2<span style="color:#f92672">.</span>std()<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>) 
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">/</span> (len(sample1)<span style="color:#f92672">+</span>len(sample2)<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Step 5: 输出报告</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;检验方法: </span><span style="color:#e6db74">{</span>test_name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;统计量: </span><span style="color:#e6db74">{</span>t_stat <span style="color:#66d9ef">if</span> is_normal <span style="color:#66d9ef">else</span> u_stat<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;结论: </span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;拒绝原假设（有显著差异）&#39;</span> <span style="color:#66d9ef">if</span> significant <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;不能拒绝原假设&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;效应量(Cohen&#39;s d): </span><span style="color:#e6db74">{</span>effect_size<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> p_value, significant
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>hypothesis_test(group_a, group_b)
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一课我们将学习<strong>数据分布分析</strong>，了解正态分布和QQ图。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301001201-%E6%95%B0%E6%8D%AE%E5%88%86%E5%B8%83%E5%88%86%E6%9E%90-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E4%B8%8EQQ%E5%9B%BE/">继续阅读：数据分布分析-正态分布与QQ图</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301001001-%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1-%E7%94%A8%E6%95%B0%E5%AD%97%E6%A6%82%E6%8B%AC%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81/">描述性统计-用数字概括数据特征</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301001201-%E6%95%B0%E6%8D%AE%E5%88%86%E5%B8%83%E5%88%86%E6%9E%90-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E4%B8%8EQQ%E5%9B%BE/">数据分布分析-正态分布与QQ图</a></p>
+<hr>
+<p><em>PS：假设检验是数据驱动决策的基础。记住：p &lt; 0.05只是门槛，还要结合实际业务意义。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260301001001-%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1-%E7%94%A8%E6%95%B0%E5%AD%97%E6%A6%82%E6%8B%AC%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81/">上一篇：描述性统计：我用这6个指标，3分钟看透一组数据的本质</a>
+        
+        
+        <a href="http://localhost:4002/20260301001201-%E6%95%B0%E6%8D%AE%E5%88%86%E5%B8%83%E5%88%86%E6%9E%90-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E4%B8%8Eqq%E5%9B%BE/">下一篇：数据分布分析：我用QQ图5秒钟判断数据是否正态分布</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

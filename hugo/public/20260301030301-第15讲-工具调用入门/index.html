@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#34;OpenClaw入门：第15讲：工具调用入门，让AI拥有执行能力&#34; - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>&#34;OpenClaw入门：第15讲：工具调用入门，让AI拥有执行能力&#34;</h1>
+        <div class="post-meta">
+            <span>2026-03-01 17:35</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/openclaw/" class="tag">OpenClaw</a>
+            
+            <a href="/tags/tools/" class="tag">Tools</a>
+            
+            <a href="/tags/%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8/" class="tag">工具调用</a>
+            
+            <a href="/tags/exec/" class="tag">Exec</a>
+            
+            <a href="/tags/browser/" class="tag">Browser</a>
+            
+            <a href="/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="tag">文件操作</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天学习<strong>工具调用（Tools）</strong>，这是OpenClaw最强大的功能。通过工具，AI可以执行命令、操作浏览器、读写文件&hellip;从&quot;聊天机器人&quot;变成&quot;智能助手&quot;。</p>
+<hr>
+<h2 id="什么是工具调用">什么是工具调用？</h2>
+<p>**工具（Tools）**是AI可以调用的功能函数。当AI需要执行某些操作时，它会主动请求使用工具。</p>
+<h3 id="工作流程">工作流程</h3>
+<pre tabindex="0"><code>用户提问 → AI分析 → 需要工具？
+    ↓ 否
+直接回答
+    ↓ 是
+选择工具 → 传入参数 → 执行 → 返回结果 → AI总结
+</code></pre><h3 id="openclaw内置工具">OpenClaw内置工具</h3>
+<table>
+  <thead>
+      <tr>
+          <th>工具</th>
+          <th>功能</th>
+          <th>风险等级</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>exec</code></td>
+          <td>执行shell命令</td>
+          <td>🔴 高</td>
+      </tr>
+      <tr>
+          <td><code>browser</code></td>
+          <td>控制浏览器</td>
+          <td>🟡 中</td>
+      </tr>
+      <tr>
+          <td><code>read</code></td>
+          <td>读取文件</td>
+          <td>🟢 低</td>
+      </tr>
+      <tr>
+          <td><code>write</code></td>
+          <td>写入文件</td>
+          <td>🟡 中</td>
+      </tr>
+      <tr>
+          <td><code>edit</code></td>
+          <td>编辑文件</td>
+          <td>🟡 中</td>
+      </tr>
+      <tr>
+          <td><code>web_search</code></td>
+          <td>网络搜索</td>
+          <td>🟢 低</td>
+      </tr>
+      <tr>
+          <td><code>web_fetch</code></td>
+          <td>抓取网页</td>
+          <td>🟢 低</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="配置工具权限">配置工具权限</h2>
+<p>编辑 <code>~/.openclaw/openclaw.json</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tools&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;exec&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;sandbox&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowedCommands&#34;</span>: [<span style="color:#e6db74">&#34;ls&#34;</span>, <span style="color:#e6db74">&#34;cat&#34;</span>, <span style="color:#e6db74">&#34;grep&#34;</span>, <span style="color:#e6db74">&#34;curl&#34;</span>, <span style="color:#e6db74">&#34;python3&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;blockedCommands&#34;</span>: [<span style="color:#e6db74">&#34;rm&#34;</span>, <span style="color:#e6db74">&#34;dd&#34;</span>, <span style="color:#e6db74">&#34;mkfs&#34;</span>, <span style="color:#e6db74">&#34;sudo&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;workingDirectory&#34;</span>: <span style="color:#e6db74">&#34;~/.openclaw/sandbox&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;requireApproval&#34;</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;browser&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;headless&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;timeout&#34;</span>: <span style="color:#ae81ff">30000</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;read&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowedPaths&#34;</span>: [<span style="color:#e6db74">&#34;~/projects&#34;</span>, <span style="color:#e6db74">&#34;~/documents&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;blockedPaths&#34;</span>: [<span style="color:#e6db74">&#34;~/.ssh&#34;</span>, <span style="color:#e6db74">&#34;~/.aws&#34;</span>, <span style="color:#e6db74">&#34;~/.env&#34;</span>]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;write&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;requireApproval&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="实战执行shell命令">实战：执行Shell命令</h2>
+<h3 id="场景1查看系统信息">场景1：查看系统信息</h3>
+<pre tabindex="0"><code>你：帮我看看当前目录有什么文件
+
+AI：我来帮你查看一下。
+🔧 Using tool: exec
+   Command: ls -la
+   
+📤 Result:
+   total 32
+   drwxr-xr-x  5 user group  160 Jan 15 10:00 .
+   drwxr-xr-x 20 user group  640 Jan 14 09:00 ..
+   -rw-r--r--  1 user group  220 Jan 15 10:00 README.md
+   drwxr-xr-x  2 user group   64 Jan 15 09:30 src
+   drwxr-xr-x  2 user group   64 Jan 15 09:30 tests
+
+当前目录包含：README.md文件、src和tests两个文件夹。
+</code></pre><h3 id="场景2运行python脚本">场景2：运行Python脚本</h3>
+<pre tabindex="0"><code>你：运行test.py看看输出
+
+AI：好的，我来执行这个脚本。
+🔧 Using tool: exec
+   Command: python3 test.py
+   
+📤 Result:
+   Running tests...
+   ✓ Test 1 passed
+   ✓ Test 2 passed
+   ✗ Test 3 failed: Assertion error
+   
+   2/3 tests passed
+
+测试运行完成，2个通过，1个失败。Test 3有断言错误，需要检查代码逻辑。
+</code></pre><hr>
+<h2 id="实战浏览器自动化">实战：浏览器自动化</h2>
+<h3 id="场景获取网页内容">场景：获取网页内容</h3>
+<pre tabindex="0"><code>你：帮我查一下今天的天气
+
+AI：我来搜索一下天气信息。
+🔧 Using tool: web_search
+   Query: 今天天气
+   
+📤 Found results:
+   1. 中国天气网 - 今日天气预报
+   2. 新浪天气 - 实时天气更新
+
+🔧 Using tool: browser
+   Action: navigate
+   URL: https://weather.com.cn
+   
+📤 Page loaded, extracting weather data...
+
+今天北京天气：晴，温度-2°C到8°C，空气质量良。
+</code></pre><hr>
+<h2 id="实战文件操作">实战：文件操作</h2>
+<h3 id="读取文件">读取文件</h3>
+<pre tabindex="0"><code>你：读取config.yaml的内容
+
+AI：我来读取这个文件。
+🔧 Using tool: read
+   Path: config.yaml
+   
+📤 Content:
+   database:
+     host: localhost
+     port: 5432
+     name: myapp
+</code></pre><h3 id="写入文件">写入文件</h3>
+<pre tabindex="0"><code>你：创建一个hello.py，内容是打印Hello World
+
+AI：好的，我来创建这个文件。
+🔧 Using tool: write
+   Path: hello.py
+   Content:
+   print(&#34;Hello World&#34;)
+   
+✓ File created successfully
+
+已创建hello.py，内容为打印&#34;Hello World&#34;。
+</code></pre><hr>
+<h2 id="安全最佳实践">安全最佳实践</h2>
+<h3 id="生产环境建议">生产环境建议</h3>
+<ol>
+<li><strong>启用沙盒模式</strong>：限制命令执行范围</li>
+<li><strong>白名单机制</strong>：只允许特定命令</li>
+<li><strong>人工确认</strong>：危险操作前要求确认</li>
+<li><strong>日志审计</strong>：记录所有工具调用</li>
+</ol>
+<h3 id="危险操作示例">危险操作示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tools&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;exec&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;blockedCommands&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;rm -rf /&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;dd if=/dev/zero&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;mkfs&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;format&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&gt; /etc/passwd&#34;</span>
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="下节预告">下节预告</h2>
+<p>下一讲学习<strong>文件与媒体处理</strong>，包括图片分析、语音转文字等高级功能。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301030401-%E7%AC%AC16%E8%AE%B2-%E6%96%87%E4%BB%B6%E4%B8%8E%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86/">继续阅读：第16讲-文件与媒体处理</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>工具调用问题？加群交流：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<hr>
+<h2 id="推荐ai-python编程实战营">推荐：AI Python编程实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<p>&mdash;## 📚 完整学习路线这是OpenClaw入门课程的第X讲。查看完整课程大纲：👉 **<a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301010101-%E7%AC%AC1%E8%AE%B2-OpenClaw%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/">OpenClaw入门课程大纲</a>**课程包含30讲，从安装部署到实战项目，带你全面掌握OpenClaw。</p>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301030201-%E7%AC%AC14%E8%AE%B2-%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E4%B8%8EAGENTS.md/">第14讲-记忆系统与AGENTS.md</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301030401-%E7%AC%AC16%E8%AE%B2-%E6%96%87%E4%BB%B6%E4%B8%8E%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86/">第16讲-文件与媒体处理</a></p>
+<hr>
+<p><em>PS：工具调用是把双刃剑，既能大幅提升AI能力，也带来安全风险。务必做好权限控制。</em></p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260301030201-%E7%AC%AC14%E8%AE%B2-%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E4%B8%8Eagents.md/">上一篇：&#34;OpenClaw入门：第14讲：记忆系统与AGENTS.md，让AI真正记住你&#34;</a>
+        
+        
+        <a href="http://localhost:4002/20260301030401-%E7%AC%AC16%E8%AE%B2-%E6%96%87%E4%BB%B6%E4%B8%8E%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86/">下一篇：&#34;OpenClaw入门：第16讲：文件与媒体处理，图片分析、语音转文字、文档读取&#34;</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

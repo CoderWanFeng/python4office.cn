@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pandas数据变换：我用这8个操作，把混乱的数据整理成标准表格 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Pandas数据变换：我用这8个操作，把混乱的数据整理成标准表格</h1>
+        <div class="post-meta">
+            <span>2026-02-28 23:52</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/pandas/" class="tag">Pandas</a>
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2/" class="tag">数据变换</a>
+            
+            <a href="/tags/%E8%A1%8C%E5%88%97%E6%93%8D%E4%BD%9C/" class="tag">行列操作</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天学习<strong>数据变换的行列操作</strong>，这是将原始数据整理成分析所需格式的关键技能。</p>
+<p>掌握这些操作，你就能灵活地重塑数据结构。</p>
+<hr>
+<h2 id="列操作">列操作</h2>
+<h3 id="选择列">选择列</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;A&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;B&#39;</span>: [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C&#39;</span>: [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;D&#39;</span>: [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 选择单列（Series）</span>
+</span></span><span style="display:flex;"><span>col_a <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;A&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 选择多列（DataFrame）</span>
+</span></span><span style="display:flex;"><span>cols_ab <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按类型选择</span>
+</span></span><span style="display:flex;"><span>numeric_cols <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>select_dtypes(include<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;number&#39;</span>])<span style="color:#f92672">.</span>columns
+</span></span><span style="display:flex;"><span>print(numeric_cols)
+</span></span></code></pre></div><h3 id="添加列">添加列</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 直接赋值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;E&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 基于现有列计算</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;总和&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;A&#39;</span>] <span style="color:#f92672">+</span> df[<span style="color:#e6db74">&#39;B&#39;</span>] <span style="color:#f92672">+</span> df[<span style="color:#e6db74">&#39;C&#39;</span>]
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;平均值&#39;</span>] <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>]]<span style="color:#f92672">.</span>mean(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用assign（链式操作）</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>assign(F<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: x[<span style="color:#e6db74">&#39;A&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>               G<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: x[<span style="color:#e6db74">&#39;B&#39;</span>] <span style="color:#f92672">+</span> x[<span style="color:#e6db74">&#39;C&#39;</span>])
+</span></span></code></pre></div><h3 id="删除列">删除列</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 方式1：del</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> df[<span style="color:#e6db74">&#39;D&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：drop</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;D&#39;</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式3：pop（删除并返回该列）</span>
+</span></span><span style="display:flex;"><span>col_d <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#39;D&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式4：只保留需要的列</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;总和&#39;</span>]]
+</span></span></code></pre></div><h3 id="重命名列">重命名列</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 全部重命名</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;列A&#39;</span>, <span style="color:#e6db74">&#39;列B&#39;</span>, <span style="color:#e6db74">&#39;列C&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 部分重命名</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>rename(columns<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;A&#39;</span>: <span style="color:#e6db74">&#39;列A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>: <span style="color:#e6db74">&#39;列B&#39;</span>}, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 统一处理列名（如转小写、去空格）</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>columns<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>lower()<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>strip()
+</span></span></code></pre></div><h3 id="调整列顺序">调整列顺序</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 指定完整顺序</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 把某列移到最前面</span>
+</span></span><span style="display:flex;"><span>cols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;A&#39;</span>] <span style="color:#f92672">+</span> [col <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>columns <span style="color:#66d9ef">if</span> col <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;A&#39;</span>]
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df[cols]
+</span></span></code></pre></div><hr>
+<h2 id="行操作">行操作</h2>
+<h3 id="添加行">添加行</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 使用loc</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>loc[len(df)] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>]  <span style="color:#75715e"># 添加到最后</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用concat</span>
+</span></span><span style="display:flex;"><span>new_row <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;A&#39;</span>: [<span style="color:#ae81ff">4</span>], <span style="color:#e6db74">&#39;B&#39;</span>: [<span style="color:#ae81ff">5</span>], <span style="color:#e6db74">&#39;C&#39;</span>: [<span style="color:#ae81ff">6</span>], <span style="color:#e6db74">&#39;D&#39;</span>: [<span style="color:#ae81ff">7</span>]})
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df, new_row], ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 追加多个字典</span>
+</span></span><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> [{<span style="color:#e6db74">&#39;A&#39;</span>: <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;B&#39;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;C&#39;</span>: <span style="color:#ae81ff">6</span>}, {<span style="color:#e6db74">&#39;A&#39;</span>: <span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;B&#39;</span>: <span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;C&#39;</span>: <span style="color:#ae81ff">9</span>}]
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df, pd<span style="color:#f92672">.</span>DataFrame(rows)], ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h3 id="删除行">删除行</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 按索引删除</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># 删除索引为0的行</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>])  <span style="color:#75715e"># 删除多行</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按条件删除</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#39;A&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># 保留A&gt;1的行</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除前N行</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>iloc[<span style="color:#ae81ff">2</span>:]  <span style="color:#75715e"># 删除前2行</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除后N行</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>iloc[:<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>]  <span style="color:#75715e"># 删除最后2行</span>
+</span></span></code></pre></div><hr>
+<h2 id="数据透视表">数据透视表</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 创建示例数据</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;日期&#39;</span>: [<span style="color:#e6db74">&#39;2024-01&#39;</span>, <span style="color:#e6db74">&#39;2024-01&#39;</span>, <span style="color:#e6db74">&#39;2024-02&#39;</span>, <span style="color:#e6db74">&#39;2024-02&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;产品&#39;</span>: [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;地区&#39;</span>: [<span style="color:#e6db74">&#39;北&#39;</span>, <span style="color:#e6db74">&#39;南&#39;</span>, <span style="color:#e6db74">&#39;北&#39;</span>, <span style="color:#e6db74">&#39;南&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;销量&#39;</span>: [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">180</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;金额&#39;</span>: [<span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">1500</span>, <span style="color:#ae81ff">1200</span>, <span style="color:#ae81ff">1800</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 简单透视表</span>
+</span></span><span style="display:flex;"><span>pivot <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>pivot_table(values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销量&#39;</span>, 
+</span></span><span style="display:flex;"><span>                       index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;日期&#39;</span>, 
+</span></span><span style="display:flex;"><span>                       columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;产品&#39;</span>,
+</span></span><span style="display:flex;"><span>                       aggfunc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sum&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 多维度透视</span>
+</span></span><span style="display:flex;"><span>pivot <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>pivot_table(values<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;销量&#39;</span>, <span style="color:#e6db74">&#39;金额&#39;</span>],
+</span></span><span style="display:flex;"><span>                       index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;日期&#39;</span>, <span style="color:#e6db74">&#39;地区&#39;</span>],
+</span></span><span style="display:flex;"><span>                       columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;产品&#39;</span>,
+</span></span><span style="display:flex;"><span>                       aggfunc<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;销量&#39;</span>: <span style="color:#e6db74">&#39;sum&#39;</span>, <span style="color:#e6db74">&#39;金额&#39;</span>: <span style="color:#e6db74">&#39;mean&#39;</span>},
+</span></span><span style="display:flex;"><span>                       fill_value<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>                       margins<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)  <span style="color:#75715e"># 添加总计</span>
+</span></span></code></pre></div><hr>
+<h2 id="长宽格式转换">长宽格式转换</h2>
+<h3 id="melt宽转长">melt：宽转长</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 宽格式</span>
+</span></span><span style="display:flex;"><span>wide_df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;姓名&#39;</span>: [<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;李四&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;语文&#39;</span>: [<span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">90</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;数学&#39;</span>: [<span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">88</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;英语&#39;</span>: [<span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">92</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 转为长格式</span>
+</span></span><span style="display:flex;"><span>long_df <span style="color:#f92672">=</span> wide_df<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名&#39;</span>],
+</span></span><span style="display:flex;"><span>                       value_vars<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;语文&#39;</span>, <span style="color:#e6db74">&#39;数学&#39;</span>, <span style="color:#e6db74">&#39;英语&#39;</span>],
+</span></span><span style="display:flex;"><span>                       var_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;科目&#39;</span>,
+</span></span><span style="display:flex;"><span>                       value_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;分数&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(long_df)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#    姓名  科目  分数</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 0  张三  语文  85</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1  李四  语文  90</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span></code></pre></div><h3 id="pivot长转宽">pivot：长转宽</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 长格式转回宽格式</span>
+</span></span><span style="display:flex;"><span>wide_back <span style="color:#f92672">=</span> long_df<span style="color:#f92672">.</span>pivot(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;姓名&#39;</span>,
+</span></span><span style="display:flex;"><span>                          columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;科目&#39;</span>,
+</span></span><span style="display:flex;"><span>                          values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;分数&#39;</span>)<span style="color:#f92672">.</span>reset_index()
+</span></span></code></pre></div><hr>
+<h2 id="实战销售报表整理">实战：销售报表整理</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 原始数据（不规范）</span>
+</span></span><span style="display:flex;"><span>raw_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;订单号&#39;</span>: [<span style="color:#e6db74">&#39;A001&#39;</span>, <span style="color:#e6db74">&#39;A002&#39;</span>, <span style="color:#e6db74">&#39;A003&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;客户信息&#39;</span>: [<span style="color:#e6db74">&#39;张三|北京&#39;</span>, <span style="color:#e6db74">&#39;李四|上海&#39;</span>, <span style="color:#e6db74">&#39;王五|广州&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;产品明细&#39;</span>: <span style="color:#e6db74">&#39;iPhone:2,iPad:1;MacBook:1&#39;</span>
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 步骤1：拆分客户信息</span>
+</span></span><span style="display:flex;"><span>raw_data[[<span style="color:#e6db74">&#39;客户名&#39;</span>, <span style="color:#e6db74">&#39;城市&#39;</span>]] <span style="color:#f92672">=</span> raw_data[<span style="color:#e6db74">&#39;客户信息&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;|&#39;</span>, expand<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 步骤2：展开产品明细（假设有多个产品用分号分隔）</span>
+</span></span><span style="display:flex;"><span>expanded_rows <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> idx, row <span style="color:#f92672">in</span> raw_data<span style="color:#f92672">.</span>iterrows():
+</span></span><span style="display:flex;"><span>    products <span style="color:#f92672">=</span> row[<span style="color:#e6db74">&#39;产品明细&#39;</span>]<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;;&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> prod <span style="color:#f92672">in</span> products:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#f92672">in</span> prod:
+</span></span><span style="display:flex;"><span>            name, qty <span style="color:#f92672">=</span> prod<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)
+</span></span><span style="display:flex;"><span>            expanded_rows<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;订单号&#39;</span>: row[<span style="color:#e6db74">&#39;订单号&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;客户名&#39;</span>: row[<span style="color:#e6db74">&#39;客户名&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;城市&#39;</span>: row[<span style="color:#e6db74">&#39;城市&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;产品&#39;</span>: name,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;数量&#39;</span>: int(qty)
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>clean_df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(expanded_rows)
+</span></span><span style="display:flex;"><span>print(clean_df)
+</span></span></code></pre></div><hr>
+<h3 id="性能对比不同行列操作方式">性能对比：不同行列操作方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;col_</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">100000</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加列</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df[<span style="color:#e6db74">&#39;new&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;col_0&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>          <span style="color:#75715e"># 直接赋值，最快</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>assign(new<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: x[<span style="color:#e6db74">&#39;col_0&#39;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># assign，可链式</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除列</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;col_0&#39;</span>])            <span style="color:#75715e"># drop</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit <span style="color:#66d9ef">del</span> df[<span style="color:#e6db74">&#39;col_0&#39;</span>]                       <span style="color:#75715e"># del，原地操作</span>
+</span></span></code></pre></div><h2 id="进阶用法">进阶用法</h2>
+<h3 id="assign链式操作">assign链式操作</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 链式添加多列（不修改原数据）</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> (df
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>assign(
+</span></span><span style="display:flex;"><span>        total<span style="color:#f92672">=</span>df[<span style="color:#e6db74">&#39;price&#39;</span>] <span style="color:#f92672">*</span> df[<span style="color:#e6db74">&#39;quantity&#39;</span>],
+</span></span><span style="display:flex;"><span>        discount_rate<span style="color:#f92672">=</span>df[<span style="color:#e6db74">&#39;discount&#39;</span>] <span style="color:#f92672">/</span> df[<span style="color:#e6db74">&#39;price&#39;</span>],
+</span></span><span style="display:flex;"><span>        net_amount<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: x[<span style="color:#e6db74">&#39;total&#39;</span>] <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> x[<span style="color:#e6db74">&#39;discount_rate&#39;</span>])
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#39;net_amount &gt; 0&#39;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h3 id="melt与pivot互转">melt与pivot互转</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 宽表 → 长表（melt）</span>
+</span></span><span style="display:flex;"><span>wide <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;city&#39;</span>: [<span style="color:#e6db74">&#39;北京&#39;</span>, <span style="color:#e6db74">&#39;上海&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Q1&#39;</span>: [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">120</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Q2&#39;</span>: [<span style="color:#ae81ff">110</span>, <span style="color:#ae81ff">130</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Q3&#39;</span>: [<span style="color:#ae81ff">105</span>, <span style="color:#ae81ff">125</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>long <span style="color:#f92672">=</span> wide<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;city&#39;</span>, var_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quarter&#39;</span>, value_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sales&#39;</span>)
+</span></span><span style="display:flex;"><span>print(long)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   city quarter  sales</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 0  北京      Q1    100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1  上海      Q1    120</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 长表 → 宽表（pivot）</span>
+</span></span><span style="display:flex;"><span>wide_again <span style="color:#f92672">=</span> long<span style="color:#f92672">.</span>pivot(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;city&#39;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quarter&#39;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sales&#39;</span>)
+</span></span></code></pre></div><h3 id="explode展开列表列">explode展开列表列</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 一行包含多个值</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user&#39;</span>: [<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;items&#39;</span>: [[<span style="color:#e6db74">&#39;苹果&#39;</span>, <span style="color:#e6db74">&#39;香蕉&#39;</span>], [<span style="color:#e6db74">&#39;橙子&#39;</span>, <span style="color:#e6db74">&#39;葡萄&#39;</span>, <span style="color:#e6db74">&#39;西瓜&#39;</span>]]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 展开</span>
+</span></span><span style="display:flex;"><span>df_expanded <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>explode(<span style="color:#e6db74">&#39;items&#39;</span>)
+</span></span><span style="display:flex;"><span>print(df_expanded)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#    user items</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 0 Alice   苹果</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 0 Alice   香蕉</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1   Bob   橙子</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ...</span>
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1pivot有重复值">❌ 坑1：pivot有重复值</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># pivot要汔回唯一的行列组合，有重复会报错</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>pivot(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;date&#39;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;category&#39;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;amount&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ValueError: Index contains duplicate entries!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决方案1：用pivot_table（自动聚合）</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>pivot_table(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;date&#39;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;category&#39;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;amount&#39;</span>, aggfunc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sum&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决方案2：先去重</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;date&#39;</span>, <span style="color:#e6db74">&#39;category&#39;</span>])<span style="color:#f92672">.</span>pivot(<span style="color:#f92672">...</span>)
+</span></span></code></pre></div><h3 id="-坑2列名多层索引">❌ 坑2：列名多层索引</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># groupby + agg后可能产生多层列名</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;city&#39;</span>)<span style="color:#f92672">.</span>agg({<span style="color:#e6db74">&#39;salary&#39;</span>: [<span style="color:#e6db74">&#39;mean&#39;</span>, <span style="color:#e6db74">&#39;std&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>]})
+</span></span><span style="display:flex;"><span>print(result<span style="color:#f92672">.</span>columns)  <span style="color:#75715e"># MultiIndex</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 展平列名</span>
+</span></span><span style="display:flex;"><span>result<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;_&#39;</span><span style="color:#f92672">.</span>join(col)<span style="color:#f92672">.</span>strip() <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> result<span style="color:#f92672">.</span>columns<span style="color:#f92672">.</span>values]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 变成 [&#39;salary_mean&#39;, &#39;salary_std&#39;, &#39;salary_count&#39;]</span>
+</span></span></code></pre></div><h2 id="实战案例电商订单宽窄表转换">实战案例：电商订单宽窄表转换</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 长格式订单数据</span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>
+</span></span><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;order_id&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3000</span>, n),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;product&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;手机&#39;</span>, <span style="color:#e6db74">&#39;电脑&#39;</span>, <span style="color:#e6db74">&#39;平板&#39;</span>, <span style="color:#e6db74">&#39;耳机&#39;</span>, <span style="color:#e6db74">&#39;手表&#39;</span>], n),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quantity&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, n),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;price&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">8000</span>, n)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 长表 → 宽表：每个订单的商品数量透视表</span>
+</span></span><span style="display:flex;"><span>wide <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>pivot_table(
+</span></span><span style="display:flex;"><span>    index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;order_id&#39;</span>, 
+</span></span><span style="display:flex;"><span>    columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;product&#39;</span>, 
+</span></span><span style="display:flex;"><span>    values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quantity&#39;</span>, 
+</span></span><span style="display:flex;"><span>    aggfunc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sum&#39;</span>, 
+</span></span><span style="display:flex;"><span>    fill_value<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;宽表: </span><span style="color:#e6db74">{</span>wide<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(wide<span style="color:#f92672">.</span>head())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 宽表 → 长表</span>
+</span></span><span style="display:flex;"><span>long <span style="color:#f92672">=</span> wide<span style="color:#f92672">.</span>reset_index()<span style="color:#f92672">.</span>melt(
+</span></span><span style="display:flex;"><span>    id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;order_id&#39;</span>, 
+</span></span><span style="display:flex;"><span>    var_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;product&#39;</span>, 
+</span></span><span style="display:flex;"><span>    value_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quantity&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>long <span style="color:#f92672">=</span> long[long[<span style="color:#e6db74">&#39;quantity&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]  <span style="color:#75715e"># 过滤0</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">长表: </span><span style="color:#e6db74">{</span>long<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 添加计算列</span>
+</span></span><span style="display:flex;"><span>orders_enhanced <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>assign(
+</span></span><span style="display:flex;"><span>    total<span style="color:#f92672">=</span>orders[<span style="color:#e6db74">&#39;quantity&#39;</span>] <span style="color:#f92672">*</span> orders[<span style="color:#e6db74">&#39;price&#39;</span>],
+</span></span><span style="display:flex;"><span>    price_level<span style="color:#f92672">=</span>pd<span style="color:#f92672">.</span>cut(orders[<span style="color:#e6db74">&#39;price&#39;</span>], bins<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">500</span>, <span style="color:#ae81ff">2000</span>, <span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">10000</span>],
+</span></span><span style="display:flex;"><span>                       labels<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;低价&#39;</span>, <span style="color:#e6db74">&#39;中价&#39;</span>, <span style="color:#e6db74">&#39;高价&#39;</span>, <span style="color:#e6db74">&#39;奢侈品&#39;</span>])
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">价格等级分布:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(orders_enhanced[<span style="color:#e6db74">&#39;price_level&#39;</span>]<span style="color:#f92672">.</span>value_counts())
+</span></span></code></pre></div><h3 id="实用变换技巧">实用变换技巧</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 1. 条件赋值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;level&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(df[<span style="color:#e6db74">&#39;score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span>, <span style="color:#e6db74">&#39;A&#39;</span>,
+</span></span><span style="display:flex;"><span>                np<span style="color:#f92672">.</span>where(df[<span style="color:#e6db74">&#39;score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span>, <span style="color:#e6db74">&#39;B&#39;</span>,
+</span></span><span style="display:flex;"><span>                np<span style="color:#f92672">.</span>where(df[<span style="color:#e6db74">&#39;score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 用cut自动分箱</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;age_group&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>cut(df[<span style="color:#e6db74">&#39;age&#39;</span>], bins<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">100</span>],
+</span></span><span style="display:flex;"><span>                          labels<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;25以下&#39;</span>, <span style="color:#e6db74">&#39;25-35&#39;</span>, <span style="color:#e6db74">&#39;35-45&#39;</span>, <span style="color:#e6db74">&#39;45-55&#39;</span>, <span style="color:#e6db74">&#39;55+&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 用qcut等频分箱</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;income_quartile&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(df[<span style="color:#e6db74">&#39;income&#39;</span>], <span style="color:#ae81ff">4</span>, labels<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Q1&#39;</span>, <span style="color:#e6db74">&#39;Q2&#39;</span>, <span style="color:#e6db74">&#39;Q3&#39;</span>, <span style="color:#e6db74">&#39;Q4&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 行转列（unstack）</span>
+</span></span><span style="display:flex;"><span>multi <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;city&#39;</span>, <span style="color:#e6db74">&#39;year&#39;</span>])[<span style="color:#e6db74">&#39;sales&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>wide <span style="color:#f92672">=</span> multi<span style="color:#f92672">.</span>unstack()  <span style="color:#75715e"># year变成列</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 列转行（stack）</span>
+</span></span><span style="display:flex;"><span>long <span style="color:#f92672">=</span> wide<span style="color:#f92672">.</span>stack()  <span style="color:#75715e"># year变回行</span>
+</span></span></code></pre></div><h3 id="宽表和长表的选择">宽表和长表的选择</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 宽表：适合展示和给人看</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   city  Q1  Q2  Q3  Q4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   北京  100 120 130 150</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 长表：适合分析和画图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   city  quarter  sales</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   北京  Q1       100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   北京  Q2       120</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 分析用长表，展示用宽表，随时互转</span>
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一课我们将学习<strong>数据合并与连接</strong>，掌握如何整合多个数据源。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235301-Pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E5%90%88%E5%B9%B6%E4%B8%8E%E8%BF%9E%E6%8E%A5/">继续阅读：Pandas数据变换-合并与连接</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235101-Pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%BC%82%E5%B8%B8%E5%80%BC%E5%A4%84%E7%90%86/">Pandas数据清洗-类型转换与异常值处理</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235301-Pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E5%90%88%E5%B9%B6%E4%B8%8E%E8%BF%9E%E6%8E%A5/">Pandas数据变换-合并与连接</a></p>
+<hr>
+<p><em>PS：数据变换是数据分析的核心技能。熟练掌握行列操作，能应对80%的数据整理需求。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260228235101-pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%BC%82%E5%B8%B8%E5%80%BC%E5%A4%84%E7%90%86/">上一篇：Pandas数据清洗：我总结了类型转换的5个坑，帮你避开90%的错误</a>
+        
+        
+        <a href="http://localhost:4002/20260228235301-pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E5%90%88%E5%B9%B6%E4%B8%8E%E8%BF%9E%E6%8E%A5/">下一篇：Pandas数据变换：我总结了merge的5种用法，轻松整合多个数据源</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

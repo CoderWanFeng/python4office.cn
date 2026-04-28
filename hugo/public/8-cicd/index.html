@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第八讲：CI/CD 跨平台打包 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第八讲：CI/CD 跨平台打包</h1>
+        <div class="post-meta">
+            <span>2025-07-14 08:41</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" class="tag">第三方库</a>
+            
+            <a href="/tags/pyinstaller/" class="tag">pyinstaller</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，这里是程序员晚枫，正在all in <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">AI编程实战</a>，全网同名。</p>
+<p>——用 GitHub Actions 在 5 分钟内同时产出 Win / macOS / Linux 三系统可执行文件</p>
+<hr>
+<p>开场 20 秒<br>
+“手动打包 3 个平台，每次发版 2 小时？”<br>
+本讲 15 分钟，教你把 pyinstaller 写进 GitHub Actions，Push 即出 Release，附带版本号、校验和、代码签名。</p>
+<hr>
+<p>8.1 整体思路（1 min）</p>
+<p>• 单仓库 + 多 job 并行<br>
+• 每 job 使用对应平台 runner<br>
+• 缓存 pip &amp; pyinstaller 缓存目录<br>
+• 产物自动上传到 Release</p>
+<hr>
+<p>8.2 仓库目录约定（1 min）</p>
+<pre tabindex="0"><code>myapp/
+├─ src/
+│  └─ main.py
+├─ assets/
+│  ├─ icon.ico
+│  └─ icon.icns
+├─ requirements.txt
+├─ main.spec          # 统一 spec
+├─ .github/workflows/release.yml
+└─ version.txt        # 写入 1.2.3
+</code></pre><hr>
+<p>8.3 GitHub Actions 完整 workflow（直接抄）</p>
+<p><code>.github/workflows/release.yml</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Multi-OS Build</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">tags</span>: [ <span style="color:#e6db74">&#34;v*.*.*&#34;</span> ]        <span style="color:#75715e"># 推送 v1.2.3 即触发</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">strategy</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">matrix</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">os</span>: [<span style="color:#ae81ff">ubuntu-latest, windows-latest, macos-latest]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">${{ matrix.os }}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Python</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-python@v5</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">python-version</span>: <span style="color:#e6db74">&#34;3.11&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Cache pip</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/cache@v4</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">~/.cache/pip</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">key</span>: <span style="color:#ae81ff">${{ runner.os }}-pip-${{ hashFiles(&#39;requirements.txt&#39;) }}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install deps</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        python -m pip install -U pip
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        pip install -r requirements.txt pyinstaller</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build binary</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        pyinstaller main.spec</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Upload artifact</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-artifact@v4</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">myapp-${{ runner.os }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">dist/*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">release</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Download all artifacts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/download-artifact@v4</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">artifacts</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Create Release &amp; Upload</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">softprops/action-gh-release@v2</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">tag_name</span>: <span style="color:#ae81ff">${{ github.ref_name }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Release ${{ github.ref_name }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">files</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          artifacts/myapp-Linux/*
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          artifacts/myapp-Windows/*.exe
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          artifacts/myapp-macOS/*</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">generate_release_notes</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><hr>
+<p>8.4 统一版本号注入（1 min）</p>
+<p>在 <code>main.spec</code> 顶部读 tag：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>VERSION <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#34;GITHUB_REF_NAME&#34;</span>, <span style="color:#e6db74">&#34;dev&#34;</span>)<span style="color:#f92672">.</span>lstrip(<span style="color:#e6db74">&#34;v&#34;</span>)
+</span></span></code></pre></div><p>再把 <code>VERSION</code> 写进 EXE：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>exe <span style="color:#f92672">=</span> EXE(
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    version<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;build/</span><span style="color:#e6db74">{</span>VERSION<span style="color:#e6db74">}</span><span style="color:#e6db74">.txt&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>GitHub Actions 自动把 <code>v1.2.3</code> 注入，无需手动改文件。</p>
+<hr>
+<p>8.5 代码签名 &amp; Notarization（macOS 专属，2 min）</p>
+<p>secrets 配置</p>
+<ul>
+<li><code>MACOS_CERTIFICATE</code>：Base64 的 p12</li>
+<li><code>MACOS_CERTIFICATE_PWD</code></li>
+<li><code>APPLE_ID</code>, <code>APPLE_TEAM_ID</code>, <code>APPLE_APP_PASSWORD</code></li>
+</ul>
+<p>workflow 片段</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Import cert &amp; sign</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">if</span>: <span style="color:#ae81ff">runner.os == &#39;macOS&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        echo ${{ secrets.MACOS_CERTIFICATE }} | base64 -d &gt; cert.p12
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        security import cert.p12 -k ~/Library/Keychains/login.keychain -P ${{ secrets.MACOS_CERTIFICATE_PWD }} -T /usr/bin/codesign
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        codesign --force --options=runtime --sign &#34;Developer ID Application: Your Name&#34; dist/MyApp.app</span>
+</span></span></code></pre></div><p>Notarization 可用 <code>xcrun notarytool submit</code>（略）。</p>
+<hr>
+<p>8.6 产物示例（1 min）</p>
+<p>Release 页面自动出现：</p>
+<pre tabindex="0"><code>myapp-v1.2.3-linux.tar.gz
+myapp-v1.2.3-windows.exe
+myapp-v1.2.3-macos.dmg
+</code></pre><p>带 SHA256 校验和 Release Notes。</p>
+<hr>
+<p>8.7 本地验证小技巧（1 min）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 模拟 CI 环境</span>
+</span></span><span style="display:flex;"><span>act -j build --matrix os:ubuntu-latest
+</span></span></code></pre></div><hr>
+<p>8.8 常见坑速查</p>
+<table>
+  <thead>
+      <tr>
+          <th>坑</th>
+          <th>症状</th>
+          <th>解决</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows 长路径</td>
+          <td>构建失败</td>
+          <td><code>git config --system core.longpaths true</code></td>
+      </tr>
+      <tr>
+          <td>UPX 被 Defender 误杀</td>
+          <td>上传 exe 报毒</td>
+          <td>CI 里 <code>--upx-exclude</code> 或关掉 UPX</td>
+      </tr>
+      <tr>
+          <td>macOS 签名失败</td>
+          <td>“unsealed contents present”</td>
+          <td>用 <code>codesign --verify --deep --strict</code> 先自检</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p>小结 &amp; 作业（30 秒）</p>
+<p>• 一条 workflow 产出三平台可执行文件<br>
+• 版本号、签名、Release 全自动<br>
+• 作业：把你的项目按本讲模板 push v0.1.0，检查 Release 是否成功生成 3 个产物。</p>
+<p>下节课《第九讲：运行时问题定位与解决》教你“用户打不开”时如何远程诊断。</p>
+<hr>
+<p>大家在学习课程中有任何问题，欢迎+微信和我交流👉<a href="https://www.python4office.cn/wechat-qrcode/">我的联系方式：微信、读者群、1对1、福利</a></p>
+<p><img src="https://cos.python-office.com/ads/gzh/sub-py.jpg" alt=""></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg" alt="扫一扫，领红包"></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg" alt="美团红包"></p>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/7-%E7%98%A6%E8%BA%AB/">上一篇：第七讲：数据科学项目专场 —— 把 500 MB 的 Numpy / Pandas / PyTorch 砍到 150 MB 以内</a>
+        
+        
+        <a href="http://localhost:4002/9-%E5%AE%9A%E4%BD%8D%E9%97%AE%E9%A2%98/">下一篇：第九讲：运行时问题定位与解决——用户说“打不开”时，如何 5 分钟定位并给出修复包</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

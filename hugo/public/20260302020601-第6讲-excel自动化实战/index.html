@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 6 讲：Excel 自动化实战 - 批量处理与自动邮件 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 6 讲：Excel 自动化实战 - 批量处理与自动邮件</h1>
+        <div class="post-meta">
+            <span>2026-03-02 16:25</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/ai-%E8%87%AA%E5%8A%A8%E5%8C%96excel%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86/" class="tag">AI 自动化，Excel，批量处理</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+<h2 id="-场景导入批量处理的噩梦">😫 场景导入：批量处理的噩梦</h2>
+<p><strong>场景1：月底汇总各部门数据</strong></p>
+<pre tabindex="0"><code>老板：把各部门的月度数据汇总一下
+
+实际情况：
+- 收到30个部门的Excel文件
+- 格式不完全统一
+- 需要逐个打开、复制、粘贴
+- 还要核对数据是否完整
+- 一不小心就出错
+
+花费时间：3-4小时
+</code></pre><p><strong>场景2：每周发周报</strong></p>
+<pre tabindex="0"><code>每周五下午：
+- 打开销售系统导出数据
+- 复制到Excel
+- 做图表
+- 写邮件
+- 发送给10+领导
+
+花费时间：1小时
+</code></pre><p><strong>如果自动化呢？</strong></p>
+<pre tabindex="0"><code>- 批量合并Excel：3秒
+- 自动生成周报：10秒
+- 自动发送邮件：自动
+
+花费时间：几乎为0
+</code></pre><hr>
+<h2 id="-一批量处理-excel-文件">📊 一、批量处理 Excel 文件</h2>
+<h3 id="场景1合并多个excel文件">场景1：合并多个Excel文件</h3>
+<p><strong>Python实现：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 安装：pip install python-office pandas openpyxl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> office
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法1：使用python-office一键合并</span>
+</span></span><span style="display:flex;"><span>office<span style="color:#f92672">.</span>excel<span style="color:#f92672">.</span>merge2excel(
+</span></span><span style="display:flex;"><span>    dir_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./各部门数据/&#39;</span>,  <span style="color:#75715e"># 存放Excel的文件夹</span>
+</span></span><span style="display:flex;"><span>    output_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;汇总表.xlsx&#39;</span>  <span style="color:#75715e"># 输出文件名</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;合并完成！&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：使用pandas自定义合并</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge_excel_files</span>(folder_path, output_file):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;合并文件夹中所有Excel文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    all_data <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 遍历文件夹</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(folder_path):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.xlsx&#39;</span>) <span style="color:#f92672">or</span> filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.xls&#39;</span>):
+</span></span><span style="display:flex;"><span>            file_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(folder_path, filename)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 读取数据</span>
+</span></span><span style="display:flex;"><span>            df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(file_path)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 添加来源列</span>
+</span></span><span style="display:flex;"><span>            df[<span style="color:#e6db74">&#39;来源文件&#39;</span>] <span style="color:#f92672">=</span> filename
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            all_data<span style="color:#f92672">.</span>append(df)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;已读取：</span><span style="color:#e6db74">{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 合并所有数据</span>
+</span></span><span style="display:flex;"><span>    merged_df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat(all_data, ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 保存</span>
+</span></span><span style="display:flex;"><span>    merged_df<span style="color:#f92672">.</span>to_excel(output_file, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;合并完成！共</span><span style="color:#e6db74">{</span>len(merged_df)<span style="color:#e6db74">}</span><span style="color:#e6db74">行数据&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>merge_excel_files(<span style="color:#e6db74">&#39;./各部门数据/&#39;</span>, <span style="color:#e6db74">&#39;汇总表.xlsx&#39;</span>)
+</span></span></code></pre></div><p><strong>ChatExcel操作：</strong></p>
+<pre tabindex="0"><code>1. 打开chatexcel.com
+2. 输入指令：&#34;合并多个Excel文件&#34;
+3. 上传所有文件
+4. 等待处理完成
+5. 下载合并后的文件
+</code></pre><h3 id="场景2批量拆分excel">场景2：批量拆分Excel</h3>
+<p><strong>按条件拆分成多个文件：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">split_excel_by_column</span>(input_file, split_column, output_folder):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    按指定列拆分Excel
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    参数：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    - input_file: 输入文件
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    - split_column: 按哪一列拆分
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    - output_folder: 输出文件夹
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>makedirs(output_folder, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 读取数据</span>
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(input_file)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 按列分组</span>
+</span></span><span style="display:flex;"><span>    grouped <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(split_column)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 拆分保存</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> name, group <span style="color:#f92672">in</span> grouped:
+</span></span><span style="display:flex;"><span>        output_file <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(output_folder, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>        group<span style="color:#f92672">.</span>to_excel(output_file, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;已生成：</span><span style="color:#e6db74">{</span>output_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 示例：按部门拆分</span>
+</span></span><span style="display:flex;"><span>split_excel_by_column(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;总数据.xlsx&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;部门&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;./拆分后文件/&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h3 id="场景3批量格式化">场景3：批量格式化</h3>
+<p><strong>统一所有Excel的格式：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> openpyxl
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> openpyxl.styles <span style="color:#f92672">import</span> Font, Alignment, PatternFill
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">batch_format_excel</span>(folder_path):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;批量格式化Excel文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(folder_path):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.xlsx&#39;</span>) <span style="color:#f92672">or</span> filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.xls&#39;</span>)):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        file_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(folder_path, filename)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 打开工作簿</span>
+</span></span><span style="display:flex;"><span>        wb <span style="color:#f92672">=</span> openpyxl<span style="color:#f92672">.</span>load_workbook(file_path)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> sheet_name <span style="color:#f92672">in</span> wb<span style="color:#f92672">.</span>sheetnames:
+</span></span><span style="display:flex;"><span>            sheet <span style="color:#f92672">=</span> wb[sheet_name]
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 设置表头样式</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> sheet[<span style="color:#ae81ff">1</span>]:
+</span></span><span style="display:flex;"><span>                cell<span style="color:#f92672">.</span>font <span style="color:#f92672">=</span> Font(bold<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;微软雅黑&#39;</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>)
+</span></span><span style="display:flex;"><span>                cell<span style="color:#f92672">.</span>fill <span style="color:#f92672">=</span> PatternFill(start_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;4472C4&#39;</span>, 
+</span></span><span style="display:flex;"><span>                                       end_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;4472C4&#39;</span>, 
+</span></span><span style="display:flex;"><span>                                       fill_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;solid&#39;</span>)
+</span></span><span style="display:flex;"><span>                cell<span style="color:#f92672">.</span>font <span style="color:#f92672">=</span> Font(bold<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;FFFFFF&#39;</span>, 
+</span></span><span style="display:flex;"><span>                               name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;微软雅黑&#39;</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>)
+</span></span><span style="display:flex;"><span>                cell<span style="color:#f92672">.</span>alignment <span style="color:#f92672">=</span> Alignment(horizontal<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, 
+</span></span><span style="display:flex;"><span>                                          vertical<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 设置数据区域样式</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> sheet<span style="color:#f92672">.</span>iter_rows(min_row<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> row:
+</span></span><span style="display:flex;"><span>                    cell<span style="color:#f92672">.</span>font <span style="color:#f92672">=</span> Font(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;微软雅黑&#39;</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>)
+</span></span><span style="display:flex;"><span>                    cell<span style="color:#f92672">.</span>alignment <span style="color:#f92672">=</span> Alignment(horizontal<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, 
+</span></span><span style="display:flex;"><span>                                              vertical<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 自动调整列宽</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> column <span style="color:#f92672">in</span> sheet<span style="color:#f92672">.</span>columns:
+</span></span><span style="display:flex;"><span>                max_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>                column_letter <span style="color:#f92672">=</span> column[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>column_letter
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> column:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> len(str(cell<span style="color:#f92672">.</span>value)) <span style="color:#f92672">&gt;</span> max_length:
+</span></span><span style="display:flex;"><span>                            max_length <span style="color:#f92672">=</span> len(str(cell<span style="color:#f92672">.</span>value))
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                adjusted_width <span style="color:#f92672">=</span> min(max_length <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span>                sheet<span style="color:#f92672">.</span>column_dimensions[column_letter]<span style="color:#f92672">.</span>width <span style="color:#f92672">=</span> adjusted_width
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 保存</span>
+</span></span><span style="display:flex;"><span>        wb<span style="color:#f92672">.</span>save(file_path)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;格式化完成：</span><span style="color:#e6db74">{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>batch_format_excel(<span style="color:#e6db74">&#39;./待格式化文件/&#39;</span>)
+</span></span></code></pre></div><h3 id="场景4批量转换格式">场景4：批量转换格式</h3>
+<p><strong>Excel批量转PDF、CSV等：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> office
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 批量Excel转PDF</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">batch_excel_to_pdf</span>(folder_path, output_folder):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;批量转换Excel为PDF&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>makedirs(output_folder, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(folder_path):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.xlsx&#39;</span>) <span style="color:#f92672">or</span> filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.xls&#39;</span>):
+</span></span><span style="display:flex;"><span>            input_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(folder_path, filename)
+</span></span><span style="display:flex;"><span>            output_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+</span></span><span style="display:flex;"><span>                output_folder, 
+</span></span><span style="display:flex;"><span>                filename<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.xlsx&#39;</span>, <span style="color:#e6db74">&#39;.pdf&#39;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.xls&#39;</span>, <span style="color:#e6db74">&#39;.pdf&#39;</span>)
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            office<span style="color:#f92672">.</span>excel<span style="color:#f92672">.</span>excel2pdf(input_path, output_path)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;已转换：</span><span style="color:#e6db74">{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 批量Excel转CSV</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">batch_excel_to_csv</span>(folder_path, output_folder):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;批量转换Excel为CSV&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>makedirs(output_folder, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(folder_path):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.xlsx&#39;</span>) <span style="color:#f92672">or</span> filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.xls&#39;</span>):
+</span></span><span style="display:flex;"><span>            input_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(folder_path, filename)
+</span></span><span style="display:flex;"><span>            output_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+</span></span><span style="display:flex;"><span>                output_folder, 
+</span></span><span style="display:flex;"><span>                filename<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.xlsx&#39;</span>, <span style="color:#e6db74">&#39;.csv&#39;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.xls&#39;</span>, <span style="color:#e6db74">&#39;.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(input_path)
+</span></span><span style="display:flex;"><span>            df<span style="color:#f92672">.</span>to_csv(output_path, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8-sig&#39;</span>)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;已转换：</span><span style="color:#e6db74">{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>batch_excel_to_pdf(<span style="color:#e6db74">&#39;./Excel文件/&#39;</span>, <span style="color:#e6db74">&#39;./PDF文件/&#39;</span>)
+</span></span><span style="display:flex;"><span>batch_excel_to_csv(<span style="color:#e6db74">&#39;./Excel文件/&#39;</span>, <span style="color:#e6db74">&#39;./CSV文件/&#39;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-二自动抓取网络数据">🌐 二、自动抓取网络数据</h2>
+<h3 id="场景1抓取网页表格数据">场景1：抓取网页表格数据</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> bs4 <span style="color:#f92672">import</span> BeautifulSoup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">scrape_table_from_url</span>(url, output_file):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;从网页抓取表格数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 获取网页内容</span>
+</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url, headers<span style="color:#f92672">=</span>headers)
+</span></span><span style="display:flex;"><span>    response<span style="color:#f92672">.</span>encoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;utf-8&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 解析HTML</span>
+</span></span><span style="display:flex;"><span>    soup <span style="color:#f92672">=</span> BeautifulSoup(response<span style="color:#f92672">.</span>text, <span style="color:#e6db74">&#39;html.parser&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 找到所有表格</span>
+</span></span><span style="display:flex;"><span>    tables <span style="color:#f92672">=</span> soup<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;table&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 提取第一个表格</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> tables:
+</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_html(str(tables[<span style="color:#ae81ff">0</span>]))[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>        df<span style="color:#f92672">.</span>to_excel(output_file, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;数据已保存：</span><span style="color:#e6db74">{</span>output_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> df
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;未找到表格&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用示例（抓取某个数据网站）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># scrape_table_from_url(&#39;https://example.com/data&#39;, &#39;抓取数据.xlsx&#39;)</span>
+</span></span></code></pre></div><h3 id="场景2定时抓取数据">场景2：定时抓取数据</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> schedule
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch_and_save_data</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;抓取并保存数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 模拟抓取数据</span>
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;时间&#39;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> %H:%M:%S&#39;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;汇率&#39;</span>: <span style="color:#ae81ff">7.23</span>,  <span style="color:#75715e"># 实际应从API获取</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;股价&#39;</span>: <span style="color:#ae81ff">150.5</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 读取历史数据</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(<span style="color:#e6db74">&#39;历史数据.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 添加新数据</span>
+</span></span><span style="display:flex;"><span>    new_row <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame([data])
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df, new_row], ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 保存</span>
+</span></span><span style="display:flex;"><span>    df<span style="color:#f92672">.</span>to_excel(<span style="color:#e6db74">&#39;历史数据.xlsx&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;数据已更新：</span><span style="color:#e6db74">{</span>data<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 定时任务：每小时执行一次</span>
+</span></span><span style="display:flex;"><span>schedule<span style="color:#f92672">.</span>every()<span style="color:#f92672">.</span>hour<span style="color:#f92672">.</span>do(fetch_and_save_data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 运行</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    schedule<span style="color:#f92672">.</span>run_pending()
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">60</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-三自动发送邮件报表">📧 三、自动发送邮件报表</h2>
+<h3 id="场景1发送带附件的邮件">场景1：发送带附件的邮件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> office
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用python-office发送邮件</span>
+</span></span><span style="display:flex;"><span>office<span style="color:#f92672">.</span>email<span style="color:#f92672">.</span>send_email(
+</span></span><span style="display:flex;"><span>    to_email<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;boss@company.com&#39;</span>,  <span style="color:#75715e"># 收件人</span>
+</span></span><span style="display:flex;"><span>    subject<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售日报-2026-04-08&#39;</span>,  <span style="color:#75715e"># 主题</span>
+</span></span><span style="display:flex;"><span>    content<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;&#39;领导好：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">附件是今日销售日报，请查收。
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">关键数据：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 今日销售额：50万元
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 环比增长：+5%
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">详情见附件。
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">此致
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">敬礼！&#39;&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>    attachment<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售日报.xlsx&#39;</span>  <span style="color:#75715e"># 附件</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;邮件发送成功！&#39;</span>)
+</span></span></code></pre></div><h3 id="场景2批量发送个性化邮件">场景2：批量发送个性化邮件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> office
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_personalized_emails</span>(data_file):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;批量发送个性化邮件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 读取收件人数据</span>
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(data_file)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> index, row <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>iterrows():
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 生成个性化内容</span>
+</span></span><span style="display:flex;"><span>        content <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{</span>row[<span style="color:#e6db74">&#39;姓名&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">，你好！
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">根据你的业绩数据，本月情况如下：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 销售额：</span><span style="color:#e6db74">{</span>row[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">万元
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 目标完成率：</span><span style="color:#e6db74">{</span>row[<span style="color:#e6db74">&#39;完成率&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">%
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 排名：第</span><span style="color:#e6db74">{</span>row[<span style="color:#e6db74">&#39;排名&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">名
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;恭喜你超额完成目标！&#39;</span> <span style="color:#66d9ef">if</span> row[<span style="color:#e6db74">&#39;完成率&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">100</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;下月请继续努力！&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">此致
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">敬礼！
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 发送邮件</span>
+</span></span><span style="display:flex;"><span>        office<span style="color:#f92672">.</span>email<span style="color:#f92672">.</span>send_email(
+</span></span><span style="display:flex;"><span>            to_email<span style="color:#f92672">=</span>row[<span style="color:#e6db74">&#39;邮箱&#39;</span>],
+</span></span><span style="display:flex;"><span>            subject<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;业绩通知-</span><span style="color:#e6db74">{</span>row[<span style="color:#e6db74">&#34;姓名&#34;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>,
+</span></span><span style="display:flex;"><span>            content<span style="color:#f92672">=</span>content
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;已发送给：</span><span style="color:#e6db74">{</span>row[<span style="color:#e6db74">&#34;姓名&#34;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>send_personalized_emails(<span style="color:#e6db74">&#39;员工数据.xlsx&#39;</span>)
+</span></span></code></pre></div><h3 id="场景3定时发送周报">场景3：定时发送周报</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> schedule
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> office
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_weekly_report</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;发送周报&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 生成报告</span>
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(<span style="color:#e6db74">&#39;销售数据.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 计算关键指标</span>
+</span></span><span style="display:flex;"><span>    total_sales <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>    order_count <span style="color:#f92672">=</span> len(df)
+</span></span><span style="display:flex;"><span>    avg_order <span style="color:#f92672">=</span> total_sales <span style="color:#f92672">/</span> order_count
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 邮件内容</span>
+</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">领导好：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">本周销售数据汇报如下：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">📊 核心指标
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 总销售额：</span><span style="color:#e6db74">{</span>total_sales<span style="color:#f92672">/</span><span style="color:#ae81ff">10000</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">万元
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 订单数：</span><span style="color:#e6db74">{</span>order_count<span style="color:#e6db74">}</span><span style="color:#e6db74">单
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 平均客单价：</span><span style="color:#e6db74">{</span>avg_order<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">元
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">📅 时间：</span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">详情见附件。
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">此致
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">敬礼！
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 发送邮件</span>
+</span></span><span style="display:flex;"><span>    office<span style="color:#f92672">.</span>email<span style="color:#f92672">.</span>send_email(
+</span></span><span style="display:flex;"><span>        to_email<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;boss@company.com&#39;</span>,
+</span></span><span style="display:flex;"><span>        subject<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;销售周报-</span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y年第%W周&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>,
+</span></span><span style="display:flex;"><span>        content<span style="color:#f92672">=</span>content,
+</span></span><span style="display:flex;"><span>        attachment<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售数据.xlsx&#39;</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;周报已发送：</span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 定时：每周一早上9点发送</span>
+</span></span><span style="display:flex;"><span>schedule<span style="color:#f92672">.</span>every()<span style="color:#f92672">.</span>monday<span style="color:#f92672">.</span>at(<span style="color:#e6db74">&#34;09:00&#34;</span>)<span style="color:#f92672">.</span>do(send_weekly_report)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 运行</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    schedule<span style="color:#f92672">.</span>run_pending()
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">60</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-四完整自动化流程">🔄 四、完整自动化流程</h2>
+<h3 id="案例自动化日报系统">案例：自动化日报系统</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> office
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> schedule
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DailyReportSystem</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;自动化日报系统&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, data_source, recipients):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data_source <span style="color:#f92672">=</span> data_source
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>recipients <span style="color:#f92672">=</span> recipients
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">collect_data</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;收集数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 合并各来源数据</span>
+</span></span><span style="display:flex;"><span>        office<span style="color:#f92672">.</span>excel<span style="color:#f92672">.</span>merge2excel(
+</span></span><span style="display:flex;"><span>            dir_path<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>data_source,
+</span></span><span style="display:flex;"><span>            output_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;日报_原始数据.xlsx&#39;</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 读取并处理</span>
+</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(<span style="color:#e6db74">&#39;日报_原始数据.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> df
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">analyze_data</span>(self, df):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;分析数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        analysis <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;日期&#39;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;总销售额&#39;</span>: df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum(),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;订单数&#39;</span>: len(df),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;客单价&#39;</span>: df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>mean(),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;top_products&#39;</span>: df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;产品&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>nlargest(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> analysis
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_report</span>(self, analysis):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成报告&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        report <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># 销售日报
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">日期：</span><span style="color:#e6db74">{</span>analysis[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">## 核心指标
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">| 指标 | 数值 |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">|------|------|
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">| 总销售额 | </span><span style="color:#e6db74">{</span>analysis[<span style="color:#e6db74">&#39;总销售额&#39;</span>]<span style="color:#f92672">/</span><span style="color:#ae81ff">10000</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">万元 |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">| 订单数 | </span><span style="color:#e6db74">{</span>analysis[<span style="color:#e6db74">&#39;订单数&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">单 |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">| 客单价 | </span><span style="color:#e6db74">{</span>analysis[<span style="color:#e6db74">&#39;客单价&#39;</span>]<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">元 |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">## Top5产品
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{</span>analysis[<span style="color:#e6db74">&#39;top_products&#39;</span>]<span style="color:#f92672">.</span>to_markdown()<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">---
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">生成时间：</span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> %H:%M:%S&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 保存报告</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;日报.md&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>            f<span style="color:#f92672">.</span>write(report)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> report
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_email</span>(self, report):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;发送邮件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> recipient <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>recipients:
+</span></span><span style="display:flex;"><span>            office<span style="color:#f92672">.</span>email<span style="color:#f92672">.</span>send_email(
+</span></span><span style="display:flex;"><span>                to_email<span style="color:#f92672">=</span>recipient,
+</span></span><span style="display:flex;"><span>                subject<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;销售日报-</span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>,
+</span></span><span style="display:flex;"><span>                content<span style="color:#f92672">=</span>report,
+</span></span><span style="display:flex;"><span>                attachment<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;日报_原始数据.xlsx&#39;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;已发送给：</span><span style="color:#e6db74">{</span>recipient<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;运行完整流程&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;开始生成日报...&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 1. 收集数据</span>
+</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>collect_data()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;数据收集完成&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 2. 分析数据</span>
+</span></span><span style="display:flex;"><span>        analysis <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>analyze_data(df)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;数据分析完成&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 3. 生成报告</span>
+</span></span><span style="display:flex;"><span>        report <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>generate_report(analysis)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;报告生成完成&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 4. 发送邮件</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>send_email(report)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;日报发送完成！&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>system <span style="color:#f92672">=</span> DailyReportSystem(
+</span></span><span style="display:flex;"><span>    data_source<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./各区域数据/&#39;</span>,
+</span></span><span style="display:flex;"><span>    recipients<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;boss@company.com&#39;</span>, <span style="color:#e6db74">&#39;manager@company.com&#39;</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 手动运行</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># system.run()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 定时运行：每天下午5点</span>
+</span></span><span style="display:flex;"><span>schedule<span style="color:#f92672">.</span>every()<span style="color:#f92672">.</span>day<span style="color:#f92672">.</span>at(<span style="color:#e6db74">&#34;17:00&#34;</span>)<span style="color:#f92672">.</span>do(system<span style="color:#f92672">.</span>run)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    schedule<span style="color:#f92672">.</span>run_pending()
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">60</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-五避坑指南">⚠️ 五、避坑指南</h2>
+<h3 id="坑1没有错误处理">坑1：没有错误处理</h3>
+<p><strong>错误示例：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 没有错误处理，一旦出错整个流程中断</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> file <span style="color:#f92672">in</span> files:
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(file)
+</span></span><span style="display:flex;"><span>    process(df)
+</span></span></code></pre></div><p><strong>正确做法：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;error.log&#39;</span>, level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>ERROR)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> file <span style="color:#f92672">in</span> files:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(file)
+</span></span><span style="display:flex;"><span>        process(df)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;处理</span><span style="color:#e6db74">{</span>file<span style="color:#e6db74">}</span><span style="color:#e6db74">时出错：</span><span style="color:#e6db74">{</span>str(e)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span>  <span style="color:#75715e"># 跳过错误文件，继续处理</span>
+</span></span></code></pre></div><h3 id="坑2没有日志记录">坑2：没有日志记录</h3>
+<p><strong>问题：</strong> 不知道处理了多少、失败了几次</p>
+<p><strong>正确做法：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(
+</span></span><span style="display:flex;"><span>    filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;process.log&#39;</span>,
+</span></span><span style="display:flex;"><span>    level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO,
+</span></span><span style="display:flex;"><span>    format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>success <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>failed <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> file <span style="color:#f92672">in</span> files:
+</span></span><span style="display:flex;"><span>    total <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        process(file)
+</span></span><span style="display:flex;"><span>        success <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;成功处理：</span><span style="color:#e6db74">{</span>file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>        failed <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;处理失败：</span><span style="color:#e6db74">{</span>file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;总计：</span><span style="color:#e6db74">{</span>total<span style="color:#e6db74">}</span><span style="color:#e6db74">，成功：</span><span style="color:#e6db74">{</span>success<span style="color:#e6db74">}</span><span style="color:#e6db74">，失败：</span><span style="color:#e6db74">{</span>failed<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span></code></pre></div><h3 id="坑3定时任务没监控">坑3：定时任务没监控</h3>
+<p><strong>问题：</strong> 定时任务停了都不知道</p>
+<p><strong>正确做法：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> schedule
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">job</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 执行任务</span>
+</span></span><span style="display:flex;"><span>        process()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 发送成功通知</span>
+</span></span><span style="display:flex;"><span>        requests<span style="color:#f92672">.</span>post(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;https://api.example.com/notify&#39;</span>,
+</span></span><span style="display:flex;"><span>            json<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;status&#39;</span>: <span style="color:#e6db74">&#39;success&#39;</span>, <span style="color:#e6db74">&#39;message&#39;</span>: <span style="color:#e6db74">&#39;任务完成&#39;</span>}
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 发送失败通知</span>
+</span></span><span style="display:flex;"><span>        requests<span style="color:#f92672">.</span>post(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;https://api.example.com/notify&#39;</span>,
+</span></span><span style="display:flex;"><span>            json<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;status&#39;</span>: <span style="color:#e6db74">&#39;failed&#39;</span>, <span style="color:#e6db74">&#39;message&#39;</span>: str(e)}
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>schedule<span style="color:#f92672">.</span>every()<span style="color:#f92672">.</span>day<span style="color:#f92672">.</span>at(<span style="color:#e6db74">&#34;09:00&#34;</span>)<span style="color:#f92672">.</span>do(job)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    schedule<span style="color:#f92672">.</span>run_pending()
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">60</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-六本讲作业">💡 六、本讲作业</h2>
+<h3 id="作业1批量处理实践">作业1：批量处理实践</h3>
+<p>准备10个Excel文件，完成以下任务：</p>
+<ol>
+<li>批量合并成一个文件</li>
+<li>按某列拆分成多个文件</li>
+<li>统一格式化</li>
+</ol>
+<h3 id="作业2定时任务">作业2：定时任务</h3>
+<p>编写定时任务：</p>
+<ol>
+<li>每天9点自动汇总前一天数据</li>
+<li>生成报表</li>
+<li>发送邮件</li>
+</ol>
+<h3 id="作业3完整自动化">作业3：完整自动化</h3>
+<p>设计并实现一个完整的自动化流程：</p>
+<ol>
+<li>数据采集</li>
+<li>数据处理</li>
+<li>报告生成</li>
+<li>自动发送</li>
+</ol>
+<hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<h3 id="核心要点">核心要点</h3>
+<ol>
+<li><strong>批量处理</strong>：合并、拆分、格式化、转换</li>
+<li><strong>数据抓取</strong>：网页表格、定时采集</li>
+<li><strong>自动邮件</strong>：单发、群发、定时发送</li>
+<li><strong>完整流程</strong>：采集→处理→报告→发送</li>
+</ol>
+<h3 id="工具清单">工具清单</h3>
+<pre tabindex="0"><code>✅ Python库：
+- python-office：一键办公自动化
+- pandas：数据处理
+- openpyxl：Excel操作
+- schedule：定时任务
+
+✅ 在线工具：
+- 集简云：工作流自动化
+- ChatExcel：在线Excel处理
+</code></pre><hr>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/ai-automation-office/%E7%AC%AC5%E8%AE%B2-AI%E7%94%9F%E6%88%90%E6%95%B0%E6%8D%AE%E6%8A%A5%E8%A1%A8/">上一讲：AI 生成数据报表</a> | <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/ai-automation-office/%E7%AC%AC7%E8%AE%B2-AI%E5%86%99Word%E6%96%87%E6%A1%A3/">下一讲：AI 写 Word 文档</a> →</p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<hr>
+<blockquote>
+<p><strong>科技不高冷，AI很好用。</strong></p>
+<p>下一讲，我们学习如何用AI写Word文档！</p>
+</blockquote>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260302020501-%E7%AC%AC5%E8%AE%B2-ai%E7%94%9F%E6%88%90%E6%95%B0%E6%8D%AE%E6%8A%A5%E8%A1%A8/">上一篇：第 5 讲：AI 生成数据报表 - 一键搞定月度汇报</a>
+        
+        
+        <a href="http://localhost:4002/20260302020701-%E7%AC%AC7%E8%AE%B2-ai%E5%86%99word%E6%96%87%E6%A1%A3/">下一篇：第 7 讲：AI 写 Word 文档 - 10 分钟搞定工作报告</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

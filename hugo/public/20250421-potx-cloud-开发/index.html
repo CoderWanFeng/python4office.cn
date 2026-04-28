@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>怎么发布、更新Python第三方库？以potx-cloud为例 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>怎么发布、更新Python第三方库？以potx-cloud为例</h1>
+        <div class="post-meta">
+            <span>2025-04-21 00:41</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" class="tag">个人网站</a>
+            
+            <a href="/tags/%E5%BC%80%E6%BA%90/" class="tag">开源</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <p><img src="https://www.python4office.cn/images/open-source/course/20250421-potx-cloud-%E5%BC%80%E5%8F%91/pypi.png" alt=""></p>
+<p>大家好，这里是程序员晚枫，正在all in <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">AI编程实战</a>，全网同名。</p>
+<p>熟悉我的朋友都知道，我的账号内容80%都是关于开源项目的功能文档，剩下20%是关于开发这些功能的周边。</p>
+<p>今年开始邀请了小伙伴们参与开源项目的开发和维护，今天就以potx-cloud为例，讲一下怎么成为一个Python库的发布者。</p>
+<h2 id="potx-cloud是什么">potx-cloud是什么</h2>
+<p>potx-cloud是专门用来调用腾讯云平台的工具库，目前的核心功能是：<strong>1行代码，实现文字识别。</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip install potx-cloud
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> potx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 发票识别</span>
+</span></span><span style="display:flex;"><span>potx<span style="color:#f92672">.</span>ocr<span style="color:#f92672">.</span>VatInvoiceOCR()
+</span></span></code></pre></div><h2 id="怎么参与potx-cloud的开发">怎么参与potx-cloud的开发</h2>
+<p>potx的源码，全部在atomgit开源：<a href="https://atomgit.com/python4office/potx-cloud">https://atomgit.com/python4office/potx-cloud</a>，在gitee和GitHub，也都是同步更新的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://atomgit.com/python4office/potx-cloud.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd potx-cloud
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pip install .
+</span></span></code></pre></div><p>修改代码后，提交pr到仓库的develop分支即可。</p>
+<h2 id="怎么发布新版本">怎么发布新版本？</h2>
+<p>经历过上面几步，你开发的功能，就有机会加入下一个版本里面，给所有人使用了。</p>
+<p><strong>为了防止出现问题，目前发布新版本主要是我自己在操作，但我手里的库实在是多，而且我发现小伙伴们的水平并不比我差，只要有责任心，也不会出现大问题。</strong></p>
+<p>所以大家对一个库有足够的了解以后，可以根据下面的内容，自己主动实现对该库的发布/更新。</p>
+<h3 id="注册账号">注册账号</h3>
+<p>目前所有的python第三方库，都在这个网站托管：<a href="https://pypi.org">https://pypi.org</a>，你需要在这里注册一个账号，注意：名字只能是字母和数字，不建议用标点符号。</p>
+<p>注册以后，给我说一下你的昵称，我邀请你成为该库的maintainer，比如potx-cloud库的maintainer有：</p>
+<p><img src="https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20250421-14b489bb.png?x-cos-security-token=A0lUDACmIP6YC6yXfJ5joh1UISkrZRea69f9aa167e1cc720fcaa40320bbe7416ndNIf1BzbE67ePIriYfw0_V_zPg2V0HqfwsxyW67U0eA9spKmrcsCZeMivy7gY7lBGoZVQCYguCOb77jtzylSpleMHpUy0vqorot1YMdQNuSc6meUi2ivvJgF9NcgtpkcnqEy0kgUUvYrMvdI8C1kQ_SWjfTtOqueEt0PTaA2BQDgL9GuqDdd3inr3UqrJ2HEcd0oqTXZF6ygOagD_ILA5X9gwPDjXwzOnpzMTkWM7PFAbnI6KbVcPcBBa8RAbq8TkHzb2djOVEo2xdoMkhrGKZAGnke-4WMUMNi3gOV5wemgLA1BP9QrA8_94Axi-MElEwXdYOlpE_DLqWpBMC7G-xicpNUtDMD1WY-yxBaYvH4va1wyU67JvfyQIhVLRWoomDNbLn7ebAXMszrZSeoMA&amp;q-sign-algorithm=sha1&amp;q-ak=AKIDg3AvsPmq6MuADSc-l0sUoQuVxsx1yWWJh6kLUhnInwq3sAA9zmeQn-IfnL9GILel&amp;q-sign-time=1745241695%3B1745248890&amp;q-key-time=1745241695%3B1745248890&amp;q-header-list=host&amp;q-url-param-list=x-cos-security-token&amp;q-signature=223af4d22bdf896df13e5c888e6a381821b8fc3e" alt="请在此添加图片描述"></p>
+<p>在平台收到成为maintainer的邀请后，同意即可。</p>
+<h3 id="单元测试">单元测试</h3>
+<p>回到代码目录，请务必通过单元测试，测试完你所有的修改后，再执行下面的操作。</p>
+<h3 id="修改版本号">修改版本号</h3>
+<p>pypi规定，同一个版本号，只能发布一次。</p>
+<p>所以发布之前， 请修改2处地方的版本号，如下图所示：</p>
+<ul>
+<li>setup.cfg：这里面的版本号，是真正影响代码版本的地方。关于这个文档里每个参数填写的意义，查看：<a href="https://setuptools.pypa.io/en/latest/userguide/declarative_config.html">Configuring setuptools using setup.cfg files</a>。</li>
+<li><strong>init</strong>.py：和setup.cfg里的版本保持一致。代码里可以调用的版本号，对发布没有实际影响。</li>
+</ul>
+<p>另外说明一下版本号的规则：</p>
+<p><strong>主版本号.次版本号.修订号</strong></p>
+<ul>
+<li>修订号：每个新库都是从0.0.1开始递增，最后一位也是用的最多的。后续用于修复bug</li>
+<li>次版本号/主版本号：1个新库，功能较为完备了，会发布1.0.0，以后每次新增功能，会更新次版本号。</li>
+</ul>
+<blockquote>
+<p>建议：更新主版本号之前，一定要经过充分讨论和测试！！</p>
+</blockquote>
+<p><img src="https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20250421-133cc78c.png?x-cos-security-token=A0lUDACmIP6YC6yXfJ5joh1UISkrZRea851d2b023b346acaa0515b03d92b06c1ndNIf1BzbE67ePIriYfw0_V_zPg2V0HqfwsxyW67U0eA9spKmrcsCZeMivy7gY7lBGoZVQCYguCOb77jtzylSpleMHpUy0vqorot1YMdQNuSc6meUi2ivvJgF9NcgtpkcnqEy0kgUUvYrMvdI8C1kQ_SWjfTtOqueEt0PTaA2BQDgL9GuqDdd3inr3UqrJ2HEcd0oqTXZF6ygOagD_ILA0uk-ZsOhlXYeQ6U7W9k8e9STQ1afLtdYahAX13nw-Rwz2mwVPwIB0qzHGnesyEaYIS4KIUBim12clXb4vzdd6Z9vxfmS9PfKtZ8qIp-e5W-DtBM7nQN4Rh8brNFxOA6zOkESmgA-8j5-aWGEhpVdkh_bpl4iDMQEODJtziW1Tig5Q1KYLlKonMbSQEaoqRxgQ&amp;q-sign-algorithm=sha1&amp;q-ak=AKID5Md6QdJTaPItqRKn3_NTm-D9zHE-L1vGLYKcb7tZUl91IsEpBXSMHwd5Mu4UuWeu&amp;q-sign-time=1745241695%3B1745248890&amp;q-key-time=1745241695%3B1745248890&amp;q-header-list=host&amp;q-url-param-list=x-cos-security-token&amp;q-signature=95e869cbe464b8e3ea4b0e92ed0eb482b2b96158" alt="请在此添加图片描述"></p>
+<p><img src="https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20250421-884f98bc.png?x-cos-security-token=A0lUDACmIP6YC6yXfJ5joh1UISkrZReab78c9243d90371670733a589dd1afc16ndNIf1BzbE67ePIriYfw0_eKOExizE_0-KHgLZwKgwBMExtq3vMdPejkKC8C66DmahAfRIibTOCsmsvcUe4faX9r_Ay6NukVMX2ErrMk8AdmWPwj57Q60goKS5DpI8JAksk-Rsaql_zV-mK6mNuUp93FtSQrrfLimETLBeVsgJFKVnI9SVMOY_oa2UEdhVhp3NjPGA2npqj08rcMUuwh8aw50EW5tblvJaOfIo7-IPSzii8-dHXvHb8toOoJvVJYDP0qrApjGcG02EA7sLImI1jbHbua1NsoW7duF7jQKBdmmbwBZ6fPZUpEMT_--QG9X_HWf0spzTl3J_Wke4_SgZpVgTzlVfvy-1LGttSY7MMyCoo9WMCAZSjNr6yiurmpAxZQ-pdRz9RkqiblMdizdA&amp;q-sign-algorithm=sha1&amp;q-ak=AKIDocRxqyJYXk21REhHdCUuNbl2E0QdwblyJu3l0UJ1UldmghaHjM13yyyG8JJdZiKH&amp;q-sign-time=1745241696%3B1745248891&amp;q-key-time=1745241696%3B1745248891&amp;q-header-list=host&amp;q-url-param-list=x-cos-security-token&amp;q-signature=b658a5e60b376e975fa408b84899460597599fe0" alt="请在此添加图片描述"></p>
+<h3 id="运行脚本">运行脚本</h3>
+<p>在potx-cloud目录下，运行以下命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip install twine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sh script/upload.sh
+</span></span></code></pre></div><p>不要进入script目录！！具体原因可以看脚本是怎么写的。</p>
+<p>第一次运行这个脚本可能会报错，因为现在pypi网站时双因子认证了，可能会让你在发布的电脑上，做一些token或者其它双因子认证的设置，根据它提示的文档做就可以了。英文不好，或者干脆找不到也可以问我。</p>
+<p>发布以后，请把最新的版本号及时同步到开发小组的群里.</p>
+<h2 id="待优化项">待优化项</h2>
+<p>现在pypi官网，已经开始建议使用更为方便的pyproject.toml来管理和发布第三方库了：<a href="https://packaging.python.org/en/latest/guides/section-build-and-publish/">https://packaging.python.org/en/latest/guides/section-build-and-publish/</a>。</p>
+<p>希望新加入的小伙伴可以学习研究一下，对我们第三方库的管理，也进行一个升级换代~</p>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20250419-2025.1-pycharm/">上一篇：PyCharm 可以免费用  Jupyter Notebook 了</a>
+        
+        
+        <a href="http://localhost:4002/20250422-cmd/">下一篇：PDF 转 Word 支持命令行操作了</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

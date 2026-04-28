@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pandas内置绘图：我用.plot()一行代码，秒出数据分析图 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Pandas内置绘图：我用.plot()一行代码，秒出数据分析图</h1>
+        <div class="post-meta">
+            <span>2026-03-01 00:08</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/pandas/" class="tag">Pandas</a>
+            
+            <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" class="tag">可视化</a>
+            
+            <a href="/tags/%E5%BF%AB%E9%80%9F%E7%BB%98%E5%9B%BE/" class="tag">快速绘图</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天介绍<strong>Pandas内置的plot方法</strong>，这是最快的数据可视化方式。</p>
+<p>不需要导入Matplotlib或Seaborn，直接对DataFrame调用<code>.plot()</code>，一秒出图！</p>
+<hr>
+<h2 id="为什么用pandas内置绘图">为什么用Pandas内置绘图？</h2>
+<h3 id="优势">优势</h3>
+<p>✅ <strong>极简</strong>：一行代码出图
+✅ <strong>集成</strong>：和数据分析流程无缝衔接
+✅ <strong>快速</strong>：探索性分析首选
+✅ <strong>灵活</strong>：底层仍是Matplotlib，可深度定制</p>
+<h3 id="适用场景">适用场景</h3>
+<ul>
+<li>快速查看数据趋势</li>
+<li>探索性数据分析（EDA）</li>
+<li>临时图表需求</li>
+</ul>
+<hr>
+<h2 id="基础用法">基础用法</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建时间序列数据</span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;销售额&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">30</span>)<span style="color:#f92672">.</span>cumsum(),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;利润&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">30</span>)<span style="color:#f92672">.</span>cumsum()
+</span></span><span style="display:flex;"><span>}, index<span style="color:#f92672">=</span>dates)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 最简单的折线图</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot()
+</span></span></code></pre></div><hr>
+<h2 id="常用图表类型">常用图表类型</h2>
+<h3 id="折线图line">折线图（Line）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 默认就是折线图</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>plot()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 多列同时绘制</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>), title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;月度业绩趋势&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 子图形式</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(subplots<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>))
+</span></span></code></pre></div><h3 id="柱状图bar">柱状图（Bar）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 准备分类数据</span>
+</span></span><span style="display:flex;"><span>monthly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>last()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 垂直柱状图</span>
+</span></span><span style="display:flex;"><span>monthly<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bar&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 水平柱状图</span>
+</span></span><span style="display:flex;"><span>monthly<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;barh&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 堆叠柱状图</span>
+</span></span><span style="display:flex;"><span>monthly<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bar&#39;</span>, stacked<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h3 id="面积图area">面积图（Area）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 填充面积的折线</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;area&#39;</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 堆叠面积图</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;area&#39;</span>, stacked<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h3 id="直方图hist">直方图（Hist）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 单列直方图</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;hist&#39;</span>, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 多列直方图</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;hist&#39;</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span></code></pre></div><h3 id="箱线图box">箱线图（Box）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;box&#39;</span>)
+</span></span></code></pre></div><h3 id="散点图scatter">散点图（Scatter）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;scatter&#39;</span>, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售额&#39;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;利润&#39;</span>)
+</span></span></code></pre></div><h3 id="饼图pie">饼图（Pie）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 饼图需要指定一列</span>
+</span></span><span style="display:flex;"><span>monthly[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pie&#39;</span>, autopct<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f%%</span><span style="color:#e6db74">&#39;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="样式参数">样式参数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(
+</span></span><span style="display:flex;"><span>    kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;line&#39;</span>,        <span style="color:#75715e"># 图表类型</span>
+</span></span><span style="display:flex;"><span>    figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>),    <span style="color:#75715e"># 图形大小</span>
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售趋势&#39;</span>,    <span style="color:#75715e"># 标题</span>
+</span></span><span style="display:flex;"><span>    xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;日期&#39;</span>,       <span style="color:#75715e"># X轴标签</span>
+</span></span><span style="display:flex;"><span>    ylabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;金额（万元）&#39;</span>, <span style="color:#75715e"># Y轴标签</span>
+</span></span><span style="display:flex;"><span>    grid<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,          <span style="color:#75715e"># 显示网格</span>
+</span></span><span style="display:flex;"><span>    legend<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,        <span style="color:#75715e"># 显示图例</span>
+</span></span><span style="display:flex;"><span>    style<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;-&#39;</span>, <span style="color:#e6db74">&#39;--&#39;</span>],  <span style="color:#75715e"># 线型</span>
+</span></span><span style="display:flex;"><span>    color<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>],  <span style="color:#75715e"># 颜色</span>
+</span></span><span style="display:flex;"><span>    linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,        <span style="color:#75715e"># 线宽</span>
+</span></span><span style="display:flex;"><span>    marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>,         <span style="color:#75715e"># 标记</span>
+</span></span><span style="display:flex;"><span>    markersize<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>        <span style="color:#75715e"># 标记大小</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><hr>
+<h2 id="series专用绘图">Series专用绘图</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">100</span>)<span style="color:#f92672">.</span>cumsum())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 密度图</span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kde&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 累积分布</span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;hist&#39;</span>, cumulative<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, density<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><hr>
+<h2 id="高级技巧">高级技巧</h2>
+<h3 id="双y轴">双Y轴</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ax <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>plot(legend<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;利润率&#39;</span>]<span style="color:#f92672">.</span>plot(secondary_y<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, ax<span style="color:#f92672">=</span>ax, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, legend<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h3 id="自定义颜色映射">自定义颜色映射</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(colormap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;viridis&#39;</span>)
+</span></span></code></pre></div><h3 id="按条件着色">按条件着色</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 正负值不同颜色</span>
+</span></span><span style="display:flex;"><span>returns <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>pct_change()
+</span></span><span style="display:flex;"><span>colors <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;green&#39;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;red&#39;</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> returns]
+</span></span><span style="display:flex;"><span>returns<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bar&#39;</span>, color<span style="color:#f92672">=</span>colors)
+</span></span></code></pre></div><hr>
+<h2 id="与matplotlib结合">与Matplotlib结合</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pandas绘图返回Axes对象</span>
+</span></span><span style="display:flex;"><span>ax <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>plot(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用Matplotlib进一步美化</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;销售分析&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, fontweight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>axhline(y<span style="color:#f92672">=</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>mean(), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;平均值&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><hr>
+<h2 id="实战完整的数据探索">实战：完整的数据探索</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成模拟数据</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;产品A&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">12</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;产品B&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">12</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;产品C&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>}, index<span style="color:#f92672">=</span>pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;M&#39;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== 快速可视化探索 ===</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 整体趋势</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;1. 产品销售趋势&#34;</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>), title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;月度产品销售对比&#39;</span>, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;销量&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 占比分析</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">2. 产品占比（年末）&#34;</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pie&#39;</span>, autopct<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f%%</span><span style="color:#e6db74">&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;12月产品销售占比&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 分布情况</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">3. 销量分布&#34;</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;box&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;各产品销量分布&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;销量&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 累计趋势</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">4. 累计销量&#34;</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>cumsum()<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;area&#39;</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;累计销量趋势&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;累计销量&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 增长率</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">5. 环比增长率&#34;</span>)
+</span></span><span style="display:flex;"><span>growth <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>pct_change() <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>growth<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bar&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;月度环比增长率（%）&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>axhline(y<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;-&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;增长率（%）&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><hr>
+<h3 id="性能对比pandas内置绘图-vs-其他方式">性能对比：Pandas内置绘图 vs 其他方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">4</span>), columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pandas内置：1行代码</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>plot()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Matplotlib：需要5-10行代码</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Seaborn：需要3-5行代码</span>
+</span></span></code></pre></div><table>
+  <thead>
+      <tr>
+          <th>方式</th>
+          <th>代码量</th>
+          <th>美观度</th>
+          <th>灵活性</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Pandas内置</td>
+          <td>1行</td>
+          <td>中</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td>Matplotlib</td>
+          <td>5-10行</td>
+          <td>低（需美化）</td>
+          <td>高</td>
+      </tr>
+      <tr>
+          <td>Seaborn</td>
+          <td>2-3行</td>
+          <td>高</td>
+          <td>中</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="进阶用法">进阶用法</h2>
+<h3 id="快速探索性分析">快速探索性分析</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 一行代码看所有数值列的分布</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>hist(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">8</span>), bins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 一行代码看所有列的相关性</span>
+</span></span><span style="display:flex;"><span>pd<span style="color:#f92672">.</span>plotting<span style="color:#f92672">.</span>scatter_matrix(df, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">12</span>), alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 一行代码看自相关</span>
+</span></span><span style="display:flex;"><span>pd<span style="color:#f92672">.</span>plotting<span style="color:#f92672">.</span>autocorrelation_plot(df[<span style="color:#e6db74">&#39;sales&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 一行代码看安德鲁斯曲线（分类可视化）</span>
+</span></span><span style="display:flex;"><span>pd<span style="color:#f92672">.</span>plotting<span style="color:#f92672">.</span>andrews_curves(df, <span style="color:#e6db74">&#39;category&#39;</span>)
+</span></span></code></pre></div><h3 id="subplots参数">subplots参数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 每列一个子图</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(subplots<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">8</span>), layout<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 共享X轴</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(subplots<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, sharex<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1plot不显示">❌ 坑1：plot不显示</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 需要导入matplotlib并调用show</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()  <span style="color:#75715e"># 在脚本中必须调用</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 在Jupyter中</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>matplotlib inline
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot()  <span style="color:#75715e"># 自动显示</span>
+</span></span></code></pre></div><h2 id="实战案例快速分析销售数据">实战案例：快速分析销售数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>]
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2025-01-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">365</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;线上&#39;</span>: np<span style="color:#f92672">.</span>cumsum(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">365</span>)) <span style="color:#f92672">+</span> <span style="color:#ae81ff">100</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;线下&#39;</span>: np<span style="color:#f92672">.</span>cumsum(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">365</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">80</span>,
+</span></span><span style="display:flex;"><span>}, index<span style="color:#f92672">=</span>dates)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1行代码画趋势图</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">6</span>), title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2025年销售趋势&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;trend.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1行代码画面积图</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>area(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">6</span>), alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售面积图&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 月度汇总1行代码</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>mean()<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>bar(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">6</span>), title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;月度平均销售&#39;</span>)
+</span></span></code></pre></div><h3 id="pandas绘图参数详解">Pandas绘图参数详解</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 通用参数</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>plot(
+</span></span><span style="display:flex;"><span>    kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;line&#39;</span>,       <span style="color:#75715e"># 图表类型</span>
+</span></span><span style="display:flex;"><span>    x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;date&#39;</span>,          <span style="color:#75715e"># X轴列</span>
+</span></span><span style="display:flex;"><span>    y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;value&#39;</span>,         <span style="color:#75715e"># Y轴列</span>
+</span></span><span style="display:flex;"><span>    figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>),   <span style="color:#75715e"># 图片大小</span>
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;标题&#39;</span>,       <span style="color:#75715e"># 标题</span>
+</span></span><span style="display:flex;"><span>    xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;X轴&#39;</span>,      <span style="color:#75715e"># X轴标签</span>
+</span></span><span style="display:flex;"><span>    ylabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Y轴&#39;</span>,      <span style="color:#75715e"># Y轴标签</span>
+</span></span><span style="display:flex;"><span>    color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>,      <span style="color:#75715e"># 颜色</span>
+</span></span><span style="display:flex;"><span>    alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>,         <span style="color:#75715e"># 透明度</span>
+</span></span><span style="display:flex;"><span>    grid<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,         <span style="color:#75715e"># 显示网格</span>
+</span></span><span style="display:flex;"><span>    legend<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,       <span style="color:#75715e"># 显示图例</span>
+</span></span><span style="display:flex;"><span>    subplots<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>,    <span style="color:#75715e"># 分列显示</span>
+</span></span><span style="display:flex;"><span>    sharex<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,       <span style="color:#75715e"># 共享X轴</span>
+</span></span><span style="display:flex;"><span>    rot<span style="color:#f92672">=</span><span style="color:#ae81ff">45</span>,            <span style="color:#75715e"># X轴标签旋转角度</span>
+</span></span><span style="display:flex;"><span>    fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>,       <span style="color:#75715e"># 字体大小</span>
+</span></span><span style="display:flex;"><span>    style<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o-&#39;</span>,        <span style="color:#75715e"># 线型和标记</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># kind参数可选值：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;line&#39;     折线图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;bar&#39;      柱状图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;barh&#39;     横向柱状图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;hist&#39;     直方图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;box&#39;      箱线图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;kde&#39;      核密度图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;area&#39;     面积图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;pie&#39;      饼图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;scatter&#39;  散点图</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;hexbin&#39;   六边形图</span>
+</span></span></code></pre></div><h3 id="pandas绘图常用模板">Pandas绘图常用模板</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>]
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模板1：销售趋势</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;date&#39;</span>)[<span style="color:#e6db74">&#39;sales&#39;</span>]<span style="color:#f92672">.</span>plot(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">5</span>), title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售趋势&#39;</span>, grid<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模板2：品类对比</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;category&#39;</span>)[<span style="color:#e6db74">&#39;sales&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>bar(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>), rot<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;品类销售对比&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模板3：占比分析</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;category&#39;</span>]<span style="color:#f92672">.</span>value_counts()<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>pie(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">8</span>), autopct<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f%%</span><span style="color:#e6db74">&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;品类占比&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模板4：分布分析</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>hist(bins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>), title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;价格分布&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模板5：多列趋势对比</span>
+</span></span><span style="display:flex;"><span>df[[<span style="color:#e6db74">&#39;online&#39;</span>, <span style="color:#e6db74">&#39;offline&#39;</span>]]<span style="color:#f92672">.</span>plot(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">5</span>), subplots<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, sharex<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模板6：箱线图</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>boxplot(column<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;salary&#39;</span>, by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;city&#39;</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>))
+</span></span></code></pre></div><h3 id="快速出图工作流">快速出图工作流</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 实际工作中的快速出图流程</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quick_plot</span>(df, x, y<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bar&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39;一键出图，适合快速探索&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> y:
+</span></span><span style="display:flex;"><span>        ax <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>plot(x<span style="color:#f92672">=</span>x, y<span style="color:#f92672">=</span>y, kind<span style="color:#f92672">=</span>kind, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">5</span>), title<span style="color:#f92672">=</span>title, grid<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        ax <span style="color:#f92672">=</span> df[x]<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span>kind, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">5</span>), title<span style="color:#f92672">=</span>title, grid<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ax
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>quick_plot(df, <span style="color:#e6db74">&#39;category&#39;</span>, <span style="color:#e6db74">&#39;sales&#39;</span>, <span style="color:#e6db74">&#39;bar&#39;</span>, <span style="color:#e6db74">&#39;品类销售对比&#39;</span>)
+</span></span><span style="display:flex;"><span>quick_plot(df, <span style="color:#e6db74">&#39;price&#39;</span>, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;hist&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;价格分布&#39;</span>)
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一课我们将学习<strong>交互式可视化-pyecharts</strong>，制作动态图表。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301000901-%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8F%AF%E8%A7%86%E5%8C%96-pyecharts%E5%88%B6%E4%BD%9C%E5%8A%A8%E6%80%81%E5%9B%BE%E8%A1%A8/">继续阅读：交互式可视化-pyecharts制作动态图表</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301000701-Seaborn%E7%BB%9F%E8%AE%A1%E5%8F%AF%E8%A7%86%E5%8C%96-%E8%AE%A9%E5%9B%BE%E8%A1%A8%E6%9B%B4%E4%BC%98%E9%9B%85/">Seaborn统计可视化-让图表更优雅</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301000901-%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8F%AF%E8%A7%86%E5%8C%96-pyecharts%E5%88%B6%E4%BD%9C%E5%8A%A8%E6%80%81%E5%9B%BE%E8%A1%A8/">交互式可视化-pyecharts制作动态图表</a></p>
+<hr>
+<p><em>PS：Pandas内置绘图是效率神器。日常分析先用它快速出图，需要精细调整时再换Matplotlib。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260301000701-seaborn%E7%BB%9F%E8%AE%A1%E5%8F%AF%E8%A7%86%E5%8C%96-%E8%AE%A9%E5%9B%BE%E8%A1%A8%E6%9B%B4%E4%BC%98%E9%9B%85/">上一篇：Seaborn统计可视化：我用5行代码，做出了专业级统计图表</a>
+        
+        
+        <a href="http://localhost:4002/20260301000901-%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8F%AF%E8%A7%86%E5%8C%96-pyecharts%E5%88%B6%E4%BD%9C%E5%8A%A8%E6%80%81%E5%9B%BE%E8%A1%A8/">下一篇：Pyecharts交互式可视化：我用Python做出了高颜值的动态数据大屏</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

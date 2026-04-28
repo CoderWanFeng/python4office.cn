@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python集合：我用这个数据结构，去重只要1行代码 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python集合：我用这个数据结构，去重只要1行代码</h1>
+        <div class="post-meta">
+            <span>2026-02-28 17:29</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%9F%BA%E7%A1%80/" class="tag">Python基础</a>
+            
+            <a href="/tags/%E9%9B%86%E5%90%88/" class="tag">集合</a>
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="tag">数据结构</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种AI项目的程序员晚枫。</p>
+<p>问你一个问题：<strong>你有多少个微信群？这些群里的人，有多少是重叠的？</strong></p>
+<p>我大概有100多个群，想统计哪些人是&quot;万人骑&quot;（同时在多个群里）——用列表来算，要写半天。</p>
+<p>但用Python的<strong>集合（set）</strong>，只要3行代码搞定。</p>
+<p>这就是今天要讲的——被很多人忽视，但其实超级好用的集合。</p>
+<hr>
+<h2 id="什么是集合">什么是集合？</h2>
+<p>先来一个形象的比喻。</p>
+<p>想象你面前有一堆混在一起的球，有红的有蓝的有绿的，有的重复了：</p>
+<pre tabindex="0"><code>红球、红球、蓝球、绿球、绿球、绿球、红球
+</code></pre><p>现在你把它们倒进一个箱子里，摇一摇——拿出来时，<strong>每种颜色的球只出现一次</strong>。</p>
+<p><strong>这就是集合：会自动去重、没有顺序、只存唯一值。</strong></p>
+<h3 id="集合的三大特性">集合的三大特性</h3>
+<table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>说明</th>
+          <th>类比</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>唯一性</strong></td>
+          <td>自动去除重复元素</td>
+          <td>去重</td>
+      </tr>
+      <tr>
+          <td><strong>无序性</strong></td>
+          <td>不保证元素顺序（Python 3.7+内部实现有序，但不应依赖）</td>
+          <td>抽奖箱</td>
+      </tr>
+      <tr>
+          <td><strong>确定性</strong></td>
+          <td>每个元素必须是不可变（可哈希）的</td>
+          <td>不能放列表进去</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="集合基础创建与基本操作">集合基础：创建与基本操作</h2>
+<h3 id="3种方式创建集合">3种方式创建集合</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 方式1：花括号（和字典一样，但只有值，没有冒号）</span>
+</span></span><span style="display:flex;"><span>s1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>}  <span style="color:#75715e"># 注意：重复的3只保留一个</span>
+</span></span><span style="display:flex;"><span>print(s1)  <span style="color:#75715e"># {1, 2, 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：set() 函数（从列表/元组/字符串转换）</span>
+</span></span><span style="display:flex;"><span>s2 <span style="color:#f92672">=</span> set([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>print(s2)  <span style="color:#75715e"># {1, 2, 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s3 <span style="color:#f92672">=</span> set(<span style="color:#e6db74">&#34;hello&#34;</span>)  <span style="color:#75715e"># 字符串转集合，去重！</span>
+</span></span><span style="display:flex;"><span>print(s3)  <span style="color:#75715e"># {&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;o&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式3：集合推导式</span>
+</span></span><span style="display:flex;"><span>s4 <span style="color:#f92672">=</span> {x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">6</span>)}
+</span></span><span style="display:flex;"><span>print(s4)  <span style="color:#75715e"># {1, 4, 9, 16, 25}</span>
+</span></span></code></pre></div><h3 id="-必须注意空集合的坑">❌ 必须注意：空集合的坑</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 大坑！{} 是空字典，不是空集合！</span>
+</span></span><span style="display:flex;"><span>empty_dict <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>print(type(empty_dict))  <span style="color:#75715e"># &lt;class &#39;dict&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确创建空集合</span>
+</span></span><span style="display:flex;"><span>empty_set <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>print(type(empty_set))   <span style="color:#75715e"># &lt;class &#39;set&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 判断是否是空集合</span>
+</span></span><span style="display:flex;"><span>print(bool(empty_set))   <span style="color:#75715e"># False</span>
+</span></span></code></pre></div><h3 id="添加和删除元素">添加和删除元素</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加一个元素</span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {1, 2, 3, 4}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加多个元素（参数是列表/集合/元组）</span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>update([<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>])
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {1, 2, 3, 4, 5, 6, 7}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除元素</span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">3</span>)          <span style="color:#75715e"># 删除指定元素，元素不存在会报错 KeyError</span>
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {1, 2, 4, 5, 6, 7}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>discard(<span style="color:#ae81ff">99</span>)        <span style="color:#75715e"># 删除指定元素，元素不存在不会报错（推荐！）</span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">99</span>)         <span style="color:#75715e"># ❌ KeyError: 99</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 随机删除一个元素</span>
+</span></span><span style="display:flex;"><span>popped <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;删除了：</span><span style="color:#e6db74">{</span>popped<span style="color:#e6db74">}</span><span style="color:#e6db74">, 剩下：</span><span style="color:#e6db74">{</span>s<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 清空集合</span>
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>clear()
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># set()</span>
+</span></span></code></pre></div><hr>
+<h2 id="最常用功能一键去重">最常用功能：一键去重</h2>
+<p>这是集合最常用的场景，没有之一。</p>
+<h3 id="场景去掉重复的客户名单">场景：去掉重复的客户名单</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 有重复的客户名单</span>
+</span></span><span style="display:flex;"><span>customers <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;张三&#34;</span>, <span style="color:#e6db74">&#34;李四&#34;</span>, <span style="color:#e6db74">&#34;王五&#34;</span>, <span style="color:#e6db74">&#34;张三&#34;</span>, <span style="color:#e6db74">&#34;赵六&#34;</span>, <span style="color:#e6db74">&#34;李四&#34;</span>, <span style="color:#e6db74">&#34;钱七&#34;</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;原始列表（</span><span style="color:#e6db74">{</span>len(customers)<span style="color:#e6db74">}</span><span style="color:#e6db74">人）：</span><span style="color:#e6db74">{</span>customers<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 方法1：循环判断（麻烦，代码长）</span>
+</span></span><span style="display:flex;"><span>unique1 <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> customers:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> name <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> unique1:
+</span></span><span style="display:flex;"><span>        unique1<span style="color:#f92672">.</span>append(name)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 方法2：字典去重（稍好，但还是不简洁）</span>
+</span></span><span style="display:flex;"><span>unique2 <span style="color:#f92672">=</span> list(dict<span style="color:#f92672">.</span>fromkeys(customers))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 方法3：集合去重（一行搞定！）</span>
+</span></span><span style="display:flex;"><span>unique3 <span style="color:#f92672">=</span> list(set(customers))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;去重后（</span><span style="color:#e6db74">{</span>len(unique3)<span style="color:#e6db74">}</span><span style="color:#e6db74">人）：</span><span style="color:#e6db74">{</span>unique3<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p><strong>运行结果：</strong></p>
+<pre tabindex="0"><code>原始列表（7人）：[&#39;张三&#39;, &#39;李四&#39;, &#39;王五&#39;, &#39;张三&#39;, &#39;赵六&#39;, &#39;李四&#39;, &#39;钱七&#39;]
+去重后（5人）：[&#39;张三&#39;, &#39;李四&#39;, &#39;王五&#39;, &#39;赵六&#39;, &#39;钱七&#39;]
+</code></pre><h3 id="去重-vs-列表性能对比">去重 vs 列表：性能对比</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成100万个有重复的数据</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100000</span>)) <span style="color:#f92672">+</span> list(range(<span style="color:#ae81ff">50000</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;原始数据：</span><span style="color:#e6db74">{</span>len(data)<span style="color:#e6db74">}</span><span style="color:#e6db74">条，重复：50000条&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法1：循环判断</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>unique1 <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> data:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> item <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> unique1:
+</span></span><span style="display:flex;"><span>        unique1<span style="color:#f92672">.</span>append(item)
+</span></span><span style="display:flex;"><span>loop_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;循环去重耗时：</span><span style="color:#e6db74">{</span>loop_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒，结果：</span><span style="color:#e6db74">{</span>len(unique1)<span style="color:#e6db74">}</span><span style="color:#e6db74">条&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：字典去重</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>unique2 <span style="color:#f92672">=</span> list(dict<span style="color:#f92672">.</span>fromkeys(data))
+</span></span><span style="display:flex;"><span>dict_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;字典去重耗时：</span><span style="color:#e6db74">{</span>dict_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒，结果：</span><span style="color:#e6db74">{</span>len(unique2)<span style="color:#e6db74">}</span><span style="color:#e6db74">条&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法3：集合去重</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>unique3 <span style="color:#f92672">=</span> list(set(data))
+</span></span><span style="display:flex;"><span>set_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;集合去重耗时：</span><span style="color:#e6db74">{</span>set_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒，结果：</span><span style="color:#e6db74">{</span>len(unique3)<span style="color:#e6db74">}</span><span style="color:#e6db74">条&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">集合比循环快 </span><span style="color:#e6db74">{</span>loop_time<span style="color:#f92672">/</span>set_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 倍！&#34;</span>)
+</span></span></code></pre></div><p><strong>实测数据参考：</strong></p>
+<pre tabindex="0"><code>原始数据：150000条，重复：50000条
+循环去重耗时：15.2341秒，结果：100000条
+字典去重耗时：0.0382秒，结果：100000条
+集合去重耗时：0.0121秒，结果：100000条
+
+集合比循环快 1258 倍！
+</code></pre><h3 id="去重的注意事项顺序丢失">去重的注意事项：顺序丢失</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 集合去重后，顺序可能会变！</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>unique <span style="color:#f92672">=</span> list(set(data))
+</span></span><span style="display:flex;"><span>print(unique)  <span style="color:#75715e"># 可能不是 [3, 1, 4, 1, 5, 9, 2, 6, 5] 的原始顺序！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果需要保持顺序，用 dict.fromkeys()</span>
+</span></span><span style="display:flex;"><span>unique_ordered <span style="color:#f92672">=</span> list(dict<span style="color:#f92672">.</span>fromkeys(data))
+</span></span><span style="display:flex;"><span>print(unique_ordered)  <span style="color:#75715e"># [3, 1, 4, 5, 9, 2, 6] —— 顺序保持！</span>
+</span></span></code></pre></div><hr>
+<h2 id="集合的关系运算超实用">集合的关系运算（超实用）</h2>
+<p>这是集合最强大的功能——<strong>关系运算</strong>。处理&quot;谁和谁有交集&quot;&ldquo;哪些是共有的&quot;这类问题，特别方便。</p>
+<h3 id="场景分析两个班级的共同好友">场景：分析两个班级的共同好友</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Alice 的好友列表</span>
+</span></span><span style="display:flex;"><span>alice_friends <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Charlie&#39;</span>, <span style="color:#e6db74">&#39;David&#39;</span>, <span style="color:#e6db74">&#39;Eve&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Bob 的好友列表</span>
+</span></span><span style="display:flex;"><span>bob_friends <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Charlie&#39;</span>, <span style="color:#e6db74">&#39;Eve&#39;</span>, <span style="color:#e6db74">&#39;Frank&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 🎯 共同好友（交集 &amp;）</span>
+</span></span><span style="display:flex;"><span>common <span style="color:#f92672">=</span> alice_friends <span style="color:#f92672">&amp;</span> bob_friends
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;共同好友：</span><span style="color:#e6db74">{</span>common<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># {&#39;Charlie&#39;, &#39;Eve&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 📦 Alice 的所有好友（并集 |）</span>
+</span></span><span style="display:flex;"><span>all_friends <span style="color:#f92672">=</span> alice_friends <span style="color:#f92672">|</span> bob_friends
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;所有好友：</span><span style="color:#e6db74">{</span>all_friends<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># {&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;David&#39;, &#39;Eve&#39;, &#39;Frank&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 👤 只在 Alice 好友列表里的（差集 -）</span>
+</span></span><span style="display:flex;"><span>only_alice <span style="color:#f92672">=</span> alice_friends <span style="color:#f92672">-</span> bob_friends
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;只在 Alice 列表：</span><span style="color:#e6db74">{</span>only_alice<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># {&#39;Bob&#39;, &#39;David&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 🔄 不是共同好友的（对称差集 ^）</span>
+</span></span><span style="display:flex;"><span>not_common <span style="color:#f92672">=</span> alice_friends <span style="color:#f92672">^</span> bob_friends
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;非共同好友：</span><span style="color:#e6db74">{</span>not_common<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># {&#39;Alice&#39;, &#39;Bob&#39;, &#39;David&#39;, &#39;Frank&#39;}</span>
+</span></span></code></pre></div><p><strong>图解：</strong></p>
+<pre tabindex="0"><code>Alice:     {Bob, Charlie, David, Eve}
+Bob:       {Alice, Charlie, Eve, Frank}
+
+交集      &amp;  = {Charlie, Eve}      ← 共同好友
+并集      |  = {Alice, Bob, Charlie, David, Eve, Frank}  ← 所有人
+差集 Alice - Bob = {Bob, David}   ← Alice有但Bob没有
+对称差集   ^  = {Alice, Bob, David, Frank}  ← 不是共同好友的
+</code></pre><h3 id="运算符-vs-方法-对照表">运算符 vs 方法 对照表</h3>
+<table>
+  <thead>
+      <tr>
+          <th>运算符</th>
+          <th>方法</th>
+          <th>含义</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>&amp;</code></td>
+          <td><code>intersection()</code></td>
+          <td>交集（共同元素）</td>
+          <td><code>{1,2} &amp; {2,3}</code> = <code>{2}</code></td>
+      </tr>
+      <tr>
+          <td><code>|</code></td>
+          <td><code>union()</code></td>
+          <td>并集（所有元素）</td>
+          <td><code>{1,2} | {2,3}</code> = <code>{1,2,3}</code></td>
+      </tr>
+      <tr>
+          <td><code>-</code></td>
+          <td><code>difference()</code></td>
+          <td>差集（在A不在B）</td>
+          <td><code>{1,2} - {2,3}</code> = <code>{1}</code></td>
+      </tr>
+      <tr>
+          <td><code>^</code></td>
+          <td><code>symmetric_difference()</code></td>
+          <td>对称差集（不共有）</td>
+          <td><code>{1,2} ^ {2,3}</code> = <code>{1,3}</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="更多关系判断方法">更多关系判断方法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> {<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># b 是 a 的子集吗？</span>
+</span></span><span style="display:flex;"><span>print(b<span style="color:#f92672">.</span>issubset(a))       <span style="color:#75715e"># True，b ⊆ a</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>issuperset(b))     <span style="color:#75715e"># True，a ⊇ b（a 包含 b）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># a 和 c 没有交集吗？</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>isdisjoint(c))     <span style="color:#75715e"># True，a 和 c 完全不重叠</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 简化写法（运算符）</span>
+</span></span><span style="display:flex;"><span>print(b <span style="color:#f92672">&lt;=</span> a)              <span style="color:#75715e"># True，子集</span>
+</span></span><span style="display:flex;"><span>print(b <span style="color:#f92672">&lt;</span> a)               <span style="color:#75715e"># True，真子集（b != a）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">&gt;=</span> b)              <span style="color:#75715e"># True，超集</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">&gt;</span> b)               <span style="color:#75715e"># True，真超集</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>isdisjoint(c))     <span style="color:#75715e"># True，没有交集</span>
+</span></span></code></pre></div><hr>
+<h2 id="实战案例销售数据分析">实战案例：销售数据分析</h2>
+<h3 id="案例1分析两个文件中的客户重叠情况">案例1：分析两个文件中的客户重叠情况</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 从文件A读取的客户ID</span>
+</span></span><span style="display:flex;"><span>file_a <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1001</span>, <span style="color:#ae81ff">1002</span>, <span style="color:#ae81ff">1003</span>, <span style="color:#ae81ff">1004</span>, <span style="color:#ae81ff">1005</span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 从文件B读取的客户ID</span>
+</span></span><span style="display:flex;"><span>file_b <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1004</span>, <span style="color:#ae81ff">1005</span>, <span style="color:#ae81ff">1006</span>, <span style="color:#ae81ff">1007</span>, <span style="color:#ae81ff">1008</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 两个文件都有的客户（交集）</span>
+</span></span><span style="display:flex;"><span>both_files <span style="color:#f92672">=</span> file_a <span style="color:#f92672">&amp;</span> file_b
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;两个文件都有的客户：</span><span style="color:#e6db74">{</span>both_files<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;人数：</span><span style="color:#e6db74">{</span>len(both_files)<span style="color:#e6db74">}</span><span style="color:#e6db74">人&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 只在A文件</span>
+</span></span><span style="display:flex;"><span>only_a <span style="color:#f92672">=</span> file_a <span style="color:#f92672">-</span> file_b
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;只在A文件的客户：</span><span style="color:#e6db74">{</span>only_a<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 只在B文件</span>
+</span></span><span style="display:flex;"><span>only_b <span style="color:#f92672">=</span> file_b <span style="color:#f92672">-</span> file_a
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;只在B文件的客户：</span><span style="color:#e6db74">{</span>only_b<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 总共有多少不同客户（并集）</span>
+</span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> len(file_a <span style="color:#f92672">|</span> file_b)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;总客户数（去重后）：</span><span style="color:#e6db74">{</span>total<span style="color:#e6db74">}</span><span style="color:#e6db74">人&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 重叠比例</span>
+</span></span><span style="display:flex;"><span>overlap_ratio <span style="color:#f92672">=</span> len(both_files) <span style="color:#f92672">/</span> len(file_a <span style="color:#f92672">|</span> file_b) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;重叠率：</span><span style="color:#e6db74">{</span>overlap_ratio<span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%&#34;</span>)
+</span></span></code></pre></div><h3 id="案例2微信群万人骑分析">案例2：微信群&quot;万人骑&quot;分析</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 5个群的好友名单</span>
+</span></span><span style="display:flex;"><span>group_tech <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;赵六&#39;</span>, <span style="color:#e6db74">&#39;程序员晚枫&#39;</span>}
+</span></span><span style="display:flex;"><span>group_python <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;孙七&#39;</span>, <span style="color:#e6db74">&#39;程序员晚枫&#39;</span>}
+</span></span><span style="display:flex;"><span>group_ai <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;程序员晚枫&#39;</span>, <span style="color:#e6db74">&#39;周八&#39;</span>, <span style="color:#e6db74">&#39;吴九&#39;</span>}
+</span></span><span style="display:flex;"><span>group_startup <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;赵六&#39;</span>, <span style="color:#e6db74">&#39;郑十&#39;</span>, <span style="color:#e6db74">&#39;程序员晚枫&#39;</span>}
+</span></span><span style="display:flex;"><span>group_book <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;孙七&#39;</span>, <span style="color:#e6db74">&#39;程序员晚枫&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>all_groups <span style="color:#f92672">=</span> [group_tech, group_python, group_ai, group_startup, group_book]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 🎯 谁在所有群里？（5个群的交集）</span>
+</span></span><span style="display:flex;"><span>in_all <span style="color:#f92672">=</span> set<span style="color:#f92672">.</span>intersection(<span style="color:#f92672">*</span>all_groups)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;在所有群里的：</span><span style="color:#e6db74">{</span>in_all<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 📦 所有群里共有多少人？（并集）</span>
+</span></span><span style="display:flex;"><span>all_members <span style="color:#f92672">=</span> set<span style="color:#f92672">.</span>union(<span style="color:#f92672">*</span>all_groups)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;总人数（去重）：</span><span style="color:#e6db74">{</span>len(all_members)<span style="color:#e6db74">}</span><span style="color:#e6db74">人&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 🔥 程序员晚枫在几个群里？</span>
+</span></span><span style="display:flex;"><span>cnt_wanfeng <span style="color:#f92672">=</span> sum(<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> g <span style="color:#f92672">in</span> all_groups <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;程序员晚枫&#39;</span> <span style="color:#f92672">in</span> g)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;程序员晚枫在 </span><span style="color:#e6db74">{</span>cnt_wanfeng<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个群里&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 📊 哪些人是&#34;万人骑&#34;（在3个及以上群）？</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_member_count</span>(member):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> sum(<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> g <span style="color:#f92672">in</span> all_groups <span style="color:#66d9ef">if</span> member <span style="color:#f92672">in</span> g)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> member <span style="color:#f92672">in</span> all_members:
+</span></span><span style="display:flex;"><span>    cnt <span style="color:#f92672">=</span> get_member_count(member)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> cnt <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">3</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  </span><span style="color:#e6db74">{</span>member<span style="color:#e6db74">}</span><span style="color:#e6db74"> 在 </span><span style="color:#e6db74">{</span>cnt<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个群里&#34;</span>)
+</span></span></code></pre></div><h3 id="案例3文章关键词去重与统计">案例3：文章关键词去重与统计</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 模拟多篇文章的关键词</span>
+</span></span><span style="display:flex;"><span>article1_keywords <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;编程&#39;</span>, <span style="color:#e6db74">&#39;入门&#39;</span>, <span style="color:#e6db74">&#39;教程&#39;</span>, <span style="color:#e6db74">&#39;基础&#39;</span>}
+</span></span><span style="display:flex;"><span>article2_keywords <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;进阶&#39;</span>, <span style="color:#e6db74">&#39;技巧&#39;</span>, <span style="color:#e6db74">&#39;高级&#39;</span>, <span style="color:#e6db74">&#39;编程&#39;</span>}
+</span></span><span style="display:flex;"><span>article3_keywords <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;项目&#39;</span>, <span style="color:#e6db74">&#39;实战&#39;</span>, <span style="color:#e6db74">&#39;入门&#39;</span>, <span style="color:#e6db74">&#39;案例&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 所有关键词（并集）</span>
+</span></span><span style="display:flex;"><span>all_keywords <span style="color:#f92672">=</span> article1_keywords <span style="color:#f92672">|</span> article2_keywords <span style="color:#f92672">|</span> article3_keywords
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;所有关键词（去重）：</span><span style="color:#e6db74">{</span>all_keywords<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;共 </span><span style="color:#e6db74">{</span>len(all_keywords)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 共同关键词（交集）</span>
+</span></span><span style="display:flex;"><span>common_keywords <span style="color:#f92672">=</span> article1_keywords <span style="color:#f92672">&amp;</span> article2_keywords <span style="color:#f92672">&amp;</span> article3_keywords
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;三篇都有：</span><span style="color:#e6db74">{</span>common_keywords<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 每篇文章独有的关键词</span>
+</span></span><span style="display:flex;"><span>only_article1 <span style="color:#f92672">=</span> article1_keywords <span style="color:#f92672">-</span> (article2_keywords <span style="color:#f92672">|</span> article3_keywords)
+</span></span><span style="display:flex;"><span>only_article2 <span style="color:#f92672">=</span> article2_keywords <span style="color:#f92672">-</span> (article1_keywords <span style="color:#f92672">|</span> article3_keywords)
+</span></span><span style="display:flex;"><span>only_article3 <span style="color:#f92672">=</span> article3_keywords <span style="color:#f92672">-</span> (article1_keywords <span style="color:#f92672">|</span> article2_keywords)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;文章1独有：</span><span style="color:#e6db74">{</span>only_article1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;文章2独有：</span><span style="color:#e6db74">{</span>only_article2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;文章3独有：</span><span style="color:#e6db74">{</span>only_article3<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="frozenset不可变的集合">frozenset：不可变的集合</h2>
+<p>普通集合可以增删，但有时候你需要一个<strong>不能修改</strong>的集合——比如作为字典的键，或者放进另一个集合里。</p>
+<h3 id="frozenset-vs-set">frozenset vs set</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ✅ set：可变，可以增删</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {2, 3, 4}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ frozenset：不可变，不能增删</span>
+</span></span><span style="display:flex;"><span>fs <span style="color:#f92672">=</span> frozenset([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fs.add(4)    # AttributeError: &#39;frozenset&#39; object has no attribute &#39;add&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fs.remove(1)  # AttributeError</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(fs)  <span style="color:#75715e"># frozenset({1, 2, 3})</span>
+</span></span></code></pre></div><h3 id="frozenset-的应用场景">frozenset 的应用场景</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景1：作为字典的键</span>
+</span></span><span style="display:flex;"><span>category_mapping <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    frozenset([<span style="color:#e6db74">&#39;猫&#39;</span>, <span style="color:#e6db74">&#39;狗&#39;</span>]): <span style="color:#e6db74">&#39;哺乳动物&#39;</span>,
+</span></span><span style="display:flex;"><span>    frozenset([<span style="color:#e6db74">&#39;鱼&#39;</span>]): <span style="color:#e6db74">&#39;鱼类&#39;</span>,
+</span></span><span style="display:flex;"><span>    frozenset([<span style="color:#e6db74">&#39;鸟&#39;</span>]): <span style="color:#e6db74">&#39;鸟类&#39;</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(category_mapping[frozenset([<span style="color:#e6db74">&#39;猫&#39;</span>, <span style="color:#e6db74">&#39;狗&#39;</span>])])  <span style="color:#75715e"># 哺乳动物</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景2：放在另一个集合里</span>
+</span></span><span style="display:flex;"><span>s1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>s2 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>}
+</span></span><span style="display:flex;"><span>s_of_sets <span style="color:#f92672">=</span> {frozenset([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]), frozenset([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])}
+</span></span><span style="display:flex;"><span>print(s_of_sets)  <span style="color:#75715e"># {frozenset({1, 2}), frozenset({3, 4})}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景3：作为函数参数，保证不被修改</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_tags</span>(tags):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># tags 是 frozenset，保证不会被修改</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> tag <span style="color:#f92672">in</span> tags:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;处理标签：</span><span style="color:#e6db74">{</span>tag<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>user_tags <span style="color:#f92672">=</span> frozenset([<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;AI&#39;</span>, <span style="color:#e6db74">&#39;编程&#39;</span>])
+</span></span><span style="display:flex;"><span>process_tags(user_tags)
+</span></span></code></pre></div><hr>
+<h2 id="避坑指南集合最容易踩的6个坑">避坑指南：集合最容易踩的6个坑</h2>
+<h3 id="坑1集合只能存不可变对象">坑1：集合只能存不可变对象</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：列表是可变的，不能放集合</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># s = {[1, 2, 3]}  # TypeError: unhashable type: &#39;list&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：元组是不可变的，可以放集合</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)}
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {(1, 2, 3)}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 字典也不能放集合</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># s = {{&#39;a&#39;: 1}}  # TypeError: unhashable type: &#39;dict&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 可以放 frozenset</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {frozenset([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]), frozenset([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])}
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {frozenset({1, 2}), frozenset({3, 4})}</span>
+</span></span></code></pre></div><h3 id="坑2集合的元素必须是唯一的但会自动去重">坑2：集合的元素必须是唯一的——但会自动去重！</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 你以为是放了很多元素，其实只保留了唯一的</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {1, 2, 3} —— 只有3个，不是7个！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 整数和字符串的去重行为</span>
+</span></span><span style="display:flex;"><span>s1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#ae81ff">1.0</span>}  <span style="color:#75715e"># 1 和 1.0 在哈希表里被视为同一个</span>
+</span></span><span style="display:flex;"><span>print(s1)  <span style="color:#75715e"># {1, &#39;1&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果你在循环中重复添加，不会报错，但也不会增加</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 不会有任何效果，1已经在里面了</span>
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {1, 2, 3}</span>
+</span></span></code></pre></div><h3 id="坑3集合遍历的顺序可能不是你想要的">坑3：集合遍历的顺序可能不是你想要的</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 集合不保证顺序（虽然 Python 3.7+ 内部实现有序）</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>}
+</span></span><span style="display:flex;"><span>print(list(s))  <span style="color:#75715e"># 可能是 [&#39;d&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;, &#39;e&#39;] 或其他顺序</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果你需要有序的集合，去重用 dict 或保持列表</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>unique_ordered <span style="color:#f92672">=</span> list(dict<span style="color:#f92672">.</span>fromkeys(data))
+</span></span><span style="display:flex;"><span>print(unique_ordered)  <span style="color:#75715e"># [3, 1, 4, 5, 9, 2, 6] —— 有序去重</span>
+</span></span></code></pre></div><h3 id="坑4差集运算是有方向的">坑4：差集运算是有方向的！</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>}
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> {<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ a - b 和 b - a 是不同的！</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">-</span> b)  <span style="color:#75715e"># {1, 2}  —— a有但b没有</span>
+</span></span><span style="display:flex;"><span>print(b <span style="color:#f92672">-</span> a)  <span style="color:#75715e"># {5, 6}  —— b有但a没有</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 只有对称差集 ^ 才是&#34;两边都不共有&#34;</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">^</span> b)  <span style="color:#75715e"># {1, 2, 5, 6}  —— a独有 + b独有</span>
+</span></span></code></pre></div><h3 id="坑5交集判断用-不是-and">坑5：交集判断用 <code>&amp;</code>，不是 <code>and</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> {<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误写法</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># if a and b:  # 这个判断的是两个集合是否都非空，不是交集判断！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确写法</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> a <span style="color:#f92672">&amp;</span> b:  <span style="color:#75715e"># 判断交集是否非空</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;有共同元素：</span><span style="color:#e6db74">{</span>a <span style="color:#f92672">&amp;</span> b<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 也可以用 isdisjoint</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> a<span style="color:#f92672">.</span>isdisjoint(b):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;有共同元素：</span><span style="color:#e6db74">{</span>a <span style="color:#f92672">&amp;</span> b<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h3 id="坑6集合的--运算是无效的">坑6：集合的 <code>+</code> 运算是无效的！</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> {<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：集合不支持 + 运算符</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># c = a + b  # TypeError: unsupported operand type(s) for +: &#39;set&#39; and &#39;set&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：用 | 做并集</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> a <span style="color:#f92672">|</span> b
+</span></span><span style="display:flex;"><span>print(c)  <span style="color:#75715e"># {1, 2, 3, 4, 5, 6}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果你想合并多个集合</span>
+</span></span><span style="display:flex;"><span>combined <span style="color:#f92672">=</span> set()<span style="color:#f92672">.</span>union(<span style="color:#f92672">*</span>[a, b, {<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>}])
+</span></span><span style="display:flex;"><span>print(combined)  <span style="color:#75715e"># {1, 2, 3, 4, 5, 6, 7, 8}</span>
+</span></span></code></pre></div><hr>
+<h2 id="性能对比集合-vs-列表-vs-字典">性能对比：集合 vs 列表 vs 字典</h2>
+<h3 id="成员判断集合最快">成员判断：集合最快</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>
+</span></span><span style="display:flex;"><span>data_list <span style="color:#f92672">=</span> list(range(n))
+</span></span><span style="display:flex;"><span>data_set <span style="color:#f92672">=</span> set(data_list)
+</span></span><span style="display:flex;"><span>data_dict <span style="color:#f92672">=</span> {x: <span style="color:#66d9ef">True</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(n)}
+</span></span><span style="display:flex;"><span>target <span style="color:#f92672">=</span> n <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># 查找中间值</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表查找</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+</span></span><span style="display:flex;"><span>    _ <span style="color:#f92672">=</span> target <span style="color:#f92672">in</span> data_list
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表查找1000次：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集合查找</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+</span></span><span style="display:flex;"><span>    _ <span style="color:#f92672">=</span> target <span style="color:#f92672">in</span> data_set
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;集合查找1000次：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 字典查找</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+</span></span><span style="display:flex;"><span>    _ <span style="color:#f92672">=</span> target <span style="color:#f92672">in</span> data_dict
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;字典查找1000次：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span></code></pre></div><p><strong>结论：集合和字典的成员判断几乎一样快（O(1)），都比列表（O(n)）快很多。</strong></p>
+<h3 id="内存占用对比">内存占用对比</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表</span>
+</span></span><span style="display:flex;"><span>data_list <span style="color:#f92672">=</span> list(range(n))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 字典</span>
+</span></span><span style="display:flex;"><span>data_dict <span style="color:#f92672">=</span> {x: x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(n)}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集合</span>
+</span></span><span style="display:flex;"><span>data_set <span style="color:#f92672">=</span> set(range(n))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表内存：</span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(data_list)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 字节&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;字典内存：</span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(data_dict)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 字节&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;集合内存：</span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(data_set)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 字节&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 参考：同样存1000个整数</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表：~8000字节（最省内存）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集合：~36968字节</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 字典：~36968字节（差不多，字典还额外存了值）</span>
+</span></span></code></pre></div><p><strong>结论：只存&quot;是否存在&quot;用集合，比字典省一半内存！</strong></p>
+<hr>
+<h2 id="什么时候用集合">什么时候用集合？</h2>
+<h3 id="-适合用集合的场景">✅ 适合用集合的场景</h3>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>需要去重</strong></td>
+          <td>一行 <code>list(set(data))</code> 搞定</td>
+      </tr>
+      <tr>
+          <td><strong>判断成员是否存在</strong></td>
+          <td>比列表快100倍！O(1) vs O(n)</td>
+      </tr>
+      <tr>
+          <td><strong>求交集、并集、差集</strong></td>
+          <td>直接用运算符，简洁高效</td>
+      </tr>
+      <tr>
+          <td><strong>需要确保元素唯一性</strong></td>
+          <td>自动去重，永不重复</td>
+      </tr>
+      <tr>
+          <td><strong>比较两组数据差异</strong></td>
+          <td>对称差集 <code>^</code> 一行搞定</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="-不适合用集合的场景">❌ 不适合用集合的场景</h3>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>替代方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>需要保持顺序</strong></td>
+          <td>用列表，或 <code>dict.fromkeys()</code></td>
+      </tr>
+      <tr>
+          <td><strong>需要通过索引访问</strong></td>
+          <td>用列表</td>
+      </tr>
+      <tr>
+          <td><strong>需要存储重复元素</strong></td>
+          <td>用列表</td>
+      </tr>
+      <tr>
+          <td><strong>需要存可变对象</strong></td>
+          <td>用列表，或用 <code>frozenset</code> 存元组</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="常见面试题">常见面试题</h2>
+<p><strong>Q1：集合和列表有什么区别？</strong></p>
+<blockquote>
+<p>A：</p>
+<ul>
+<li><strong>列表</strong>：有序、可重复、可修改、有索引 → 适合需要顺序和重复的场景</li>
+<li><strong>集合</strong>：无序、自动去重、可修改、无索引 → 适合去重和关系运算</li>
+</ul>
+</blockquote>
+<p><strong>Q2：如何保持去重后的顺序？</strong></p>
+<blockquote>
+<p>A：用 <code>dict.fromkeys()</code> 或者配合列表：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>unique <span style="color:#f92672">=</span> list(dict<span style="color:#f92672">.</span>fromkeys(data))  <span style="color:#75715e"># [3, 1, 4, 5, 9, 2, 6]</span>
+</span></span></code></pre></div></blockquote>
+<p><strong>Q3：<code>*</code> 运算符可以重复集合吗？</strong></p>
+<blockquote>
+<p>A：<strong>不能！</strong> <code>*</code> 是序列（列表/元组）的重复运算符，不是集合的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {1, 2} * 2  # TypeError</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 用循环创建</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>    result<span style="color:#f92672">.</span>update(s)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># {1, 2}</span>
+</span></span></code></pre></div></blockquote>
+<p><strong>Q4：集合的元素为什么必须是可哈希的？</strong></p>
+<blockquote>
+<p>A：集合底层用哈希表存储，需要计算元素的哈希值来确定存储位置。可变对象（如列表）的哈希值不稳定，所以不能放。</p>
+</blockquote>
+<hr>
+<h2 id="本讲小结">本讲小结</h2>
+<table>
+  <thead>
+      <tr>
+          <th>操作</th>
+          <th>代码</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>创建集合</td>
+          <td><code>{1, 2, 3}</code> 或 <code>set([1,2,3])</code></td>
+          <td>花括号或set函数</td>
+      </tr>
+      <tr>
+          <td>空集合</td>
+          <td><code>set()</code></td>
+          <td>注意不是 <code>{}</code></td>
+      </tr>
+      <tr>
+          <td>去重</td>
+          <td><code>list(set(data))</code></td>
+          <td>一行代码搞定</td>
+      </tr>
+      <tr>
+          <td>交集</td>
+          <td><code>a &amp; b</code> 或 <code>a.intersection(b)</code></td>
+          <td>共同的元素</td>
+      </tr>
+      <tr>
+          <td>并集</td>
+          <td><code>a | b</code> 或 <code>a.union(b)</code></td>
+          <td>所有元素合并</td>
+      </tr>
+      <tr>
+          <td>差集</td>
+          <td><code>a - b</code> 或 <code>a.difference(b)</code></td>
+          <td>在a里不在b里</td>
+      </tr>
+      <tr>
+          <td>对称差集</td>
+          <td><code>a ^ b</code></td>
+          <td>不共有的元素</td>
+      </tr>
+      <tr>
+          <td>子集判断</td>
+          <td><code>a &lt;= b</code> 或 <code>a.issubset(b)</code></td>
+          <td>是否是子集</td>
+      </tr>
+      <tr>
+          <td>不可变集合</td>
+          <td><code>frozenset()</code></td>
+          <td>不能增删</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>💡 <strong>记住一句话</strong>：要去重用 <code>set</code>！要快判断用 <code>set</code>！要做关系运算还是用 <code>set</code>！</p>
+</blockquote>
+<hr>
+<h2 id="下节预告">下节预告</h2>
+<p>学会了集合，下一篇来学<strong>装饰器</strong>——给函数加功能的&quot;黑魔法&rdquo;。</p>
+<p>👉 <strong><a href="./11-Python%E8%A3%85%E9%A5%B0%E5%99%A8.md">继续阅读：Python装饰器</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="./09-Python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0.md">Python函数参数*args和**kwargs详解</a></p>
+<p><strong>下一篇：</strong> <a href="./11-Python%E8%A3%85%E9%A5%B0%E5%99%A8.md">Python装饰器：给函数加功能的黑魔法</a></p>
+<hr>
+<p><em>PS：集合是Python最被低估的数据结构之一。记住：要去重用set，要快用set，要做关系运算还是用set！</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/09-python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/">上一篇：Python函数参数*args和**kwargs：我面试挂3次后才搞懂的知识点</a>
+        
+        
+        <a href="http://localhost:4002/11-python%E8%A3%85%E9%A5%B0%E5%99%A8/">下一篇：Python装饰器：我给函数加了计时功能，代码只多了2行</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

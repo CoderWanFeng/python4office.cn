@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python为什么不能多线程加速？搞懂GIL只需这一篇 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python为什么不能多线程加速？搞懂GIL只需这一篇</h1>
+        <div class="post-meta">
+            <span>2026-04-17 10:00</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E8%BF%9B%E9%98%B6/" class="tag">Python进阶</a>
+            
+            <a href="/tags/gil/" class="tag">GIL</a>
+            
+            <a href="/tags/%E5%B9%B6%E5%8F%91/" class="tag">并发</a>
+            
+            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="tag">多线程</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <p>大家好，这里是程序员晚枫，正在all in AI编程实战。</p>
+<p>你肯定听过这句话：<strong>&ldquo;Python的多线程是假的。&rdquo;</strong></p>
+<p>真的是这样吗？为什么Java能多线程加速，Python不行？</p>
+<p><strong>罪魁祸首是一个叫GIL的东西。</strong></p>
+<hr>
+<h2 id="gil是什么">GIL是什么？</h2>
+<p>GIL = Global Interpreter Lock（全局解释器锁）</p>
+<p>简单说：<strong>同一时刻，只有一个线程能执行Python字节码。</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// Python/ceval.c
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> PyThread_type_lock GIL;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 获取GIL才能执行
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PyEval_AcquireLock</span>(<span style="color:#66d9ef">void</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PyThread_acquire_lock</span>(GIL, WAIT_LOCK);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>所以不管你开10个线程还是100个线程，CPU同一时间只在跑一个。</p>
+<hr>
+<h2 id="那python的线程有什么用">那Python的线程有什么用？</h2>
+<p>别急，GIL在IO操作时会自动释放：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> threading
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">download</span>(url):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 网络请求时GIL释放，其他线程可以跑</span>
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 模拟IO等待</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 多线程下载，总时间≈2秒（不是10秒）</span>
+</span></span><span style="display:flex;"><span>threads <span style="color:#f92672">=</span> [threading<span style="color:#f92672">.</span>Thread(target<span style="color:#f92672">=</span>download, args<span style="color:#f92672">=</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;url</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,)) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>)]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> threads: t<span style="color:#f92672">.</span>start()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> threads: t<span style="color:#f92672">.</span>join()
+</span></span></code></pre></div><p><strong>IO密集型任务（网络、文件、数据库）：多线程有用！</strong>
+<strong>CPU密集型任务（计算、加密、图像处理）：多线程没用！</strong></p>
+<hr>
+<h2 id="怎么破解">怎么破解？</h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CPU密集型</td>
+          <td>multiprocessing（多进程）</td>
+      </tr>
+      <tr>
+          <td>IO密集型</td>
+          <td>threading / asyncio</td>
+      </tr>
+      <tr>
+          <td>混合场景</td>
+          <td>ProcessPoolExecutor</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="想彻底搞懂">想彻底搞懂？</h2>
+<p>GIL只是CPython的冰山一角。在我的《CPython设计与实现》课程里，我们会深入讲解：</p>
+<ul>
+<li>GIL的完整实现机制</li>
+<li>线程调度原理</li>
+<li>栈帧与字节码执行</li>
+<li>内存管理和垃圾回收</li>
+</ul>
+<p>👉 <a href="/course/AI/cpython-internal/01-CPython-%E6%A6%82%E8%A7%88/">从第1讲开始学习</a></p>
+<p><strong>面试被问到GIL，别只说&quot;全局解释器锁&quot;三个字——讲清楚原理，薪资直接上一个档次。</strong></p>
+<hr>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲·AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/02-%E4%BB%8E0%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAai%E7%A7%81%E4%BA%BA%E5%8A%A9%E7%90%86%E9%83%A8%E7%BD%B2%E5%88%B0%E6%89%8B%E6%9C%BA%E4%B8%8A/">上一篇：从0搭建一个AI私人助理部署到手机上的完整教程</a>
+        
+        
+        <a href="http://localhost:4002/02-python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E5%90%8E%E4%BB%8E700mb%E7%98%A6%E8%BA%AB%E5%88%B050mb%E7%9A%84%E5%AE%8C%E6%95%B4%E6%96%B9%E6%A1%88/">下一篇：Python程序打包后从700MB瘦身到50MB的完整方案</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

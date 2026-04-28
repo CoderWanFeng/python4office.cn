@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 3 讲：AI 提示词入门 - 如何跟 AI 说话 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 3 讲：AI 提示词入门 - 如何跟 AI 说话</h1>
+        <div class="post-meta">
+            <span>2026-03-02 16:10</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/ai-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%8F%90%E7%A4%BA%E8%AF%8D/" class="tag">AI 自动化，提示词</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+<h2 id="-场景导入你遇到过这些情况吗">🎭 场景导入：你遇到过这些情况吗？</h2>
+<p><strong>场景1：AI回答的完全不是你想要的</strong></p>
+<pre tabindex="0"><code>你：帮我写个邮件
+AI：亲爱的[收件人]，[正文内容]，祝好。[你的名字]
+你：这也太敷衍了吧...
+</code></pre><p><strong>场景2：AI理解不了你的需求</strong></p>
+<pre tabindex="0"><code>你：处理一下这个表格
+AI：请问您想要怎么处理？
+你：就是...处理一下嘛
+AI：我需要更多信息才能帮您...
+[无限循环...]
+</code></pre><p><strong>场景3：AI输出的格式乱七八糟</strong></p>
+<pre tabindex="0"><code>你：分析一下这些数据
+AI：数据整体呈现上升趋势其中A项增长最快达到45%
+    B项略有下降需要注意C项保持稳定...
+你：能排版一下吗？看着好累...
+</code></pre><p><strong>问题出在哪里？不是AI不够聪明，是你的提示词写得不够好！</strong></p>
+<p>这一讲，我教你一套经过验证的提示词方法论，让AI输出你真正想要的内容。</p>
+<hr>
+<h2 id="-一提示词的核心原理">📚 一、提示词的核心原理</h2>
+<h3 id="为什么提示词很重要">为什么提示词很重要？</h3>
+<p>AI就像一个能力很强但不懂你心思的助手：</p>
+<ul>
+<li>✅ 它能写文章、写代码、做分析</li>
+<li>❌ 但它不知道你具体要什么、什么风格、什么格式</li>
+</ul>
+<p><strong>提示词 = 你和AI的沟通桥梁</strong></p>
+<p>质量对比：</p>
+<table>
+  <thead>
+      <tr>
+          <th>提示词质量</th>
+          <th>AI输出质量</th>
+          <th>你的满意度</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>随意输入</td>
+          <td>5分（勉强能用）</td>
+          <td>20%</td>
+      </tr>
+      <tr>
+          <td>有基本结构</td>
+          <td>7分（能用）</td>
+          <td>60%</td>
+      </tr>
+      <tr>
+          <td>优化过的提示词</td>
+          <td>9分（惊喜）</td>
+          <td>95%</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="提示词万能公式">提示词万能公式</h3>
+<p><strong>公式：角色 + 任务 + 要求 + 格式</strong></p>
+<pre tabindex="0"><code>┌─────────────────────────────────────┐
+│ 提示词万能公式                        │
+├─────────────────────────────────────┤
+│ 1. 角色：让AI知道它的身份              │
+│    → &#34;你是一名资深的财务分析师&#34;         │
+│                                       │
+│ 2. 任务：明确要做什么                  │
+│    → &#34;分析这份销售数据&#34;                │
+│                                       │
+│ 3. 要求：具体的要求和约束              │
+│    → &#34;找出增长最快的产品，分析原因&#34;     │
+│                                       │
+│ 4. 格式：输出的格式                    │
+│    → &#34;用表格呈现，包含产品名称、增长率、原因&#34;│
+└─────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="-二万能公式详解与示例">💡 二、万能公式详解与示例</h2>
+<h3 id="示例1写工作邮件">示例1：写工作邮件</h3>
+<p><strong>❌ 差的提示词：</strong></p>
+<pre tabindex="0"><code>写个面试邀请邮件
+</code></pre><p><strong>AI输出：</strong></p>
+<pre tabindex="0"><code>亲爱的候选人：
+感谢您申请我们的职位。我们邀请您参加面试。
+时间：待定
+地点：待定
+期待您的回复。
+HR
+</code></pre><p><strong>问题：</strong> 太通用，没有具体信息，格式不规范。</p>
+<p><strong>✅ 好的提示词：</strong></p>
+<pre tabindex="0"><code>你是一名专业的HR招聘专员。
+写一封面试邀请邮件，发送给应聘产品经理职位的候选人。
+要求：
+1. 语气专业、友好
+2. 包含面试时间：下周三（4月15日）下午2点
+3. 包含面试地点：北京市朝阳区XX大厦18楼
+4. 提醒携带：简历、作品集
+5. 包含联系电话：138-xxxx-xxxx
+格式：正式邮件格式，包含邮件主题和正文，300字左右。
+</code></pre><p><strong>AI输出：</strong></p>
+<pre tabindex="0"><code>邮件主题：【面试邀请】产品经理岗位 - XX公司
+
+尊敬的候选人：
+
+您好！
+
+感谢您对我公司产品经理职位的关注与申请。经过简历筛选，
+我们诚挚地邀请您参加面试。
+
+面试安排如下：
+📅 面试时间：2026年4月15日（周三）下午2:00
+📍 面试地点：北京市朝阳区XX大厦18楼
+🏢 公司名称：XX科技有限公司
+
+请您携带以下材料：
+✅ 个人简历一份
+✅ 产品作品集（如有）
+
+如有任何疑问或需要调整面试时间，请致电：138-xxxx-xxxx
+
+期待与您见面！
+
+此致
+敬礼！
+
+XX公司人力资源部
+2026年4月8日
+</code></pre><p><strong>对比：输出质量从5分提升到9分！</strong></p>
+<h3 id="示例2生成excel公式">示例2：生成Excel公式</h3>
+<p><strong>❌ 差的提示词：</strong></p>
+<pre tabindex="0"><code>帮我写个VLOOKUP公式
+</code></pre><p><strong>AI输出：</strong></p>
+<pre tabindex="0"><code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+</code></pre><p><strong>问题：</strong> 只有语法，没有实际应用。</p>
+<p><strong>✅ 好的提示词：</strong></p>
+<pre tabindex="0"><code>你是一名Excel专家。
+帮我写一个VLOOKUP公式，需求如下：
+1. 在Sheet2的A列查找&#34;张三&#34;
+2. 找到后返回该行B列的工资数据
+3. 如果找不到，显示&#34;无数据&#34;
+4. 数据表从Sheet2的A1开始
+
+请：
+1. 直接给出完整公式
+2. 解释每个参数的含义
+3. 提供一个实际应用的例子
+</code></pre><p><strong>AI输出：</strong></p>
+<pre tabindex="0"><code>✅ 完整公式：
+
+=IFERROR(VLOOKUP(&#34;张三&#34;, Sheet2!A:B, 2, FALSE), &#34;无数据&#34;)
+
+📝 参数解释：
+
+- &#34;张三&#34;：要查找的值
+- Sheet2!A:B：查找范围（A列到B列）
+- 2：返回第2列（B列）的数据
+- FALSE：精确匹配
+- IFERROR：如果找不到，显示&#34;无数据&#34;
+
+💡 实际应用示例：
+
+假设Sheet2数据如下：
+A列(姓名)  | B列(工资)
+张三       | 8000
+李四       | 9000
+王五       | 7500
+
+在Sheet1的A1单元格输入公式，会返回：8000
+
+如果查找&#34;赵六&#34;（不存在），会返回：无数据
+</code></pre><h3 id="示例3生成ppt大纲">示例3：生成PPT大纲</h3>
+<p><strong>❌ 差的提示词：</strong></p>
+<pre tabindex="0"><code>帮我做个PPT，主题是季度总结
+</code></pre><p><strong>AI输出：</strong></p>
+<pre tabindex="0"><code>1. 封面
+2. 内容
+3. 总结
+</code></pre><p><strong>问题：</strong> 太简单，没有实质内容。</p>
+<p><strong>✅ 好的提示词：</strong></p>
+<pre tabindex="0"><code>你是一名资深的PPT设计师，擅长做商务汇报。
+为主题&#34;2026年Q1销售工作总结&#34;生成PPT大纲。
+
+背景信息：
+- 汇报对象：公司管理层
+- 汇报目的：总结Q1业绩，展示成果，提出Q2计划
+- Q1销售额：1500万，同比增长25%
+- 主要亮点：开拓了5个新客户，产品A增长最快
+- 主要问题：华南区域未达标
+
+要求：
+1. 包含8-10页幻灯片
+2. 每页包含：标题、核心要点、建议配图
+3. 数据要可视化呈现（图表）
+4. 逻辑清晰：现状→成果→问题→计划
+
+格式：
+用表格呈现，包含：页码、页面标题、核心内容、配图建议
+</code></pre><p><strong>AI输出：</strong></p>
+<pre tabindex="0"><code>📊 PPT大纲：2026年Q1销售工作总结
+
+| 页码 | 页面标题 | 核心内容 | 配图建议 |
+|------|---------|---------|---------|
+| 1 | 封面 | 2026年Q1销售工作总结&lt;br&gt;汇报人：XX&lt;br&gt;日期：2026.4.8 | 公司Logo + 商务背景图 |
+| 2 | 目录 | 1. 整体业绩概览&lt;br&gt;2. 重点项目成果&lt;br&gt;3. 区域分析&lt;br&gt;4. 问题与挑战&lt;br&gt;5. Q2工作计划 | 简洁图标 |
+| 3 | 整体业绩概览 | - Q1销售额：1500万&lt;br&gt;- 同比增长：25%&lt;br&gt;- 目标完成率：102% | 柱状图 + 增长趋势线 |
+| 4 | 业绩亮点 | 1. 开拓5个新客户&lt;br&gt;2. 产品A增长45%&lt;br&gt;3. 客户满意度95% | 成功案例照片 + 图标 |
+| 5 | 区域分析 | - 华东：达标 ✅&lt;br&gt;- 华北：超标 ✅&lt;br&gt;- 华南：未达标 ⚠️ | 地图热力图 |
+| 6 | 问题分析 | 华南未达标原因：&lt;br&gt;1. 团队人员流失&lt;br&gt;2. 竞品价格战&lt;br&gt;3. 市场推广不足 | 数据图表 |
+| 7 | 改进措施 | 1. 加强团队建设&lt;br&gt;2. 调整定价策略&lt;br&gt;3. 增加推广投入 | 行动计划表格 |
+| 8 | Q2工作计划 | 目标：1800万&lt;br&gt;重点：&lt;br&gt;1. 巩固老客户&lt;br&gt;2. 开拓新市场&lt;br&gt;3. 推出新产品 | 目标路线图 |
+| 9 | 所需支持 | 1. 增加华南团队编制&lt;br&gt;2. 市场推广预算&lt;br&gt;3. 新产品研发资源 | 需求清单 |
+| 10 | 感谢页 | 感谢聆听！&lt;br&gt;欢迎提问 | 公司Logo + 联系方式 |
+
+💡 设计建议：
+- 配色：蓝色为主色调（专业、稳重）
+- 字体：标题用微软雅黑加粗，正文用微软雅黑
+- 动画：简洁，不要花哨
+</code></pre><hr>
+<h2 id="-三办公场景提示词模板库">🎯 三、办公场景提示词模板库</h2>
+<h3 id="模板1写工作报告">模板1：写工作报告</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名资深的[职位]。
+</span></span><span style="display:flex;"><span>我需要写一份[报告类型，如：周报/月报/项目总结/年度报告]。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>报告背景：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 汇报对象：[领导/客户/团队]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 报告目的：[总结工作/汇报进度/申请资源]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>报告内容包含：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> [第一部分内容]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> [第二部分内容]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> [第三部分内容]
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据亮点：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [关键数据1]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [关键数据2]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>存在问题：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [问题1]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [问题2]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 语气：[正式/专业/简洁]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 字数：[X]字左右
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 格式：[纯文本/Markdown/表格]
+</span></span></code></pre></div><p><strong>使用示例：</strong></p>
+<pre tabindex="0"><code>你是一名资深的运营主管。
+我需要写一份月度工作总结报告。
+
+报告背景：
+- 汇报对象：运营总监
+- 报告目的：总结3月工作成果，申请4月推广预算
+
+报告内容包含：
+1. 本月关键指标完成情况
+2. 重点项目进展
+3. 遇到的问题和解决方案
+4. 下月工作计划
+
+数据亮点：
+- 用户增长20%
+- 转化率提升15%
+- 客诉率下降30%
+
+要求：
+- 语气：专业、简洁
+- 字数：800字左右
+- 格式：Markdown，使用表格呈现数据
+</code></pre><h3 id="模板2写邮件">模板2：写邮件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名专业的[职位]。
+</span></span><span style="display:flex;"><span>我需要给[收件人身份]写一封邮件。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>邮件目的：[说明邮件目的]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>关键信息：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [信息1]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [信息2]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [信息3]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>语气要求：[正式/友好/紧急/礼貌/委婉]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>特殊要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [如需要对方做什么]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [如截止时间]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>格式：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 邮件主题：[具体要求]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 正文长度：[X]字左右
+</span></span></code></pre></div><p><strong>使用示例：</strong></p>
+<pre tabindex="0"><code>你是一名专业的项目经理。
+我需要给客户写一封邮件。
+
+邮件目的：确认项目延期事宜，争取客户理解
+
+关键信息：
+- 项目原定4月15日交付
+- 因第三方接口问题需要延期到4月22日
+- 我们已经采取了[补救措施]
+
+语气要求：专业、诚恳、不推卸责任
+
+特殊要求：
+- 请求客户确认新的交付时间
+- 承诺不影响最终质量
+
+格式：
+- 邮件主题：清晰说明主题
+- 正文长度：400字左右
+</code></pre><h3 id="模板3数据分析">模板3：数据分析</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名数据分析专家。
+</span></span><span style="display:flex;"><span>请分析以下数据：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据背景：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 数据来源：[说明数据来源]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 数据时间范围：[时间]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 数据量：[行数/条数]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据分析需求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> [分析目标1]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> [分析目标2]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> [分析目标3]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 找出：[关键指标、异常值、趋势等]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 建议：[基于数据给出建议]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 格式：用表格和图表说明
+</span></span></code></pre></div><p><strong>使用示例：</strong></p>
+<pre tabindex="0"><code>你是一名数据分析专家。
+请分析以下销售数据：
+
+数据背景：
+- 数据来源：公司ERP系统
+- 数据时间范围：2026年Q1
+- 数据量：500条销售记录
+
+数据分析需求：
+1. 找出销售额Top10的产品
+2. 分析各区域的业绩差异
+3. 识别销售趋势和异常
+
+要求：
+- 找出：增长最快的产品、未达标的区域
+- 建议：基于数据给出Q2策略建议
+- 格式：用表格和图表说明
+</code></pre><h3 id="模板4excel公式函数">模板4：Excel公式/函数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名Excel专家。
+</span></span><span style="display:flex;"><span>帮我解决以下Excel问题：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>问题描述：
+</span></span><span style="display:flex;"><span>[具体描述要解决的问题]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据结构：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列A：[说明A列内容]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列B：[说明B列内容]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>期望结果：
+</span></span><span style="display:flex;"><span>[描述你想要的结果]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 给出完整公式
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 解释每个参数
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 提供示例
+</span></span></code></pre></div><p><strong>使用示例：</strong></p>
+<pre tabindex="0"><code>你是一名Excel专家。
+帮我解决以下Excel问题：
+
+问题描述：
+根据员工的销售额计算提成，规则如下：
+- 销售额&lt;5万：提成3%
+- 销售额5-10万：提成5%
+- 销售额&gt;10万：提成8%
+
+数据结构：
+- 列A：员工姓名
+- 列B：销售额
+- 列C：提成（需要计算）
+
+期望结果：
+在C列自动计算每个员工的提成金额
+
+要求：
+1. 给出完整公式
+2. 解释公式逻辑
+3. 提供示例
+</code></pre><p><strong>AI输出：</strong></p>
+<pre tabindex="0"><code>✅ 完整公式：
+
+=IF(B2&lt;50000, B2*0.03, IF(B2&lt;100000, B2*0.05, B2*0.08))
+
+📝 公式解释：
+
+这是嵌套IF函数，逻辑如下：
+1. 如果B2&lt;50000，提成 = B2 × 3%
+2. 如果50000≤B2&lt;100000，提成 = B2 × 5%
+3. 如果B2≥100000，提成 = B2 × 8%
+
+💡 示例：
+
+| 员工 | 销售额 | 提成公式 | 提成金额 |
+|------|--------|---------|---------|
+| 张三 | 30000  | 30000×3% | 900 |
+| 李四 | 80000  | 80000×5% | 4000 |
+| 王五 | 120000 | 120000×8%| 9600 |
+</code></pre><h3 id="模板5ppt生成">模板5：PPT生成</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名专业的PPT设计师。
+</span></span><span style="display:flex;"><span>为主题&#34;[主题]&#34;设计PPT大纲。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>背景信息：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 听众：[目标听众]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 时长：[X]分钟
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 目的：[汇报/培训/销售/提案]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>内容要点：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> [要点1]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> [要点2]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> [要点3]
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 页数：[X-Y]页
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 风格：[商务/学术/创意]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 包含：[封面/目录/正文/总结/Q&amp;A]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>格式：
+</span></span><span style="display:flex;"><span>用表格呈现：页码、标题、核心内容、配图建议
+</span></span></code></pre></div><hr>
+<h2 id="-四提示词优化技巧">🔧 四、提示词优化技巧</h2>
+<h3 id="技巧1给ai明确的角色">技巧1：给AI明确的角色</h3>
+<p><strong>原理：</strong> 角色设定让AI知道&quot;我是谁&quot;，从而调用对应的知识库和表达风格。</p>
+<p><strong>对比：</strong></p>
+<pre tabindex="0"><code>❌ 差：写一份报告
+→ AI不知道用什么风格
+
+✅ 好：你是一名资深财务分析师，写一份财务分析报告
+→ AI会用财务分析师的专业术语和分析框架
+
+✅ 更好：你是一名有10年经验的互联网公司财务分析师，
+        擅长用数据讲故事，写一份面向管理层的财务分析报告
+→ AI会用更精准的角色设定
+</code></pre><p><strong>常用角色设定：</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>角色设定</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>写方案</td>
+          <td>&ldquo;你是一名资深的项目经理&rdquo;</td>
+      </tr>
+      <tr>
+          <td>写报告</td>
+          <td>&ldquo;你是一名专业的数据分析师&rdquo;</td>
+      </tr>
+      <tr>
+          <td>写邮件</td>
+          <td>&ldquo;你是一名资深的商务助理&rdquo;</td>
+      </tr>
+      <tr>
+          <td>写文案</td>
+          <td>&ldquo;你是一名有10年经验的文案策划&rdquo;</td>
+      </tr>
+      <tr>
+          <td>写代码</td>
+          <td>&ldquo;你是一名全栈工程师&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="技巧2提供充分的背景信息">技巧2：提供充分的背景信息</h3>
+<p><strong>原理：</strong> 背景信息越多，AI理解越准确。</p>
+<p><strong>对比：</strong></p>
+<pre tabindex="0"><code>❌ 差：分析这些数据
+→ AI不知道数据的背景、目的
+
+✅ 好：这是某电商平台2026年Q1的销售数据，
+     包含500条订单记录，需要向CEO汇报，
+     找出增长点和潜在风险
+→ AI知道：数据来源、数据量、汇报对象、分析目标
+
+✅ 更好：这是某电商平台2026年Q1的销售数据，
+        数据来自ERP系统，包含订单日期、客户、产品、
+        金额、区域等字段。公司目标是Q1增长20%，
+        目前已完成102%。需要向CEO汇报，
+        重点分析：增长原因、区域差异、Q2策略建议
+→ AI拥有完整的上下文
+</code></pre><h3 id="技巧3指定输出格式">技巧3：指定输出格式</h3>
+<p><strong>原理：</strong> 明确的格式要求让输出更易用。</p>
+<p><strong>常用格式：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 表格格式
+</span></span><span style="display:flex;"><span>&#34;用表格呈现，包含列：[列1]、[列2]、[列3]&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 列表格式
+</span></span><span style="display:flex;"><span>&#34;用无序列表输出，每条不超过20字&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 分步格式
+</span></span><span style="display:flex;"><span>&#34;分步骤说明，每步包含：步骤名、操作、预期结果&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> Markdown格式
+</span></span><span style="display:flex;"><span>&#34;用Markdown格式输出，包含标题、列表、代码块&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> JSON格式
+</span></span><span style="display:flex;"><span>&#34;输出JSON格式，包含字段：[字段1]、[字段2]&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">6.</span> 代码格式
+</span></span><span style="display:flex;"><span>&#34;用Python代码实现，包含注释说明&#34;
+</span></span></code></pre></div><h3 id="技巧4分步骤提问">技巧4：分步骤提问</h3>
+<p><strong>原理：</strong> 复杂任务拆解，质量更高。</p>
+<p><strong>示例：</strong></p>
+<pre tabindex="0"><code>❌ 差：帮我做一个完整的营销方案
+→ 任务太大，AI输出质量不稳定
+
+✅ 好：分步骤完成
+
+步骤1：帮我生成10个营销活动主题
+步骤2：从中选择3个最好的，为每个主题生成详细方案
+步骤3：为每个方案设计执行时间表
+步骤4：计算每个方案的预算和预期ROI
+步骤5：生成最终汇报PPT大纲
+</code></pre><h3 id="技巧5提供示例">技巧5：提供示例</h3>
+<p><strong>原理：</strong> 给AI一个参照物，输出更精准。</p>
+<p><strong>示例：</strong></p>
+<pre tabindex="0"><code>你是一名文案策划。
+写3个产品推广文案。
+
+参考风格：
+&#34;别让你的时间在无意义的加班中流失，
+Python自动化办公，让你每天提前2小时下班！&#34;
+
+要求：
+- 句式：[痛点] + [解决方案] + [结果]
+- 字数：30字左右
+- 语气：有冲击力
+</code></pre><h3 id="技巧6设置约束条件">技巧6：设置约束条件</h3>
+<p><strong>原理：</strong> 约束让AI输出更聚焦。</p>
+<p><strong>常用约束：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 字数约束
+</span></span><span style="display:flex;"><span>&#34;控制在500字以内&#34;
+</span></span><span style="display:flex;"><span>&#34;每个要点不超过50字&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 内容约束
+</span></span><span style="display:flex;"><span>&#34;不要使用专业术语&#34;
+</span></span><span style="display:flex;"><span>&#34;避免空话套话&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 风格约束
+</span></span><span style="display:flex;"><span>&#34;用口语化表达&#34;
+</span></span><span style="display:flex;"><span>&#34;用正式公文风格&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 格式约束
+</span></span><span style="display:flex;"><span>&#34;只用表格输出&#34;
+</span></span><span style="display:flex;"><span>&#34;不使用Markdown格式&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 逻辑约束
+</span></span><span style="display:flex;"><span>&#34;按照重要性排序&#34;
+</span></span><span style="display:flex;"><span>&#34;先结论后原因&#34;
+</span></span></code></pre></div><hr>
+<h2 id="-五常见错误与避坑指南">⚠️ 五、常见错误与避坑指南</h2>
+<h3 id="错误1提示词太短">错误1：提示词太短</h3>
+<p><strong>错误示例：</strong></p>
+<pre tabindex="0"><code>写个邮件
+</code></pre><p><strong>问题：</strong> AI不知道写给谁、什么目的、什么风格</p>
+<p><strong>正确做法：</strong></p>
+<pre tabindex="0"><code>你是一名HR专员，写一封面试邀请邮件，
+发给应聘产品经理职位的候选人，
+面试时间是下周三下午2点，
+地点在公司18楼会议室，
+语气专业友好，300字左右。
+</code></pre><h3 id="错误2指令模糊">错误2：指令模糊</h3>
+<p><strong>错误示例：</strong></p>
+<pre tabindex="0"><code>帮我处理一下这个表格
+</code></pre><p><strong>问题：</strong> &ldquo;处理&quot;是什么意思？筛选？排序？计算？</p>
+<p><strong>正确做法：</strong></p>
+<pre tabindex="0"><code>帮我处理这个Excel表格：
+1. 筛选出销售额&gt;10000的记录
+2. 按销售额降序排列
+3. 计算总销售额和平均销售额
+4. 用表格输出结果
+</code></pre><h3 id="错误3没有格式要求">错误3：没有格式要求</h3>
+<p><strong>错误示例：</strong></p>
+<pre tabindex="0"><code>分析一下这份数据
+</code></pre><p><strong>问题：</strong> AI可能输出大段文字，难以阅读</p>
+<p><strong>正确做法：</strong></p>
+<pre tabindex="0"><code>分析这份数据，用以下格式输出：
+
+1. 总体概览（3句话）
+2. 关键发现（用列表，5条）
+3. 数据明细（用表格）
+4. 行动建议（用列表，3条）
+</code></pre><h3 id="错误4一次性要求太多">错误4：一次性要求太多</h3>
+<p><strong>错误示例：</strong></p>
+<pre tabindex="0"><code>帮我写一份完整的营销方案，
+包括市场分析、竞品分析、用户画像、
+营销策略、执行计划、预算、KPI...
+</code></pre><p><strong>问题：</strong> 任务太大，AI输出质量不稳定</p>
+<p><strong>正确做法：</strong></p>
+<pre tabindex="0"><code>分步完成：
+
+第1步：先做市场分析
+第2步：基于市场分析，做竞品分析
+第3步：基于前两步，制定营销策略
+...
+
+每步完成后，我会确认和修改，再进行下一步。
+</code></pre><h3 id="错误5不提供反馈">错误5：不提供反馈</h3>
+<p><strong>错误示例：</strong></p>
+<pre tabindex="0"><code>你：写一个方案
+AI：[输出方案]
+你：[复制走人，不满意也不说]
+</code></pre><p><strong>问题：</strong> AI不知道你的偏好，下次还会输出一样的内容</p>
+<p><strong>正确做法：</strong></p>
+<pre tabindex="0"><code>你：写一个方案
+AI：[输出方案]
+你：整体可以，但太长了，精简到500字以内，
+   另外把第三部分换成案例分析
+AI：[按要求修改]
+你：好了，这次完美！
+</code></pre><hr>
+<h2 id="-六实战案例5个真实场景">💡 六、实战案例：5个真实场景</h2>
+<h3 id="案例1自动化周报生成">案例1：自动化周报生成</h3>
+<p><strong>场景：</strong> 每周五下午要写周报，很烦</p>
+<p><strong>提示词模板：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名专业的项目管理助理。
+</span></span><span style="display:flex;"><span>帮我生成本周工作周报。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>本周工作内容：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 周一：完成项目A的需求文档
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 周二：参加项目B的评审会议
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 周三：处理客户反馈的问题
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 周四：完成项目C的测试
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 周五：整理本周工作，写周报
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>下周计划：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 继续推进项目A开发
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目C上线
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>存在问题：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目B资源不足
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 用标准周报格式
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 工作内容分类呈现
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 字数300字左右
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 语言简洁专业
+</span></span></code></pre></div><p><strong>AI输出：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## 本周工作总结（2026.4.8-4.12）
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 一、主要工作完成情况
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**1. 项目推进**</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ✅ 完成项目A需求文档编写（周一）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ✅ 完成项目C测试工作（周四）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**2. 会议与沟通**</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ✅ 参加项目B评审会议（周二）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**3. 问题处理**</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ✅ 处理客户反馈问题3个（周三）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 二、下周工作计划
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 推进项目A开发工作
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 完成项目C上线部署
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 三、需要协调的事项
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目B存在资源不足问题，建议增派1名开发人员
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 四、本周小结
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>本周重点工作围绕项目A和项目C推进，
+</span></span><span style="display:flex;"><span>按计划完成既定目标。项目B需重点关注资源问题。
+</span></span></code></pre></div><h3 id="案例2批量邮件生成">案例2：批量邮件生成</h3>
+<p><strong>场景：</strong> 要给10个客户发送定制化邮件</p>
+<p><strong>提示词模板：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名商务助理。
+</span></span><span style="display:flex;"><span>根据以下客户信息，生成10封定制化邀请邮件。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>客户信息：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 张三 | ABC公司 | CEO | 参加产品发布会
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 李四 | XYZ公司 | CTO | 参加技术交流会
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>邮件要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 根据客户公司和职位个性化内容
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 邀请参加对应活动
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 包含活动时间、地点
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 语气专业、友好
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 每封200字左右
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>格式：
+</span></span><span style="display:flex;"><span>用表格输出：客户名 | 邮件主题 | 邮件正文
+</span></span></code></pre></div><h3 id="案例3excel复杂公式生成">案例3：Excel复杂公式生成</h3>
+<p><strong>场景：</strong> 要写一个复杂的多条件判断公式</p>
+<p><strong>提示词模板：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名Excel高级用户。
+</span></span><span style="display:flex;"><span>帮我写一个复杂的计算公式。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>需求：
+</span></span><span style="display:flex;"><span>根据销售额和客户等级计算折扣：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 销售额≥10万 且 VIP客户：8折
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 销售额≥10万 且 普通客户：85折
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 销售额&lt;10万 且 VIP客户：9折
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 销售额&lt;10万 且 普通客户：95折
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据结构：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> A列：客户名称
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> B列：销售额
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> C列：客户等级（VIP/普通）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> D列：折扣（需要计算）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 给出完整公式
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 解释公式逻辑
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 提供测试用例
+</span></span></code></pre></div><p><strong>AI输出：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>✅ 完整公式：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>=IF(AND(B2&gt;=100000, C2=&#34;VIP&#34;), 0.8,
+</span></span><span style="display:flex;"><span> IF(AND(B2&gt;=100000, C2=&#34;普通&#34;), 0.85,
+</span></span><span style="display:flex;"><span> IF(AND(B2&lt;100000, C2=&#34;VIP&#34;), 0.9, 0.95)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>📝 公式解释：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>这是嵌套IF + AND函数，逻辑如下：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 如果销售额≥10万 且 等级=VIP → 0.8（8折）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 如果销售额≥10万 且 等级=普通 → 0.85（85折）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 如果销售额&lt;10万 且 等级=VIP → 0.9（9折）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 其他情况（销售额&lt;10万 且 等级=普通）→ 0.95（95折）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>💡 测试用例：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>| 客户 | 销售额 | 等级 | 折扣 |
+</span></span><span style="display:flex;"><span>|------|--------|------|------|
+</span></span><span style="display:flex;"><span>| 客户A | 120000 | VIP | 0.8 |
+</span></span><span style="display:flex;"><span>| 客户B | 120000 | 普通 | 0.85 |
+</span></span><span style="display:flex;"><span>| 客户C | 80000 | VIP | 0.9 |
+</span></span><span style="display:flex;"><span>| 客户D | 80000 | 普通 | 0.95 |
+</span></span></code></pre></div><h3 id="案例4数据分析报告">案例4：数据分析报告</h3>
+<p><strong>场景：</strong> 分析一份销售数据，生成报告</p>
+<p><strong>提示词模板：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名数据分析专家。
+</span></span><span style="display:flex;"><span>分析以下销售数据，生成分析报告。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据概览：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 时间范围：2026年Q1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 数据量：500条订单
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 字段：日期、客户、产品、金额、区域
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>分析维度：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 整体业绩：总销售额、同比增长、目标完成率
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 产品分析：Top5产品、增长最快产品
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 区域分析：各区域业绩、达标情况
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 客户分析：Top10客户、客户集中度
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 用数据说话，给出具体数字
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 找出亮点和问题
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 给出Q2策略建议
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 用表格和图表呈现
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>格式：
+</span></span><span style="display:flex;"><span># 标题
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 一、整体业绩
+</span></span></span><span style="display:flex;"><span>[表格 + 分析]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二、产品分析
+</span></span></span><span style="display:flex;"><span>[表格 + 分析]
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 建议
+</span></span></span><span style="display:flex;"><span>[列表]
+</span></span></code></pre></div><h3 id="案例5学习计划制定">案例5：学习计划制定</h3>
+<p><strong>场景：</strong> 想系统学习Python自动化办公</p>
+<p><strong>提示词模板：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名Python培训讲师。
+</span></span><span style="display:flex;"><span>为以下学员制定学习计划。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>学员背景：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 零基础，不会编程
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 职业是行政助理，每天处理Excel/Word
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 每天可投入学习时间：1小时
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 目标：掌握自动化办公，提升工作效率
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>学习内容：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Python基础
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Excel自动化（openpyxl/pandas）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Word自动化（python-docx）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> PPT自动化（python-pptx）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 邮件自动化
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 制定12周学习计划
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 每周学习内容 + 实战项目
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 每天具体学习任务（1小时）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 设置检查点和考核标准
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>格式：
+</span></span><span style="display:flex;"><span>用表格呈现：周次 | 学习主题 | 每日任务 | 实战项目 | 考核标准
+</span></span></code></pre></div><hr>
+<h2 id="-七本节作业">📚 七、本节作业</h2>
+<h3 id="作业1用万能公式写3个提示词">作业1：用万能公式写3个提示词</h3>
+<p>请用「角色+任务+要求+格式」公式，写出以下场景的提示词：</p>
+<ol>
+<li><strong>写邮件场景</strong>：给领导写一封请假邮件</li>
+<li><strong>Excel公式场景</strong>：计算员工年终奖（多条件）</li>
+<li><strong>PPT大纲场景</strong>：为新员工培训设计PPT</li>
+</ol>
+<h3 id="作业2优化提示词">作业2：优化提示词</h3>
+<p>请优化以下提示词：</p>
+<pre tabindex="0"><code>原提示词：帮我分析数据
+</code></pre><p>要求：</p>
+<ol>
+<li>应用万能公式</li>
+<li>添加背景信息</li>
+<li>指定输出格式</li>
+<li>添加约束条件</li>
+</ol>
+<h3 id="作业3建立你的提示词库">作业3：建立你的提示词库</h3>
+<p>创建一个文档，保存你常用的提示词模板：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 我的提示词库
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 1. 邮件类
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 面试邀请邮件模板
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 请假邮件模板
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 汇报邮件模板
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 2. 报告类
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 周报模板
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 月报模板
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目总结模板
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 3. 数据分析类
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 销售数据分析模板
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 用户行为分析模板
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<h3 id="核心要点">核心要点</h3>
+<ol>
+<li><strong>万能公式</strong>：角色 + 任务 + 要求 + 格式</li>
+<li><strong>6大技巧</strong>：给角色、供背景、定格式、分步骤、给示例、设约束</li>
+<li><strong>5类错误</strong>：太短、模糊、无格式、贪多、不反馈</li>
+<li><strong>模板库</strong>：邮件、报告、数据、公式、PPT</li>
+</ol>
+<h3 id="关键记忆">关键记忆</h3>
+<blockquote>
+<p><strong>提示词的质量 = AI输出的质量</strong></p>
+<p>多花1分钟写提示词，能省下10分钟修改输出。</p>
+</blockquote>
+<hr>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/ai-automation-office/%E7%AC%AC2%E8%AE%B2-AI%E5%8A%9E%E5%85%AC%E5%B7%A5%E5%85%B7%E5%85%A8%E6%99%AF%E5%9B%BE/">上一讲：AI 办公工具全景图</a> | <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/ai-automation-office/%E7%AC%AC4%E8%AE%B2-AI%E5%A4%84%E7%90%86Excel%E6%95%B0%E6%8D%AE/">下一讲：AI 处理 Excel 数据</a> →</p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<hr>
+<blockquote>
+<p><strong>科技不高冷，AI很好用。</strong></p>
+<p>下一讲，我们开始实战：用AI处理Excel数据！</p>
+</blockquote>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260302020201-%E7%AC%AC2%E8%AE%B2-ai%E5%8A%9E%E5%85%AC%E5%B7%A5%E5%85%B7%E5%85%A8%E6%99%AF%E5%9B%BE/">上一篇：第 2 讲：AI 办公工具全景图 - 选对工具事半功倍</a>
+        
+        
+        <a href="http://localhost:4002/20260302020401-%E7%AC%AC4%E8%AE%B2-ai%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE/">下一篇：第 4 讲：AI 处理 Excel 数据 - 让 AI 帮你搞定脏数据</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

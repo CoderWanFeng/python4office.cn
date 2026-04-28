@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>财务人必学！3 行代码搞定发票录入，老板给我加薪了 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>财务人必学！3 行代码搞定发票录入，老板给我加薪了</h1>
+        <div class="post-meta">
+            <span>2026-03-17 10:24</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/openclaw/" class="tag">OpenClaw</a>
+            
+            <a href="/tags/%E8%B4%A2%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%8C%96python/" class="tag">财务自动化，Python</a>
+            
+            <a href="/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/" class="tag">职业发展</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <h1 id="财务人必学3-行代码搞定发票录入老板给我加薪了">财务人必学！3 行代码搞定发票录入，老板给我加薪了</h1>
+<blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<hr>
+<h2 id="-小丽的故事">📈 小丽的故事</h2>
+<p>小丽是我朋友，在某公司做财务。</p>
+<p><strong>去年before</strong>：</p>
+<ul>
+<li>每天录发票到晚上 8 点</li>
+<li>月底加班到凌晨</li>
+<li>月薪 6000，3 年没涨</li>
+<li>想转行，不知道去哪</li>
+</ul>
+<p><strong>去年after</strong>：</p>
+<ul>
+<li>下午 4 点完成工作</li>
+<li>月底不加班</li>
+<li>月薪 9000，刚涨了 50%</li>
+<li>开始带团队，做自动化项目</li>
+</ul>
+<p><strong>变化从哪里开始</strong>？</p>
+<p>她学了一个技能：<strong>用 Python 自动识别发票</strong>。</p>
+<p><strong>代码就 3 行</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> poocr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(
+</span></span><span style="display:flex;"><span>    input_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;发票文件夹&#39;</span>,
+</span></span><span style="display:flex;"><span>    output_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;输出目录&#39;</span>,
+</span></span><span style="display:flex;"><span>    id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;SecretId&#39;</span>,
+</span></span><span style="display:flex;"><span>    key<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;SecretKey&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>就这 3 行代码，改变了她的职业生涯。</strong></p>
+<hr>
+<h2 id="-技能详情">🎯 技能详情</h2>
+<p><strong>技能名称</strong>：<code>poocr-vatinvoice2excel</code></p>
+<p><strong>ClawHub 地址</strong>：https://clawhub.ai/CoderWanFeng/poocr-vatinvoice2excel</p>
+<p><strong>功能</strong>：</p>
+<ul>
+<li>自动识别增值税发票</li>
+<li>提取所有关键字段</li>
+<li>导出为 Excel 表格</li>
+<li>支持批量处理</li>
+</ul>
+<p><strong>学习成本</strong>：</p>
+<ul>
+<li>Python 基础：1 周（每天 1 小时）</li>
+<li>poocr 库使用：1 小时</li>
+<li>实战练习：1 天</li>
+</ul>
+<p><strong>总投入</strong>：不到 10 小时。</p>
+<p><strong>回报</strong>：</p>
+<ul>
+<li>工作效率提升 60 倍</li>
+<li>不再加班</li>
+<li>获得老板认可</li>
+<li>加薪 50%</li>
+</ul>
+<p><strong>这笔投资，太值了。</strong></p>
+<hr>
+<h2 id="-学习路线财务专用">🛠️ 学习路线（财务专用）</h2>
+<h3 id="第-1-步安装-python30-分钟">第 1 步：安装 Python（30 分钟）</h3>
+<p><strong>下载地址</strong>：https://www.python.org/downloads/</p>
+<p><strong>安装步骤</strong>：</p>
+<ol>
+<li>下载安装包</li>
+<li>双击运行</li>
+<li>✅ 勾选&quot;Add Python to PATH&quot;</li>
+<li>点击&quot;Install Now&quot;</li>
+</ol>
+<p><strong>验证</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python --version
+</span></span></code></pre></div><p>输出 <code>Python 3.x.x</code> 就成功了。</p>
+<h3 id="第-2-步安装-poocr-库5-分钟">第 2 步：安装 poocr 库（5 分钟）</h3>
+<p><strong>打开命令行</strong>（Windows 按 Win+R，输入 cmd）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install poocr
+</span></span></code></pre></div><p><strong>等待安装完成</strong>，看到&quot;Successfully installed&quot;就 OK 了。</p>
+<h3 id="第-3-步获取腾讯云密钥15-分钟">第 3 步：获取腾讯云密钥（15 分钟）</h3>
+<p><strong>访问</strong>：https://curl.qcloud.com/9ExTmaya</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>注册腾讯云账号（手机号就行）</li>
+<li>登录</li>
+<li>搜索&quot;文字识别&quot;</li>
+<li>进入控制台 → 密钥管理</li>
+<li>新建密钥</li>
+<li>保存 SecretId 和 SecretKey</li>
+</ol>
+<p><strong>免费额度</strong>：1000 次/月，够用好久。</p>
+<h3 id="第-4-步写第一行代码30-分钟">第 4 步：写第一行代码（30 分钟）</h3>
+<p><strong>新建一个文件</strong>：<code>invoice.py</code></p>
+<p><strong>输入代码</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> poocr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(
+</span></span><span style="display:flex;"><span>    input_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;C:/invoices/test.pdf&#39;</span>,  <span style="color:#75715e"># 改成你的发票路径</span>
+</span></span><span style="display:flex;"><span>    output_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;C:/invoices/output&#39;</span>,   <span style="color:#75715e"># 改成你的输出目录</span>
+</span></span><span style="display:flex;"><span>    id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;你的 SecretId&#39;</span>,                  <span style="color:#75715e"># 改成你的 SecretId</span>
+</span></span><span style="display:flex;"><span>    key<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;你的 SecretKey&#39;</span>                 <span style="color:#75715e"># 改成你的 SecretKey</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;识别完成！&#34;</span>)
+</span></span></code></pre></div><p><strong>运行</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python invoice.py
+</span></span></code></pre></div><p><strong>看到&quot;识别完成！&quot;</strong>，恭喜你，已经入门了！</p>
+<h3 id="第-5-步批量处理1-小时">第 5 步：批量处理（1 小时）</h3>
+<p><strong>修改代码</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> poocr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(
+</span></span><span style="display:flex;"><span>    input_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;C:/invoices/2026-03&#39;</span>,   <span style="color:#75715e"># 放 300 张发票的文件夹</span>
+</span></span><span style="display:flex;"><span>    output_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;C:/invoices/output&#39;</span>,
+</span></span><span style="display:flex;"><span>    id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;你的 SecretId&#39;</span>,
+</span></span><span style="display:flex;"><span>    key<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;你的 SecretKey&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;批量识别完成！&#34;</span>)
+</span></span></code></pre></div><p><strong>把 300 张发票放进文件夹</strong>，运行脚本。</p>
+<p><strong>3 分钟后</strong>，打开输出的 Excel 文件——所有发票信息整整齐齐。</p>
+<p><strong>那一刻的成就感</strong>，谁用谁知道。</p>
+<hr>
+<h2 id="-小丽是怎么用这个技能加薪的">💼 小丽是怎么用这个技能加薪的？</h2>
+<h3 id="第一阶段展示价值1-个月">第一阶段：展示价值（1 个月）</h3>
+<p><strong>小丽的做法</strong>：</p>
+<ol>
+<li>用脚本处理自己负责的发票</li>
+<li>效率提升 60 倍，提前完成工作</li>
+<li>主动帮同事处理他们的发票</li>
+<li>月底整个财务室不加班了</li>
+</ol>
+<p><strong>老板注意到</strong>：这个月财务效率怎么提升了这么多？</p>
+<h3 id="第二阶段分享经验第-2-个月">第二阶段：分享经验（第 2 个月）</h3>
+<p><strong>部门会议</strong>上，小丽主动分享：</p>
+<blockquote>
+<p>&ldquo;我最近学了一个 Python 脚本，可以自动识别发票。之前我们每月要花 3 天录入，现在 30 分钟搞定。&rdquo;</p>
+</blockquote>
+<p><strong>现场演示</strong>：</p>
+<ul>
+<li>导入 100 张发票</li>
+<li>运行脚本</li>
+<li>3 分钟后展示 Excel 结果</li>
+</ul>
+<p><strong>老板震惊</strong>：&ldquo;这个可以全部门推广吗？&rdquo;</p>
+<p><strong>小丽</strong>：&ldquo;可以，我可以教大家。&rdquo;</p>
+<h3 id="第三阶段推动变革第-3-个月">第三阶段：推动变革（第 3 个月）</h3>
+<p><strong>小丽主导</strong>：</p>
+<ol>
+<li>给全部门培训 Python 基础</li>
+<li>部署自动化脚本</li>
+<li>制定发票提交规范</li>
+<li>建立异常处理流程</li>
+</ol>
+<p><strong>结果</strong>：</p>
+<ul>
+<li>财务部门效率提升 10 倍</li>
+<li>加班费减少 80%</li>
+<li>错误率降低 90%</li>
+<li>员工满意度大幅提升</li>
+</ul>
+<p><strong>老板说</strong>：&ldquo;小丽，你来做自动化项目负责人。&rdquo;</p>
+<h3 id="第四阶段获得回报第-4-个月">第四阶段：获得回报（第 4 个月）</h3>
+<p><strong>加薪谈话</strong>：</p>
+<p><strong>老板</strong>：&ldquo;小丽，这几个月你的表现大家都看到了。你不仅自己提升了效率，还带动了整个部门。公司决定给你加薪 50%，从下个月开始生效。&rdquo;</p>
+<p><strong>小丽</strong>：&ldquo;谢谢老板！我会继续努力，把更多工作自动化。&rdquo;</p>
+<p><strong>从月薪 6000 到 9000</strong>，只用了 4 个月。</p>
+<p><strong>靠的不是加班，而是技能。</strong></p>
+<hr>
+<h2 id="-财务人学-python-的-roi投资回报率">📊 财务人学 Python 的 ROI（投资回报率）</h2>
+<p><strong>投入</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>时间</th>
+          <th>成本</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Python 基础</td>
+          <td>1 周 × 1 小时/天</td>
+          <td>0 元（B 站免费教程）</td>
+      </tr>
+      <tr>
+          <td>poocr 库学习</td>
+          <td>1 小时</td>
+          <td>0 元</td>
+      </tr>
+      <tr>
+          <td>实战练习</td>
+          <td>1 天</td>
+          <td>0 元</td>
+      </tr>
+      <tr>
+          <td>腾讯云 API</td>
+          <td>-</td>
+          <td>0 元（免费额度）</td>
+      </tr>
+      <tr>
+          <td><strong>总计</strong></td>
+          <td><strong>约 10 小时</strong></td>
+          <td><strong>0 元</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>回报</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>价值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>工作效率提升</td>
+          <td>每天节省 2 小时</td>
+      </tr>
+      <tr>
+          <td>不再加班</td>
+          <td>每月多休 40 小时</td>
+      </tr>
+      <tr>
+          <td>获得老板认可</td>
+          <td>升职加薪机会</td>
+      </tr>
+      <tr>
+          <td>职业竞争力</td>
+          <td>不可替代性</td>
+      </tr>
+      <tr>
+          <td><strong>保守估计</strong></td>
+          <td><strong>加薪 3000 元/月</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>ROI 计算</strong>：</p>
+<pre tabindex="0"><code>年收益：3000 × 12 = 36000 元
+投入时间：10 小时
+时薪回报：36000 ÷ 10 = 3600 元/小时
+</code></pre><p><strong>这可能是你人生中 ROI 最高的一次学习投资。</strong></p>
+<hr>
+<h2 id="-财务人为什么要学-python">🎯 财务人为什么要学 Python？</h2>
+<h3 id="原因-1重复工作太多">原因 1：重复工作太多</h3>
+<p><strong>财务日常</strong>：</p>
+<ul>
+<li>录入发票</li>
+<li>对账</li>
+<li>做报表</li>
+<li>整理数据</li>
+</ul>
+<p><strong>这些工作</strong>：</p>
+<ul>
+<li>重复</li>
+<li>耗时</li>
+<li>容易出错</li>
+<li>价值低</li>
+</ul>
+<p><strong>Python 能做的</strong>：</p>
+<ul>
+<li>自动录入</li>
+<li>自动对账</li>
+<li>自动生成报表</li>
+<li>自动整理数据</li>
+</ul>
+<p><strong>把你从重复劳动中解放出来</strong>，去做更有价值的分析和决策。</p>
+<h3 id="原因-2职业天花板低">原因 2：职业天花板低</h3>
+<p><strong>传统财务路径</strong>：</p>
+<pre tabindex="0"><code>出纳 → 会计 → 主管 → 经理
+</code></pre><p><strong>问题</strong>：</p>
+<ul>
+<li>晋升慢</li>
+<li>竞争激烈</li>
+<li>可替代性强</li>
+</ul>
+<p><strong>会 Python 的财务路径</strong>：</p>
+<pre tabindex="0"><code>财务 → 财务自动化专家 → 财务数据分析师 → 财务总监
+</code></pre><p><strong>优势</strong>：</p>
+<ul>
+<li>差异化竞争</li>
+<li>不可替代</li>
+<li>薪资更高</li>
+</ul>
+<h3 id="原因-3行业在变化">原因 3：行业在变化</h3>
+<p><strong>趋势</strong>：</p>
+<ul>
+<li>电子发票普及</li>
+<li>财务共享中心兴起</li>
+<li>RPA（机器人流程自动化）应用</li>
+<li>AI 在财务领域渗透</li>
+</ul>
+<p><strong>不变的是</strong>：</p>
+<ul>
+<li>业务理解</li>
+<li>数据分析</li>
+<li>决策支持</li>
+</ul>
+<p><strong>会变的是</strong>：</p>
+<ul>
+<li>工具（从 Excel 到 Python）</li>
+<li>效率（从手动到自动）</li>
+<li>价值（从录入到分析）</li>
+</ul>
+<p><strong>适应变化的人，才能生存。</strong></p>
+<hr>
+<h2 id="-给财务人的学习建议">💡 给财务人的学习建议</h2>
+<h3 id="建议-1从痛点开始">建议 1：从痛点开始</h3>
+<p>不要为了学 Python 而学 Python。</p>
+<p><strong>找一个你每天最痛的工作</strong>：</p>
+<ul>
+<li>发票录入</li>
+<li>银行对账</li>
+<li>报表合并</li>
+</ul>
+<p><strong>然后用 Python 解决它</strong>。</p>
+<p><strong>解决了痛点</strong>，你就有动力继续学。</p>
+<h3 id="建议-2边学边用">建议 2：边学边用</h3>
+<p>不要等学完了再用。</p>
+<p><strong>学一点，用一点</strong>：</p>
+<ul>
+<li>今天学了变量，就用变量存储发票金额</li>
+<li>明天学了循环，就用循环处理多张发票</li>
+<li>后天学了文件操作，就自动读取发票 PDF</li>
+</ul>
+<p><strong>在实践中学习</strong>，进步最快。</p>
+<h3 id="建议-3找组织">建议 3：找组织</h3>
+<p>一个人学容易放弃。</p>
+<p><strong>找组织</strong>：</p>
+<ul>
+<li>加入 Python 学习群</li>
+<li>关注财务自动化公众号</li>
+<li>参加线下 meetup</li>
+</ul>
+<p><strong>我们也有交流群</strong>（文末有二维码），里面有很多财务朋友在学 Python。</p>
+<h3 id="建议-4不要怕犯错">建议 4：不要怕犯错</h3>
+<p><strong>初学者常见心态</strong>：</p>
+<ul>
+<li>&ldquo;我代码写错了怎么办？&rdquo;</li>
+<li>&ldquo;我把数据弄丢了怎么办？&rdquo;</li>
+<li>&ldquo;我太笨了学不会怎么办？&rdquo;</li>
+</ul>
+<p><strong>真相</strong>：</p>
+<ul>
+<li>代码错了可以改</li>
+<li>数据可以备份</li>
+<li>没有人天生就会</li>
+</ul>
+<p><strong>小丽说</strong>：&ldquo;我刚开始学的时候，一个缩进错误能调试 1 小时。现在回头看，那都是宝贵的经验。&rdquo;</p>
+<hr>
+<h2 id="-学习资源">📚 学习资源</h2>
+<p><strong>技能地址</strong>：</p>
+<ul>
+<li>ClawHub: <a href="https://clawhub.ai/CoderWanFeng/poocr-vatinvoice2excel">https://clawhub.ai/CoderWanFeng/poocr-vatinvoice2excel</a></li>
+</ul>
+<p><strong>Python 入门</strong>：</p>
+<ul>
+<li>B 站：搜索&quot;Python 入门&quot;（免费教程很多）</li>
+<li>书籍：《Python 编程从入门到实践》</li>
+<li>网站：菜鸟教程（https://www.runoob.com/python3/）</li>
+</ul>
+<p><strong>财务自动化</strong>：</p>
+<ul>
+<li>公众号：程序员晚枫</li>
+<li>课程：文末有推荐</li>
+</ul>
+<p><strong>交流群</strong>：</p>
+<ul>
+<li>微信：扫码加好友，拉你进群</li>
+</ul>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<hr>
+<h2 id="-推荐课程">🎓 推荐课程</h2>
+<ul>
+<li>
+<p><strong><a href="https://mp.weixin.qq.com/s/xT6p7mHu5o6aMAqeuXQTXg">龙虾安装课（9 元）</a></strong>
+从软件下载、环境配置到完整部署。</p>
+</li>
+<li>
+<p><strong><a href="https://mp.weixin.qq.com/s/UKSwPXVKIeCn4Gh_Spkdfw">龙虾高级课（199 元，前 50 名优惠）</a></strong>
+0 基础也能学，从基础操作到进阶用法。</p>
+</li>
+</ul>
+<hr>
+<p><strong>财务人的未来，不在于你录入了多少发票，而在于你能用工具创造多少价值。</strong></p>
+<p>小丽做到了，你也可以。</p>
+<p><strong>从今天开始，学 Python，用自动化解放自己。</strong></p>
+<p><strong>下一个加薪的，就是你。</strong> 💪</p>
+<hr>
+<p><em>P.S. 小丽最近又在学数据分析了，她说：下一步要做财务预测模型。</em></p>
+<p><em>这就是成长的样子：不停止，不满足，一直向前。</em></p>
+<p><em>与你共勉。</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260317102300-%E8%85%BE%E8%AE%AF%E4%BA%91-ocr&#43;python-%E7%8E%8B%E7%82%B8%E8%BF%99%E4%B8%AA%E5%8F%91%E7%A5%A8%E8%AF%86%E5%88%AB%E6%8A%80%E8%83%BD%E5%A4%AA%E9%A6%99%E4%BA%86/">上一篇：腾讯云 OCR&#43;Python=王炸！这个发票识别技能太香了</a>
+        
+        
+        <a href="http://localhost:4002/20260317102500-%E5%8F%91%E7%A5%A8%E5%A4%AA%E5%A4%9A%E5%BD%95%E4%B8%8D%E5%AE%8C%E8%BF%99%E4%B8%AA%E5%BC%80%E6%BA%90%E6%8A%80%E8%83%BD%E8%AE%A9%E4%BD%A0%E5%87%86%E6%97%B6%E4%B8%8B%E7%8F%AD/">下一篇：发票太多录不完？这个开源技能让你准时下班</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

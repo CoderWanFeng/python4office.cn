@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pandas数据清洗：我用这3种方法，5秒找出并清理所有重复数据 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Pandas数据清洗：我用这3种方法，5秒找出并清理所有重复数据</h1>
+        <div class="post-meta">
+            <span>2026-02-28 23:50</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/pandas/" class="tag">Pandas</a>
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/" class="tag">数据清洗</a>
+            
+            <a href="/tags/%E9%87%8D%E5%A4%8D%E5%80%BC/" class="tag">重复值</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天继续数据清洗的话题——<strong>处理重复值</strong>。</p>
+<p>重复数据会导致统计结果失真，在分析前必须处理。Pandas提供了强大的工具，让你轻松找出并清理重复项。</p>
+<hr>
+<h2 id="创建示例数据">创建示例数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;姓名&#39;</span>: [<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;赵六&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;年龄&#39;</span>: [<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">28</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;城市&#39;</span>: [<span style="color:#e6db74">&#39;北京&#39;</span>, <span style="color:#e6db74">&#39;上海&#39;</span>, <span style="color:#e6db74">&#39;广州&#39;</span>, <span style="color:#e6db74">&#39;北京&#39;</span>, <span style="color:#e6db74">&#39;上海&#39;</span>, <span style="color:#e6db74">&#39;深圳&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;薪资&#39;</span>: [<span style="color:#ae81ff">15000</span>, <span style="color:#ae81ff">20000</span>, <span style="color:#ae81ff">18000</span>, <span style="color:#ae81ff">15000</span>, <span style="color:#ae81ff">22000</span>, <span style="color:#ae81ff">16000</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(df)
+</span></span></code></pre></div><hr>
+<h2 id="检测重复值">检测重复值</h2>
+<h3 id="完全重复的行">完全重复的行</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 标记重复行（保留第一个）</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>duplicated())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 统计重复行数量</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>duplicated()<span style="color:#f92672">.</span>sum())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看重复的行</span>
+</span></span><span style="display:flex;"><span>duplicates <span style="color:#f92672">=</span> df[df<span style="color:#f92672">.</span>duplicated()]
+</span></span><span style="display:flex;"><span>print(duplicates)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 包括所有重复（不只是后面的）</span>
+</span></span><span style="display:flex;"><span>all_duplicates <span style="color:#f92672">=</span> df[df<span style="color:#f92672">.</span>duplicated(keep<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)]
+</span></span><span style="display:flex;"><span>print(all_duplicates)
+</span></span></code></pre></div><h3 id="基于特定列判断重复">基于特定列判断重复</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 只看姓名是否重复</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>duplicated(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名&#39;</span>]))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 看姓名+年龄组合是否重复</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>duplicated(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名&#39;</span>, <span style="color:#e6db74">&#39;年龄&#39;</span>]))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 统计每个姓名的出现次数</span>
+</span></span><span style="display:flex;"><span>print(df[<span style="color:#e6db74">&#39;姓名&#39;</span>]<span style="color:#f92672">.</span>value_counts())
+</span></span></code></pre></div><hr>
+<h2 id="删除重复值">删除重复值</h2>
+<h3 id="方法1保留第一个默认">方法1：保留第一个（默认）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 删除完全重复的行，保留第一次出现的</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 等价于</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>)
+</span></span></code></pre></div><h3 id="方法2保留最后一个">方法2：保留最后一个</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 保留最后一次出现的，删除前面的</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;last&#39;</span>)
+</span></span></code></pre></div><h3 id="方法3全部删除">方法3：全部删除</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 只要有重复就全部删除（一个不留）</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(keep<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><h3 id="基于特定列去重">基于特定列去重</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 按姓名去重（只看姓名，其他列不管）</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按多列组合去重</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名&#39;</span>, <span style="color:#e6db74">&#39;城市&#39;</span>])
+</span></span></code></pre></div><hr>
+<h2 id="实战场景">实战场景</h2>
+<h3 id="场景1用户注册数据去重">场景1：用户注册数据去重</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>users <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user_id&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;username&#39;</span>: [<span style="color:#e6db74">&#39;alice&#39;</span>, <span style="color:#e6db74">&#39;bob&#39;</span>, <span style="color:#e6db74">&#39;charlie&#39;</span>, <span style="color:#e6db74">&#39;alice&#39;</span>, <span style="color:#e6db74">&#39;david&#39;</span>, <span style="color:#e6db74">&#39;bob_new&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;email&#39;</span>: [<span style="color:#e6db74">&#39;alice@example.com&#39;</span>, <span style="color:#e6db74">&#39;bob@example.com&#39;</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#39;charlie@example.com&#39;</span>, <span style="color:#e6db74">&#39;alice@example.com&#39;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#39;david@example.com&#39;</span>, <span style="color:#e6db74">&#39;bob2@example.com&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;register_time&#39;</span>: [<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, <span style="color:#e6db74">&#39;2024-01-02&#39;</span>, <span style="color:#e6db74">&#39;2024-01-03&#39;</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">&#39;2024-01-05&#39;</span>, <span style="color:#e6db74">&#39;2024-01-06&#39;</span>, <span style="color:#e6db74">&#39;2024-01-07&#39;</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按user_id去重，保留最新的记录</span>
+</span></span><span style="display:flex;"><span>users[<span style="color:#e6db74">&#39;register_time&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(users[<span style="color:#e6db74">&#39;register_time&#39;</span>])
+</span></span><span style="display:flex;"><span>users <span style="color:#f92672">=</span> users<span style="color:#f92672">.</span>sort_values(<span style="color:#e6db74">&#39;register_time&#39;</span>)  <span style="color:#75715e"># 先排序</span>
+</span></span><span style="display:flex;"><span>users_clean <span style="color:#f92672">=</span> users<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;user_id&#39;</span>], keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;last&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;去重后:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(users_clean)
+</span></span></code></pre></div><h3 id="场景2订单数据合并重复">场景2：订单数据合并重复</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;order_id&#39;</span>: [<span style="color:#e6db74">&#39;A001&#39;</span>, <span style="color:#e6db74">&#39;A002&#39;</span>, <span style="color:#e6db74">&#39;A001&#39;</span>, <span style="color:#e6db74">&#39;A003&#39;</span>, <span style="color:#e6db74">&#39;A002&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;product&#39;</span>: [<span style="color:#e6db74">&#39;iPhone&#39;</span>, <span style="color:#e6db74">&#39;iPad&#39;</span>, <span style="color:#e6db74">&#39;iPhone&#39;</span>, <span style="color:#e6db74">&#39;MacBook&#39;</span>, <span style="color:#e6db74">&#39;iPad&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quantity&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>],  <span style="color:#75715e"># 注意：A002的数量不同</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;price&#39;</span>: [<span style="color:#ae81ff">6999</span>, <span style="color:#ae81ff">4999</span>, <span style="color:#ae81ff">6999</span>, <span style="color:#ae81ff">9999</span>, <span style="color:#ae81ff">4999</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 策略1：简单去重（可能丢失信息）</span>
+</span></span><span style="display:flex;"><span>orders_simple <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;order_id&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 策略2：合并重复（累加数量）</span>
+</span></span><span style="display:flex;"><span>orders_merged <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;order_id&#39;</span>, <span style="color:#e6db74">&#39;product&#39;</span>, <span style="color:#e6db74">&#39;price&#39;</span>])[<span style="color:#e6db74">&#39;quantity&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>reset_index()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;原始数据:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(orders)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">合并后:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(orders_merged)
+</span></span></code></pre></div><hr>
+<h2 id="高级技巧">高级技巧</h2>
+<h3 id="标记重复但不删除">标记重复但不删除</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 添加一列标记是否重复</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;is_duplicate&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>duplicated(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名&#39;</span>, <span style="color:#e6db74">&#39;年龄&#39;</span>], keep<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看重复组的大小</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;dup_count&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;姓名&#39;</span>, <span style="color:#e6db74">&#39;年龄&#39;</span>])[<span style="color:#e6db74">&#39;姓名&#39;</span>]<span style="color:#f92672">.</span>transform(<span style="color:#e6db74">&#39;count&#39;</span>)
+</span></span></code></pre></div><h3 id="查找最完整的记录">查找最完整的记录</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 有时重复行的某些字段有缺失，想保留最完整的</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 计算每行非空值数量</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;non_null_count&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>notnull()<span style="color:#f92672">.</span>sum(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按姓名分组，保留非空值最多的行</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> (df<span style="color:#f92672">.</span>sort_values(<span style="color:#e6db74">&#39;non_null_count&#39;</span>, ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名&#39;</span>], keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>))
+</span></span></code></pre></div><h3 id="模糊匹配去重">模糊匹配去重</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 姓名可能有细微差别（如空格、大小写）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;姓名_clean&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;姓名&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名_clean&#39;</span>])
+</span></span></code></pre></div><hr>
+<h2 id="完整清洗流程">完整清洗流程</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">clean_duplicates</span>(df, subset<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    清洗重复值的完整函数
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        df: DataFrame
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        subset: 用于判断重复的列列表
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        strategy: &#39;first&#39;, &#39;last&#39;, False(全部删除)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        清洗后的DataFrame和报告
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    original_count <span style="color:#f92672">=</span> len(df)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 检测重复</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> subset:
+</span></span><span style="display:flex;"><span>        dup_mask <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>duplicated(subset<span style="color:#f92672">=</span>subset, keep<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        dup_mask <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>duplicated(keep<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    dup_count <span style="color:#f92672">=</span> dup_mask<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 删除重复</span>
+</span></span><span style="display:flex;"><span>    df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>subset, keep<span style="color:#f92672">=</span>strategy)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 生成报告</span>
+</span></span><span style="display:flex;"><span>    report <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;原始行数&#39;</span>: original_count,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;重复行数&#39;</span>: dup_count,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;删除行数&#39;</span>: original_count <span style="color:#f92672">-</span> len(df_clean),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;剩余行数&#39;</span>: len(df_clean)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> df_clean, report
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>df_clean, report <span style="color:#f92672">=</span> clean_duplicates(df, subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;姓名&#39;</span>, <span style="color:#e6db74">&#39;年龄&#39;</span>], strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;清洗报告:&#34;</span>, report)
+</span></span></code></pre></div><hr>
+<h3 id="性能对比不同去重方式">性能对比：不同去重方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;id&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">100000</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;value&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">100000</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;date&#39;</span>: pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;min&#39;</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式1：完全去重</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>drop_duplicates()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：基于列去重</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;id&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式3：保留最后一个</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;id&#39;</span>], keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;last&#39;</span>)
+</span></span></code></pre></div><h2 id="进阶用法">进阶用法</h2>
+<h3 id="条件去重">条件去重</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 每个用户保留最新一条记录</span>
+</span></span><span style="display:flex;"><span>df_latest <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>sort_values(<span style="color:#e6db74">&#39;date&#39;</span>)<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;user_id&#39;</span>, keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;last&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 每个用户保留金额最大的一条</span>
+</span></span><span style="display:flex;"><span>df_max <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>sort_values(<span style="color:#e6db74">&#39;amount&#39;</span>, ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;user_id&#39;</span>, keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用agg实现更灵活的去重</span>
+</span></span><span style="display:flex;"><span>df_dedup <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;user_id&#39;</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;amount&#39;</span>: <span style="color:#e6db74">&#39;sum&#39;</span>,    <span style="color:#75715e"># 汇总金额</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;date&#39;</span>: <span style="color:#e6db74">&#39;last&#39;</span>,     <span style="color:#75715e"># 最新日期</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;status&#39;</span>: <span style="color:#e6db74">&#39;first&#39;</span>   <span style="color:#75715e"># 最早状态</span>
+</span></span><span style="display:flex;"><span>})<span style="color:#f92672">.</span>reset_index()
+</span></span></code></pre></div><h3 id="模糊去重">模糊去重</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 名字相似但不完全相同的记录</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> difflib <span style="color:#f92672">import</span> get_close_matches
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>names <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;name&#39;</span>]<span style="color:#f92672">.</span>unique()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> names:
+</span></span><span style="display:flex;"><span>    matches <span style="color:#f92672">=</span> get_close_matches(name, names, n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, cutoff<span style="color:#f92672">=</span><span style="color:#ae81ff">0.8</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(matches) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;可能重复: </span><span style="color:#e6db74">{</span>matches<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1去重后索引不连续">❌ 坑1：去重后索引不连续</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df_dedup <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates()
+</span></span><span style="display:flex;"><span>print(df_dedup<span style="color:#f92672">.</span>index)  <span style="color:#75715e"># [0, 1, 3, 5, 7, ...] 不连续！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 重置索引</span>
+</span></span><span style="display:flex;"><span>df_dedup <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates()<span style="color:#f92672">.</span>reset_index(drop<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h3 id="-坑2忽略nan的重复检测">❌ 坑2：忽略NaN的重复检测</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># NaN与NaN不被认为是相同的</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;A&#39;</span>: [<span style="color:#ae81ff">1</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">1</span>, np<span style="color:#f92672">.</span>nan], <span style="color:#e6db74">&#39;B&#39;</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>]})
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>duplicated())
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 0    False</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1    False  ← NaN行不算重复</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2     True</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3    False  ← NaN行不算重复</span>
+</span></span></code></pre></div><h2 id="实战案例清洗用户注册数据">实战案例：清洗用户注册数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模拟含重复的用户数据</span>
+</span></span><span style="display:flex;"><span>base_users <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;email&#39;</span>: [<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;user</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">@example.com&#39;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3000</span>)],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;name&#39;</span>: [<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;用户</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">:</span><span style="color:#e6db74">04d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3000</span>)],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;phone&#39;</span>: [<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;138</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">:</span><span style="color:#e6db74">08d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3000</span>)],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;city&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;北京&#39;</span>, <span style="color:#e6db74">&#39;上海&#39;</span>, <span style="color:#e6db74">&#39;广州&#39;</span>, <span style="color:#e6db74">&#39;深圳&#39;</span>], <span style="color:#ae81ff">3000</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 随机添加重复行</span>
+</span></span><span style="display:flex;"><span>duplicates <span style="color:#f92672">=</span> base_users<span style="color:#f92672">.</span>sample(<span style="color:#ae81ff">500</span>, replace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([base_users, duplicates], ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>sample(frac<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>reset_index(drop<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)  <span style="color:#75715e"># 打乱顺序</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;原始数据: </span><span style="color:#e6db74">{</span>len(df)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 行&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;重复行数: </span><span style="color:#e6db74">{</span>df<span style="color:#f92672">.</span>duplicated()<span style="color:#f92672">.</span>sum()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 完全重复的去重</span>
+</span></span><span style="display:flex;"><span>df1 <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">完全去重后: </span><span style="color:#e6db74">{</span>len(df1)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 行&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 按email去重（保留最早注册的）</span>
+</span></span><span style="display:flex;"><span>df2 <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;email&#39;</span>, keep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;按email去重后: </span><span style="color:#e6db74">{</span>len(df2)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 行&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 查看重复的email</span>
+</span></span><span style="display:flex;"><span>dup_emails <span style="color:#f92672">=</span> df[df<span style="color:#f92672">.</span>duplicated(subset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;email&#39;</span>, keep<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">重复email详情:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(dup_emails<span style="color:#f92672">.</span>sort_values(<span style="color:#e6db74">&#39;email&#39;</span>)<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">10</span>))
+</span></span></code></pre></div><h3 id="重复值产生的常见原因">重复值产生的常见原因</h3>
+<ol>
+<li><strong>数据采集重复</strong>：日志系统重复采集</li>
+<li><strong>用户重复提交</strong>：前端没有防重复提交</li>
+<li><strong>多源数据合并</strong>：同一用户在不同表中都有记录</li>
+<li><strong>时间窗口重叠</strong>：昨天和今天的数据有交叉</li>
+</ol>
+<h3 id="重复值的深层分析">重复值的深层分析</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 不只是简单去重，还要分析重复的原因</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 查看重复模式</span>
+</span></span><span style="display:flex;"><span>duplicates <span style="color:#f92672">=</span> df[df<span style="color:#f92672">.</span>duplicated(keep<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;重复记录数: </span><span style="color:#e6db74">{</span>len(duplicates)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 按字段组合检查重复</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;email&#39;</span>, <span style="color:#e6db74">&#39;phone&#39;</span>, <span style="color:#e6db74">&#39;id_card&#39;</span>]:
+</span></span><span style="display:flex;"><span>    dup_count <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>duplicated(subset<span style="color:#f92672">=</span>col)<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>col<span style="color:#e6db74">}</span><span style="color:#e6db74">重复: </span><span style="color:#e6db74">{</span>dup_count<span style="color:#e6db74">}</span><span style="color:#e6db74">条&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 重复记录的时间分布</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;created_at&#39;</span> <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>columns:
+</span></span><span style="display:flex;"><span>    df[<span style="color:#e6db74">&#39;created_at&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;created_at&#39;</span>])
+</span></span><span style="display:flex;"><span>    dup_by_date <span style="color:#f92672">=</span> df[df<span style="color:#f92672">.</span>duplicated(keep<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)]<span style="color:#f92672">.</span>groupby(df[<span style="color:#e6db74">&#39;created_at&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>date)<span style="color:#f92672">.</span>size()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;重复记录的日期分布:&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(dup_by_date)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 完全重复 vs 部分重复</span>
+</span></span><span style="display:flex;"><span>full_dup <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>duplicated()<span style="color:#f92672">.</span>sum()  <span style="color:#75715e"># 所有字段都重复</span>
+</span></span><span style="display:flex;"><span>partial_dup <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>duplicated(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;email&#39;</span>])<span style="color:#f92672">.</span>sum()  <span style="color:#75715e"># 部分字段重复</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;完全重复: </span><span style="color:#e6db74">{</span>full_dup<span style="color:#e6db74">}</span><span style="color:#e6db74">, 部分重复(email): </span><span style="color:#e6db74">{</span>partial_dup<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h3 id="重复值处理决策指南">重复值处理决策指南</h3>
+<pre tabindex="0"><code>发现重复值
+    │
+    ├── 完全重复（所有字段一样）→ 直接删除
+    │
+    ├── 部分重复（关键字段一样）
+    │   ├── 保留哪条？
+    │   │   ├── 保留最新 → keep=&#39;last&#39;
+    │   │   ├── 保留最早 → keep=&#39;first&#39;
+    │   │   └── 都不保留 → keep=False
+    │   └── 删除前先分析原因
+    │
+    └── 模糊重复（相似但不完全一样）
+        ├── 名字拼写差异 → 标准化后去重
+        ├── 地址格式差异 → 统一格式后去重
+        └── 编码差异 → 映射表统一后去重
+</code></pre><h3 id="重复值的预防">重复值的预防</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 1. 读取时指定唯一键约束</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;data.csv&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> df[<span style="color:#e6db74">&#39;id&#39;</span>]<span style="color:#f92672">.</span>is_unique, <span style="color:#e6db74">&#34;ID列有重复值！&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 写入前检查重复</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">safe_to_csv</span>(df, path, unique_cols<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> unique_cols:
+</span></span><span style="display:flex;"><span>        dups <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>duplicated(subset<span style="color:#f92672">=</span>unique_cols)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> dups<span style="color:#f92672">.</span>any():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;警告: </span><span style="color:#e6db74">{</span>dups<span style="color:#f92672">.</span>sum()<span style="color:#e6db74">}</span><span style="color:#e6db74">条重复记录&#34;</span>)
+</span></span><span style="display:flex;"><span>            df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates(subset<span style="color:#f92672">=</span>unique_cols)
+</span></span><span style="display:flex;"><span>    df<span style="color:#f92672">.</span>to_csv(path, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一课我们将学习<strong>数据类型转换</strong>，掌握如何正确处理不同类型的数据。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235101-Pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%BC%82%E5%B8%B8%E5%80%BC%E5%A4%84%E7%90%86/">继续阅读：Pandas数据清洗-类型转换与异常值处理</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228234901-Pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E5%A4%84%E7%90%86%E7%BC%BA%E5%A4%B1%E5%80%BC/">Pandas数据清洗-处理缺失值</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235101-Pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%BC%82%E5%B8%B8%E5%80%BC%E5%A4%84%E7%90%86/">Pandas数据清洗-类型转换与异常值处理</a></p>
+<hr>
+<p><em>PS：重复值处理看似简单，但要根据业务场景选择合适的策略。建议总是先备份数据再操作。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260228234901-pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E5%A4%84%E7%90%86%E7%BC%BA%E5%A4%B1%E5%80%BC/">上一篇：Pandas数据清洗：我总结了5种处理缺失值的策略，数据质量提升90%</a>
+        
+        
+        <a href="http://localhost:4002/20260228235101-pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%BC%82%E5%B8%B8%E5%80%BC%E5%A4%84%E7%90%86/">下一篇：Pandas数据清洗：我总结了类型转换的5个坑，帮你避开90%的错误</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

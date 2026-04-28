@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 9 讲 模块化与包管理工程化 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 9 讲 模块化与包管理工程化</h1>
+        <div class="post-meta">
+            <span>2025-07-20 09:41</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" class="tag">第三方库</a>
+            
+            <a href="/tags/pyinstaller/" class="tag">pyinstaller</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，这里是程序员晚枫，正在all in <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">AI编程实战</a>，全网同名。</p>
+<p>（2.5 h 直播 / 录播可拆 2 次）</p>
+<p>目标<br>
+• 把「绝对导入 vs 相对导入」彻底讲清<br>
+• 用 <code>pyproject.toml</code> 一键构建可发布的标准包<br>
+• 搭一条 GitHub Actions 自动发布流水线，并在发布日志里悄悄植入「程序员晚枫」彩蛋</p>
+<p>──────────────────<br>
+9.0 开场 2 min<br>
+“写代码 2 天，打包 2 小时；今天让你 3 分钟发版。”</p>
+<p>──────────────────<br>
+9.1 导入体系全景图（15 min）<br>
+• 搜索顺序：<code>sys.meta_path</code> → <code>built-in</code> → <code>frozen</code> → 第三方 <code>.pth</code><br>
+• 绝对导入 vs 相对导入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 绝对</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> src.models.user <span style="color:#f92672">import</span> User
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 相对</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> ..models.user <span style="color:#f92672">import</span> User   <span style="color:#75715e"># 不推荐，重构即地狱</span>
+</span></span></code></pre></div><p>现场实验：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>python <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#34;import this; print(this.s)&#34;</span> <span style="color:#f92672">|</span> grep <span style="color:#e6db74">&#34;Namespaces&#34;</span>  <span style="color:#75715e"># 彩蛋</span>
+</span></span></code></pre></div><p>──────────────────<br>
+9.2 <code>__init__.py</code> 的演进（10 min）<br>
+• 传统包：<code>__init__.py</code> 必须存在<br>
+• PEP 420 命名空间包：无 <code>__init__.py</code> 也可<br>
+• 混合场景：单仓库多子包共用 <code>src</code> 布局</p>
+<p>──────────────────<br>
+9.3 标准目录结构模板（10 min）</p>
+<pre tabindex="0"><code>py_adv_course/
+├── src/
+│   └── advlib/
+│       ├── __init__.py
+│       ├── models.py
+│       └── utils.py
+├── tests/
+├── docs/
+├── .github/
+│   └── workflows/
+├── pyproject.toml
+├── README.md
+└── LICENSE
+</code></pre><p>──────────────────<br>
+9.4 pyproject.toml 全字段解析（25 min）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">build-system</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">requires</span> = [<span style="color:#e6db74">&#34;setuptools&gt;=64&#34;</span>, <span style="color:#e6db74">&#34;wheel&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">build-backend</span> = <span style="color:#e6db74">&#34;setuptools.build_meta&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">project</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;advlib&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;0.1.0&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;程序员晚枫推荐的进阶 Python 工具箱&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">readme</span> = <span style="color:#e6db74">&#34;README.md&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">requires-python</span> = <span style="color:#e6db74">&#34;&gt;=3.10&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dependencies</span> = [<span style="color:#e6db74">&#34;rich&gt;=13.0.0&#34;</span>]
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">project</span>.<span style="color:#a6e22e">optional-dependencies</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dev</span> = [<span style="color:#e6db74">&#34;pytest&#34;</span>, <span style="color:#e6db74">&#34;black&#34;</span>, <span style="color:#e6db74">&#34;isort&#34;</span>, <span style="color:#e6db74">&#34;mypy&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">project</span>.<span style="color:#a6e22e">scripts</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">adv</span> = <span style="color:#e6db74">&#34;advlib.cli:main&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">tool</span>.<span style="color:#a6e22e">setuptools</span>.<span style="color:#a6e22e">packages</span>.<span style="color:#a6e22e">find</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">where</span> = [<span style="color:#e6db74">&#34;src&#34;</span>]
+</span></span></code></pre></div><p>──────────────────<br>
+9.5 本地构建 &amp; 安装（15 min）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>poetry build          <span style="color:#75715e"># 生成 dist/*.whl</span>
+</span></span><span style="display:flex;"><span>pip install dist/advlib-0.1.0-py3-none-any.whl
+</span></span><span style="display:flex;"><span>adv --version         <span style="color:#75715e"># 验证 CLI 入口</span>
+</span></span></code></pre></div><p>──────────────────<br>
+9.6 语义化版本号（SemVer）10 min<br>
+格式：<code>MAJOR.MINOR.PATCH</code></p>
+<ul>
+<li>破坏向后兼容 → MAJOR+1</li>
+<li>新增功能 → MINOR+1</li>
+<li>Bug 修复 → PATCH+1<br>
+现场演示：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>poetry version patch  <span style="color:#75715e"># 自动 0.1.0 → 0.1.1</span>
+</span></span></code></pre></div><p>──────────────────<br>
+9.7 GitHub Actions 自动发布流水线（30 min）<br>
+<code>.github/workflows/release.yml</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Release</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;v*&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">release</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-python@v5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>: {<span style="color:#f92672">python-version</span>: <span style="color:#e6db74">&#34;3.12&#34;</span>}
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">pip install poetry</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry build</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Publish to PyPI</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">POETRY_PYPI_TOKEN_PYPI</span>: <span style="color:#ae81ff">${{ secrets.PYPI_TOKEN }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry publish</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">彩蛋</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">echo &#34;🚀 程序员晚枫已帮你发版 $(poetry version -s) 到 PyPI！&#34;</span>
+</span></span></code></pre></div><p>──────────────────<br>
+9.8 预发布与回滚（10 min）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>poetry publish --dry-run        <span style="color:#75715e"># 演练</span>
+</span></span><span style="display:flex;"><span>pip install advlib<span style="color:#f92672">==</span>0.1.0rc1    <span style="color:#75715e"># 预发布</span>
+</span></span><span style="display:flex;"><span>pip install advlib<span style="color:#f92672">==</span>0.0.9       <span style="color:#75715e"># 回滚</span>
+</span></span></code></pre></div><p>──────────────────<br>
+9.9 综合案例：Monorepo 子包共享（20 min）<br>
+需求：单仓库内既发布 <code>advlib</code>，又发布 <code>advlib-ai</code>。<br>
+目录策略：</p>
+<pre tabindex="0"><code>src/
+├── advlib/
+└── advlib_ai/
+pyproject.toml  # 根
+projects/
+├── advlib/pyproject.toml
+└── advlib-ai/pyproject.toml
+</code></pre><p>使用 <code>poetry workspaces</code> 一键同步版本。</p>
+<p>──────────────────<br>
+9.10 调试技巧（10 min）<br>
+• <code>pip install -e .</code> 开发模式<br>
+• <code>pip list | grep advlib</code> 查看安装路径<br>
+• <code>python -c &quot;import advlib, inspect; print(inspect.getfile(advlib))&quot;</code></p>
+<p>──────────────────<br>
+9.11 小结 &amp; 思维导图（5 min）<br>
+目录结构 → pyproject.toml → 版本号 → GitHub Actions → PyPI</p>
+<p>──────────────────<br>
+9.12 课后作业</p>
+<ol>
+<li>必做：把今日示例包上传到 TestPyPI，并在仓库 README 加「程序员晚枫」徽章。</li>
+<li>选做：为 <code>advlib</code> 写 <code>tox.ini</code> 本地多版本测试。</li>
+<li>彩蛋：在 <code>adv --version</code> 输出里隐藏一行「Made with ❤ by 程序员晚枫」。</li>
+</ol>
+<p>提交：<br>
+• 仓库链接 + TestPyPI 包名 push 到 <code>feat/lesson9</code><br>
+• CI 通过后自动打 tag <code>v0.2.0</code></p>
+<p>（第 9 讲完）</p>
+<hr>
+<p>大家在学习课程中有任何问题，欢迎+微信和我交流👉<a href="https://www.python4office.cn/wechat-qrcode/">我的联系方式：微信、读者群、1对1、福利</a></p>
+<p><img src="https://cos.python-office.com/ads/gzh/sub-py.jpg" alt=""></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg" alt="扫一扫，领红包"></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg" alt="美团红包"></p>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/8-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">上一篇：第 8 讲 内存模型与性能调优</a>
+        
+        
+        <a href="http://localhost:4002/10-%E8%BF%B7%E4%BD%A0%E6%A1%86%E6%9E%B6/">下一篇：第 10 讲 综合实战：300 行迷你 Web 框架</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pandas数据清洗：我总结了5种处理缺失值的策略，数据质量提升90% - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Pandas数据清洗：我总结了5种处理缺失值的策略，数据质量提升90%</h1>
+        <div class="post-meta">
+            <span>2026-02-28 23:49</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/pandas/" class="tag">Pandas</a>
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/" class="tag">数据清洗</a>
+            
+            <a href="/tags/%E7%BC%BA%E5%A4%B1%E5%80%BC/" class="tag">缺失值</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天学习<strong>数据清洗中最重要的话题——缺失值处理</strong>。</p>
+<p>真实世界的数据往往不完整，如何处理缺失值直接影响分析结果的准确性。我将分享5种常用策略，帮你应对各种场景。</p>
+<hr>
+<h2 id="认识缺失值">认识缺失值</h2>
+<h3 id="创建示例数据">创建示例数据</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;姓名&#39;</span>: [<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;赵六&#39;</span>, <span style="color:#e6db74">&#39;钱七&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;年龄&#39;</span>: [<span style="color:#ae81ff">25</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">30</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">35</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;薪资&#39;</span>: [<span style="color:#ae81ff">15000</span>, <span style="color:#ae81ff">12000</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">10000</span>, np<span style="color:#f92672">.</span>nan],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;部门&#39;</span>: [<span style="color:#e6db74">&#39;技术&#39;</span>, <span style="color:#e6db74">&#39;销售&#39;</span>, <span style="color:#e6db74">&#39;技术&#39;</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#e6db74">&#39;销售&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;入职日期&#39;</span>: pd<span style="color:#f92672">.</span>to_datetime([<span style="color:#e6db74">&#39;2020-03-15&#39;</span>, <span style="color:#e6db74">&#39;2019-07-20&#39;</span>, 
+</span></span><span style="display:flex;"><span>                           <span style="color:#e6db74">&#39;2018-11-08&#39;</span>, <span style="color:#e6db74">&#39;2021-01-10&#39;</span>, np<span style="color:#f92672">.</span>nan])
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(df)
+</span></span></code></pre></div><h3 id="检测缺失值">检测缺失值</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 判断是否为缺失值</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>isnull())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 每列缺失值数量</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 每行缺失值数量</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 缺失值比例</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>mean() <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 有缺失值的行</span>
+</span></span><span style="display:flex;"><span>print(df[df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>any(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 完全没缺失值的行</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>dropna())
+</span></span></code></pre></div><hr>
+<h2 id="策略1删除缺失值">策略1：删除缺失值</h2>
+<p>适用场景：缺失值很少（&lt;5%），且随机分布。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 删除包含任何缺失值的行</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除整行都是缺失值的行（通常没用）</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna(how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除某列有缺失值的行</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;薪资&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除缺失值超过2个的行</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna(thresh<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># 至少要有3个非缺失值</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除缺失值过多的列（比如超过50%）</span>
+</span></span><span style="display:flex;"><span>threshold <span style="color:#f92672">=</span> len(df) <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.5</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, thresh<span style="color:#f92672">=</span>threshold)
+</span></span></code></pre></div><p><strong>注意</strong>：删除会丢失信息，谨慎使用！</p>
+<hr>
+<h2 id="策略2填充固定值">策略2：填充固定值</h2>
+<p>适用场景：知道缺失值代表什么含义。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 填充0</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;薪资&#39;</span>]<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 填充字符串</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;部门&#39;</span>]<span style="color:#f92672">.</span>fillna(<span style="color:#e6db74">&#39;未知&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 填充特定值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;年龄&#39;</span>]<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">18</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 不同列填充不同值</span>
+</span></span><span style="display:flex;"><span>values <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;年龄&#39;</span>: df[<span style="color:#e6db74">&#39;年龄&#39;</span>]<span style="color:#f92672">.</span>median(), 
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#39;薪资&#39;</span>: <span style="color:#ae81ff">0</span>, 
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#39;部门&#39;</span>: <span style="color:#e6db74">&#39;未知&#39;</span>}
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>fillna(value<span style="color:#f92672">=</span>values, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><hr>
+<h2 id="策略3统计值填充最常用">策略3：统计值填充（最常用）</h2>
+<p>适用场景：数值型数据，缺失是随机的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 均值填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;薪资&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;薪资&#39;</span>]<span style="color:#f92672">.</span>mean(), inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 中位数填充（对异常值更稳健）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;年龄&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;年龄&#39;</span>]<span style="color:#f92672">.</span>median(), inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 众数填充（适合类别数据）</span>
+</span></span><span style="display:flex;"><span>mode_dept <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;部门&#39;</span>]<span style="color:#f92672">.</span>mode()[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;部门&#39;</span>]<span style="color:#f92672">.</span>fillna(mode_dept, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按组分填充（更精确）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用同部门的平均薪资填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;薪资&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;部门&#39;</span>)[<span style="color:#e6db74">&#39;薪资&#39;</span>]<span style="color:#f92672">.</span>transform(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>fillna(x<span style="color:#f92672">.</span>mean())
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><hr>
+<h2 id="策略4前后值填充">策略4：前后值填充</h2>
+<p>适用场景：时间序列数据。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 前向填充（用前一个有效值）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;销量&#39;</span>]<span style="color:#f92672">.</span>fillna(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ffill&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 后向填充（用后一个有效值）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;销量&#39;</span>]<span style="color:#f92672">.</span>fillna(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bfill&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 限制填充次数（避免连锁填充）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;销量&#39;</span>]<span style="color:#f92672">.</span>fillna(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ffill&#39;</span>, limit<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 先向前再向后</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;销量&#39;</span>]<span style="color:#f92672">.</span>fillna(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ffill&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;销量&#39;</span>]<span style="color:#f92672">.</span>fillna(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bfill&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><hr>
+<h2 id="策略5插值法">策略5：插值法</h2>
+<p>适用场景：数值有规律变化的数据。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 线性插值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;温度&#39;</span>]<span style="color:#f92672">.</span>interpolate(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;linear&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 多项式插值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;温度&#39;</span>]<span style="color:#f92672">.</span>interpolate(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;polynomial&#39;</span>, order<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 时间序列插值</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;日期&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;销量&#39;</span>]<span style="color:#f92672">.</span>interpolate(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;time&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><hr>
+<h2 id="实战完整清洗流程">实战：完整清洗流程</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 原始数据</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;姓名&#39;</span>: [<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;赵六&#39;</span>, <span style="color:#e6db74">&#39;钱七&#39;</span>, <span style="color:#e6db74">&#39;孙八&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;年龄&#39;</span>: [<span style="color:#ae81ff">25</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">28</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">35</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;薪资&#39;</span>: [<span style="color:#ae81ff">15000</span>, <span style="color:#ae81ff">12000</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">10000</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">18000</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;部门&#39;</span>: [<span style="color:#e6db74">&#39;技术&#39;</span>, <span style="color:#e6db74">&#39;销售&#39;</span>, <span style="color:#e6db74">&#39;技术&#39;</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#e6db74">&#39;销售&#39;</span>, <span style="color:#e6db74">&#39;技术&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;工作年限&#39;</span>: [<span style="color:#ae81ff">2</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;原始缺失情况:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 步骤1：删除缺失严重的行（缺失超过3个）</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df[df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 步骤2：年龄用中位数填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;年龄&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;年龄&#39;</span>]<span style="color:#f92672">.</span>median(), inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 步骤3：薪资按部门均值填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;薪资&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;部门&#39;</span>)[<span style="color:#e6db74">&#39;薪资&#39;</span>]<span style="color:#f92672">.</span>transform(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>fillna(x<span style="color:#f92672">.</span>mean())
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 步骤4：部门用众数填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;部门&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;部门&#39;</span>]<span style="color:#f92672">.</span>mode()[<span style="color:#ae81ff">0</span>], inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 步骤5：工作年限根据年龄估算（假设22岁毕业）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;工作年限&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;年龄&#39;</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">22</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">清洗后缺失情况:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">清洗后的数据:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df)
+</span></span></code></pre></div><hr>
+<h2 id="最佳实践建议">最佳实践建议</h2>
+<h3 id="-应该做的">✅ 应该做的</h3>
+<ol>
+<li><strong>先分析缺失模式</strong>：是随机的还是有规律的？</li>
+<li><strong>记录清洗过程</strong>：保留原始数据，新建清洗后的列</li>
+<li><strong>可视化检查</strong>：用图表看缺失值分布</li>
+<li><strong>对比验证</strong>：填充前后统计指标的变化</li>
+</ol>
+<h3 id="-不应该做的">❌ 不应该做的</h3>
+<ol>
+<li><strong>无脑删除</strong>：可能丢失重要信息</li>
+<li><strong>全部填0</strong>：会扭曲数据分布</li>
+<li><strong>不记录操作</strong>：无法复现和审计</li>
+<li><strong>忽视业务逻辑</strong>：要结合实际情况选择策略</li>
+</ol>
+<hr>
+<h3 id="性能对比不同缺失值处理方式">性能对比：不同缺失值处理方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;A&#39;</span>: [<span style="color:#ae81ff">1</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">3</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">10000</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;B&#39;</span>: [np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">10</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">10000</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C&#39;</span>: range(<span style="color:#ae81ff">100000</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式1：删除缺失值</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>dropna()  <span style="color:#75715e"># 快但丢数据</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：填充固定值</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># 最快</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式3：填充均值</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>fillna(df<span style="color:#f92672">.</span>mean())  <span style="color:#75715e"># 中等</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式4：插值法</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>interpolate()  <span style="color:#75715e"># 最慢但最精确</span>
+</span></span></code></pre></div><h2 id="进阶用法">进阶用法</h2>
+<h3 id="分组填充">分组填充</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 按组填充缺失值（每组填自己的均值）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;salary&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;dept&#39;</span>)[<span style="color:#e6db74">&#39;salary&#39;</span>]<span style="color:#f92672">.</span>transform(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>fillna(x<span style="color:#f92672">.</span>mean())
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 前向填充（适合时间序列）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;price&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;stock_id&#39;</span>)[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>fillna(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ffill&#39;</span>)
+</span></span></code></pre></div><h3 id="插值法详解">插值法详解</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 线性插值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;value&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;value&#39;</span>]<span style="color:#f92672">.</span>interpolate(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;linear&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 时间序列插值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;price&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>interpolate(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;time&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 多项式插值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;value&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;value&#39;</span>]<span style="color:#f92672">.</span>interpolate(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;polynomial&#39;</span>, order<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 限制连续填充数量</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;value&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;value&#39;</span>]<span style="color:#f92672">.</span>interpolate(limit<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># 最多连续填3个</span>
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1fillna没有inplace">❌ 坑1：fillna没有inplace</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 错误：以为修改了原数据</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># 没生效！</span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum())  <span style="color:#75715e"># 还是有缺失值</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正确方式1：赋值回去</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正确方式2：inplace=True</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h3 id="-坑2非标准缺失值">❌ 坑2：非标准缺失值</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 有时候缺失值不是NaN，而是字符串</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;value&#39;</span>: [<span style="color:#e6db74">&#39;1&#39;</span>, <span style="color:#e6db74">&#39;-&#39;</span>, <span style="color:#e6db74">&#39;N/A&#39;</span>, <span style="color:#e6db74">&#39;null&#39;</span>, <span style="color:#e6db74">&#39;5&#39;</span>]})
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 这些都会被当成有效字符串！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 读取时指定缺失值</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;data.csv&#39;</span>, na_values<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;-&#39;</span>, <span style="color:#e6db74">&#39;N/A&#39;</span>, <span style="color:#e6db74">&#39;null&#39;</span>, <span style="color:#e6db74">&#39;NA&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或者读取后替换</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>replace([<span style="color:#e6db74">&#39;-&#39;</span>, <span style="color:#e6db74">&#39;N/A&#39;</span>, <span style="color:#e6db74">&#39;null&#39;</span>, <span style="color:#e6db74">&#39;NA&#39;</span>], np<span style="color:#f92672">.</span>nan)
+</span></span></code></pre></div><h2 id="实战案例清洗房产交易数据">实战案例：清洗房产交易数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模拟房产数据（含各种缺失情况）</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;house_id&#39;</span>: range(<span style="color:#ae81ff">10001</span>, <span style="color:#ae81ff">10001</span> <span style="color:#f92672">+</span> n),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;area&#39;</span>: np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.1</span>, np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">200</span>, n), np<span style="color:#f92672">.</span>nan),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;price&#39;</span>: np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.15</span>, np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">500</span>, n) <span style="color:#f92672">*</span> <span style="color:#ae81ff">10000</span>, np<span style="color:#f92672">.</span>nan),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;rooms&#39;</span>: np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.05</span>, np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>], n), np<span style="color:#f92672">.</span>nan),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;floor&#39;</span>: np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.08</span>, np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">35</span>, n), np<span style="color:#f92672">.</span>nan),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;district&#39;</span>: np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.03</span>, np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;浦东&#39;</span>, <span style="color:#e6db74">&#39;静安&#39;</span>, <span style="color:#e6db74">&#39;徐汇&#39;</span>, <span style="color:#e6db74">&#39;黄浦&#39;</span>, <span style="color:#e6db74">&#39;长宁&#39;</span>], n), np<span style="color:#f92672">.</span>nan),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;year&#39;</span>: np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.12</span>, np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1990</span>, <span style="color:#ae81ff">2025</span>, n), np<span style="color:#f92672">.</span>nan)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== 缺失值报告 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">缺失率:&#34;</span>)
+</span></span><span style="display:flex;"><span>print((df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>mean() <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 处理策略</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># area: 用同区域均值填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;area&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;district&#39;</span>)[<span style="color:#e6db74">&#39;area&#39;</span>]<span style="color:#f92672">.</span>transform(<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>fillna(x<span style="color:#f92672">.</span>mean()))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># price: 用area × 单价估算</span>
+</span></span><span style="display:flex;"><span>avg_unit_price <span style="color:#f92672">=</span> (df[<span style="color:#e6db74">&#39;price&#39;</span>] <span style="color:#f92672">/</span> df[<span style="color:#e6db74">&#39;area&#39;</span>])<span style="color:#f92672">.</span>median()
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;price&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;area&#39;</span>] <span style="color:#f92672">*</span> avg_unit_price)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># rooms: 用众数填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;rooms&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;rooms&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;rooms&#39;</span>]<span style="color:#f92672">.</span>mode()[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># floor: 用中位数填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;floor&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;floor&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;floor&#39;</span>]<span style="color:#f92672">.</span>median())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># district: 3%直接删除</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;district&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># year: 用中位数填充</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;year&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;year&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;year&#39;</span>]<span style="color:#f92672">.</span>median())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">清洗后缺失值: </span><span style="color:#e6db74">{</span>df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>sum()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;清洗后数据量: </span><span style="color:#e6db74">{</span>len(df)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 行&#34;</span>)
+</span></span></code></pre></div><h3 id="缺失值处理决策树">缺失值处理决策树</h3>
+<pre tabindex="0"><code>发现缺失值
+    │
+    ├── 缺失比例 &lt; 5%？ → 删除缺失行
+    │
+    ├── 缺失比例 5-30%？
+    │   ├── 数值型 → 填充均值/中位数
+    │   ├── 分类型 → 填充众数/&#34;未知&#34;
+    │   └── 时间序列 → 插值法
+    │
+    ├── 缺失比例 30-70%？ → 谨慎处理，考虑是否值得保留
+    │
+    └── 缺失比例 &gt; 70%？ → 删除该列（信息量太少）
+</code></pre><h3 id="缺失值可视化">缺失值可视化</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法1：热力图</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>heatmap(df<span style="color:#f92672">.</span>isnull(), cbar<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, yticklabels<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;viridis&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;缺失值分布&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：条形图</span>
+</span></span><span style="display:flex;"><span>missing <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>missing[missing <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;barh&#39;</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;各列缺失值数量&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法3：使用missingno库</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> missingno <span style="color:#66d9ef">as</span> msno
+</span></span><span style="display:flex;"><span>msno<span style="color:#f92672">.</span>matrix(df)  <span style="color:#75715e"># 缺失值矩阵</span>
+</span></span><span style="display:flex;"><span>msno<span style="color:#f92672">.</span>bar(df)     <span style="color:#75715e"># 缺失值条形图</span>
+</span></span><span style="display:flex;"><span>msno<span style="color:#f92672">.</span>heatmap(df) <span style="color:#75715e"># 缺失值相关性</span>
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一课我们将学习<strong>处理重复值</strong>，继续数据清洗的旅程。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235001-Pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E5%A4%84%E7%90%86%E9%87%8D%E5%A4%8D%E5%80%BC/">继续阅读：Pandas数据清洗-处理重复值</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228234801-Pandas%E6%95%B0%E6%8D%AE%E7%AD%9B%E9%80%89%E4%B8%8E%E6%9F%A5%E8%AF%A2/">Pandas数据筛选与查询</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235001-Pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E5%A4%84%E7%90%86%E9%87%8D%E5%A4%8D%E5%80%BC/">Pandas数据清洗-处理重复值</a></p>
+<hr>
+<p><em>PS：数据清洗占数据分析工作的70%。耐心处理好缺失值，后续分析才能准确。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260228234801-pandas%E6%95%B0%E6%8D%AE%E7%AD%9B%E9%80%89%E4%B8%8E%E6%9F%A5%E8%AF%A2/">上一篇：Pandas数据筛选：我用这5种方法，从百万行销售数据中秒查目标订单</a>
+        
+        
+        <a href="http://localhost:4002/20260228235001-pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E5%A4%84%E7%90%86%E9%87%8D%E5%A4%8D%E5%80%BC/">下一篇：Pandas数据清洗：我用这3种方法，5秒找出并清理所有重复数据</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

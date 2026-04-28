@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#34;第23讲：项目实战 - 财务智能助手开发实现&#34; - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>&#34;第23讲：项目实战 - 财务智能助手开发实现&#34;</h1>
+        <div class="post-meta">
+            <span>0001-01-01 00:00</span>
+            
+            <span> · </span>
+            
+            <span class="category">AI Skills 课程</span>
+            
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/ai-skill/" class="tag">AI Skill</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/" class="tag">项目实战</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/%E8%B4%A2%E5%8A%A1/" class="tag">财务</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <h1 id="第23讲项目实战---财务智能助手开发实现">第23讲：项目实战 - 财务智能助手开发实现</h1>
+<blockquote>
+<p>实现财务智能助手的核心功能，包括发票识别、报表生成和数据处理。</p>
+</blockquote>
+<h2 id="一项目结构">一、项目结构</h2>
+<pre tabindex="0"><code>finance_assistant/
+├── __init__.py
+├── main.py              # 入口
+├── config.py            # 配置
+├── models/              # 数据模型
+│   ├── __init__.py
+│   ├── invoice.py       # 发票模型
+│   └── report.py        # 报表模型
+├── services/            # 业务服务
+│   ├── __init__.py
+│   ├── ocr_service.py   # OCR服务
+│   ├── invoice_service.py
+│   └── report_service.py
+├── utils/               # 工具函数
+│   ├── __init__.py
+│   ├── db.py           # 数据库
+│   └── excel.py        # Excel处理
+└── templates/           # 报表模板
+    ├── balance_sheet.xlsx
+    └── income_statement.xlsx
+</code></pre><h2 id="二核心代码实现">二、核心代码实现</h2>
+<h3 id="21-发票识别服务">2.1 发票识别服务</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># services/invoice_service.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Dict, List
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InvoiceService</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;发票服务&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, ocr_service, db):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>ocr <span style="color:#f92672">=</span> ocr_service
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>db <span style="color:#f92672">=</span> db
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">recognize_invoice</span>(self, image_path: str) <span style="color:#f92672">-&gt;</span> Dict:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;识别发票&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 1. OCR识别</span>
+</span></span><span style="display:flex;"><span>        raw_text <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>ocr<span style="color:#f92672">.</span>recognize(image_path)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 2. 提取结构化信息</span>
+</span></span><span style="display:flex;"><span>        invoice_info <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_extract_invoice_info(raw_text)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 3. 验证发票</span>
+</span></span><span style="display:flex;"><span>        validation <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_validate_invoice(invoice_info)
+</span></span><span style="display:flex;"><span>        invoice_info[<span style="color:#e6db74">&#39;validation&#39;</span>] <span style="color:#f92672">=</span> validation
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 4. 保存到数据库</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>db<span style="color:#f92672">.</span>save_invoice(invoice_info)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> invoice_info
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_extract_invoice_info</span>(self, text: str) <span style="color:#f92672">-&gt;</span> Dict:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;提取发票信息&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        info <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;invoice_code&#39;</span>: self<span style="color:#f92672">.</span>_extract_pattern(text, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;发票代码[:：]\s*(\d</span><span style="color:#e6db74">{12}</span><span style="color:#e6db74">)&#39;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;invoice_number&#39;</span>: self<span style="color:#f92672">.</span>_extract_pattern(text, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;发票号码[:：]\s*(\d{8,20})&#39;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;date&#39;</span>: self<span style="color:#f92672">.</span>_extract_date(text),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;buyer_name&#39;</span>: self<span style="color:#f92672">.</span>_extract_buyer(text),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;buyer_tax_id&#39;</span>: self<span style="color:#f92672">.</span>_extract_pattern(text, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;购买方.*纳税人识别号[:：]\s*([A-Z0-9]+)&#39;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;seller_name&#39;</span>: self<span style="color:#f92672">.</span>_extract_seller(text),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;seller_tax_id&#39;</span>: self<span style="color:#f92672">.</span>_extract_pattern(text, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;销售方.*纳税人识别号[:：]\s*([A-Z0-9]+)&#39;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;amount&#39;</span>: self<span style="color:#f92672">.</span>_extract_amount(text),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;tax&#39;</span>: self<span style="color:#f92672">.</span>_extract_tax(text),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;total&#39;</span>: self<span style="color:#f92672">.</span>_extract_total(text),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;items&#39;</span>: self<span style="color:#f92672">.</span>_extract_items(text)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> info
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_extract_pattern</span>(self, text: str, pattern: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;正则提取&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern, text, re<span style="color:#f92672">.</span>DOTALL)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>strip() <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_extract_date</span>(self, text: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;提取日期&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        patterns <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">年\d{1,2}月\d{1,2}日)&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">)&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">/\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">/\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">)&#39;</span>
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> pattern <span style="color:#f92672">in</span> patterns:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern, text)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_validate_invoice</span>(self, info: Dict) <span style="color:#f92672">-&gt;</span> Dict:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;验证发票&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        errors <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> info[<span style="color:#e6db74">&#39;invoice_code&#39;</span>]:
+</span></span><span style="display:flex;"><span>            errors<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;缺少发票代码&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> info[<span style="color:#e6db74">&#39;invoice_number&#39;</span>]:
+</span></span><span style="display:flex;"><span>            errors<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;缺少发票号码&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> info[<span style="color:#e6db74">&#39;amount&#39;</span>]:
+</span></span><span style="display:flex;"><span>            errors<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;缺少金额信息&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 检查是否重复</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>db<span style="color:#f92672">.</span>check_duplicate(info<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;invoice_code&#39;</span>), info<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;invoice_number&#39;</span>)):
+</span></span><span style="display:flex;"><span>            errors<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;发票已存在&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;is_valid&#39;</span>: len(errors) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;errors&#39;</span>: errors
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query_invoices</span>(self, start_date: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, end_date: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>                      buyer_name: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> List[Dict]:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;查询发票&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>db<span style="color:#f92672">.</span>query_invoices(start_date, end_date, buyer_name)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_statistics</span>(self, month: str) <span style="color:#f92672">-&gt;</span> Dict:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;获取月度统计&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>db<span style="color:#f92672">.</span>get_invoice_statistics(month)
+</span></span></code></pre></div><h3 id="22-报表生成服务">2.2 报表生成服务</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># services/report_service.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> openpyxl <span style="color:#f92672">import</span> load_workbook
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Dict
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReportService</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;报表服务&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, db, template_dir: str):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>db <span style="color:#f92672">=</span> db
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>template_dir <span style="color:#f92672">=</span> template_dir
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_balance_sheet</span>(self, year: int, month: int) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成资产负债表&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 1. 加载模板</span>
+</span></span><span style="display:flex;"><span>        template_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(self<span style="color:#f92672">.</span>template_dir, <span style="color:#e6db74">&#39;balance_sheet.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>        wb <span style="color:#f92672">=</span> load_workbook(template_path)
+</span></span><span style="display:flex;"><span>        ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 2. 获取数据</span>
+</span></span><span style="display:flex;"><span>        data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>db<span style="color:#f92672">.</span>get_balance_sheet_data(year, month)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 3. 填充数据</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_fill_balance_sheet(ws, data)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 4. 保存</span>
+</span></span><span style="display:flex;"><span>        output_path <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;资产负债表_</span><span style="color:#e6db74">{</span>year<span style="color:#e6db74">}</span><span style="color:#e6db74">年</span><span style="color:#e6db74">{</span>month<span style="color:#e6db74">}</span><span style="color:#e6db74">月.xlsx&#34;</span>
+</span></span><span style="display:flex;"><span>        wb<span style="color:#f92672">.</span>save(output_path)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> output_path
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_fill_balance_sheet</span>(self, ws, data: Dict):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;填充资产负债表&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 流动资产</span>
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B5&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;cash&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B6&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;receivables&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B7&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;inventory&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 非流动资产</span>
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B12&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;fixed_assets&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B13&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;intangible_assets&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 流动负债</span>
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;E5&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;short_term_loans&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;E6&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;payables&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 所有者权益</span>
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;E15&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;paid_in_capital&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;E16&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;retained_earnings&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_income_statement</span>(self, year: int, month: int) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成利润表&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        template_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(self<span style="color:#f92672">.</span>template_dir, <span style="color:#e6db74">&#39;income_statement.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>        wb <span style="color:#f92672">=</span> load_workbook(template_path)
+</span></span><span style="display:flex;"><span>        ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>db<span style="color:#f92672">.</span>get_income_data(year, month)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 填充数据</span>
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B3&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;revenue&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B4&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;cost&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B6&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;gross_profit&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B8&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;operating_expenses&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B10&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;operating_profit&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;B16&#39;</span>] <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;net_profit&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        output_path <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;利润表_</span><span style="color:#e6db74">{</span>year<span style="color:#e6db74">}</span><span style="color:#e6db74">年</span><span style="color:#e6db74">{</span>month<span style="color:#e6db74">}</span><span style="color:#e6db74">月.xlsx&#34;</span>
+</span></span><span style="display:flex;"><span>        wb<span style="color:#f92672">.</span>save(output_path)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> output_path
+</span></span></code></pre></div><h3 id="23-skill-主类">2.3 Skill 主类</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># main.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Dict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FinanceAssistantSkill</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;财务智能助手 Skill&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>db <span style="color:#f92672">=</span> Database()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>ocr_service <span style="color:#f92672">=</span> OCRService()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>invoice_service <span style="color:#f92672">=</span> InvoiceService(self<span style="color:#f92672">.</span>ocr_service, self<span style="color:#f92672">.</span>db)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>report_service <span style="color:#f92672">=</span> ReportService(self<span style="color:#f92672">.</span>db, <span style="color:#e6db74">&#39;./templates&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">handle_message</span>(self, message: str, context: Dict) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;处理用户消息&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        intent <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_classify_intent(message)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> intent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;recognize_invoice&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;请上传发票图片，我将为您识别发票信息。&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> intent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;generate_report&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_handle_report_request(message)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> intent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;query_invoice&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_handle_invoice_query(message)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> intent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;statistics&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_handle_statistics(message)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_handle_qa(message)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">handle_file</span>(self, file_path: str, context: Dict) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;处理文件上传&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 识别发票</span>
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>invoice_service<span style="color:#f92672">.</span>recognize_invoice(file_path)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> result[<span style="color:#e6db74">&#39;validation&#39;</span>][<span style="color:#e6db74">&#39;is_valid&#39;</span>]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">发票识别成功！
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 发票代码：</span><span style="color:#e6db74">{</span>result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;invoice_code&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 发票号码：</span><span style="color:#e6db74">{</span>result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;invoice_number&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 开票日期：</span><span style="color:#e6db74">{</span>result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;date&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 销售方：</span><span style="color:#e6db74">{</span>result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;seller_name&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 金额：¥</span><span style="color:#e6db74">{</span>result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;amount&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 税额：¥</span><span style="color:#e6db74">{</span>result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;tax&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 价税合计：¥</span><span style="color:#e6db74">{</span>result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;total&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;&#34;&#34;</span><span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            errors <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>join(result[<span style="color:#e6db74">&#39;validation&#39;</span>][<span style="color:#e6db74">&#39;errors&#39;</span>])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;发票识别完成，但存在以下问题：</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">{</span>errors<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_classify_intent</span>(self, message: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;意图分类&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        keywords <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;recognize_invoice&#39;</span>: [<span style="color:#e6db74">&#39;识别发票&#39;</span>, <span style="color:#e6db74">&#39;录入发票&#39;</span>, <span style="color:#e6db74">&#39;发票识别&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;generate_report&#39;</span>: [<span style="color:#e6db74">&#39;生成报表&#39;</span>, <span style="color:#e6db74">&#39;报表&#39;</span>, <span style="color:#e6db74">&#39;资产负债表&#39;</span>, <span style="color:#e6db74">&#39;利润表&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;query_invoice&#39;</span>: [<span style="color:#e6db74">&#39;查询发票&#39;</span>, <span style="color:#e6db74">&#39;查找发票&#39;</span>, <span style="color:#e6db74">&#39;发票查询&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;statistics&#39;</span>: [<span style="color:#e6db74">&#39;统计&#39;</span>, <span style="color:#e6db74">&#39;汇总&#39;</span>, <span style="color:#e6db74">&#39;分析&#39;</span>]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> intent, words <span style="color:#f92672">in</span> keywords<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> any(word <span style="color:#f92672">in</span> message <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> intent
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;qa&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_handle_report_request</span>(self, message: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;处理报表请求&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 提取年月</span>
+</span></span><span style="display:flex;"><span>        year_match <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">)年&#39;</span>, message)
+</span></span><span style="display:flex;"><span>        month_match <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d{1,2})月&#39;</span>, message)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        year <span style="color:#f92672">=</span> int(year_match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)) <span style="color:#66d9ef">if</span> year_match <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">2024</span>
+</span></span><span style="display:flex;"><span>        month <span style="color:#f92672">=</span> int(month_match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)) <span style="color:#66d9ef">if</span> month_match <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;资产负债&#39;</span> <span style="color:#f92672">in</span> message:
+</span></span><span style="display:flex;"><span>            report_path <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>report_service<span style="color:#f92672">.</span>generate_balance_sheet(year, month)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;资产负债表已生成：</span><span style="color:#e6db74">{</span>report_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#e6db74">&#39;利润&#39;</span> <span style="color:#f92672">in</span> message:
+</span></span><span style="display:flex;"><span>            report_path <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>report_service<span style="color:#f92672">.</span>generate_income_statement(year, month)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;利润表已生成：</span><span style="color:#e6db74">{</span>report_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;请指定要生成的报表类型（资产负债表/利润表）&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_handle_invoice_query</span>(self, message: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;处理发票查询&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 简化实现，实际应提取查询条件</span>
+</span></span><span style="display:flex;"><span>        invoices <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>invoice_service<span style="color:#f92672">.</span>query_invoices(limit<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> invoices:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;未找到发票记录&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;最近的发票记录：</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> inv <span style="color:#f92672">in</span> invoices:
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">+=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;- </span><span style="color:#e6db74">{</span>inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;date&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;seller_name&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74"> ¥</span><span style="color:#e6db74">{</span>inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;amount&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_handle_statistics</span>(self, message: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;处理统计请求&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        month_match <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">)年(\d{1,2})月&#39;</span>, message)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> month_match:
+</span></span><span style="display:flex;"><span>            year <span style="color:#f92672">=</span> int(month_match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>            month <span style="color:#f92672">=</span> int(month_match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>            month_str <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>year<span style="color:#e6db74">}</span><span style="color:#e6db74">-</span><span style="color:#e6db74">{</span>month<span style="color:#e6db74">:</span><span style="color:#e6db74">02d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            month_str <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        stats <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>invoice_service<span style="color:#f92672">.</span>get_statistics(month_str)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{</span>month_str<span style="color:#e6db74">}</span><span style="color:#e6db74"> 发票统计：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 发票数量：</span><span style="color:#e6db74">{</span>stats<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;count&#39;</span>, <span style="color:#ae81ff">0</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 张
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 总金额：¥</span><span style="color:#e6db74">{</span>stats<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;total_amount&#39;</span>, <span style="color:#ae81ff">0</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">,.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 总税额：¥</span><span style="color:#e6db74">{</span>stats<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;total_tax&#39;</span>, <span style="color:#ae81ff">0</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">,.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 价税合计：¥</span><span style="color:#e6db74">{</span>stats<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;total_with_tax&#39;</span>, <span style="color:#ae81ff">0</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">,.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span><span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_handle_qa</span>(self, message: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;处理问答&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 简单的问答响应</span>
+</span></span><span style="display:flex;"><span>        faq <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;怎么使用&#39;</span>: <span style="color:#e6db74">&#39;您可以上传发票图片让我识别，或者让我生成财务报表。&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;支持哪些功能&#39;</span>: <span style="color:#e6db74">&#39;目前支持发票识别、报表生成、发票查询和统计分析。&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;数据安全吗&#39;</span>: <span style="color:#e6db74">&#39;您的数据仅保存在本地，不会上传到云端。&#39;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> faq<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> message:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> value
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;抱歉，我不太理解您的问题。您可以问&#34;</span>怎么使用<span style="color:#e6db74">&#34;或&#34;</span>支持哪些功能<span style="color:#e6db74">&#34;。&#34;</span>
+</span></span></code></pre></div><h2 id="三部署配置">三、部署配置</h2>
+<h3 id="31-coze-配置">3.1 Coze 配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># coze_config.yaml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">bot_name</span>: <span style="color:#e6db74">&#34;财务智能助手&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;自动化财务处理助手，支持发票识别、报表生成等功能&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">skills</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">recognize_invoice</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;识别发票信息&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">generate_report</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;生成财务报表&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">query_invoice</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;查询发票记录&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">plugins</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">ocr</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">excel</span>
+</span></span></code></pre></div><h2 id="四测试验证">四、测试验证</h2>
+<h3 id="41-单元测试">4.1 单元测试</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># tests/test_invoice.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> unittest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> services.invoice_service <span style="color:#f92672">import</span> InvoiceService
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestInvoiceService</span>(unittest<span style="color:#f92672">.</span>TestCase):
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">setUp</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>service <span style="color:#f92672">=</span> InvoiceService(MockOCR(), MockDB())
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_extract_invoice_code</span>(self):
+</span></span><span style="display:flex;"><span>        text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;发票代码：123456789012&#34;</span>
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>service<span style="color:#f92672">.</span>_extract_pattern(text, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;发票代码[:：]\s*(\d</span><span style="color:#e6db74">{12}</span><span style="color:#e6db74">)&#39;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertEqual(result, <span style="color:#e6db74">&#39;123456789012&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_validate_invoice</span>(self):
+</span></span><span style="display:flex;"><span>        info <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;invoice_code&#39;</span>: <span style="color:#e6db74">&#39;123456789012&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;invoice_number&#39;</span>: <span style="color:#e6db74">&#39;12345678&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;amount&#39;</span>: <span style="color:#e6db74">&#39;1000.00&#39;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        validation <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>service<span style="color:#f92672">.</span>_validate_invoice(info)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertTrue(validation[<span style="color:#e6db74">&#39;is_valid&#39;</span>])
+</span></span></code></pre></div><h2 id="五总结">五、总结</h2>
+<p>通过本项目，我们实践了：</p>
+<ul>
+<li>完整的 Skill 开发流程</li>
+<li>OCR 在财务场景的应用</li>
+<li>Excel 报表自动生成</li>
+<li>对话式交互设计</li>
+</ul>
+<h2 id="六下节预告">六、下节预告</h2>
+<p>下一讲我们将开始 <strong>HR 智能助手项目</strong> 的需求分析。</p>
+<hr>
+<h2 id="加入学习群">加入学习群</h2>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">加入AI编程学习交流群</a></strong></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" alt="点击加入"></p>
+<hr>
+<p><em>本讲是《AI Skills 从入门到实践》系列课程的第23讲。</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260406-24-hr-req/">上一篇：&#34;第24讲：项目实战 - HR智能助手需求分析&#34;</a>
+        
+        
+        <a href="http://localhost:4002/20260406-22-finance-req/">下一篇：&#34;第22讲：项目实战 - 财务智能助手需求分析&#34;</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

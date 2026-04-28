@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python正则表达式：我用这10个模式，搞定了90%的文本处理需求 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python正则表达式：我用这10个模式，搞定了90%的文本处理需求</h1>
+        <div class="post-meta">
+            <span>2026-02-28 19:03</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%9F%BA%E7%A1%80/" class="tag">Python基础</a>
+            
+            <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="tag">正则表达式</a>
+            
+            <a href="/tags/%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" class="tag">文本处理</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种AI项目的程序员晚枫。</p>
+<p>今天聊一个让新手望而生畏、但学会后威力无穷的技能——<strong>正则表达式（Regular Expression）</strong>。</p>
+<hr>
+<h2 id="一个真实的文本处理灾难">一个真实的文本处理灾难</h2>
+<p>去年有个学员问我：&ldquo;晚枫老师，我要从10万个HTML文件中提取邮箱地址，怎么办？&rdquo;</p>
+<p>他写的代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 提取邮箱（笨办法）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_emails</span>(text):
+</span></span><span style="display:flex;"><span>    emails <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 找@</span>
+</span></span><span style="display:flex;"><span>    at_pos <span style="color:#f92672">=</span> text<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;@&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 往前找开头</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 往后找结尾</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 检查是否合法</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ... 写了100多行代码</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> emails
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 10万个文件，跑了一个小时</span>
+</span></span></code></pre></div><p><strong>用正则表达式</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_emails</span>(text):
+</span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> re<span style="color:#f92672">.</span>findall(pattern, text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 10万个文件，10分钟搞定</span>
+</span></span></code></pre></div><p>你可能觉得正则很难记、很晦涩。但其实只要掌握最常用的10个模式，就能搞定90%的文本处理需求。</p>
+<p>这篇文章总结了我在数据处理中最常用的正则技巧，帮你快速上手。</p>
+<hr>
+<h2 id="为什么要学正则">为什么要学正则？</h2>
+<h3 id="正则-vs-传统方法">正则 vs 传统方法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 需求：从文本中提取所有数字</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法1：不用正则（痛苦）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_numbers</span>(text):
+</span></span><span style="display:flex;"><span>    numbers <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    current <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> text:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> char<span style="color:#f92672">.</span>isdigit():
+</span></span><span style="display:flex;"><span>            current <span style="color:#f92672">+=</span> char
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> current:
+</span></span><span style="display:flex;"><span>                numbers<span style="color:#f92672">.</span>append(int(current))
+</span></span><span style="display:flex;"><span>                current <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> current:
+</span></span><span style="display:flex;"><span>        numbers<span style="color:#f92672">.</span>append(int(current))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> numbers
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：用正则（一行搞定）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [int(n) <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>, text)]
+</span></span></code></pre></div><p><strong>正则就是文本处理的瑞士军刀。</strong></p>
+<h3 id="正则能做什么">正则能做什么？</h3>
+<ul>
+<li>✅ 数据提取：邮箱、电话、URL、价格等</li>
+<li>✅ 数据验证：格式检查、输入校验</li>
+<li>✅ 数据清洗：去除多余空格、标点、特殊字符</li>
+<li>✅ 数据转换：格式化、替换、重命名</li>
+<li>✅ 日志分析：提取关键信息、错误定位</li>
+</ul>
+<hr>
+<h2 id="python中的正则模块">Python中的正则模块</h2>
+<h3 id="核心函数">核心函数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. match() - 从开头匹配</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#e6db74">&#39;hello world&#39;</span>)
+</span></span><span style="display:flex;"><span>print(result<span style="color:#f92672">.</span>group())  <span style="color:#75715e"># hello</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. search() - 搜索第一个匹配</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;world&#39;</span>, <span style="color:#e6db74">&#39;hello world&#39;</span>)
+</span></span><span style="display:flex;"><span>print(result<span style="color:#f92672">.</span>group())  <span style="color:#75715e"># world</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. findall() - 找到所有匹配</span>
+</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>, <span style="color:#e6db74">&#39;abc123def456&#39;</span>)
+</span></span><span style="display:flex;"><span>print(results)  <span style="color:#75715e"># [&#39;123&#39;, &#39;456&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. finditer() - 返回迭代器</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#66d9ef">match</span> <span style="color:#f92672">in</span> re<span style="color:#f92672">.</span>finditer(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>, <span style="color:#e6db74">&#39;abc123def456&#39;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(), <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>span())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. sub() - 替换</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>, <span style="color:#e6db74">&#39;X&#39;</span>, <span style="color:#e6db74">&#39;abc123def456&#39;</span>)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># abcXdefX</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 6. split() - 分割</span>
+</span></span><span style="display:flex;"><span>parts <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>split(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[,;\s]+&#39;</span>, <span style="color:#e6db74">&#39;a,b;c d&#39;</span>)
+</span></span><span style="display:flex;"><span>print(parts)  <span style="color:#75715e"># [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 7. compile() - 编译正则（提高性能）</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>)
+</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;abc123def456&#39;</span>)
+</span></span></code></pre></div><h3 id="匹配对象的方法">匹配对象的方法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email: alice@example.com, Phone: 13812345678&#34;</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\w+)@(\w+\.\w+)&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern, text)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group())   <span style="color:#75715e"># alice@example.com（完整匹配）</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">0</span>))  <span style="color:#75715e"># alice@example.com（同上）</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>))  <span style="color:#75715e"># alice（第一个分组）</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>))  <span style="color:#75715e"># example.com（第二个分组）</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>groups())  <span style="color:#75715e"># (&#39;alice&#39;, &#39;example.com&#39;)</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>start())   <span style="color:#75715e"># 7（匹配开始位置）</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>end())     <span style="color:#75715e"># 25（匹配结束位置）</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>span())    <span style="color:#75715e"># (7, 25)</span>
+</span></span></code></pre></div><hr>
+<h2 id="正则语法速查表">正则语法速查表</h2>
+<h3 id="基础元字符">基础元字符</h3>
+<table>
+  <thead>
+      <tr>
+          <th>符号</th>
+          <th>含义</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>.</code></td>
+          <td>任意字符（除换行）</td>
+          <td><code>a.c</code> 匹配 &ldquo;abc&rdquo;, &ldquo;a1c&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>\d</code></td>
+          <td>数字 [0-9]</td>
+          <td><code>\d+</code> 匹配 &ldquo;123&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>\D</code></td>
+          <td>非数字</td>
+          <td><code>\D+</code> 匹配 &ldquo;abc&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>\w</code></td>
+          <td>单词字符 [a-zA-Z0-9_]</td>
+          <td><code>\w+</code> 匹配 &ldquo;hello_123&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>\W</code></td>
+          <td>非单词字符</td>
+          <td><code>\W+</code> 匹配 &ldquo;!@#&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>\s</code></td>
+          <td>空白字符（空格、制表、换行）</td>
+          <td><code>\s+</code> 匹配 &quot;  &quot;</td>
+      </tr>
+      <tr>
+          <td><code>\S</code></td>
+          <td>非空白字符</td>
+          <td><code>\S+</code> 匹配 &ldquo;hello&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="量词">量词</h3>
+<table>
+  <thead>
+      <tr>
+          <th>符号</th>
+          <th>含义</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>*</code></td>
+          <td>0次或多次</td>
+          <td><code>a*</code> 匹配 &ldquo;&rdquo;, &ldquo;a&rdquo;, &ldquo;aaa&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>+</code></td>
+          <td>1次或多次</td>
+          <td><code>a+</code> 匹配 &ldquo;a&rdquo;, &ldquo;aaa&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>?</code></td>
+          <td>0次或1次</td>
+          <td><code>a?</code> 匹配 &ldquo;&rdquo;, &ldquo;a&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>{n}</code></td>
+          <td>恰好n次</td>
+          <td><code>a{3}</code> 匹配 &ldquo;aaa&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>{n,}</code></td>
+          <td>至少n次</td>
+          <td><code>a{2,}</code> 匹配 &ldquo;aa&rdquo;, &ldquo;aaa&rdquo;, &hellip;</td>
+      </tr>
+      <tr>
+          <td><code>{n,m}</code></td>
+          <td>n到m次</td>
+          <td><code>a{2,4}</code> 匹配 &ldquo;aa&rdquo;, &ldquo;aaa&rdquo;, &ldquo;aaaa&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="定位符">定位符</h3>
+<table>
+  <thead>
+      <tr>
+          <th>符号</th>
+          <th>含义</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>^</code></td>
+          <td>字符串开头</td>
+          <td><code>^hello</code> 匹配开头的hello</td>
+      </tr>
+      <tr>
+          <td><code>$</code></td>
+          <td>字符串结尾</td>
+          <td><code>world$</code> 匹配结尾的world</td>
+      </tr>
+      <tr>
+          <td><code>\b</code></td>
+          <td>单词边界</td>
+          <td><code>\bhello\b</code> 匹配单词hello</td>
+      </tr>
+      <tr>
+          <td><code>\B</code></td>
+          <td>非单词边界</td>
+          <td><code>\Bhello</code> 匹配非边界的hello</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="字符集">字符集</h3>
+<table>
+  <thead>
+      <tr>
+          <th>符号</th>
+          <th>含义</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>[abc]</code></td>
+          <td>匹配a、b、c任一个</td>
+          <td><code>[aeiou]</code> 匹配元音</td>
+      </tr>
+      <tr>
+          <td><code>[^abc]</code></td>
+          <td>匹配非a、b、c</td>
+          <td><code>[^0-9]</code> 匹配非数字</td>
+      </tr>
+      <tr>
+          <td><code>[a-z]</code></td>
+          <td>匹配a到z</td>
+          <td><code>[A-Za-z]</code> 匹配字母</td>
+      </tr>
+      <tr>
+          <td><code>[0-9]</code></td>
+          <td>匹配0到9</td>
+          <td>同<code>\d</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="分组">分组</h3>
+<table>
+  <thead>
+      <tr>
+          <th>符号</th>
+          <th>含义</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>()</code></td>
+          <td>分组</td>
+          <td><code>(ab)+</code> 匹配 &ldquo;ab&rdquo;, &ldquo;abab&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>(?:)</code></td>
+          <td>非捕获分组</td>
+          <td><code>(?:ab)+</code> 不捕获分组</td>
+      </tr>
+      <tr>
+          <td><code>(?P&lt;name&gt;)</code></td>
+          <td>命名分组</td>
+          <td><code>(?P&lt;email&gt;\w+@\w+)</code></td>
+      </tr>
+      <tr>
+          <td>`</td>
+          <td>`</td>
+          <td>或</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="10个必备正则模式">10个必备正则模式</h2>
+<h3 id="模式1匹配数字">模式1：匹配数字</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;年龄：25，身高：175cm，体重：70.5kg，温度：-5°C&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配整数</span>
+</span></span><span style="display:flex;"><span>integers <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(integers)  <span style="color:#75715e"># [&#39;25&#39;, &#39;175&#39;, &#39;70&#39;, &#39;5&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配小数</span>
+</span></span><span style="display:flex;"><span>decimals <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+\.\d+&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(decimals)  <span style="color:#75715e"># [&#39;70.5&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配整数和小数</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;-?\d+\.?\d*&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(numbers)  <span style="color:#75715e"># [&#39;25&#39;, &#39;175&#39;, &#39;70.5&#39;, &#39;-5&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配百分数</span>
+</span></span><span style="display:flex;"><span>text2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;完成度：85%，进度：99.5%&#34;</span>
+</span></span><span style="display:flex;"><span>percents <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+\.?\d*%&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(percents)  <span style="color:#75715e"># [&#39;85%&#39;, &#39;99.5%&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配货币</span>
+</span></span><span style="display:flex;"><span>text3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;价格：$99.99，原价：¥199.00&#34;</span>
+</span></span><span style="display:flex;"><span>prices <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[$¥]\d+\.?\d*&#39;</span>, text3)
+</span></span><span style="display:flex;"><span>print(prices)  <span style="color:#75715e"># [&#39;$99.99&#39;, &#39;¥199.00&#39;]</span>
+</span></span></code></pre></div><h3 id="模式2匹配邮箱">模式2：匹配邮箱</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 基础邮箱匹配</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">联系我们：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 技术支持：support@example.com
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 销售咨询：sales@company.co.uk
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 客服热线：service123@mail.test-site.cn
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>emails <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern, text)
+</span></span><span style="display:flex;"><span>print(emails)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;support@example.com&#39;, &#39;sales@company.co.uk&#39;, &#39;service123@mail.test-site.cn&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 更严格的邮箱验证</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_valid_email</span>(email):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;验证邮箱格式&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> bool(re<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(pattern, email))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(is_valid_email(<span style="color:#e6db74">&#39;test@example.com&#39;</span>))  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>print(is_valid_email(<span style="color:#e6db74">&#39;invalid-email&#39;</span>))     <span style="color:#75715e"># False</span>
+</span></span><span style="display:flex;"><span>print(is_valid_email(<span style="color:#e6db74">&#39;test@.com&#39;</span>))         <span style="color:#75715e"># False</span>
+</span></span></code></pre></div><h3 id="模式3匹配手机号中国大陆">模式3：匹配手机号（中国大陆）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">联系方式：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 手机：13800138000
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 座机：021-12345678
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 手机：15912345678
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 手机：18600001111
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 中国大陆手机号</span>
+</span></span><span style="display:flex;"><span>phones <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;1[3-9]\d</span><span style="color:#e6db74">{9}</span><span style="color:#e6db74">&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(phones)  <span style="color:#75715e"># [&#39;13800138000&#39;, &#39;15912345678&#39;, &#39;18600001111&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 带格式的手机号</span>
+</span></span><span style="display:flex;"><span>text2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;电话：138-0013-8000 或 159 1234 5678&#34;</span>
+</span></span><span style="display:flex;"><span>phones <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;1[3-9][- ]?\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">[- ]?\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(phones)  <span style="color:#75715e"># [&#39;138-0013-8000&#39;, &#39;159 1234 5678&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 座机号码</span>
+</span></span><span style="display:flex;"><span>landlines <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d{3,4}-\d{7,8}&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(landlines)  <span style="color:#75715e"># [&#39;021-12345678&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 验证手机号</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_valid_phone</span>(phone):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;验证手机号&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^1[3-9]\d</span><span style="color:#e6db74">{9}</span><span style="color:#e6db74">$&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> bool(re<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(pattern, phone))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(is_valid_phone(<span style="color:#e6db74">&#39;13800138000&#39;</span>))  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>print(is_valid_phone(<span style="color:#e6db74">&#39;12800138000&#39;</span>))  <span style="color:#75715e"># False（号段不对）</span>
+</span></span></code></pre></div><h3 id="模式4匹配url">模式4：匹配URL</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">网站链接：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 官网：https://www.example.com
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 论坛：http://bbs.test-site.org/page?id=123
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 文档：https://docs.python.org/3/library/re.html
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 图片：https://cdn.example.com/images/logo.png
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配URL</span>
+</span></span><span style="display:flex;"><span>urls <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;https?://[^\s&lt;&gt;&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">|</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">^`[\]]+&#39;</span>, text)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> urls:
+</span></span><span style="display:flex;"><span>    print(url)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取域名</span>
+</span></span><span style="display:flex;"><span>domains <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;https?://([^/]+)&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(domains)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;www.example.com&#39;, &#39;bbs.test-site.org&#39;, &#39;docs.python.org&#39;, &#39;cdn.example.com&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取路径</span>
+</span></span><span style="display:flex;"><span>paths <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;https?://[^/]+(/[^\s]*)?&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(paths)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 验证URL</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_valid_url</span>(url):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;验证URL&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^https?://[^\s&lt;&gt;&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">|</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">^`[\]]+$&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> bool(re<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(pattern, url))
+</span></span></code></pre></div><h3 id="模式5提取html标签内容">模式5：提取HTML标签内容</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>html <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;head&gt;&lt;title&gt;我的网站&lt;/title&gt;&lt;/head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h1&gt;欢迎&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p class=&#34;intro&#34;&gt;这是一段介绍文字&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;a href=&#34;https://example.com&#34;&gt;链接&lt;/a&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;img src=&#34;logo.png&#34; alt=&#34;Logo&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取title内容</span>
+</span></span><span style="display:flex;"><span>title <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;title&gt;(.*?)&lt;/title&gt;&#39;</span>, html, re<span style="color:#f92672">.</span>DOTALL)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> title:
+</span></span><span style="display:flex;"><span>    print(title<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>))  <span style="color:#75715e"># 我的网站</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取所有链接</span>
+</span></span><span style="display:flex;"><span>links <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;a[^&gt;]*href=&#34;([^&#34;]*)&#34;[^&gt;]*&gt;(.*?)&lt;/a&gt;&#39;</span>, html, re<span style="color:#f92672">.</span>DOTALL)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> url, text <span style="color:#f92672">in</span> links:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>text<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>url<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取所有图片</span>
+</span></span><span style="display:flex;"><span>images <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;img[^&gt;]*src=&#34;([^&#34;]*)&#34;[^&gt;]*alt=&#34;([^&#34;]*)&#34;&#39;</span>, html)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> src, alt <span style="color:#f92672">in</span> images:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>alt<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>src<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取所有标签内容</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_tag_content</span>(html, tag):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;提取指定标签的内容&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">rf</span><span style="color:#e6db74">&#39;&lt;</span><span style="color:#e6db74">{</span>tag<span style="color:#e6db74">}</span><span style="color:#e6db74">[^&gt;]*&gt;(.*?)&lt;/</span><span style="color:#e6db74">{</span>tag<span style="color:#e6db74">}</span><span style="color:#e6db74">&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> re<span style="color:#f92672">.</span>findall(pattern, html, re<span style="color:#f92672">.</span>DOTALL)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(extract_tag_content(html, <span style="color:#e6db74">&#39;h1&#39;</span>))  <span style="color:#75715e"># [&#39;欢迎&#39;]</span>
+</span></span><span style="display:flex;"><span>print(extract_tag_content(html, <span style="color:#e6db74">&#39;p&#39;</span>))   <span style="color:#75715e"># [&#39;这是一段介绍文字&#39;]</span>
+</span></span></code></pre></div><h3 id="模式6验证密码强度">模式6：验证密码强度</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">check_password_strength</span>(password):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;检查密码强度&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 至少8位，包含大小写字母和数字</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(password) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;弱：少于8位&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    has_lower <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-z]&#39;</span>, password)
+</span></span><span style="display:flex;"><span>    has_upper <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[A-Z]&#39;</span>, password)
+</span></span><span style="display:flex;"><span>    has_digit <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d&#39;</span>, password)
+</span></span><span style="display:flex;"><span>    has_special <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[!@#$%^&amp;*(),.?&#34;:</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">|&lt;&gt;]&#39;</span>, password)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> all([has_lower, has_upper, has_digit, has_special]):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;强：包含大小写字母、数字和特殊字符&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> all([has_lower, has_upper, has_digit]):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;中：包含大小写字母和数字&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;弱：缺少必要字符&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试</span>
+</span></span><span style="display:flex;"><span>print(check_password_strength(<span style="color:#e6db74">&#34;abc&#34;</span>))          <span style="color:#75715e"># 弱：少于8位</span>
+</span></span><span style="display:flex;"><span>print(check_password_strength(<span style="color:#e6db74">&#34;hello123&#34;</span>))     <span style="color:#75715e"># 弱：缺少必要字符</span>
+</span></span><span style="display:flex;"><span>print(check_password_strength(<span style="color:#e6db74">&#34;Hello123&#34;</span>))     <span style="color:#75715e"># 中：包含大小写字母和数字</span>
+</span></span><span style="display:flex;"><span>print(check_password_strength(<span style="color:#e6db74">&#34;Hello123!&#34;</span>))    <span style="color:#75715e"># 强：包含大小写字母、数字和特殊字符</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">validate_password</span>(password):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;严格验证密码（返回True/False）&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&amp;*])[A-Za-z\d!@#$%^&amp;*]{8,}$&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> bool(re<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(pattern, password))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(validate_password(<span style="color:#e6db74">&#34;Hello123!&#34;</span>))  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>print(validate_password(<span style="color:#e6db74">&#34;hello123&#34;</span>))   <span style="color:#75715e"># False</span>
+</span></span></code></pre></div><h3 id="模式7格式化字符串">模式7：格式化字符串</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 驼峰转下划线</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">camel_to_snake</span>(name):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;驼峰命名转下划线命名&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 方式1：简单转换</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?&lt;!^)(?=[A-Z])&#39;</span>, <span style="color:#e6db74">&#39;_&#39;</span>, name)<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(camel_to_snake(<span style="color:#e6db74">&#39;myVariableName&#39;</span>))  <span style="color:#75715e"># my_variable_name</span>
+</span></span><span style="display:flex;"><span>print(camel_to_snake(<span style="color:#e6db74">&#39;getHTTPResponse&#39;</span>)) <span style="color:#75715e"># get_h_t_t_p_response</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 改进版</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">camel_to_snake_better</span>(name):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;改进版：处理连续大写字母&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;([a-z\d])([A-Z])&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\1_\2&#39;</span>, name)
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;([A-Z]+)([A-Z][a-z])&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\1_\2&#39;</span>, result)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(camel_to_snake_better(<span style="color:#e6db74">&#39;getHTTPResponse&#39;</span>))  <span style="color:#75715e"># get_http_response</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 下划线转驼峰</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">snake_to_camel</span>(name):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;下划线命名转驼峰命名&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    components <span style="color:#f92672">=</span> name<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;_&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> components[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(x<span style="color:#f92672">.</span>title() <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> components[<span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(snake_to_camel(<span style="color:#e6db74">&#39;my_variable_name&#39;</span>))  <span style="color:#75715e"># myVariableName</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 首字母大写</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">snake_to_pascal</span>(name):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;下划线命名转帕斯卡命名&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(x<span style="color:#f92672">.</span>title() <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> name<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;_&#39;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(snake_to_pascal(<span style="color:#e6db74">&#39;my_variable_name&#39;</span>))  <span style="color:#75715e"># MyVariableName</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 格式化手机号</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">format_phone</span>(phone):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;格式化手机号：13800138000 -&gt; 138-0013-8000&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    phone <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\D&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, phone)  <span style="color:#75715e"># 去除非数字</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(phone) <span style="color:#f92672">==</span> <span style="color:#ae81ff">11</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>phone[:<span style="color:#ae81ff">3</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">-</span><span style="color:#e6db74">{</span>phone[<span style="color:#ae81ff">3</span>:<span style="color:#ae81ff">7</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">-</span><span style="color:#e6db74">{</span>phone[<span style="color:#ae81ff">7</span>:]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> phone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(format_phone(<span style="color:#e6db74">&#39;13800138000&#39;</span>))  <span style="color:#75715e"># 138-0013-8000</span>
+</span></span><span style="display:flex;"><span>print(format_phone(<span style="color:#e6db74">&#39;138-0013-8000&#39;</span>))  <span style="color:#75715e"># 138-0013-8000</span>
+</span></span></code></pre></div><h3 id="模式8清理文本">模式8：清理文本</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;  Hello!!!   World???  </span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">  这是一个  测试</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">文本...  &#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 去除多余空格</span>
+</span></span><span style="display:flex;"><span>cleaned <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\s+&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>, text)<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>print(cleaned)  <span style="color:#75715e"># &#34;Hello!!! World??? 这是一个 测试文本...&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 去除标点符号</span>
+</span></span><span style="display:flex;"><span>no_punct <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^\w\s]&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, cleaned)
+</span></span><span style="display:flex;"><span>print(no_punct)  <span style="color:#75715e"># &#34;Hello World 这是一个 测试文本&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 只保留中文和字母</span>
+</span></span><span style="display:flex;"><span>chinese_and_letters <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^\u4e00-\u9fa5a-zA-Z\s]&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(chinese_and_letters)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 只保留数字</span>
+</span></span><span style="display:flex;"><span>text2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;价格：￥199.00，数量：100&#34;</span>
+</span></span><span style="display:flex;"><span>numbers_only <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^\d]&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(numbers_only)  <span style="color:#75715e"># 19900100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 清理HTML标签</span>
+</span></span><span style="display:flex;"><span>html_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;p&gt;Hello &lt;b&gt;World&lt;/b&gt;&lt;/p&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>no_html <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;[^&gt;]+&gt;&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, html_text)
+</span></span><span style="display:flex;"><span>print(no_html)  <span style="color:#75715e"># &#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 6. 清理特殊字符</span>
+</span></span><span style="display:flex;"><span>text3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello</span><span style="color:#ae81ff">\x00</span><span style="color:#e6db74">World</span><span style="color:#ae81ff">\x1F</span><span style="color:#e6db74">Test&#34;</span>
+</span></span><span style="display:flex;"><span>cleaned <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[\x00-\x1F\x7F]&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, text3)
+</span></span><span style="display:flex;"><span>print(cleaned)  <span style="color:#75715e"># &#34;HelloWorldTest&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 7. 统一引号</span>
+</span></span><span style="display:flex;"><span>text4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;他说：&#34;Hello&#34;，她回答&#39;</span>Hi<span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>normalized <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[&#34;&#34;&#34;]&#39;</span>, <span style="color:#e6db74">&#39;&#34;&#39;</span>, text4)
+</span></span><span style="display:flex;"><span>normalized <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;[&#39;&#39;]&#34;</span>, <span style="color:#e6db74">&#34;&#39;&#34;</span>, normalized)
+</span></span><span style="display:flex;"><span>print(normalized)  <span style="color:#75715e"># &#39;他说：&#34;Hello&#34;，她回答&#39;Hi&#39;&#39;</span>
+</span></span></code></pre></div><h3 id="模式9解析日志">模式9：解析日志</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Apache日志格式</span>
+</span></span><span style="display:flex;"><span>log_line <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;192.168.1.1 - - [15/Jan/2024:10:30:45 +0800] &#34;GET /index.html HTTP/1.1&#34; 200 1234&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解析日志</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(\S+) \S+ \S+ \[([^\]]+)\] &#34;(\S+) ([^&#34;]+) HTTP/\d\.\d&#34; (\d+) (\d+)&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(pattern, log_line)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>    ip <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    timestamp <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    method <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>    path <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>    status <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>    size <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;IP: </span><span style="color:#e6db74">{</span>ip<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;时间: </span><span style="color:#e6db74">{</span>timestamp<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;方法: </span><span style="color:#e6db74">{</span>method<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;路径: </span><span style="color:#e6db74">{</span>path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;状态码: </span><span style="color:#e6db74">{</span>status<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;大小: </span><span style="color:#e6db74">{</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 批量分析日志</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">analyze_logs</span>(log_file):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;分析日志文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    ip_counter <span style="color:#f92672">=</span> Counter()
+</span></span><span style="display:flex;"><span>    path_counter <span style="color:#f92672">=</span> Counter()
+</span></span><span style="display:flex;"><span>    status_counter <span style="color:#f92672">=</span> Counter()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(\S+) .+? &#34;(\S+) ([^&#34;]+) .+?&#34; (\d+)&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(log_file, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> f:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(pattern, line)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>                ip_counter[<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                path_counter[<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">3</span>)] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                status_counter[<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">4</span>)] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;top_ips&#39;</span>: ip_counter<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">10</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;top_paths&#39;</span>: path_counter<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">10</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;status_codes&#39;</span>: dict(status_counter)
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="模式10批量重命名">模式10：批量重命名</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 批量重命名文件</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">batch_rename</span>(directory, pattern, replacement):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;批量重命名文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    directory <span style="color:#f92672">=</span> Path(directory)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filepath <span style="color:#f92672">in</span> directory<span style="color:#f92672">.</span>iterdir():
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> filepath<span style="color:#f92672">.</span>is_file():
+</span></span><span style="display:flex;"><span>            new_name <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(pattern, replacement, filepath<span style="color:#f92672">.</span>name)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> new_name <span style="color:#f92672">!=</span> filepath<span style="color:#f92672">.</span>name:
+</span></span><span style="display:flex;"><span>                new_path <span style="color:#f92672">=</span> filepath<span style="color:#f92672">.</span>parent <span style="color:#f92672">/</span> new_name
+</span></span><span style="display:flex;"><span>                filepath<span style="color:#f92672">.</span>rename(new_path)
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Renamed: </span><span style="color:#e6db74">{</span>filepath<span style="color:#f92672">.</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> -&gt; </span><span style="color:#e6db74">{</span>new_name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 示例1：给所有图片添加日期前缀</span>
+</span></span><span style="display:flex;"><span>batch_rename(<span style="color:#e6db74">&#39;./images&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^(.*)\.jpg$&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;2024_\1.jpg&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 示例2：统一文件名格式</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># IMG_001.JPG -&gt; img_001.jpg</span>
+</span></span><span style="display:flex;"><span>batch_rename(<span style="color:#e6db74">&#39;./photos&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;IMG_(\d+)\.JPG&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;img_\1.jpg&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 示例3：删除文件名中的特殊字符</span>
+</span></span><span style="display:flex;"><span>batch_rename(<span style="color:#e6db74">&#39;./files&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^\w\-.]&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;_&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 批量替换文件内容</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">batch_replace</span>(directory, file_pattern, old_text, new_text):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;批量替换文件内容&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    directory <span style="color:#f92672">=</span> Path(directory)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filepath <span style="color:#f92672">in</span> directory<span style="color:#f92672">.</span>rglob(file_pattern):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> filepath<span style="color:#f92672">.</span>is_file():
+</span></span><span style="display:flex;"><span>            content <span style="color:#f92672">=</span> filepath<span style="color:#f92672">.</span>read_text(encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>)
+</span></span><span style="display:flex;"><span>            new_content <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(old_text, new_text, content)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> content <span style="color:#f92672">!=</span> new_content:
+</span></span><span style="display:flex;"><span>                filepath<span style="color:#f92672">.</span>write_text(new_content, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>)
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Updated: </span><span style="color:#e6db74">{</span>filepath<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 示例：替换所有Python文件中的老API</span>
+</span></span><span style="display:flex;"><span>batch_replace(<span style="color:#e6db74">&#39;./project&#39;</span>, <span style="color:#e6db74">&#39;*.py&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;old_api\.call&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;new_api.run&#39;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="高级技巧">高级技巧</h2>
+<h3 id="贪婪-vs-非贪婪">贪婪 vs 非贪婪</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;div&gt;内容1&lt;/div&gt;&lt;div&gt;内容2&lt;/div&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 贪婪匹配（默认）</span>
+</span></span><span style="display:flex;"><span>greedy <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;div&gt;.*&lt;/div&gt;&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(greedy)  <span style="color:#75715e"># [&#39;&lt;div&gt;内容1&lt;/div&gt;&lt;div&gt;内容2&lt;/div&gt;&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 非贪婪匹配（加?）</span>
+</span></span><span style="display:flex;"><span>non_greedy <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;div&gt;.*?&lt;/div&gt;&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(non_greedy)  <span style="color:#75715e"># [&#39;&lt;div&gt;内容1&lt;/div&gt;&#39;, &#39;&lt;div&gt;内容2&lt;/div&gt;&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 另一个例子</span>
+</span></span><span style="display:flex;"><span>text2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;价格：$10.99，优惠：$5.50&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 贪婪</span>
+</span></span><span style="display:flex;"><span>greedy <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\$.+\$&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(greedy)  <span style="color:#75715e"># [&#39;$10.99，优惠：$5.50&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 非贪婪</span>
+</span></span><span style="display:flex;"><span>non_greedy <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\$.+?\$&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(non_greedy)  <span style="color:#75715e"># [&#39;$10.99，优惠：$&#39;]（还是不对）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正确：使用非字符集</span>
+</span></span><span style="display:flex;"><span>correct <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\$[\d.]+&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(correct)  <span style="color:#75715e"># [&#39;$10.99&#39;, &#39;$5.50&#39;]</span>
+</span></span></code></pre></div><h3 id="前瞻和后顾">前瞻和后顾</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正向前瞻 (?=...)</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello123world456&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配数字前面是字母的位置</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?&lt;=[a-z])\d+&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;123&#39;, &#39;456&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配字母后面是数字的字母</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-z]+(?=\d)&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;hello&#39;, &#39;world&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 负向前瞻 (?!...)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配后面不是数字的字母</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-z]+(?!\d)&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;hell&#39;, &#39;world&#39;]（hello被分成hell和o）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正向后顾 (?&lt;=...)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配前面是$的数字</span>
+</span></span><span style="display:flex;"><span>text2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;价格：$100，数量：5&#34;</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?&lt;=\$)\d+&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;100&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 负向后顾 (?&lt;!...)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配前面不是$的数字</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?&lt;!\$)\d+&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;5&#39;]</span>
+</span></span></code></pre></div><h3 id="命名分组">命名分组</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;张三，男，25岁，来自北京&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用命名分组</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?P&lt;name&gt;\w+)，(?P&lt;gender&gt;\w)，(?P&lt;age&gt;\d+)岁，来自(?P&lt;city&gt;\w+)&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern, text)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#39;name&#39;</span>))   <span style="color:#75715e"># 张三</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#39;gender&#39;</span>)) <span style="color:#75715e"># 男</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#39;age&#39;</span>))    <span style="color:#75715e"># 25</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#39;city&#39;</span>))   <span style="color:#75715e"># 北京</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 获取所有命名分组</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>groupdict())
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># {&#39;name&#39;: &#39;张三&#39;, &#39;gender&#39;: &#39;男&#39;, &#39;age&#39;: &#39;25&#39;, &#39;city&#39;: &#39;北京&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 在替换中使用</span>
+</span></span><span style="display:flex;"><span>text2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2024-01-15&#34;</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?P&lt;year&gt;\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">)-(?P&lt;month&gt;\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">)-(?P&lt;day&gt;\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">)&#39;</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(pattern, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\g&lt;month&gt;/\g&lt;day&gt;/\g&lt;year&gt;&#39;</span>, text2)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># 01/15/2024</span>
+</span></span></code></pre></div><h3 id="条件匹配">条件匹配</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (?(id)yes|no) - 条件匹配</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 示例：匹配带引号或不带引号的内容</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;名称：&#34;测试&#34; 或 测试&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(&#34;)?(.*?)(?(1)&#34;|)&#39;</span>
+</span></span><span style="display:flex;"><span>matches <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern, text)
+</span></span><span style="display:flex;"><span>print(matches)
+</span></span></code></pre></div><h3 id="修饰符">修饰符</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Hello
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">World
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Test&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># re.DOTALL - . 匹配换行符</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;.+&#39;</span>, text, re<span style="color:#f92672">.</span>DOTALL)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;Hello\nWorld\nTest&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># re.IGNORECASE - 忽略大小写</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#e6db74">&#39;Hello World&#39;</span>, re<span style="color:#f92672">.</span>IGNORECASE)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;Hello&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># re.MULTILINE - 多行模式</span>
+</span></span><span style="display:flex;"><span>text2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;第一行
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">第二行
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">第三行&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^第&#39;</span>, text2, re<span style="color:#f92672">.</span>MULTILINE)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;第&#39;, &#39;第&#39;, &#39;第&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># re.VERBOSE - 详细模式（允许注释和换行）</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    \b              # 单词边界
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    \d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">           # 区号
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    [-\s]?          # 分隔符
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    \d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">           # 前四位
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    [-\s]?          # 分隔符
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    \d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">           # 后四位
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    \b              # 单词边界
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>, re<span style="color:#f92672">.</span>VERBOSE)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#34;电话：138-0013-8000&#34;</span>)
+</span></span><span style="display:flex;"><span>print(result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 组合修饰符</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#e6db74">&#39;HELLO</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Hello&#39;</span>, re<span style="color:#f92672">.</span>IGNORECASE <span style="color:#f92672">|</span> re<span style="color:#f92672">.</span>MULTILINE)
+</span></span></code></pre></div><hr>
+<h2 id="性能优化">性能优化</h2>
+<h3 id="编译正则表达式">编译正则表达式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试匹配10万次</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;这是一段测试文本，包含邮箱 test@example.com&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式1：每次编译</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_no_compile</span>():
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100000</span>):
+</span></span><span style="display:flex;"><span>        re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\w+@\w+\.\w+&#39;</span>, text)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：预编译</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\w+@\w+\.\w+&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_compile</span>():
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100000</span>):
+</span></span><span style="display:flex;"><span>        pattern<span style="color:#f92672">.</span>search(text)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;不编译: </span><span style="color:#e6db74">{</span>test_no_compile()<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;预编译: </span><span style="color:#e6db74">{</span>test_compile()<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 结果：预编译快2-3倍</span>
+</span></span></code></pre></div><h3 id="避免回溯">避免回溯</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 危险的正则（可能导致灾难性回溯）</span>
+</span></span><span style="display:flex;"><span>bad_pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(a+)+b&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配 &#34;aaaaaaaaaaaaaaaaaac&#34; 会非常慢</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 安全的正则</span>
+</span></span><span style="display:flex;"><span>good_pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a+b&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;c&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    re<span style="color:#f92672">.</span>search(bad_pattern, text, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># Python 3.11+</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;危险模式: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>re<span style="color:#f92672">.</span>search(good_pattern, text)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;安全模式: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span></code></pre></div><h3 id="使用rescanner">使用re.Scanner</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 词法分析器</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">scanner_example</span>():
+</span></span><span style="display:flex;"><span>    tokens <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        (<span style="color:#e6db74">&#39;NUMBER&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>),
+</span></span><span style="display:flex;"><span>        (<span style="color:#e6db74">&#39;WORD&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\w+&#39;</span>),
+</span></span><span style="display:flex;"><span>        (<span style="color:#e6db74">&#39;SPACE&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\s+&#39;</span>),
+</span></span><span style="display:flex;"><span>        (<span style="color:#e6db74">&#39;PUNCT&#39;</span>, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^\w\s]&#39;</span>),
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;|&#39;</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;(?P&lt;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">&gt;</span><span style="color:#e6db74">{</span>regex<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#39;</span> <span style="color:#66d9ef">for</span> name, regex <span style="color:#f92672">in</span> tokens)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello 123 world!&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#66d9ef">match</span> <span style="color:#f92672">in</span> re<span style="color:#f92672">.</span>finditer(pattern, text):
+</span></span><span style="display:flex;"><span>        kind <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>lastgroup
+</span></span><span style="display:flex;"><span>        value <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>kind<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>value<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>scanner_example()
+</span></span></code></pre></div><hr>
+<h2 id="避坑指南">避坑指南</h2>
+<h3 id="坑1忘记转义">坑1：忘记转义</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># . 在正则中表示任意字符</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果想匹配真正的点，需要转义</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;file.txt file2txt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 错误：匹配了file.txt和file2txt</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;file.txt&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;file.txt&#39;, &#39;file2txt&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正确：转义点</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;file\.txt&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;file.txt&#39;]</span>
+</span></span></code></pre></div><h3 id="坑2贪婪匹配陷阱">坑2：贪婪匹配陷阱</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;div&gt;内容1&lt;/div&gt;&lt;div&gt;内容2&lt;/div&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 错误：贪婪匹配</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;div&gt;.*&lt;/div&gt;&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;&lt;div&gt;内容1&lt;/div&gt;&lt;div&gt;内容2&lt;/div&gt;&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正确：非贪婪匹配</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;div&gt;.*?&lt;/div&gt;&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;&lt;div&gt;内容1&lt;/div&gt;&#39;, &#39;&lt;div&gt;内容2&lt;/div&gt;&#39;]</span>
+</span></span></code></pre></div><h3 id="坑3中文字符匹配">坑3：中文字符匹配</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello 世界 Python&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># \w 不匹配中文</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\w+&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;Hello&#39;, &#39;Python&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配中文</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[\u4e00-\u9fa5]+&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;世界&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配所有字符（包括中文）</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[\u4e00-\u9fa5\w]+&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;Hello&#39;, &#39;世界&#39;, &#39;Python&#39;]</span>
+</span></span></code></pre></div><h3 id="坑4多行匹配">坑4：多行匹配</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;第一行
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">第二行
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">第三行&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ^只匹配开头</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^第&#39;</span>, text)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;第&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用多行模式</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^第&#39;</span>, text, re<span style="color:#f92672">.</span>MULTILINE)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;第&#39;, &#39;第&#39;, &#39;第&#39;]</span>
+</span></span></code></pre></div><h3 id="坑5特殊字符处理">坑5：特殊字符处理</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用户输入的正则表达式可能包含特殊字符</span>
+</span></span><span style="display:flex;"><span>user_input <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;file.txt&#34;</span>
+</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>escape(user_input)  <span style="color:#75715e"># 自动转义</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern, <span style="color:#e6db74">&#34;file.txt file2txt&#34;</span>)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [&#39;file.txt&#39;]</span>
+</span></span></code></pre></div><hr>
+<h2 id="推荐ai-python零基础实战营">推荐：AI Python零基础实战营</h2>
+<p>想系统学习Python文本处理？</p>
+<p><strong>课程内容：</strong></p>
+<ul>
+<li>✅ Python基础语法</li>
+<li>✅ 正则表达式详解</li>
+<li>✅ 数据清洗与处理</li>
+<li>✅ 实战项目练习</li>
+</ul>
+<p>🎁 <strong>限时福利</strong>：送《Python编程从入门到实践》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/python/12-Python%E5%AD%97%E7%AC%A6%E4%B8%B2/">Python字符串：我被忽略的20个实用方法</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/python/13-Python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">Python文件操作：读写文件的10种姿势</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/python/08-Python%E5%AD%97%E5%85%B8/">Python字典：我用这个数据结构，把查询速度提升了100倍</a></li>
+</ul>
+<hr>
+<p><em>PS：正则表达式是程序员的必备技能。记不住没关系，收藏这篇当速查手册。记住：能用简单方法就别用复杂正则！</em></p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></p>
+<hr>
+<h2 id="-推荐python-零基础实战营">📚 推荐：Python 零基础实战营</h2>
+<p><strong>系统学习Python，推荐这个免费入门课程 👇</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>特点</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🎯 专为0基础设计</td>
+          <td>门槛低，上手快</td>
+      </tr>
+      <tr>
+          <td>📹 配套视频讲解</td>
+          <td>配合文章学习效果更好</td>
+      </tr>
+      <tr>
+          <td>💬 专属答疑群</td>
+          <td>遇到问题有人带</td>
+      </tr>
+      <tr>
+          <td>🎁 实体书赠送</td>
+          <td>优秀学员送《Python编程从入门到实践》</td>
+      </tr>
+  </tbody>
+</table>
+<p>👉 <strong><a href="https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397">点击免费领取 Python 零基础实战营</a></strong></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/17-python%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/">上一篇：Python模块与包：我从混乱到井井有条，全靠这5个组织原则</a>
+        
+        
+        <a href="http://localhost:4002/01-python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">下一篇：Python零基础入门：写下你的第一行代码，开启编程之旅</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

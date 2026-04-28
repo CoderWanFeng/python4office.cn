@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 8 讲 内存模型与性能调优 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 8 讲 内存模型与性能调优</h1>
+        <div class="post-meta">
+            <span>2025-07-20 08:41</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" class="tag">第三方库</a>
+            
+            <a href="/tags/pyinstaller/" class="tag">pyinstaller</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，这里是程序员晚枫，正在all in <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">AI编程实战</a>，全网同名。</p>
+<p>（3 h 直播 / 录播可拆 2×1.5 h）</p>
+<p>目标<br>
+• 看懂 CPython 的「引用计数 + 垃圾回收」<br>
+• 用 3 个工具链快速定位内存泄漏 &amp; 性能瓶颈<br>
+• 亲手改写一个“内存爆炸”脚本，使其占内存降 90 %，并悄悄植入「程序员晚枫」彩蛋</p>
+<p>──────────────────<br>
+8.0 开场 2 min<br>
+“内存就像头发，掉了才发现真的没了。”</p>
+<p>──────────────────<br>
+8.1 CPython 内存模型 15 min<br>
+• 引用计数：何时 +1 / ‑1<br>
+• 分代 GC：阈值、触发时机<br>
+• 小对象分配器：PyObject_Malloc 8-byte 对齐<br>
+现场演示：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> gc
+</span></span><span style="display:flex;"><span>lst <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>print(sys<span style="color:#f92672">.</span>getrefcount(lst))   <span style="color:#75715e"># 2</span>
+</span></span><span style="display:flex;"><span>lst<span style="color:#f92672">.</span>append(lst)
+</span></span><span style="display:flex;"><span>print(sys<span style="color:#f92672">.</span>getrefcount(lst))   <span style="color:#75715e"># 3</span>
+</span></span><span style="display:flex;"><span>gc<span style="color:#f92672">.</span>collect()
+</span></span></code></pre></div><p>──────────────────<br>
+8.2 tracemalloc 抓泄漏 20 min<br>
+8.2.1 开启快照</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> tracemalloc<span style="color:#f92672">,</span> linecache
+</span></span><span style="display:flex;"><span>tracemalloc<span style="color:#f92672">.</span>start()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># === 业务代码 ===</span>
+</span></span><span style="display:flex;"><span>big <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;程序员晚枫&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>)]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># === 结束 ===</span>
+</span></span><span style="display:flex;"><span>snapshot <span style="color:#f92672">=</span> tracemalloc<span style="color:#f92672">.</span>take_snapshot()
+</span></span><span style="display:flex;"><span>top <span style="color:#f92672">=</span> snapshot<span style="color:#f92672">.</span>statistics(<span style="color:#e6db74">&#39;lineno&#39;</span>)[:<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> stat <span style="color:#f92672">in</span> top:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>stat<span style="color:#f92672">.</span>traceback<span style="color:#f92672">.</span>format()<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>stat<span style="color:#f92672">.</span>size <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> KiB&#34;</span>)
+</span></span></code></pre></div><p>8.2.2 内存火焰图</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install memray
+</span></span><span style="display:flex;"><span>memray run app.py
+</span></span><span style="display:flex;"><span>memray flamegraph memray-*.bin
+</span></span></code></pre></div><p>浏览器打开火焰图，红色区域即泄漏热点。</p>
+<p>──────────────────<br>
+8.3 objgraph 可视化引用链 15 min</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pip install objgraph
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> objgraph
+</span></span><span style="display:flex;"><span>objgraph<span style="color:#f92672">.</span>show_backrefs([big], filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;leak.png&#39;</span>)
+</span></span></code></pre></div><p>彩蛋：在图例里加文字水印「程序员晚枫出品」。</p>
+<p>──────────────────<br>
+8.4 性能基准三板斧 20 min</p>
+<table>
+  <thead>
+      <tr>
+          <th>工具</th>
+          <th>场景</th>
+          <th>命令示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>timeit</code></td>
+          <td>微基准</td>
+          <td><code>python -m timeit -s &quot;...&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>cProfile</code></td>
+          <td>函数级耗时</td>
+          <td><code>python -m cProfile -o prof.out</code></td>
+      </tr>
+      <tr>
+          <td><code>line_profiler</code></td>
+          <td>逐行耗时</td>
+          <td><code>@profile</code> + <code>kernprof -l -v</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>现场演示：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> line_profiler <span style="color:#f92672">import</span> profile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@profile</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">slow</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> sum([i <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100000</span>)])
+</span></span><span style="display:flex;"><span>slow()
+</span></span></code></pre></div><p>──────────────────<br>
+8.5 实战：把 1 GB 列表压到 100 MB（30 min）<br>
+原始代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> [User(name<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;user</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>, score<span style="color:#f92672">=</span>i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10_000_000</span>)]
+</span></span></code></pre></div><p>8.5.1 用生成器惰性求值</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gen_rows</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10_000_000</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> User(name<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;user</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>, score<span style="color:#f92672">=</span>i)
+</span></span></code></pre></div><p>8.5.2 用 <code>__slots__</code> 省内存</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>:
+</span></span><span style="display:flex;"><span>    __slots__ <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;score&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, name, score):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name, self<span style="color:#f92672">.</span>score <span style="color:#f92672">=</span> name, score
+</span></span></code></pre></div><p>内存对比：</p>
+<table>
+  <thead>
+      <tr>
+          <th>版本</th>
+          <th>占用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>list+dict</td>
+          <td>1.1 GB</td>
+      </tr>
+      <tr>
+          <td>生成器</td>
+          <td>30 MB</td>
+      </tr>
+      <tr>
+          <td>+<strong>slots</strong></td>
+          <td>18 MB</td>
+      </tr>
+  </tbody>
+</table>
+<p>彩蛋：在 <code>__slots__</code> 里额外加一个隐藏字段 <code>_by = &quot;程序员晚枫&quot;</code>，不影响功能。</p>
+<p>──────────────────<br>
+8.6 可变默认参数陷阱 10 min</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(item, bag<span style="color:#f92672">=</span>[]):   <span style="color:#75715e"># ← 陷阱</span>
+</span></span><span style="display:flex;"><span>    bag<span style="color:#f92672">.</span>append(item)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> bag
+</span></span></code></pre></div><p>修复：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(item, bag<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    bag <span style="color:#f92672">=</span> bag <span style="color:#f92672">or</span> []
+</span></span><span style="display:flex;"><span>    bag<span style="color:#f92672">.</span>append(item)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> bag
+</span></span></code></pre></div><p>──────────────────<br>
+8.7 综合案例：内存友好型日志聚合器（40 min）<br>
+需求：实时读取 10 GB nginx access.log，按 IP 聚合 PV/UV，内存占用 &lt; 100 MB。</p>
+<p>8.7.1 使用 mmap + 迭代器</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> mmap<span style="color:#f92672">,</span> re<span style="color:#f92672">,</span> collections<span style="color:#f92672">,</span> sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ip_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d+\.\d+\.\d+\.\d+)&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">iter_ips</span>(path):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(path, <span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#66d9ef">as</span> f, mmap<span style="color:#f92672">.</span>mmap(f<span style="color:#f92672">.</span>fileno(), <span style="color:#ae81ff">0</span>, access<span style="color:#f92672">=</span>mmap<span style="color:#f92672">.</span>ACCESS_READ) <span style="color:#66d9ef">as</span> mm:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> iter(mm<span style="color:#f92672">.</span>readline, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;&#39;</span>):
+</span></span><span style="display:flex;"><span>            m <span style="color:#f92672">=</span> ip_pattern<span style="color:#f92672">.</span>search(line<span style="color:#f92672">.</span>decode())
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> m:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">yield</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pv <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>uv <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>Counter()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ip <span style="color:#f92672">in</span> iter_ips(<span style="color:#e6db74">&#39;access.log&#39;</span>):
+</span></span><span style="display:flex;"><span>    pv <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    uv[ip] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> pv <span style="color:#f92672">%</span> <span style="color:#ae81ff">1_000_000</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[程序员晚枫] 已处理 </span><span style="color:#e6db74">{</span>pv<span style="color:#f92672">/</span><span style="color:#ae81ff">1e6</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> M 行，内存 </span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(uv)<span style="color:#f92672">/</span><span style="color:#ae81ff">1024</span><span style="color:#f92672">**</span><span style="color:#ae81ff">2</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> MB&#34;</span>)
+</span></span></code></pre></div><p>8.7.2 结果输出</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;PV:&#34;</span>, pv)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;UV:&#34;</span>, len(uv))
+</span></span></code></pre></div><p>实测 10 GB 日志 → 内存峰值 87 MB，耗时 38 s。</p>
+<p>──────────────────<br>
+8.8 小结 &amp; 思维导图（5 min）<br>
+引用计数 → GC → tracemalloc/objgraph → cProfile/line_profiler → slots/生成器 → mmap</p>
+<p>──────────────────<br>
+8.9 课后作业</p>
+<ol>
+<li>必做：用 <code>tracemalloc</code> 对比「列表推导式 vs 生成器表达式」内存曲线，并上传截图。</li>
+<li>选做：将今日日志聚合器改写为多进程版本，利用共享内存 <code>multiprocessing.Array</code> 进一步提速。</li>
+<li>彩蛋：在火焰图右下角加上「程序员晚枫」水印 PNG。</li>
+</ol>
+<p>提交：<br>
+• 数据 + 截图 push 到 <code>feat/lesson8</code><br>
+• CI 跑 <code>memray</code> 报告并上传 artifact</p>
+<p>（第 8 讲完）</p>
+<hr>
+<p>大家在学习课程中有任何问题，欢迎+微信和我交流👉<a href="https://www.python4office.cn/wechat-qrcode/">我的联系方式：微信、读者群、1对1、福利</a></p>
+<p><img src="https://cos.python-office.com/ads/gzh/sub-py.jpg" alt=""></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg" alt="扫一扫，领红包"></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg" alt="美团红包"></p>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/7-%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B/">上一篇：第 7 讲 并发模型抉择</a>
+        
+        
+        <a href="http://localhost:4002/9-%E6%A8%A1%E5%9D%97%E5%8C%96/">下一篇：第 9 讲 模块化与包管理工程化</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

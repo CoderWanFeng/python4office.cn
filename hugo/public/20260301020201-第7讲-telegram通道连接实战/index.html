@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#34;OpenClaw入门：第7讲：Telegram通道连接实战，5分钟部署你的AI Bot&#34; - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>&#34;OpenClaw入门：第7讲：Telegram通道连接实战，5分钟部署你的AI Bot&#34;</h1>
+        <div class="post-meta">
+            <span>2026-03-01 14:35</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/openclaw/" class="tag">OpenClaw</a>
+            
+            <a href="/tags/telegram/" class="tag">Telegram</a>
+            
+            <a href="/tags/bot/" class="tag">Bot</a>
+            
+            <a href="/tags/%E9%80%9A%E9%81%93%E8%BF%9E%E6%8E%A5/" class="tag">通道连接</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天我们来实战连接<strong>Telegram</strong>，这是OpenClaw最简单的入门通道。整个过程只需要5分钟，我带你一步步做。</p>
+<hr>
+<h2 id="-开篇为什么选telegram">🚀 开篇：为什么选Telegram？</h2>
+<p>我推荐Telegram作为第一个接入的通道，有这几个原因：</p>
+<table>
+  <thead>
+      <tr>
+          <th>优势</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>免费稳定</strong></td>
+          <td>Bot API完全免费，无消息限制</td>
+      </tr>
+      <tr>
+          <td><strong>国内可用</strong></td>
+          <td>相比WhatsApp更容易访问（需要代理）</td>
+      </tr>
+      <tr>
+          <td><strong>功能丰富</strong></td>
+          <td>支持Markdown、按钮、文件等</td>
+      </tr>
+      <tr>
+          <td><strong>生态完善</strong></td>
+          <td>文档齐全，社区活跃</td>
+      </tr>
+      <tr>
+          <td><strong>配置简单</strong></td>
+          <td>只需要一个Token，不需要扫码</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="第一步创建bot-">第一步：创建Bot 🤖</h2>
+<h3 id="1-找到botfather">1. 找到BotFather</h3>
+<p>在Telegram中搜索 <strong>@BotFather</strong>，点击Start。</p>
+<blockquote>
+<p>💡 BotFather是Telegram官方的Bot管理器，所有Bot都通过它创建。</p>
+</blockquote>
+<h3 id="2-创建新bot">2. 创建新Bot</h3>
+<p>发送命令：</p>
+<pre tabindex="0"><code>/newbot
+</code></pre><p>按提示操作：</p>
+<ol>
+<li>输入Bot名称（如：我的AI助手）</li>
+<li>输入用户名（<strong>必须以bot结尾</strong>，如：my_ai_helper_bot）</li>
+</ol>
+<h3 id="3-获取token-">3. 获取Token 🎯</h3>
+<p>创建成功后，BotFather会发送：</p>
+<pre tabindex="0"><code>Done! Congratulations on your new bot.
+Use this token to access the HTTP API:
+123456789:ABCdefGHIjklMNOpqrsTUVwxyz123456789
+
+ bot will be able to use HTTP requests to communicate with it.
+</code></pre><blockquote>
+<p>⚠️ <strong>重要</strong>：Token只显示一次！务必复制保存！</p>
+</blockquote>
+<hr>
+<h2 id="第二步配置openclaw">第二步：配置OpenClaw</h2>
+<p>编辑 <code>~/.openclaw/openclaw.json</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;channels&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;telegram&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;botToken&#34;</span>: <span style="color:#e6db74">&#34;123456789:ABCdefGHIjklMNOpqrsTUVwxyz123456789&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowFrom&#34;</span>: [],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;groups&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;requireMention&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;allowedGroups&#34;</span>: []
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>配置说明</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>说明</th>
+          <th>测试阶段建议</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>botToken</code></td>
+          <td>填入刚才获得的Token</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td><code>allowFrom</code></td>
+          <td>空数组=允许所有人</td>
+          <td>✅ 先这样测试</td>
+      </tr>
+      <tr>
+          <td><code>requireMention</code></td>
+          <td>false=私聊直接响应</td>
+          <td>✅ 私聊不需要@</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="第三步连接通道-">第三步：连接通道 🔗</h2>
+<p>执行命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 连接Telegram通道</span>
+</span></span><span style="display:flex;"><span>openclaw channels connect telegram
+</span></span></code></pre></div><p>看到以下输出表示成功：</p>
+<pre tabindex="0"><code>[telegram] Connecting...
+[telegram] Bot info: @my_ai_helper_bot
+[telegram] Webhook set successfully
+[telegram] Connected ✓
+</code></pre><p>检查状态：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openclaw channels status telegram
+</span></span></code></pre></div><hr>
+<h2 id="第四步测试对话-">第四步：测试对话 🎉</h2>
+<h3 id="私聊测试">私聊测试</h3>
+<ol>
+<li>在Telegram中搜索你的Bot用户名（如@my_ai_helper_bot）</li>
+<li>点击Start或发送任意消息</li>
+<li>等待AI回复</li>
+</ol>
+<blockquote>
+<p>💡 如果你没有Telegram，可以跳过这步，下一讲连接微信也能测试。</p>
+</blockquote>
+<h3 id="群组测试">群组测试</h3>
+<ol>
+<li>创建一个测试群组</li>
+<li>将Bot添加到群组</li>
+<li>@Bot并提问：
+<pre tabindex="0"><code>@my_ai_helper_bot 你好，请介绍一下自己
+</code></pre></li>
+</ol>
+<hr>
+<h2 id="第五步配置权限生产环境">第五步：配置权限（生产环境）🔐</h2>
+<p>测试通过后，强烈建议限制访问权限：</p>
+<h3 id="获取你的telegram用户id">获取你的Telegram用户ID</h3>
+<ol>
+<li>在Telegram中搜索 <strong>@userinfobot</strong></li>
+<li>发送任意消息</li>
+<li>它会回复你的用户信息：
+<pre tabindex="0"><code>Id: 123456789
+First: 你的名字
+</code></pre></li>
+</ol>
+<h3 id="更新配置">更新配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;channels&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;telegram&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;botToken&#34;</span>: <span style="color:#e6db74">&#34;your-token&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowFrom&#34;</span>: [<span style="color:#ae81ff">123456789</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;groups&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;requireMention&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;allowedGroups&#34;</span>: [<span style="color:#ae81ff">-1001234567890</span>]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>参数说明</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>allowFrom</code></td>
+          <td>只有这个ID能私聊Bot</td>
+      </tr>
+      <tr>
+          <td><code>requireMention</code></td>
+          <td>群组中需要@才响应</td>
+      </tr>
+      <tr>
+          <td><code>allowedGroups</code></td>
+          <td>只有这些群组能用</td>
+      </tr>
+  </tbody>
+</table>
+<p>重载配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openclaw gateway reload
+</span></span></code></pre></div><hr>
+<h2 id="高级配置">高级配置</h2>
+<h3 id="设置bot命令菜单">设置Bot命令菜单</h3>
+<p>向BotFather发送 <code>/setcommands</code>，然后输入：</p>
+<pre tabindex="0"><code>start - 开始对话
+help - 获取帮助
+reset - 重置会话
+status - 查看状态
+</code></pre><p>设置后，用户在Bot界面会看到快捷命令按钮。</p>
+<h3 id="自定义欢迎消息">自定义欢迎消息</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;channels&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;telegram&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;welcomeMessage&#34;</span>: <span style="color:#e6db74">&#34;你好！我是AI助手，有什么可以帮你的？&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;helpMessage&#34;</span>: <span style="color:#e6db74">&#34;你可以：\n1. 直接提问\n2. @我获取帮助\n3. 发送 /reset 重置对话&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="消息格式支持">消息格式支持</h3>
+<p>Telegram支持丰富的消息格式：</p>
+<table>
+  <thead>
+      <tr>
+          <th>格式</th>
+          <th>语法</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>粗体</td>
+          <td><code>**文字**</code></td>
+          <td><strong>加粗</strong></td>
+      </tr>
+      <tr>
+          <td>斜体</td>
+          <td><code>__文字__</code></td>
+          <td><em>斜体</em></td>
+      </tr>
+      <tr>
+          <td>代码</td>
+          <td><code>`代码`</code></td>
+          <td><code>code</code></td>
+      </tr>
+      <tr>
+          <td>代码块</td>
+          <td><code>语言\n代码\n</code></td>
+          <td>多行代码</td>
+      </tr>
+      <tr>
+          <td>链接</td>
+          <td><code>[文字](url)</code></td>
+          <td><a href="https://...">链接</a></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="常见问题解决-">常见问题解决 🛠️</h2>
+<h3 id="q1-连接失败提示网络错误-">Q1: 连接失败，提示网络错误 ❌</h3>
+<p><strong>原因</strong>：国内访问Telegram需要代理</p>
+<p><strong>解决</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 设置代理环境变量</span>
+</span></span><span style="display:flex;"><span>export HTTPS_PROXY<span style="color:#f92672">=</span>http://127.0.0.1:7890
+</span></span><span style="display:flex;"><span>openclaw channels connect telegram
+</span></span></code></pre></div><p>或在配置中指定：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;channels&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;telegram&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;proxy&#34;</span>: <span style="color:#e6db74">&#34;http://127.0.0.1:7890&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="q2-bot不回复消息-">Q2: Bot不回复消息 ❌</h3>
+<p><strong>排查步骤</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. 检查Gateway是否运行</span>
+</span></span><span style="display:flex;"><span>openclaw gateway status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 查看日志</span>
+</span></span><span style="display:flex;"><span>tail -f ~/.openclaw/state/logs/channels.log | grep telegram
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 确认Bot Token正确</span>
+</span></span><span style="display:flex;"><span>openclaw channels test telegram
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 检查用户是否在allowFrom列表</span>
+</span></span></code></pre></div><h3 id="q3-群组中bot不响应-">Q3: 群组中Bot不响应 ❌</h3>
+<p><strong>原因</strong>：没有@Bot，或requireMention为true</p>
+<p><strong>解决</strong>：</p>
+<ul>
+<li>确保消息中包含 <code>@bot用户名</code></li>
+<li>或将 <code>requireMention</code> 设为 false</li>
+</ul>
+<h3 id="q4-提示chat-not-found-">Q4: 提示&quot;chat not found&quot; ❌</h3>
+<p><strong>原因</strong>：Bot还没有和用户建立过对话</p>
+<p><strong>解决</strong>：用户必须先给Bot发一条消息，才能收到Bot的回复。</p>
+<hr>
+<h2 id="性能对比">性能对比</h2>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>Telegram</th>
+          <th>WhatsApp</th>
+          <th>Discord</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>配置难度</td>
+          <td>⭐</td>
+          <td>⭐⭐⭐</td>
+          <td>⭐⭐</td>
+      </tr>
+      <tr>
+          <td>配置速度</td>
+          <td>5分钟</td>
+          <td>15分钟</td>
+          <td>10分钟</td>
+      </tr>
+      <tr>
+          <td>稳定性</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>⭐⭐⭐</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>国内访问</td>
+          <td>⚠️需代理</td>
+          <td>⚠️较困难</td>
+          <td>✅可用</td>
+      </tr>
+      <tr>
+          <td>功能丰富度</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>⭐⭐⭐</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="下节预告">下节预告</h2>
+<p>下一讲连接<strong>WhatsApp</strong>，全球用户量最大的即时通讯工具。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301020301-%E7%AC%AC8%E8%AE%B2-WhatsApp%E9%80%9A%E9%81%93%E8%BF%9E%E6%8E%A5%E4%B8%8E%E5%A4%9A%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86/">继续阅读：第8讲-WhatsApp通道连接与多设备管理</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>Telegram连接问题？加群交流：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<hr>
+<h2 id="推荐ai-python编程实战营">推荐：AI Python编程实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<p>&mdash;## 📚 完整学习路线这是OpenClaw入门课程的第X讲。查看完整课程大纲：👉 **<a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301010101-%E7%AC%AC1%E8%AE%B2-OpenClaw%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/">OpenClaw入门课程大纲</a>**课程包含30讲，从安装部署到实战项目，带你全面掌握OpenClaw。</p>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301020101-%E7%AC%AC6%E8%AE%B2-%E9%80%9A%E9%81%93%E8%BF%9E%E6%8E%A5%E6%A6%82%E8%BF%B0/">第6讲-通道连接概述</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301020301-%E7%AC%AC8%E8%AE%B2-WhatsApp%E9%80%9A%E9%81%93%E8%BF%9E%E6%8E%A5%E4%B8%8E%E5%A4%9A%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86/">第8讲-WhatsApp通道连接与多设备管理</a></p>
+<hr>
+<p><em>PS：Telegram是最适合初学者的通道，建议先把它调通，再尝试其他平台。</em></p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260301020101-%E7%AC%AC6%E8%AE%B2-%E9%80%9A%E9%81%93%E8%BF%9E%E6%8E%A5%E6%A6%82%E8%BF%B0/">上一篇：&#34;OpenClaw入门：第6讲：通道连接概述，理解Pairing机制与安全认证&#34;</a>
+        
+        
+        <a href="http://localhost:4002/20260301020301-%E7%AC%AC8%E8%AE%B2-whatsapp%E9%80%9A%E9%81%93%E8%BF%9E%E6%8E%A5/">下一篇：&#34;OpenClaw入门：第8讲：WhatsApp通道连接，全球20亿用户的AI入口&#34;</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python运算符与表达式：我总结的运算规则，让你写出高效代码 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python运算符与表达式：我总结的运算规则，让你写出高效代码</h1>
+        <div class="post-meta">
+            <span>2026-02-28 19:56</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%9F%BA%E7%A1%80/" class="tag">Python基础</a>
+            
+            <a href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/" class="tag">运算符</a>
+            
+            <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="tag">表达式</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种AI项目的程序员晚枫。</p>
+<h2 id="一个真实的场景">一个真实的场景</h2>
+<p>去年有个读者问我：&ldquo;晚枫老师，我写了个计算折扣的程序，结果经常算错几分钱，老板说财务对不上账，怎么办？&rdquo;</p>
+<p>我看了一眼他的代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 原价147.5元，打8折</span>
+</span></span><span style="display:flex;"><span>price <span style="color:#f92672">=</span> <span style="color:#ae81ff">147.5</span>
+</span></span><span style="display:flex;"><span>discount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.8</span>
+</span></span><span style="display:flex;"><span>final_price <span style="color:#f92672">=</span> price <span style="color:#f92672">*</span> discount
+</span></span><span style="display:flex;"><span>print(final_price)  <span style="color:#75715e"># 118.0</span>
+</span></span></code></pre></div><p>看起来没问题对吧？但如果是这样呢：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>price <span style="color:#f92672">=</span> <span style="color:#ae81ff">147.7</span>
+</span></span><span style="display:flex;"><span>final_price <span style="color:#f92672">=</span> price <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.8</span>  <span style="color:#75715e"># 118.16</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 但实际计算可能是 118.15999999999998</span>
+</span></span></code></pre></div><p><strong>这是浮点数精度问题，很多新手都会踩坑！</strong></p>
+<p>上篇我们学了数据类型——知道怎么存放数据了。这篇来学<strong>怎么运算数据</strong>，以及运算中的那些坑。</p>
+<p>学完这篇，你的程序就能做加减乘除、比大小、做判断，真正&quot;动起来&quot;了。</p>
+<hr>
+<h2 id="算术运算符数学运算">算术运算符：数学运算</h2>
+<p>Python做数学运算，和计算器一样简单——但比计算器强大得多。</p>
+<h3 id="先来算一笔账">先来算一笔账</h3>
+<p>想象你和朋友吃完饭要AA，总价147元，3个人分：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>total <span style="color:#f92672">=</span> <span style="color:#ae81ff">147</span>
+</span></span><span style="display:flex;"><span>people <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 加减乘除</span>
+</span></span><span style="display:flex;"><span>print(total <span style="color:#f92672">/</span> people)     <span style="color:#75715e"># 49.0（每人49元，除法）</span>
+</span></span><span style="display:flex;"><span>print(total <span style="color:#f92672">//</span> people)    <span style="color:#75715e"># 49（只取整数部分，整除）</span>
+</span></span><span style="display:flex;"><span>print(total <span style="color:#f92672">%</span> people)     <span style="color:#75715e"># 0（有余数吗？没有，余数为0）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果是148元呢？</span>
+</span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> <span style="color:#ae81ff">148</span>
+</span></span><span style="display:flex;"><span>print(total <span style="color:#f92672">/</span> people)     <span style="color:#75715e"># 49.333...（精确结果）</span>
+</span></span><span style="display:flex;"><span>print(total <span style="color:#f92672">//</span> people)    <span style="color:#75715e"># 49（每人49元）</span>
+</span></span><span style="display:flex;"><span>print(total <span style="color:#f92672">%</span> people)     <span style="color:#75715e"># 1（还剩1元，谁出？）</span>
+</span></span></code></pre></div><h3 id="7种算术运算符一览">7种算术运算符一览</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">+</span> b)   <span style="color:#75715e"># 13  → 加法</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">-</span> b)   <span style="color:#75715e"># 7   → 减法</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">*</span> b)   <span style="color:#75715e"># 30  → 乘法</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">/</span> b)   <span style="color:#75715e"># 3.333... → 除法（结果是浮点数）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">//</span> b)  <span style="color:#75715e"># 3   → 整除（只取整数部分，去掉小数）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">%</span> b)   <span style="color:#75715e"># 1   → 取余（除法剩下的余数）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">**</span> b)  <span style="color:#75715e"># 1000 → 幂运算（10的3次方）</span>
+</span></span></code></pre></div><p><strong>运行结果：</strong></p>
+<pre tabindex="0"><code>13
+7
+30
+3.3333333333333335
+3
+1
+1000
+</code></pre><h3 id="深入理解除法">深入理解除法</h3>
+<p>Python有两种除法，一定要分清：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 普通除法 /：结果永远是浮点数</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">10</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span>)   <span style="color:#75715e"># 3.3333333333333335（浮点数）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">9</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span>)    <span style="color:#75715e"># 3.0（还是浮点数！）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">10</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)   <span style="color:#75715e"># 5.0（还是浮点数！）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 整除 //：向下取整</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">10</span> <span style="color:#f92672">//</span> <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># 3（向下取整）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">//</span> <span style="color:#ae81ff">3</span>) <span style="color:#75715e"># -4（注意！负数向下取整是-4，不是-3）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 为什么？因为 // 是&#34;向下&#34;取整，不是&#34;向零&#34;取整</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -10 / 3 = -3.333...</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -3.333... 向下取整 = -4</span>
+</span></span></code></pre></div><p><strong>记住：</strong> <code>//</code> 是向下取整（floor division），不是截断。</p>
+<h3 id="负数取余的规则">负数取余的规则</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#ae81ff">10</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>)   <span style="color:#75715e"># 1  （10 = 3*3 + 1）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># 2  （-10 = 3*(-4) + 2）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">10</span> <span style="color:#f92672">%</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># -2 （10 = -3*(-4) + (-2)）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 规则：余数的符号和除数相同</span>
+</span></span></code></pre></div><h3 id="生活中用得上的技巧">生活中用得上的技巧</h3>
+<p><strong>判断奇偶数：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法1：取余判断</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> age <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;偶数&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;奇数&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 运行结果：奇数</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：位运算（更快）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> age <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;偶数&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;奇数&#34;</span>)
+</span></span></code></pre></div><p><strong>取数字的各个位：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取个位</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>)        <span style="color:#75715e"># 5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取十位</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">//</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>)  <span style="color:#75715e"># 4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取百位</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">//</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>) <span style="color:#75715e"># 3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取后两位</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">%</span> <span style="color:#ae81ff">100</span>)       <span style="color:#75715e"># 45</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 去掉最后两位</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">//</span> <span style="color:#ae81ff">100</span>)      <span style="color:#75715e"># 123</span>
+</span></span></code></pre></div><p><strong>翻转数字：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>reversed_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    digit <span style="color:#f92672">=</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>           <span style="color:#75715e"># 取最后一位</span>
+</span></span><span style="display:flex;"><span>    reversed_num <span style="color:#f92672">=</span> reversed_num <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> digit
+</span></span><span style="display:flex;"><span>    num <span style="color:#f92672">=</span> num <span style="color:#f92672">//</span> <span style="color:#ae81ff">10</span>            <span style="color:#75715e"># 去掉最后一位</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(reversed_num)  <span style="color:#75715e"># 54321</span>
+</span></span></code></pre></div><p><strong>四舍五入：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 方法1：round函数</span>
+</span></span><span style="display:flex;"><span>print(round(<span style="color:#ae81ff">3.4</span>))   <span style="color:#75715e"># 3</span>
+</span></span><span style="display:flex;"><span>print(round(<span style="color:#ae81ff">3.5</span>))   <span style="color:#75715e"># 4（四舍五入）</span>
+</span></span><span style="display:flex;"><span>print(round(<span style="color:#ae81ff">3.6</span>))   <span style="color:#75715e"># 4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：自己实现</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_round</span>(num):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> int(num <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(my_round(<span style="color:#ae81ff">3.4</span>))  <span style="color:#75715e"># 3</span>
+</span></span><span style="display:flex;"><span>print(my_round(<span style="color:#ae81ff">3.5</span>))  <span style="color:#75715e"># 4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法3：指定小数位数</span>
+</span></span><span style="display:flex;"><span>print(round(<span style="color:#ae81ff">3.14159</span>, <span style="color:#ae81ff">2</span>))  <span style="color:#75715e"># 3.14</span>
+</span></span><span style="display:flex;"><span>print(round(<span style="color:#ae81ff">3.14159</span>, <span style="color:#ae81ff">3</span>))  <span style="color:#75715e"># 3.142</span>
+</span></span></code></pre></div><p><strong>货币计算（避免浮点数精度问题）：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误示范</span>
+</span></span><span style="display:flex;"><span>price <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span>
+</span></span><span style="display:flex;"><span>print(price)  <span style="color:#75715e"># 0.30000000000000004（精度丢失！）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 方法1：用decimal模块</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> decimal <span style="color:#f92672">import</span> Decimal, ROUND_HALF_UP
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>price <span style="color:#f92672">=</span> Decimal(<span style="color:#e6db74">&#39;0.1&#39;</span>) <span style="color:#f92672">+</span> Decimal(<span style="color:#e6db74">&#39;0.2&#39;</span>)
+</span></span><span style="display:flex;"><span>print(price)  <span style="color:#75715e"># 0.3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：整数分计算</span>
+</span></span><span style="display:flex;"><span>price_fen <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">20</span>  <span style="color:#75715e"># 单位：分</span>
+</span></span><span style="display:flex;"><span>print(price_fen <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>)  <span style="color:#75715e"># 0.3</span>
+</span></span></code></pre></div><hr>
+<h2 id="比较运算符比大小">比较运算符：比大小</h2>
+<p>比较运算符返回的是布尔值（True 或 False），是条件判断的基础。</p>
+<h3 id="6种比较运算符">6种比较运算符</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>score <span style="color:#f92672">=</span> <span style="color:#ae81ff">85</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(score <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">60</span>)    <span style="color:#75715e"># True（85大于60，及格了）</span>
+</span></span><span style="display:flex;"><span>print(score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>)   <span style="color:#75715e"># True（85大于等于60，及格）</span>
+</span></span><span style="display:flex;"><span>print(score <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">90</span>)    <span style="color:#75715e"># True（85小于90）</span>
+</span></span><span style="display:flex;"><span>print(score <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">90</span>)   <span style="color:#75715e"># True（85小于等于90）</span>
+</span></span><span style="display:flex;"><span>print(score <span style="color:#f92672">==</span> <span style="color:#ae81ff">85</span>)   <span style="color:#75715e"># True（等于85）</span>
+</span></span><span style="display:flex;"><span>print(score <span style="color:#f92672">!=</span> <span style="color:#ae81ff">100</span>)  <span style="color:#75715e"># True（不等于100）</span>
+</span></span></code></pre></div><h3 id="链式比较python的优雅写法">链式比较：Python的优雅写法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 判断年龄是否在18到60之间</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 传统写法（其他语言）：</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> age <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">and</span> age <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>print(result)   <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Python专属写法（更简洁）：</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">&lt;=</span> age <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>print(result)   <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 更多例子</span>
+</span></span><span style="display:flex;"><span>score <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">60</span> <span style="color:#f92672">&lt;=</span> score <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span>)  <span style="color:#75715e"># True（60-79分，良好区间）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> score <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">100</span>) <span style="color:#75715e"># True（合法分数）</span>
+</span></span></code></pre></div><h3 id="比较不同类型">比较不同类型</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 数字之间可以比较</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2.5</span>)      <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">1.0</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)     <span style="color:#75715e"># True（值相等）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 字符串按字典序比较</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;apple&#34;</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#34;banana&#34;</span>)  <span style="color:#75715e"># True（a在b前面）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Apple&#34;</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#34;apple&#34;</span>)   <span style="color:#75715e"># True（大写字母ASCII码更小）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 字符串比较逐字符进行</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;abc&#34;</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#34;abd&#34;</span>)       <span style="color:#75715e"># True（c &lt; d）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;ab&#34;</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#34;abc&#34;</span>)        <span style="color:#75715e"># True（短字符串是前缀）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 不同类型不能直接比较（Python 3）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(1 &lt; &#34;2&#34;)  # TypeError</span>
+</span></span></code></pre></div><h3 id="浮点数比较的坑">浮点数比较的坑</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误示范</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.3</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">==</span> b)  <span style="color:#75715e"># False！（精度问题）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确方法：用容差比较</span>
+</span></span><span style="display:flex;"><span>tolerance <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-9</span>  <span style="color:#75715e"># 允许的误差范围</span>
+</span></span><span style="display:flex;"><span>print(abs(a <span style="color:#f92672">-</span> b) <span style="color:#f92672">&lt;</span> tolerance)  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或者用math.isclose</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span>print(math<span style="color:#f92672">.</span>isclose(a, b))  <span style="color:#75715e"># True</span>
+</span></span></code></pre></div><hr>
+<h2 id="赋值运算符边算边存">赋值运算符：边算边存</h2>
+<p>赋值运算符是把计算结果存回变量，简化代码。</p>
+<h3 id="复合赋值运算符">复合赋值运算符</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">+=</span> <span style="color:#ae81ff">5</span>   <span style="color:#75715e"># 等价于 x = x + 5，现在 x = 15</span>
+</span></span><span style="display:flex;"><span>print(x)  <span style="color:#75715e"># 15</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">-=</span> <span style="color:#ae81ff">3</span>   <span style="color:#75715e"># 等价于 x = x - 3，现在 x = 12</span>
+</span></span><span style="display:flex;"><span>print(x)  <span style="color:#75715e"># 12</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">*=</span> <span style="color:#ae81ff">2</span>   <span style="color:#75715e"># 等价于 x = x * 2，现在 x = 24</span>
+</span></span><span style="display:flex;"><span>print(x)  <span style="color:#75715e"># 24</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">//=</span> <span style="color:#ae81ff">5</span>  <span style="color:#75715e"># 等价于 x = x // 5，现在 x = 4</span>
+</span></span><span style="display:flex;"><span>print(x)  <span style="color:#75715e"># 4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">**=</span> <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># 等价于 x = x ** 2，现在 x = 16</span>
+</span></span><span style="display:flex;"><span>print(x)  <span style="color:#75715e"># 16</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">%=</span> <span style="color:#ae81ff">3</span>   <span style="color:#75715e"># 等价于 x = x % 3，现在 x = 1</span>
+</span></span><span style="display:flex;"><span>print(x)  <span style="color:#75715e"># 1</span>
+</span></span></code></pre></div><h3 id="实际应用场景">实际应用场景</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 计数器</span>
+</span></span><span style="display:flex;"><span>count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 简单明了</span>
+</span></span><span style="display:flex;"><span>count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>print(count)  <span style="color:#75715e"># 2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 累加求和</span>
+</span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>prices <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> price <span style="color:#f92672">in</span> prices:
+</span></span><span style="display:flex;"><span>    total <span style="color:#f92672">+=</span> price  <span style="color:#75715e"># 累加</span>
+</span></span><span style="display:flex;"><span>print(total)  <span style="color:#75715e"># 100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 累乘求积</span>
+</span></span><span style="display:flex;"><span>product <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">6</span>):
+</span></span><span style="display:flex;"><span>    product <span style="color:#f92672">*=</span> i
+</span></span><span style="display:flex;"><span>print(product)  <span style="color:#75715e"># 120 (1*2*3*4*5)</span>
+</span></span></code></pre></div><h3 id="海象运算符python-38">海象运算符（Python 3.8+）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 传统写法</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;请输入: &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> len(text) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;输入了</span><span style="color:#e6db74">{</span>len(text)<span style="color:#e6db74">}</span><span style="color:#e6db74">个字符&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 海象运算符（在表达式内赋值）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (n <span style="color:#f92672">:=</span> len(input(<span style="color:#e6db74">&#34;请输入: &#34;</span>))) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;输入了</span><span style="color:#e6db74">{</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74">个字符&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 实际应用：读取文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># while (line := file.readline()):</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     process(line)</span>
+</span></span></code></pre></div><hr>
+<h2 id="逻辑运算符组合判断">逻辑运算符：组合判断</h2>
+<p><code>and</code>（且）、<code>or</code>（或）、<code>not</code>（非）用来组合多个条件。</p>
+<h3 id="and两个都要满足">and：两个都要满足</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 用户要同时满足：年满18岁 AND 充值金额&gt;=100元 才能开通VIP</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">150</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>can_vip <span style="color:#f92672">=</span> (age <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span>) <span style="color:#f92672">and</span> (balance <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>print(can_vip)  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 其中一个不满足：</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>
+</span></span><span style="display:flex;"><span>can_vip <span style="color:#f92672">=</span> (age <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span>) <span style="color:#f92672">and</span> (balance <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>print(can_vip)  <span style="color:#75715e"># False（年龄不够）</span>
+</span></span></code></pre></div><h3 id="or满足一个就行">or：满足一个就行</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 用户满足：VIP用户 OR 充值金额&gt;=500元 之一，即可享受折扣</span>
+</span></span><span style="display:flex;"><span>is_vip <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">600</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>can_discount <span style="color:#f92672">=</span> is_vip <span style="color:#f92672">or</span> (balance <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">500</span>)
+</span></span><span style="display:flex;"><span>print(can_discount)  <span style="color:#75715e"># True（虽然不是VIP，但充值够了）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>is_vip <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>can_discount <span style="color:#f92672">=</span> is_vip <span style="color:#f92672">or</span> (balance <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">500</span>)
+</span></span><span style="display:flex;"><span>print(can_discount)  <span style="color:#75715e"># False（两个条件都不满足）</span>
+</span></span></code></pre></div><h3 id="not取反">not：取反</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>is_locked <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#f92672">not</span> is_locked)  <span style="color:#75715e"># False（解锁后就不是锁定状态了）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>is_logged_in <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> is_logged_in:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;请先登录&#34;</span>)   <span style="color:#75715e"># 会执行这句</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># not常用于判断空值</span>
+</span></span><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> name:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;姓名不能为空&#34;</span>)
+</span></span></code></pre></div><h3 id="真值表">真值表</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">A</th>
+          <th style="text-align: center">B</th>
+          <th style="text-align: center">A and B</th>
+          <th style="text-align: center">A or B</th>
+          <th style="text-align: center">not A</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">True</td>
+          <td style="text-align: center">True</td>
+          <td style="text-align: center">True</td>
+          <td style="text-align: center">True</td>
+          <td style="text-align: center">False</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">True</td>
+          <td style="text-align: center">False</td>
+          <td style="text-align: center">False</td>
+          <td style="text-align: center">True</td>
+          <td style="text-align: center">False</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">False</td>
+          <td style="text-align: center">True</td>
+          <td style="text-align: center">False</td>
+          <td style="text-align: center">True</td>
+          <td style="text-align: center">True</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">False</td>
+          <td style="text-align: center">False</td>
+          <td style="text-align: center">False</td>
+          <td style="text-align: center">False</td>
+          <td style="text-align: center">True</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="短路求值python很聪明">短路求值：Python很聪明</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># and短路：第一个是False，后面的不看了</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span> <span style="color:#f92672">and</span> print(<span style="color:#e6db74">&#34;这里不会执行&#34;</span>)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or短路：第一个是True，后面的不看了</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#f92672">or</span> print(<span style="color:#e6db74">&#34;这里也不会执行&#34;</span>)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 实际应用：避免报错</span>
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果user是None，后面的user.name不会执行，避免AttributeError</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> user <span style="color:#f92672">and</span> user<span style="color:#f92672">.</span>name:
+</span></span><span style="display:flex;"><span>    print(user<span style="color:#f92672">.</span>name)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;用户不存在&#34;</span>)
+</span></span></code></pre></div><p><strong>为什么叫短路？</strong> Python在<code>and</code>的左边已经知道结果为False，或者<code>or</code>的左边已经知道结果为True时，就不再看后面的代码了——因为后面再怎么看，也不会改变最终结果。这能<strong>省时间，有时候还能避免报错</strong>。</p>
+<h3 id="逻辑运算返回值">逻辑运算返回值</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># and返回第一个为False的值，或最后一个值</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">3</span> <span style="color:#f92672">and</span> <span style="color:#ae81ff">5</span>)    <span style="color:#75715e"># 5（都为真，返回最后一个）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> <span style="color:#ae81ff">5</span>)    <span style="color:#75715e"># 0（0是假，返回它）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">3</span> <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span>)    <span style="color:#75715e"># 0（返回第一个假值）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> <span style="color:#e6db74">&#34;&#34;</span>)   <span style="color:#75715e"># 0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or返回第一个为True的值，或最后一个值</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">3</span> <span style="color:#f92672">or</span> <span style="color:#ae81ff">5</span>)     <span style="color:#75715e"># 3（3是真，返回它）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> <span style="color:#ae81ff">5</span>)     <span style="color:#75715e"># 5（返回第一个真值）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> <span style="color:#e6db74">&#34;&#34;</span>)    <span style="color:#75715e"># &#34;&#34;（都为假，返回最后一个）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 实际应用：设置默认值</span>
+</span></span><span style="display:flex;"><span>name <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;请输入姓名: &#34;</span>) <span style="color:#f92672">or</span> <span style="color:#e6db74">&#34;匿名用户&#34;</span>
+</span></span><span style="display:flex;"><span>print(name)  <span style="color:#75715e"># 如果没输入，默认&#34;匿名用户&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="成员运算符在一堆东西里找">成员运算符：在一堆东西里找</h2>
+<p>判断某个元素是否在一组数据中。</p>
+<h3 id="in-和-not-in">in 和 not in</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;苹果&#34;</span>, <span style="color:#e6db74">&#34;香蕉&#34;</span>, <span style="color:#e6db74">&#34;橙子&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;苹果&#34;</span> <span style="color:#f92672">in</span> fruits)       <span style="color:#75715e"># True（在列表里）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;葡萄&#34;</span> <span style="color:#f92672">in</span> fruits)      <span style="color:#75715e"># False（不在列表里）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;葡萄&#34;</span> <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> fruits)   <span style="color:#75715e"># True（确实不在）</span>
+</span></span></code></pre></div><h3 id="不同类型的应用">不同类型的应用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 字符串中查找</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">in</span> <span style="color:#e6db74">&#34;apple&#34;</span>)      <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;app&#34;</span> <span style="color:#f92672">in</span> <span style="color:#e6db74">&#34;apple&#34;</span>)    <span style="color:#75715e"># True（子串也可以）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;x&#34;</span> <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> <span style="color:#e6db74">&#34;apple&#34;</span>)  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表中查找</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">3</span> <span style="color:#f92672">in</span> numbers)        <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">6</span> <span style="color:#f92672">in</span> numbers)        <span style="color:#75715e"># False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 元组中查找</span>
+</span></span><span style="display:flex;"><span>coordinates <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">0</span> <span style="color:#f92672">in</span> coordinates)    <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集合中查找（速度快！）</span>
+</span></span><span style="display:flex;"><span>unique_numbers <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">3</span> <span style="color:#f92672">in</span> unique_numbers)  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 字典中查找（查的是key）</span>
+</span></span><span style="display:flex;"><span>person <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;张三&#34;</span>, <span style="color:#e6db74">&#34;age&#34;</span>: <span style="color:#ae81ff">25</span>}
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#f92672">in</span> person)   <span style="color:#75715e"># True（&#34;name&#34;是键）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;张三&#34;</span> <span style="color:#f92672">in</span> person)   <span style="color:#75715e"># False（&#34;张三&#34;是值，键里没有它）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;张三&#34;</span> <span style="color:#f92672">in</span> person<span style="color:#f92672">.</span>values())  <span style="color:#75715e"># True（查值要用values()）</span>
+</span></span></code></pre></div><h3 id="性能对比">性能对比</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表查找：O(n)</span>
+</span></span><span style="display:flex;"><span>large_list <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">1000000</span>))
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">999999</span> <span style="color:#f92672">in</span> large_list)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表查找: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集合查找：O(1)</span>
+</span></span><span style="display:flex;"><span>large_set <span style="color:#f92672">=</span> set(range(<span style="color:#ae81ff">1000000</span>))
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">999999</span> <span style="color:#f92672">in</span> large_set)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;集合查找: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span></code></pre></div><p><strong>结论：</strong> 频繁查找用集合，速度快几个数量级！</p>
+<hr>
+<h2 id="身份运算符是不是同一个东西">身份运算符：是不是同一个东西</h2>
+<p><code>is</code>判断的是两个变量是不是<strong>同一个对象</strong>（内存地址相同），<code>==</code>判断的是<strong>内容是否相同</strong>。</p>
+<h3 id="is-vs-">is vs ==</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> a           <span style="color:#75715e"># b和a指向同一个列表（同一个东西）</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]  <span style="color:#75715e"># c是一个新创建的列表（内容相同，但不是同一个）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">is</span> b)   <span style="color:#75715e"># True（a和b是同一个人）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">is</span> c)   <span style="color:#75715e"># False（a和c不是同一个人，虽然长得一样）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">==</span> c)  <span style="color:#75715e"># True（a和c的内容相等）</span>
+</span></span></code></pre></div><h3 id="比喻理解">比喻理解</h3>
+<ul>
+<li><code>is</code>：这两个人是不是<strong>同一个人</strong>（双胞胎也不行，是本人）</li>
+<li><code>==</code>：这两个人<strong>长得像不像</strong></li>
+</ul>
+<h3 id="none的判断">None的判断</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ✅ 推荐写法</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> x <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;x是None&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 不推荐（虽然能用）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;x是None&#34;</span>)
+</span></span></code></pre></div><h3 id="小整数缓存">小整数缓存</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 小整数（-5到256）会被缓存</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">256</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">256</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">is</span> b)  <span style="color:#75715e"># True（同一个对象）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">257</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">257</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">is</span> b)  <span style="color:#75715e"># 可能是False（不同对象）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 字符串也有类似缓存</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">is</span> b)  <span style="color:#75715e"># True（短字符串会被缓存）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world!&#34;</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world!&#34;</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">is</span> b)  <span style="color:#75715e"># 可能是False</span>
+</span></span></code></pre></div><h3 id="最佳实践">最佳实践</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ✅ 用 is 判断None</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> x <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 用 == 比较值</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> a <span style="color:#f92672">==</span> b:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 不要用 is 比较数字和字符串</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> a <span style="color:#f92672">is</span> <span style="color:#ae81ff">5</span>:  <span style="color:#75715e"># 不推荐</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><hr>
+<h2 id="位运算符底层操作">位运算符：底层操作</h2>
+<p>位运算直接对二进制位操作，速度快但可读性差。</p>
+<h3 id="位运算符一览">位运算符一览</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">13</span>  <span style="color:#75715e"># 60 = 00111100, 13 = 00001101</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">&amp;</span> b)   <span style="color:#75715e"># 12  → 按位与（都为1才是1）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">|</span> b)   <span style="color:#75715e"># 61  → 按位或（有1就是1）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">^</span> b)   <span style="color:#75715e"># 49  → 按位异或（不同为1）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#f92672">~</span>a)      <span style="color:#75715e"># -61 → 按位取反</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 240 → 左移2位（乘4）</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 15  → 右移2位（除4）</span>
+</span></span></code></pre></div><h3 id="实际应用">实际应用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 判断奇偶（更快）</span>
+</span></span><span style="display:flex;"><span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 1（奇数）</span>
+</span></span><span style="display:flex;"><span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 0（偶数）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 交换变量（不用临时变量）</span>
+</span></span><span style="display:flex;"><span>a, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> a <span style="color:#f92672">^</span> b
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> a <span style="color:#f92672">^</span> b
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> a <span style="color:#f92672">^</span> b
+</span></span><span style="display:flex;"><span>print(a, b)  <span style="color:#75715e"># 20 10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或者更简单</span>
+</span></span><span style="display:flex;"><span>a, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>a, b <span style="color:#f92672">=</span> b, a  <span style="color:#75715e"># Python特有的交换方式</span>
+</span></span><span style="display:flex;"><span>print(a, b)  <span style="color:#75715e"># 20 10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 权限判断</span>
+</span></span><span style="display:flex;"><span>READ <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>      <span style="color:#75715e"># 001</span>
+</span></span><span style="display:flex;"><span>WRITE <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>     <span style="color:#75715e"># 010</span>
+</span></span><span style="display:flex;"><span>EXECUTE <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>   <span style="color:#75715e"># 100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>permission <span style="color:#f92672">=</span> READ <span style="color:#f92672">|</span> WRITE  <span style="color:#75715e"># 011（可读可写）</span>
+</span></span><span style="display:flex;"><span>print(permission <span style="color:#f92672">&amp;</span> READ)   <span style="color:#75715e"># 1（有读权限）</span>
+</span></span><span style="display:flex;"><span>print(permission <span style="color:#f92672">&amp;</span> EXECUTE)  <span style="color:#75715e"># 0（无执行权限）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 快速乘除</span>
+</span></span><span style="display:flex;"><span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 20（乘2）</span>
+</span></span><span style="display:flex;"><span>print(num <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 5（除2）</span>
+</span></span></code></pre></div><hr>
+<h2 id="运算符优先级先算谁">运算符优先级：先算谁？</h2>
+<p>数学里先乘除后加减，Python也一样：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">优先级（高→低）</th>
+          <th>运算符</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td><code>()</code> 括号</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td><code>**</code> 幂</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td><code>+x, -x, ~x</code> 正负号、按位取反</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">4</td>
+          <td><code>* / // %</code> 乘除取余</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5</td>
+          <td><code>+ -</code> 加减</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">6</td>
+          <td><code>&lt;&lt; &gt;&gt;</code> 移位</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">7</td>
+          <td><code>&amp;</code> 按位与</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">8</td>
+          <td><code>^</code> 按位异或</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">9</td>
+          <td>`</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">10</td>
+          <td><code>&gt; &lt; &gt;= &lt;= == !=</code> 比较</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">11</td>
+          <td><code>is, is not, in, not in</code> 身份和成员</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">12</td>
+          <td><code>not</code> 非</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">13</td>
+          <td><code>and</code> 且</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">14</td>
+          <td><code>or</code> 或</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="经典陷阱">经典陷阱</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 陷阱1：幂运算从右到左</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">2</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 512（不是64！），等价于 2 ** (3 ** 2)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 陷阱2：比较和逻辑</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#66d9ef">True</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">False</span> <span style="color:#f92672">or</span> <span style="color:#66d9ef">True</span>)  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解析：(True == False) or True → False or True → True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 陷阱3：is和==</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">is</span> b <span style="color:#f92672">==</span> c)  <span style="color:#75715e"># 等价于 (a is b) and (b == c)</span>
+</span></span></code></pre></div><h3 id="最佳实践用括号">最佳实践：用括号</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 不加括号（先算乘法）</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># 14</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 加括号（先算加法）</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># 20</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 复杂表达式：加括号增加可读性</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> ((a <span style="color:#f92672">+</span> b) <span style="color:#f92672">*</span> c <span style="color:#f92672">-</span> d) <span style="color:#f92672">/</span> e
+</span></span></code></pre></div><p><strong>黄金法则：</strong> 不确定优先级时，用括号明确意图。</p>
+<hr>
+<h2 id="避坑指南常见错误">避坑指南：常见错误</h2>
+<h3 id="错误1混淆--和-">错误1：混淆 = 和 ==</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>:  <span style="color:#75715e"># 语法错误！= 是赋值，== 才是比较</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><h3 id="错误2浮点数精度">错误2：浮点数精度</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 问题代码</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> a <span style="color:#f92672">==</span> <span style="color:#ae81ff">0.3</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;相等&#34;</span>)  <span style="color:#75715e"># 不会执行！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确方法</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> math<span style="color:#f92672">.</span>isclose(a, <span style="color:#ae81ff">0.3</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;相等&#34;</span>)
+</span></span></code></pre></div><h3 id="错误3链式赋值陷阱">错误3：链式赋值陷阱</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 常见错误</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> b <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>print(b)  <span style="color:#75715e"># [1]（b也变了！它们指向同一个列表）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确方法</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>print(b)  <span style="color:#75715e"># []</span>
+</span></span></code></pre></div><h3 id="错误4运算顺序错误">错误4：运算顺序错误</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：想表达 2^(3^2)，写成了这样</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># 512，正确但容易误解</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 明确意图</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">**</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 512</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># 64</span>
+</span></span></code></pre></div><h3 id="错误5整数除法方向">错误5：整数除法方向</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 理解错误</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">//</span> <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># -4（向下取整，不是-3）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确理解</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -10 / 3 = -3.333...</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 向下取整 = -4</span>
+</span></span></code></pre></div><hr>
+<h2 id="实战案例智能评分系统">实战案例：智能评分系统</h2>
+<p>用运算符写一个成绩评级程序：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">grade_score</span>(score):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;根据分数返回等级&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;A（优秀）&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;B（良好）&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;C（中等）&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;D（及格）&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;F（不及格）&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试几个成绩</span>
+</span></span><span style="display:flex;"><span>scores <span style="color:#f92672">=</span> [<span style="color:#ae81ff">95</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">73</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">45</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;考试成绩评级&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> scores:
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;及格&#34;</span> <span style="color:#66d9ef">if</span> s <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;不及格&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;分数：</span><span style="color:#e6db74">{</span>s<span style="color:#e6db74">}</span><span style="color:#e6db74">  →  等级：</span><span style="color:#e6db74">{</span>grade_score(s)<span style="color:#e6db74">}</span><span style="color:#e6db74">  【</span><span style="color:#e6db74">{</span>result<span style="color:#e6db74">}</span><span style="color:#e6db74">】&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">20</span>)
+</span></span></code></pre></div><p><strong>运行结果：</strong></p>
+<pre tabindex="0"><code>====================
+考试成绩评级
+====================
+分数：95  →  等级：A（优秀）  【及格】
+分数：82  →  等级：B（良好）  【及格】
+分数：73  →  等级：C（中等）  【及格】
+分数：61  →  等级：D（及格）  【及格】
+分数：45  →  等级：F（不及格）  【不及格】
+====================
+</code></pre><h3 id="实战案例购物车计算">实战案例：购物车计算</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_total</span>(items, discount_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, member_level<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;普通&#34;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;计算购物车总价&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 计算原价</span>
+</span></span><span style="display:flex;"><span>    subtotal <span style="color:#f92672">=</span> sum(item[<span style="color:#e6db74">&#39;price&#39;</span>] <span style="color:#f92672">*</span> item[<span style="color:#e6db74">&#39;quantity&#39;</span>] <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> items)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 会员折扣</span>
+</span></span><span style="display:flex;"><span>    member_discount <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;普通&#34;</span>: <span style="color:#ae81ff">1.0</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;银卡&#34;</span>: <span style="color:#ae81ff">0.95</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;金卡&#34;</span>: <span style="color:#ae81ff">0.9</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;钻石&#34;</span>: <span style="color:#ae81ff">0.85</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 计算折扣</span>
+</span></span><span style="display:flex;"><span>    discount <span style="color:#f92672">=</span> max(discount_rate, <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> member_discount<span style="color:#f92672">.</span>get(member_level, <span style="color:#ae81ff">1.0</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 最终价格</span>
+</span></span><span style="display:flex;"><span>    final_price <span style="color:#f92672">=</span> subtotal <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> discount)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;subtotal&#34;</span>: subtotal,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;discount_rate&#34;</span>: discount <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;final_price&#34;</span>: round(final_price, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试</span>
+</span></span><span style="display:flex;"><span>cart <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;苹果&#34;</span>, <span style="color:#e6db74">&#34;price&#34;</span>: <span style="color:#ae81ff">5.5</span>, <span style="color:#e6db74">&#34;quantity&#34;</span>: <span style="color:#ae81ff">3</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;香蕉&#34;</span>, <span style="color:#e6db74">&#34;price&#34;</span>: <span style="color:#ae81ff">3.0</span>, <span style="color:#e6db74">&#34;quantity&#34;</span>: <span style="color:#ae81ff">5</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;橙子&#34;</span>, <span style="color:#e6db74">&#34;price&#34;</span>: <span style="color:#ae81ff">4.5</span>, <span style="color:#e6db74">&#34;quantity&#34;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> calculate_total(cart, discount_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, member_level<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;金卡&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;商品总价：</span><span style="color:#e6db74">{</span>result[<span style="color:#e6db74">&#39;subtotal&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">元&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;优惠折扣：</span><span style="color:#e6db74">{</span>result[<span style="color:#e6db74">&#39;discount_rate&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">%&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;实付金额：</span><span style="color:#e6db74">{</span>result[<span style="color:#e6db74">&#39;final_price&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">元&#34;</span>)
+</span></span></code></pre></div><h3 id="实战案例时间计算器">实战案例：时间计算器</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_time</span>(seconds):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;将秒数转换为时分秒&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    hours <span style="color:#f92672">=</span> seconds <span style="color:#f92672">//</span> <span style="color:#ae81ff">3600</span>
+</span></span><span style="display:flex;"><span>    minutes <span style="color:#f92672">=</span> (seconds <span style="color:#f92672">%</span> <span style="color:#ae81ff">3600</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>    secs <span style="color:#f92672">=</span> seconds <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>hours<span style="color:#e6db74">}</span><span style="color:#e6db74">小时</span><span style="color:#e6db74">{</span>minutes<span style="color:#e6db74">}</span><span style="color:#e6db74">分钟</span><span style="color:#e6db74">{</span>secs<span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试</span>
+</span></span><span style="display:flex;"><span>print(calculate_time(<span style="color:#ae81ff">3661</span>))   <span style="color:#75715e"># 1小时1分钟1秒</span>
+</span></span><span style="display:flex;"><span>print(calculate_time(<span style="color:#ae81ff">7325</span>))   <span style="color:#75715e"># 2小时2分钟5秒</span>
+</span></span><span style="display:flex;"><span>print(calculate_time(<span style="color:#ae81ff">86400</span>))  <span style="color:#75715e"># 24小时0分钟0秒</span>
+</span></span></code></pre></div><hr>
+<h2 id="-推荐python-零基础实战营">📚 推荐：Python 零基础实战营</h2>
+<p><strong>系统学习Python，推荐这个免费入门课程 👇</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>特点</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🎯 专为0基础设计</td>
+          <td>门槛低，上手快</td>
+      </tr>
+      <tr>
+          <td>📹 配套视频讲解</td>
+          <td>配合文章学习效果更好</td>
+      </tr>
+      <tr>
+          <td>💬 专属答疑群</td>
+          <td>遇到问题有人带</td>
+      </tr>
+      <tr>
+          <td>🎁 实体书赠送</td>
+          <td>优秀学员送《Python编程从入门到实践》</td>
+      </tr>
+  </tbody>
+</table>
+<p>👉 <strong><a href="https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397">点击免费领取 Python 零基础实战营</a></strong></p>
+<hr>
+<h2 id="本讲小结">本讲小结</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">运算符</th>
+          <th>作用</th>
+          <th>例子</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>+ - * / // % **</code></td>
+          <td>算术运算</td>
+          <td><code>10 / 3 = 3.33</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>&gt; &lt; &gt;= &lt;= == !=</code></td>
+          <td>比较大小</td>
+          <td><code>5 &gt; 3 = True</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>and or not</code></td>
+          <td>逻辑组合</td>
+          <td><code>True and False = False</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>in / not in</code></td>
+          <td>成员判断</td>
+          <td><code>&quot;a&quot; in &quot;abc&quot; = True</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>is / is not</code></td>
+          <td>身份判断</td>
+          <td>比较是否同一对象</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>+= -= *= /=</code></td>
+          <td>赋值运算</td>
+          <td><code>x += 1</code>（x加1）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">`&amp;</td>
+          <td>^ ~ &laquo; &raquo;`</td>
+          <td>位运算</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="下节预告">下节预告</h2>
+<p>学会了运算，下一篇来学<strong>条件判断（if/else）</strong>——让程序学会做选择。</p>
+<p>你将学会：</p>
+<ul>
+<li>if/elif/else的完整用法</li>
+<li>嵌套条件判断</li>
+<li>三元表达式</li>
+<li>match-case新模式（Python 3.10+）</li>
+</ul>
+<p>👉 <strong><a href="./04-Python%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD.md">继续阅读：Python条件判断</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="./01-Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.md">Python零基础入门：写下你的第一行代码</a></p>
+<p><strong>下一篇：</strong> <a href="./04-Python%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD.md">Python条件判断-if-else完全指南</a></p>
+<hr>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="./02-Python%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.md">Python变量与数据类型完全指南</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/python/20260228171202-%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6AI%E7%BC%96%E7%A8%8B-30%E5%A4%A9%E9%80%9F%E6%88%90%E8%AE%A1%E5%88%92/">零基础学AI编程：30天速成计划</a></li>
+</ul>
+<hr>
+<p><em>PS：运算符是编程的&quot;算盘&quot;，多动手算几个生活中的例子，比死记硬背有用得多。记住：代码是写给人看的，顺便给机器运行。</em></p>
+<p><em>2026-04-23 更新 by 程序员晚枫</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/01-python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">上一篇：Python零基础入门：写下你的第一行代码，开启编程之旅</a>
+        
+        
+        <a href="http://localhost:4002/04-python%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/">下一篇：Python条件判断：我用if-else写出了会思考的程序</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 3 讲：内存管理机制——pymalloc 与 Python 内存池设计 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 3 讲：内存管理机制——pymalloc 与 Python 内存池设计</h1>
+        <div class="post-meta">
+            <span>2026-03-03 10:15</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python/" class="tag">python</a>
+            
+            <a href="/tags/cpython/" class="tag">CPython</a>
+            
+            <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86pymalloc/" class="tag">内存管理，pymalloc</a>
+            
+            <a href="/tags/%E5%86%85%E5%AD%98%E6%B1%A0/" class="tag">内存池</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>为什么 Python 小对象创建这么快？频繁创建销毁对象会不会导致内存碎片？</strong></p>
+<p>答案就在<strong>pymalloc 内存池</strong>。理解这个机制，你就能解释很多 Python 的内存行为，也能写出更省内存的代码。</p>
+<p>想象一下，你去银行取钱。如果每次取 100 元，银行都从金库里现找，那效率太低了。所以银行会在柜台准备一些现金，小额取款直接从柜台拿，大额才去金库。Python 的内存管理也是类似的思路。</p>
+<hr>
+<h2 id="-python-内存分配架构">🏊 Python 内存分配架构</h2>
+<p>CPython 采用分层内存管理策略，不同大小的对象使用不同的分配方式：</p>
+<pre tabindex="0"><code>┌─────────────────────────────────────────┐
+│  用户代码层                               │
+│  obj = MyClass()  →  请求内存            │
+└──────────────────┬──────────────────────┘
+                   ↓
+┌─────────────────────────────────────────┐
+│  对象分配器（Object Allocator）           │
+│  ├── 小对象 (≤512 字节): pymalloc         │
+│  └── 大对象 (&gt;512 字节): 直接使用 malloc   │
+└──────────────────┬──────────────────────┘
+                   ↓
+┌─────────────────────────────────────────┐
+│  C 运行时层                                │
+│  malloc / free                           │
+└──────────────────┬──────────────────────┘
+                   ↓
+┌─────────────────────────────────────────┐
+│  操作系统层                               │
+│  brk / mmap                              │
+└─────────────────────────────────────────┘
+</code></pre><h3 id="关键阈值">关键阈值</h3>
+<table>
+  <thead>
+      <tr>
+          <th>对象大小</th>
+          <th>分配方式</th>
+          <th>特点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>≤ 512 bytes</td>
+          <td>pymalloc</td>
+          <td>快速，无锁（有 GIL），低碎片</td>
+      </tr>
+      <tr>
+          <td>&gt; 512 bytes</td>
+          <td>malloc</td>
+          <td>标准 C 分配，可能产生碎片</td>
+      </tr>
+  </tbody>
+</table>
+<p>为什么是 512 字节这个阈值？这是经验值。统计表明，Python 程序中绝大多数临时对象都很小（整数、短字符串、小列表等），所以把阈值设得较低可以覆盖大部分场景。</p>
+<hr>
+<h2 id="-pymalloc-内存池详解">🔧 pymalloc 内存池详解</h2>
+<h3 id="核心概念">核心概念</h3>
+<p>pymalloc 采用了三级结构来管理内存，这是理解它的关键：</p>
+<pre tabindex="0"><code>Arena（256KB）→ Pool（4KB）→ Block（8~512 字节）
+</code></pre><p>你可以把它想象成俄罗斯套娃：最大的套娃是 Arena，里面装着多个 Pool，每个 Pool 里面装着多个 Block。</p>
+<h4 id="1-arena竞技场">1. Arena（竞技场）</h4>
+<p>Arena 是最大的内存单元，大小为 256KB。当 pymalloc 需要更多内存时，它会向操作系统申请 Arena。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 一个 Arena 大小为 256KB
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ARENA_SIZE (256 &lt;&lt; 10)  </span><span style="color:#75715e">// 256 KB
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> arena_object {
+</span></span><span style="display:flex;"><span>    uptr address;          <span style="color:#75715e">// Arena 的起始地址
+</span></span></span><span style="display:flex;"><span>    block<span style="color:#f92672">*</span> pool_address;   <span style="color:#75715e">// 下一个可分配的 Pool 位置
+</span></span></span><span style="display:flex;"><span>    uint nfreepools;       <span style="color:#75715e">// 空闲 Pool 数量
+</span></span></span><span style="display:flex;"><span>    uint ntotalpools;      <span style="color:#75715e">// 总 Pool 数量
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> pool_header<span style="color:#f92672">*</span> freepools;  <span style="color:#75715e">// 空闲 Pool 链表
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> arena_object<span style="color:#f92672">*</span> nextarena;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> arena_object<span style="color:#f92672">*</span> prevarena;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>一个 Arena 可以容纳多少个 Pool？256KB ÷ 4KB = 64 个 Pool。</p>
+<h4 id="2-pool内存池">2. Pool（内存池）</h4>
+<p>Pool 是中间层，大小为 4KB（正好是系统页大小）。每个 Pool 专门服务于特定大小的对象。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 一个 Pool 大小为 4KB（系统页大小）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define POOL_SIZE SYSTEM_PAGE_SIZE  </span><span style="color:#75715e">// 4KB
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> pool_header {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">union</span> { block <span style="color:#f92672">*</span>_padding; uint count; } ref;  <span style="color:#75715e">// 已分配 block 数
+</span></span></span><span style="display:flex;"><span>    block <span style="color:#f92672">*</span>freeblock;           <span style="color:#75715e">// 空闲 block 链表头
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> pool_header <span style="color:#f92672">*</span>nextpool;   <span style="color:#75715e">// 同 size class 的下一个 pool
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> pool_header <span style="color:#f92672">*</span>prevpool;   <span style="color:#75715e">// 同 size class 的上一个 pool
+</span></span></span><span style="display:flex;"><span>    uint arenaindex;            <span style="color:#75715e">// 所属 arena 索引
+</span></span></span><span style="display:flex;"><span>    uint szidx;                 <span style="color:#75715e">// size class 索引
+</span></span></span><span style="display:flex;"><span>    uint nextoffset;            <span style="color:#75715e">// 下一个可分配位置
+</span></span></span><span style="display:flex;"><span>    uint maxnextoffset;         <span style="color:#75715e">// 最大可分配位置
+</span></span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Pool 的设计很巧妙：同一 Pool 内的所有 Block 大小相同。这样在分配时，不需要计算，直接链表摘取即可。</p>
+<h4 id="3-size-class大小分级">3. Size Class（大小分级）</h4>
+<p>这是 pymalloc 最精妙的设计。小对象按 8 字节对齐分为不同 size class：</p>
+<pre tabindex="0"><code>8, 16, 24, 32, 40, ..., 512 字节
+</code></pre><p>总共 64 个 size class。每个 size class 有自己独立的 Pool 链表。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 计算 size class 索引
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ALIGNMENT 8
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define INDEX2SIZE(I) (((uint)(I) + 1) &lt;&lt; ALIGNMENT_SHIFT)
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 例如：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// index=0 → size=8
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// index=1 → size=16
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// index=2 → size=24
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span></code></pre></div><h3 id="分配流程">分配流程</h3>
+<p>当 Python 需要分配内存时，pymalloc 按以下流程处理：</p>
+<pre tabindex="0"><code>请求内存 (nbytes)
+    ↓
+计算 size class 索引
+    ↓
+查找该 size class 的空闲 Pool
+    ↓
+有可用 Pool？
+    ├─ 是 → 从 Pool 中分配 Block
+    └─ 否 → 新建或复用 Pool
+            ↓
+        从 Arena 分配
+</code></pre><p>这个过程非常快，因为大多数情况下只需要从链表中摘取一个 Block。</p>
+<h3 id="释放流程">释放流程</h3>
+<p>释放内存同样高效：</p>
+<pre tabindex="0"><code>释放指针 (p)
+    ↓
+找到包含该指针的 Pool
+    ↓
+将 Block 加入空闲链表
+    ↓
+Pool 变空？
+    ├─ 是 → 归还给 Arena
+    └─ 否 → 留在原地等待下次使用
+</code></pre><hr>
+<h2 id="-内存池的优势">📊 内存池的优势</h2>
+<h3 id="性能对比">性能对比</h3>
+<p>pymalloc 相比直接使用 malloc，性能提升显著：</p>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>malloc</th>
+          <th>pymalloc</th>
+          <th>提升倍数</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>小对象分配</td>
+          <td>慢</td>
+          <td>快</td>
+          <td>3-5 倍</td>
+      </tr>
+      <tr>
+          <td>小对象释放</td>
+          <td>慢</td>
+          <td>快</td>
+          <td>3-5 倍</td>
+      </tr>
+      <tr>
+          <td>内存碎片</td>
+          <td>多</td>
+          <td>少</td>
+          <td>显著改善</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="为什么这么快">为什么这么快？</h3>
+<ol>
+<li><strong>无需系统调用</strong>：大多数分配直接从 Pool 链表摘取，不需要调用 malloc</li>
+<li><strong>无锁设计</strong>：有 GIL 保护，不需要额外的锁机制</li>
+<li><strong>大小分级</strong>：同一大小的对象复用 Pool，减少碎片</li>
+<li><strong>批量管理</strong>：Arena 级别批量申请和释放</li>
+</ol>
+<h3 id="内存碎片控制">内存碎片控制</h3>
+<table>
+  <thead>
+      <tr>
+          <th>策略</th>
+          <th>效果</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>固定 size class</td>
+          <td>减少外部碎片</td>
+      </tr>
+      <tr>
+          <td>Pool 复用</td>
+          <td>减少内存申请次数</td>
+      </tr>
+      <tr>
+          <td>Arena 管理</td>
+          <td>批量释放空闲内存</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-实战观察内存分配">💡 实战：观察内存分配</h2>
+<h3 id="使用-tracemalloc">使用 tracemalloc</h3>
+<p>Python 标准库提供了 tracemalloc 模块，可以跟踪内存分配：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> tracemalloc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 开始跟踪</span>
+</span></span><span style="display:flex;"><span>tracemalloc<span style="color:#f92672">.</span>start()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 你的代码</span>
+</span></span><span style="display:flex;"><span>snapshot1 <span style="color:#f92672">=</span> tracemalloc<span style="color:#f92672">.</span>take_snapshot()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建大量对象</span>
+</span></span><span style="display:flex;"><span>objects <span style="color:#f92672">=</span> [[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>snapshot2 <span style="color:#f92672">=</span> tracemalloc<span style="color:#f92672">.</span>take_snapshot()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 比较差异</span>
+</span></span><span style="display:flex;"><span>top_stats <span style="color:#f92672">=</span> snapshot2<span style="color:#f92672">.</span>compare_to(snapshot1, <span style="color:#e6db74">&#39;lineno&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> stat <span style="color:#f92672">in</span> top_stats[:<span style="color:#ae81ff">5</span>]:
+</span></span><span style="display:flex;"><span>    print(stat)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看当前内存使用</span>
+</span></span><span style="display:flex;"><span>current, peak <span style="color:#f92672">=</span> tracemalloc<span style="color:#f92672">.</span>get_traced_memory()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;当前内存：</span><span style="color:#e6db74">{</span>current <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> MB&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;峰值内存：</span><span style="color:#e6db74">{</span>peak <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> MB&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tracemalloc<span style="color:#f92672">.</span>stop()
+</span></span></code></pre></div><h3 id="使用-sys_debugmallocstats">使用 sys._debugmallocstats()</h3>
+<p>调试版本的 Python 提供了内存分配统计：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 打印内存分配统计（仅调试版本可用）</span>
+</span></span><span style="display:flex;"><span>sys<span style="color:#f92672">.</span>_debugmallocstats()
+</span></span></code></pre></div><p>输出示例：</p>
+<pre tabindex="0"><code>Small block threshold = 512, in 64 size classes.
+
+class   size   num pools   blocks available  size avail  
+-----   ----   ---------   ----------------   ----------
+    0      8          12             12345        98760
+    1     16          25              6789       108624
+   ...
+</code></pre><hr>
+<h2 id="-内存优化建议">⚠️ 内存优化建议</h2>
+<h3 id="1-避免创建大量小对象">1. 避免创建大量小对象</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 低效：创建大量小元组</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>):
+</span></span><span style="display:flex;"><span>    result<span style="color:#f92672">.</span>append((i, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))  <span style="color:#75715e"># 每个元组都是独立的小对象</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 高效：使用数组或 namedtuple</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> array <span style="color:#f92672">import</span> array
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> array(<span style="color:#e6db74">&#39;i&#39;</span>, [i <span style="color:#66d9ef">for</span> pair <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> (pair, pair<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)])
+</span></span></code></pre></div><h3 id="2-使用__slots__减少内存">2. 使用__slots__减少内存</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 普通类（使用__dict__）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Point</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, x, y):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> x
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用__slots__（节省内存）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EfficientPoint</span>:
+</span></span><span style="display:flex;"><span>    __slots__ <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>]  <span style="color:#75715e"># 预定义属性，不创建__dict__</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, x, y):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> x
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试内存占用</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>p1 <span style="color:#f92672">=</span> Point(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>p2 <span style="color:#f92672">=</span> EfficientPoint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>print(sys<span style="color:#f92672">.</span>getsizeof(p1))  <span style="color:#75715e"># 约 56 字节</span>
+</span></span><span style="display:flex;"><span>print(sys<span style="color:#f92672">.</span>getsizeof(p2))  <span style="color:#75715e"># 约 40 字节</span>
+</span></span></code></pre></div><p><strong>slots</strong> 的原理是：普通类每个实例都有一个__dict__来存储属性，而使用__slots__后，属性直接存储在预分配的空间中，省去了__dict__的开销。</p>
+<h3 id="3-对象池模式">3. 对象池模式</h3>
+<p>对于需要频繁创建销毁的对象，可以实现自己的对象池：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ObjectPool</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, factory, max_size<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>factory <span style="color:#f92672">=</span> factory
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>max_size <span style="color:#f92672">=</span> max_size
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_available <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_in_use <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">acquire</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>_available:
+</span></span><span style="display:flex;"><span>            obj <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_available<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            obj <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>factory()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_in_use<span style="color:#f92672">.</span>add(id(obj))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> obj
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">release</span>(self, obj):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> id(obj) <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>_in_use:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>_in_use<span style="color:#f92672">.</span>remove(id(obj))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> len(self<span style="color:#f92672">.</span>_available) <span style="color:#f92672">&lt;</span> self<span style="color:#f92672">.</span>max_size:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>_available<span style="color:#f92672">.</span>append(obj)
+</span></span></code></pre></div><hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<p>通过本讲，我们深入理解了：</p>
+<p><strong>分层内存架构</strong>：pymalloc 负责小对象，malloc 负责大对象，各司其职。</p>
+<p><strong>pymalloc 三级结构</strong>：Arena（256KB）→ Pool（4KB）→ Block（8-512 字节），层层管理。</p>
+<p><strong>Size Class 分级</strong>：64 个大小级别，每个级别独立管理，减少碎片。</p>
+<p><strong>分配与释放流程</strong>：链表操作，高效快速。</p>
+<p><strong>内存优化技巧</strong>：避免大量小对象、使用__slots__、对象池模式等。</p>
+<p>这些知识是理解后续垃圾回收等内容的基础。</p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong><a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> - Eric Matthes 著</p>
+<p>Python 零基础入门首选。本书分为基础语法和项目实战两部分，适合完全没有编程经验的读者。</p>
+<p><strong><a href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> - Luciano Ramalho 著</p>
+<p>Python 进阶经典之作。深入讲解 Python 的高级特性，包括数据模型、函数式编程、面向对象、元编程等。</p>
+<p><strong><a href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong> - Anthony Shaw 著</p>
+<p>本书深入讲解 CPython 内部机制，从内存管理到字节码执行，从对象模型到并发编程。配合本课程学习，效果更佳。</p>
+<p><strong>学习路线建议：</strong></p>
+<pre tabindex="0"><code>零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》
+</code></pre><hr>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="02-Python-%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B.md">上一讲：Python 对象模型深度解析</a> | <a href="04-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6.md">下一讲：垃圾回收机制详解</a> →</p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/15-%E7%B1%BB%E5%85%83%E7%BC%96%E7%A8%8B/">上一篇：第 15 讲：Python 类元编程 | 元类、__init_subclass__、__class_getitem__ 与 ABCMeta</a>
+        
+        
+        <a href="http://localhost:4002/16-%E7%B1%BB%E5%9E%8B%E6%8F%90%E7%A4%BA/">下一篇：第 16 讲：Python 类型提示完全指南 | TypeVar, Generic, Protocol, @overload 与泛型编程</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

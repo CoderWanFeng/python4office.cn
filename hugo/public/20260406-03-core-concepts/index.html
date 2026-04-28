@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#34;第3讲：Skill 的核心概念：Intent、Action、Tool&#34; - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>&#34;第3讲：Skill 的核心概念：Intent、Action、Tool&#34;</h1>
+        <div class="post-meta">
+            <span>2026-04-06 12:00</span>
+            
+            <span> · </span>
+            
+            <span class="category">AI Skills 课程</span>
+            
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/ai-skill/" class="tag">AI Skill</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/%E5%85%A5%E9%97%A8/" class="tag">入门</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/" class="tag">核心概念</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <h1 id="第3讲skill-的核心概念intentactiontool">第3讲：Skill 的核心概念：Intent、Action、Tool</h1>
+<blockquote>
+<p>理解 Skill 的三大核心概念，建立正确的技术认知框架。</p>
+</blockquote>
+<hr>
+<h2 id="一skill-的架构模型">一、Skill 的架构模型</h2>
+<h3 id="11-一个完整的-skill-交互流程">1.1 一个完整的 Skill 交互流程</h3>
+<pre tabindex="0"><code>用户输入: &#34;把这份 PDF 转成 Word 文档&#34;
+    ↓
+[Intent 识别] → 意图：文件格式转换
+    ↓
+[参数提取] → source: PDF, target: Word, file: xxx.pdf
+    ↓
+[Tool 选择] → 调用 PDF 解析工具 + Word 生成工具
+    ↓
+[Action 执行] → 读取 PDF → 提取内容 → 生成 Word → 保存
+    ↓
+[结果返回] → &#34;转换完成，下载链接：xxx&#34;
+</code></pre><h3 id="12-三大核心概念">1.2 三大核心概念</h3>
+<table>
+  <thead>
+      <tr>
+          <th>概念</th>
+          <th>英文</th>
+          <th>作用</th>
+          <th>类比</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>意图</strong></td>
+          <td>Intent</td>
+          <td>理解用户想做什么</td>
+          <td>大脑的想法</td>
+      </tr>
+      <tr>
+          <td><strong>动作</strong></td>
+          <td>Action</td>
+          <td>执行具体的操作</td>
+          <td>手的行为</td>
+      </tr>
+      <tr>
+          <td><strong>工具</strong></td>
+          <td>Tool</td>
+          <td>提供能力的外部资源</td>
+          <td>手中的工具</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="二intent意图skill-的大脑">二、Intent（意图）：Skill 的&quot;大脑&quot;</h2>
+<h3 id="21-什么是-intent">2.1 什么是 Intent？</h3>
+<p><strong>Intent</strong> 是用户输入的语义理解结果，告诉 Skill &ldquo;用户想要什么&rdquo;。</p>
+<p><strong>示例：</strong></p>
+<pre tabindex="0"><code>用户说：
+- &#34;帮我合并这两个 Excel 文件&#34;
+- &#34;把表格合一下&#34;
+- &#34;这两个 Excel 能整合吗&#34;
+
+Intent 识别结果：
+{
+  &#34;intent&#34;: &#34;file_merge&#34;,
+  &#34;confidence&#34;: 0.95,
+  &#34;entities&#34;: {
+    &#34;file_type&#34;: &#34;excel&#34;,
+    &#34;action&#34;: &#34;merge&#34;,
+    &#34;count&#34;: 2
+  }
+}
+</code></pre><h3 id="22-intent-的分类">2.2 Intent 的分类</h3>
+<table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>任务型</strong></td>
+          <td>完成具体任务</td>
+          <td>&ldquo;合并文件&rdquo;、&ldquo;发送邮件&rdquo;</td>
+      </tr>
+      <tr>
+          <td><strong>查询型</strong></td>
+          <td>获取信息</td>
+          <td>&ldquo;今天天气怎么样&rdquo;</td>
+      </tr>
+      <tr>
+          <td><strong>对话型</strong></td>
+          <td>闲聊互动</td>
+          <td>&ldquo;你好&rdquo;、&ldquo;谢谢&rdquo;</td>
+      </tr>
+      <tr>
+          <td><strong>控制型</strong></td>
+          <td>控制流程</td>
+          <td>&ldquo;取消&rdquo;、&ldquo;重新来&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="23-intent-识别的关键技术">2.3 Intent 识别的关键技术</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 基于大模型的 Intent 识别示例</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> openai
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">recognize_intent</span>(user_input):
+</span></span><span style="display:flex;"><span>    prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    分析用户输入的意图，返回 JSON 格式：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &#34;intent&#34;: &#34;意图名称&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &#34;confidence&#34;: 置信度(0-1),
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &#34;entities&#34;: </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74">提取的参数</span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    用户输入：</span><span style="color:#e6db74">{</span>user_input<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> openai<span style="color:#f92672">.</span>ChatCompletion<span style="color:#f92672">.</span>create(
+</span></span><span style="display:flex;"><span>        model<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gpt-3.5-turbo&#34;</span>,
+</span></span><span style="display:flex;"><span>        messages<span style="color:#f92672">=</span>[{<span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;user&#34;</span>, <span style="color:#e6db74">&#34;content&#34;</span>: prompt}]
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> json<span style="color:#f92672">.</span>loads(response<span style="color:#f92672">.</span>choices[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>message<span style="color:#f92672">.</span>content)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> recognize_intent(<span style="color:#e6db74">&#34;把 report.pdf 转成 Word&#34;</span>)
+</span></span><span style="display:flex;"><span>print(result)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {&#34;intent&#34;: &#34;file_convert&#34;, &#34;confidence&#34;: 0.98, &#34;entities&#34;: {&#34;source&#34;: &#34;pdf&#34;, &#34;target&#34;: &#34;word&#34;, &#34;filename&#34;: &#34;report.pdf&#34;}}</span>
+</span></span></code></pre></div><hr>
+<h2 id="三action动作skill-的手">三、Action（动作）：Skill 的&quot;手&quot;</h2>
+<h3 id="31-什么是-action">3.1 什么是 Action？</h3>
+<p><strong>Action</strong> 是 Skill 执行的具体操作，是连接 Intent 和 Tool 的桥梁。</p>
+<p><strong>Action 的组成：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Action</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, name, parameters, tool):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name          <span style="color:#75715e"># 动作名称</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>parameters <span style="color:#f92672">=</span> parameters  <span style="color:#75715e"># 输入参数</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>tool <span style="color:#f92672">=</span> tool          <span style="color:#75715e"># 使用的工具</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>output <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>        <span style="color:#75715e"># 执行结果</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;执行动作&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>tool<span style="color:#f92672">.</span>run(self<span style="color:#f92672">.</span>parameters)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>output
+</span></span></code></pre></div><h3 id="32-action-的类型">3.2 Action 的类型</h3>
+<table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>文件操作</strong></td>
+          <td>读写文件</td>
+          <td>read_file, write_file, copy_file</td>
+      </tr>
+      <tr>
+          <td><strong>数据处理</strong></td>
+          <td>转换数据</td>
+          <td>parse_json, filter_data, sort_list</td>
+      </tr>
+      <tr>
+          <td><strong>网络请求</strong></td>
+          <td>调用 API</td>
+          <td>http_get, http_post, download</td>
+      </tr>
+      <tr>
+          <td><strong>系统命令</strong></td>
+          <td>执行命令</td>
+          <td>run_shell, execute_script</td>
+      </tr>
+      <tr>
+          <td><strong>AI 调用</strong></td>
+          <td>调用模型</td>
+          <td>chat_completion, text_embedding</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="33-action-的执行流程">3.3 Action 的执行流程</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SkillExecutor</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Skill 执行器&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute</span>(self, intent, context):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 1. 根据 Intent 选择 Action 链</span>
+</span></span><span style="display:flex;"><span>        actions <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>plan_actions(intent)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 2. 依次执行每个 Action</span>
+</span></span><span style="display:flex;"><span>        results <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> action <span style="color:#f92672">in</span> actions:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                result <span style="color:#f92672">=</span> action<span style="color:#f92672">.</span>execute()
+</span></span><span style="display:flex;"><span>                results<span style="color:#f92672">.</span>append(result)
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># 更新上下文，供后续 Action 使用</span>
+</span></span><span style="display:flex;"><span>                context<span style="color:#f92672">.</span>update(result)
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># 错误处理</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>handle_error(e, action)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 3. 整合结果并返回</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>format_output(results)
+</span></span></code></pre></div><hr>
+<h2 id="四tool工具skill-的武器库">四、Tool（工具）：Skill 的&quot;武器库&quot;</h2>
+<h3 id="41-什么是-tool">4.1 什么是 Tool？</h3>
+<p><strong>Tool</strong> 是 Skill 可调用的外部能力，可以是代码库、API、服务等。</p>
+<p><strong>Tool 的特点：</strong></p>
+<ul>
+<li>🔧 <strong>功能单一</strong>：每个 Tool 只做一件事</li>
+<li>📦 <strong>可复用</strong>：多个 Skill 可以共用同一个 Tool</li>
+<li>🔌 <strong>可扩展</strong>：随时添加新的 Tool</li>
+<li>📖 <strong>自描述</strong>：Tool 自带功能说明</li>
+</ul>
+<h3 id="42-tool-的定义方式">4.2 Tool 的定义方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Tool 的标准定义格式</span>
+</span></span><span style="display:flex;"><span>excel_tool <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;excel_processor&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;处理 Excel 文件的读写、合并、拆分等操作&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;object&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;action&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;enum&#34;</span>: [<span style="color:#e6db74">&#34;read&#34;</span>, <span style="color:#e6db74">&#34;write&#34;</span>, <span style="color:#e6db74">&#34;merge&#34;</span>, <span style="color:#e6db74">&#34;split&#34;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;要执行的操作&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;file_path&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Excel 文件路径&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;data&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;object&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;要写入的数据&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;required&#34;</span>: [<span style="color:#e6db74">&#34;action&#34;</span>, <span style="color:#e6db74">&#34;file_path&#34;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="43-常用-tool-分类">4.3 常用 Tool 分类</h3>
+<table>
+  <thead>
+      <tr>
+          <th>类别</th>
+          <th>Tool 示例</th>
+          <th>用途</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>文件处理</strong></td>
+          <td>pdf_parser, docx_generator, image_converter</td>
+          <td>文档格式转换</td>
+      </tr>
+      <tr>
+          <td><strong>数据处理</strong></td>
+          <td>pandas, numpy, json_parser</td>
+          <td>数据分析和处理</td>
+      </tr>
+      <tr>
+          <td><strong>网络服务</strong></td>
+          <td>http_client, email_sender, ftp_transfer</td>
+          <td>网络通信</td>
+      </tr>
+      <tr>
+          <td><strong>AI 能力</strong></td>
+          <td>openai_api, embedding_model, ocr_engine</td>
+          <td>智能处理</td>
+      </tr>
+      <tr>
+          <td><strong>系统工具</strong></td>
+          <td>file_system, process_manager, scheduler</td>
+          <td>系统操作</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="44-tool-的实现示例">4.4 Tool 的实现示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List, Dict, Any
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExcelTool</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Excel 处理工具&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read</span>(self, file_path: str, sheet_name: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> pd<span style="color:#f92672">.</span>DataFrame:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;读取 Excel 文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> sheet_name:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> pd<span style="color:#f92672">.</span>read_excel(file_path, sheet_name<span style="color:#f92672">=</span>sheet_name)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> pd<span style="color:#f92672">.</span>read_excel(file_path)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge</span>(self, files: List[str], output_path: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;合并多个 Excel 文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        dfs <span style="color:#f92672">=</span> [pd<span style="color:#f92672">.</span>read_excel(f) <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> files]
+</span></span><span style="display:flex;"><span>        merged <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat(dfs, ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>        merged<span style="color:#f92672">.</span>to_excel(output_path, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> output_path
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">write</span>(self, data: Dict[str, Any], file_path: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;写入数据到 Excel&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(data)
+</span></span><span style="display:flex;"><span>        df<span style="color:#f92672">.</span>to_excel(file_path, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> file_path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用示例</span>
+</span></span><span style="display:flex;"><span>tool <span style="color:#f92672">=</span> ExcelTool()
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> tool<span style="color:#f92672">.</span>read(<span style="color:#e6db74">&#34;data.xlsx&#34;</span>)
+</span></span><span style="display:flex;"><span>tool<span style="color:#f92672">.</span>merge([<span style="color:#e6db74">&#34;file1.xlsx&#34;</span>, <span style="color:#e6db74">&#34;file2.xlsx&#34;</span>], <span style="color:#e6db74">&#34;merged.xlsx&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="五三者的协作关系">五、三者的协作关系</h2>
+<h3 id="51-完整流程图解">5.1 完整流程图解</h3>
+<pre tabindex="0"><code>┌─────────────────────────────────────────────────────────┐
+│                      用户输入                            │
+│              &#34;合并这两个 Excel 文件&#34;                      │
+└────────────────────┬────────────────────────────────────┘
+                     ↓
+┌─────────────────────────────────────────────────────────┐
+│  Intent 识别                                           │
+│  ├── 意图：file_merge                                   │
+│  ├── 实体：file_type=excel, count=2                     │
+│  └── 置信度：0.96                                       │
+└────────────────────┬────────────────────────────────────┘
+                     ↓
+┌─────────────────────────────────────────────────────────┐
+│  Action 规划                                           │
+│  ├── Action 1: 读取文件1 (Tool: ExcelTool.read)         │
+│  ├── Action 2: 读取文件2 (Tool: ExcelTool.read)         │
+│  └── Action 3: 合并保存  (Tool: ExcelTool.merge)        │
+└────────────────────┬────────────────────────────────────┘
+                     ↓
+┌─────────────────────────────────────────────────────────┐
+│  Tool 执行                                             │
+│  ├── Tool: ExcelTool                                   │
+│  ├── 操作: merge()                                     │
+│  └── 结果: merged.xlsx                                 │
+└────────────────────┬────────────────────────────────────┘
+                     ↓
+┌─────────────────────────────────────────────────────────┐
+│                     返回结果                             │
+│         &#34;合并完成！共处理 100 行数据&#34;                     │
+└─────────────────────────────────────────────────────────┘
+</code></pre><h3 id="52-代码层面的实现">5.2 代码层面的实现</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Skill</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Skill 基类&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>intent_classifier <span style="color:#f92672">=</span> IntentClassifier()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>action_planner <span style="color:#f92672">=</span> ActionPlanner()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>tools <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">register_tool</span>(self, tool):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;注册工具&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>tools[tool<span style="color:#f92672">.</span>name] <span style="color:#f92672">=</span> tool
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(self, user_input: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;运行 Skill&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 1: 识别 Intent</span>
+</span></span><span style="display:flex;"><span>        intent <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>intent_classifier<span style="color:#f92672">.</span>classify(user_input)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 2: 规划 Actions</span>
+</span></span><span style="display:flex;"><span>        actions <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>action_planner<span style="color:#f92672">.</span>plan(intent, self<span style="color:#f92672">.</span>tools)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 3: 执行 Actions</span>
+</span></span><span style="display:flex;"><span>        context <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;user_input&#34;</span>: user_input}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> action <span style="color:#f92672">in</span> actions:
+</span></span><span style="display:flex;"><span>            tool <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>tools<span style="color:#f92672">.</span>get(action<span style="color:#f92672">.</span>tool_name)
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> tool<span style="color:#f92672">.</span>run(action<span style="color:#f92672">.</span>parameters)
+</span></span><span style="display:flex;"><span>            context[action<span style="color:#f92672">.</span>name] <span style="color:#f92672">=</span> result
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 4: 生成回复</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>generate_response(context)
+</span></span></code></pre></div><hr>
+<h2 id="六实战练习">六、实战练习</h2>
+<h3 id="练习-1分析一个简单-skill">练习 1：分析一个简单 Skill</h3>
+<p>分析以下 Skill 的 Intent、Action、Tool：</p>
+<pre tabindex="0"><code>用户：&#34;把 meeting_notes.pdf 转成 Word 文档&#34;
+</code></pre><p><strong>答案：</strong></p>
+<ul>
+<li><strong>Intent</strong>: file_convert (文件格式转换)</li>
+<li><strong>Entities</strong>: source=pdf, target=docx, filename=meeting_notes.pdf</li>
+<li><strong>Actions</strong>:
+<ol>
+<li>read_pdf(file_path)</li>
+<li>convert_to_docx(content)</li>
+<li>save_document(output_path)</li>
+</ol>
+</li>
+<li><strong>Tools</strong>: PDFReader, DOCXGenerator</li>
+</ul>
+<h3 id="练习-2设计一个邮件发送-skill">练习 2：设计一个邮件发送 Skill</h3>
+<p>设计一个 Skill，实现以下功能：</p>
+<pre tabindex="0"><code>用户：&#34;给张三发邮件，主题是项目进度，内容是说本周完成了 80%&#34;
+</code></pre><p><strong>思考要点：</strong></p>
+<ol>
+<li>Intent 是什么？需要提取哪些实体？</li>
+<li>需要哪些 Actions？执行顺序如何？</li>
+<li>需要什么 Tools？</li>
+</ol>
+<hr>
+<h2 id="七常见误区">七、常见误区</h2>
+<h3 id="-误区-1intent-越多越好">❌ 误区 1：Intent 越多越好</h3>
+<p><strong>正确做法</strong>：Intent 应该精简、明确，相似意图合并。</p>
+<pre tabindex="0"><code>❌ 不好：
+- merge_excel
+- combine_excel  
+- join_excel
+
+✅ 好：
+- file_merge（支持多种文件类型）
+</code></pre><h3 id="-误区-2action-过于复杂">❌ 误区 2：Action 过于复杂</h3>
+<p><strong>正确做法</strong>：Action 应该原子化，一个 Action 只做一件事。</p>
+<pre tabindex="0"><code>❌ 不好：
+Action: 读取 Excel + 处理数据 + 生成图表 + 发送邮件
+
+✅ 好：
+Action 1: 读取 Excel
+Action 2: 处理数据
+Action 3: 生成图表
+Action 4: 发送邮件
+</code></pre><h3 id="-误区-3tool-没有文档">❌ 误区 3：Tool 没有文档</h3>
+<p><strong>正确做法</strong>：每个 Tool 都要有清晰的描述和参数说明。</p>
+<hr>
+<h2 id="八下节预告">八、下节预告</h2>
+<p><strong>第4讲：你的第一个 Skill：Hello World 实战</strong></p>
+<p>我们将动手实现：</p>
+<ul>
+<li>在 Coze 平台创建第一个 Skill</li>
+<li>实现简单的 Intent 识别</li>
+<li>调用外部 Tool 完成一个具体任务</li>
+<li>测试和调试你的 Skill</li>
+</ul>
+<hr>
+<h2 id="加入学习群">加入学习群</h2>
+<p>学习过程中遇到问题？欢迎加入交流群：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">加入AI编程学习交流群</a></strong></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" alt="点击加入"></p>
+<hr>
+<p><em>本讲是《Skills 从入门到实践》系列课程的第3讲，下一讲我们将动手创建第一个 Skill。</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260406-02-skill-ecosystem/">上一篇：&#34;第2讲：Skill 生态全景图：平台、开发者、用户&#34;</a>
+        
+        
+        <a href="http://localhost:4002/20260406-04-hello-world/">下一篇：&#34;第4讲：你的第一个 Skill：Hello World 实战&#34;</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

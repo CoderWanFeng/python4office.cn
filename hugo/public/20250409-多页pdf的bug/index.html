@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>熬夜上线！poocr库火速修复PDF发票识别致命BUG - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>熬夜上线！poocr库火速修复PDF发票识别致命BUG</h1>
+        <div class="post-meta">
+            <span>2025-04-09 21:00</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/poocr/" class="tag">poocr</a>
+            
+            <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/" class="tag">自动化办公</a>
+            
+            <a href="/tags/%E8%AF%BE%E7%A8%8B/" class="tag">课程</a>
+            
+            <a href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" class="tag">开源项目</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<h2 id="一poocr库你的发票识别瑞士军刀">一、poocr库：你的发票识别瑞士军刀</h2>
+<p>上周刚给poocr库装上&quot;多页PDF识别功能&quot;，以为自己在发票识别领域封神了。</p>
+<p>poocr这货本质上是个OCR瑞士军刀，能对接腾讯云、百度、阿里等大厂的OCR接口，把各种发票、文档识别得明明白白。安装命令简单粗暴：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install poocr
+</span></span></code></pre></div><p>用法更是傻瓜式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 一行代码，实现发票的批量识别</span>
+</span></span><span style="display:flex;"><span>poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(
+</span></span><span style="display:flex;"><span>    intput_path<span style="color:#f92672">=</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Users\Lenovo\Desktop\temp\增值税发票-test.pdf&#39;</span>,
+</span></span><span style="display:flex;"><span>    output_excel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./晚枫.xlsx&#39;</span>,
+</span></span><span style="display:flex;"><span>    configPath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./poocr-config.toml&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>项目开源地址在这，欢迎来薅羊毛：<a href="https://github.com/CoderWanFeng/poocr">https://github.com/CoderWanFeng/poocr</a></p>
+<p>结果，昨晚11点47分，用户@agone的报错消息像一桶冰水浇灭了所有美梦。</p>
+<p>那感觉就像刚给服务器喂了份&quot;稳定运行&quot;的保证书，转头它就给你表演火山喷发。</p>
+<p><img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/50cb656ee1424e9c8a912e1d06a6d810~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg56iL5bqP5ZGY5pma5p6r:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMjMyNzAwMjc3OTc1ODc2MCJ9&amp;rk3s=e9ecf3d6&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1744302854&amp;x-orig-sign=DXs%2Bilem0oFUYmcE5tZOM7Zdz%2FU%3D" alt="image.png"></p>
+<h2 id="二第一颗雷base64编码的类型幻觉">二、第一颗雷：Base64编码的&quot;类型幻觉&quot;</h2>
+<p>新上的PDF识别功能本该是降维打击——pymupdf切页，opencv校正，pandas结构化输出，三层防护像给数据穿了防弹衣。直到@agone发来的日志显示：<code>pdf.convert_to_pdf()</code>这行代码正在疯狂抛出<code>TypeError</code>。</p>
+<p><strong>犯罪现场</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 原罪代码</span>
+</span></span><span style="display:flex;"><span>pdf_bytes <span style="color:#f92672">=</span> pdf<span style="color:#f92672">.</span>convert_to_pdf(page_num, page_num <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>base64_encoded_pdf <span style="color:#f92672">=</span> base64<span style="color:#f92672">.</span>b64encode(pdf_bytes)<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;utf-8&#39;</span>)
+</span></span></code></pre></div><p>pymupdf的对象居然不能直接喂给base64编码器！就像试图把3D模型塞进二维打印机，错误代码在深夜的服务器日志里跳起了迪斯科。修复方案是用fitz的<code>select()</code>方法重新包装PDF，相当于给数据加了个&quot;次元转换器&quot;：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> fitz  <span style="color:#75715e"># pymupdf的别名</span>
+</span></span><span style="display:flex;"><span>temp_pdf <span style="color:#f92672">=</span> fitz<span style="color:#f92672">.</span>open()
+</span></span><span style="display:flex;"><span>temp_pdf<span style="color:#f92672">.</span>select([page_num])  <span style="color:#75715e"># 只选中需要的页面</span>
+</span></span><span style="display:flex;"><span>base64_encoded_pdf <span style="color:#f92672">=</span> base64<span style="color:#f92672">.</span>b64encode(temp_pdf<span style="color:#f92672">.</span>write())<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;utf-8&#39;</span>)
+</span></span></code></pre></div><p>修复后，PDF终于像驯服的小龙，老老实实变成了Base64字符串。</p>
+<h2 id="三第二颗雷浅拷贝的数据克隆术">三、第二颗雷：浅拷贝的&quot;数据克隆术&quot;</h2>
+<p>更离谱的是第二颗雷——列表追加操作炸出了数据重复的核弹坑。用户发来的截图显示：同一页发票数据在结果里出现了三次，像被卡带复读的鬼魂。</p>
+<p><strong>犯罪现场</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>res_df<span style="color:#f92672">.</span>append(dict_pandas)  <span style="color:#75715e"># 看似无害的追加操作</span>
+</span></span></code></pre></div><p>追踪到内存地址才发现，浅拷贝让所有字典指向同一个对象！每次更新都在改写所有记录，就像用同一块橡皮泥捏了三个&quot;不同&quot;的玩偶。深拷贝修复像给数据加了分身术：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> copy
+</span></span><span style="display:flex;"><span>res_df<span style="color:#f92672">.</span>append(copy<span style="color:#f92672">.</span>deepcopy(dict_pandas))
+</span></span></code></pre></div><p>现在数据流终于像听话的火车按轨道进站，每页发票都有了自己独立的小隔间。</p>
+<h2 id="四感谢agone没有你我们还在跟幽灵数据跳舞">四、感谢@agone：没有你，我们还在跟幽灵数据跳舞</h2>
+<p>特别感谢@agone的深夜反馈！没有你的报错，我们可能还在跟幽灵数据跳舞。现在poocr v1.0.2版本已经带着加强版的PDF防火墙上线，更新命令如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install poocr<span style="color:#f92672">==</span>1.0.2 potx-cloud<span style="color:#f92672">==</span>0.0.7
+</span></span></code></pre></div><p>新增了对象类型检查和深拷贝监控，连注释都加了警示灯：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># !!!!警告!!!! 必须深拷贝，否则数据会像被施了克隆魔法</span>
+</span></span></code></pre></div><h2 id="五互动时间来分享你的踩坑故事">五、互动时间：来分享你的踩坑故事！</h2>
+<p>评论区举手🙋‍♂️：</p>
+<ol>
+<li>你踩过最深的浅拷贝坑长什么样？</li>
+<li>有没有被base64编码折磨到怀疑人生的瞬间？</li>
+<li>分享你深夜修Bug时的续命神器（我的是冰美式+辣条）</li>
+</ol>
+<p>修复Bug就像给程序做外科手术，刀刃永远比创可贴靠谱。</p>
+<p>记得给poocr库点个Star⭐，毕竟稳定运行的代码比梦境更美好~ 😴💤</p>
+<h2 id="加入开源">加入开源</h2>
+<p>如果你喜欢以上这些开源项目，欢迎加入我们的开源小组，一起交流学习，一起进步。</p>
+<blockquote>
+<p>加我的微信：aiwf365，备注：开源</p>
+</blockquote>
+<p>关于项目的介绍：</p>
+<ul>
+<li>atomgit：<a href="https://mp.weixin.qq.com/s/RC54o9C4F87fyAebJUE0kg">DeepSeek浪潮下如何撑过35岁职场危机？跨界程序员：我不焦虑，40岁就退休｜CodeMaster#3</a></li>
+<li>Python中国大会：<a href="https://www.bilibili.com/video/BV1Y6qWYWEyQ/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=ca20bb8763fcb18660aa74d7a87234fa">非程序员如何学习和使用 Python-程序员晚枫-科技博主&amp;开源作者</a></li>
+<li>Pypi：<a href="https://pypi.org/project/python-office/">点我查看微信二维码</a></li>
+<li>官网：<a href="https://python-office.com">python-office.com</a></li>
+<li>开源中国：<a href="https://www.oschina.net/p/python-office">Python-office Python 自动化办公库</a></li>
+<li>B站视频教程：<a href="https://www.bilibili.com/video/BV1pT4y1k7FH/?spm_id_from=333.1387.0.0&amp;vd_source=ca20bb8763fcb18660aa74d7a87234fa">官网发布：python-office库 | 专为Python自动化办公而生，一行代码提高办公效率 | 哪里不会点哪里，再也不用学习Python编程</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="相关课程">相关课程</h2>
+<ul>
+<li>[业余爱好者，如何从0开始快速掌握Python？</li>
+<li>📝 <a href="https://mp.weixin.qq.com/s/26jJWW3j9PxWISR1n3drfg">三十而立，没有遗憾</a></li>
+<li><a href="https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ">给小白的《15讲 · Python入门课》</a></li>
+<li><a href="https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g">给小白的《50讲 · Python自动化办公》</a></li>
+<li><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">给小白的《30讲 · AI编程训练营》</a></li>
+<li><a href="https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw">给小白的《5讲 · Python实现文字批量识别》</a></li>
+<li><a href="https://mp.weixin.qq.com/s/AeTkloNri7gpk25m50VmTA">给小白的《6讲 · Python自动收发邮件》</a></li>
+<li><a href="https://www.python-office.com/course-002/30-Excel/30-Excel.html">给小白的《30讲 · Python + Excel数据分析》</a></li>
+<li><a href="https://www.python-office.com/course-002/10-popdf/10-popdf.html">给小白的《10讲 · Python + PDF 自动化办公》</a></li>
+<li><a href="https://mp.weixin.qq.com/s/NN2pX2bQPpczOeGF4ARNtw">Python学习交流群</a></li>
+<li><a href="https://mp.weixin.qq.com/s/XDOMnTISBpglNvSf4R-tmg">零基础Python自动化办公，一站式搞定！</a></li>
+</ul>
+<hr>
+<!-- raw HTML omitted -->
+<p><img src="https://cos.python-office.com/ads/gzh/sub-py.jpg" alt=""></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg" alt="扫一扫，领红包"></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg" alt="美团红包"></p>
+<h2 id="交流群">交流群</h2>
+<p><img src="https://cos.python-office.com/group/0816.jpg" alt=""></p>
+<p>###　读者福利</p>
+<!-- raw HTML omitted -->
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20250408-%E7%98%A6%E8%BA%AB/">上一篇：腾讯云SDK优化，瞬间省几百M！不看血亏！</a>
+        
+        
+        <a href="http://localhost:4002/function-list-011/">下一篇：打工人的Python神器！4个开源项目，效率翻倍</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

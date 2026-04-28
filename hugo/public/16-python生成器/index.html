@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python生成器：我处理10万条数据，内存只占了1MB - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python生成器：我处理10万条数据，内存只占了1MB</h1>
+        <div class="post-meta">
+            <span>2026-02-28 19:01</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%9F%BA%E7%A1%80/" class="tag">Python基础</a>
+            
+            <a href="/tags/%E7%94%9F%E6%88%90%E5%99%A8/" class="tag">生成器</a>
+            
+            <a href="/tags/%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96/" class="tag">内存优化</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种AI项目的程序员晚枫。</p>
+<p>今天分享一个让我处理大数据时内存占用减少90%的技术——<strong>生成器（Generator）</strong>。</p>
+<hr>
+<h2 id="一个真实的内存爆炸事故">一个真实的内存爆炸事故</h2>
+<p>去年有个学员问我：&ldquo;晚枫老师，我的程序处理100万条数据时直接崩溃了，报MemoryError，怎么办？&rdquo;</p>
+<p>我看了一眼他的代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 处理100万条用户数据</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_users</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 一次性加载所有数据到内存</span>
+</span></span><span style="display:flex;"><span>    users <span style="color:#f92672">=</span> [fetch_user(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 每个用户对象约1KB，总共约1GB内存！</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    results <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users:
+</span></span><span style="display:flex;"><span>        results<span style="color:#f92672">.</span>append(analyze(user))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> results
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 程序崩溃：MemoryError</span>
+</span></span></code></pre></div><p><strong>问题</strong>：100万个用户对象，每个1KB，就是1GB内存！</p>
+<p><strong>用生成器优化后</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_users</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 用生成器，按需生成</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_generator</span>():
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> fetch_user(i)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    results <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> user_generator():  <span style="color:#75715e"># 每次只有一个用户对象在内存中</span>
+</span></span><span style="display:flex;"><span>        results<span style="color:#f92672">.</span>append(analyze(user))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> results
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 内存占用：约10MB（几乎不增长）</span>
+</span></span></code></pre></div><p>你可能遇到过这种情况：要处理几万、几十万条数据，程序直接卡死或报MemoryError。这时候生成器就是你的救星。</p>
+<p>看完这篇文章，你会理解为什么生成器被称为&quot;省内存的神器&quot;。</p>
+<hr>
+<h2 id="问题列表太占内存">问题：列表太占内存</h2>
+<h3 id="内存占用测试">内存占用测试</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建100万个数字</span>
+</span></span><span style="display:flex;"><span>numbers_list <span style="color:#f92672">=</span> [i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>)]
+</span></span><span style="display:flex;"><span>numbers_gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表内存占用: </span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(numbers_list) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> MB&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生成器内存占用: </span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(numbers_gen) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> KB&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 输出：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表内存占用: 8.39 MB</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成器内存占用: 0.00 KB</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表：需要存储所有元素的内存</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成器：只需要存储生成状态的内存（几十字节）</span>
+</span></span></code></pre></div><h3 id="传统列表的问题">传统列表的问题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_numbers_list</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;返回列表：一次性生成所有数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>        result<span style="color:#f92672">.</span>append(i <span style="color:#f92672">*</span> i)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 问题1：内存占用大</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> get_numbers_list(<span style="color:#ae81ff">1000000</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 需要约8MB内存存储列表本身，加上元素对象更多</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 问题2：生成时间长</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 必须等所有数据生成完才能开始使用</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 问题3：可能用不完</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果只需要前10个，后面的都白生成了</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> numbers[:<span style="color:#ae81ff">10</span>]:
+</span></span><span style="display:flex;"><span>    print(num)
+</span></span></code></pre></div><hr>
+<h2 id="解决方案生成器">解决方案：生成器</h2>
+<h3 id="什么是生成器">什么是生成器？</h3>
+<p>生成器是一种特殊的迭代器，它<strong>按需生成数据，而不是一次性全部生成</strong>。</p>
+<p>就像自动售货机，你要一个它给一个，而不是先把所有商品堆在你面前。</p>
+<h3 id="创建生成器的两种方式">创建生成器的两种方式</h3>
+<h4 id="方式1生成器函数yield">方式1：生成器函数（yield）</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_numbers_generator</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;生成器函数：按需生成数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> i <span style="color:#f92672">*</span> i  <span style="color:#75715e"># 用yield代替return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建生成器对象</span>
+</span></span><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> get_numbers_generator(<span style="color:#ae81ff">1000000</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 此时什么都没生成！内存占用几乎为0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 开始消费</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> gen:
+</span></span><span style="display:flex;"><span>    print(num)  <span style="color:#75715e"># 每次只生成一个数字</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>:  <span style="color:#75715e"># 可以提前停止</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 内存占用：始终很小</span>
+</span></span></code></pre></div><h4 id="方式2生成器表达式">方式2：生成器表达式</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 列表推导式（占内存）</span>
+</span></span><span style="display:flex;"><span>squares_list <span style="color:#f92672">=</span> [i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>)]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表: </span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(squares_list) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> MB&#34;</span>)  <span style="color:#75715e"># 8.39 MB</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成器表达式（省内存）</span>
+</span></span><span style="display:flex;"><span>squares_gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生成器: </span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(squares_gen)<span style="color:#e6db74">}</span><span style="color:#e6db74"> bytes&#34;</span>)  <span style="color:#75715e"># 112 bytes</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用法完全一样</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> square <span style="color:#f92672">in</span> squares_gen:
+</span></span><span style="display:flex;"><span>    print(square)
+</span></span></code></pre></div><h3 id="两种方式的对比">两种方式的对比</h3>
+<table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>生成器函数</th>
+          <th>生成器表达式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>语法</td>
+          <td><code>def func(): yield x</code></td>
+          <td><code>(x for x in iterable)</code></td>
+      </tr>
+      <tr>
+          <td>复杂度</td>
+          <td>可以有复杂逻辑</td>
+          <td>适合简单表达式</td>
+      </tr>
+      <tr>
+          <td>可读性</td>
+          <td>更易读</td>
+          <td>简洁</td>
+      </tr>
+      <tr>
+          <td>灵活性</td>
+          <td>高</td>
+          <td>低</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 生成器函数：适合复杂逻辑</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_data</span>(filename):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(filename, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> f:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 复杂处理逻辑</span>
+</span></span><span style="display:flex;"><span>            cleaned <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> cleaned <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> cleaned<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;#&#39;</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">yield</span> cleaned
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成器表达式：适合简单转换</span>
+</span></span><span style="display:flex;"><span>cleaned <span style="color:#f92672">=</span> (line<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>lower() <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> open(<span style="color:#e6db74">&#39;data.txt&#39;</span>))
+</span></span></code></pre></div><hr>
+<h2 id="yield的工作原理">yield的工作原理</h2>
+<h3 id="状态保存与恢复">状态保存与恢复</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">simple_generator</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;开始&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;继续&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;结束&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> simple_generator()  <span style="color:#75715e"># 此时什么都没打印</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(next(gen))  <span style="color:#75715e"># 输出：开始 \n 1</span>
+</span></span><span style="display:flex;"><span>print(next(gen))  <span style="color:#75715e"># 输出：继续 \n 2</span>
+</span></span><span style="display:flex;"><span>print(next(gen))  <span style="color:#75715e"># 输出：结束 \n 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(next(gen))  # StopIteration异常</span>
+</span></span></code></pre></div><h3 id="执行流程图">执行流程图</h3>
+<pre tabindex="0"><code>调用生成器函数
+    ↓
+创建生成器对象（不执行函数体）
+    ↓
+next()被调用
+    ↓
+执行到第一个yield
+    ↓
+返回yield后的值，暂停
+    ↓
+next()再次被调用
+    ↓
+从暂停处继续执行
+    ↓
+执行到下一个yield
+    ↓
+...重复...
+    ↓
+函数结束，抛出StopIteration
+</code></pre><h3 id="yield的高级用法">yield的高级用法</h3>
+<h4 id="yield-frompython-33">yield from（Python 3.3+）</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 传统方式：嵌套生成器</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">chain</span>(<span style="color:#f92672">*</span>iterables):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> iterable <span style="color:#f92672">in</span> iterables:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> iterable:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用yield from（更简洁）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">chain</span>(<span style="color:#f92672">*</span>iterables):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> iterable <span style="color:#f92672">in</span> iterables:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield from</span> iterable
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> list(chain([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>], [<span style="color:#ae81ff">5</span>]))
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [1, 2, 3, 4, 5]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 嵌套结构</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">flatten</span>(nested):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;展平嵌套结构&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> nested:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> isinstance(item, (list, tuple)):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield from</span> flatten(item)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nested <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], [<span style="color:#ae81ff">4</span>, [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]]]
+</span></span><span style="display:flex;"><span>print(list(flatten(nested)))  <span style="color:#75715e"># [1, 2, 3, 4, 5, 6]</span>
+</span></span></code></pre></div><h4 id="yield作为表达式协程基础">yield作为表达式（协程基础）</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">accumulator</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;累加器（协程示例）&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># yield可以接收值</span>
+</span></span><span style="display:flex;"><span>        value <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> total
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> value <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        total <span style="color:#f92672">+=</span> value
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>acc <span style="color:#f92672">=</span> accumulator()
+</span></span><span style="display:flex;"><span>next(acc)  <span style="color:#75715e"># 启动生成器</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(acc<span style="color:#f92672">.</span>send(<span style="color:#ae81ff">10</span>))  <span style="color:#75715e"># 10</span>
+</span></span><span style="display:flex;"><span>print(acc<span style="color:#f92672">.</span>send(<span style="color:#ae81ff">5</span>))   <span style="color:#75715e"># 15</span>
+</span></span><span style="display:flex;"><span>print(acc<span style="color:#f92672">.</span>send(<span style="color:#ae81ff">3</span>))   <span style="color:#75715e"># 18</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>acc<span style="color:#f92672">.</span>close()  <span style="color:#75715e"># 关闭生成器</span>
+</span></span></code></pre></div><hr>
+<h2 id="性能对比列表-vs-生成器">性能对比：列表 vs 生成器</h2>
+<h3 id="内存占用测试-1">内存占用测试</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tracemalloc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_memory</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;测试内存占用&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    tracemalloc<span style="color:#f92672">.</span>start()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 测试列表</span>
+</span></span><span style="display:flex;"><span>    snapshot1 <span style="color:#f92672">=</span> tracemalloc<span style="color:#f92672">.</span>take_snapshot()
+</span></span><span style="display:flex;"><span>    numbers_list <span style="color:#f92672">=</span> [i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>)]
+</span></span><span style="display:flex;"><span>    snapshot2 <span style="color:#f92672">=</span> tracemalloc<span style="color:#f92672">.</span>take_snapshot()
+</span></span><span style="display:flex;"><span>    list_memory <span style="color:#f92672">=</span> sum(stat<span style="color:#f92672">.</span>size <span style="color:#66d9ef">for</span> stat <span style="color:#f92672">in</span> snapshot2<span style="color:#f92672">.</span>compare_to(snapshot1, <span style="color:#e6db74">&#39;filename&#39;</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 测试生成器</span>
+</span></span><span style="display:flex;"><span>    snapshot3 <span style="color:#f92672">=</span> tracemalloc<span style="color:#f92672">.</span>take_snapshot()
+</span></span><span style="display:flex;"><span>    numbers_gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>))
+</span></span><span style="display:flex;"><span>    snapshot4 <span style="color:#f92672">=</span> tracemalloc<span style="color:#f92672">.</span>take_snapshot()
+</span></span><span style="display:flex;"><span>    gen_memory <span style="color:#f92672">=</span> sum(stat<span style="color:#f92672">.</span>size <span style="color:#66d9ef">for</span> stat <span style="color:#f92672">in</span> snapshot4<span style="color:#f92672">.</span>compare_to(snapshot3, <span style="color:#e6db74">&#39;filename&#39;</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表内存: </span><span style="color:#e6db74">{</span>list_memory <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> MB&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生成器内存: </span><span style="color:#e6db74">{</span>gen_memory <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> KB&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;节省: </span><span style="color:#e6db74">{</span>(list_memory <span style="color:#f92672">-</span> gen_memory) <span style="color:#f92672">/</span> list_memory <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>test_memory()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 输出：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表内存: 39.58 MB</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成器内存: 0.00 KB</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 节省: 100.0%</span>
+</span></span></code></pre></div><h3 id="执行时间对比">执行时间对比</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_speed</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;测试执行时间&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 方式1：列表（需要等所有数据生成完）</span>
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    squares_list <span style="color:#f92672">=</span> [i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 只使用前10个</span>
+</span></span><span style="display:flex;"><span>    result_list <span style="color:#f92672">=</span> sum(squares_list[:<span style="color:#ae81ff">10</span>])
+</span></span><span style="display:flex;"><span>    list_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 方式2：生成器（按需生成）</span>
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    squares_gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000000</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 只取前10个</span>
+</span></span><span style="display:flex;"><span>    result_gen <span style="color:#f92672">=</span> sum(next(squares_gen) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>    gen_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表方式: </span><span style="color:#e6db74">{</span>list_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s, 结果: </span><span style="color:#e6db74">{</span>result_list<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生成器方式: </span><span style="color:#e6db74">{</span>gen_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s, 结果: </span><span style="color:#e6db74">{</span>result_gen<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生成器快 </span><span style="color:#e6db74">{</span>list_time <span style="color:#f92672">/</span> gen_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 倍&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>test_speed()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 输出：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表方式: 0.0823s, 结果: 285</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成器方式: 0.0001s, 结果: 285</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成器快 823 倍</span>
+</span></span></code></pre></div><h3 id="链式操作对比">链式操作对比</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_data_list</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;列表方式：三次遍历，三次内存占用&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 步骤1：过滤</span>
+</span></span><span style="display:flex;"><span>    filtered <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">500000</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 步骤2：转换</span>
+</span></span><span style="display:flex;"><span>    transformed <span style="color:#f92672">=</span> [x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> filtered]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 步骤3：计算</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> sum(transformed)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_data_gen</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;生成器方式：一次遍历，零额外内存&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> sum(
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">500000</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1000000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>result1 <span style="color:#f92672">=</span> process_data_list(data)
+</span></span><span style="display:flex;"><span>list_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>result2 <span style="color:#f92672">=</span> process_data_gen(data)
+</span></span><span style="display:flex;"><span>gen_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表方式: </span><span style="color:#e6db74">{</span>list_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生成器方式: </span><span style="color:#e6db74">{</span>gen_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;结果相同: </span><span style="color:#e6db74">{</span>result1 <span style="color:#f92672">==</span> result2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 输出：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表方式: 0.1523s</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成器方式: 0.0987s</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 结果相同: True</span>
+</span></span></code></pre></div><hr>
+<h2 id="实战案例">实战案例</h2>
+<h3 id="案例1读取大文件">案例1：读取大文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误方式：一次性读取</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_file_bad</span>(filename):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(filename, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> f<span style="color:#f92672">.</span>readlines()  <span style="color:#75715e"># 所有行加载到内存</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确方式：生成器逐行读取</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_file_good</span>(filename):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(filename, <span style="color:#e6db74">&#39;r&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> f:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> line<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用：处理GB级文件也不会爆内存</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> read_file_good(<span style="color:#e6db74">&#39;huge_file.txt&#39;</span>):
+</span></span><span style="display:flex;"><span>    process(line)  <span style="color:#75715e"># 每次只处理一行</span>
+</span></span></code></pre></div><h3 id="案例2无限序列">案例2：无限序列</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fibonacci</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;生成无限的斐波那契数列&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    a, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> a
+</span></span><span style="display:flex;"><span>        a, b <span style="color:#f92672">=</span> b, a <span style="color:#f92672">+</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count</span>(start<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, step<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;无限计数器&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> start
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> n
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">+=</span> step
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cycle</span>(iterable):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;无限循环&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> iterable:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>fib <span style="color:#f92672">=</span> fibonacci()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>):
+</span></span><span style="display:flex;"><span>    print(next(fib), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)  <span style="color:#75715e"># 0 1 1 2 3 5 8 13 21 34</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print()
+</span></span><span style="display:flex;"><span>counter <span style="color:#f92672">=</span> count(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+</span></span><span style="display:flex;"><span>    print(next(counter), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)  <span style="color:#75715e"># 10 12 14 16 18</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print()
+</span></span><span style="display:flex;"><span>colors <span style="color:#f92672">=</span> cycle([<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">7</span>):
+</span></span><span style="display:flex;"><span>    print(next(colors), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)  <span style="color:#75715e"># red green blue red green blue red</span>
+</span></span></code></pre></div><h3 id="案例3数据管道">案例3：数据管道</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_log_file</span>(filename):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;读取日志文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(filename, <span style="color:#e6db74">&#39;r&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> f:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> line<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">filter_errors</span>(lines):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;过滤错误日志&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> lines:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;ERROR&#39;</span> <span style="color:#f92672">in</span> line:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> line
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parse_timestamp</span>(lines):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;解析时间戳&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> lines:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 假设格式：[2024-01-01 10:00:00] ERROR ...</span>
+</span></span><span style="display:flex;"><span>        timestamp <span style="color:#f92672">=</span> line[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">20</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> {<span style="color:#e6db74">&#39;time&#39;</span>: timestamp, <span style="color:#e6db74">&#39;message&#39;</span>: line}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">batch</span>(lines, size):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;批量分组&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    batch <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> lines:
+</span></span><span style="display:flex;"><span>        batch<span style="color:#f92672">.</span>append(line)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(batch) <span style="color:#f92672">==</span> size:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> batch
+</span></span><span style="display:flex;"><span>            batch <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> batch:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> batch
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 组合成管道</span>
+</span></span><span style="display:flex;"><span>logs <span style="color:#f92672">=</span> read_log_file(<span style="color:#e6db74">&#39;app.log&#39;</span>)
+</span></span><span style="display:flex;"><span>errors <span style="color:#f92672">=</span> filter_errors(logs)
+</span></span><span style="display:flex;"><span>parsed <span style="color:#f92672">=</span> parse_timestamp(errors)
+</span></span><span style="display:flex;"><span>batches <span style="color:#f92672">=</span> batch(parsed, <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> batch <span style="color:#f92672">in</span> batches:
+</span></span><span style="display:flex;"><span>    save_to_database(batch)  <span style="color:#75715e"># 每100条保存一次</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 全程内存占用极小！</span>
+</span></span></code></pre></div><h3 id="案例4分页查询">案例4：分页查询</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">paginated_query</span>(db, table, page_size<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;分页查询生成器&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 每次只查询page_size条记录</span>
+</span></span><span style="display:flex;"><span>        query <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;SELECT * FROM </span><span style="color:#e6db74">{</span>table<span style="color:#e6db74">}</span><span style="color:#e6db74"> LIMIT </span><span style="color:#e6db74">{</span>page_size<span style="color:#e6db74">}</span><span style="color:#e6db74"> OFFSET </span><span style="color:#e6db74">{</span>offset<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        results <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>execute(query)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> results:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> results:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> row
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        offset <span style="color:#f92672">+=</span> page_size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用：处理百万级数据</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> paginated_query(db, <span style="color:#e6db74">&#39;users&#39;</span>):
+</span></span><span style="display:flex;"><span>    process_user(row)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 内存中始终只有page_size条记录</span>
+</span></span></code></pre></div><h3 id="案例5文件搜索">案例5：文件搜索</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_files</span>(directory, pattern<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*&#39;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;递归查找文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    directory <span style="color:#f92672">=</span> Path(directory)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> path <span style="color:#f92672">in</span> directory<span style="color:#f92672">.</span>rglob(pattern):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> path<span style="color:#f92672">.</span>is_file():
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_by_content</span>(directory, keyword):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;按内容搜索文件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filepath <span style="color:#f92672">in</span> find_files(directory, <span style="color:#e6db74">&#39;*.py&#39;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(filepath, <span style="color:#e6db74">&#39;r&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> line_num, line <span style="color:#f92672">in</span> enumerate(f, <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> keyword <span style="color:#f92672">in</span> line:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">yield</span> {
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#39;file&#39;</span>: str(filepath),
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#39;line_num&#39;</span>: line_num,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#39;line&#39;</span>: line<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> result <span style="color:#f92672">in</span> find_by_content(<span style="color:#e6db74">&#39;./my_project&#39;</span>, <span style="color:#e6db74">&#39;TODO&#39;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>result[<span style="color:#e6db74">&#39;file&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">{</span>result[<span style="color:#e6db74">&#39;line_num&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>result[<span style="color:#e6db74">&#39;line&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h3 id="案例6数据流处理">案例6：数据流处理</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">data_stream</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;模拟实时数据流&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;timestamp&#39;</span>: time<span style="color:#f92672">.</span>time(),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;value&#39;</span>: random<span style="color:#f92672">.</span>random() <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.1</span>)  <span style="color:#75715e"># 模拟数据到达间隔</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sliding_window</span>(stream, size<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;滑动窗口&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    window <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> stream:
+</span></span><span style="display:flex;"><span>        window<span style="color:#f92672">.</span>append(item)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(window) <span style="color:#f92672">&gt;</span> size:
+</span></span><span style="display:flex;"><span>            window<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> window<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moving_average</span>(windows):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;移动平均&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> window <span style="color:#f92672">in</span> windows:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> window:
+</span></span><span style="display:flex;"><span>            avg <span style="color:#f92672">=</span> sum(item[<span style="color:#e6db74">&#39;value&#39;</span>] <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> window) <span style="color:#f92672">/</span> len(window)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> avg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 组合使用</span>
+</span></span><span style="display:flex;"><span>stream <span style="color:#f92672">=</span> data_stream()
+</span></span><span style="display:flex;"><span>windows <span style="color:#f92672">=</span> sliding_window(stream, size<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>averages <span style="color:#f92672">=</span> moving_average(windows)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> avg <span style="color:#f92672">in</span> averages:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;移动平均: </span><span style="color:#e6db74">{</span>avg<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 实时计算，不需要存储历史数据</span>
+</span></span></code></pre></div><hr>
+<h2 id="生成器-vs-迭代器">生成器 vs 迭代器</h2>
+<h3 id="迭代器协议">迭代器协议</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CounterIterator</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;自定义迭代器&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, start, end):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>current <span style="color:#f92672">=</span> start
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>end <span style="color:#f92672">=</span> end
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__iter__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__next__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>current <span style="color:#f92672">&gt;=</span> self<span style="color:#f92672">.</span>end:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">StopIteration</span>
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>current
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>current <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>counter <span style="color:#f92672">=</span> CounterIterator(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> counter:
+</span></span><span style="display:flex;"><span>    print(num)  <span style="color:#75715e"># 0 1 2 3 4</span>
+</span></span></code></pre></div><h3 id="生成器实现同样功能">生成器实现同样功能</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">counter_generator</span>(start, end):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;生成器：更简洁&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    current <span style="color:#f92672">=</span> start
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> current <span style="color:#f92672">&lt;</span> end:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> current
+</span></span><span style="display:flex;"><span>        current <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>counter <span style="color:#f92672">=</span> counter_generator(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> counter:
+</span></span><span style="display:flex;"><span>    print(num)  <span style="color:#75715e"># 0 1 2 3 4</span>
+</span></span></code></pre></div><h3 id="对比总结">对比总结</h3>
+<table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>生成器</th>
+          <th>迭代器</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>创建方式</td>
+          <td><code>yield</code>或生成器表达式</td>
+          <td><code>__iter__</code>和<code>__next__</code>方法</td>
+      </tr>
+      <tr>
+          <td>代码复杂度</td>
+          <td>简单（几行）</td>
+          <td>较复杂（需要类）</td>
+      </tr>
+      <tr>
+          <td>内存占用</td>
+          <td>极低</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td>可重用性</td>
+          <td>一次性（用完就没了）</td>
+          <td>一次性</td>
+      </tr>
+      <tr>
+          <td>状态保存</td>
+          <td>自动</td>
+          <td>手动管理</td>
+      </tr>
+      <tr>
+          <td>异常处理</td>
+          <td>自动抛出StopIteration</td>
+          <td>手动抛出</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>结论</strong>：能用生成器就用生成器，代码简洁又高效。</p>
+<hr>
+<h2 id="常用内置生成器函数">常用内置生成器函数</h2>
+<h3 id="enumerate">enumerate</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 带索引的遍历</span>
+</span></span><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;cherry&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 传统方式</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fruits)):
+</span></span><span style="display:flex;"><span>    print(i, fruits[i])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用enumerate（生成器）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, fruit <span style="color:#f92672">in</span> enumerate(fruits):
+</span></span><span style="display:flex;"><span>    print(i, fruit)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 指定起始索引</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, fruit <span style="color:#f92672">in</span> enumerate(fruits, start<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">. </span><span style="color:#e6db74">{</span>fruit<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h3 id="zip">zip</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 并行遍历多个序列</span>
+</span></span><span style="display:flex;"><span>names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Charlie&#39;</span>]
+</span></span><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>]
+</span></span><span style="display:flex;"><span>cities <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Beijing&#39;</span>, <span style="color:#e6db74">&#39;Shanghai&#39;</span>, <span style="color:#e6db74">&#39;Guangzhou&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用zip（生成器）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> name, age, city <span style="color:#f92672">in</span> zip(names, ages, cities):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{</span>age<span style="color:#e6db74">}</span><span style="color:#e6db74">岁, </span><span style="color:#e6db74">{</span>city<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建字典</span>
+</span></span><span style="display:flex;"><span>user_dict <span style="color:#f92672">=</span> dict(zip(names, ages))
+</span></span><span style="display:flex;"><span>print(user_dict)  <span style="color:#75715e"># {&#39;Alice&#39;: 25, &#39;Bob&#39;: 30, &#39;Charlie&#39;: 35}</span>
+</span></span></code></pre></div><h3 id="map">map</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 对每个元素应用函数</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表推导式</span>
+</span></span><span style="display:flex;"><span>squared_list <span style="color:#f92672">=</span> [x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> numbers]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用map（生成器）</span>
+</span></span><span style="display:flex;"><span>squared_map <span style="color:#f92672">=</span> map(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>, numbers)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(list(squared_map))  <span style="color:#75715e"># [1, 4, 9, 16, 25]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 多个序列</span>
+</span></span><span style="display:flex;"><span>list1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>list2 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>]
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> map(<span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">+</span> y, list1, list2)
+</span></span><span style="display:flex;"><span>print(list(result))  <span style="color:#75715e"># [11, 22, 33]</span>
+</span></span></code></pre></div><h3 id="filter">filter</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 过滤元素</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表推导式</span>
+</span></span><span style="display:flex;"><span>evens_list <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> numbers <span style="color:#66d9ef">if</span> x <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用filter（生成器）</span>
+</span></span><span style="display:flex;"><span>evens_filter <span style="color:#f92672">=</span> filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>, numbers)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(list(evens_filter))  <span style="color:#75715e"># [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 过滤None值</span>
+</span></span><span style="display:flex;"><span>items <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">None</span>, <span style="color:#66d9ef">False</span>, <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;hello&#39;</span>, []]
+</span></span><span style="display:flex;"><span>truthy <span style="color:#f92672">=</span> filter(<span style="color:#66d9ef">None</span>, items)
+</span></span><span style="display:flex;"><span>print(list(truthy))  <span style="color:#75715e"># [1, &#39;hello&#39;]</span>
+</span></span></code></pre></div><h3 id="range">range</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># range本身就是生成器</span>
+</span></span><span style="display:flex;"><span>r <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1000000</span>)  <span style="color:#75715e"># 不占用内存</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(sys<span style="color:#f92672">.</span>getsizeof(r))  <span style="color:#75715e"># 48 bytes</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>):
+</span></span><span style="display:flex;"><span>    print(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 步长</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>    print(i)  <span style="color:#75715e"># 0 2 4 6 8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 反向</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    print(i)
+</span></span></code></pre></div><h3 id="itertools模块">itertools模块</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> itertools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># count：无限计数</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> itertools<span style="color:#f92672">.</span>count(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    print(i)  <span style="color:#75715e"># 10 12 14 16 18 20</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cycle：无限循环</span>
+</span></span><span style="display:flex;"><span>colors <span style="color:#f92672">=</span> itertools<span style="color:#f92672">.</span>cycle([<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">7</span>):
+</span></span><span style="display:flex;"><span>    print(next(colors))  <span style="color:#75715e"># red green blue red green blue red</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># repeat：重复</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> itertools<span style="color:#f92672">.</span>repeat(<span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#ae81ff">3</span>):
+</span></span><span style="display:flex;"><span>    print(item)  <span style="color:#75715e"># hello hello hello</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># chain：连接多个可迭代对象</span>
+</span></span><span style="display:flex;"><span>combined <span style="color:#f92672">=</span> itertools<span style="color:#f92672">.</span>chain([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>], [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>])
+</span></span><span style="display:flex;"><span>print(list(combined))  <span style="color:#75715e"># [1, 2, 3, 4, 5, 6]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># islice：切片</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> itertools<span style="color:#f92672">.</span>islice(range(<span style="color:#ae81ff">100</span>), <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>print(list(result))  <span style="color:#75715e"># [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># takewhile：条件为真时取值</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> itertools<span style="color:#f92672">.</span>takewhile(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>, range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(list(result))  <span style="color:#75715e"># [0, 1, 2, 3, 4]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># dropwhile：条件为真时跳过</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> itertools<span style="color:#f92672">.</span>dropwhile(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>, range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(list(result))  <span style="color:#75715e"># [5, 6, 7, 8, 9]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># permutations：排列</span>
+</span></span><span style="display:flex;"><span>perms <span style="color:#f92672">=</span> itertools<span style="color:#f92672">.</span>permutations([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>print(list(perms))  <span style="color:#75715e"># [(1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2)]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># combinations：组合</span>
+</span></span><span style="display:flex;"><span>combs <span style="color:#f92672">=</span> itertools<span style="color:#f92672">.</span>combinations([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>], <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>print(list(combs))  <span style="color:#75715e"># [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span>
+</span></span></code></pre></div><hr>
+<h2 id="生成器工具函数">生成器工具函数</h2>
+<h3 id="消费生成器">消费生成器</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 列表方式</span>
+</span></span><span style="display:flex;"><span>squares <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> list(squares)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取前N个</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> itertools
+</span></span><span style="display:flex;"><span>squares <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100</span>))
+</span></span><span style="display:flex;"><span>first_10 <span style="color:#f92672">=</span> list(itertools<span style="color:#f92672">.</span>islice(squares, <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(first_10)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取第N个</span>
+</span></span><span style="display:flex;"><span>squares <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>fifth <span style="color:#f92672">=</span> next(itertools<span style="color:#f92672">.</span>islice(squares, <span style="color:#ae81ff">4</span>, <span style="color:#66d9ef">None</span>))
+</span></span><span style="display:flex;"><span>print(fifth)  <span style="color:#75715e"># 16</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 求和</span>
+</span></span><span style="display:flex;"><span>squares <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> sum(squares)
+</span></span><span style="display:flex;"><span>print(total)  <span style="color:#75715e"># 285</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 最大/最小值</span>
+</span></span><span style="display:flex;"><span>squares <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(max(squares))  <span style="color:#75715e"># 81</span>
+</span></span></code></pre></div><h3 id="重置生成器">重置生成器</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 生成器是一次性的！</span>
+</span></span><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>print(list(gen))  <span style="color:#75715e"># [0, 1, 4, 9, 16]</span>
+</span></span><span style="display:flex;"><span>print(list(gen))  <span style="color:#75715e"># []  第二次就没了！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决方案1：重新创建</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">squares</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gen1 <span style="color:#f92672">=</span> squares(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>gen2 <span style="color:#f92672">=</span> squares(<span style="color:#ae81ff">5</span>)  <span style="color:#75715e"># 重新创建</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决方案2：转换为列表（如果数据不大）</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> list((i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>)))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># data可以重复使用</span>
+</span></span></code></pre></div><h3 id="tee复制生成器">tee：复制生成器</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> itertools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 复制生成器</span>
+</span></span><span style="display:flex;"><span>gen1, gen2, gen3 <span style="color:#f92672">=</span> itertools<span style="color:#f92672">.</span>tee(gen, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(list(gen1))  <span style="color:#75715e"># [0, 1, 4, 9, 16]</span>
+</span></span><span style="display:flex;"><span>print(list(gen2))  <span style="color:#75715e"># [0, 1, 4, 9, 16]</span>
+</span></span><span style="display:flex;"><span>print(list(gen3))  <span style="color:#75715e"># [0, 1, 4, 9, 16]</span>
+</span></span></code></pre></div><hr>
+<h2 id="避坑指南">避坑指南</h2>
+<h3 id="坑1生成器只能用一次">坑1：生成器只能用一次</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 第一次使用</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> gen:
+</span></span><span style="display:flex;"><span>    print(num)  <span style="color:#75715e"># 0 1 4 9 16</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 第二次使用（已经空了）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> gen:
+</span></span><span style="display:flex;"><span>    print(num)  <span style="color:#75715e"># 什么都不输出！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决：如果需要多次使用，转换为列表</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> list(gen)
+</span></span></code></pre></div><h3 id="坑2生成器不支持索引">坑2：生成器不支持索引</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># gen[5]  # TypeError: &#39;generator&#39; object is not subscriptable</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决：使用islice</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> itertools
+</span></span><span style="display:flex;"><span>fifth <span style="color:#f92672">=</span> next(itertools<span style="color:#f92672">.</span>islice(gen, <span style="color:#ae81ff">5</span>, <span style="color:#66d9ef">None</span>))
+</span></span><span style="display:flex;"><span>print(fifth)
+</span></span></code></pre></div><h3 id="坑3生成器不支持len">坑3：生成器不支持len()</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># len(gen)  # TypeError: object of type &#39;generator&#39; has no len()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决：转换为列表（如果数据不大）</span>
+</span></span><span style="display:flex;"><span>length <span style="color:#f92672">=</span> len(list(gen))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或者手动计数</span>
+</span></span><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>count <span style="color:#f92672">=</span> sum(<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> gen)
+</span></span><span style="display:flex;"><span>print(count)
+</span></span></code></pre></div><h3 id="坑4生成器不能切片">坑4：生成器不能切片</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> (i <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># gen[2:5]  # TypeError</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决：使用islice</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> itertools
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> list(itertools<span style="color:#f92672">.</span>islice(gen, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># [4, 9, 16]</span>
+</span></span></code></pre></div><h3 id="坑5嵌套生成器的陷阱">坑5：嵌套生成器的陷阱</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 错误：嵌套生成器表达式</span>
+</span></span><span style="display:flex;"><span>matrix <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>], [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 想要展平</span>
+</span></span><span style="display:flex;"><span>flat <span style="color:#f92672">=</span> (item <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> matrix <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> row)
+</span></span><span style="display:flex;"><span>print(list(flat))  <span style="color:#75715e"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 注意顺序：外层循环在前，内层循环在后</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 等价于：</span>
+</span></span><span style="display:flex;"><span>flat <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> matrix:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> row:
+</span></span><span style="display:flex;"><span>        flat<span style="color:#f92672">.</span>append(item)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 带条件的嵌套</span>
+</span></span><span style="display:flex;"><span>even <span style="color:#f92672">=</span> (item <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> matrix <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> row <span style="color:#66d9ef">if</span> item <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>print(list(even))  <span style="color:#75715e"># [2, 4, 6, 8]</span>
+</span></span></code></pre></div><hr>
+<h2 id="推荐ai-python零基础实战营">推荐：AI Python零基础实战营</h2>
+<p>想系统学习Python高级特性？</p>
+<p><strong>课程内容：</strong></p>
+<ul>
+<li>✅ Python基础语法</li>
+<li>✅ 生成器与迭代器详解</li>
+<li>✅ 内存优化技巧</li>
+<li>✅ 大数据处理实战</li>
+</ul>
+<p>🎁 <strong>限时福利</strong>：送《Python编程从入门到实践》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/python/07-Python%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F/">Python列表推导式：一行代码搞定循环</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/python/11-Python%E8%A3%85%E9%A5%B0%E5%99%A8/">Python装饰器：给函数加功能的黑魔法</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/python/13-Python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">Python文件操作：读写文件的10种姿势</a></li>
+</ul>
+<hr>
+<p><em>PS：生成器是Python的高级特性之一，掌握它，你就能优雅地处理大数据。记住：内存不够，生成器来凑！</em></p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></p>
+<hr>
+<h2 id="-推荐python-零基础实战营">📚 推荐：Python 零基础实战营</h2>
+<p><strong>系统学习Python，推荐这个免费入门课程 👇</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>特点</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🎯 专为0基础设计</td>
+          <td>门槛低，上手快</td>
+      </tr>
+      <tr>
+          <td>📹 配套视频讲解</td>
+          <td>配合文章学习效果更好</td>
+      </tr>
+      <tr>
+          <td>💬 专属答疑群</td>
+          <td>遇到问题有人带</td>
+      </tr>
+      <tr>
+          <td>🎁 实体书赠送</td>
+          <td>优秀学员送《Python编程从入门到实践》</td>
+      </tr>
+  </tbody>
+</table>
+<p>👉 <strong><a href="https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397">点击免费领取 Python 零基础实战营</a></strong></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/15-python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">上一篇：Python面向对象：我从零学会类和对象，全靠这7个核心概念</a>
+        
+        
+        <a href="http://localhost:4002/17-python%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/">下一篇：Python模块与包：我从混乱到井井有条，全靠这5个组织原则</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

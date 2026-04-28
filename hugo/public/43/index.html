@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>43-综合实战3：做一个通讯录管理系统 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>43-综合实战3：做一个通讯录管理系统</h1>
+        <div class="post-meta">
+            <span>2024-09-17 10:41</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E5%B0%8F%E6%8A%A5%E7%AB%A5/" class="tag">小报童</a>
+            
+            <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/" class="tag">自动化办公</a>
+            
+            <a href="/tags/%E7%BB%BC%E5%90%88%E5%AE%9E%E6%88%98/" class="tag">综合实战</a>
+            
+            <a href="/tags/%E4%BB%98%E8%B4%B9%E8%AF%BE%E7%A8%8B/" class="tag">付费课程</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，这里是程序员晚枫，正在all in <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">AI编程实战</a>。</p>
+<p>今天我们做一个综合实战——<strong>通讯录管理系统</strong>！</p>
+<h2 id="1功能需求">1、功能需求</h2>
+<p>我们要做一个通讯录，功能包括：</p>
+<ul>
+<li>➕ 添加联系人</li>
+<li>🔍 搜索联系人</li>
+<li>✏️ 修改联系人</li>
+<li>❌ 删除联系人</li>
+<li>📋 显示所有联系人</li>
+<li>💾 数据持久化保存</li>
+</ul>
+<h2 id="2创建数据库">2、创建数据库</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sqlite3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddressBook</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, db_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;contacts.db&#39;</span>):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>db_path <span style="color:#f92672">=</span> db_path
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>conn <span style="color:#f92672">=</span> sqlite3<span style="color:#f92672">.</span>connect(db_path)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cursor <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>conn<span style="color:#f92672">.</span>cursor()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>create_table()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_table</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;创建联系人表&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        CREATE TABLE IF NOT EXISTS contacts (
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            id INTEGER PRIMARY KEY AUTOINCREMENT,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            name TEXT NOT NULL,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            phone TEXT,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            email TEXT,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            company TEXT,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            address TEXT,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            remark TEXT,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            created_at TEXT,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            updated_at TEXT
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        )
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>conn<span style="color:#f92672">.</span>commit()
+</span></span></code></pre></div><h2 id="3添加联系人">3、添加联系人</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self, name, phone<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, email<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, company<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, address<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, remark<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;添加联系人&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> %H:%M:%S&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        INSERT INTO contacts (name, phone, email, company, address, remark, created_at, updated_at)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;&#39;&#39;</span>, (name, phone, email, company, address, remark, now, now))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>conn<span style="color:#f92672">.</span>commit()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;✅ 联系人 </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> 已添加！&#39;</span>)
+</span></span></code></pre></div><h2 id="4查询联系人">4、查询联系人</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, keyword):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;搜索联系人&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        SELECT * FROM contacts
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        WHERE name LIKE ? OR phone LIKE ? OR email LIKE ? OR company LIKE ?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;&#39;&#39;</span>, (<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;%</span><span style="color:#e6db74">{</span>keyword<span style="color:#e6db74">}</span><span style="color:#e6db74">%&#39;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;%</span><span style="color:#e6db74">{</span>keyword<span style="color:#e6db74">}</span><span style="color:#e6db74">%&#39;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;%</span><span style="color:#e6db74">{</span>keyword<span style="color:#e6db74">}</span><span style="color:#e6db74">%&#39;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;%</span><span style="color:#e6db74">{</span>keyword<span style="color:#e6db74">}</span><span style="color:#e6db74">%&#39;</span>))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>fetchall()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">list_all</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;列出所有联系人&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#39;SELECT * FROM contacts ORDER BY name&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>fetchall()
+</span></span></code></pre></div><h2 id="5更新和删除">5、更新和删除</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(self, contact_id, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;更新联系人&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> %H:%M:%S&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        fields <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        values <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> kwargs<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> key <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;id&#39;</span>:
+</span></span><span style="display:flex;"><span>                fields<span style="color:#f92672">.</span>append(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74"> = ?&#39;</span>)
+</span></span><span style="display:flex;"><span>                values<span style="color:#f92672">.</span>append(value)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> fields:
+</span></span><span style="display:flex;"><span>            fields<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;updated_at = ?&#39;</span>)
+</span></span><span style="display:flex;"><span>            values<span style="color:#f92672">.</span>append(now)
+</span></span><span style="display:flex;"><span>            values<span style="color:#f92672">.</span>append(contact_id)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            UPDATE contacts SET </span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#f92672">.</span>join(fields)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            WHERE id = ?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#39;&#39;&#39;</span>, values)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>conn<span style="color:#f92672">.</span>commit()
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;✅ 联系人 ID:</span><span style="color:#e6db74">{</span>contact_id<span style="color:#e6db74">}</span><span style="color:#e6db74"> 已更新！&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">delete</span>(self, contact_id):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;删除联系人&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cursor<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#39;DELETE FROM contacts WHERE id = ?&#39;</span>, (contact_id,))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>conn<span style="color:#f92672">.</span>commit()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;🗑️  联系人 ID:</span><span style="color:#e6db74">{</span>contact_id<span style="color:#e6db74">}</span><span style="color:#e6db74"> 已删除！&#39;</span>)
+</span></span></code></pre></div><h2 id="6导出功能">6、导出功能</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">export_to_excel</span>(self, filename):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;导出到Excel&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        rows <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>list_all()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> rows:
+</span></span><span style="display:flex;"><span>            data <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;ID&#39;</span>, <span style="color:#e6db74">&#39;姓名&#39;</span>, <span style="color:#e6db74">&#39;电话&#39;</span>, <span style="color:#e6db74">&#39;邮箱&#39;</span>, <span style="color:#e6db74">&#39;公司&#39;</span>, <span style="color:#e6db74">&#39;地址&#39;</span>, <span style="color:#e6db74">&#39;备注&#39;</span>, <span style="color:#e6db74">&#39;创建时间&#39;</span>, <span style="color:#e6db74">&#39;更新时间&#39;</span>]]
+</span></span><span style="display:flex;"><span>            data<span style="color:#f92672">.</span>extend(rows)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">import</span> office
+</span></span><span style="display:flex;"><span>            office<span style="color:#f92672">.</span>excel<span style="color:#f92672">.</span>write(path<span style="color:#f92672">=</span>filename, data<span style="color:#f92672">=</span>data)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;📊 已导出到 </span><span style="color:#e6db74">{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">export_to_json</span>(self, filename):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;导出到JSON&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        rows <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>list_all()
+</span></span><span style="display:flex;"><span>        contacts <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> rows:
+</span></span><span style="display:flex;"><span>            contacts<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;id&#39;</span>: row[<span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;name&#39;</span>: row[<span style="color:#ae81ff">1</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;phone&#39;</span>: row[<span style="color:#ae81ff">2</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;email&#39;</span>: row[<span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;company&#39;</span>: row[<span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;address&#39;</span>: row[<span style="color:#ae81ff">5</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;remark&#39;</span>: row[<span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(filename, <span style="color:#e6db74">&#39;w&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>            json<span style="color:#f92672">.</span>dump(contacts, f, ensure_ascii<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, indent<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;📋 已导出到 </span><span style="color:#e6db74">{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span></code></pre></div><h2 id="7菜单界面">7、菜单界面</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;运行主程序&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">╔══════════════════════════════════════╗
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║      📇 通讯录管理系统 v1.0          ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">╠══════════════════════════════════════╣
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║  1. 添加联系人                       ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║  2. 搜索联系人                       ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║  3. 修改联系人                       ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║  4. 删除联系人                       ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║  5. 列出所有联系人                   ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║  6. 导出到Excel                      ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║  7. 导出到JSON                       ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">║  0. 退出系统                         ║
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">╚══════════════════════════════════════╝
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#39;&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            choice <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;请选择功能：&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;1&#39;</span>:
+</span></span><span style="display:flex;"><span>                name <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;姓名：&#39;</span>)
+</span></span><span style="display:flex;"><span>                phone <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;电话：&#39;</span>)
+</span></span><span style="display:flex;"><span>                email <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;邮箱：&#39;</span>)
+</span></span><span style="display:flex;"><span>                company <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;公司：&#39;</span>)
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>add(name, phone, email, company)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2&#39;</span>:
+</span></span><span style="display:flex;"><span>                keyword <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;搜索关键词：&#39;</span>)
+</span></span><span style="display:flex;"><span>                results <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>search(keyword)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> results:
+</span></span><span style="display:flex;"><span>                    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>r[<span style="color:#ae81ff">0</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">. </span><span style="color:#e6db74">{</span>r[<span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">{</span>r[<span style="color:#ae81ff">2</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;3&#39;</span>:
+</span></span><span style="display:flex;"><span>                cid <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#39;联系人ID：&#39;</span>))
+</span></span><span style="display:flex;"><span>                phone <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;新电话（直接回车跳过）：&#39;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> phone:
+</span></span><span style="display:flex;"><span>                    self<span style="color:#f92672">.</span>update(cid, phone<span style="color:#f92672">=</span>phone)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;4&#39;</span>:
+</span></span><span style="display:flex;"><span>                cid <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#39;联系人ID：&#39;</span>))
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>delete(cid)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;5&#39;</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>list_all():
+</span></span><span style="display:flex;"><span>                    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>r[<span style="color:#ae81ff">0</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">. </span><span style="color:#e6db74">{</span>r[<span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> | </span><span style="color:#e6db74">{</span>r[<span style="color:#ae81ff">2</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> | </span><span style="color:#e6db74">{</span>r[<span style="color:#ae81ff">3</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;6&#39;</span>:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>export_to_excel(<span style="color:#e6db74">&#39;通讯录.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;7&#39;</span>:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>export_to_json(<span style="color:#e6db74">&#39;通讯录.json&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;0&#39;</span>:
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">&#39;再见！&#39;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            input(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">按回车继续...&#39;</span>)
+</span></span></code></pre></div><h2 id="8运行程序">8、运行程序</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    book <span style="color:#f92672">=</span> AddressBook()
+</span></span><span style="display:flex;"><span>    book<span style="color:#f92672">.</span>run()
+</span></span></code></pre></div><h2 id="9总结">9、总结</h2>
+<p>今天我们做了一个完整的通讯录管理系统：</p>
+<ul>
+<li>✅ 使用 SQLite 数据库存储数据</li>
+<li>✅ 支持增删改查基本操作</li>
+<li>✅ 支持搜索功能</li>
+<li>✅ 可以导出 Excel 和 JSON</li>
+</ul>
+<p>你可以继续扩展：</p>
+<ul>
+<li>添加生日提醒</li>
+<li>添加分组功能</li>
+<li>添加导入功能</li>
+<li>添加微信发送功能</li>
+</ul>
+<hr>
+<p>有问题欢迎加微信 <code>python-office</code> 进群交流~</p>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/44/">上一篇：44-Python进阶：函数和模块化编程</a>
+        
+        
+        <a href="http://localhost:4002/42/">下一篇：42-JSON和CSV：处理结构化数据文件</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>发票识别 API 调用失败的 8 种原因及排查方法 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>发票识别 API 调用失败的 8 种原因及排查方法</h1>
+        <div class="post-meta">
+            <span>2026-03-17 10:40</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/openclaw/" class="tag">OpenClaw</a>
+            
+            <a href="/tags/ocr/" class="tag">OCR</a>
+            
+            <a href="/tags/api/" class="tag">API</a>
+            
+            <a href="/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/" class="tag">故障排查</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <h1 id="发票识别-api-调用失败的-8-种原因及排查方法">发票识别 API 调用失败的 8 种原因及排查方法</h1>
+<blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<hr>
+<h2 id="-api-调用失败如何快速定位">🔍 API 调用失败，如何快速定位？</h2>
+<p><strong>3 个月来</strong>，处理了无数 API 调用失败。</p>
+<p><strong>总结</strong>：80% 的失败都是这 8 种原因。</p>
+<p><strong>今天</strong>：教你快速排查方法。</p>
+<hr>
+<h2 id="原因-1密钥问题30">原因 1：密钥问题（30%）</h2>
+<p><strong>症状</strong>：<code>401 Unauthorized</code></p>
+<p><strong>排查</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. 检查环境变量</span>
+</span></span><span style="display:flex;"><span>echo $TENCENT_SECRET_ID
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 验证密钥格式</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SecretId 应该是：AKIDxxxxxxxx</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 检查密钥状态</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 登录腾讯云控制台查看是否被冻结</span>
+</span></span></code></pre></div><p><strong>解决</strong>：重新生成密钥，更新配置。</p>
+<hr>
+<h2 id="原因-2网络问题20">原因 2：网络问题（20%）</h2>
+<p><strong>症状</strong>：<code>Timeout</code> 或 <code>ConnectionError</code></p>
+<p><strong>排查</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. ping 测试</span>
+</span></span><span style="display:flex;"><span>ping api.tencentcloudapi.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. curl 测试</span>
+</span></span><span style="display:flex;"><span>curl -v https://api.tencentcloudapi.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 检查防火墙</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 确保 443 端口开放</span>
+</span></span></code></pre></div><p><strong>解决</strong>：检查网络配置，配置代理。</p>
+<hr>
+<h2 id="原因-3额度超限15">原因 3：额度超限（15%）</h2>
+<p><strong>症状</strong>：<code>429 QuotaExceeded</code></p>
+<p><strong>排查</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 登录腾讯云控制台</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看 OCR 服务使用量</span>
+</span></span></code></pre></div><p><strong>解决</strong>：等待下月额度或充值。</p>
+<hr>
+<h2 id="原因-4图片问题15">原因 4：图片问题（15%）</h2>
+<p><strong>症状</strong>：<code>400 InvalidImage</code></p>
+<p><strong>排查</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 1. 检查文件大小</span>
+</span></span><span style="display:flex;"><span>print(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getsize(image_path))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 检查格式</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+</span></span><span style="display:flex;"><span>img <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(image_path)
+</span></span><span style="display:flex;"><span>print(img<span style="color:#f92672">.</span>format)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 检查尺寸</span>
+</span></span><span style="display:flex;"><span>print(img<span style="color:#f92672">.</span>size)
+</span></span></code></pre></div><p><strong>解决</strong>：压缩图片，转换格式。</p>
+<hr>
+<h2 id="原因-5参数错误10">原因 5：参数错误（10%）</h2>
+<p><strong>症状</strong>：<code>400 InvalidParameter</code></p>
+<p><strong>排查</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 打印请求参数</span>
+</span></span><span style="display:flex;"><span>print(request_params)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 检查必填字段</span>
+</span></span><span style="display:flex;"><span>required <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;input_path&#39;</span>, <span style="color:#e6db74">&#39;output_path&#39;</span>, <span style="color:#e6db74">&#39;id&#39;</span>, <span style="color:#e6db74">&#39;key&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> param <span style="color:#f92672">in</span> required:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> param <span style="color:#f92672">in</span> params, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>param<span style="color:#e6db74">}</span><span style="color:#e6db74"> is required&#34;</span>
+</span></span></code></pre></div><p><strong>解决</strong>：检查参数名称和类型。</p>
+<hr>
+<h2 id="原因-6服务不可用5">原因 6：服务不可用（5%）</h2>
+<p><strong>症状</strong>：<code>503 Service Unavailable</code></p>
+<p><strong>排查</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 访问腾讯云状态页</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># https://status.cloud.tencent.com/</span>
+</span></span></code></pre></div><p><strong>解决</strong>：等待服务恢复。</p>
+<hr>
+<h2 id="原因-7并发超限3">原因 7：并发超限（3%）</h2>
+<p><strong>症状</strong>：<code>429 Too Many Requests</code></p>
+<p><strong>排查</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 检查并发数</span>
+</span></span><span style="display:flex;"><span>print(concurrent_requests)
+</span></span></code></pre></div><p><strong>解决</strong>：降低并发，添加延迟。</p>
+<hr>
+<h2 id="原因-8区域限制2">原因 8：区域限制（2%）</h2>
+<p><strong>症状</strong>：<code>403 Forbidden</code></p>
+<p><strong>排查</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 检查 API 端点</span>
+</span></span><span style="display:flex;"><span>print(api_endpoint)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 应该是：ocr.tencentcloudapi.com</span>
+</span></span></code></pre></div><p><strong>解决</strong>：使用正确的区域端点。</p>
+<hr>
+<h2 id="-排查流程图">📊 排查流程图</h2>
+<pre tabindex="0"><code>API 调用失败
+    ↓
+检查错误码
+    ↓
+401 → 密钥问题
+400 → 参数/图片问题
+429 → 额度/并发问题
+503 → 服务问题
+    ↓
+按上面方法排查
+    ↓
+解决
+</code></pre><hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<hr>
+<h2 id="-推荐课程">🎓 推荐课程</h2>
+<ul>
+<li><strong><a href="https://mp.weixin.qq.com/s/xT6p7mHu5o6aMAqeuXQTXg">龙虾安装课（9 元）</a></strong></li>
+<li><strong><a href="https://mp.weixin.qq.com/s/UKSwPXVKIeCn4Gh_Spkdfw">龙虾高级课（199 元，前 50 名优惠）</a></strong></li>
+</ul>
+<hr>
+<p><strong>API 调用失败不可怕</strong>，可怕的是不知道如何排查。</p>
+<p><strong>按这个流程</strong>，90% 的问题都能解决。</p>
+<p><strong>剩下的 10%</strong>？群里问我。💪</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260317103900-%E5%8F%91%E7%A5%A8-ocr-%E5%AE%9E%E6%88%98-10-%E4%B8%AA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">上一篇：发票 OCR 实战：10 个常见错误及解决方案</a>
+        
+        
+        <a href="http://localhost:4002/20260317104100-%E8%B4%A2%E5%8A%A1%E4%BA%BA%E5%AD%A6-python-%E8%BF%99-5-%E4%B8%AA%E9%A1%B9%E7%9B%AE%E6%9C%80%E9%80%82%E5%90%88%E7%BB%83%E6%89%8B/">下一篇：财务人学 Python，这 5 个项目最适合练手</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python函数参数*args和**kwargs：我面试挂3次后才搞懂的知识点 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python函数参数*args和**kwargs：我面试挂3次后才搞懂的知识点</h1>
+        <div class="post-meta">
+            <span>2026-02-28 17:28</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%9F%BA%E7%A1%80/" class="tag">Python基础</a>
+            
+            <a href="/tags/%E5%87%BD%E6%95%B0/" class="tag">函数</a>
+            
+            <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="tag">面试题</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种AI项目的程序员晚枫。</p>
+<p>先说一个我自己的黑历史。</p>
+<p>当年面试一家大厂，面试官问我：&ldquo;Python函数参数<code>*args</code>和<code>**kwargs</code>是什么？有什么区别？&rdquo;</p>
+<p>我当场回答：&ldquo;就是&hellip;可以传多个参数的意思？&rdquo;</p>
+<p>面试官笑了笑，下一题。</p>
+<p>后来我又挂了2次，才彻底把这个知识点搞明白。</p>
+<p>如果你也被这两个星号搞晕过，这篇文章就是为你写的。<strong>花10分钟，我用最通俗的方式，让你一次搞明白。</strong></p>
+<hr>
+<h2 id="从一个真实场景开始">从一个真实场景开始</h2>
+<p>假设你在写一个电商系统，需要处理订单。</p>
+<h3 id="场景计算订单总价">场景：计算订单总价</h3>
+<p>你写了一个计算总和的函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 笨方法：参数写死</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">total_price</span>(p1, p2):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> p1 <span style="color:#f92672">+</span> p2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 问题：3个商品怎么办？重新写一个函数？</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4个商品呢？继续写？</span>
+</span></span></code></pre></div><p>老板说：&ldquo;我们以后可能有100个商品打折！&rdquo;</p>
+<p>你陷入了沉思&hellip;</p>
+<p>*<em>这时候，<em>args 就登场了。</em></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ✅ 用 *args：参数数量不限</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">total_price</span>(<span style="color:#f92672">*</span>prices):
+</span></span><span style="display:flex;"><span>    total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> price <span style="color:#f92672">in</span> prices:
+</span></span><span style="display:flex;"><span>        total <span style="color:#f92672">+=</span> price
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> total
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(total_price(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>))           <span style="color:#75715e"># 300</span>
+</span></span><span style="display:flex;"><span>print(total_price(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">200</span>))    <span style="color:#75715e"># 450</span>
+</span></span><span style="display:flex;"><span>print(total_price(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">50</span>))  <span style="color:#75715e"># 150</span>
+</span></span><span style="display:flex;"><span>print(total_price())                     <span style="color:#75715e"># 0（一个参数都没有也可以）</span>
+</span></span></code></pre></div><p><strong>一个函数，搞定所有情况！</strong></p>
+<hr>
+<h2 id="深入理解-args">深入理解 *args</h2>
+<h3 id="args-到底是什么">args 到底是什么？</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show_args</span>(<span style="color:#f92672">*</span>args):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 看看 args 是什么类型</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;类型：</span><span style="color:#e6db74">{</span>type(args)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;内容：</span><span style="color:#e6db74">{</span>args<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;长度：</span><span style="color:#e6db74">{</span>len(args)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>show_args(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p><strong>输出：</strong></p>
+<pre tabindex="0"><code>类型：&lt;class &#39;tuple&#39;&gt;
+内容：(1, 2, 3, &#39;hello&#39;, True)
+长度：5
+</code></pre><p><strong>结论：<code>*args</code> 接收到的是一个元组（tuple）！</strong></p>
+<p>这就是为什么：</p>
+<ul>
+<li>你可以传任意多个参数</li>
+<li>参数的顺序保持不变</li>
+<li>长度可以动态变化</li>
+</ul>
+<h3 id="为什么要叫-args">为什么要叫 args？</h3>
+<p>其实叫什么名字都行，约定俗成叫 <code>args</code>（arguments 的缩写，意思是&quot;参数&quot;）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 叫什么都行，但大家约定叫 args</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>(<span style="color:#f92672">*</span>numbers):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> sum(numbers)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(foo(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>))  <span style="color:#75715e"># 6</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 不推荐的命名（会误导自己）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bar</span>(<span style="color:#f92672">*</span>apple):
+</span></span><span style="display:flex;"><span>    print(apple)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bar(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># (1, 2, 3)</span>
+</span></span></code></pre></div><h3 id="args-的典型用法">*args 的典型用法</h3>
+<p><strong>1. 求最大值/最小值</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_max</span>(<span style="color:#f92672">*</span>numbers):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> max(numbers)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(my_max(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>))  <span style="color:#75715e"># 9</span>
+</span></span></code></pre></div><p><strong>2. 拼接字符串</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">join_words</span>(<span style="color:#f92672">*</span>words, separator<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> separator<span style="color:#f92672">.</span>join(words)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(join_words(<span style="color:#e6db74">&#39;Hello&#39;</span>, <span style="color:#e6db74">&#39;World&#39;</span>))              <span style="color:#75715e"># Hello World</span>
+</span></span><span style="display:flex;"><span>print(join_words(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, separator<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;-&#39;</span>))   <span style="color:#75715e"># a-b-c</span>
+</span></span></code></pre></div><p><strong>3. 注册回调函数</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">register_handlers</span>(<span style="color:#f92672">*</span>handlers):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> handler <span style="color:#f92672">in</span> handlers:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;注册：</span><span style="color:#e6db74">{</span>handler<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>register_handlers(<span style="color:#e6db74">&#39;on_click&#39;</span>, <span style="color:#e6db74">&#39;on_hover&#39;</span>, <span style="color:#e6db74">&#39;on_scroll&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 注册：on_click</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 注册：on_hover</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 注册：on_scroll</span>
+</span></span></code></pre></div><hr>
+<h2 id="深入理解-kwargs">深入理解 **kwargs</h2>
+<h3 id="kwargs-到底是什么">kwargs 到底是什么？</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show_kwargs</span>(<span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;类型：</span><span style="color:#e6db74">{</span>type(kwargs)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;内容：</span><span style="color:#e6db74">{</span>kwargs<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> kwargs<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  </span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74"> = </span><span style="color:#e6db74">{</span>value<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>show_kwargs(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;张三&#39;</span>, age<span style="color:#f92672">=</span><span style="color:#ae81ff">28</span>, city<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;重庆&#39;</span>)
+</span></span></code></pre></div><p><strong>输出：</strong></p>
+<pre tabindex="0"><code>类型：&lt;class &#39;dict&#39;&gt;
+内容：{&#39;name&#39;: &#39;张三&#39;, &#39;age&#39;: 28, &#39;city&#39;: &#39;重庆&#39;}
+  name = 张三
+  age = 28
+  city = 重庆
+</code></pre><p><strong>结论：<code>**kwargs</code> 接收到的是一个字典（dict）！</strong></p>
+<h3 id="kwargs-的典型用法">kwargs 的典型用法</h3>
+<p><strong>1. 打印配置信息</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_config</span>(<span style="color:#f92672">**</span>settings):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> settings<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>value<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print_config(
+</span></span><span style="display:flex;"><span>    db_host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;localhost&#39;</span>,
+</span></span><span style="display:flex;"><span>    db_port<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span>,
+</span></span><span style="display:flex;"><span>    db_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;myapp&#39;</span>,
+</span></span><span style="display:flex;"><span>    debug<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>2. 动态创建对象</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, name, age, <span style="color:#f92672">**</span>extra):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>age <span style="color:#f92672">=</span> age
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>extra <span style="color:#f92672">=</span> extra
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> User(<span style="color:#e6db74">&#39;程序员晚枫&#39;</span>, <span style="color:#ae81ff">28</span>, hobby<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;编程&#39;</span>, city<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;重庆&#39;</span>)
+</span></span><span style="display:flex;"><span>print(user<span style="color:#f92672">.</span>name)    <span style="color:#75715e"># 程序员晚枫</span>
+</span></span><span style="display:flex;"><span>print(user<span style="color:#f92672">.</span>extra)   <span style="color:#75715e"># {&#39;hobby&#39;: &#39;编程&#39;, &#39;city&#39;: &#39;重庆&#39;}</span>
+</span></span></code></pre></div><p><strong>3. 转发参数给其他函数</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inner</span>(a, b, c):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;inner: a=</span><span style="color:#e6db74">{</span>a<span style="color:#e6db74">}</span><span style="color:#e6db74">, b=</span><span style="color:#e6db74">{</span>b<span style="color:#e6db74">}</span><span style="color:#e6db74">, c=</span><span style="color:#e6db74">{</span>c<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">outer</span>(a, b, c, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 把 kwargs 传给 inner</span>
+</span></span><span style="display:flex;"><span>    inner(a, b, c)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> kwargs<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;debug&#39;</span>):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;调试信息：</span><span style="color:#e6db74">{</span>kwargs<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>outer(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, debug<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><hr>
+<h2 id="四种参数类型完整图谱">四种参数类型：完整图谱</h2>
+<p>Python 函数的参数一共有 4 种类型，它们有严格的顺序要求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>(普通参数, <span style="color:#f92672">*</span>args, 默认参数, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><p>让我用图解说明：</p>
+<pre tabindex="0"><code>def example(普通参数, *args, 默认参数=None, **kwargs):
+               ↑          ↑         ↑          ↑
+             必须传      可选     有默认值    可选
+           位置传参    位置传多    可不传    关键字传多
+</code></pre><h3 id="4种参数同时出现的完整例子">4种参数同时出现的完整例子</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">full_example</span>(position, <span style="color:#f92672">*</span>args, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;默认&#39;</span>, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;普通参数 position = </span><span style="color:#e6db74">{</span>position<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;*args = </span><span style="color:#e6db74">{</span>args<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;默认参数 default = </span><span style="color:#e6db74">{</span>default<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;**kwargs = </span><span style="color:#e6db74">{</span>kwargs<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 各种调用方式</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== 调用1 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>full_example(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;新值&#39;</span>, x<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, y<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">=== 调用2 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>full_example(<span style="color:#e6db74">&#39;唯一&#39;</span>, debug<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">=== 调用3 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>full_example(<span style="color:#ae81ff">100</span>)
+</span></span></code></pre></div><p><strong>输出：</strong></p>
+<pre tabindex="0"><code>=== 调用1 ===
+普通参数 position = 1
+*args = (2, 3, 4, 5)
+默认参数 default = 新值
+**kwargs = {&#39;x&#39;: 10, &#39;y&#39;: 20}
+
+=== 调用2 ===
+普通参数 position = 唯一
+*args = ()
+默认参数 default = 默认
+**kwargs = {&#39;debug&#39;: True}
+
+=== 调用3 ===
+普通参数 position = 100
+*args = ()
+默认参数 default = 默认
+**kwargs = {}
+</code></pre><h3 id="记忆口诀">记忆口诀</h3>
+<blockquote>
+<p><strong>先位置，后星号args，再默认，最后双星kwargs。</strong></p>
+</blockquote>
+<pre tabindex="0"><code>def func(位置, *可变位置, 默认=值, **可变关键字):
+    ...
+</code></pre><hr>
+<h2 id="常见错误与纠正">常见错误与纠正</h2>
+<h3 id="错误1参数顺序写反">错误1：参数顺序写反</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误写法</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># def func(a=1, *args, b):  # SyntaxError: non-default argument follows default argument</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确写法</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>(<span style="color:#f92672">*</span>args, b<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>    print(args, b)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>func(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)  <span style="color:#75715e"># (1, 2, 3) 10</span>
+</span></span></code></pre></div><h3 id="错误2同一个参数传两次">错误2：同一个参数传两次</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>(a, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;a=</span><span style="color:#e6db74">{</span>a<span style="color:#e6db74">}</span><span style="color:#e6db74">, args=</span><span style="color:#e6db74">{</span>args<span style="color:#e6db74">}</span><span style="color:#e6db74">, kwargs=</span><span style="color:#e6db74">{</span>kwargs<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：同一个参数传了两次</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># func(1, a=2)  # TypeError: func() got multiple values for argument &#39;a&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确</span>
+</span></span><span style="display:flex;"><span>func(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>func(a<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><h3 id="错误3拆包类型不匹配">错误3：拆包类型不匹配</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>(a, b, c):
+</span></span><span style="display:flex;"><span>    print(a, b, c)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 列表给 *args，但函数需要3个位置参数</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># func(numbers)  # TypeError: func() missing 2 required positional arguments</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 用 * 拆包</span>
+</span></span><span style="display:flex;"><span>func(<span style="color:#f92672">*</span>numbers)  <span style="color:#75715e"># 1 2 3（只取前3个）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 字典给 **kwargs</span>
+</span></span><span style="display:flex;"><span>info <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">30</span>}
+</span></span><span style="display:flex;"><span>func(<span style="color:#f92672">**</span>info)  <span style="color:#75715e"># 10 20 30</span>
+</span></span></code></pre></div><hr>
+<h2 id="解包操作和的另一种用法">解包操作：*和**的另一种用法</h2>
+<p>前面说的是定义函数时用 <code>*args</code> 和 <code>**kwargs</code>，<strong>调用函数时</strong>也可以用 <code>*</code> 和 <code>**</code> 来解包。</p>
+<h3 id="列表元组解包">列表/元组解包：*</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_three</span>(a, b, c):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b <span style="color:#f92672">+</span> c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 从列表拆包</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> add_three(<span style="color:#f92672">*</span>numbers)  <span style="color:#75715e"># 等价于 add_three(1, 2, 3)</span>
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># 6</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 从元组拆包</span>
+</span></span><span style="display:flex;"><span>coords <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> add_three(<span style="color:#f92672">*</span>coords)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># 60</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 混合使用</span>
+</span></span><span style="display:flex;"><span>base <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>extra <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>combined <span style="color:#f92672">=</span> add_three(<span style="color:#f92672">*</span>base, <span style="color:#ae81ff">999</span>)  <span style="color:#75715e"># 1 + 2 + 999 = 1002</span>
+</span></span><span style="display:flex;"><span>print(combined)
+</span></span></code></pre></div><h3 id="字典解包">字典解包：**</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(name, age, city<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;未知&#39;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;大家好，我是</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">，</span><span style="color:#e6db74">{</span>age<span style="color:#e6db74">}</span><span style="color:#e6db74">岁，来自</span><span style="color:#e6db74">{</span>city<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 从字典拆包</span>
+</span></span><span style="display:flex;"><span>person <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;程序员晚枫&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">28</span>, <span style="color:#e6db74">&#39;city&#39;</span>: <span style="color:#e6db74">&#39;重庆&#39;</span>}
+</span></span><span style="display:flex;"><span>greet(<span style="color:#f92672">**</span>person)  <span style="color:#75715e"># 等价于 greet(name=&#39;程序员晚枫&#39;, age=28, city=&#39;重庆&#39;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 只传部分参数</span>
+</span></span><span style="display:flex;"><span>basic_info <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;小明&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">18</span>}
+</span></span><span style="display:flex;"><span>greet(<span style="color:#f92672">**</span>basic_info)  <span style="color:#75715e"># city 用默认值</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 合并多个字典</span>
+</span></span><span style="display:flex;"><span>defaults <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;city&#39;</span>: <span style="color:#e6db74">&#39;北京&#39;</span>, <span style="color:#e6db74">&#39;job&#39;</span>: <span style="color:#e6db74">&#39;工程师&#39;</span>}
+</span></span><span style="display:flex;"><span>override <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;job&#39;</span>: <span style="color:#e6db74">&#39;产品经理&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">30</span>}
+</span></span><span style="display:flex;"><span>merged <span style="color:#f92672">=</span> {<span style="color:#f92672">**</span>defaults, <span style="color:#f92672">**</span>override}  <span style="color:#75715e"># {&#39;city&#39;: &#39;北京&#39;, &#39;job&#39;: &#39;产品经理&#39;, &#39;age&#39;: 30}</span>
+</span></span><span style="display:flex;"><span>greet(<span style="color:#f92672">**</span>merged, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;老王&#39;</span>)
+</span></span></code></pre></div><h3 id="解包在创建数据结构中的应用">解包在创建数据结构中的应用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 快速合并列表</span>
+</span></span><span style="display:flex;"><span>list1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>list2 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>merged <span style="color:#f92672">=</span> [<span style="color:#f92672">*</span>list1, <span style="color:#f92672">*</span>list2]
+</span></span><span style="display:flex;"><span>print(merged)  <span style="color:#75715e"># [1, 2, 3, 4, 5, 6]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 快速合并字典（Python 3.9+）</span>
+</span></span><span style="display:flex;"><span>dict1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>dict2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>merged_dict <span style="color:#f92672">=</span> {<span style="color:#f92672">**</span>dict1, <span style="color:#f92672">**</span>dict2}  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 20, &#39;c&#39;: 3}</span>
+</span></span><span style="display:flex;"><span>print(merged_dict)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集合解包</span>
+</span></span><span style="display:flex;"><span>set1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>set2 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span>union <span style="color:#f92672">=</span> {<span style="color:#f92672">*</span>set1, <span style="color:#f92672">*</span>set2}
+</span></span><span style="display:flex;"><span>print(union)  <span style="color:#75715e"># {1, 2, 3, 4, 5}</span>
+</span></span></code></pre></div><hr>
+<h2 id="实战案例通用日志装饰器">实战案例：通用日志装饰器</h2>
+<p>这是一个综合运用 <code>*args</code> 和 <code>**kwargs</code> 的真实案例——写一个日志装饰器，可以装饰任何函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> wraps
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;记录函数调用日志&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@wraps</span>(func)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[LOG] 调用函数：</span><span style="color:#e6db74">{</span>func<span style="color:#f92672">.</span>__name__<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;       位置参数：</span><span style="color:#e6db74">{</span>args<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;       关键字参数：</span><span style="color:#e6db74">{</span>kwargs<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        elapsed <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;       返回值：</span><span style="color:#e6db74">{</span>result<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;       耗时：</span><span style="color:#e6db74">{</span>elapsed<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wrapper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 应用装饰器</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@log</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_total</span>(<span style="color:#f92672">*</span>items):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;计算总价&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> sum(items)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@log</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch_user</span>(user_id, include_profile<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, include_history<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;获取用户信息&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;id&#39;</span>: user_id, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;用户</span><span style="color:#e6db74">{</span>user_id<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== 计算总价 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> calculate_total(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">=== 获取用户 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> fetch_user(<span style="color:#ae81ff">123</span>, include_profile<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p><strong>运行结果：</strong></p>
+<pre tabindex="0"><code>=== 计算总价 ===
+[LOG] 调用函数：calculate_total
+       位置参数：(100, 200, 300, 50)
+       关键字参数：{}
+       返回值：650
+       耗时：0.0001秒
+
+=== 获取用户 ===
+[LOG] 调用函数：fetch_user
+       位置参数：(123,)
+       关键字参数：{&#39;include_profile&#39;: True, &#39;include_history&#39;: False}
+       返回值：{&#39;id&#39;: 123, &#39;name&#39;: &#39;用户123&#39;}
+       耗时：0.0001秒
+</code></pre><p><strong>这就是装饰器的核心原理——用 <code>*args</code> 和 <code>**kwargs</code> 接收任意参数，然后透传给原函数！</strong></p>
+<hr>
+<h2 id="实战案例灵活的api调用函数">实战案例：灵活的API调用函数</h2>
+<p>在实际工作中，<code>*args</code> 和 <code>**kwargs</code> 最常见的用法是<strong>封装第三方API</strong>，让你写的函数比官方接口更简洁：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">api_get</span>(url, <span style="color:#f92672">**</span>params):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    封装 requests.get
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    简化调用：不用每次写 timeout、headers 等
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 设置默认参数</span>
+</span></span><span style="display:flex;"><span>    defaults <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;timeout&#39;</span>: <span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;headers&#39;</span>: {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;MyApp/1.0&#39;</span>},
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;verify&#39;</span>: <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 用传入的参数覆盖默认参数</span>
+</span></span><span style="display:flex;"><span>    defaults<span style="color:#f92672">.</span>update(params)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;请求 URL：</span><span style="color:#e6db74">{</span>url<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;参数：</span><span style="color:#e6db74">{</span>defaults<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url, <span style="color:#f92672">**</span>defaults)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response<span style="color:#f92672">.</span>json()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用起来超级简洁</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> api_get(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;https://api.example.com/users&#39;</span>,
+</span></span><span style="display:flex;"><span>    params<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;page&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;limit&#39;</span>: <span style="color:#ae81ff">10</span>},
+</span></span><span style="display:flex;"><span>    timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>,
+</span></span><span style="display:flex;"><span>    headers<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;Authorization&#39;</span>: <span style="color:#e6db74">&#39;Bearer xxx&#39;</span>}
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><hr>
+<h2 id="面试题详解">面试题详解</h2>
+<h3 id="面试题1下面的代码输出什么">面试题1：下面的代码输出什么？</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>(a, <span style="color:#f92672">*</span>args, b<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;a = </span><span style="color:#e6db74">{</span>a<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;args = </span><span style="color:#e6db74">{</span>args<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;b = </span><span style="color:#e6db74">{</span>b<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;kwargs = </span><span style="color:#e6db74">{</span>kwargs<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>foo(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, c<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>, d<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+</span></span></code></pre></div><p><strong>解析：</strong></p>
+<ul>
+<li><code>a = 1</code> → 普通参数</li>
+<li><code>args = (3, 4)</code> → 多余的位置参数被 *args 收集</li>
+<li><code>b = 5</code> → 关键字参数，覆盖默认值 2</li>
+<li><code>kwargs = {'c': 6, 'd': 7}</code> → 多余的关键字参数被 **kwargs 收集</li>
+</ul>
+<p><strong>答案：</strong></p>
+<pre tabindex="0"><code>a = 1
+args = (3, 4)
+b = 5
+kwargs = {&#39;c&#39;: 6, &#39;d&#39;: 7}
+</code></pre><h3 id="面试题2args-和-kwargs-可以同时省略吗">面试题2：<code>*args</code> 和 <code>**kwargs</code> 可以同时省略吗？</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 可以省略其中一个</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func1</span>(<span style="color:#f92672">*</span>args):
+</span></span><span style="display:flex;"><span>    print(args)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func2</span>(<span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    print(kwargs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func3</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;什么参数都不要&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 也可以两个都省略</span>
+</span></span><span style="display:flex;"><span>func1(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)      <span style="color:#75715e"># (1, 2, 3)</span>
+</span></span><span style="display:flex;"><span>func2(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;张三&#39;</span>)  <span style="color:#75715e"># {&#39;name&#39;: &#39;张三&#39;}</span>
+</span></span><span style="display:flex;"><span>func3()             <span style="color:#75715e"># None</span>
+</span></span></code></pre></div><h3 id="面试题3装饰器中为什么必须用-args-和-kwargs">面试题3：装饰器中为什么必须用 <code>*args</code> 和 <code>**kwargs</code>？</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> wraps
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_decorator</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@wraps</span>(func)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):  <span style="color:#75715e"># ← 必须用，否则无法装饰带参数的函数</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;装饰前&#34;</span>)
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)  <span style="color:#75715e"># ← 透传参数</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;装饰后&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wrapper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@my_decorator</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(name, greeting<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello&#34;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;带有参数的函数&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>greeting<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>greet(<span style="color:#e6db74">&#34;程序员晚枫&#34;</span>, greeting<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;你好&#34;</span>)
+</span></span></code></pre></div><p><strong>如果不加 <code>*args</code> 和 <code>**kwargs</code></strong>，就无法装饰带参数的函数！</p>
+<hr>
+<h2 id="推荐ai-python零基础实战营">推荐：AI Python零基础实战营</h2>
+<p>想系统学习Python函数和高级特性，把面试题全部拿下？</p>
+<p><strong>课程内容：</strong></p>
+<ul>
+<li>✅ Python基础语法</li>
+<li>✅ 函数详解（参数、返回值、作用域）</li>
+<li>✅ *args和**kwargs深度解析</li>
+<li>✅ 装饰器、生成器等高级特性</li>
+<li>✅ 实战项目练习</li>
+</ul>
+<p>🎁 <strong>限时福利</strong>：送《Python编程从入门到实践》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="本讲小结">本讲小结</h2>
+<table>
+  <thead>
+      <tr>
+          <th>概念</th>
+          <th>写法</th>
+          <th>接收内容</th>
+          <th>类型</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>位置可变参数</td>
+          <td><code>*args</code></td>
+          <td>任意多个位置参数</td>
+          <td>tuple</td>
+      </tr>
+      <tr>
+          <td>关键字可变参数</td>
+          <td><code>**kwargs</code></td>
+          <td>任意多个关键字参数</td>
+          <td>dict</td>
+      </tr>
+      <tr>
+          <td>参数解包</td>
+          <td><code>*序列</code></td>
+          <td>拆包列表/元组</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>字典解包</td>
+          <td><code>**字典</code></td>
+          <td>拆包字典为关键字参数</td>
+          <td>-</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>💡 <strong>记忆口诀</strong>：<code>*args</code> 收位置，<code>**kwargs</code> 收关键字，先位置后关键字，顺序千万别搞混！</p>
+</blockquote>
+<hr>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/07-Python%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F/">Python列表推导式：一行代码搞定循环</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/08-Python%E5%AD%97%E5%85%B8/">Python字典：我用这个数据结构，把查询速度提升了100倍</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/11-Python%E8%A3%85%E9%A5%B0%E5%99%A8/">Python装饰器：给函数加功能的黑魔法</a></li>
+</ul>
+<hr>
+<p>*PS：<em>args和**kwargs是Python面试必考点，也是写出优雅代码的关键。花10分钟搞懂，值！</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></p>
+<hr>
+<h2 id="-推荐python-零基础实战营">📚 推荐：Python 零基础实战营</h2>
+<p><strong>系统学习Python，推荐这个免费入门课程 👇</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>特点</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🎯 专为0基础设计</td>
+          <td>门槛低，上手快</td>
+      </tr>
+      <tr>
+          <td>📹 配套视频讲解</td>
+          <td>配合文章学习效果更好</td>
+      </tr>
+      <tr>
+          <td>💬 专属答疑群</td>
+          <td>遇到问题有人带</td>
+      </tr>
+      <tr>
+          <td>🎁 实体书赠送</td>
+          <td>优秀学员送《Python编程从入门到实践》</td>
+      </tr>
+  </tbody>
+</table>
+<p>👉 <strong><a href="https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397">点击免费领取 Python 零基础实战营</a></strong></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/08-python%E5%AD%97%E5%85%B8/">上一篇：Python字典：我用这个数据结构，把查询速度提升了100倍</a>
+        
+        
+        <a href="http://localhost:4002/10-python%E9%9B%86%E5%90%88/">下一篇：Python集合：我用这个数据结构，去重只要1行代码</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

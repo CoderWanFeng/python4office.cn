@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 10 讲：Python 序列与多态 | 抽象基类、Sequence、Iterable 与协议继承 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 10 讲：Python 序列与多态 | 抽象基类、Sequence、Iterable 与协议继承</h1>
+        <div class="post-meta">
+            <span>2026-03-03 09:45</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%BA%8F%E5%88%97/" class="tag">Python序列</a>
+            
+            <a href="/tags/python%E5%A4%9A%E6%80%81/" class="tag">Python多态</a>
+            
+            <a href="/tags/%E6%8A%BD%E8%B1%A1%E5%9F%BA%E7%B1%BB/" class="tag">抽象基类</a>
+            
+            <a href="/tags/abc/" class="tag">ABC</a>
+            
+            <a href="/tags/sequence/" class="tag">Sequence</a>
+            
+            <a href="/tags/iterable/" class="tag">Iterable</a>
+            
+            <a href="/tags/protocol/" class="tag">Protocol</a>
+            
+            <a href="/tags/python%E8%BF%9B%E9%98%B6/" class="tag">Python进阶</a>
+            
+            <a href="/tags/python%E6%8E%A5%E5%8F%A3/" class="tag">Python接口</a>
+            
+            <a href="/tags/python%E7%B1%BB%E5%9E%8B%E6%8F%90%E7%A4%BA/" class="tag">Python类型提示</a>
+            
+            <a href="/tags/%E6%B5%81%E7%95%85%E7%9A%84python/" class="tag">流畅的Python</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>你有没有想过，为什么 <code>for x in my_list</code> 天然就能用？为什么 <code>len()</code> 对字符串、列表、字典都能工作？</strong> 这背后就是 Python 的序列协议和多态机制。今天咱们就自己动手，让你的类也能像内置类型一样&quot;开箱即用&quot;。</p>
+<hr>
+<h2 id="-实现自定义序列两个方法解锁一整套功能">🎯 实现自定义序列：两个方法解锁一整套功能</h2>
+<h3 id="扑克牌示例">扑克牌示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Deck</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;一副扑克牌 —— 只需 __len__ 和 __getitem__&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    ranks <span style="color:#f92672">=</span> [str(n) <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">11</span>)] <span style="color:#f92672">+</span> list(<span style="color:#e6db74">&#39;JQKA&#39;</span>)
+</span></span><span style="display:flex;"><span>    suits <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;♠♥♦♣&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_cards <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            (rank, suit) <span style="color:#66d9ef">for</span> suit <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>suits
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> rank <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>ranks
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__len__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>_cards)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__getitem__</span>(self, position):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_cards[position]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 两个方法，解锁一系列操作</span>
+</span></span><span style="display:flex;"><span>deck <span style="color:#f92672">=</span> Deck()
+</span></span><span style="display:flex;"><span>print(len(deck))          <span style="color:#75715e"># 52</span>
+</span></span><span style="display:flex;"><span>print(deck[<span style="color:#ae81ff">0</span>])            <span style="color:#75715e"># (&#39;2&#39;, &#39;♠&#39;)  —— 索引</span>
+</span></span><span style="display:flex;"><span>print(deck[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])           <span style="color:#75715e"># (&#39;A&#39;, &#39;♣&#39;)  —— 负索引</span>
+</span></span><span style="display:flex;"><span>print(deck[:<span style="color:#ae81ff">5</span>])           <span style="color:#75715e"># 前5张牌      —— 切片</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> card <span style="color:#f92672">in</span> deck:         <span style="color:#75715e"># for 循环</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>print((<span style="color:#e6db74">&#39;2&#39;</span>, <span style="color:#e6db74">&#39;♠&#39;</span>) <span style="color:#f92672">in</span> deck) <span style="color:#75715e"># True        —— in 运算符</span>
+</span></span><span style="display:flex;"><span>print(list(reversed(deck))[:<span style="color:#ae81ff">3</span>])  <span style="color:#75715e"># 反向  —— reversed()</span>
+</span></span></code></pre></div><h3 id="自动支持的操作清单">自动支持的操作清单</h3>
+<p>实现 <code>__len__</code> 和 <code>__getitem__</code> 后，Python 自动给你：</p>
+<table>
+  <thead>
+      <tr>
+          <th>操作</th>
+          <th>方法</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>len()</td>
+          <td><code>__len__</code></td>
+          <td><code>len(deck)</code></td>
+      </tr>
+      <tr>
+          <td>索引</td>
+          <td><code>__getitem__</code></td>
+          <td><code>deck[0]</code></td>
+      </tr>
+      <tr>
+          <td>切片</td>
+          <td><code>__getitem__</code></td>
+          <td><code>deck[:5]</code></td>
+      </tr>
+      <tr>
+          <td>迭代</td>
+          <td><code>__getitem__</code></td>
+          <td><code>for card in deck</code></td>
+      </tr>
+      <tr>
+          <td>in 运算符</td>
+          <td><code>__contains__</code> 或迭代</td>
+          <td><code>('A','♠') in deck</code></td>
+      </tr>
+      <tr>
+          <td>reversed()</td>
+          <td><code>__reversed__</code> 或 <code>__len__</code>+<code>__getitem__</code></td>
+          <td><code>reversed(deck)</code></td>
+      </tr>
+      <tr>
+          <td>随机选择</td>
+          <td><code>__len__</code></td>
+          <td><code>random.choice(deck)</code></td>
+      </tr>
+      <tr>
+          <td>排序</td>
+          <td><code>__getitem__</code>+<code>__len__</code></td>
+          <td><code>sorted(deck)</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="排序的坑">排序的坑</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>deck <span style="color:#f92672">=</span> Deck()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 排序会报错，因为元组比较规则不适合牌面</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sorted(deck)  # TypeError: &#39;&lt;&#39; not supported</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 自定义排序键</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">card_key</span>(card):
+</span></span><span style="display:flex;"><span>    rank_order <span style="color:#f92672">=</span> {r: i <span style="color:#66d9ef">for</span> i, r <span style="color:#f92672">in</span> enumerate(Deck<span style="color:#f92672">.</span>ranks)}
+</span></span><span style="display:flex;"><span>    suit_order <span style="color:#f92672">=</span> {s: i <span style="color:#66d9ef">for</span> i, s <span style="color:#f92672">in</span> enumerate(Deck<span style="color:#f92672">.</span>suits)}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (rank_order[card[<span style="color:#ae81ff">0</span>]], suit_order[card[<span style="color:#ae81ff">1</span>]])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sorted_cards <span style="color:#f92672">=</span> sorted(deck, key<span style="color:#f92672">=</span>card_key)
+</span></span><span style="display:flex;"><span>print(sorted_cards[<span style="color:#ae81ff">0</span>])   <span style="color:#75715e"># (&#39;2&#39;, &#39;♠&#39;)</span>
+</span></span><span style="display:flex;"><span>print(sorted_cards[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])  <span style="color:#75715e"># (&#39;A&#39;, &#39;♣&#39;)</span>
+</span></span></code></pre></div><hr>
+<h2 id="-鸭子类型不问出身只看能力">🦆 鸭子类型：不问出身，只看能力</h2>
+<h3 id="核心思想">核心思想</h3>
+<blockquote>
+<p>如果它走起来像鸭子，叫起来像鸭子，那它就是鸭子。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 不关注类型，只关注行为</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_length</span>(obj):
+</span></span><span style="display:flex;"><span>    print(len(obj))  <span style="color:#75715e"># 任何有 __len__ 的对象都可以</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print_length([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])      <span style="color:#75715e"># 3</span>
+</span></span><span style="display:flex;"><span>print_length(<span style="color:#e6db74">&#34;hello&#34;</span>)        <span style="color:#75715e"># 5</span>
+</span></span><span style="display:flex;"><span>print_length({<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>})  <span style="color:#75715e"># 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print_length(42)           # TypeError: 没有 __len__</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 另一个例子：任何可迭代的都能用 for</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_items</span>(iterable):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> iterable:
+</span></span><span style="display:flex;"><span>        print(item)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print_items([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])     <span style="color:#75715e"># 列表</span>
+</span></span><span style="display:flex;"><span>print_items(<span style="color:#e6db74">&#34;abc&#34;</span>)          <span style="color:#75715e"># 字符串</span>
+</span></span><span style="display:flex;"><span>print_items(range(<span style="color:#ae81ff">3</span>))       <span style="color:#75715e"># range</span>
+</span></span><span style="display:flex;"><span>print_items({<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>})       <span style="color:#75715e"># 字典（遍历键）</span>
+</span></span></code></pre></div><h3 id="python-式的抽象">Python 式的抽象</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 只要实现了 __iter__ 和 __next__，就是迭代器</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Fibonacci</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;斐波那契数列迭代器&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, max_count):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>max_count <span style="color:#f92672">=</span> max_count
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>a, self<span style="color:#f92672">.</span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__iter__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__next__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>count <span style="color:#f92672">&gt;=</span> self<span style="color:#f92672">.</span>max_count:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">StopIteration</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>a, self<span style="color:#f92672">.</span>b <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>b, self<span style="color:#f92672">.</span>a <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>b
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用起来和内置迭代器一样</span>
+</span></span><span style="display:flex;"><span>fib <span style="color:#f92672">=</span> Fibonacci(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>print(list(fib))  <span style="color:#75715e"># [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 支持 for 循环、sum、max 等</span>
+</span></span><span style="display:flex;"><span>fib <span style="color:#f92672">=</span> Fibonacci(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>print(sum(fib))   <span style="color:#75715e"># 143</span>
+</span></span></code></pre></div><h3 id="鸭子类型-vs-类型检查">鸭子类型 vs 类型检查</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 过度类型检查（Java 思维）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> isinstance(data, list):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> [x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> isinstance(data, tuple):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> tuple(x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> isinstance(data, str):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> data <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ... 类型越多越难维护</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 鸭子类型（Python 思维）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;任何可迭代的都行&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> type(data)(x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(process([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]))    <span style="color:#75715e"># [2, 4, 6]</span>
+</span></span><span style="display:flex;"><span>print(process((<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)))    <span style="color:#75715e"># (2, 4, 6)</span>
+</span></span><span style="display:flex;"><span>print(process(<span style="color:#e6db74">&#34;abc&#34;</span>))        <span style="color:#75715e"># aabbcc</span>
+</span></span></code></pre></div><hr>
+<h2 id="-进阶让序列支持完整操作">🔧 进阶：让序列支持完整操作</h2>
+<h3 id="添加切片和修改支持">添加切片和修改支持</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numbers
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;自定义向量，支持完整序列操作&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, components):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_components <span style="color:#f92672">=</span> list(components)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__len__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>_components)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__getitem__</span>(self, index):
+</span></span><span style="display:flex;"><span>        cls <span style="color:#f92672">=</span> type(self)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> isinstance(index, slice):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> cls(self<span style="color:#f92672">.</span>_components[index])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> isinstance(index, numbers<span style="color:#f92672">.</span>Integral):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_components[index]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">TypeError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;索引类型错误: </span><span style="color:#e6db74">{</span>type(index)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__setitem__</span>(self, index, value):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_components[index] <span style="color:#f92672">=</span> value
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__repr__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Vector(</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>_components<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__eq__</span>(self, other):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(self) <span style="color:#f92672">==</span> len(other) <span style="color:#f92672">and</span> all(a <span style="color:#f92672">==</span> b <span style="color:#66d9ef">for</span> a, b <span style="color:#f92672">in</span> zip(self, other))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__abs__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> sum(x <span style="color:#f92672">*</span> x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> self) <span style="color:#f92672">**</span> <span style="color:#ae81ff">0.5</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__add__</span>(self, other):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Vector(a <span style="color:#f92672">+</span> b <span style="color:#66d9ef">for</span> a, b <span style="color:#f92672">in</span> zip(self, other))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>v <span style="color:#f92672">=</span> Vector([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>])
+</span></span><span style="display:flex;"><span>print(v[<span style="color:#ae81ff">0</span>])         <span style="color:#75715e"># 1</span>
+</span></span><span style="display:flex;"><span>print(v[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>])       <span style="color:#75715e"># Vector([2, 3])</span>
+</span></span><span style="display:flex;"><span>print(len(v))       <span style="color:#75715e"># 5</span>
+</span></span><span style="display:flex;"><span>print(abs(v))       <span style="color:#75715e"># 7.416...</span>
+</span></span><span style="display:flex;"><span>v[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>print(v)            <span style="color:#75715e"># Vector([10, 2, 3, 4, 5])</span>
+</span></span></code></pre></div><h3 id="继承-collectionsabc">继承 collections.abc</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections.abc <span style="color:#f92672">import</span> Sequence
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyList</span>(Sequence):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;继承 Sequence，自动获得很多方法&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, data):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_data <span style="color:#f92672">=</span> list(data)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__getitem__</span>(self, index):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_data[index]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__len__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>_data)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Sequence 自动提供：index, count, __contains__, __iter__,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># __reversed__, __eq__, __ne__, __lt__, __le__, __gt__, __ge__</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ml <span style="color:#f92672">=</span> MyList([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>])
+</span></span><span style="display:flex;"><span>print(ml<span style="color:#f92672">.</span>index(<span style="color:#ae81ff">4</span>))    <span style="color:#75715e"># 2 —— 自动获得</span>
+</span></span><span style="display:flex;"><span>print(ml<span style="color:#f92672">.</span>count(<span style="color:#ae81ff">1</span>))    <span style="color:#75715e"># 2 —— 自动获得</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">4</span> <span style="color:#f92672">in</span> ml)        <span style="color:#75715e"># True —— 自动获得</span>
+</span></span><span style="display:flex;"><span>print(list(reversed(ml)))  <span style="color:#75715e"># [5, 1, 4, 1, 3]</span>
+</span></span></code></pre></div><hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<p><strong>自定义序列</strong>：只需实现 <code>__len__</code> 和 <code>__getitem__</code>，就能解锁索引、切片、迭代、排序等一整套功能。</p>
+<p><strong>鸭子类型</strong>：不关注类型，只关注行为。让你的代码更灵活、更 Pythonic。</p>
+<p><strong>进阶用法</strong>：通过继承 <code>collections.abc.Sequence</code> 自动获得更多方法，省去自己实现的麻烦。</p>
+<p><strong>切片处理</strong>：<code>__getitem__</code> 中需要区分整数索引和切片，分别返回元素和新序列对象。</p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong><a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
+<hr>
+<h2 id="-加入流畅的-python直播共读营">🎓 加入《流畅的 Python》直播共读营</h2>
+<p>学到这里，如果你想系统吃透这本书——欢迎加入我的直播共读课。</p>
+<ul>
+<li>每周直播精讲，逐章拆解核心知识点</li>
+<li>专属学习群，随时答疑交流</li>
+<li>试运营特惠：<del>499 元</del> → <strong>299 元</strong></li>
+</ul>
+<p>👉 <strong>【立即报名《流畅的 Python》共读课】</strong>：https://mp.weixin.qq.com/s/ivHJwn1nNx5ug4TFrapvGg</p>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="09-%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8%E4%B8%8E%E5%8F%AF%E5%8F%98%E6%80%A7.md">上一讲：对象引用与可变性</a> | <a href="11-%E7%BB%A7%E6%89%BF%E4%B8%8E%E7%BB%84%E5%90%88.md">下一讲：继承与组合</a> →</p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/4f7696ff-fbef-423c-8874-38dfb05b165f/fluent-python.png" alt="fluent-python.png" title="fluent-python.png"></p>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/09-%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8%E4%B8%8E%E5%8F%AF%E5%8F%98%E6%80%A7/">上一篇：第 9 讲：Python 对象引用与可变性 | 浅拷贝、深拷贝、引用语义与内存管理</a>
+        
+        
+        <a href="http://localhost:4002/11-%E7%BB%A7%E6%89%BF%E4%B8%8E%E7%BB%84%E5%90%88/">下一篇：第 11 讲：Python 继承与组合 | MRO、钻石继承、super()原理与 Mixin 设计模式</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

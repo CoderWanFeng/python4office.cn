@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>别再手动录发票了！这个 Python 技能，让财务提前 2 小时下班 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>别再手动录发票了！这个 Python 技能，让财务提前 2 小时下班</h1>
+        <div class="post-meta">
+            <span>2026-03-17 10:21</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/openclaw/" class="tag">OpenClaw</a>
+            
+            <a href="/tags/%E5%8F%91%E7%A5%A8%E8%AF%86%E5%88%ABpython/" class="tag">发票识别，Python</a>
+            
+            <a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" class="tag">办公自动化</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <h1 id="别再手动录发票了这个-python-技能让财务提前-2-小时下班">别再手动录发票了！这个 Python 技能，让财务提前 2 小时下班</h1>
+<blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<hr>
+<h2 id="-下午-6-点财务室还亮着灯">🕔 下午 6 点，财务室还亮着灯</h2>
+<p>这一幕你肯定见过：</p>
+<p>月底了，大家都收拾东西准备下班。</p>
+<p>只有财务室的灯还亮着。</p>
+<p>走近一看——财务小姐姐对着堆积如山的发票，一张一张往 Excel 里敲：</p>
+<ul>
+<li>发票代码</li>
+<li>发票号码</li>
+<li>开票日期</li>
+<li>金额</li>
+<li>税额</li>
+<li>……</li>
+</ul>
+<p><strong>我问她</strong>：&ldquo;每天录到几点？&rdquo;</p>
+<p><strong>她说</strong>：&ldquo;看发票多少，少的话 8 点，多的话……凌晨吧。&rdquo;</p>
+<p><strong>那一刻我决定</strong>：一定要帮她解决这个问题。</p>
+<hr>
+<h2 id="-现在我发布了这个技能">🎯 现在我发布了这个技能</h2>
+<p><strong>技能名称</strong>：<code>poocr-vatinvoice2excel</code></p>
+<p><strong>ClawHub 地址</strong>：https://clawhub.ai/CoderWanFeng/poocr-vatinvoice2excel</p>
+<p><strong>效果</strong>：</p>
+<pre tabindex="0"><code>之前：
+├─ 每天录发票到 8 点
+├─ 月底加班到凌晨
+├─ 眼睛干涩，手腕酸痛
+└─ 还怕录错被老板骂
+
+现在：
+├─ 下午 4 点开始识别
+├─ 4 点 10 分完成
+├─ 喝茶摸鱼等下班
+└─ 准确率 98%+，老板还夸我效率高
+</code></pre><p><strong>时间节省</strong>：每天提前 2 小时下班，一个月多休 40 小时。</p>
+<hr>
+<h2 id="-技能核心功能">📦 技能核心功能</h2>
+<p><strong>一句话总结</strong>：把发票（PDF/图片）丢进去，Excel 表格吐出来。</p>
+<p><strong>支持格式</strong>：</p>
+<ul>
+<li>✅ PDF 电子发票</li>
+<li>✅ JPG 拍照发票</li>
+<li>✅ PNG 截图发票</li>
+<li>✅ 单张识别</li>
+<li>✅ 批量识别（文件夹）</li>
+</ul>
+<p><strong>提取字段</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>字段类型</th>
+          <th>具体字段</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>基础信息</td>
+          <td>发票代码、发票号码、开票日期</td>
+      </tr>
+      <tr>
+          <td>金额信息</td>
+          <td>金额、税额、价税合计</td>
+      </tr>
+      <tr>
+          <td>购买方</td>
+          <td>名称、税号、地址、电话、开户行</td>
+      </tr>
+      <tr>
+          <td>销售方</td>
+          <td>名称、税号、地址、电话、开户行</td>
+      </tr>
+      <tr>
+          <td>明细</td>
+          <td>商品名称、规格、数量、单价、金额</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>输出格式</strong>：Excel（.xlsx），直接用 Excel 打开就能用。</p>
+<hr>
+<h2 id="-5-分钟上手教程">🛠️ 5 分钟上手教程</h2>
+<h3 id="第一步安装">第一步：安装</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install poocr
+</span></span></code></pre></div><h3 id="第二步获取腾讯云密钥">第二步：获取腾讯云密钥</h3>
+<p>访问：https://curl.qcloud.com/9ExTmaya</p>
+<ol>
+<li>登录腾讯云</li>
+<li>搜索&quot;文字识别&quot;</li>
+<li>控制台 → 密钥管理 → 新建密钥</li>
+<li>保存 SecretId 和 SecretKey</li>
+</ol>
+<p><strong>免费额度</strong>：每月 1000 次（够用好久）</p>
+<h3 id="第三步运行代码">第三步：运行代码</h3>
+<p><strong>单张发票</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> poocr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(
+</span></span><span style="display:flex;"><span>    input_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;invoice.pdf&#39;</span>,
+</span></span><span style="display:flex;"><span>    output_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./output&#39;</span>,
+</span></span><span style="display:flex;"><span>    id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;你的 SecretId&#39;</span>,
+</span></span><span style="display:flex;"><span>    key<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;你的 SecretKey&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>批量发票</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> poocr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(
+</span></span><span style="display:flex;"><span>    input_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./invoices&#39;</span>,  <span style="color:#75715e"># 文件夹路径</span>
+</span></span><span style="display:flex;"><span>    output_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./output&#39;</span>,
+</span></span><span style="display:flex;"><span>    id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;你的 SecretId&#39;</span>,
+</span></span><span style="display:flex;"><span>    key<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;你的 SecretKey&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>运行后</strong>：</p>
+<pre tabindex="0"><code>发票识别完成，结果已保存到：./output/发票识别结果.xlsx
+</code></pre><hr>
+<h2 id="-真实案例从-3-小时到-3-分钟">💼 真实案例：从 3 小时到 3 分钟</h2>
+<p><strong>用户反馈</strong>（某公司财务主管）：</p>
+<blockquote>
+<p>&ldquo;我们公司有 5 个销售，每周交一次发票。以前我每周五下午都要花 3 小时录入，现在……3 分钟搞定。&rdquo;</p>
+</blockquote>
+<p><strong>具体数据</strong>：</p>
+<ul>
+<li>每周发票数量：约 50 张</li>
+<li>之前耗时：3 小时（180 分钟）</li>
+<li>现在耗时：3 分钟</li>
+<li><strong>效率提升</strong>：60 倍</li>
+</ul>
+<p><strong>她说</strong>：&ldquo;现在周五下午我可以提前去接孩子了，这个技能真的改变了我的生活。&rdquo;</p>
+<hr>
+<h2 id="-成本对比帮你算笔账">📊 成本对比（帮你算笔账）</h2>
+<p><strong>人工录入成本</strong>：</p>
+<ul>
+<li>单张发票：2 分钟</li>
+<li>月薪 5000 元的财务，时薪约 30 元</li>
+<li>单张发票人工成本：30 元 ÷ 30 张/小时 = <strong>1 元/张</strong></li>
+</ul>
+<p><strong>OCR 识别成本</strong>：</p>
+<ul>
+<li>腾讯云免费额度：1000 次/月</li>
+<li>超出后：0.035 元/次</li>
+<li><strong>平均成本</strong>：约 0.035 元/张</li>
+</ul>
+<p><strong>成本对比</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>方式</th>
+          <th>单张成本</th>
+          <th>1000 张成本</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>人工</td>
+          <td>1 元</td>
+          <td>1000 元</td>
+      </tr>
+      <tr>
+          <td>OCR</td>
+          <td>0.035 元</td>
+          <td>35 元</td>
+      </tr>
+      <tr>
+          <td><strong>节省</strong></td>
+          <td><strong>96.5%</strong></td>
+          <td><strong>965 元</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>一年省下</strong>：965 × 12 = <strong>11580 元</strong></p>
+<p>这还不算加班费、错误成本、员工满意度……</p>
+<hr>
+<h2 id="-常见问题faq">⚠️ 常见问题（FAQ）</h2>
+<h3 id="q1识别准确率怎么样">Q1：识别准确率怎么样？</h3>
+<p><strong>A</strong>：电子版 PDF 发票接近 100%，拍照发票约 98%（模糊的会低一些）。</p>
+<p><strong>建议</strong>：尽量用电子版，拍照要清晰。</p>
+<h3 id="q2需要编程基础吗">Q2：需要编程基础吗？</h3>
+<p><strong>A</strong>：需要一点点 Python 基础，但代码就几行，复制粘贴改路径就行。</p>
+<p><strong>不会编程怎么办</strong>：可以找会编程的同事帮忙，或者参加我们的培训课（文末有链接）。</p>
+<h3 id="q3密钥安全吗">Q3：密钥安全吗？</h3>
+<p><strong>A</strong>：密钥是调用腾讯云 API 的凭证，要保管好。</p>
+<p><strong>安全建议</strong>：</p>
+<ul>
+<li>不要硬编码在代码里</li>
+<li>用环境变量或配置文件</li>
+<li>不要上传到 GitHub</li>
+</ul>
+<h3 id="q4一个月能识别多少张">Q4：一个月能识别多少张？</h3>
+<p><strong>A</strong>：免费额度 1000 次/月，超出后按量计费（0.035 元/次）。</p>
+<p><strong>大部分中小企业</strong>：免费额度够用。</p>
+<p><strong>发票多的企业</strong>：费用也很低，10000 张才 350 元。</p>
+<hr>
+<h2 id="-适合谁用">🎯 适合谁用？</h2>
+<p><strong>强烈推荐</strong>：</p>
+<ul>
+<li>✅ 企业财务（月底报销不再痛苦）</li>
+<li>✅ 财务外包公司（批量处理客户发票）</li>
+<li>✅ 税务代理（进项销项快速整理）</li>
+<li>✅ 审计公司（全量发票分析）</li>
+<li>✅ 开发者（集成到财务系统）</li>
+</ul>
+<p><strong>可以考虑</strong>：</p>
+<ul>
+<li>⭐ 个体户（自己处理进项票）</li>
+<li>⭐ 自由职业者（报销自己的发票）</li>
+</ul>
+<p><strong>不适合</strong>：</p>
+<ul>
+<li>❌ 每月只有几张发票的个人（手动更快）</li>
+<li>❌ 完全不想学任何新工具的人</li>
+</ul>
+<hr>
+<h2 id="-进阶玩法">💡 进阶玩法</h2>
+<h3 id="玩法-1集成到公司-oa-系统">玩法 1：集成到公司 OA 系统</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 伪代码示例</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@app.route</span>(<span style="color:#e6db74">&#39;/upload_invoice&#39;</span>, methods<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;POST&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">upload_invoice</span>():
+</span></span><span style="display:flex;"><span>    file <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>files[<span style="color:#e6db74">&#39;invoice&#39;</span>]
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;/tmp/invoice.pdf&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(
+</span></span><span style="display:flex;"><span>        input_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/tmp/invoice.pdf&#39;</span>,
+</span></span><span style="display:flex;"><span>        output_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/output&#39;</span>,
+</span></span><span style="display:flex;"><span>        id<span style="color:#f92672">=</span>SECRET_ID,
+</span></span><span style="display:flex;"><span>        key<span style="color:#f92672">=</span>SECRET_KEY
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> send_file(<span style="color:#e6db74">&#39;/output/结果.xlsx&#39;</span>)
+</span></span></code></pre></div><p><strong>效果</strong>：员工上传发票 → 系统自动识别 → 财务直接审核。</p>
+<h3 id="玩法-2定时任务自动处理">玩法 2：定时任务自动处理</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> apscheduler.schedulers.blocking <span style="color:#f92672">import</span> BlockingScheduler
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>scheduler <span style="color:#f92672">=</span> BlockingScheduler()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@scheduler.scheduled_job</span>(<span style="color:#e6db74">&#39;cron&#39;</span>, hour<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)  <span style="color:#75715e"># 每天下午 4 点</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">auto_process_invoices</span>():
+</span></span><span style="display:flex;"><span>    poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(
+</span></span><span style="display:flex;"><span>        input_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/inbox/invoices&#39;</span>,
+</span></span><span style="display:flex;"><span>        output_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/output&#39;</span>,
+</span></span><span style="display:flex;"><span>        id<span style="color:#f92672">=</span>SECRET_ID,
+</span></span><span style="display:flex;"><span>        key<span style="color:#f92672">=</span>SECRET_KEY
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>scheduler<span style="color:#f92672">.</span>start()
+</span></span></code></pre></div><p><strong>效果</strong>：每天自动处理新发票，财务上班就能看到整理好的 Excel。</p>
+<h3 id="玩法-3自动邮件发送结果">玩法 3：自动邮件发送结果</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> smtplib
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.multipart <span style="color:#f92672">import</span> MIMEMultipart
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.base <span style="color:#f92672">import</span> MIMEBase
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_result_email</span>(output_path, recipient):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 发送邮件逻辑</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;结果已发送到：</span><span style="color:#e6db74">{</span>recipient<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 识别完成后自动发送</span>
+</span></span><span style="display:flex;"><span>poocr<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>VatInvoiceOCR2Excel(<span style="color:#f92672">...</span>)
+</span></span><span style="display:flex;"><span>send_result_email(output_path, <span style="color:#e6db74">&#39;finance@company.com&#39;</span>)
+</span></span></code></pre></div><p><strong>效果</strong>：识别完成自动邮件通知，财务不用盯着进度条。</p>
+<hr>
+<h2 id="-相关资源">📚 相关资源</h2>
+<p><strong>技能地址</strong>：</p>
+<ul>
+<li>ClawHub: <a href="https://clawhub.ai/CoderWanFeng/poocr-vatinvoice2excel">https://clawhub.ai/CoderWanFeng/poocr-vatinvoice2excel</a></li>
+</ul>
+<p><strong>腾讯云 OCR</strong>：</p>
+<ul>
+<li>官网：https://cloud.tencent.com/product/ocr</li>
+<li>控制台：https://curl.qcloud.com/9ExTmaya</li>
+</ul>
+<p><strong>poocr 库</strong>：</p>
+<ul>
+<li>安装：<code>pip install poocr</code></li>
+<li>文档：技能页面有示例代码</li>
+</ul>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<hr>
+<h2 id="-推荐课程">🎓 推荐课程</h2>
+<ul>
+<li>
+<p><strong><a href="https://mp.weixin.qq.com/s/xT6p7mHu5o6aMAqeuXQTXg">龙虾安装课（9 元）</a></strong>
+从软件下载、环境配置到完整部署，一步步教到能正常使用。</p>
+</li>
+<li>
+<p><strong><a href="https://mp.weixin.qq.com/s/UKSwPXVKIeCn4Gh_Spkdfw">龙虾高级课（199 元，前 50 名优惠）</a></strong>
+0 基础也能学，从基础操作到进阶用法。</p>
+</li>
+</ul>
+<hr>
+<p><strong>工具永远在淘汰不用工具的人。</strong></p>
+<p>当你的同事还在加班录发票，你已经提前 2 小时下班去健身、陪家人、学习新技能——这就是差距。</p>
+<p><strong>别等，现在就行动。</strong></p>
+<hr>
+<p><em>P.S. 那个财务小姐姐现在已经不加班了，上周还去报了我们的 Python 自动化课程。她说：不想一辈子只做录入工作，要学会用工具提升价值。</em></p>
+<p><em>为她点赞。👍</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260317102000-%E8%B4%A2%E5%8A%A1%E5%B0%8F%E5%A7%90%E5%A7%90%E5%93%AD%E4%BA%86-300-%E5%BC%A0%E5%8F%91%E7%A5%A8%E6%88%91%E7%94%A8%E8%BF%99%E4%B8%AA%E6%8A%80%E8%83%BD-10-%E5%88%86%E9%92%9F%E6%90%9E%E5%AE%9A/">上一篇：财务小姐姐哭了：300 张发票，我用这个技能 10 分钟搞定</a>
+        
+        
+        <a href="http://localhost:4002/20260317102200-%E6%88%91%E5%B8%AE%E5%85%AC%E5%8F%B8%E7%9C%81%E4%BA%86-6-%E4%B8%87%E5%9D%97%E5%8F%91%E7%A5%A8-ocr-%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98%E5%A4%8D%E7%9B%98/">下一篇：我帮公司省了 6 万块！发票 OCR 自动化实战复盘</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

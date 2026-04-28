@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#34;第13讲：PDF 智能处理 Skill 开发&#34; - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>&#34;第13讲：PDF 智能处理 Skill 开发&#34;</h1>
+        <div class="post-meta">
+            <span>0001-01-01 00:00</span>
+            
+            <span> · </span>
+            
+            <span class="category">AI Skills 课程</span>
+            
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/ai-skill/" class="tag">AI Skill</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" class="tag">办公自动化</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/pdf/" class="tag">pdf</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <h1 id="第13讲pdf-智能处理-skill-开发">第13讲：PDF 智能处理 Skill 开发</h1>
+<blockquote>
+<p>掌握 PDF 文档的自动化处理技能，实现内容提取、格式转换、合并拆分等操作，让 PDF 处理不再繁琐。</p>
+</blockquote>
+<h2 id="一场景分析">一、场景分析</h2>
+<h3 id="11-用户痛点">1.1 用户痛点</h3>
+<p>PDF 是办公中最常用的文档格式之一，但处理起来往往很麻烦：</p>
+<ul>
+<li><strong>内容提取困难</strong>：PDF 是固定格式，无法直接复制编辑，需要专门工具提取文字</li>
+<li><strong>格式转换复杂</strong>：PDF 转 Word/Excel 时经常排版错乱</li>
+<li><strong>合并拆分繁琐</strong>：多个 PDF 需要合并，或者一个大 PDF 需要拆分成多个小文件</li>
+<li><strong>批量处理低效</strong>：几百个 PDF 需要统一加水印或加密，手动操作不现实</li>
+<li><strong>信息检索不便</strong>：在大量 PDF 中搜索特定内容效率低下</li>
+</ul>
+<h3 id="12-典型应用场景">1.2 典型应用场景</h3>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求描述</th>
+          <th>Skill 价值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>合同管理</td>
+          <td>批量提取合同关键信息（金额、日期、条款）</td>
+          <td>自动化信息提取</td>
+      </tr>
+      <tr>
+          <td>发票处理</td>
+          <td>识别发票 PDF 内容，录入财务系统</td>
+          <td>OCR + 数据提取</td>
+      </tr>
+      <tr>
+          <td>报告合并</td>
+          <td>将多个部门报告合并为一份完整文档</td>
+          <td>一键合并</td>
+      </tr>
+      <tr>
+          <td>文档归档</td>
+          <td>按规则拆分扫描件，分类存储</td>
+          <td>智能拆分归档</td>
+      </tr>
+      <tr>
+          <td>内容审核</td>
+          <td>检查 PDF 中的敏感信息</td>
+          <td>自动扫描标记</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="二核心功能设计">二、核心功能设计</h2>
+<h3 id="21-skill-功能架构">2.1 Skill 功能架构</h3>
+<pre tabindex="0"><code>📄 PDF 智能助手
+├── 内容提取
+│   ├── 文字提取
+│   ├── 表格提取
+│   ├── 图片提取
+│   └── 元数据读取
+├── 格式转换
+│   ├── PDF → Word
+│   ├── PDF → Excel
+│   ├── PDF → 图片
+│   └── PDF → HTML
+├── 文档操作
+│   ├── 合并 PDF
+│   ├── 拆分 PDF
+│   ├── 旋转页面
+│   └── 重新排序
+├── 文档保护
+│   ├── 添加水印
+│   ├── 加密保护
+│   ├── 权限设置
+│   └── 数字签名
+└── 智能处理
+    ├── 内容搜索
+    ├── 批量重命名
+    ├── 压缩优化
+    └── 质量检测
+</code></pre><h3 id="22-技术选型">2.2 技术选型</h3>
+<p>PDF 处理的核心技术栈：</p>
+<table>
+  <thead>
+      <tr>
+          <th>功能</th>
+          <th>Python 库</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>基础操作</td>
+          <td>PyPDF2 / pypdf</td>
+          <td>合并、拆分、旋转</td>
+      </tr>
+      <tr>
+          <td>内容提取</td>
+          <td>pdfplumber / PyMuPDF</td>
+          <td>文字、表格提取</td>
+      </tr>
+      <tr>
+          <td>格式转换</td>
+          <td>pdf2docx / pdf2image</td>
+          <td>转 Word/图片</td>
+      </tr>
+      <tr>
+          <td>OCR 识别</td>
+          <td>pytesseract + pdf2image</td>
+          <td>扫描件识别</td>
+      </tr>
+      <tr>
+          <td>高级处理</td>
+          <td>ReportLab</td>
+          <td>生成 PDF、加水印</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="三技术实现">三、技术实现</h2>
+<h3 id="31-coze-平台实现">3.1 Coze 平台实现</h3>
+<h4 id="311-基础操作代码">3.1.1 基础操作代码</h4>
+<p><strong>PDF 合并功能：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pypdf <span style="color:#f92672">import</span> PdfReader, PdfWriter
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge_pdfs</span>(file_list, output_path):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    合并多个 PDF 文件
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        file_list: PDF 文件路径列表
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        output_path: 输出文件路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    writer <span style="color:#f92672">=</span> PdfWriter()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> file_path <span style="color:#f92672">in</span> file_list:
+</span></span><span style="display:flex;"><span>        reader <span style="color:#f92672">=</span> PdfReader(file_path)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> page <span style="color:#f92672">in</span> reader<span style="color:#f92672">.</span>pages:
+</span></span><span style="display:flex;"><span>            writer<span style="color:#f92672">.</span>add_page(page)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(output_path, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> output_file:
+</span></span><span style="display:flex;"><span>        writer<span style="color:#f92672">.</span>write(output_file)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output_path
+</span></span></code></pre></div><p><strong>PDF 拆分功能：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">split_pdf</span>(file_path, split_config):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    拆分 PDF 文件
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        file_path: 源 PDF 路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        split_config: 拆分配置
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            - type: &#39;range&#39; 按页码范围 / &#39;every&#39; 每N页拆分
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            - pages: 页码范围列表（如 [[0,5], [5,10]]）
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            - every_n: 每N页拆分
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    reader <span style="color:#f92672">=</span> PdfReader(file_path)
+</span></span><span style="display:flex;"><span>    total_pages <span style="color:#f92672">=</span> len(reader<span style="color:#f92672">.</span>pages)
+</span></span><span style="display:flex;"><span>    output_files <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> split_config[<span style="color:#e6db74">&#39;type&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;range&#39;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 按指定范围拆分</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, (start, end) <span style="color:#f92672">in</span> enumerate(split_config[<span style="color:#e6db74">&#39;pages&#39;</span>]):
+</span></span><span style="display:flex;"><span>            writer <span style="color:#f92672">=</span> PdfWriter()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> page_num <span style="color:#f92672">in</span> range(start, min(end, total_pages)):
+</span></span><span style="display:flex;"><span>                writer<span style="color:#f92672">.</span>add_page(reader<span style="color:#f92672">.</span>pages[page_num])
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            output_file <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>file_path<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.pdf&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">_part</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.pdf&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">with</span> open(output_file, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>                writer<span style="color:#f92672">.</span>write(f)
+</span></span><span style="display:flex;"><span>            output_files<span style="color:#f92672">.</span>append(output_file)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> split_config[<span style="color:#e6db74">&#39;type&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;every&#39;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 每 N 页拆分</span>
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">=</span> split_config[<span style="color:#e6db74">&#39;every_n&#39;</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, total_pages, n):
+</span></span><span style="display:flex;"><span>            writer <span style="color:#f92672">=</span> PdfWriter()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> page_num <span style="color:#f92672">in</span> range(i, min(i <span style="color:#f92672">+</span> n, total_pages)):
+</span></span><span style="display:flex;"><span>                writer<span style="color:#f92672">.</span>add_page(reader<span style="color:#f92672">.</span>pages[page_num])
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            output_file <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>file_path<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.pdf&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">_part</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">//</span>n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.pdf&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">with</span> open(output_file, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>                writer<span style="color:#f92672">.</span>write(f)
+</span></span><span style="display:flex;"><span>            output_files<span style="color:#f92672">.</span>append(output_file)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output_files
+</span></span></code></pre></div><h4 id="312-内容提取代码">3.1.2 内容提取代码</h4>
+<p><strong>文字提取：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pdfplumber
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_text</span>(file_path, options<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    提取 PDF 文字内容
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        file_path: PDF 文件路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        options: 提取选项
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            - pages: 指定页码列表，None 表示全部
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            - preserve_layout: 是否保留布局
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    options <span style="color:#f92672">=</span> options <span style="color:#f92672">or</span> {}
+</span></span><span style="display:flex;"><span>    pages <span style="color:#f92672">=</span> options<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;pages&#39;</span>)
+</span></span><span style="display:flex;"><span>    preserve_layout <span style="color:#f92672">=</span> options<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;preserve_layout&#39;</span>, <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    extracted_content <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> pdfplumber<span style="color:#f92672">.</span>open(file_path) <span style="color:#66d9ef">as</span> pdf:
+</span></span><span style="display:flex;"><span>        page_numbers <span style="color:#f92672">=</span> pages <span style="color:#66d9ef">if</span> pages <span style="color:#66d9ef">else</span> range(len(pdf<span style="color:#f92672">.</span>pages))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> page_num <span style="color:#f92672">in</span> page_numbers:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> page_num <span style="color:#f92672">&lt;</span> len(pdf<span style="color:#f92672">.</span>pages):
+</span></span><span style="display:flex;"><span>                page <span style="color:#f92672">=</span> pdf<span style="color:#f92672">.</span>pages[page_num]
+</span></span><span style="display:flex;"><span>                text <span style="color:#f92672">=</span> page<span style="color:#f92672">.</span>extract_text(
+</span></span><span style="display:flex;"><span>                    layout<span style="color:#f92672">=</span>preserve_layout
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>                extracted_content<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;page&#39;</span>: page_num <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;text&#39;</span>: text
+</span></span><span style="display:flex;"><span>                })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> extracted_content
+</span></span></code></pre></div><p><strong>表格提取：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_tables</span>(file_path, page_num<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    提取 PDF 中的表格
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        file_path: PDF 文件路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        page_num: 指定页码，None 表示全部页面
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    tables <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> pdfplumber<span style="color:#f92672">.</span>open(file_path) <span style="color:#66d9ef">as</span> pdf:
+</span></span><span style="display:flex;"><span>        pages_to_process <span style="color:#f92672">=</span> [pdf<span style="color:#f92672">.</span>pages[page_num]] <span style="color:#66d9ef">if</span> page_num <span style="color:#66d9ef">else</span> pdf<span style="color:#f92672">.</span>pages
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, page <span style="color:#f92672">in</span> enumerate(pages_to_process):
+</span></span><span style="display:flex;"><span>            page_tables <span style="color:#f92672">=</span> page<span style="color:#f92672">.</span>extract_tables()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> table <span style="color:#f92672">in</span> page_tables:
+</span></span><span style="display:flex;"><span>                tables<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;page&#39;</span>: page_num <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> page_num <span style="color:#66d9ef">else</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;data&#39;</span>: table
+</span></span><span style="display:flex;"><span>                })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> tables
+</span></span></code></pre></div><h4 id="313-格式转换代码">3.1.3 格式转换代码</h4>
+<p><strong>PDF 转 Word：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pdf2docx <span style="color:#f92672">import</span> Converter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pdf_to_word</span>(pdf_path, output_path<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    PDF 转换为 Word
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        pdf_path: PDF 文件路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        output_path: 输出 Word 路径，默认同名
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> output_path:
+</span></span><span style="display:flex;"><span>        output_path <span style="color:#f92672">=</span> pdf_path<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.pdf&#39;</span>, <span style="color:#e6db74">&#39;.docx&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    cv <span style="color:#f92672">=</span> Converter(pdf_path)
+</span></span><span style="display:flex;"><span>    cv<span style="color:#f92672">.</span>convert(output_path, start<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, end<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>    cv<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output_path
+</span></span></code></pre></div><p><strong>PDF 转图片：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pdf2image <span style="color:#f92672">import</span> convert_from_path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pdf_to_images</span>(pdf_path, output_dir<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    PDF 转换为图片
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        pdf_path: PDF 文件路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        output_dir: 输出目录
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        dpi: 图片分辨率
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> output_dir:
+</span></span><span style="display:flex;"><span>        output_dir <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(pdf_path)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    images <span style="color:#f92672">=</span> convert_from_path(pdf_path, dpi<span style="color:#f92672">=</span>dpi)
+</span></span><span style="display:flex;"><span>    image_paths <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    base_name <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>basename(pdf_path)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.pdf&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, image <span style="color:#f92672">in</span> enumerate(images):
+</span></span><span style="display:flex;"><span>        image_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(output_dir, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>base_name<span style="color:#e6db74">}</span><span style="color:#e6db74">_page</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.png&#34;</span>)
+</span></span><span style="display:flex;"><span>        image<span style="color:#f92672">.</span>save(image_path, <span style="color:#e6db74">&#39;PNG&#39;</span>)
+</span></span><span style="display:flex;"><span>        image_paths<span style="color:#f92672">.</span>append(image_path)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> image_paths
+</span></span></code></pre></div><h4 id="314-文档保护代码">3.1.4 文档保护代码</h4>
+<p><strong>添加水印：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pypdf <span style="color:#f92672">import</span> PdfReader, PdfWriter
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> reportlab.pdfgen <span style="color:#f92672">import</span> canvas
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> reportlab.lib.pagesizes <span style="color:#f92672">import</span> letter
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_watermark</span>(text, opacity<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;创建水印 PDF&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    packet <span style="color:#f92672">=</span> io<span style="color:#f92672">.</span>BytesIO()
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">=</span> canvas<span style="color:#f92672">.</span>Canvas(packet, pagesize<span style="color:#f92672">=</span>letter)
+</span></span><span style="display:flex;"><span>    c<span style="color:#f92672">.</span>setFont(<span style="color:#e6db74">&#34;Helvetica&#34;</span>, <span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>    c<span style="color:#f92672">.</span>setFillColorRGB(<span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.5</span>, alpha<span style="color:#f92672">=</span>opacity)
+</span></span><span style="display:flex;"><span>    c<span style="color:#f92672">.</span>saveState()
+</span></span><span style="display:flex;"><span>    c<span style="color:#f92672">.</span>translate(<span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">400</span>)
+</span></span><span style="display:flex;"><span>    c<span style="color:#f92672">.</span>rotate(<span style="color:#ae81ff">45</span>)
+</span></span><span style="display:flex;"><span>    c<span style="color:#f92672">.</span>drawCentredString(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, text)
+</span></span><span style="display:flex;"><span>    c<span style="color:#f92672">.</span>restoreState()
+</span></span><span style="display:flex;"><span>    c<span style="color:#f92672">.</span>save()
+</span></span><span style="display:flex;"><span>    packet<span style="color:#f92672">.</span>seek(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> PdfReader(packet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_watermark</span>(input_path, output_path, watermark_text):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    为 PDF 添加水印
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        input_path: 源 PDF 路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        output_path: 输出路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        watermark_text: 水印文字
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    watermark <span style="color:#f92672">=</span> create_watermark(watermark_text)
+</span></span><span style="display:flex;"><span>    writer <span style="color:#f92672">=</span> PdfWriter()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    reader <span style="color:#f92672">=</span> PdfReader(input_path)
+</span></span><span style="display:flex;"><span>    watermark_page <span style="color:#f92672">=</span> watermark<span style="color:#f92672">.</span>pages[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> page <span style="color:#f92672">in</span> reader<span style="color:#f92672">.</span>pages:
+</span></span><span style="display:flex;"><span>        page<span style="color:#f92672">.</span>merge_page(watermark_page)
+</span></span><span style="display:flex;"><span>        writer<span style="color:#f92672">.</span>add_page(page)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(output_path, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> output_file:
+</span></span><span style="display:flex;"><span>        writer<span style="color:#f92672">.</span>write(output_file)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output_path
+</span></span></code></pre></div><p><strong>加密保护：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encrypt_pdf</span>(input_path, output_path, password):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    加密 PDF 文件
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        input_path: 源 PDF 路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        output_path: 输出路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        password: 密码
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    reader <span style="color:#f92672">=</span> PdfReader(input_path)
+</span></span><span style="display:flex;"><span>    writer <span style="color:#f92672">=</span> PdfWriter()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> page <span style="color:#f92672">in</span> reader<span style="color:#f92672">.</span>pages:
+</span></span><span style="display:flex;"><span>        writer<span style="color:#f92672">.</span>add_page(page)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 设置加密</span>
+</span></span><span style="display:flex;"><span>    writer<span style="color:#f92672">.</span>encrypt(password)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(output_path, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> output_file:
+</span></span><span style="display:flex;"><span>        writer<span style="color:#f92672">.</span>write(output_file)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output_path
+</span></span></code></pre></div><h3 id="32-openclaw-平台实现">3.2 OpenClaw 平台实现</h3>
+<p>OpenClaw 的 PDF Skill 更加简洁：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> openclaw <span style="color:#f92672">import</span> Skill, Tool
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pdfplumber
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pypdf <span style="color:#f92672">import</span> PdfReader, PdfWriter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PDFSkill</span>(Skill):
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;PDF智能助手&#34;</span>
+</span></span><span style="display:flex;"><span>    description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;自动化处理 PDF 文档&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Tool</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_text</span>(self, file: str, pages: list <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;提取 PDF 文字内容&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> pdfplumber<span style="color:#f92672">.</span>open(file) <span style="color:#66d9ef">as</span> pdf:
+</span></span><span style="display:flex;"><span>            text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>            page_range <span style="color:#f92672">=</span> pages <span style="color:#f92672">or</span> range(len(pdf<span style="color:#f92672">.</span>pages))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> page_range:
+</span></span><span style="display:flex;"><span>                text <span style="color:#f92672">+=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">--- 第</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">页 ---</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>                text <span style="color:#f92672">+=</span> pdf<span style="color:#f92672">.</span>pages[i]<span style="color:#f92672">.</span>extract_text()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> text
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Tool</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge</span>(self, files: list, output: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;合并多个 PDF&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        writer <span style="color:#f92672">=</span> PdfWriter()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> files:
+</span></span><span style="display:flex;"><span>            reader <span style="color:#f92672">=</span> PdfReader(f)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> page <span style="color:#f92672">in</span> reader<span style="color:#f92672">.</span>pages:
+</span></span><span style="display:flex;"><span>                writer<span style="color:#f92672">.</span>add_page(page)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(output, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>            writer<span style="color:#f92672">.</span>write(f)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;已合并到 </span><span style="color:#e6db74">{</span>output<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Tool</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">split</span>(self, file: str, pages: list, output_prefix: str) <span style="color:#f92672">-&gt;</span> list:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;按页码拆分 PDF&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        reader <span style="color:#f92672">=</span> PdfReader(file)
+</span></span><span style="display:flex;"><span>        output_files <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, (start, end) <span style="color:#f92672">in</span> enumerate(pages):
+</span></span><span style="display:flex;"><span>            writer <span style="color:#f92672">=</span> PdfWriter()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> range(start, end):
+</span></span><span style="display:flex;"><span>                writer<span style="color:#f92672">.</span>add_page(reader<span style="color:#f92672">.</span>pages[p])
+</span></span><span style="display:flex;"><span>            output_file <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>output_prefix<span style="color:#e6db74">}</span><span style="color:#e6db74">_part</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.pdf&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">with</span> open(output_file, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>                writer<span style="color:#f92672">.</span>write(f)
+</span></span><span style="display:flex;"><span>            output_files<span style="color:#f92672">.</span>append(output_file)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> output_files
+</span></span></code></pre></div><h2 id="四prompt-设计">四、Prompt 设计</h2>
+<h3 id="41-系统-prompt">4.1 系统 Prompt</h3>
+<pre tabindex="0"><code>你是 PDF 智能助手，专门帮助用户处理 PDF 文档。
+
+你可以执行以下操作：
+1. 内容提取：提取文字、表格、图片
+2. 格式转换：PDF ↔ Word/Excel/图片
+3. 文档操作：合并、拆分、旋转、重排序
+4. 文档保护：添加水印、加密、权限设置
+5. 智能处理：内容搜索、批量重命名、压缩
+
+处理流程：
+1. 理解用户的 PDF 处理需求
+2. 询问必要的参数（文件路径、页码范围等）
+3. 确认操作内容
+4. 执行处理
+5. 返回处理结果和文件
+
+注意事项：
+- 处理前确认文件可访问
+- 大文件处理时提示等待时间
+- 提供处理摘要（处理了多少页、提取了什么内容）
+- 涉及敏感文档时提醒用户注意安全
+</code></pre><h3 id="42-意图识别示例">4.2 意图识别示例</h3>
+<table>
+  <thead>
+      <tr>
+          <th>用户输入</th>
+          <th>识别意图</th>
+          <th>提取参数</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&ldquo;把这几个 PDF 合并成一个&rdquo;</td>
+          <td>合并</td>
+          <td>文件列表</td>
+      </tr>
+      <tr>
+          <td>&ldquo;提取这个 PDF 的前5页&rdquo;</td>
+          <td>拆分</td>
+          <td>文件路径、页码范围</td>
+      </tr>
+      <tr>
+          <td>&ldquo;把 PDF 转成 Word&rdquo;</td>
+          <td>格式转换</td>
+          <td>源文件、目标格式</td>
+      </tr>
+      <tr>
+          <td>&ldquo;给这个 PDF 加上机密水印&rdquo;</td>
+          <td>加水印</td>
+          <td>文件路径、水印文字</td>
+      </tr>
+      <tr>
+          <td>&ldquo;提取这个合同里的表格&rdquo;</td>
+          <td>表格提取</td>
+          <td>文件路径、页码</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="五实战案例">五、实战案例</h2>
+<h3 id="51-案例一合同信息提取">5.1 案例一：合同信息提取</h3>
+<p><strong>场景</strong>：法务部门需要从大量合同 PDF 中提取关键信息（金额、日期、签约方）。</p>
+<p><strong>解决方案</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pdfplumber
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_contract_info</span>(pdf_path):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;提取合同关键信息&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    info <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;amount&#39;</span>: <span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;dates&#39;</span>: [],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;parties&#39;</span>: [],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;duration&#39;</span>: <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> pdfplumber<span style="color:#f92672">.</span>open(pdf_path) <span style="color:#66d9ef">as</span> pdf:
+</span></span><span style="display:flex;"><span>        full_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> page <span style="color:#f92672">in</span> pdf<span style="color:#f92672">.</span>pages:
+</span></span><span style="display:flex;"><span>            full_text <span style="color:#f92672">+=</span> page<span style="color:#f92672">.</span>extract_text()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 提取金额（匹配人民币格式）</span>
+</span></span><span style="display:flex;"><span>    amount_pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?:人民币|¥|￥)\s*([\d,\.]+)(?:元|万元)?&#39;</span>
+</span></span><span style="display:flex;"><span>    amounts <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(amount_pattern, full_text)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> amounts:
+</span></span><span style="display:flex;"><span>        info[<span style="color:#e6db74">&#39;amount&#39;</span>] <span style="color:#f92672">=</span> amounts[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 提取日期</span>
+</span></span><span style="display:flex;"><span>    date_pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">年\d{1,2}月\d{1,2}日|\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">)&#39;</span>
+</span></span><span style="display:flex;"><span>    info[<span style="color:#e6db74">&#39;dates&#39;</span>] <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(date_pattern, full_text)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 提取签约方（甲方、乙方）</span>
+</span></span><span style="display:flex;"><span>    party_pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;([甲乙]方|[买卖]方)：\s*([^\n]+)&#39;</span>
+</span></span><span style="display:flex;"><span>    parties <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(party_pattern, full_text)
+</span></span><span style="display:flex;"><span>    info[<span style="color:#e6db74">&#39;parties&#39;</span>] <span style="color:#f92672">=</span> [p[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>strip() <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> parties]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> info
+</span></span></code></pre></div><h3 id="52-案例二发票批量处理">5.2 案例二：发票批量处理</h3>
+<p><strong>场景</strong>：财务部门每月需要处理大量发票 PDF，提取信息录入系统。</p>
+<p><strong>解决方案</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">batch_process_invoices</span>(pdf_folder):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;批量处理发票 PDF&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    results <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(pdf_folder):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.pdf&#39;</span>):
+</span></span><span style="display:flex;"><span>            pdf_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(pdf_folder, filename)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 提取发票信息</span>
+</span></span><span style="display:flex;"><span>            invoice_info <span style="color:#f92672">=</span> extract_invoice_info(pdf_path)
+</span></span><span style="display:flex;"><span>            invoice_info[<span style="color:#e6db74">&#39;filename&#39;</span>] <span style="color:#f92672">=</span> filename
+</span></span><span style="display:flex;"><span>            results<span style="color:#f92672">.</span>append(invoice_info)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 导出为 Excel</span>
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(results)
+</span></span><span style="display:flex;"><span>    output_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(pdf_folder, <span style="color:#e6db74">&#39;发票汇总.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>    df<span style="color:#f92672">.</span>to_excel(output_path, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output_path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_invoice_info</span>(pdf_path):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;提取单张发票信息&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 使用 OCR 识别扫描件发票</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 或使用 pdfplumber 提取电子发票</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 这里简化处理</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;invoice_no&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;date&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;amount&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;seller&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;buyer&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="六实战练习">六、实战练习</h2>
+<h3 id="练习-1pdf-合并工具">练习 1：PDF 合并工具</h3>
+<p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>接收多个 PDF 文件</li>
+<li>按文件名排序后合并</li>
+<li>生成目录页（显示各文件起始页码）</li>
+<li>返回合并后的文件</li>
+</ol>
+<h3 id="练习-2pdf-内容搜索">练习 2：PDF 内容搜索</h3>
+<p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>在多个 PDF 中搜索关键词</li>
+<li>返回包含关键词的文件列表</li>
+<li>显示关键词出现的页码和上下文</li>
+<li>生成搜索结果报告</li>
+</ol>
+<h3 id="练习-3批量加水印">练习 3：批量加水印</h3>
+<p>创建一个 Skill，实现以下功能：</p>
+<ol>
+<li>接收文件夹路径和水印文字</li>
+<li>为文件夹内所有 PDF 添加水印</li>
+<li>支持自定义水印透明度</li>
+<li>保存到新文件夹，保留原文件</li>
+</ol>
+<h2 id="七常见问题">七、常见问题</h2>
+<h3 id="q1扫描件-pdf-无法提取文字怎么办">Q1：扫描件 PDF 无法提取文字怎么办？</h3>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li>使用 OCR 技术识别扫描件</li>
+<li>推荐库：<code>pytesseract</code> + <code>pdf2image</code></li>
+<li>先转图片再识别文字</li>
+</ul>
+<h3 id="q2pdf-转-word-后排版错乱怎么办">Q2：PDF 转 Word 后排版错乱怎么办？</h3>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li>使用 <code>pdf2docx</code> 库，保留原排版</li>
+<li>对于复杂排版，考虑使用专业工具</li>
+<li>转换后手动微调</li>
+</ul>
+<h3 id="q3如何处理加密的-pdf">Q3：如何处理加密的 PDF？</h3>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li>请求用户提供密码</li>
+<li>使用 <code>pypdf</code> 的解密功能</li>
+<li>注意：仅处理用户有权访问的文件</li>
+</ul>
+<h2 id="八下节预告">八、下节预告</h2>
+<p>下一讲我们将学习 <strong>PPT 智能生成 Skill 开发</strong>，包括：</p>
+<ul>
+<li>PPT 内容自动生成</li>
+<li>模板应用与样式统一</li>
+<li>图表自动插入</li>
+<li>批量幻灯片处理</li>
+</ul>
+<hr>
+<h2 id="加入学习群">加入学习群</h2>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">加入AI编程学习交流群</a></strong></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" alt="点击加入"></p>
+<hr>
+<p><em>本讲是《AI Skills 从入门到实践》系列课程的第13讲。</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260406-14-ppt/">上一篇：&#34;第14讲：PPT 智能生成 Skill 开发&#34;</a>
+        
+        
+        <a href="http://localhost:4002/20260406-12-excel/">下一篇：&#34;第12讲：Excel 自动化 Skill 开发&#34;</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

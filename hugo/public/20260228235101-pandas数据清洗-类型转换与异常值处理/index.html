@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pandas数据清洗：我总结了类型转换的5个坑，帮你避开90%的错误 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Pandas数据清洗：我总结了类型转换的5个坑，帮你避开90%的错误</h1>
+        <div class="post-meta">
+            <span>2026-02-28 23:51</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/pandas/" class="tag">Pandas</a>
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/" class="tag">数据清洗</a>
+            
+            <a href="/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="tag">类型转换</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天继续数据清洗——<strong>类型转换与异常值处理</strong>。</p>
+<p>数据类型不对会导致计算错误，异常值会影响统计结果。掌握这些技巧，让你的数据质量更上一层楼。</p>
+<hr>
+<h2 id="常见数据类型问题">常见数据类型问题</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;订单号&#39;</span>: [<span style="color:#e6db74">&#39;A001&#39;</span>, <span style="color:#e6db74">&#39;A002&#39;</span>, <span style="color:#e6db74">&#39;A003&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;金额&#39;</span>: [<span style="color:#e6db74">&#39;1500.50&#39;</span>, <span style="color:#e6db74">&#39;2300&#39;</span>, <span style="color:#e6db74">&#39;invalid&#39;</span>],  <span style="color:#75715e"># 字符串而非数值</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;日期&#39;</span>: [<span style="color:#e6db74">&#39;2024-01-15&#39;</span>, <span style="color:#e6db74">&#39;2024/02/20&#39;</span>, <span style="color:#e6db74">&#39;无效日期&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;数量&#39;</span>: [<span style="color:#ae81ff">10</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1000</span>],  <span style="color:#75715e"># 有负数（异常）</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;类别&#39;</span>: [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>dtypes)
+</span></span></code></pre></div><hr>
+<h2 id="数值类型转换">数值类型转换</h2>
+<h3 id="字符串转数值">字符串转数值</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 基础转换</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;金额_num&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[<span style="color:#e6db74">&#39;金额&#39;</span>], errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># errors=&#39;coerce&#39;会把无法转换的变成NaN</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 处理千分位逗号</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;金额_clean&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;金额&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;,&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>astype(float)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 处理货币符号</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;价格&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;价格&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;$&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;,&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>astype(float)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 批量转换多列</span>
+</span></span><span style="display:flex;"><span>numeric_cols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;金额&#39;</span>, <span style="color:#e6db74">&#39;数量&#39;</span>, <span style="color:#e6db74">&#39;单价&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> numeric_cols:
+</span></span><span style="display:flex;"><span>    df[col] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[col], errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+</span></span></code></pre></div><h3 id="整数-vs-浮点数">整数 vs 浮点数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># float转int（会截断小数）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;金额_int&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;金额&#39;</span>]<span style="color:#f92672">.</span>astype(int)  <span style="color:#75715e"># 1500.50 → 1500</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 四舍五入后转int</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;金额_round&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;金额&#39;</span>]<span style="color:#f92672">.</span>round()<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用Int64（支持缺失值的整数）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;金额_Int64&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;金额&#39;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;Int64&#39;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="日期时间转换">日期时间转换</h2>
+<h3 id="基础转换">基础转换</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 自动识别格式</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;日期_dt&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;日期&#39;</span>], errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 指定格式（更快）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;日期_dt&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;日期&#39;</span>], format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>, errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 从多个列组合</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;完整时间&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[[<span style="color:#e6db74">&#39;年&#39;</span>, <span style="color:#e6db74">&#39;月&#39;</span>, <span style="color:#e6db74">&#39;日&#39;</span>]])
+</span></span></code></pre></div><h3 id="时间戳转换">时间戳转换</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Unix时间戳（秒）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;日期&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;timestamp&#39;</span>], unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;s&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Unix时间戳（毫秒）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;日期&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;timestamp&#39;</span>], unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ms&#39;</span>)
+</span></span></code></pre></div><h3 id="提取日期组件">提取日期组件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;年&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>year
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;月&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>month
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;日&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>day
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;星期&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>dayofweek  <span style="color:#75715e"># 0=周一</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;季度&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>quarter
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;是否周末&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>dayofweek <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><hr>
+<h2 id="类别型数据category">类别型数据（Category）</h2>
+<h3 id="为什么用category">为什么用Category？</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 节省内存</span>
+</span></span><span style="display:flex;"><span>print(df[<span style="color:#e6db74">&#39;类别&#39;</span>]<span style="color:#f92672">.</span>memory_usage())  <span style="color:#75715e"># 普通object</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;类别_cat&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;类别&#39;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;category&#39;</span>)
+</span></span><span style="display:flex;"><span>print(df[<span style="color:#e6db74">&#39;类别_cat&#39;</span>]<span style="color:#f92672">.</span>memory_usage())  <span style="color:#75715e"># 大幅减少</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提高性能（分组、筛选更快）</span>
+</span></span></code></pre></div><h3 id="有序类别">有序类别</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pandas.api.types <span style="color:#f92672">import</span> CategoricalDtype
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 定义等级顺序</span>
+</span></span><span style="display:flex;"><span>grade_type <span style="color:#f92672">=</span> CategoricalDtype(
+</span></span><span style="display:flex;"><span>    categories<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;S&#39;</span>], 
+</span></span><span style="display:flex;"><span>    ordered<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;等级&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;等级&#39;</span>]<span style="color:#f92672">.</span>astype(grade_type)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 现在可以比较大小</span>
+</span></span><span style="display:flex;"><span>df[df[<span style="color:#e6db74">&#39;等级&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;B&#39;</span>]  <span style="color:#75715e"># 选出A和S级</span>
+</span></span></code></pre></div><hr>
+<h2 id="异常值检测与处理">异常值检测与处理</h2>
+<h3 id="统计方法">统计方法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Z-score方法</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>z_scores <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>abs(stats<span style="color:#f92672">.</span>zscore(df[<span style="color:#e6db74">&#39;金额&#39;</span>]))
+</span></span><span style="display:flex;"><span>outliers <span style="color:#f92672">=</span> df[z_scores <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>]  <span style="color:#75715e"># Z-score超过3认为是异常</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># IQR方法（四分位距）</span>
+</span></span><span style="display:flex;"><span>Q1 <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;金额&#39;</span>]<span style="color:#f92672">.</span>quantile(<span style="color:#ae81ff">0.25</span>)
+</span></span><span style="display:flex;"><span>Q3 <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;金额&#39;</span>]<span style="color:#f92672">.</span>quantile(<span style="color:#ae81ff">0.75</span>)
+</span></span><span style="display:flex;"><span>IQR <span style="color:#f92672">=</span> Q3 <span style="color:#f92672">-</span> Q1
+</span></span><span style="display:flex;"><span>lower_bound <span style="color:#f92672">=</span> Q1 <span style="color:#f92672">-</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">*</span> IQR
+</span></span><span style="display:flex;"><span>upper_bound <span style="color:#f92672">=</span> Q3 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">*</span> IQR
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>outliers <span style="color:#f92672">=</span> df[(df[<span style="color:#e6db74">&#39;金额&#39;</span>] <span style="color:#f92672">&lt;</span> lower_bound) <span style="color:#f92672">|</span> (df[<span style="color:#e6db74">&#39;金额&#39;</span>] <span style="color:#f92672">&gt;</span> upper_bound)]
+</span></span><span style="display:flex;"><span>normal <span style="color:#f92672">=</span> df[(df[<span style="color:#e6db74">&#39;金额&#39;</span>] <span style="color:#f92672">&gt;=</span> lower_bound) <span style="color:#f92672">&amp;</span> (df[<span style="color:#e6db74">&#39;金额&#39;</span>] <span style="color:#f92672">&lt;=</span> upper_bound)]
+</span></span></code></pre></div><h3 id="业务规则方法">业务规则方法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 根据业务知识判断</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 年龄应该在0-120之间</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>loc[df[<span style="color:#e6db74">&#39;年龄&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;年龄&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>nan
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>loc[df[<span style="color:#e6db74">&#39;年龄&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">120</span>, <span style="color:#e6db74">&#39;年龄&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>nan
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 折扣率应该在0-1之间</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>loc[<span style="color:#f92672">~</span>df[<span style="color:#e6db74">&#39;折扣率&#39;</span>]<span style="color:#f92672">.</span>between(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), <span style="color:#e6db74">&#39;折扣率&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>nan
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 标记异常</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;是否异常&#39;</span>] <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>    (df[<span style="color:#e6db74">&#39;年龄&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">18</span>) <span style="color:#f92672">|</span> 
+</span></span><span style="display:flex;"><span>    (df[<span style="color:#e6db74">&#39;消费金额&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    (df[<span style="color:#e6db74">&#39;订单日期&#39;</span>] <span style="color:#f92672">&gt;</span> pd<span style="color:#f92672">.</span>Timestamp<span style="color:#f92672">.</span>now())
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h3 id="异常值处理策略">异常值处理策略</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 策略1：删除</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> df[<span style="color:#f92672">~</span>df[<span style="color:#e6db74">&#39;是否异常&#39;</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 策略2：替换为边界值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;金额&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;金额&#39;</span>]<span style="color:#f92672">.</span>clip(lower<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, upper<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 策略3：用中位数填充</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>loc[df[<span style="color:#e6db74">&#39;是否异常&#39;</span>], <span style="color:#e6db74">&#39;金额&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;金额&#39;</span>]<span style="color:#f92672">.</span>median()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 策略4：单独分析</span>
+</span></span><span style="display:flex;"><span>outliers_df <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#39;是否异常&#39;</span>]]<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;异常订单需要人工审核:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(outliers_df)
+</span></span></code></pre></div><hr>
+<h2 id="文本数据处理">文本数据处理</h2>
+<h3 id="清理空白字符">清理空白字符</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;姓名&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;姓名&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>strip()  <span style="color:#75715e"># 去除首尾空格</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;姓名&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;姓名&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;\s+&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>, regex<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)  <span style="color:#75715e"># 多个空格变一个</span>
+</span></span></code></pre></div><h3 id="统一大小写">统一大小写</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;邮箱&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;邮箱&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>lower()  <span style="color:#75715e"># 邮箱统一小写</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;城市&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;城市&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>title()   <span style="color:#75715e"># 首字母大写</span>
+</span></span></code></pre></div><h3 id="提取信息">提取信息</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 提取手机号前3位（运营商）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;运营商&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;手机号&#39;</span>]<span style="color:#f92672">.</span>str[:<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取邮箱域名</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;邮箱域名&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;邮箱&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;@&#39;</span>)<span style="color:#f92672">.</span>str[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取年份</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;入职年份&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;入职日期&#39;</span>]<span style="color:#f92672">.</span>str[:<span style="color:#ae81ff">4</span>]
+</span></span></code></pre></div><hr>
+<h2 id="完整清洗流程示例">完整清洗流程示例</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">clean_dataframe</span>(df):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;完整的数据清洗流程&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 1. 复制数据避免修改原数据</span>
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 2. 去除完全重复行</span>
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop_duplicates()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 3. 处理缺失值</span>
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna(how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>)  <span style="color:#75715e"># 删除全空行</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 4. 类型转换</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 数值列</span>
+</span></span><span style="display:flex;"><span>    numeric_cols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;金额&#39;</span>, <span style="color:#e6db74">&#39;数量&#39;</span>, <span style="color:#e6db74">&#39;单价&#39;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> numeric_cols:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> col <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>columns:
+</span></span><span style="display:flex;"><span>            df[col] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[col], errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 日期列</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;日期&#39;</span> <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>columns:
+</span></span><span style="display:flex;"><span>        df[<span style="color:#e6db74">&#39;日期&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;日期&#39;</span>], errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 类别列</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;类别&#39;</span> <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>columns:
+</span></span><span style="display:flex;"><span>        df[<span style="color:#e6db74">&#39;类别&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;类别&#39;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;category&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 5. 处理异常值</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 金额不能为负</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;金额&#39;</span> <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>columns:
+</span></span><span style="display:flex;"><span>        df<span style="color:#f92672">.</span>loc[df[<span style="color:#e6db74">&#39;金额&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;金额&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>nan
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 6. 文本清理</span>
+</span></span><span style="display:flex;"><span>    text_cols <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>select_dtypes(include<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;object&#39;</span>])<span style="color:#f92672">.</span>columns
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> text_cols:
+</span></span><span style="display:flex;"><span>        df[col] <span style="color:#f92672">=</span> df[col]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> df
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>df_clean <span style="color:#f92672">=</span> clean_dataframe(df)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;清洗完成！&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df_clean<span style="color:#f92672">.</span>info())
+</span></span></code></pre></div><hr>
+<h3 id="性能对比类型转换对内存的影响">性能对比：类型转换对内存的影响</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 100万行数据</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;id&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1000000</span>, <span style="color:#ae81ff">1000000</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;category&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>], <span style="color:#ae81ff">1000000</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;value&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">1000000</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;转换前:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>memory_usage(deep<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># int64 → int32（减半）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;id&#39;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;int32&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># object → category（大幅减少）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;category&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;category&#39;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;category&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># float64 → float32（减半）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;value&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;value&#39;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">转换后:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>memory_usage(deep<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 内存减少60-80%！</span>
+</span></span></code></pre></div><h2 id="进阶用法">进阶用法</h2>
+<h3 id="智能类型推断">智能类型推断</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 自动推断最佳类型</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>convert_dtypes()  <span style="color:#75715e"># pandas 1.0+ 新功能</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或者手动优化</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">optimize_dtypes</span>(df):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>columns:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> df[col]<span style="color:#f92672">.</span>dtype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;object&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 尝试转日期</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                df[col] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[col])
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 尝试转数值</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                df[col] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[col])
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 尝试转category</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> df[col]<span style="color:#f92672">.</span>nunique() <span style="color:#f92672">/</span> len(df) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.5</span>:
+</span></span><span style="display:flex;"><span>                df[col] <span style="color:#f92672">=</span> df[col]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;category&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> df[col]<span style="color:#f92672">.</span>dtype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;int64&#39;</span>:
+</span></span><span style="display:flex;"><span>            df[col] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[col], downcast<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;integer&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> df[col]<span style="color:#f92672">.</span>dtype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;float64&#39;</span>:
+</span></span><span style="display:flex;"><span>            df[col] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[col], downcast<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;float&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> df
+</span></span></code></pre></div><h3 id="异常值检测方法">异常值检测方法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 方法1：IQR法（箱线图原理）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detect_outliers_iqr</span>(df, col):
+</span></span><span style="display:flex;"><span>    Q1 <span style="color:#f92672">=</span> df[col]<span style="color:#f92672">.</span>quantile(<span style="color:#ae81ff">0.25</span>)
+</span></span><span style="display:flex;"><span>    Q3 <span style="color:#f92672">=</span> df[col]<span style="color:#f92672">.</span>quantile(<span style="color:#ae81ff">0.75</span>)
+</span></span><span style="display:flex;"><span>    IQR <span style="color:#f92672">=</span> Q3 <span style="color:#f92672">-</span> Q1
+</span></span><span style="display:flex;"><span>    lower <span style="color:#f92672">=</span> Q1 <span style="color:#f92672">-</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">*</span> IQR
+</span></span><span style="display:flex;"><span>    upper <span style="color:#f92672">=</span> Q3 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">*</span> IQR
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> df[(df[col] <span style="color:#f92672">&lt;</span> lower) <span style="color:#f92672">|</span> (df[col] <span style="color:#f92672">&gt;</span> upper)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：Z-score法（3σ原则）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detect_outliers_zscore</span>(df, col, threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>):
+</span></span><span style="display:flex;"><span>    z_scores <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>abs(stats<span style="color:#f92672">.</span>zscore(df[col]<span style="color:#f92672">.</span>dropna()))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> df[z_scores <span style="color:#f92672">&gt;</span> threshold]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法3：百分位法</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detect_outliers_percentile</span>(df, col, lower_pct<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, upper_pct<span style="color:#f92672">=</span><span style="color:#ae81ff">99</span>):
+</span></span><span style="display:flex;"><span>    lower <span style="color:#f92672">=</span> df[col]<span style="color:#f92672">.</span>quantile(lower_pct <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    upper <span style="color:#f92672">=</span> df[col]<span style="color:#f92672">.</span>quantile(upper_pct <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> df[(df[col] <span style="color:#f92672">&lt;</span> lower) <span style="color:#f92672">|</span> (df[col] <span style="color:#f92672">&gt;</span> upper)]
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1混合类型列">❌ 坑1：混合类型列</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 列中同时有数字和字符串</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;value&#39;</span>: [<span style="color:#e6db74">&#39;100&#39;</span>, <span style="color:#e6db74">&#39;200&#39;</span>, <span style="color:#e6db74">&#39;N/A&#39;</span>, <span style="color:#e6db74">&#39;300&#39;</span>]})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 直接转数值会报错</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;value&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;value&#39;</span>]<span style="color:#f92672">.</span>astype(float)  <span style="color:#75715e"># ValueError!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用to_numeric + errors参数</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;value&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[<span style="color:#e6db74">&#39;value&#39;</span>], errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)  <span style="color:#75715e"># N/A变成NaN</span>
+</span></span></code></pre></div><h3 id="-坑2日期格式混乱">❌ 坑2：日期格式混乱</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 同一列有多种日期格式</span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;2025-01-15&#39;</span>, <span style="color:#e6db74">&#39;01/15/2025&#39;</span>, <span style="color:#e6db74">&#39;Jan 15, 2025&#39;</span>, <span style="color:#e6db74">&#39;20250115&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pd.to_datetime很聪明，能自动识别</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;date&#39;</span>], format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mixed&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果还是不行，指定format</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;date&#39;</span>], format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>, errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+</span></span></code></pre></div><h2 id="实战案例清洗零售销售数据">实战案例：清洗零售销售数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模拟含各种问题的零售数据</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;order_id&#39;</span>: [<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;ORD</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">:</span><span style="color:#e6db74">06d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;amount&#39;</span>: np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.05</span>,
+</span></span><span style="display:flex;"><span>                       np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5000</span>, n)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>), 
+</span></span><span style="display:flex;"><span>                       np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#f92672">-</span><span style="color:#ae81ff">999</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">99999</span>], n)),  <span style="color:#75715e"># 异常值</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quantity&#39;</span>: np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(n) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.03</span>,
+</span></span><span style="display:flex;"><span>                         np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>, n),
+</span></span><span style="display:flex;"><span>                         np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">999</span>], n)),  <span style="color:#75715e"># 异常值</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;customer_type&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;VIP&#39;</span>, <span style="color:#e6db74">&#39;Normal&#39;</span>, <span style="color:#e6db74">&#39;vip&#39;</span>, <span style="color:#e6db74">&#39;normal&#39;</span>, <span style="color:#e6db74">&#39;VIP &#39;</span>, <span style="color:#e6db74">&#39;正常&#39;</span>], n),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;date&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice(pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2025-01-01&#39;</span>, <span style="color:#e6db74">&#39;2025-12-31&#39;</span>), n)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 统一customer_type</span>
+</span></span><span style="display:flex;"><span>type_map <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;VIP&#39;</span>: <span style="color:#e6db74">&#39;VIP&#39;</span>, <span style="color:#e6db74">&#39;vip&#39;</span>: <span style="color:#e6db74">&#39;VIP&#39;</span>, <span style="color:#e6db74">&#39;VIP &#39;</span>: <span style="color:#e6db74">&#39;VIP&#39;</span>, 
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Normal&#39;</span>: <span style="color:#e6db74">&#39;普通&#39;</span>, <span style="color:#e6db74">&#39;normal&#39;</span>: <span style="color:#e6db74">&#39;普通&#39;</span>, <span style="color:#e6db74">&#39;正常&#39;</span>: <span style="color:#e6db74">&#39;普通&#39;</span>}
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;customer_type&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;customer_type&#39;</span>]<span style="color:#f92672">.</span>map(type_map)<span style="color:#f92672">.</span>fillna(<span style="color:#e6db74">&#39;未知&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 检测异常值（IQR法）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;quantity&#39;</span>]:
+</span></span><span style="display:flex;"><span>    Q1, Q3 <span style="color:#f92672">=</span> df[col]<span style="color:#f92672">.</span>quantile([<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.75</span>])
+</span></span><span style="display:flex;"><span>    IQR <span style="color:#f92672">=</span> Q3 <span style="color:#f92672">-</span> Q1
+</span></span><span style="display:flex;"><span>    outlier_mask <span style="color:#f92672">=</span> (df[col] <span style="color:#f92672">&lt;</span> Q1 <span style="color:#f92672">-</span> <span style="color:#ae81ff">1.5</span><span style="color:#f92672">*</span>IQR) <span style="color:#f92672">|</span> (df[col] <span style="color:#f92672">&gt;</span> Q3 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1.5</span><span style="color:#f92672">*</span>IQR)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>col<span style="color:#e6db74">}</span><span style="color:#e6db74">异常值: </span><span style="color:#e6db74">{</span>outlier_mask<span style="color:#f92672">.</span>sum()<span style="color:#e6db74">}</span><span style="color:#e6db74">条&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 用中位数替换异常值</span>
+</span></span><span style="display:flex;"><span>    df<span style="color:#f92672">.</span>loc[outlier_mask, col] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>loc[<span style="color:#f92672">~</span>outlier_mask, col]<span style="color:#f92672">.</span>median()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 类型优化</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;customer_type&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;customer_type&#39;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;category&#39;</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;date&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">清洗后数据概览:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>describe())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">客户类型分布:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(df[<span style="color:#e6db74">&#39;customer_type&#39;</span>]<span style="color:#f92672">.</span>value_counts())
+</span></span></code></pre></div><h3 id="类型转换常见场景">类型转换常见场景</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景1：金额列是字符串&#34;¥1,234.56&#34;，需要转为数值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;price&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;¥&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;,&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>astype(float)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景2：日期列是&#34;2025年1月15日&#34;，需要转为日期</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;date&#39;</span>], format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%Y年%m月</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">日&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景3：百分数是字符串&#34;85%&#34;，需要转为数值</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;rate&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;rate&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>rstrip(<span style="color:#e6db74">&#39;%&#39;</span>)<span style="color:#f92672">.</span>astype(float) <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景4：布尔列是&#34;是/否&#34;</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;flag&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;flag&#39;</span>]<span style="color:#f92672">.</span>map({<span style="color:#e6db74">&#39;是&#39;</span>: <span style="color:#66d9ef">True</span>, <span style="color:#e6db74">&#39;否&#39;</span>: <span style="color:#66d9ef">False</span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景5：评分是&#34;5星&#34;，需要提取数字</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;rating&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;rating&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>extract(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d+)&#39;</span>)<span style="color:#f92672">.</span>astype(int)
+</span></span></code></pre></div><h3 id="异常值处理策略对比">异常值处理策略对比</h3>
+<table>
+  <thead>
+      <tr>
+          <th>策略</th>
+          <th>优点</th>
+          <th>缺点</th>
+          <th>适用场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>删除</td>
+          <td>简单</td>
+          <td>丢数据</td>
+          <td>异常值少</td>
+      </tr>
+      <tr>
+          <td>替换为边界值</td>
+          <td>保留数据量</td>
+          <td>压缩分布</td>
+          <td>有明确合理范围</td>
+      </tr>
+      <tr>
+          <td>替换为中位数</td>
+          <td>鲁棒</td>
+          <td>改变分布</td>
+          <td>异常值不影响中位数</td>
+      </tr>
+      <tr>
+          <td>对数变换</td>
+          <td>压缩极端值</td>
+          <td>不能处理0/负值</td>
+          <td>右偏分布</td>
+      </tr>
+      <tr>
+          <td>分箱</td>
+          <td>简单</td>
+          <td>损失精度</td>
+          <td>模型输入</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="下节预告">下节预告</h2>
+<p>下一课我们将学习<strong>数据变换-行列操作</strong>，掌握如何重塑数据结构。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235201-Pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E8%A1%8C%E5%88%97%E6%93%8D%E4%BD%9C/">继续阅读：Pandas数据变换-行列操作</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235001-Pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E5%A4%84%E7%90%86%E9%87%8D%E5%A4%8D%E5%80%BC/">Pandas数据清洗-处理重复值</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235201-Pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E8%A1%8C%E5%88%97%E6%93%8D%E4%BD%9C/">Pandas数据变换-行列操作</a></p>
+<hr>
+<p><em>PS：类型转换是数据清洗的关键步骤。记住：先检查再转换，errors=&lsquo;coerce&rsquo;是好帮手。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260228235001-pandas%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97-%E5%A4%84%E7%90%86%E9%87%8D%E5%A4%8D%E5%80%BC/">上一篇：Pandas数据清洗：我用这3种方法，5秒找出并清理所有重复数据</a>
+        
+        
+        <a href="http://localhost:4002/20260228235201-pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E8%A1%8C%E5%88%97%E6%93%8D%E4%BD%9C/">下一篇：Pandas数据变换：我用这8个操作，把混乱的数据整理成标准表格</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

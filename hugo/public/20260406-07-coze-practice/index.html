@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#34;第7讲：Coze 实战：搭建办公助手 Skill&#34; - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>&#34;第7讲：Coze 实战：搭建办公助手 Skill&#34;</h1>
+        <div class="post-meta">
+            <span>2026-04-06 14:30</span>
+            
+            <span> · </span>
+            
+            <span class="category">AI Skills 课程</span>
+            
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/ai-skill/" class="tag">AI Skill</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/coze/" class="tag">Coze</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/%E5%AE%9E%E6%88%98/" class="tag">实战</a>
+            
+            <a href="/tags//" class="tag"></a>
+            
+            <a href="/tags/%E5%8A%9E%E5%85%AC%E5%8A%A9%E6%89%8B/" class="tag">办公助手</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <h1 id="第7讲coze-实战搭建办公助手-skill">第7讲：Coze 实战：搭建办公助手 Skill</h1>
+<blockquote>
+<p>动手搭建一个完整的办公助手，掌握 Coze 实战开发。</p>
+</blockquote>
+<h2 id="一项目概述">一、项目概述</h2>
+<h3 id="11-项目目标">1.1 项目目标</h3>
+<p>搭建一个功能完整的办公助手 Bot，包含：</p>
+<ul>
+<li>📊 Excel 数据处理（合并、拆分）</li>
+<li>📝 周报自动生成</li>
+<li>✅ 待办事项管理</li>
+</ul>
+<h3 id="12-技术架构">1.2 技术架构</h3>
+<pre tabindex="0"><code>办公助手 Bot
+├── 人设与回复逻辑
+├── 插件
+│   ├── Excel Processor（Excel处理）
+│   └── File Manager（文件管理）
+├── 工作流
+│   ├── Weekly Report Generator（周报生成）
+│   └── Todo Manager（待办管理）
+└── 数据库
+    └── todos（待办表）
+</code></pre><hr>
+<h2 id="二步骤一创建-bot">二、步骤一：创建 Bot</h2>
+<h3 id="21-基础配置">2.1 基础配置</h3>
+<ol>
+<li>登录 <a href="https://www.coze.cn">Coze 平台</a></li>
+<li>点击「创建 Bot」</li>
+<li>填写信息：
+<ul>
+<li><strong>名称</strong>：办公小助手 Pro</li>
+<li><strong>描述</strong>：你的智能办公伙伴，帮你处理Excel、生成周报、管理待办</li>
+<li><strong>图标</strong>：上传办公相关图标</li>
+</ul>
+</li>
+</ol>
+<h3 id="22-人设配置">2.2 人设配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 角色
+</span></span><span style="display:flex;"><span>你是专业的办公助手，擅长帮助职场人士提升工作效率。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 技能
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### 1. Excel 数据处理
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 合并多个 Excel 文件
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 拆分大型 Excel 表格
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 格式转换和数据清洗
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 2. 周报生成
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 根据工作内容自动生成周报
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 支持多种模板风格
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 可导出为 Word 或 PDF
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 3. 待办管理
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 添加、查看、完成待办事项
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 设置提醒时间
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 分类管理
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 工作流程
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 理解用户需求
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 确认必要信息
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 调用相应工具
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 返回处理结果
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 限制
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 只处理办公相关任务
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 不处理敏感或违法内容
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 文件大小限制 50MB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 回复格式
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 使用友好亲切的语气
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 关键信息用 <span style="font-weight:bold">**粗体**</span> 标注
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 步骤用 1️⃣ 2️⃣ 3️⃣ 编号
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 适当使用 emoji 增加亲和力
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 开场白
+</span></span></span><span style="display:flex;"><span>你好！我是你的办公小助手 Pro 🎯
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>我可以帮你：
+</span></span><span style="display:flex;"><span>📊 <span style="font-weight:bold">**Excel 处理**</span> - 合并、拆分、转换
+</span></span><span style="display:flex;"><span>📝 <span style="font-weight:bold">**周报生成**</span> - 自动整理工作内容
+</span></span><span style="display:flex;"><span>✅ <span style="font-weight:bold">**待办管理**</span> - 记录和追踪任务
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>直接告诉我你想做什么，我会一步步引导你完成！
+</span></span></code></pre></div><hr>
+<h2 id="三步骤二开发-excel-处理插件">三、步骤二：开发 Excel 处理插件</h2>
+<h3 id="31-创建插件">3.1 创建插件</h3>
+<ol>
+<li>点击「插件」→「创建插件」</li>
+<li>配置：
+<ul>
+<li>名称：Excel Processor</li>
+<li>描述：专业的 Excel 文件处理工具</li>
+<li>运行方式：云侧插件</li>
+</ul>
+</li>
+</ol>
+<h3 id="32-创建工具合并-excel">3.2 创建工具：合并 Excel</h3>
+<p><strong>工具配置</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">名称</span>: <span style="color:#ae81ff">merge_excel</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">描述</span>: <span style="color:#ae81ff">合并多个 Excel 文件</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">输入参数</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">file_urls</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">类型</span>: <span style="color:#ae81ff">array</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">描述</span>: <span style="color:#ae81ff">Excel 文件的 URL 列表</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">必填</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">merge_mode</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">类型</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">描述</span>: <span style="color:#ae81ff">合并方式</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">必填</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">默认值</span>: <span style="color:#ae81ff">vertical</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">枚举值</span>: [<span style="color:#ae81ff">vertical, horizontal]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">输出参数</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">result_url</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">类型</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">描述</span>: <span style="color:#ae81ff">合并后的文件下载链接</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">row_count</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">类型</span>: <span style="color:#ae81ff">number</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">描述</span>: <span style="color:#ae81ff">总行数</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">success</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">类型</span>: <span style="color:#ae81ff">boolean</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">描述</span>: <span style="color:#ae81ff">是否成功</span>
+</span></span></code></pre></div><p><strong>代码实现</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> io <span style="color:#f92672">import</span> BytesIO
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>(args):
+</span></span><span style="display:flex;"><span>    file_urls <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;file_urls&#39;</span>, [])
+</span></span><span style="display:flex;"><span>    merge_mode <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;merge_mode&#39;</span>, <span style="color:#e6db74">&#39;vertical&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> file_urls:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;error&#34;</span>: <span style="color:#e6db74">&#34;请提供文件&#34;</span>, <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">False</span>}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 读取所有文件</span>
+</span></span><span style="display:flex;"><span>        dfs <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> file_urls:
+</span></span><span style="display:flex;"><span>            response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>            df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(BytesIO(response<span style="color:#f92672">.</span>content))
+</span></span><span style="display:flex;"><span>            dfs<span style="color:#f92672">.</span>append(df)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 合并</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> merge_mode <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;vertical&#39;</span>:
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat(dfs, ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat(dfs, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 保存到临时存储（实际使用云存储）</span>
+</span></span><span style="display:flex;"><span>        output <span style="color:#f92672">=</span> BytesIO()
+</span></span><span style="display:flex;"><span>        result<span style="color:#f92672">.</span>to_excel(output, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        output<span style="color:#f92672">.</span>seek(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 上传获取 URL（伪代码）</span>
+</span></span><span style="display:flex;"><span>        result_url <span style="color:#f92672">=</span> upload_to_storage(output)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;result_url&#34;</span>: result_url,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;row_count&#34;</span>: len(result),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;error&#34;</span>: str(e), <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">False</span>}
+</span></span></code></pre></div><h3 id="33-创建工具拆分-excel">3.3 创建工具：拆分 Excel</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">split_excel</span>(args):
+</span></span><span style="display:flex;"><span>    file_url <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;file_url&#39;</span>)
+</span></span><span style="display:flex;"><span>    split_column <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;split_column&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 读取文件</span>
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(file_url)
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(BytesIO(response<span style="color:#f92672">.</span>content))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 按列拆分</span>
+</span></span><span style="display:flex;"><span>    grouped <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(split_column)
+</span></span><span style="display:flex;"><span>    result_urls <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> name, group <span style="color:#f92672">in</span> grouped:
+</span></span><span style="display:flex;"><span>        output <span style="color:#f92672">=</span> BytesIO()
+</span></span><span style="display:flex;"><span>        group<span style="color:#f92672">.</span>to_excel(output, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        output<span style="color:#f92672">.</span>seek(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        url <span style="color:#f92672">=</span> upload_to_storage(output, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">.xlsx&#34;</span>)
+</span></span><span style="display:flex;"><span>        result_urls<span style="color:#f92672">.</span>append({<span style="color:#e6db74">&#34;name&#34;</span>: name, <span style="color:#e6db74">&#34;url&#34;</span>: url})
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;files&#34;</span>: result_urls,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;count&#34;</span>: len(result_urls),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><hr>
+<h2 id="四步骤三创建周报生成工作流">四、步骤三：创建周报生成工作流</h2>
+<h3 id="41-工作流设计">4.1 工作流设计</h3>
+<pre tabindex="0"><code>开始（接收工作内容）
+    │
+    ▼
+大模型节点（整理和润色）
+    │
+    ▼
+代码节点（生成文档）
+    │
+    ▼
+结束（返回下载链接）
+</code></pre><h3 id="42-节点配置">4.2 节点配置</h3>
+<p><strong>开始节点</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">输入参数</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">work_items</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">类型</span>: <span style="color:#ae81ff">array</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">描述</span>: <span style="color:#ae81ff">本周完成的工作列表</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">challenges</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">类型</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">描述</span>: <span style="color:#ae81ff">遇到的问题</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">next_week_plan</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">类型</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">描述</span>: <span style="color:#ae81ff">下周计划</span>
+</span></span></code></pre></div><p><strong>大模型节点</strong>：</p>
+<pre tabindex="0"><code>系统提示：
+你是一个专业的周报撰写助手。请根据用户提供的工作内容，
+生成一份结构清晰、语言专业的周报。
+
+周报结构：
+1. 本周工作总结
+2. 重点项目进展
+3. 问题与反思
+4. 下周工作计划
+
+要求：
+- 使用专业但不生硬的语气
+- 突出成果和亮点
+- 问题部分要体现解决方案
+</code></pre><p><strong>代码节点</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> docx <span style="color:#f92672">import</span> Document
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> docx.shared <span style="color:#f92672">import</span> Pt, RGBColor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>(args):
+</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;report_content&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 创建 Word 文档</span>
+</span></span><span style="display:flex;"><span>    doc <span style="color:#f92672">=</span> Document()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 标题</span>
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> doc<span style="color:#f92672">.</span>add_heading(<span style="color:#e6db74">&#39;工作周报&#39;</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">.</span>alignment <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 居中</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 日期</span>
+</span></span><span style="display:flex;"><span>    doc<span style="color:#f92672">.</span>add_paragraph(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;报告周期：</span><span style="color:#e6db74">{</span>get_week_range()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    doc<span style="color:#f92672">.</span>add_paragraph()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 内容</span>
+</span></span><span style="display:flex;"><span>    doc<span style="color:#f92672">.</span>add_heading(<span style="color:#e6db74">&#39;一、本周工作总结&#39;</span>, level<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    doc<span style="color:#f92672">.</span>add_paragraph(content[<span style="color:#e6db74">&#39;summary&#39;</span>])
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    doc<span style="color:#f92672">.</span>add_heading(<span style="color:#e6db74">&#39;二、重点项目进展&#39;</span>, level<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> project <span style="color:#f92672">in</span> content[<span style="color:#e6db74">&#39;projects&#39;</span>]:
+</span></span><span style="display:flex;"><span>        doc<span style="color:#f92672">.</span>add_heading(project[<span style="color:#e6db74">&#39;name&#39;</span>], level<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        doc<span style="color:#f92672">.</span>add_paragraph(project[<span style="color:#e6db74">&#39;progress&#39;</span>])
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 保存</span>
+</span></span><span style="display:flex;"><span>    output <span style="color:#f92672">=</span> BytesIO()
+</span></span><span style="display:flex;"><span>    doc<span style="color:#f92672">.</span>save(output)
+</span></span><span style="display:flex;"><span>    output<span style="color:#f92672">.</span>seek(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    url <span style="color:#f92672">=</span> upload_to_storage(output, <span style="color:#e6db74">&#34;周报.docx&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;download_url&#34;</span>: url}
+</span></span></code></pre></div><hr>
+<h2 id="五步骤四创建待办管理工作流">五、步骤四：创建待办管理工作流</h2>
+<h3 id="51-数据库设计">5.1 数据库设计</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">表名</span>: todos
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">字段</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> id: <span style="color:#960050;background-color:#1e0010">主键</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> user_id: <span style="color:#960050;background-color:#1e0010">用户</span>ID
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> content: <span style="color:#960050;background-color:#1e0010">待办内容</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> status: <span style="color:#960050;background-color:#1e0010">状态</span> (pending<span style="color:#f92672">/</span>done)
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> priority: <span style="color:#960050;background-color:#1e0010">优先级</span> (high<span style="color:#f92672">/</span>medium<span style="color:#f92672">/</span>low)
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> created_at: <span style="color:#960050;background-color:#1e0010">创建时间</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> due_date: <span style="color:#960050;background-color:#1e0010">截止日期</span>
+</span></span></code></pre></div><h3 id="52-工作流添加待办">5.2 工作流：添加待办</h3>
+<pre tabindex="0"><code>开始（接收待办内容）
+    │
+    ▼
+代码节点（保存到数据库）
+    │
+    ▼
+结束（返回确认）
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_todo</span>(args):
+</span></span><span style="display:flex;"><span>    user_id <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;user_id&#39;</span>)
+</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;content&#39;</span>)
+</span></span><span style="display:flex;"><span>    priority <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;priority&#39;</span>, <span style="color:#e6db74">&#39;medium&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 插入数据库</span>
+</span></span><span style="display:flex;"><span>    database<span style="color:#f92672">.</span>insert(<span style="color:#e6db74">&#39;todos&#39;</span>, {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;user_id&#39;</span>: user_id,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;content&#39;</span>: content,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;status&#39;</span>: <span style="color:#e6db74">&#39;pending&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;priority&#39;</span>: priority,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;created_at&#39;</span>: datetime<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;message&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;✅ 已添加待办：</span><span style="color:#e6db74">{</span>content<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="53-工作流查看待办">5.3 工作流：查看待办</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">list_todos</span>(args):
+</span></span><span style="display:flex;"><span>    user_id <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;user_id&#39;</span>)
+</span></span><span style="display:flex;"><span>    status <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;status&#39;</span>, <span style="color:#e6db74">&#39;pending&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 查询数据库</span>
+</span></span><span style="display:flex;"><span>    todos <span style="color:#f92672">=</span> database<span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#39;todos&#39;</span>, {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;user_id&#39;</span>: user_id,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;status&#39;</span>: status
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 格式化输出</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> todo <span style="color:#f92672">in</span> todos:
+</span></span><span style="display:flex;"><span>        emoji <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;🔴&#34;</span> <span style="color:#66d9ef">if</span> todo[<span style="color:#e6db74">&#39;priority&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;high&#39;</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;🟡&#34;</span> <span style="color:#66d9ef">if</span> todo[<span style="color:#e6db74">&#39;priority&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;medium&#39;</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;🟢&#34;</span>
+</span></span><span style="display:flex;"><span>        result<span style="color:#f92672">.</span>append(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>emoji<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>todo[<span style="color:#e6db74">&#39;content&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;todos&#34;</span>: result,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;count&#34;</span>: len(result)
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><hr>
+<h2 id="六步骤五整合到-bot">六、步骤五：整合到 Bot</h2>
+<h3 id="61-添加插件">6.1 添加插件</h3>
+<p>在 Bot 编辑页面：</p>
+<ol>
+<li>点击「插件」→「+」</li>
+<li>选择「Excel Processor」</li>
+<li>添加到 Bot</li>
+</ol>
+<h3 id="62-添加工作流">6.2 添加工作流</h3>
+<ol>
+<li>点击「工作流」→「+」</li>
+<li>选择「周报生成」和「待办管理」</li>
+<li>添加到 Bot</li>
+</ol>
+<h3 id="63-更新人设">6.3 更新人设</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## 工具使用说明
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>当用户需要处理 Excel 时：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 询问文件和合并/拆分方式
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 调用 Excel Processor 插件
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 返回处理结果
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>当用户需要生成周报时：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 收集工作内容、问题、计划
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 调用周报生成工作流
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 返回文档下载链接
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>当用户需要管理待办时：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 识别具体操作（添加/查看/完成）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 调用待办管理工作流
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 返回操作结果
+</span></span></code></pre></div><hr>
+<h2 id="七步骤六测试与优化">七、步骤六：测试与优化</h2>
+<h3 id="71-测试用例">7.1 测试用例</h3>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>输入</th>
+          <th>预期结果</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Excel 合并</td>
+          <td>&ldquo;合并这3个Excel&rdquo;</td>
+          <td>询问文件和方式，返回合并结果</td>
+      </tr>
+      <tr>
+          <td>周报生成</td>
+          <td>&ldquo;帮我生成本周周报&rdquo;</td>
+          <td>收集信息，生成文档</td>
+      </tr>
+      <tr>
+          <td>添加待办</td>
+          <td>&ldquo;记得下午开会&rdquo;</td>
+          <td>保存待办，返回确认</td>
+      </tr>
+      <tr>
+          <td>查看待办</td>
+          <td>&ldquo;有什么待办&rdquo;</td>
+          <td>返回待办列表</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="72-常见问题">7.2 常见问题</h3>
+<p><strong>Q1：插件调用失败</strong></p>
+<ul>
+<li>检查 API 地址是否正确</li>
+<li>查看日志中的错误信息</li>
+<li>确认网络连接</li>
+</ul>
+<p><strong>Q2：工作流执行超时</strong></p>
+<ul>
+<li>优化代码执行效率</li>
+<li>减少不必要的计算</li>
+<li>使用异步处理</li>
+</ul>
+<hr>
+<h2 id="八步骤七发布">八、步骤七：发布</h2>
+<h3 id="81-发布配置">8.1 发布配置</h3>
+<ol>
+<li>点击「发布」</li>
+<li>选择发布渠道：
+<ul>
+<li>✅ Coze 商店</li>
+<li>✅ 豆包</li>
+<li>⬜ 飞书（可选）</li>
+</ul>
+</li>
+<li>填写发布信息：
+<ul>
+<li>分类：效率工具</li>
+<li>标签：Excel, 周报, 待办, 办公</li>
+</ul>
+</li>
+</ol>
+<h3 id="82-推广技巧">8.2 推广技巧</h3>
+<ul>
+<li>生成分享二维码</li>
+<li>编写使用教程</li>
+<li>收集用户反馈</li>
+</ul>
+<hr>
+<h2 id="九课后作业">九、课后作业</h2>
+<h3 id="作业1扩展功能">作业1：扩展功能</h3>
+<p>为办公助手添加：</p>
+<ul>
+<li>PDF 转 Word 功能</li>
+<li>数据统计图表生成</li>
+<li>定时提醒功能</li>
+</ul>
+<h3 id="作业2优化体验">作业2：优化体验</h3>
+<ul>
+<li>添加更多错误处理</li>
+<li>优化对话流程</li>
+<li>增加使用示例</li>
+</ul>
+<hr>
+<h2 id="十下节预告">十、下节预告</h2>
+<p><strong>第8讲：OpenClaw 平台深度解析</strong></p>
+<p>我们将学习：</p>
+<ul>
+<li>OpenClaw 的架构和特点</li>
+<li>本地开发环境搭建</li>
+<li>ClawHub 生态使用</li>
+</ul>
+<hr>
+<h2 id="加入学习群">加入学习群</h2>
+<p>实战遇到问题？欢迎加入交流群：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">加入AI编程学习交流群</a></strong></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" alt="点击加入"></p>
+<hr>
+<p><em>本讲是《Skills 从入门到实践》系列课程的第7讲，恭喜你完成了第一个完整的办公助手 Skill！</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260406-05-interaction-design/">上一篇：&#34;第5讲：Skill 的交互设计：让对话更自然&#34;</a>
+        
+        
+        <a href="http://localhost:4002/20260406-08-openclaw-deep-dive/">下一篇：&#34;第8讲：OpenClaw 平台深度解析&#34;</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

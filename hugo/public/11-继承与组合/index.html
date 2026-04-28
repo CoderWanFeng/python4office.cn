@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 11 讲：Python 继承与组合 | MRO、钻石继承、super()原理与 Mixin 设计模式 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 11 讲：Python 继承与组合 | MRO、钻石继承、super()原理与 Mixin 设计模式</h1>
+        <div class="post-meta">
+            <span>2026-03-03 09:50</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E7%BB%A7%E6%89%BF/" class="tag">Python继承</a>
+            
+            <a href="/tags/python%E7%BB%84%E5%90%88/" class="tag">Python组合</a>
+            
+            <a href="/tags/mro/" class="tag">MRO</a>
+            
+            <a href="/tags/method-resolution-order/" class="tag">Method Resolution Order</a>
+            
+            <a href="/tags/super/" class="tag">super</a>
+            
+            <a href="/tags/mixin/" class="tag">Mixin</a>
+            
+            <a href="/tags/%E5%A4%9A%E9%87%8D%E7%BB%A7%E6%89%BF/" class="tag">多重继承</a>
+            
+            <a href="/tags/python%E8%BF%9B%E9%98%B6/" class="tag">Python进阶</a>
+            
+            <a href="/tags/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="tag">Python面向对象</a>
+            
+            <a href="/tags/python%E9%9D%A2%E8%AF%95/" class="tag">Python面试</a>
+            
+            <a href="/tags/%E6%B5%81%E7%95%85%E7%9A%84python/" class="tag">流畅的Python</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>你在写类的时候，第一反应是继承还是组合？</strong> 说实话，我以前也是&quot;继承狂魔&quot;——能继承就继承，觉得这样代码复用率最高。后来踩了一堆坑才知道，<strong>组合才是王道</strong>，但继承也有它的用武之地。今天咱们就把 MRO、super()、Mixin 这些搞透彻。</p>
+<hr>
+<h2 id="-mro-方法解析顺序多重继承的寻路地图">🧬 MRO 方法解析顺序：多重继承的寻路地图</h2>
+<h3 id="钻石继承问题">钻石继承问题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">method</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;A&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">B</span>(A):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">method</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;B&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span>(A):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">method</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;C&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">D</span>(B, C):  <span style="color:#75715e"># 钻石继承：D → B → C → A</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(D<span style="color:#f92672">.</span>__mro__)  
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (&lt;class &#39;D&#39;&gt;, &lt;class &#39;B&#39;&gt;, &lt;class &#39;C&#39;&gt;, &lt;class &#39;A&#39;&gt;, &lt;class &#39;object&#39;&gt;)</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> D()
+</span></span><span style="display:flex;"><span>d<span style="color:#f92672">.</span>method()  <span style="color:#75715e"># B —— 按 MRO 顺序查找，先找到 B</span>
+</span></span></code></pre></div><blockquote>
+<p>💡 <strong>MRO 是什么？</strong> Method Resolution Order，方法解析顺序。Python 使用 C3 线性化算法来确定多重继承时方法的查找顺序。你可以把它理解为一张&quot;寻路地图&quot;——Python 按这个顺序依次查找方法。</p>
+</blockquote>
+<h3 id="查看-mro-的两种方式">查看 MRO 的两种方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 方式1：__mro__ 属性（元组）</span>
+</span></span><span style="display:flex;"><span>print(D<span style="color:#f92672">.</span>__mro__)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (&lt;class &#39;D&#39;&gt;, &lt;class &#39;B&#39;&gt;, &lt;class &#39;C&#39;&gt;, &lt;class &#39;A&#39;&gt;, &lt;class &#39;object&#39;&gt;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：mro() 方法（列表）</span>
+</span></span><span style="display:flex;"><span>print(D<span style="color:#f92672">.</span>mro())
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&lt;class &#39;D&#39;&gt;, &lt;class &#39;B&#39;&gt;, &lt;class &#39;C&#39;&gt;, &lt;class &#39;A&#39;&gt;, &lt;class &#39;object&#39;&gt;]</span>
+</span></span></code></pre></div><h3 id="mro-不合法的情况">MRO 不合法的情况</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 这种继承顺序会报错</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">X</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Y</span>(X):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># class Z(X, Y):  # TypeError: Cannot create a consistent MRO!</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 原因：X 在 Y 之前，但 Y 继承自 X，矛盾！</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确顺序</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Z</span>(Y, X):  <span style="color:#75715e"># 先 Y 后 X，Y 继承 X，不矛盾</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><hr>
+<h2 id="-super不是调用父类而是调用-mro-中的下一个">🔧 super()：不是调用父类，而是调用 MRO 中的下一个</h2>
+<h3 id="super-的真实行为">super() 的真实行为</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">method</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;A.method&#34;</span>)
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span>method()  <span style="color:#75715e"># 调用 MRO 中的下一个</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">B</span>(A):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">method</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;B.method&#34;</span>)
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span>method()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span>(A):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">method</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;C.method&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 没有 super() 调用，链条到此为止</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">D</span>(B, C):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">method</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;D.method&#34;</span>)
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span>method()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> D()
+</span></span><span style="display:flex;"><span>d<span style="color:#f92672">.</span>method()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># D.method → B.method → C.method</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 注意：A.method 没被调用！因为 C 没调 super()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(D<span style="color:#f92672">.</span>__mro__)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># D → B → C → A → object</span>
+</span></span></code></pre></div><h3 id="super-在-__init__-中的用法">super() 在 <code>__init__</code> 中的用法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Base</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Base.__init__&#34;</span>)
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span><span style="color:#a6e22e">__init__</span>(<span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>(Base):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, a_val, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;A.__init__(a_val=</span><span style="color:#e6db74">{</span>a_val<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span><span style="color:#a6e22e">__init__</span>(<span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">B</span>(Base):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, b_val, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;B.__init__(b_val=</span><span style="color:#e6db74">{</span>b_val<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span><span style="color:#a6e22e">__init__</span>(<span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Child</span>(A, B):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, a_val, b_val, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Child.__init__&#34;</span>)
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span><span style="color:#a6e22e">__init__</span>(a_val<span style="color:#f92672">=</span>a_val, b_val<span style="color:#f92672">=</span>b_val, <span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> Child(a_val<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, b_val<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Child.__init__</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A.__init__(a_val=1)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># B.__init__(b_val=2)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Base.__init__</span>
+</span></span></code></pre></div><blockquote>
+<p>⚠️ <strong>关键点</strong>：<code>super()</code> 不是调用&quot;父类&quot;，而是调用 MRO 链中的下一个类。配合 <code>**kwargs</code> 可以让所有 <code>__init__</code> 都被调用到。</p>
+</blockquote>
+<hr>
+<h2 id="-mixin-模式即插即用的功能模块">🧩 Mixin 模式：即插即用的功能模块</h2>
+<h3 id="什么是-mixin">什么是 Mixin？</h3>
+<p>Mixin 是一种特殊的类，它不单独使用，而是被混入到其他类中提供可选功能。它不是&quot;is-a&quot;关系，而是&quot;can-do&quot;关系。</p>
+<h3 id="实用-mixin-示例">实用 Mixin 示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSONSerializableMixin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;提供 JSON 序列化功能的 Mixin&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_json</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> json<span style="color:#f92672">.</span>dumps(self<span style="color:#f92672">.</span>__dict__, ensure_ascii<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, indent<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@classmethod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">from_json</span>(cls, json_str):
+</span></span><span style="display:flex;"><span>        data <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(json_str)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> cls(<span style="color:#f92672">**</span>data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReprMixin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;提供友好 repr 的 Mixin&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__repr__</span>(self):
+</span></span><span style="display:flex;"><span>        class_name <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>__class__<span style="color:#f92672">.</span>__name__
+</span></span><span style="display:flex;"><span>        attrs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;, &#39;</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>k<span style="color:#e6db74">}</span><span style="color:#e6db74">=</span><span style="color:#e6db74">{</span>v<span style="color:#e6db74">!r}</span><span style="color:#e6db74">&#39;</span> <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>__dict__<span style="color:#f92672">.</span>items())
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>class_name<span style="color:#e6db74">}</span><span style="color:#e6db74">(</span><span style="color:#e6db74">{</span>attrs<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ComparableMixin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;提供比较功能的 Mixin&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__eq__</span>(self, other):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(other, self<span style="color:#f92672">.</span>__class__):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> NotImplemented
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__dict__ <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>__dict__
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__ne__</span>(self, other):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span><span style="color:#a6e22e">__eq__</span>(other)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 组合使用多个 Mixin</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(JSONSerializableMixin, ReprMixin, ComparableMixin):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, name, age):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>age <span style="color:#f92672">=</span> age
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>u <span style="color:#f92672">=</span> User(<span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>print(u)               <span style="color:#75715e"># User(name=&#39;Alice&#39;, age=30)</span>
+</span></span><span style="display:flex;"><span>print(u<span style="color:#f92672">.</span>to_json())     <span style="color:#75715e"># {&#34;name&#34;: &#34;Alice&#34;, &#34;age&#34;: 30}</span>
+</span></span><span style="display:flex;"><span>print(u <span style="color:#f92672">==</span> User(<span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#ae81ff">30</span>))  <span style="color:#75715e"># True</span>
+</span></span></code></pre></div><h3 id="mixin-设计原则">Mixin 设计原则</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ✅ 好的 Mixin：单一职责、无状态依赖</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LogMixin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;日志 Mixin&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log</span>(self, message):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>__class__<span style="color:#f92672">.</span>__name__<span style="color:#e6db74">}</span><span style="color:#e6db74">] </span><span style="color:#e6db74">{</span>message<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ValidateMixin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;验证 Mixin&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">validate</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>__dict__<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> value <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74"> 不能为空&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 坏的 Mixin：依赖特定属性、多职责</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BadMixin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;这个 Mixin 假设宿主类有特定属性，不通用&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 假设宿主有 self.data 和 self.config</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>data <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>config  <span style="color:#75715e"># 脆弱！</span>
+</span></span></code></pre></div><hr>
+<h2 id="-继承-vs-组合什么时候用什么">⚖️ 继承 vs 组合：什么时候用什么</h2>
+<h3 id="一张表看明白">一张表看明白</h3>
+<table>
+  <thead>
+      <tr>
+          <th>维度</th>
+          <th>继承</th>
+          <th>组合</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>关系</td>
+          <td>is-a（是一个）</td>
+          <td>has-a（有一个）</td>
+      </tr>
+      <tr>
+          <td>耦合度</td>
+          <td>高</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td>灵活性</td>
+          <td>编译时确定</td>
+          <td>运行时可变</td>
+      </tr>
+      <tr>
+          <td>复用性</td>
+          <td>白盒（可见内部）</td>
+          <td>黑盒（只看接口）</td>
+      </tr>
+      <tr>
+          <td>适用场景</td>
+          <td>确实有层次关系</td>
+          <td>只需要某些功能</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="实战对比鸭子问题">实战对比：鸭子问题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 继承（不推荐）：橡皮鸭不会叫，但被迫继承了 quack</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Duck</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quack</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Quack!&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fly</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Flying!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RubberDuck</span>(Duck):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quack</span>(self):   <span style="color:#75715e"># 覆盖</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Squeak!&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fly</span>(self):     <span style="color:#75715e"># 覆盖</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">NotImplementedError</span>(<span style="color:#e6db74">&#34;橡皮鸭不会飞！&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 组合（推荐）：行为可以灵活替换</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuackBehavior</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quack</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Quack!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SqueakBehavior</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quack</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Squeak!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MuteBehavior</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quack</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;...（沉默）&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FlyBehavior</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fly</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Flying!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NoFlyBehavior</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fly</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;不会飞&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Duck</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, quack_behavior, fly_behavior):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>quack_behavior <span style="color:#f92672">=</span> quack_behavior
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>fly_behavior <span style="color:#f92672">=</span> fly_behavior
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">perform_quack</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>quack_behavior<span style="color:#f92672">.</span>quack()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">perform_fly</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>fly_behavior<span style="color:#f92672">.</span>fly()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 真鸭</span>
+</span></span><span style="display:flex;"><span>real_duck <span style="color:#f92672">=</span> Duck(QuackBehavior(), FlyBehavior())
+</span></span><span style="display:flex;"><span>real_duck<span style="color:#f92672">.</span>perform_quack()  <span style="color:#75715e"># Quack!</span>
+</span></span><span style="display:flex;"><span>real_duck<span style="color:#f92672">.</span>perform_fly()    <span style="color:#75715e"># Flying!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 橡皮鸭</span>
+</span></span><span style="display:flex;"><span>rubber_duck <span style="color:#f92672">=</span> Duck(SqueakBehavior(), NoFlyBehavior())
+</span></span><span style="display:flex;"><span>rubber_duck<span style="color:#f92672">.</span>perform_quack()  <span style="color:#75715e"># Squeak!</span>
+</span></span><span style="display:flex;"><span>rubber_duck<span style="color:#f92672">.</span>perform_fly()    <span style="color:#75715e"># 不会飞</span>
+</span></span></code></pre></div><h3 id="什么时候用继承">什么时候用继承？</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ✅ 适合继承：确实是 is-a 关系</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, name):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span>(Animal):     <span style="color:#75715e"># 狗是一种动物 ✅</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bark</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Woof!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span>(Animal):     <span style="color:#75715e"># 猫是一种动物 ✅</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">meow</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Meow!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 适合继承：框架要求</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FlaskView</span>:       <span style="color:#75715e"># Flask 要求继承</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyView</span>(FlaskView):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<p><strong>MRO</strong>：C3 线性化算法决定方法查找顺序。用 <code>__mro__</code> 查看，避免矛盾的继承顺序。</p>
+<p><strong>super()</strong>：不是调用父类，而是调用 MRO 中的下一个类。配合 <code>**kwargs</code> 确保所有 <code>__init__</code> 被调用。</p>
+<p><strong>Mixin 模式</strong>：提供可选功能的&quot;即插即用&quot;模块，单一职责、不依赖宿主内部结构。</p>
+<p><strong>继承 vs 组合</strong>：优先使用组合，继承只用于真正的 is-a 关系或框架要求。</p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong><a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
+<hr>
+<h2 id="-加入流畅的-python直播共读营">🎓 加入《流畅的 Python》直播共读营</h2>
+<p>学到这里，如果你想系统吃透这本书——欢迎加入我的直播共读课。</p>
+<ul>
+<li>每周直播精讲，逐章拆解核心知识点</li>
+<li>专属学习群，随时答疑交流</li>
+<li>试运营特惠：<del>499 元</del> → <strong>299 元</strong></li>
+</ul>
+<p>👉 <strong>【立即报名《流畅的 Python》共读课】</strong>：https://mp.weixin.qq.com/s/ivHJwn1nNx5ug4TFrapvGg</p>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="10-%E5%BA%8F%E5%88%97%E5%92%8C%E5%A4%9A%E6%80%81.md">上一讲：序列和多态</a> | <a href="12-%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%8D%8F%E8%AE%AE.md">下一讲：接口与协议</a> →</p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/4f7696ff-fbef-423c-8874-38dfb05b165f/fluent-python.png" alt="fluent-python.png" title="fluent-python.png"></p>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/10-%E5%BA%8F%E5%88%97%E5%92%8C%E5%A4%9A%E6%80%81/">上一篇：第 10 讲：Python 序列与多态 | 抽象基类、Sequence、Iterable 与协议继承</a>
+        
+        
+        <a href="http://localhost:4002/12-%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%8D%8F%E8%AE%AE/">下一篇：第 12 讲：Python 接口与协议 | Duck Typing、Protocol 类、结构子类型与类型提示</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

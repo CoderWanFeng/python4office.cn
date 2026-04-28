@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 6 讲 数据类与类型提示工程化 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 6 讲 数据类与类型提示工程化</h1>
+        <div class="post-meta">
+            <span>2025-07-20 06:41</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" class="tag">第三方库</a>
+            
+            <a href="/tags/pyinstaller/" class="tag">pyinstaller</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，这里是程序员晚枫，正在all in <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">AI编程实战</a>，全网同名。</p>
+<p>（3 h 直播 / 录播可拆 2 次）</p>
+<p>目标<br>
+• 把 <code>dataclasses</code> 玩出花：默认值、继承、转换、序列化一条龙<br>
+• 用 <code>typing</code> 新特性 + <code>mypy</code> 做 CI 级类型检查<br>
+• 写一个“运行时校验 + JSON 生成”的迷你 DTO 框架，并悄悄植入「程序员晚枫」彩蛋</p>
+<p>──────────────────<br>
+6.0 开场 2 min<br>
+“写代码不写类型，就像泡面不放调料包——能跑，但味道差。”</p>
+<p>──────────────────<br>
+6.1 <code>dataclasses</code> 速通（15 min）<br>
+6.1.1 基础写法</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> dataclasses <span style="color:#f92672">import</span> dataclass
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>:
+</span></span><span style="display:flex;"><span>    id: int
+</span></span><span style="display:flex;"><span>    name: str
+</span></span><span style="display:flex;"><span>    vip: bool <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span></code></pre></div><p>6.1.2 继承 &amp; 默认值工厂</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Config</span>:
+</span></span><span style="display:flex;"><span>    db: dict <span style="color:#f92672">=</span> field(default_factory<span style="color:#f92672">=</span>dict)   <span style="color:#75715e"># 可变默认值</span>
+</span></span></code></pre></div><p>6.1.3 <code>__post_init__</code> 钩子</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span>:
+</span></span><span style="display:flex;"><span>    r: float
+</span></span><span style="display:flex;"><span>    area: float <span style="color:#f92672">=</span> field(init<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__post_init__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>area <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1416</span> <span style="color:#f92672">*</span> self<span style="color:#f92672">.</span>r <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><p>──────────────────<br>
+6.2 typing 新特性 25 min<br>
+6.2.1 <code>Literal</code>、<code>TypedDict</code>、<code>Protocol</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Literal, TypedDict, Protocol
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Movie</span>(TypedDict):
+</span></span><span style="display:flex;"><span>    title: str
+</span></span><span style="display:flex;"><span>    year: int
+</span></span><span style="display:flex;"><span>    genre: Literal[<span style="color:#e6db74">&#34;comedy&#34;</span>, <span style="color:#e6db74">&#34;drama&#34;</span>, <span style="color:#e6db74">&#34;action&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Drawable</span>(Protocol):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">draw</span>(self) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>: <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>6.2.2 mypy 渐进式检查</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>poetry add mypy pre-commit
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># .pre-commit-config.yaml</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">repo</span>: <span style="color:#ae81ff">https://github.com/pre-commit/mirrors-mypy</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rev</span>: <span style="color:#ae81ff">v1.8.0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hooks</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">mypy</span>
+</span></span></code></pre></div><p>──────────────────<br>
+6.3 实战：运行时校验 + JSON 序列化（45 min）<br>
+需求：一个 DTO 既能被 mypy 静态检查，又能在运行时校验。<br>
+6.3.1 环境准备</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>poetry add pydantic<span style="color:#f92672">[</span>email<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>6.3.2 用 <code>dataclass</code> + <code>pydantic</code> 混搭</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> dataclasses <span style="color:#f92672">import</span> dataclass
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pydantic <span style="color:#f92672">import</span> BaseModel, Field, validator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>:
+</span></span><span style="display:flex;"><span>    street: str
+</span></span><span style="display:flex;"><span>    city: str
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserDTO</span>(BaseModel):
+</span></span><span style="display:flex;"><span>    id: int <span style="color:#f92672">=</span> Field(gt<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    name: str <span style="color:#f92672">=</span> Field(min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+</span></span><span style="display:flex;"><span>    email: str
+</span></span><span style="display:flex;"><span>    address: Address
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@validator</span>(<span style="color:#e6db74">&#39;email&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">valid_email</span>(cls, v):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;@&#39;</span> <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> v:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#39;程序员晚枫提示：邮箱格式不对哦&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> v
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 运行</span>
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> UserDTO(id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;晚枫&#34;</span>, email<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;wanfeng@example.com&#34;</span>, address<span style="color:#f92672">=</span>Address(<span style="color:#e6db74">&#34;中关村&#34;</span>, <span style="color:#e6db74">&#34;北京&#34;</span>))
+</span></span><span style="display:flex;"><span>print(user<span style="color:#f92672">.</span>json(indent<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>))
+</span></span></code></pre></div><p>6.3.3 彩蛋：JSON 输出带签名</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>dict()
+</span></span><span style="display:flex;"><span>data[<span style="color:#e6db74">&#34;_source&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;程序员晚枫专属 DTO&#34;</span>
+</span></span><span style="display:flex;"><span>print(data)
+</span></span></code></pre></div><p>──────────────────<br>
+6.4 泛型数据类（20 min）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> TypeVar, Generic
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>T <span style="color:#f92672">=</span> TypeVar(<span style="color:#e6db74">&#39;T&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Page</span>(Generic[T]):
+</span></span><span style="display:flex;"><span>    items: list[T]
+</span></span><span style="display:flex;"><span>    total: int
+</span></span><span style="display:flex;"><span>    page: int
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p: Page[UserDTO] <span style="color:#f92672">=</span> Page(items<span style="color:#f92672">=</span>[user], total<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, page<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>──────────────────<br>
+6.5 用 <code>mypy</code> 做 CI（20 min）<br>
+GitHub Action 模板：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">type-check</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>: [<span style="color:#ae81ff">push, pull_request]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">mypy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-python@v5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>: {<span style="color:#f92672">python-version</span>: <span style="color:#e6db74">&#39;3.12&#39;</span>}
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">pip install poetry</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry install</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry run mypy src/</span>
+</span></span></code></pre></div><p>──────────────────<br>
+6.6 综合案例：配置文件→DTO→JSON Schema（30 min）<br>
+需求：YAML 配置 → 运行时校验 → 导出 JSON Schema 给前端。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> yaml
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pydantic <span style="color:#f92672">import</span> BaseModel, Field
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Settings</span>(BaseModel):
+</span></span><span style="display:flex;"><span>    debug: bool <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    db_url: str <span style="color:#f92672">=</span> Field(regex<span style="color:#f92672">=</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^postgresql://&#39;</span>)
+</span></span><span style="display:flex;"><span>    max_workers: int <span style="color:#f92672">=</span> Field(ge<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, le<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Config</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 彩蛋：默认配置来源</span>
+</span></span><span style="display:flex;"><span>        json_schema_extra <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;由程序员晚枫自动生成&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;settings.yaml&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>    cfg <span style="color:#f92672">=</span> Settings(<span style="color:#f92672">**</span>yaml<span style="color:#f92672">.</span>safe_load(f))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(cfg<span style="color:#f92672">.</span>schema_json(indent<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>))   <span style="color:#75715e"># 前端拿到 schema 直接渲染表单</span>
+</span></span></code></pre></div><p>──────────────────<br>
+6.7 调试技巧（10 min）<br>
+• VS Code 调试：在 <code>__post_init__</code> 打断点<br>
+• <code>pydantic</code> 调试模式：<code>export PYDANTIC_DEV_MODE=1</code></p>
+<p>──────────────────<br>
+6.8 小结 &amp; 思维导图（5 min）<br>
+dataclass → typing → mypy → pydantic → JSON Schema → CI</p>
+<p>──────────────────<br>
+6.9 课后作业</p>
+<ol>
+<li>必做：把今日 <code>UserDTO</code> 拆成 <code>CreateUserDTO</code> 与 <code>UpdateUserDTO</code>，并写 <code>pytest</code> 参数化测试。</li>
+<li>选做：用 <code>dataclass</code> 写一个支持分页、排序、过滤的通用查询 DTO。</li>
+<li>彩蛋：在 JSON Schema 的 <code>description</code> 里加入「程序员晚枫」专属口号。</li>
+</ol>
+<p>提交：<br>
+• 代码 push 到 <code>feat/lesson6</code><br>
+• CI 自动跑 <code>mypy --strict</code> + <code>pytest</code></p>
+<p>（第 6 讲完）</p>
+<hr>
+<p>大家在学习课程中有任何问题，欢迎+微信和我交流👉<a href="https://www.python4office.cn/wechat-qrcode/">我的联系方式：微信、读者群、1对1、福利</a></p>
+<p><img src="https://cos.python-office.com/ads/gzh/sub-py.jpg" alt=""></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg" alt="扫一扫，领红包"></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg" alt="美团红包"></p>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/5-%E5%85%83%E7%B1%BB/">上一篇：第 5 讲 元类黑魔法入门</a>
+        
+        
+        <a href="http://localhost:4002/7-%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B/">下一篇：第 7 讲 并发模型抉择</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 8 讲：字节码执行——虚拟机与栈帧机制 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 8 讲：字节码执行——虚拟机与栈帧机制</h1>
+        <div class="post-meta">
+            <span>2026-03-03 10:40</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python/" class="tag">python</a>
+            
+            <a href="/tags/cpython/" class="tag">CPython</a>
+            
+            <a href="/tags/vm/" class="tag">VM</a>
+            
+            <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A0%88%E5%B8%A7/" class="tag">虚拟机，栈帧</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>字节码如何在虚拟机中执行？理解栈式虚拟机的原理。这一讲，揭开 Python 虚拟机的核心机制。</strong></p>
+<hr>
+<h2 id="-开篇python-代码是如何运行的">📖 开篇：Python 代码是如何运行的？</h2>
+<p>我们写的 Python 代码，不会被直接执行，而是经过了这个过程：</p>
+<pre tabindex="0"><code>源代码 (.py)
+    ↓ 编译
+字节码 (.pyc)
+    ↓ 解释执行
+Python 虚拟机 (PVM)
+</code></pre><p>CPython 的虚拟机是一个<strong>栈式虚拟机</strong>（Stack-based VM），所有操作都在操作数栈上进行。</p>
+<hr>
+<h2 id="-虚拟机架构">🖥️ 虚拟机架构</h2>
+<h3 id="核心cevalc">核心：ceval.c</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// Python/ceval.c
+</span></span></span><span style="display:flex;"><span>PyObject<span style="color:#f92672">*</span> <span style="color:#a6e22e">_PyEval_EvalFrameDefault</span>(PyThreadState<span style="color:#f92672">*</span> tstate,
+</span></span><span style="display:flex;"><span>                                    PyFrameObject<span style="color:#f92672">*</span> f,
+</span></span><span style="display:flex;"><span>                                    <span style="color:#66d9ef">int</span> throwflag)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 这是 CPython 最核心的函数！
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 负责执行字节码指令的主循环
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (;;) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. 获取下一条指令
+</span></span></span><span style="display:flex;"><span>        opcode <span style="color:#f92672">=</span> <span style="color:#a6e22e">NEXTOP</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// opcode 是 8 位的操作码
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 获取操作数（如果有）
+</span></span></span><span style="display:flex;"><span>        oparg <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">HAS_ARG</span>(opcode)) {
+</span></span><span style="display:flex;"><span>            oparg <span style="color:#f92672">=</span> <span style="color:#a6e22e">NEXTARG</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 3. 分发到对应的处理函数
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">switch</span> (opcode) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">case</span> LOAD_FAST:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// LOAD_FAST 实现：把局部变量压入栈
+</span></span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">PUSH</span>(fastlocals[oparg]);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">case</span> STORE_FAST:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// STORE_FAST 实现：从栈顶弹出并存入局部变量
+</span></span></span><span style="display:flex;"><span>                fastlocals[oparg] <span style="color:#f92672">=</span> <span style="color:#a6e22e">POP</span>();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">case</span> BINARY_ADD:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 加法：弹出两个值，相加，压入栈
+</span></span></span><span style="display:flex;"><span>                v <span style="color:#f92672">=</span> <span style="color:#a6e22e">POP</span>();
+</span></span><span style="display:flex;"><span>                w <span style="color:#f92672">=</span> <span style="color:#a6e22e">POP</span>();
+</span></span><span style="display:flex;"><span>                x <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyNumber_Add</span>(w, v);
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">PUSH</span>(x);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">case</span> RETURN_VALUE:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 返回：弹出栈顶值，作为函数返回值
+</span></span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">POP</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">case</span> ...<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 其他几百条指令...
+</span></span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="主循环的三个步骤">主循环的三个步骤</h3>
+<pre tabindex="0"><code>fetch   → 从内存读取指令（PC++）
+decode  → 解析操作码和操作数
+execute → 执行对应操作
+</code></pre><hr>
+<h2 id="-栈式虚拟机工作原理">📊 栈式虚拟机工作原理</h2>
+<h3 id="操作数栈">操作数栈</h3>
+<p>虚拟机有一个栈（Stack），所有操作都在这个栈上进行：</p>
+<pre tabindex="0"><code>执行 1 + 2：
+
+初始状态：
+  Stack: []
+
+LOAD_CONST 1：
+  Stack: [1]
+
+LOAD_CONST 2：
+  Stack: [1, 2]
+
+BINARY_ADD：
+  Pop 2 → w = 2
+  Pop 1 → v = 1
+  计算 w + v = 3
+  Push 3
+  Stack: [3]
+
+RETURN_VALUE：
+  返回 3，栈帧销毁
+</code></pre><h3 id="实际演示">实际演示</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> dis
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dis<span style="color:#f92672">.</span>dis(add)
+</span></span></code></pre></div><pre tabindex="0"><code>  2           0 LOAD_FAST                0 (a)
+              2 LOAD_FAST                1 (b)
+              4 BINARY_ADD
+              6 RETURN_VALUE
+</code></pre><p>每条指令对应的栈操作：</p>
+<pre tabindex="0"><code>LOAD_FAST 0  → Stack: [a]
+LOAD_FAST 1  → Stack: [a, b]
+BINARY_ADD   → Stack: [a+b]  (弹出两个，push 一个)
+RETURN_VALUE → 返回 a+b
+</code></pre><hr>
+<h2 id="-栈帧结构">📚 栈帧结构</h2>
+<p>每个函数调用都有一个对应的栈帧：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> _frame {
+</span></span><span style="display:flex;"><span>    PyObject_VAR_HEAD
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 链式结构
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> _frame <span style="color:#f92672">*</span>f_back;      <span style="color:#75715e">// 上一个栈帧（调用者）
+</span></span></span><span style="display:flex;"><span>    PyCodeObject <span style="color:#f92672">*</span>f_code;       <span style="color:#75715e">// 执行的代码对象
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>f_builtins;       <span style="color:#75715e">// 内置命名空间
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>f_globals;        <span style="color:#75715e">// 全局命名空间
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>f_locals;         <span style="color:#75715e">// 局部命名空间
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 操作数栈
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">**</span>f_valuestack;    <span style="color:#75715e">// 栈底
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">**</span>f_stacktop;      <span style="color:#75715e">// 栈顶指针
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 局部变量 + 闭包单元格
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>f_localsplus[<span style="color:#ae81ff">1</span>];   <span style="color:#75715e">// 变长数组
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 指令指针
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> f_lasti;                <span style="color:#75715e">// 最后执行的字节码偏移
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 异常状态
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>exc_type, <span style="color:#f92672">*</span>exc_value, <span style="color:#f92672">*</span>exc_traceback;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="调用栈示例">调用栈示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">a</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> b() <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">b</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> c() <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">c</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(a())  <span style="color:#75715e"># (42 * 2) + 1 = 85</span>
+</span></span></code></pre></div><pre tabindex="0"><code>调用栈：
+frame_a: a() - waiting for b() result
+    frame_b: b() - waiting for c() result
+        frame_c: c() - returning 42
+</code></pre><hr>
+<h2 id="-代码对象pycodeobject">🔍 代码对象（PyCodeObject）</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    PyObject_HEAD
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 代码基本信息
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> co_argcount;          <span style="color:#75715e">// 位置参数个数
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> co_posonlyargcount;   <span style="color:#75715e">// 仅位置参数个数
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> co_kwonlyargcount;    <span style="color:#75715e">// 仅关键字参数个数
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> co_nlocals;           <span style="color:#75715e">// 局部变量个数
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> co_stacksize;         <span style="color:#75715e">// 操作数栈最大深度
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> co_flags;             <span style="color:#75715e">// 编译标志
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 字节码
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_code;        <span style="color:#75715e">// 字节码指令序列（bytes）
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 常量和变量
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_constants;   <span style="color:#75715e">// 常量池（元组）
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_names;       <span style="color:#75715e">// 名称池（元组）
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_varnames;    <span style="color:#75715e">// 局部变量名（元组）
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_freevars;    <span style="color:#75715e">// 自由变量名（闭包）
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_cellvars;    <span style="color:#75715e">// 单元格变量名
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 位置信息
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_filename;    <span style="color:#75715e">// 源码文件名
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_name;       <span style="color:#75715e">// 函数名
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> co_firstlineno;       <span style="color:#75715e">// 首行号
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 行号表
+</span></span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>co_lnotab;     <span style="color:#75715e">// 行号到字节码偏移的映射
+</span></span></span><span style="display:flex;"><span>} PyCodeObject;
+</span></span></code></pre></div><h3 id="查看代码对象">查看代码对象</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(name, greeting<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello&#34;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>greeting<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(greet<span style="color:#f92672">.</span>__code__<span style="color:#f92672">.</span>co_varnames)     <span style="color:#75715e"># (&#39;name&#39;, &#39;greeting&#39;)</span>
+</span></span><span style="display:flex;"><span>print(greet<span style="color:#f92672">.</span>__code__<span style="color:#f92672">.</span>co_argcount)     <span style="color:#75715e"># 1</span>
+</span></span><span style="display:flex;"><span>print(greet<span style="color:#f92672">.</span>__code__<span style="color:#f92672">.</span>co_consts)       <span style="color:#75715e"># 默认参数</span>
+</span></span><span style="display:flex;"><span>print(greet<span style="color:#f92672">.</span>__code__<span style="color:#f92672">.</span>co_code)         <span style="color:#75715e"># 字节码 bytes</span>
+</span></span></code></pre></div><hr>
+<h2 id="-指令执行速度">⚡ 指令执行速度</h2>
+<h3 id="指令分派开销">指令分派开销</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// Python 3.10 及之前：巨大的 switch 语句
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (opcode) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> LOAD_FAST: ... <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> LOAD_CONST: ... <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ... 几百条 case ...
+</span></span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Python 3.11+：间接分派（Indirect threading）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 用跳转表替代 switch，跳转目标提前计算
+</span></span></span></code></pre></div><p>Python 3.11 的字节码优化让平均执行速度快了 10-15%，就是这个原因。</p>
+<hr>
+<h2 id="-本节作业">💡 本节作业</h2>
+<ol>
+<li>用 <code>dis</code> 分析一个复杂函数的字节码，画出栈操作过程</li>
+<li>打印 <code>add.__code__</code> 的所有属性，理解代码对象的结构</li>
+<li>思考：为什么 Python 3.11 的字节码指令比之前少了？</li>
+</ol>
+<hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<p><strong>虚拟机架构</strong>：栈式虚拟机，通过 switch 分派执行字节码指令。</p>
+<p><strong>操作数栈</strong>：所有操作都在栈上进行（压栈、出栈、运算）。</p>
+<p><strong>栈帧结构</strong>：包含命名空间、执行状态、操作数栈，是函数调用的载体。</p>
+<p><strong>代码对象</strong>：包含字节码、常量池、变量名等编译产物。</p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong><a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<hr>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="07-%E5%AD%97%E8%8A%82%E7%A0%81%E7%BC%96%E8%AF%91.md">上一讲：字节码编译</a> | <a href="09-%E5%B8%B8%E8%A7%81%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4.md">下一讲：常见字节码指令</a> →</p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">上一篇：第 20 讲：Python 最佳实践 | 标准库进阶 itertools、functools、collections 与实用工具模块</a>
+        
+        
+        <a href="http://localhost:4002/20260303104001-chatgpt-%E5%B7%B2%E6%AD%BBopenclaw-%E7%99%BB%E9%A1%B6%E8%83%8C%E5%90%8E%E6%98%AF-ai-%E5%8A%A9%E6%89%8B%E7%9A%84%E8%8C%83%E5%BC%8F%E8%BD%AC%E7%A7%BB/">下一篇：ChatGPT 已死？OpenClaw 登顶背后是 AI 助手的范式转移</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

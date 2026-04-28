@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第4讲：配置文件详解，掌控OpenClaw的核心参数 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第4讲：配置文件详解，掌控OpenClaw的核心参数</h1>
+        <div class="post-meta">
+            <span>2026-03-01 14:20</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/openclaw/" class="tag">OpenClaw</a>
+            
+            <a href="/tags/%E9%85%8D%E7%BD%AE/" class="tag">配置</a>
+            
+            <a href="/tags/openclaw.json/" class="tag">openclaw.json</a>
+            
+            <a href="/tags/%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98/" class="tag">参数调优</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天我们来深入<strong>OpenClaw的配置系统</strong>。配置文件是OpenClaw的灵魂，掌握它你就能完全掌控Gateway的行为。</p>
+<hr>
+<h2 id="-开篇配置文件是什么">🚀 开篇：配置文件是什么？</h2>
+<p>打个比方：</p>
+<blockquote>
+<p>想象OpenClaw是一辆汽车，配置文件就是<strong>汽车的操控面板</strong>。</p>
+<ul>
+<li>Gateway配置 → 引擎和传动系统</li>
+<li>通道配置 → 车门和窗户</li>
+<li>工具配置 → 各种功能按钮</li>
+<li>会话配置 → 行车电脑</li>
+</ul>
+</blockquote>
+<p><strong>学会调配置，就等于学会了调车。</strong></p>
+<hr>
+<h2 id="配置文件位置">配置文件位置</h2>
+<p>主配置文件位置：</p>
+<pre tabindex="0"><code>~/.openclaw/openclaw.json
+</code></pre><p><strong>常用操作命令</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>命令</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>openclaw config show</code></td>
+          <td>查看当前配置</td>
+      </tr>
+      <tr>
+          <td><code>openclaw config edit</code></td>
+          <td>编辑配置（用默认编辑器）</td>
+      </tr>
+      <tr>
+          <td><code>cat ~/.openclaw/openclaw.json</code></td>
+          <td>直接查看配置文件</td>
+      </tr>
+      <tr>
+          <td><code>nano ~/.openclaw/openclaw.json</code></td>
+          <td>直接编辑配置文件</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="配置文件结构概览">配置文件结构概览</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gateway&#34;</span>: {          <span style="color:#75715e">// Gateway核心配置
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;port&#34;</span>: <span style="color:#ae81ff">18789</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;host&#34;</span>: <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;auth&#34;</span>: {<span style="color:#960050;background-color:#1e0010">...</span>}
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {        <span style="color:#75715e">// AI模型提供商
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;anthropic&#34;</span>: {<span style="color:#960050;background-color:#1e0010">...</span>},
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;openai&#34;</span>: {<span style="color:#960050;background-color:#1e0010">...</span>}
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;channels&#34;</span>: {         <span style="color:#75715e">// 消息通道
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;telegram&#34;</span>: {<span style="color:#960050;background-color:#1e0010">...</span>},
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;whatsapp&#34;</span>: {<span style="color:#960050;background-color:#1e0010">...</span>}
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tools&#34;</span>: {            <span style="color:#75715e">// 工具配置
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;exec&#34;</span>: {<span style="color:#960050;background-color:#1e0010">...</span>},
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;browser&#34;</span>: {<span style="color:#960050;background-color:#1e0010">...</span>}
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;sessions&#34;</span>: {         <span style="color:#75715e">// 会话管理
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;maxHistory&#34;</span>: <span style="color:#ae81ff">100</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ttl&#34;</span>: <span style="color:#ae81ff">3600</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;logging&#34;</span>: {          <span style="color:#75715e">// 日志配置
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;level&#34;</span>: <span style="color:#e6db74">&#34;info&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;file&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>各模块说明</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>模块</th>
+          <th>作用</th>
+          <th>修改频率</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>gateway</code></td>
+          <td>服务端口、安全设置</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td><code>providers</code></td>
+          <td>AI模型API配置</td>
+          <td>中</td>
+      </tr>
+      <tr>
+          <td><code>channels</code></td>
+          <td>聊天平台连接配置</td>
+          <td>中</td>
+      </tr>
+      <tr>
+          <td><code>tools</code></td>
+          <td>工具权限和参数</td>
+          <td>高</td>
+      </tr>
+      <tr>
+          <td><code>sessions</code></td>
+          <td>会话行为配置</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td><code>logging</code></td>
+          <td>日志级别和输出</td>
+          <td>低</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="核心配置项详解">核心配置项详解</h2>
+<h3 id="1-gateway配置-">1. Gateway配置 ⭐</h3>
+<p>Gateway是OpenClaw的核心服务，这部分配置决定服务如何运行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gateway&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;port&#34;</span>: <span style="color:#ae81ff">18789</span>,              <span style="color:#75715e">// 服务端口（默认18789，不要改）
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;host&#34;</span>: <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>,        <span style="color:#75715e">// 绑定地址
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;publicUrl&#34;</span>: <span style="color:#66d9ef">null</span>,          <span style="color:#75715e">// 公网访问地址（可选）
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;auth&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;token&#34;</span>,          <span style="color:#75715e">// 认证方式
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;your-secret-token&#34;</span>  <span style="color:#75715e">// 访问令牌
+</span></span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;cors&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,          <span style="color:#75715e">// 是否允许跨域
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;origins&#34;</span>: [<span style="color:#e6db74">&#34;*&#34;</span>]          <span style="color:#75715e">// 允许的域名
+</span></span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>配置说明</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>说明</th>
+          <th>建议</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>port</code></td>
+          <td>服务端口</td>
+          <td>默认18789，不要随便改</td>
+      </tr>
+      <tr>
+          <td><code>host</code></td>
+          <td>监听地址</td>
+          <td>开发用127.0.0.1，生产用0.0.0.0</td>
+      </tr>
+      <tr>
+          <td><code>publicUrl</code></td>
+          <td>公网地址</td>
+          <td>有域名或公网IP时填写</td>
+      </tr>
+      <tr>
+          <td><code>token</code></td>
+          <td>访问令牌</td>
+          <td>生产环境务必设置强密码</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>⚠️ 安全建议</strong>：</p>
+<blockquote>
+<p>生产环境务必设置强token，不要用默认或简单密码。
+建议使用至少32位的随机字符串。</p>
+</blockquote>
+<h3 id="2-模型提供商配置-">2. 模型提供商配置 ⭐⭐</h3>
+<p>这部分决定AI的&quot;大脑&quot;是什么。</p>
+<h4 id="anthropic-claude">Anthropic (Claude)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;anthropic&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;sk-ant-api03-xxxxx&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;baseUrl&#34;</span>: <span style="color:#e6db74">&#34;https://api.anthropic.com&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;defaultModel&#34;</span>: <span style="color:#e6db74">&#34;claude-3-opus&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;defaultParams&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;max_tokens&#34;</span>: <span style="color:#ae81ff">4096</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;temperature&#34;</span>: <span style="color:#ae81ff">0.7</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;models&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;claude-3-opus&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;claude-3-opus-20240229&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Claude 3 Opus&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;最强推理能力，适合复杂任务&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">4096</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">200000</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;inputPrice&#34;</span>: <span style="color:#ae81ff">0.015</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;outputPrice&#34;</span>: <span style="color:#ae81ff">0.075</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;claude-3-sonnet&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;claude-3-sonnet-20240229&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Claude 3 Sonnet&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;平衡性能与成本，日常使用推荐&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">4096</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">200000</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;inputPrice&#34;</span>: <span style="color:#ae81ff">0.003</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;outputPrice&#34;</span>: <span style="color:#ae81ff">0.015</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;claude-3-haiku&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;claude-3-haiku-20240307&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Claude 3 Haiku&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;快速响应，成本最低，适合简单任务&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">4096</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">200000</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;inputPrice&#34;</span>: <span style="color:#ae81ff">0.00025</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;outputPrice&#34;</span>: <span style="color:#ae81ff">0.00125</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>价格参考</strong>（每1000 tokens，注意是美元）：</p>
+<ul>
+<li>Opus：输入$0.015，输出$0.075 → 贵但最强</li>
+<li>Sonnet：输入$0.003，输出$0.015 → 性价比最高 ✅</li>
+<li>Haiku：输入$0.00025，输出$0.00125 → 便宜快</li>
+</ul>
+<h4 id="openai-gpt">OpenAI (GPT)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;openai&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;sk-xxxxx&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;baseUrl&#34;</span>: <span style="color:#e6db74">&#34;https://api.openai.com/v1&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;defaultModel&#34;</span>: <span style="color:#e6db74">&#34;gpt-4&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;models&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;gpt-4&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;gpt-4&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">8192</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">8192</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;gpt-4-turbo&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;gpt-4-turbo-preview&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">4096</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">128000</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;gpt-3.5-turbo&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;gpt-3.5-turbo&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">4096</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">16385</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="国内模型示例moonshotkimi">国内模型示例（Moonshot/Kimi）</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;moonshot&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;your-moonshot-key&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;baseUrl&#34;</span>: <span style="color:#e6db74">&#34;https://api.moonshot.cn/v1&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;defaultModel&#34;</span>: <span style="color:#e6db74">&#34;moonshot-v1-8k&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;models&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;moonshot-v1-8k&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;moonshot-v1-8k&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">8192</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">8192</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;日常对话推荐，便宜&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;moonshot-v1-32k&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;moonshot-v1-32k&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">32768</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">32768</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;长文本分析&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;moonshot-v1-128k&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;moonshot-v1-128k&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;maxTokens&#34;</span>: <span style="color:#ae81ff">131072</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;contextWindow&#34;</span>: <span style="color:#ae81ff">131072</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;超长上下文，适合文档分析&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p>💡 <strong>我的推荐</strong>：国内用户直接用Moonshot，有免费额度，速度快，不需要魔法。</p>
+</blockquote>
+<h4 id="其他国内模型配置">其他国内模型配置</h4>
+<p><strong>智谱GLM</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;glm&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;xxxxx.xxxxx&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;baseUrl&#34;</span>: <span style="color:#e6db74">&#34;https://open.bigmodel.cn/api/paas/v4&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;defaultModel&#34;</span>: <span style="color:#e6db74">&#34;glm-4&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>阿里千问</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;qwen&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;your-api-key&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;baseUrl&#34;</span>: <span style="color:#e6db74">&#34;https://dashscope.aliyuncs.com/compatible-mode/v1&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;defaultModel&#34;</span>: <span style="color:#e6db74">&#34;qwen-plus&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="3-通道安全配置-">3. 通道安全配置 ⭐⭐</h3>
+<p>通道配置决定AI能从哪些平台接收消息。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;channels&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;telegram&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;botToken&#34;</span>: <span style="color:#e6db74">&#34;xxxxxx:yyyyyy&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowFrom&#34;</span>: [],           <span style="color:#75715e">// 白名单用户ID
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;groups&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;requireMention&#34;</span>: <span style="color:#66d9ef">true</span>,  <span style="color:#75715e">// 群组中需要@才响应
+</span></span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;allowedGroups&#34;</span>: []      <span style="color:#75715e">// 允许的群组ID
+</span></span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;whatsapp&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;sessionName&#34;</span>: <span style="color:#e6db74">&#34;default&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowFrom&#34;</span>: [<span style="color:#e6db74">&#34;+86138xxxxxxxx&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;pairingCode&#34;</span>: <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="4-工具权限配置-">4. 工具权限配置 ⭐⭐⭐</h3>
+<p>工具配置最关键，关系到系统安全！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tools&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;exec&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;sandbox&#34;</span>: <span style="color:#66d9ef">true</span>,           <span style="color:#75715e">// 沙盒模式
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowedCommands&#34;</span>: [<span style="color:#e6db74">&#34;ls&#34;</span>, <span style="color:#e6db74">&#34;cat&#34;</span>, <span style="color:#e6db74">&#34;grep&#34;</span>, <span style="color:#e6db74">&#34;curl&#34;</span>, <span style="color:#e6db74">&#34;python3&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;blockedCommands&#34;</span>: [<span style="color:#e6db74">&#34;rm&#34;</span>, <span style="color:#e6db74">&#34;dd&#34;</span>, <span style="color:#e6db74">&#34;mkfs&#34;</span>, <span style="color:#e6db74">&#34;sudo&#34;</span>, <span style="color:#e6db74">&#34;chmod&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;workingDirectory&#34;</span>: <span style="color:#e6db74">&#34;~/.openclaw/sandbox&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;requireApproval&#34;</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;browser&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;headless&#34;</span>: <span style="color:#66d9ef">true</span>,          <span style="color:#75715e">// 无头模式
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;timeout&#34;</span>: <span style="color:#ae81ff">30000</span>,          <span style="color:#75715e">// 超时时间(ms)
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowedDomains&#34;</span>: [<span style="color:#e6db74">&#34;*&#34;</span>],   <span style="color:#75715e">// 允许访问的域名
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;blockedDomains&#34;</span>: []
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;read&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowedPaths&#34;</span>: [<span style="color:#e6db74">&#34;~/projects&#34;</span>, <span style="color:#e6db74">&#34;~/documents&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;blockedPaths&#34;</span>: [<span style="color:#e6db74">&#34;~/.ssh&#34;</span>, <span style="color:#e6db74">&#34;~/.aws&#34;</span>, <span style="color:#e6db74">&#34;~/.env&#34;</span>]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;write&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">false</span>,          <span style="color:#75715e">// 默认禁用写入
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowedPaths&#34;</span>: [<span style="color:#e6db74">&#34;~/projects/temp&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;requireApproval&#34;</span>: <span style="color:#66d9ef">true</span>    <span style="color:#75715e">// 需要人工确认
+</span></span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>⚠️ 生产环境安全建议</strong>：</p>
+<ul>
+<li><code>exec</code>：启用沙盒，只允许必要命令</li>
+<li><code>write</code>：生产环境禁用，或开启审批</li>
+<li><code>read</code>：设置允许和禁止路径</li>
+</ul>
+<h3 id="5-会话与记忆配置">5. 会话与记忆配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;sessions&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;maxHistory&#34;</span>: <span style="color:#ae81ff">100</span>,           <span style="color:#75715e">// 最大历史消息数
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ttl&#34;</span>: <span style="color:#ae81ff">86400</span>,               <span style="color:#75715e">// 会话过期时间(秒)，默认24小时
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;pruneInterval&#34;</span>: <span style="color:#ae81ff">3600</span>,      <span style="color:#75715e">// 清理过期会话的间隔(秒)
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;memory&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;storage&#34;</span>: <span style="color:#e6db74">&#34;file&#34;</span>,        <span style="color:#75715e">// file/redis
+</span></span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;path&#34;</span>: <span style="color:#e6db74">&#34;~/.openclaw/state/memory&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="常用配置模板">常用配置模板</h2>
+<h3 id="模板1本地开发环境最简单">模板1：本地开发环境（最简单）</h3>
+<p>适合在自己电脑上玩，不需要考虑安全问题：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gateway&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;port&#34;</span>: <span style="color:#ae81ff">18789</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;auth&#34;</span>: {<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;none&#34;</span>}
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;anthropic&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;${ANTHROPIC_API_KEY}&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tools&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;exec&#34;</span>: {<span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#f92672">&#34;sandbox&#34;</span>: <span style="color:#66d9ef">false</span>},
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;write&#34;</span>: {<span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>}
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="模板2生产服务器安全">模板2：生产服务器（安全）</h3>
+<p>适合部署在服务器上，需要严格的安全配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gateway&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;port&#34;</span>: <span style="color:#ae81ff">18789</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;host&#34;</span>: <span style="color:#e6db74">&#34;0.0.0.0&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;auth&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;token&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;${GATEWAY_TOKEN}&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;anthropic&#34;</span>: {<span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;${ANTHROPIC_KEY}&#34;</span>},
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;openai&#34;</span>: {<span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;${OPENAI_KEY}&#34;</span>},
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;moonshot&#34;</span>: {<span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;${MOONSHOT_KEY}&#34;</span>}
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tools&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;exec&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;sandbox&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;allowedCommands&#34;</span>: [<span style="color:#e6db74">&#34;ls&#34;</span>, <span style="color:#e6db74">&#34;cat&#34;</span>, <span style="color:#e6db74">&#34;ps&#34;</span>, <span style="color:#e6db74">&#34;grep&#34;</span>, <span style="color:#e6db74">&#34;curl&#34;</span>]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;write&#34;</span>: {<span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">false</span>}
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="模板3多模型负载均衡">模板3：多模型负载均衡</h3>
+<p>同时配置多个模型，自动故障切换：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;routing&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;strategy&#34;</span>: <span style="color:#e6db74">&#34;failover&#34;</span>,     <span style="color:#75715e">// failover/round-robin/random
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;providers&#34;</span>: [<span style="color:#e6db74">&#34;anthropic&#34;</span>, <span style="color:#e6db74">&#34;openai&#34;</span>, <span style="color:#e6db74">&#34;moonshot&#34;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;fallback&#34;</span>: <span style="color:#e6db74">&#34;moonshot&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>策略说明</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>策略</th>
+          <th>说明</th>
+          <th>适用场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>failover</code></td>
+          <td>主模型失败时切换到备用</td>
+          <td>追求稳定性 ✅</td>
+      </tr>
+      <tr>
+          <td><code>round-robin</code></td>
+          <td>轮询使用各模型</td>
+          <td>追求均衡</td>
+      </tr>
+      <tr>
+          <td><code>random</code></td>
+          <td>随机选择</td>
+          <td>测试环境</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="配置热重载-">配置热重载 ⚡</h2>
+<p>修改配置后，无需重启Gateway：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 方法1：使用命令重载</span>
+</span></span><span style="display:flex;"><span>openclaw gateway reload
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方法2：发送信号</span>
+</span></span><span style="display:flex;"><span>kill -HUP <span style="color:#66d9ef">$(</span>pgrep -f openclaw-gateway<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><p><strong>⚠️ 注意</strong>：</p>
+<blockquote>
+<p>部分配置（如port、host、auth）仍需重启Gateway才能生效。</p>
+</blockquote>
+<hr>
+<h2 id="环境变量注入-">环境变量注入 🔐</h2>
+<p>敏感信息（API密钥、密码等）不要直接写在配置文件中，使用环境变量：</p>
+<h3 id="在shell中设置环境变量">在Shell中设置环境变量</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># macOS/Linux - 添加到 ~/.bashrc 或 ~/.zshrc</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export ANTHROPIC_API_KEY=&#34;sk-ant-xxxxx&#34;&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export OPENAI_API_KEY=&#34;sk-xxxxx&#34;&#39;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export GATEWAY_TOKEN=&#34;my-secret-token-min-32-chars&#34;&#39;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生效</span>
+</span></span><span style="display:flex;"><span>source ~/.bashrc  <span style="color:#75715e"># 或 source ~/.zshrc</span>
+</span></span></code></pre></div><h3 id="在配置文件中引用">在配置文件中引用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;providers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;anthropic&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;${ANTHROPIC_API_KEY}&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;openai&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiKey&#34;</span>: <span style="color:#e6db74">&#34;${OPENAI_API_KEY}&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gateway&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;auth&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;${GATEWAY_TOKEN}&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>配置文件不再包含明文密钥</strong>，更安全。</p>
+<hr>
+<h2 id="配置验证与备份">配置验证与备份</h2>
+<h3 id="验证配置是否正确">验证配置是否正确</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openclaw config validate
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果输出 OK，说明配置格式正确</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或直接查看配置</span>
+</span></span><span style="display:flex;"><span>openclaw config show
+</span></span></code></pre></div><h3 id="备份配置">备份配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 备份当前配置</span>
+</span></span><span style="display:flex;"><span>cp ~/.openclaw/openclaw.json ~/.openclaw/openclaw.json.backup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 恢复配置</span>
+</span></span><span style="display:flex;"><span>cp ~/.openclaw/openclaw.json.backup ~/.openclaw/openclaw.json
+</span></span><span style="display:flex;"><span>openclaw gateway restart
+</span></span></code></pre></div><blockquote>
+<p>💡 <strong>建议</strong>：每次大改动前都备份配置，这样改坏了可以一键还原。</p>
+</blockquote>
+<hr>
+<h2 id="下节预告">下节预告</h2>
+<p>下一讲我们将学习<strong>模型提供商配置</strong>，详细讲解如何接入Claude、GPT、Gemini以及国产大模型。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301010501-%E7%AC%AC5%E8%AE%B2-%E6%A8%A1%E5%9E%8B%E6%8F%90%E4%BE%9B%E5%95%86%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%A4%9A%E6%A8%A1%E5%9E%8B%E6%8E%A5%E5%85%A5/">继续阅读：第5讲-模型提供商配置与多模型接入</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>配置问题？加群讨论：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<hr>
+<h2 id="推荐ai-python编程实战营">推荐：AI Python编程实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<p>&mdash;## 📚 完整学习路线这是OpenClaw入门课程的第X讲。查看完整课程大纲：👉 **<a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301010101-%E7%AC%AC1%E8%AE%B2-OpenClaw%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/">OpenClaw入门课程大纲</a>**课程包含30讲，从安装部署到实战项目，带你全面掌握OpenClaw。</p>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301010301-%E7%AC%AC3%E8%AE%B2-Control-UI%E8%AF%A6%E8%A7%A3/">第3讲-Control UI详解</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/openclaw-tutorial/20260301010501-%E7%AC%AC5%E8%AE%B2-%E6%A8%A1%E5%9E%8B%E6%8F%90%E4%BE%9B%E5%95%86%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%A4%9A%E6%A8%A1%E5%9E%8B%E6%8E%A5%E5%85%A5/">第5讲-模型提供商配置与多模型接入</a></p>
+<hr>
+<p><em>PS：配置文件是OpenClaw的命脉，建议备份好你的openclaw.json。</em></p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260301010301-%E7%AC%AC3%E8%AE%B2-control-ui%E8%AF%A6%E8%A7%A3/">上一篇：第3讲：Control UI详解，你的OpenClaw控制中心</a>
+        
+        
+        <a href="http://localhost:4002/20260301010501-%E7%AC%AC5%E8%AE%B2-%E6%A8%A1%E5%9E%8B%E6%8F%90%E4%BE%9B%E5%95%86%E9%85%8D%E7%BD%AE/">下一篇：&#34;OpenClaw入门：第5讲：模型提供商配置，接入Claude、GPT和国产大模型&#34;</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

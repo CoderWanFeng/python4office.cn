@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 3 讲：Python 集合与映射 | dict、set、defaultdict、Counter 深度解析 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 3 讲：Python 集合与映射 | dict、set、defaultdict、Counter 深度解析</h1>
+        <div class="post-meta">
+            <span>2026-03-03 09:10</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%AD%97%E5%85%B8/" class="tag">Python字典</a>
+            
+            <a href="/tags/python%E9%9B%86%E5%90%88/" class="tag">Python集合</a>
+            
+            <a href="/tags/dict/" class="tag">dict</a>
+            
+            <a href="/tags/set/" class="tag">set</a>
+            
+            <a href="/tags/defaultdict/" class="tag">defaultdict</a>
+            
+            <a href="/tags/counter/" class="tag">Counter</a>
+            
+            <a href="/tags/collections/" class="tag">collections</a>
+            
+            <a href="/tags/python%E8%BF%9B%E9%98%B6/" class="tag">Python进阶</a>
+            
+            <a href="/tags/python%E5%93%88%E5%B8%8C%E8%A1%A8/" class="tag">Python哈希表</a>
+            
+            <a href="/tags/%E6%B5%81%E7%95%85%E7%9A%84python/" class="tag">流畅的Python</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<h2 id="-开篇一个去重问题引发的思考">🎬 开篇：一个去重问题引发的思考</h2>
+<p><strong>你有没有写过这样的代码？</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 需求：统计文章中出现过的所有单词</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;the quick brown fox jumps over the lazy dog the fox&#34;</span>
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> text<span style="color:#f92672">.</span>split()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 传统写法</span>
+</span></span><span style="display:flex;"><span>unique_words <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> word <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> unique_words:
+</span></span><span style="display:flex;"><span>        unique_words<span style="color:#f92672">.</span>append(word)
+</span></span><span style="display:flex;"><span>print(unique_words)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;the&#39;, &#39;quick&#39;, &#39;brown&#39;, &#39;fox&#39;, &#39;jumps&#39;, &#39;over&#39;, &#39;lazy&#39;, &#39;dog&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ set 写法：一行搞定</span>
+</span></span><span style="display:flex;"><span>unique_words <span style="color:#f92672">=</span> list(set(words))
+</span></span><span style="display:flex;"><span>print(unique_words)
+</span></span></code></pre></div><p><strong>但问题来了</strong>：为什么 set 去重这么快？底层原理是什么？</p>
+<p>今天我们就深入理解 Python 的集合（set）和映射（dict），它们都基于<strong>哈希表</strong>实现，是 Python 最强大的数据结构之一。</p>
+<hr>
+<h2 id="-集合set去重和集合运算的神器">🔥 集合（set）：去重和集合运算的神器</h2>
+<h3 id="什么是集合">什么是集合？</h3>
+<p>集合（set）是 Python 的内置类型，特点：</p>
+<ul>
+<li><strong>无序</strong>：元素没有固定顺序</li>
+<li><strong>唯一</strong>：自动去重</li>
+<li><strong>可变</strong>：可以添加和删除元素（frozenset 是不可变版本）</li>
+<li><strong>元素必须可哈希</strong>：列表、字典等不能作为集合元素</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 创建集合</span>
+</span></span><span style="display:flex;"><span>s1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}          <span style="color:#75715e"># 直接使用花括号</span>
+</span></span><span style="display:flex;"><span>s2 <span style="color:#f92672">=</span> set([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])  <span style="color:#75715e"># 从列表创建</span>
+</span></span><span style="display:flex;"><span>s3 <span style="color:#f92672">=</span> set(<span style="color:#e6db74">&#39;hello&#39;</span>)       <span style="color:#75715e"># 从字符串创建</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(s1)  <span style="color:#75715e"># {1, 2, 3}</span>
+</span></span><span style="display:flex;"><span>print(s2)  <span style="color:#75715e"># {1, 2, 3} - 自动去重</span>
+</span></span><span style="display:flex;"><span>print(s3)  <span style="color:#75715e"># {&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;o&#39;} - 注意：只有一个 &#39;l&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 空集合必须用 set()</span>
+</span></span><span style="display:flex;"><span>empty <span style="color:#f92672">=</span> set()    <span style="color:#75715e"># 正确</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># empty = {}     # 错误！这是空字典</span>
+</span></span></code></pre></div><h3 id="集合的底层原理哈希表">集合的底层原理：哈希表</h3>
+<p>Python 的集合基于<strong>哈希表</strong>实现，这决定了它的性能特点：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表的成员检查：O(n) - 随着数据量增大变慢</span>
+</span></span><span style="display:flex;"><span>lst <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100000</span>))
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">99999</span> <span style="color:#f92672">in</span> lst
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表检查: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)  <span style="color:#75715e"># 约 0.5s</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集合的成员检查：O(1) - 恒定时间</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> set(range(<span style="color:#ae81ff">100000</span>))
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">99999</span> <span style="color:#f92672">in</span> s
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;集合检查: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)  <span style="color:#75715e"># 约 0.0001s</span>
+</span></span></code></pre></div><p><strong>为什么集合查找这么快？</strong></p>
+<p>哈希表的查找过程：</p>
+<ol>
+<li>计算元素的哈希值：<code>hash(element)</code></li>
+<li>根据哈希值定位到&quot;桶&quot;（bucket）</li>
+<li>直接访问该位置（O(1) 时间）</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 理解哈希值</span>
+</span></span><span style="display:flex;"><span>print(hash(<span style="color:#ae81ff">42</span>))        <span style="color:#75715e"># 42 - 整数的哈希值就是自己</span>
+</span></span><span style="display:flex;"><span>print(hash(<span style="color:#e6db74">&#39;hello&#39;</span>))   <span style="color:#75715e"># 固定的哈希值</span>
+</span></span><span style="display:flex;"><span>print(hash((<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>))) <span style="color:#75715e"># 元组可哈希</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列表不可哈希</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># hash([1, 2, 3])  # TypeError: unhashable type: &#39;list&#39;</span>
+</span></span></code></pre></div><h3 id="集合运算">集合运算</h3>
+<p>集合支持数学中的各种集合运算：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> {<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 交集：两个集合都有的元素</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">&amp;</span> b)        <span style="color:#75715e"># {4, 5}</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>intersection(b))  <span style="color:#75715e"># 同上</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 并集：两个集合的所有元素</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">|</span> b)        <span style="color:#75715e"># {1, 2, 3, 4, 5, 6, 7, 8}</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>union(b))   <span style="color:#75715e"># 同上</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 差集：a 有但 b 没有的元素</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">-</span> b)        <span style="color:#75715e"># {1, 2, 3}</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>difference(b))  <span style="color:#75715e"># 同上</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 对称差集：只在其中一个集合中的元素</span>
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">^</span> b)        <span style="color:#75715e"># {1, 2, 3, 6, 7, 8}</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>symmetric_difference(b))  <span style="color:#75715e"># 同上</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 子集和超集判断</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>print(c<span style="color:#f92672">.</span>issubset(a))      <span style="color:#75715e"># True - c 是 a 的子集</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>issuperset(c))    <span style="color:#75715e"># True - a 是 c 的超集</span>
+</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>isdisjoint(b))    <span style="color:#75715e"># False - a 和 b 有交集</span>
+</span></span></code></pre></div><h3 id="集合运算的实际应用">集合运算的实际应用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景1：找出两篇文章的共同词汇</span>
+</span></span><span style="display:flex;"><span>article1_words <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;python&#39;</span>, <span style="color:#e6db74">&#39;programming&#39;</span>, <span style="color:#e6db74">&#39;code&#39;</span>, <span style="color:#e6db74">&#39;data&#39;</span>}
+</span></span><span style="display:flex;"><span>article2_words <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;java&#39;</span>, <span style="color:#e6db74">&#39;programming&#39;</span>, <span style="color:#e6db74">&#39;code&#39;</span>, <span style="color:#e6db74">&#39;web&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>common <span style="color:#f92672">=</span> article1_words <span style="color:#f92672">&amp;</span> article2_words
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;共同词汇: </span><span style="color:#e6db74">{</span>common<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># {&#39;code&#39;, &#39;programming&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景2：找出只在文章1出现的词汇</span>
+</span></span><span style="display:flex;"><span>unique_to_article1 <span style="color:#f92672">=</span> article1_words <span style="color:#f92672">-</span> article2_words
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;文章1独有: </span><span style="color:#e6db74">{</span>unique_to_article1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># {&#39;python&#39;, &#39;data&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景3：合并所有词汇（去重）</span>
+</span></span><span style="display:flex;"><span>all_words <span style="color:#f92672">=</span> article1_words <span style="color:#f92672">|</span> article2_words
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;所有词汇: </span><span style="color:#e6db74">{</span>all_words<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景4：找出两人共同好友</span>
+</span></span><span style="display:flex;"><span>alice_friends <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Charlie&#39;</span>, <span style="color:#e6db74">&#39;David&#39;</span>, <span style="color:#e6db74">&#39;Eve&#39;</span>}
+</span></span><span style="display:flex;"><span>bob_friends <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Charlie&#39;</span>, <span style="color:#e6db74">&#39;David&#39;</span>, <span style="color:#e6db74">&#39;Frank&#39;</span>, <span style="color:#e6db74">&#39;Grace&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mutual_friends <span style="color:#f92672">=</span> alice_friends <span style="color:#f92672">&amp;</span> bob_friends
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;共同好友: </span><span style="color:#e6db74">{</span>mutual_friends<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># {&#39;Charlie&#39;, &#39;David&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景5：检查权限</span>
+</span></span><span style="display:flex;"><span>user_permissions <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;read&#39;</span>, <span style="color:#e6db74">&#39;write&#39;</span>, <span style="color:#e6db74">&#39;execute&#39;</span>}
+</span></span><span style="display:flex;"><span>required_permissions <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;read&#39;</span>, <span style="color:#e6db74">&#39;execute&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> required_permissions<span style="color:#f92672">.</span>issubset(user_permissions):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;权限充足，允许操作&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;权限不足&#34;</span>)
+</span></span></code></pre></div><h3 id="集合的性能对比">集合的性能对比</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试：列表 vs 集合的成员检查</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_membership</span>(container, item, iterations<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>):
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(iterations):
+</span></span><span style="display:flex;"><span>        item <span style="color:#f92672">in</span> container
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建大数据集</span>
+</span></span><span style="display:flex;"><span>lst <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100000</span>))
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> set(range(<span style="color:#ae81ff">100000</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试查找存在的元素</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;查找存在的元素:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  列表: </span><span style="color:#e6db74">{</span>test_membership(lst, <span style="color:#ae81ff">50000</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  集合: </span><span style="color:#e6db74">{</span>test_membership(s, <span style="color:#ae81ff">50000</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试查找不存在的元素</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;查找不存在的元素:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  列表: </span><span style="color:#e6db74">{</span>test_membership(lst, <span style="color:#ae81ff">200000</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  集合: </span><span style="color:#e6db74">{</span>test_membership(s, <span style="color:#ae81ff">200000</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span></code></pre></div><p><strong>结论</strong>：集合的成员检查比列表快 <strong>100-1000 倍</strong>！</p>
+<h3 id="frozenset不可变集合">frozenset：不可变集合</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># frozenset 创建后不能修改</span>
+</span></span><span style="display:flex;"><span>fs <span style="color:#f92672">=</span> frozenset([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fs.add(4)  # AttributeError - 不能添加</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fs.remove(1)  # AttributeError - 不能删除</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用途：作为字典的键或集合的元素</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 普通集合不能作为字典键</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># d = {{1, 2}: &#39;value&#39;}  # TypeError</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># frozenset 可以</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {frozenset([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]): <span style="color:#e6db74">&#39;value&#39;</span>}
+</span></span><span style="display:flex;"><span>print(d[frozenset([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>])])  <span style="color:#75715e"># &#39;value&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 嵌套集合</span>
+</span></span><span style="display:flex;"><span>nested <span style="color:#f92672">=</span> {frozenset([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]), frozenset([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])}
+</span></span><span style="display:flex;"><span>print(nested)
+</span></span></code></pre></div><hr>
+<h2 id="-字典dictpython-的核心数据结构">📊 字典（dict）：Python 的核心数据结构</h2>
+<h3 id="字典的底层原理">字典的底层原理</h3>
+<p>字典和集合一样，基于<strong>哈希表</strong>实现：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 字典的查找是 O(1) 时间复杂度</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {i: i <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100000</span>)}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
+</span></span><span style="display:flex;"><span>    d[<span style="color:#ae81ff">50000</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;字典查找: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)  <span style="color:#75715e"># 约 0.001s</span>
+</span></span></code></pre></div><p><strong>字典的内部结构（简化版）</strong>：</p>
+<pre tabindex="0"><code>字典 = {
+    key1: value1,
+    key2: value2,
+}
+
+哈希表：
++-------+-------+-------+
+| hash  | key   | value |
++-------+-------+-------+
+| 12345 | key1  | value1|
+| 67890 | key2  | value2|
++-------+-------+-------+
+</code></pre><h3 id="字典的高级用法">字典的高级用法</h3>
+<h4 id="1-字典视图">1. 字典视图</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># keys(), values(), items() 返回的是视图，不是列表</span>
+</span></span><span style="display:flex;"><span>keys <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>keys()
+</span></span><span style="display:flex;"><span>values <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>values()
+</span></span><span style="display:flex;"><span>items <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>items()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(type(keys))   <span style="color:#75715e"># &lt;class &#39;dict_keys&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>print(type(values)) <span style="color:#75715e"># &lt;class &#39;dict_values&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 视图是动态的</span>
+</span></span><span style="display:flex;"><span>d[<span style="color:#e6db74">&#39;d&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>print(list(keys))   <span style="color:#75715e"># [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] - 自动更新</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 视图支持集合操作</span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 找出共同的键</span>
+</span></span><span style="display:flex;"><span>common_keys <span style="color:#f92672">=</span> d1<span style="color:#f92672">.</span>keys() <span style="color:#f92672">&amp;</span> d2<span style="color:#f92672">.</span>keys()
+</span></span><span style="display:flex;"><span>print(common_keys)  <span style="color:#75715e"># {&#39;b&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 找出键值对都相同的项</span>
+</span></span><span style="display:flex;"><span>common_items <span style="color:#f92672">=</span> d1<span style="color:#f92672">.</span>items() <span style="color:#f92672">&amp;</span> d2<span style="color:#f92672">.</span>items()
+</span></span><span style="display:flex;"><span>print(common_items)  <span style="color:#75715e"># set() - 没有相同的键值对</span>
+</span></span></code></pre></div><h4 id="2-字典的合并与更新">2. 字典的合并与更新</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python 3.9+ 的合并运算符</span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;d&#39;</span>: <span style="color:#ae81ff">4</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 合并（创建新字典）</span>
+</span></span><span style="display:flex;"><span>merged <span style="color:#f92672">=</span> d1 <span style="color:#f92672">|</span> d2
+</span></span><span style="display:flex;"><span>print(merged)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 原地更新</span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">|=</span> d2
+</span></span><span style="display:flex;"><span>print(d1)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 处理键冲突</span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>merged <span style="color:#f92672">=</span> d1 <span style="color:#f92672">|</span> d2
+</span></span><span style="display:flex;"><span>print(merged)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 20, &#39;c&#39;: 3} - d2 覆盖 d1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Python 3.5-3.8 的合并方式</span>
+</span></span><span style="display:flex;"><span>merged <span style="color:#f92672">=</span> {<span style="color:#f92672">**</span>d1, <span style="color:#f92672">**</span>d2}
+</span></span><span style="display:flex;"><span>print(merged)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 20, &#39;c&#39;: 3}</span>
+</span></span></code></pre></div><h4 id="3-字典的-getsetdefaultpop">3. 字典的 get、setdefault、pop</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># get()：安全获取，不存在返回默认值</span>
+</span></span><span style="display:flex;"><span>print(d<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;a&#39;</span>))      <span style="color:#75715e"># 1</span>
+</span></span><span style="display:flex;"><span>print(d<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;c&#39;</span>))      <span style="color:#75715e"># None</span>
+</span></span><span style="display:flex;"><span>print(d<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#ae81ff">0</span>))   <span style="color:#75715e"># 0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># setdefault()：获取或设置默认值</span>
+</span></span><span style="display:flex;"><span>d<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#ae81ff">100</span>)  <span style="color:#75715e"># 返回 1，不修改（已存在）</span>
+</span></span><span style="display:flex;"><span>d<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#ae81ff">3</span>)    <span style="color:#75715e"># 返回 3，添加新键值对</span>
+</span></span><span style="display:flex;"><span>print(d)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pop()：删除并返回值</span>
+</span></span><span style="display:flex;"><span>value <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#39;b&#39;</span>)
+</span></span><span style="display:flex;"><span>print(value)  <span style="color:#75715e"># 2</span>
+</span></span><span style="display:flex;"><span>print(d)      <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;c&#39;: 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pop() 带默认值</span>
+</span></span><span style="display:flex;"><span>value <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;不存在&#39;</span>)
+</span></span><span style="display:flex;"><span>print(value)  <span style="color:#75715e"># &#39;不存在&#39; - 不报错</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># popitem()：删除并返回最后一个键值对</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>key, value <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>popitem()
+</span></span><span style="display:flex;"><span>print(key, value)  <span style="color:#75715e"># &#39;c&#39; 3</span>
+</span></span></code></pre></div><hr>
+<h2 id="-collections-模块的高级容器">🛠️ collections 模块的高级容器</h2>
+<h3 id="defaultdict自动初始化的字典">defaultdict：自动初始化的字典</h3>
+<p><code>defaultdict</code> 解决了字典键不存在时的处理问题：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 普通字典的问题</span>
+</span></span><span style="display:flex;"><span>word_counts <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;cherry&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 必须先检查键是否存在</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> word <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> word_counts:
+</span></span><span style="display:flex;"><span>        word_counts[word] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    word_counts[word] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># defaultdict 自动处理</span>
+</span></span><span style="display:flex;"><span>word_counts <span style="color:#f92672">=</span> defaultdict(int)  <span style="color:#75715e"># 默认值是 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>    word_counts[word] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 不需要检查</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(dict(word_counts))  <span style="color:#75715e"># {&#39;apple&#39;: 3, &#39;banana&#39;: 2, &#39;cherry&#39;: 1}</span>
+</span></span></code></pre></div><h4 id="defaultdict-的常用场景">defaultdict 的常用场景</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景1：分组</span>
+</span></span><span style="display:flex;"><span>students <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Math&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Physics&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Physics&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;Charlie&#39;</span>, <span style="color:#e6db74">&#39;Math&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Chemistry&#39;</span>),
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>by_student <span style="color:#f92672">=</span> defaultdict(list)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> student, subject <span style="color:#f92672">in</span> students:
+</span></span><span style="display:flex;"><span>    by_student[student]<span style="color:#f92672">.</span>append(subject)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(dict(by_student))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {&#39;Alice&#39;: [&#39;Math&#39;, &#39;Physics&#39;], &#39;Bob&#39;: [&#39;Physics&#39;, &#39;Chemistry&#39;], &#39;Charlie&#39;: [&#39;Math&#39;]}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景2：构建树形结构</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tree</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> defaultdict(tree)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 自动创建嵌套结构</span>
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> tree()
+</span></span><span style="display:flex;"><span>config[<span style="color:#e6db74">&#39;database&#39;</span>][<span style="color:#e6db74">&#39;host&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;localhost&#39;</span>
+</span></span><span style="display:flex;"><span>config[<span style="color:#e6db74">&#39;database&#39;</span>][<span style="color:#e6db74">&#39;port&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">5432</span>
+</span></span><span style="display:flex;"><span>config[<span style="color:#e6db74">&#39;cache&#39;</span>][<span style="color:#e6db74">&#39;redis&#39;</span>][<span style="color:#e6db74">&#39;host&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;redis-server&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(config[<span style="color:#e6db74">&#39;database&#39;</span>][<span style="color:#e6db74">&#39;host&#39;</span>])  <span style="color:#75715e"># &#39;localhost&#39;</span>
+</span></span><span style="display:flex;"><span>print(config[<span style="color:#e6db74">&#39;database&#39;</span>][<span style="color:#e6db74">&#39;port&#39;</span>])  <span style="color:#75715e"># 5432</span>
+</span></span><span style="display:flex;"><span>print(config[<span style="color:#e6db74">&#39;cache&#39;</span>][<span style="color:#e6db74">&#39;redis&#39;</span>][<span style="color:#e6db74">&#39;host&#39;</span>])  <span style="color:#75715e"># &#39;redis-server&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景3：计数器（简化版）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>counter <span style="color:#f92672">=</span> defaultdict(int)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> <span style="color:#e6db74">&#39;hello world&#39;</span>:
+</span></span><span style="display:flex;"><span>    counter[char] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(dict(counter))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {&#39;h&#39;: 1, &#39;e&#39;: 1, &#39;l&#39;: 3, &#39;o&#39;: 2, &#39; &#39;: 1, &#39;w&#39;: 1, &#39;r&#39;: 1, &#39;d&#39;: 1}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景4：集合字典</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tags_by_article <span style="color:#f92672">=</span> defaultdict(set)
+</span></span><span style="display:flex;"><span>tags_by_article[<span style="color:#e6db74">&#39;article1&#39;</span>]<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#39;python&#39;</span>)
+</span></span><span style="display:flex;"><span>tags_by_article[<span style="color:#e6db74">&#39;article1&#39;</span>]<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#39;programming&#39;</span>)
+</span></span><span style="display:flex;"><span>tags_by_article[<span style="color:#e6db74">&#39;article2&#39;</span>]<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#39;python&#39;</span>)
+</span></span><span style="display:flex;"><span>tags_by_article[<span style="color:#e6db74">&#39;article2&#39;</span>]<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#39;web&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(dict(tags_by_article))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {&#39;article1&#39;: {&#39;python&#39;, &#39;programming&#39;}, &#39;article2&#39;: {&#39;python&#39;, &#39;web&#39;}}</span>
+</span></span></code></pre></div><h3 id="counter专业的计数器">Counter：专业的计数器</h3>
+<p><code>Counter</code> 是专门用于计数的字典子类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建 Counter</span>
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;cherry&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>]
+</span></span><span style="display:flex;"><span>counter <span style="color:#f92672">=</span> Counter(words)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(counter)  <span style="color:#75715e"># Counter({&#39;apple&#39;: 3, &#39;banana&#39;: 2, &#39;cherry&#39;: 1})</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 常用方法</span>
+</span></span><span style="display:flex;"><span>print(counter<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">2</span>))  <span style="color:#75715e"># [(&#39;apple&#39;, 3), (&#39;banana&#39;, 1)] - 最常见的2个</span>
+</span></span><span style="display:flex;"><span>print(counter<span style="color:#f92672">.</span>elements())       <span style="color:#75715e"># 迭代器，重复元素</span>
+</span></span><span style="display:flex;"><span>print(list(counter<span style="color:#f92672">.</span>elements())) <span style="color:#75715e"># [&#39;apple&#39;, &#39;apple&#39;, &#39;apple&#39;, &#39;banana&#39;, &#39;banana&#39;, &#39;cherry&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 更新计数</span>
+</span></span><span style="display:flex;"><span>counter<span style="color:#f92672">.</span>update([<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;durian&#39;</span>])
+</span></span><span style="display:flex;"><span>print(counter)  <span style="color:#75715e"># Counter({&#39;apple&#39;: 4, &#39;banana&#39;: 2, &#39;cherry&#39;: 1, &#39;durian&#39;: 1})</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 减少计数</span>
+</span></span><span style="display:flex;"><span>counter<span style="color:#f92672">.</span>subtract([<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>])
+</span></span><span style="display:flex;"><span>print(counter)  <span style="color:#75715e"># Counter({&#39;apple&#39;: 2, &#39;banana&#39;: 2, &#39;cherry&#39;: 1, &#39;durian&#39;: 1})</span>
+</span></span></code></pre></div><h4 id="counter-的高级用法">Counter 的高级用法</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 从字符串计数</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;the quick brown fox jumps over the lazy dog&#34;</span>
+</span></span><span style="display:flex;"><span>word_counter <span style="color:#f92672">=</span> Counter(text<span style="color:#f92672">.</span>split())
+</span></span><span style="display:flex;"><span>print(word_counter<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">3</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 字符频率统计</span>
+</span></span><span style="display:flex;"><span>char_counter <span style="color:#f92672">=</span> Counter(<span style="color:#e6db74">&#39;mississippi&#39;</span>)
+</span></span><span style="display:flex;"><span>print(char_counter)  <span style="color:#75715e"># Counter({&#39;i&#39;: 4, &#39;s&#39;: 4, &#39;p&#39;: 2, &#39;m&#39;: 1})</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. Counter 的算术运算</span>
+</span></span><span style="display:flex;"><span>c1 <span style="color:#f92672">=</span> Counter([<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>])
+</span></span><span style="display:flex;"><span>c2 <span style="color:#f92672">=</span> Counter([<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(c1 <span style="color:#f92672">+</span> c2)  <span style="color:#75715e"># Counter({&#39;a&#39;: 3, &#39;b&#39;: 2, &#39;c&#39;: 1, &#39;d&#39;: 1})</span>
+</span></span><span style="display:flex;"><span>print(c1 <span style="color:#f92672">-</span> c2)  <span style="color:#75715e"># Counter({&#39;a&#39;: 1, &#39;c&#39;: 1}) - 只保留正数</span>
+</span></span><span style="display:flex;"><span>print(c1 <span style="color:#f92672">&amp;</span> c2)  <span style="color:#75715e"># Counter({&#39;a&#39;: 1, &#39;b&#39;: 1}) - 交集（最小值）</span>
+</span></span><span style="display:flex;"><span>print(c1 <span style="color:#f92672">|</span> c2)  <span style="color:#75715e"># Counter({&#39;a&#39;: 2, &#39;b&#39;: 1, &#39;c&#39;: 1, &#39;d&#39;: 1}) - 并集（最大值）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 找出重复元素</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>]
+</span></span><span style="display:flex;"><span>counter <span style="color:#f92672">=</span> Counter(data)
+</span></span><span style="display:flex;"><span>duplicates <span style="color:#f92672">=</span> [item <span style="color:#66d9ef">for</span> item, count <span style="color:#f92672">in</span> counter<span style="color:#f92672">.</span>items() <span style="color:#66d9ef">if</span> count <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>print(duplicates)  <span style="color:#75715e"># [2, 3, 4]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 字符串相似度（词频比较）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">similarity</span>(text1, text2):
+</span></span><span style="display:flex;"><span>    c1 <span style="color:#f92672">=</span> Counter(text1<span style="color:#f92672">.</span>split())
+</span></span><span style="display:flex;"><span>    c2 <span style="color:#f92672">=</span> Counter(text2<span style="color:#f92672">.</span>split())
+</span></span><span style="display:flex;"><span>    common <span style="color:#f92672">=</span> c1 <span style="color:#f92672">&amp;</span> c2
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> sum(common<span style="color:#f92672">.</span>values()) <span style="color:#f92672">/</span> max(sum(c1<span style="color:#f92672">.</span>values()), sum(c2<span style="color:#f92672">.</span>values()))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;the quick brown fox&#34;</span>
+</span></span><span style="display:flex;"><span>t2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;the quick blue fox&#34;</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;相似度: </span><span style="color:#e6db74">{</span>similarity(t1, t2)<span style="color:#e6db74">:</span><span style="color:#e6db74">.2%</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># 相似度: 75.00%</span>
+</span></span></code></pre></div><h3 id="ordereddict有序字典">OrderedDict：有序字典</h3>
+<p>Python 3.7+ 的普通字典已经保持插入顺序，但 <code>OrderedDict</code> 仍有独特功能：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> OrderedDict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建有序字典</span>
+</span></span><span style="display:flex;"><span>od <span style="color:#f92672">=</span> OrderedDict()
+</span></span><span style="display:flex;"><span>od[<span style="color:#e6db74">&#39;a&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>od[<span style="color:#e6db74">&#39;b&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>od[<span style="color:#e6db74">&#39;c&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>print(list(od<span style="color:#f92672">.</span>keys()))  <span style="color:#75715e"># [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 特有方法：move_to_end</span>
+</span></span><span style="display:flex;"><span>od<span style="color:#f92672">.</span>move_to_end(<span style="color:#e6db74">&#39;a&#39;</span>)  <span style="color:#75715e"># 将 &#39;a&#39; 移到最后</span>
+</span></span><span style="display:flex;"><span>print(list(od<span style="color:#f92672">.</span>keys()))  <span style="color:#75715e"># [&#39;b&#39;, &#39;c&#39;, &#39;a&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>od<span style="color:#f92672">.</span>move_to_end(<span style="color:#e6db74">&#39;a&#39;</span>, last<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)  <span style="color:#75715e"># 将 &#39;a&#39; 移到最前</span>
+</span></span><span style="display:flex;"><span>print(list(od<span style="color:#f92672">.</span>keys()))  <span style="color:#75715e"># [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 实现LRU缓存</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LRUCache</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, capacity):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">=</span> capacity
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cache <span style="color:#f92672">=</span> OrderedDict()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get</span>(self, key):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>cache:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 访问时移到最后（最近使用）</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cache<span style="color:#f92672">.</span>move_to_end(key)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>cache[key]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">put</span>(self, key, value):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>cache:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 更新并移到最后</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>cache<span style="color:#f92672">.</span>move_to_end(key)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cache[key] <span style="color:#f92672">=</span> value
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 超出容量，删除最久未使用的</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(self<span style="color:#f92672">.</span>cache) <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>capacity:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>cache<span style="color:#f92672">.</span>popitem(last<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>cache <span style="color:#f92672">=</span> LRUCache(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>cache<span style="color:#f92672">.</span>put(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;a&#39;</span>)
+</span></span><span style="display:flex;"><span>cache<span style="color:#f92672">.</span>put(<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;b&#39;</span>)
+</span></span><span style="display:flex;"><span>cache<span style="color:#f92672">.</span>get(<span style="color:#ae81ff">1</span>)        <span style="color:#75715e"># 返回 &#39;a&#39;，现在 1 是最近使用的</span>
+</span></span><span style="display:flex;"><span>cache<span style="color:#f92672">.</span>put(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;c&#39;</span>)   <span style="color:#75715e"># 容量满了，删除最久未使用的 2</span>
+</span></span><span style="display:flex;"><span>print(cache<span style="color:#f92672">.</span>cache)  <span style="color:#75715e"># OrderedDict([(1, &#39;a&#39;), (3, &#39;c&#39;)])</span>
+</span></span></code></pre></div><h3 id="chainmap链式字典">ChainMap：链式字典</h3>
+<p><code>ChainMap</code> 可以将多个字典合并为一个视图：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> ChainMap
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建链式映射</span>
+</span></span><span style="display:flex;"><span>defaults <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;theme&#39;</span>: <span style="color:#e6db74">&#39;dark&#39;</span>, <span style="color:#e6db74">&#39;language&#39;</span>: <span style="color:#e6db74">&#39;en&#39;</span>, <span style="color:#e6db74">&#39;timezone&#39;</span>: <span style="color:#e6db74">&#39;UTC&#39;</span>}
+</span></span><span style="display:flex;"><span>user_config <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;theme&#39;</span>: <span style="color:#e6db74">&#39;light&#39;</span>, <span style="color:#e6db74">&#39;language&#39;</span>: <span style="color:#e6db74">&#39;zh&#39;</span>}
+</span></span><span style="display:flex;"><span>system_config <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;timezone&#39;</span>: <span style="color:#e6db74">&#39;Asia/Shanghai&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> ChainMap(user_config, system_config, defaults)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查找时按顺序查找</span>
+</span></span><span style="display:flex;"><span>print(config[<span style="color:#e6db74">&#39;theme&#39;</span>])     <span style="color:#75715e"># &#39;light&#39; - 来自 user_config</span>
+</span></span><span style="display:flex;"><span>print(config[<span style="color:#e6db74">&#39;language&#39;</span>])  <span style="color:#75715e"># &#39;zh&#39; - 来自 user_config</span>
+</span></span><span style="display:flex;"><span>print(config[<span style="color:#e6db74">&#39;timezone&#39;</span>])  <span style="color:#75715e"># &#39;Asia/Shanghai&#39; - 来自 system_config</span>
+</span></span><span style="display:flex;"><span>print(config[<span style="color:#e6db74">&#39;debug&#39;</span>])     <span style="color:#75715e"># KeyError - 都不存在</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看所有键</span>
+</span></span><span style="display:flex;"><span>print(list(config<span style="color:#f92672">.</span>keys()))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;theme&#39;, &#39;language&#39;, &#39;timezone&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 新值总是添加到第一个字典</span>
+</span></span><span style="display:flex;"><span>config[<span style="color:#e6db74">&#39;debug&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;debug&#39;</span> <span style="color:#f92672">in</span> user_config)  <span style="color:#75715e"># True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 实际应用：配置管理</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> ChainMap
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 命令行参数 &gt; 环境变量 &gt; 默认配置</span>
+</span></span><span style="display:flex;"><span>defaults <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;host&#39;</span>: <span style="color:#e6db74">&#39;localhost&#39;</span>, <span style="color:#e6db74">&#39;port&#39;</span>: <span style="color:#ae81ff">8080</span>}
+</span></span><span style="display:flex;"><span>env_config <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;host&#39;</span>: os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;APP_HOST&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;port&#39;</span>: os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;APP_PORT&#39;</span>),
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 过滤掉 None 值</span>
+</span></span><span style="display:flex;"><span>env_config <span style="color:#f92672">=</span> {k: v <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> env_config<span style="color:#f92672">.</span>items() <span style="color:#66d9ef">if</span> v <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> ChainMap({}, env_config, defaults)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Server running on </span><span style="color:#e6db74">{</span>config[<span style="color:#e6db74">&#39;host&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">{</span>config[<span style="color:#e6db74">&#39;port&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-性能对比与选择指南">📊 性能对比与选择指南</h2>
+<h3 id="各种容器的性能对比">各种容器的性能对比</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict, Counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">benchmark</span>(func, iterations<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>):
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(iterations):
+</span></span><span style="display:flex;"><span>        func()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试成员检查</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">10000</span>))
+</span></span><span style="display:flex;"><span>lst <span style="color:#f92672">=</span> data
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> set(data)
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {x: x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;成员检查性能（查找存在的元素）:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  list:    </span><span style="color:#e6db74">{</span>benchmark(<span style="color:#66d9ef">lambda</span>: <span style="color:#ae81ff">5000</span> <span style="color:#f92672">in</span> lst)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  set:     </span><span style="color:#e6db74">{</span>benchmark(<span style="color:#66d9ef">lambda</span>: <span style="color:#ae81ff">5000</span> <span style="color:#f92672">in</span> s)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  dict:    </span><span style="color:#e6db74">{</span>benchmark(<span style="color:#66d9ef">lambda</span>: <span style="color:#ae81ff">5000</span> <span style="color:#f92672">in</span> d)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试计数</span>
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;word&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_manual</span>():
+</span></span><span style="display:flex;"><span>    counts <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>        counts[word] <span style="color:#f92672">=</span> counts<span style="color:#f92672">.</span>get(word, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> counts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_defaultdict</span>():
+</span></span><span style="display:flex;"><span>    counts <span style="color:#f92672">=</span> defaultdict(int)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>        counts[word] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> counts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_counter</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Counter(words)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">计数性能:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  手动计数:     </span><span style="color:#e6db74">{</span>benchmark(count_manual, <span style="color:#ae81ff">100</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  defaultdict:  </span><span style="color:#e6db74">{</span>benchmark(count_defaultdict, <span style="color:#ae81ff">100</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  Counter:      </span><span style="color:#e6db74">{</span>benchmark(count_counter, <span style="color:#ae81ff">100</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span></code></pre></div><h3 id="容器选择指南">容器选择指南</h3>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>推荐容器</th>
+          <th>原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>去重</td>
+          <td><code>set</code></td>
+          <td>O(1) 自动去重</td>
+      </tr>
+      <tr>
+          <td>快速成员检查</td>
+          <td><code>set</code> / <code>dict</code></td>
+          <td>O(1) 查找</td>
+      </tr>
+      <tr>
+          <td>保持插入顺序</td>
+          <td><code>dict</code> / <code>list</code></td>
+          <td>Python 3.7+ dict 有序</td>
+      </tr>
+      <tr>
+          <td>计数</td>
+          <td><code>Counter</code></td>
+          <td>专业计数工具</td>
+      </tr>
+      <tr>
+          <td>分组</td>
+          <td><code>defaultdict(list)</code></td>
+          <td>自动初始化列表</td>
+      </tr>
+      <tr>
+          <td>配置合并</td>
+          <td><code>ChainMap</code></td>
+          <td>不复制数据</td>
+      </tr>
+      <tr>
+          <td>LRU 缓存</td>
+          <td><code>OrderedDict</code></td>
+          <td>支持移动元素</td>
+      </tr>
+      <tr>
+          <td>不可变集合</td>
+          <td><code>frozenset</code></td>
+          <td>可作为字典键</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-实战案例文本分析">🎯 实战案例：文本分析</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter, defaultdict
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextAnalyzer</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;文本分析工具&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, text):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>text <span style="color:#f92672">=</span> text
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>words <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_tokenize(text)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_tokenize</span>(self, text):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;分词&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 简单的英文分词</span>
+</span></span><span style="display:flex;"><span>        words <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\b\w+\b&#39;</span>, text<span style="color:#f92672">.</span>lower())
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> words
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">word_frequency</span>(self, top_n<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;词频统计&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        counter <span style="color:#f92672">=</span> Counter(self<span style="color:#f92672">.</span>words)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> counter<span style="color:#f92672">.</span>most_common(top_n)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">word_length_distribution</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;单词长度分布&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        length_dist <span style="color:#f92672">=</span> Counter(len(word) <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>words)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> dict(sorted(length_dist<span style="color:#f92672">.</span>items()))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ngrams</span>(self, n<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;N-gram 分析&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        ngram_counter <span style="color:#f92672">=</span> Counter()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(self<span style="color:#f92672">.</span>words) <span style="color:#f92672">-</span> n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>            ngram <span style="color:#f92672">=</span> tuple(self<span style="color:#f92672">.</span>words[i:i<span style="color:#f92672">+</span>n])
+</span></span><span style="display:flex;"><span>            ngram_counter[ngram] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ngram_counter<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vocabulary_richness</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;词汇丰富度（类型/标记比）&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(set(self<span style="color:#f92672">.</span>words)) <span style="color:#f92672">/</span> len(self<span style="color:#f92672">.</span>words)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_collocations</span>(self, word, window<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;找出与指定词共现的词&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        collocations <span style="color:#f92672">=</span> defaultdict(int)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, w <span style="color:#f92672">in</span> enumerate(self<span style="color:#f92672">.</span>words):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> w <span style="color:#f92672">==</span> word:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># 查找窗口内的词</span>
+</span></span><span style="display:flex;"><span>                start <span style="color:#f92672">=</span> max(<span style="color:#ae81ff">0</span>, i <span style="color:#f92672">-</span> window)
+</span></span><span style="display:flex;"><span>                end <span style="color:#f92672">=</span> min(len(self<span style="color:#f92672">.</span>words), i <span style="color:#f92672">+</span> window <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(start, end):
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">!=</span> i:
+</span></span><span style="display:flex;"><span>                        collocations[self<span style="color:#f92672">.</span>words[j]] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Counter(collocations)<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用示例</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Python is an interpreted, high-level, general-purpose programming language.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Created by Guido van Rossum and first released in 1991, Python&#39;s design philosophy
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">emphasizes code readability with its notable use of significant whitespace.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Python is dynamically typed and garbage-collected.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>analyzer <span style="color:#f92672">=</span> TextAnalyzer(text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;高频词:&#34;</span>, analyzer<span style="color:#f92672">.</span>word_frequency(<span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">词长分布:&#34;</span>, analyzer<span style="color:#f92672">.</span>word_length_distribution())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">二元语法:&#34;</span>, analyzer<span style="color:#f92672">.</span>ngrams(<span style="color:#ae81ff">2</span>)[:<span style="color:#ae81ff">5</span>])
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">词汇丰富度: </span><span style="color:#e6db74">{</span>analyzer<span style="color:#f92672">.</span>vocabulary_richness()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2%</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;python&#39; 共现词:&#34;</span>, analyzer<span style="color:#f92672">.</span>find_collocations(<span style="color:#e6db74">&#39;python&#39;</span>))
+</span></span></code></pre></div><hr>
+<h2 id="-避坑指南">⚠️ 避坑指南</h2>
+<h3 id="陷阱-1修改集合时遍历">陷阱 1：修改集合时遍历</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：遍历时修改集合</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> s:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> item <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        s<span style="color:#f92672">.</span>remove(item)  <span style="color:#75715e"># RuntimeError: Set changed size during iteration</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：创建副本或使用集合运算</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {item <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> s <span style="color:#66d9ef">if</span> item <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>}
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {1, 3, 5}</span>
+</span></span></code></pre></div><h3 id="陷阱-2集合元素必须是可哈希的">陷阱 2：集合元素必须是可哈希的</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：列表不能作为集合元素</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># s = {[1, 2], [3, 4]}  # TypeError</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：使用元组</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)}
+</span></span><span style="display:flex;"><span>print(s)  <span style="color:#75715e"># {(1, 2), (3, 4)}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：字典不能作为集合元素</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># s = {{&#39;a&#39;: 1}, {&#39;b&#39;: 2}}  # TypeError</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：使用 frozenset 或元组</span>
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> {frozenset([(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#ae81ff">1</span>)]), frozenset([(<span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#ae81ff">2</span>)])}
+</span></span></code></pre></div><h3 id="陷阱-3counter-的算术运算">陷阱 3：Counter 的算术运算</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>c1 <span style="color:#f92672">=</span> Counter(<span style="color:#e6db74">&#39;aabbcc&#39;</span>)
+</span></span><span style="display:flex;"><span>c2 <span style="color:#f92672">=</span> Counter(<span style="color:#e6db74">&#39;aabb&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 减法只保留正数</span>
+</span></span><span style="display:flex;"><span>print(c1 <span style="color:#f92672">-</span> c2)  <span style="color:#75715e"># Counter({&#39;c&#39;: 2})</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 这意味着 c1 - c2 + c2 可能不等于 c1</span>
+</span></span><span style="display:flex;"><span>print(c1 <span style="color:#f92672">-</span> c2 <span style="color:#f92672">+</span> c2)  <span style="color:#75715e"># Counter({&#39;a&#39;: 2, &#39;b&#39;: 2, &#39;c&#39;: 2}) - 正确</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 但如果是负数...</span>
+</span></span><span style="display:flex;"><span>c3 <span style="color:#f92672">=</span> Counter(<span style="color:#e6db74">&#39;aaa&#39;</span>)
+</span></span><span style="display:flex;"><span>c4 <span style="color:#f92672">=</span> Counter(<span style="color:#e6db74">&#39;aaaaa&#39;</span>)
+</span></span><span style="display:flex;"><span>print(c3 <span style="color:#f92672">-</span> c4)  <span style="color:#75715e"># Counter() - 空！</span>
+</span></span></code></pre></div><h3 id="陷阱-4defaultdict-的默认值陷阱">陷阱 4：defaultdict 的默认值陷阱</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> defaultdict(list)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 访问不存在的键会创建空列表</span>
+</span></span><span style="display:flex;"><span>print(d[<span style="color:#e6db74">&#39;new_key&#39;</span>])  <span style="color:#75715e"># []</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;new_key&#39;</span> <span style="color:#f92672">in</span> d)  <span style="color:#75715e"># True - 键被创建了！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 这可能导致意外行为</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> defaultdict(int)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> d[<span style="color:#e6db74">&#39;count&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:  <span style="color:#75715e"># 访问时创建了键</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;有值&#34;</span>)
+</span></span><span style="display:flex;"><span>print(d)  <span style="color:#75715e"># {&#39;count&#39;: 0} - 键被创建了</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决方案：使用 in 检查</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;count&#39;</span> <span style="color:#f92672">in</span> d <span style="color:#f92672">and</span> d[<span style="color:#e6db74">&#39;count&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;有值&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<p>通过本讲，我们掌握了：</p>
+<table>
+  <thead>
+      <tr>
+          <th>知识点</th>
+          <th>核心要点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>集合（set）</strong></td>
+          <td>基于哈希表，O(1) 查找，自动去重，支持集合运算</td>
+      </tr>
+      <tr>
+          <td><strong>frozenset</strong></td>
+          <td>不可变集合，可作为字典键</td>
+      </tr>
+      <tr>
+          <td><strong>字典（dict）</strong></td>
+          <td>Python 3.7+ 保持插入顺序，O(1) 查找</td>
+      </tr>
+      <tr>
+          <td><strong>defaultdict</strong></td>
+          <td>自动初始化默认值，适合分组、计数</td>
+      </tr>
+      <tr>
+          <td><strong>Counter</strong></td>
+          <td>专业计数工具，支持算术运算</td>
+      </tr>
+      <tr>
+          <td><strong>OrderedDict</strong></td>
+          <td>有序字典，支持 move_to_end</td>
+      </tr>
+      <tr>
+          <td><strong>ChainMap</strong></td>
+          <td>链式映射，合并多个字典视图</td>
+      </tr>
+      <tr>
+          <td><strong>性能关键</strong></td>
+          <td>成员检查用 set，计数用 Counter</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>记住这句话</strong>：</p>
+<blockquote>
+<p>选择正确的容器类型，能让你的代码性能提升 100 倍，同时更简洁易读。</p>
+</blockquote>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong><a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
+<hr>
+<h2 id="-加入流畅的-python直播共读营">🎓 加入《流畅的 Python》直播共读营</h2>
+<p>学到这里，如果你想系统吃透这本书——欢迎加入我的直播共读课。</p>
+<ul>
+<li>每周直播精讲，逐章拆解核心知识点</li>
+<li>专属学习群，随时答疑交流</li>
+<li>试运营特惠：<del>499 元</del> → <strong>299 元</strong></li>
+</ul>
+<p>👉 <strong>【立即报名《流畅的 Python》共读课】</strong>：https://mp.weixin.qq.com/s/ivHJwn1nNx5ug4TFrapvGg</p>
+<hr>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="02-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8.md">上一讲：数据容器深度解析</a> | <a href="04-%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E8%8A%82.md">下一讲：文本与字节</a> →</p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/4f7696ff-fbef-423c-8874-38dfb05b165f/fluent-python.png" alt="fluent-python.png" title="fluent-python.png"></p>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/02-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8/">上一篇：第 2 讲：Python 数据容器 | 列表推导式、生成器表达式、元组与命名元组完全指南</a>
+        
+        
+        <a href="http://localhost:4002/04-%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E8%8A%82/">下一篇：第 4 讲：Python 文本与字节 | 字符串编码、Unicode、bytes、str 完全指南</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

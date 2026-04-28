@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python实战项目：我做了个自动邮件系统，每天定时发送数据报告 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python实战项目：我做了个自动邮件系统，每天定时发送数据报告</h1>
+        <div class="post-meta">
+            <span>2026-02-28 21:10</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%AE%9E%E6%88%98/" class="tag">Python实战</a>
+            
+            <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" class="tag">自动化</a>
+            
+            <a href="/tags/%E9%82%AE%E4%BB%B6/" class="tag">邮件</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种AI项目的程序员晚枫。</p>
+<p>你有没有这样的经历？每天上班第一件事就是——打开Excel，复制昨天的数据，做个表格，截图，写邮件，发给老板。一套流程下来，半小时没了。更要命的是，这个活儿每天都在重复。</p>
+<blockquote>
+<p>💡 <strong>场景</strong>：你是运营人员，每天要向老板汇报昨天的销售数据。以前你都是手动整理Excel、截图、发邮件——每天重复同样的工作。现在用Python自动化，设定好脚本，每天早上自动发到老板邮箱！</p>
+</blockquote>
+<p>我就是受不了这种重复劳动，才写的这个自动邮件系统。今天把它分享给你，50行代码解放你的双手。</p>
+<hr>
+<h2 id="项目功能">项目功能</h2>
+<ul>
+<li>自动生成数据报告（模拟销售数据）</li>
+<li>创建HTML格式的美观邮件</li>
+<li>添加附件（CSV文件）</li>
+<li>支持多个收件人</li>
+<li>可设置定时发送</li>
+<li>完善的错误处理和日志</li>
+</ul>
+<hr>
+<h2 id="准备工作获取邮箱授权码">准备工作：获取邮箱授权码</h2>
+<p>在写代码之前，你需要先获取邮箱的SMTP授权码（不是登录密码！）。</p>
+<h3 id="qq邮箱获取步骤">QQ邮箱获取步骤</h3>
+<ol>
+<li>登录QQ邮箱 → 设置 → 账户</li>
+<li>找到&quot;POP3/SMTP服务&quot; → 开启</li>
+<li>点击&quot;生成授权码&quot; → 按提示用手机发短信</li>
+<li>获得16位授权码，保存好！</li>
+</ol>
+<h3 id="gmail获取步骤">Gmail获取步骤</h3>
+<ol>
+<li>开启两步验证</li>
+<li>创建应用专用密码：Google账户 → 安全 → 应用专用密码</li>
+<li>生成16位密码</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>注意</strong>：千万不要把授权码硬编码在代码里！建议用环境变量或配置文件。</p>
+</blockquote>
+<hr>
+<h2 id="完整代码">完整代码</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> smtplib
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> csv
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.text <span style="color:#f92672">import</span> MIMEText
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.multipart <span style="color:#f92672">import</span> MIMEMultipart
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.base <span style="color:#f92672">import</span> MIMEBase
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> email <span style="color:#f92672">import</span> encoders
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_sales_data</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;生成模拟销售数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    products <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;产品A&#39;</span>, <span style="color:#e6db74">&#39;产品B&#39;</span>, <span style="color:#e6db74">&#39;产品C&#39;</span>, <span style="color:#e6db74">&#39;产品D&#39;</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, product <span style="color:#f92672">in</span> enumerate(products):
+</span></span><span style="display:flex;"><span>        sales <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;product&#39;</span>: product,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;quantity&#39;</span>: <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;revenue&#39;</span>: <span style="color:#ae81ff">5000</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">*</span> <span style="color:#ae81ff">2500</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;growth&#39;</span>: round((i <span style="color:#f92672">*</span> <span style="color:#ae81ff">5.2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3.1</span>), <span style="color:#ae81ff">1</span>),  <span style="color:#75715e"># 同比增长率</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;date&#39;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        data<span style="color:#f92672">.</span>append(sales)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_csv_attachment</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;将数据转换为CSV格式&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    output <span style="color:#f92672">=</span> io<span style="color:#f92672">.</span>StringIO()
+</span></span><span style="display:flex;"><span>    writer <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>DictWriter(output, fieldnames<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;product&#39;</span>, <span style="color:#e6db74">&#39;quantity&#39;</span>, <span style="color:#e6db74">&#39;revenue&#39;</span>, <span style="color:#e6db74">&#39;growth&#39;</span>, <span style="color:#e6db74">&#39;date&#39;</span>])
+</span></span><span style="display:flex;"><span>    writer<span style="color:#f92672">.</span>writeheader()
+</span></span><span style="display:flex;"><span>    writer<span style="color:#f92672">.</span>writerows(data)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output<span style="color:#f92672">.</span>getvalue()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_email_content</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;创建HTML邮件内容&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    total_revenue <span style="color:#f92672">=</span> sum(item[<span style="color:#e6db74">&#39;revenue&#39;</span>] <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> data)
+</span></span><span style="display:flex;"><span>    total_quantity <span style="color:#f92672">=</span> sum(item[<span style="color:#e6db74">&#39;quantity&#39;</span>] <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> data)
+</span></span><span style="display:flex;"><span>    avg_growth <span style="color:#f92672">=</span> sum(item[<span style="color:#e6db74">&#39;growth&#39;</span>] <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> data) <span style="color:#f92672">/</span> len(data)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 增长标识</span>
+</span></span><span style="display:flex;"><span>    growth_icon <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📈&#34;</span> <span style="color:#66d9ef">if</span> avg_growth <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;📉&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    html <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;style&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            body </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> font-family: Arial, sans-serif; color: #333; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            h2 </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> color: #2c3e50; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            table </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> border-collapse: collapse; width: 100%; margin: 20px 0; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            th, td </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> border: 1px solid #ddd; padding: 10px; text-align: left; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            th </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> background-color: #3498db; color: white; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            tr:nth-child(even) </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> background-color: #f2f2f2; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            .summary </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> background-color: #ecf0f1; padding: 15px; margin: 20px 0; border-radius: 8px; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            .positive </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> color: #27ae60; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            .footer </span><span style="color:#ae81ff">{{</span><span style="color:#e6db74"> color: #95a5a6; margin-top: 30px; font-size: 12px; </span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/style&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;h2&gt;📊 每日销售报告&lt;/h2&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;p&gt;日期: </span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y年%m月</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">日&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;div class=&#34;summary&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;h3&gt;汇总数据&lt;/h3&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;p&gt;&lt;strong&gt;总销售额:&lt;/strong&gt; ¥</span><span style="color:#e6db74">{</span>total_revenue<span style="color:#e6db74">:</span><span style="color:#e6db74">,</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;p&gt;&lt;strong&gt;总销量:&lt;/strong&gt; </span><span style="color:#e6db74">{</span>total_quantity<span style="color:#e6db74">}</span><span style="color:#e6db74">件&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;p&gt;&lt;strong&gt;平均增长率:&lt;/strong&gt; &lt;span class=&#34;</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;positive&#39;</span> <span style="color:#66d9ef">if</span> avg_growth <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;&gt;</span><span style="color:#e6db74">{</span>growth_icon<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>avg_growth<span style="color:#e6db74">}</span><span style="color:#e6db74">%&lt;/span&gt;&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;h3&gt;详细数据&lt;/h3&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;table&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;th&gt;产品&lt;/th&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;th&gt;销量&lt;/th&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;th&gt;销售额&lt;/th&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;th&gt;同比增长&lt;/th&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;/tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> data:
+</span></span><span style="display:flex;"><span>        growth_class <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;positive&#34;</span> <span style="color:#66d9ef">if</span> item[<span style="color:#e6db74">&#39;growth&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        growth_icon_item <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📈&#34;</span> <span style="color:#66d9ef">if</span> item[<span style="color:#e6db74">&#39;growth&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;📉&#34;</span>
+</span></span><span style="display:flex;"><span>        html <span style="color:#f92672">+=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;td&gt;</span><span style="color:#e6db74">{</span>item[<span style="color:#e6db74">&#39;product&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/td&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;td&gt;</span><span style="color:#e6db74">{</span>item[<span style="color:#e6db74">&#39;quantity&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/td&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;td&gt;¥</span><span style="color:#e6db74">{</span>item[<span style="color:#e6db74">&#39;revenue&#39;</span>]<span style="color:#e6db74">:</span><span style="color:#e6db74">,</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/td&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;td class=&#34;</span><span style="color:#e6db74">{</span>growth_class<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;&gt;</span><span style="color:#e6db74">{</span>growth_icon_item<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>item[<span style="color:#e6db74">&#39;growth&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">%&lt;/td&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;/tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    html <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/table&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;div class=&#34;footer&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            此邮件由Python自动发送，请勿回复。如有问题请联系数据团队。
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> html
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_report</span>(sender_email, sender_password, recipient_emails, smtp_server<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;smtp.qq.com&#39;</span>, smtp_port<span style="color:#f92672">=</span><span style="color:#ae81ff">587</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;发送邮件报告
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        sender_email: 发件人邮箱
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        sender_password: 邮箱授权码（不是登录密码！）
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        recipient_emails: 收件人列表
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        smtp_server: SMTP服务器地址
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        smtp_port: SMTP端口
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 生成数据</span>
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> generate_sales_data()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 创建邮件</span>
+</span></span><span style="display:flex;"><span>    msg <span style="color:#f92672">=</span> MIMEMultipart()
+</span></span><span style="display:flex;"><span>    msg[<span style="color:#e6db74">&#39;From&#39;</span>] <span style="color:#f92672">=</span> sender_email
+</span></span><span style="display:flex;"><span>    msg[<span style="color:#e6db74">&#39;To&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;, &#39;</span><span style="color:#f92672">.</span>join(recipient_emails)
+</span></span><span style="display:flex;"><span>    msg[<span style="color:#e6db74">&#39;Subject&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;销售日报 - </span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 添加HTML内容</span>
+</span></span><span style="display:flex;"><span>    html_content <span style="color:#f92672">=</span> create_email_content(data)
+</span></span><span style="display:flex;"><span>    msg<span style="color:#f92672">.</span>attach(MIMEText(html_content, <span style="color:#e6db74">&#39;html&#39;</span>, <span style="color:#e6db74">&#39;utf-8&#39;</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 添加CSV附件</span>
+</span></span><span style="display:flex;"><span>    csv_data <span style="color:#f92672">=</span> create_csv_attachment(data)
+</span></span><span style="display:flex;"><span>    attachment <span style="color:#f92672">=</span> MIMEBase(<span style="color:#e6db74">&#39;application&#39;</span>, <span style="color:#e6db74">&#39;octet-stream&#39;</span>)
+</span></span><span style="display:flex;"><span>    attachment<span style="color:#f92672">.</span>set_payload(csv_data<span style="color:#f92672">.</span>encode(<span style="color:#e6db74">&#39;utf-8&#39;</span>))
+</span></span><span style="display:flex;"><span>    encoders<span style="color:#f92672">.</span>encode_base64(attachment)
+</span></span><span style="display:flex;"><span>    attachment<span style="color:#f92672">.</span>add_header(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Content-Disposition&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;attachment; filename=&#34;sales_report_</span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y%m</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">.csv&#34;&#39;</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    msg<span style="color:#f92672">.</span>attach(attachment)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 发送邮件</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;正在连接 </span><span style="color:#e6db74">{</span>smtp_server<span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">{</span>smtp_port<span style="color:#e6db74">}</span><span style="color:#e6db74">...&#34;</span>)
+</span></span><span style="display:flex;"><span>        server <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP(smtp_server, smtp_port, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>        server<span style="color:#f92672">.</span>starttls()  <span style="color:#75715e"># 启用TLS加密</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;正在登录 </span><span style="color:#e6db74">{</span>sender_email<span style="color:#e6db74">}</span><span style="color:#e6db74">...&#34;</span>)
+</span></span><span style="display:flex;"><span>        server<span style="color:#f92672">.</span>login(sender_email, sender_password)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;正在发送邮件给 </span><span style="color:#e6db74">{</span>len(recipient_emails)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个收件人...&#34;</span>)
+</span></span><span style="display:flex;"><span>        server<span style="color:#f92672">.</span>send_message(msg)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        server<span style="color:#f92672">.</span>quit()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;✅ 邮件发送成功！&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> smtplib<span style="color:#f92672">.</span>SMTPAuthenticationError:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;❌ 认证失败：请检查邮箱和授权码是否正确&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> smtplib<span style="color:#f92672">.</span>SMTPConnectError:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;❌ 连接失败：请检查SMTP服务器地址和端口&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> smtplib<span style="color:#f92672">.</span>SMTPRecipientsRefused:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;❌ 收件人被拒绝：请检查收件人邮箱地址&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;❌ 发送失败: </span><span style="color:#e6db74">{</span>type(e)<span style="color:#f92672">.</span>__name__<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用示例</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ⚠️ 请替换为你的真实邮箱信息</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 推荐用环境变量，不要硬编码！</span>
+</span></span><span style="display:flex;"><span>    SENDER_EMAIL <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;MAIL_USER&#39;</span>, <span style="color:#e6db74">&#34;your_email@qq.com&#34;</span>)
+</span></span><span style="display:flex;"><span>    SENDER_PASSWORD <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;MAIL_PASS&#39;</span>, <span style="color:#e6db74">&#34;your_auth_code&#34;</span>)
+</span></span><span style="display:flex;"><span>    RECIPIENTS <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;boss@company.com&#34;</span>, <span style="color:#e6db74">&#34;manager@company.com&#34;</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    send_report(SENDER_EMAIL, SENDER_PASSWORD, RECIPIENTS)
+</span></span></code></pre></div><hr>
+<h2 id="运行效果">运行效果</h2>
+<p><strong>程序运行后：</strong></p>
+<pre tabindex="0"><code>正在连接 smtp.qq.com:587...
+正在登录 your_email@qq.com...
+正在发送邮件给 2 个收件人...
+✅ 邮件发送成功！
+</code></pre><p><strong>收到的邮件（HTML格式）是这样子的：</strong></p>
+<hr>
+<h3 id="-邮件标题">📧 邮件标题</h3>
+<pre tabindex="0"><code>主题：销售日报 - 2026-04-16
+发件人：your_email@qq.com
+收件人：boss@company.com, manager@company.com
+</code></pre><h3 id="-邮件正文">📧 邮件正文</h3>
+<h1 id="-每日销售报告">📊 每日销售报告</h1>
+<p><strong>日期: 2026年04月16日</strong></p>
+<hr>
+<h3 id="汇总数据">汇总数据</h3>
+<ul>
+<li><strong>总销售额:</strong> ¥35,000</li>
+<li><strong>总销量:</strong> 550件</li>
+<li><strong>平均增长率:</strong> 📈 13.4%</li>
+</ul>
+<hr>
+<h3 id="详细数据">详细数据</h3>
+<table>
+  <thead>
+      <tr>
+          <th>产品</th>
+          <th>销量</th>
+          <th>销售额</th>
+          <th>同比增长</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>产品A</td>
+          <td>100</td>
+          <td>¥5,000</td>
+          <td>📈 3.1%</td>
+      </tr>
+      <tr>
+          <td>产品B</td>
+          <td>150</td>
+          <td>¥7,500</td>
+          <td>📈 8.3%</td>
+      </tr>
+      <tr>
+          <td>产品C</td>
+          <td>200</td>
+          <td>¥10,000</td>
+          <td>📈 13.5%</td>
+      </tr>
+      <tr>
+          <td>产品D</td>
+          <td>250</td>
+          <td>¥12,500</td>
+          <td>📈 18.7%</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p><em>此邮件由Python自动发送，请勿回复。如有问题请联系数据团队。</em></p>
+<hr>
+<p><strong>📎 附件（sales_report_20260416.csv）：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csv" data-lang="csv"><span style="display:flex;"><span><span style="color:#e6db74">product</span>,<span style="color:#e6db74">quantity</span>,<span style="color:#e6db74">revenue</span>,<span style="color:#e6db74">growth</span>,<span style="color:#e6db74">date</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">产品A</span>,<span style="color:#e6db74">100</span>,<span style="color:#e6db74">5000</span>,<span style="color:#e6db74">3.1</span>,<span style="color:#e6db74">2026-04-16</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">产品B</span>,<span style="color:#e6db74">150</span>,<span style="color:#e6db74">7500</span>,<span style="color:#e6db74">8.3</span>,<span style="color:#e6db74">2026-04-16</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">产品C</span>,<span style="color:#e6db74">200</span>,<span style="color:#e6db74">10000</span>,<span style="color:#e6db74">13.5</span>,<span style="color:#e6db74">2026-04-16</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">产品D</span>,<span style="color:#e6db74">250</span>,<span style="color:#e6db74">12500</span>,<span style="color:#e6db74">18.7</span>,<span style="color:#e6db74">2026-04-16</span>
+</span></span></code></pre></div><hr>
+<h2 id="常见邮箱的smtp设置">常见邮箱的SMTP设置</h2>
+<table>
+  <thead>
+      <tr>
+          <th>邮箱</th>
+          <th>SMTP服务器</th>
+          <th>端口</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>QQ邮箱</td>
+          <td>smtp.qq.com</td>
+          <td>587</td>
+          <td>需要授权码</td>
+      </tr>
+      <tr>
+          <td>Gmail</td>
+          <td>smtp.gmail.com</td>
+          <td>587</td>
+          <td>需要应用专用密码</td>
+      </tr>
+      <tr>
+          <td>163邮箱</td>
+          <td>smtp.163.com</td>
+          <td>465</td>
+          <td>需要授权码</td>
+      </tr>
+      <tr>
+          <td>Outlook</td>
+          <td>smtp.office365.com</td>
+          <td>587</td>
+          <td>需要应用密码</td>
+      </tr>
+      <tr>
+          <td>新浪邮箱</td>
+          <td>smtp.sina.com</td>
+          <td>587</td>
+          <td>需要开启SMTP</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>注意</strong>：需要在邮箱设置里开启SMTP，并使用&quot;授权码/应用专用密码&quot;而不是登录密码。</p>
+</blockquote>
+<hr>
+<h2 id="代码关键点解析">代码关键点解析</h2>
+<h3 id="1-smtp发送流程">1. SMTP发送流程</h3>
+<pre tabindex="0"><code>1. 连接SMTP服务器
+   ↓
+2. 开启TLS加密（starttls）
+   ↓
+3. 登录认证（login）
+   ↓
+4. 构建邮件（MIMEMultipart）
+   ↓
+5. 添加HTML正文 + 附件
+   ↓
+6. 发送（send_message）
+   ↓
+7. 退出连接（quit）
+</code></pre><h3 id="2-mime邮件结构">2. MIME邮件结构</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.multipart <span style="color:#f92672">import</span> MIMEMultipart
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.text <span style="color:#f92672">import</span> MIMEText
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.base <span style="color:#f92672">import</span> MIMEBase
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 邮件容器</span>
+</span></span><span style="display:flex;"><span>msg <span style="color:#f92672">=</span> MIMEMultipart()
+</span></span><span style="display:flex;"><span>msg[<span style="color:#e6db74">&#39;From&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sender@example.com&#39;</span>
+</span></span><span style="display:flex;"><span>msg[<span style="color:#e6db74">&#39;To&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;receiver@example.com&#39;</span>
+</span></span><span style="display:flex;"><span>msg[<span style="color:#e6db74">&#39;Subject&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;邮件标题&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加HTML正文</span>
+</span></span><span style="display:flex;"><span>html_part <span style="color:#f92672">=</span> MIMEText(<span style="color:#e6db74">&#39;&lt;h1&gt;Hello&lt;/h1&gt;&#39;</span>, <span style="color:#e6db74">&#39;html&#39;</span>, <span style="color:#e6db74">&#39;utf-8&#39;</span>)
+</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">.</span>attach(html_part)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加附件</span>
+</span></span><span style="display:flex;"><span>file_part <span style="color:#f92672">=</span> MIMEBase(<span style="color:#e6db74">&#39;application&#39;</span>, <span style="color:#e6db74">&#39;octet-stream&#39;</span>)
+</span></span><span style="display:flex;"><span>file_part<span style="color:#f92672">.</span>set_payload(file_data)
+</span></span><span style="display:flex;"><span>encoders<span style="color:#f92672">.</span>encode_base64(file_part)
+</span></span><span style="display:flex;"><span>file_part<span style="color:#f92672">.</span>add_header(<span style="color:#e6db74">&#39;Content-Disposition&#39;</span>, <span style="color:#e6db74">&#39;attachment; filename=&#34;report.csv&#34;&#39;</span>)
+</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">.</span>attach(file_part)
+</span></span></code></pre></div><h3 id="3-安全地使用密码">3. 安全地使用密码</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 危险：硬编码密码</span>
+</span></span><span style="display:flex;"><span>PASSWORD <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcd1234&#34;</span>  <span style="color:#75715e"># 别人看到代码就知道了！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：用环境变量</span>
+</span></span><span style="display:flex;"><span>PASSWORD <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;MAIL_PASS&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 更好：用配置文件（不要提交到Git！）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;config.json&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>    config <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>load(f)
+</span></span><span style="display:flex;"><span>PASSWORD <span style="color:#f92672">=</span> config[<span style="color:#e6db74">&#39;mail_password&#39;</span>]
+</span></span></code></pre></div><h3 id="4-多种错误处理">4. 多种错误处理</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    server <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP(smtp_server, smtp_port, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>starttls()
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>login(sender_email, sender_password)
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>send_message(msg)
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>quit()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> smtplib<span style="color:#f92672">.</span>SMTPAuthenticationError:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;❌ 认证失败：请检查邮箱和授权码&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> smtplib<span style="color:#f92672">.</span>SMTPConnectError:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;❌ 连接失败：请检查SMTP服务器地址&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> smtplib<span style="color:#f92672">.</span>SMTPRecipientsRefused:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;❌ 收件人被拒绝&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> smtplib<span style="color:#f92672">.</span>SMTPDataError:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;❌ 邮件内容被拒绝&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">TimeoutError</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;❌ 连接超时：请检查网络&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;❌ 未知错误：</span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="进阶功能">进阶功能</h2>
+<h3 id="发送带图片的邮件内嵌图片">发送带图片的邮件（内嵌图片）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> email.mime.image <span style="color:#f92672">import</span> MIMEImage
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_email_with_image</span>(sender, password, recipient):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;发送内嵌图片的邮件&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    msg <span style="color:#f92672">=</span> MIMEMultipart(<span style="color:#e6db74">&#39;related&#39;</span>)  <span style="color:#75715e"># related类型支持内嵌资源</span>
+</span></span><span style="display:flex;"><span>    msg[<span style="color:#e6db74">&#39;From&#39;</span>] <span style="color:#f92672">=</span> sender
+</span></span><span style="display:flex;"><span>    msg[<span style="color:#e6db74">&#39;To&#39;</span>] <span style="color:#f92672">=</span> recipient
+</span></span><span style="display:flex;"><span>    msg[<span style="color:#e6db74">&#39;Subject&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;图表报告&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># HTML正文（引用图片cid:chart）</span>
+</span></span><span style="display:flex;"><span>    html <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h2&gt;销售趋势图&lt;/h2&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;img src=&#34;cid:chart&#34; alt=&#34;销售趋势图&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    msg<span style="color:#f92672">.</span>attach(MIMEText(html, <span style="color:#e6db74">&#39;html&#39;</span>, <span style="color:#e6db74">&#39;utf-8&#39;</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 内嵌图片</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;sales_chart.png&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        img <span style="color:#f92672">=</span> MIMEImage(f<span style="color:#f92672">.</span>read())
+</span></span><span style="display:flex;"><span>        img<span style="color:#f92672">.</span>add_header(<span style="color:#e6db74">&#39;Content-ID&#39;</span>, <span style="color:#e6db74">&#39;&lt;chart&gt;&#39;</span>)  <span style="color:#75715e"># 对应cid:chart</span>
+</span></span><span style="display:flex;"><span>        msg<span style="color:#f92672">.</span>attach(img)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 发送...</span>
+</span></span><span style="display:flex;"><span>    server <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP(<span style="color:#e6db74">&#39;smtp.qq.com&#39;</span>, <span style="color:#ae81ff">587</span>)
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>starttls()
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>login(sender, password)
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>send_message(msg)
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>quit()
+</span></span></code></pre></div><h3 id="发送给不同收件人不同的内容">发送给不同收件人不同的内容</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_personalized_report</span>(sender, password, recipient_configs):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;给不同收件人发送个性化报告&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> config <span style="color:#f92672">in</span> recipient_configs:
+</span></span><span style="display:flex;"><span>        email <span style="color:#f92672">=</span> config[<span style="color:#e6db74">&#39;email&#39;</span>]
+</span></span><span style="display:flex;"><span>        departments <span style="color:#f92672">=</span> config[<span style="color:#e6db74">&#39;departments&#39;</span>]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 只生成该收件人关心的部门数据</span>
+</span></span><span style="display:flex;"><span>        data <span style="color:#f92672">=</span> [d <span style="color:#66d9ef">for</span> d <span style="color:#f92672">in</span> generate_sales_data() <span style="color:#66d9ef">if</span> d[<span style="color:#e6db74">&#39;department&#39;</span>] <span style="color:#f92672">in</span> departments]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        msg <span style="color:#f92672">=</span> MIMEMultipart()
+</span></span><span style="display:flex;"><span>        msg[<span style="color:#e6db74">&#39;From&#39;</span>] <span style="color:#f92672">=</span> sender
+</span></span><span style="display:flex;"><span>        msg[<span style="color:#e6db74">&#39;To&#39;</span>] <span style="color:#f92672">=</span> email
+</span></span><span style="display:flex;"><span>        msg[<span style="color:#e6db74">&#39;Subject&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;部门日报 - </span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>        msg<span style="color:#f92672">.</span>attach(MIMEText(create_email_content(data), <span style="color:#e6db74">&#39;html&#39;</span>, <span style="color:#e6db74">&#39;utf-8&#39;</span>))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            server <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP(<span style="color:#e6db74">&#39;smtp.qq.com&#39;</span>, <span style="color:#ae81ff">587</span>)
+</span></span><span style="display:flex;"><span>            server<span style="color:#f92672">.</span>starttls()
+</span></span><span style="display:flex;"><span>            server<span style="color:#f92672">.</span>login(sender, password)
+</span></span><span style="display:flex;"><span>            server<span style="color:#f92672">.</span>send_message(msg)
+</span></span><span style="display:flex;"><span>            server<span style="color:#f92672">.</span>quit()
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;✅ 已发送给 </span><span style="color:#e6db74">{</span>email<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;❌ 发送给 </span><span style="color:#e6db74">{</span>email<span style="color:#e6db74">}</span><span style="color:#e6db74"> 失败：</span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 配置</span>
+</span></span><span style="display:flex;"><span>recipient_configs <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#39;email&#39;</span>: <span style="color:#e6db74">&#39;sales_boss@company.com&#39;</span>, <span style="color:#e6db74">&#39;departments&#39;</span>: [<span style="color:#e6db74">&#39;销售部&#39;</span>, <span style="color:#e6db74">&#39;市场部&#39;</span>]},
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#39;email&#39;</span>: <span style="color:#e6db74">&#39;tech_boss@company.com&#39;</span>, <span style="color:#e6db74">&#39;departments&#39;</span>: [<span style="color:#e6db74">&#39;技术部&#39;</span>, <span style="color:#e6db74">&#39;产品部&#39;</span>]},
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="邮件发送日志">邮件发送日志</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 配置日志</span>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(
+</span></span><span style="display:flex;"><span>    filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mail_log.txt&#39;</span>,
+</span></span><span style="display:flex;"><span>    level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO,
+</span></span><span style="display:flex;"><span>    format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_report_with_logging</span>(sender, password, recipients):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;带日志记录的邮件发送&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> send_report(sender, password, recipients)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> result:
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;邮件发送成功：</span><span style="color:#e6db74">{</span>recipients<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;邮件发送失败：</span><span style="color:#e6db74">{</span>recipients<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;邮件发送异常：</span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span></code></pre></div><hr>
+<h2 id="避坑指南">避坑指南</h2>
+<h3 id="1-qq邮箱端口问题">1. QQ邮箱端口问题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># QQ邮箱有时587端口连不上，试试465（SSL）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式1：587 + starttls</span>
+</span></span><span style="display:flex;"><span>server <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP(<span style="color:#e6db74">&#39;smtp.qq.com&#39;</span>, <span style="color:#ae81ff">587</span>)
+</span></span><span style="display:flex;"><span>server<span style="color:#f92672">.</span>starttls()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：465直接SSL</span>
+</span></span><span style="display:flex;"><span>server <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP_SSL(<span style="color:#e6db74">&#39;smtp.qq.com&#39;</span>, <span style="color:#ae81ff">465</span>)
+</span></span></code></pre></div><h3 id="2-中文附件名乱码">2. 中文附件名乱码</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> email.header <span style="color:#f92672">import</span> Header
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：中文文件名直接写</span>
+</span></span><span style="display:flex;"><span>attachment<span style="color:#f92672">.</span>add_header(<span style="color:#e6db74">&#39;Content-Disposition&#39;</span>, <span style="color:#e6db74">&#39;attachment; filename=&#34;销售报告.csv&#34;&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：用Header编码</span>
+</span></span><span style="display:flex;"><span>filename <span style="color:#f92672">=</span> Header(<span style="color:#e6db74">&#39;销售报告.csv&#39;</span>, <span style="color:#e6db74">&#39;utf-8&#39;</span>)<span style="color:#f92672">.</span>encode()
+</span></span><span style="display:flex;"><span>attachment<span style="color:#f92672">.</span>add_header(<span style="color:#e6db74">&#39;Content-Disposition&#39;</span>, <span style="color:#e6db74">&#39;attachment&#39;</span>, filename<span style="color:#f92672">=</span>filename)
+</span></span></code></pre></div><h3 id="3-邮件被识别为垃圾邮件">3. 邮件被识别为垃圾邮件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 避免被识别为垃圾邮件的技巧：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 使用HTML格式（比纯文本通过率高）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 邮件标题不要用太多感叹号和促销词</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 添加纯文本备选（multipart/alternative）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 控制发送频率，不要1分钟发100封</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加纯文本备选</span>
+</span></span><span style="display:flex;"><span>msg <span style="color:#f92672">=</span> MIMEMultipart(<span style="color:#e6db74">&#39;alternative&#39;</span>)
+</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">.</span>attach(MIMEText(<span style="color:#e6db74">&#39;纯文本版本&#39;</span>, <span style="color:#e6db74">&#39;plain&#39;</span>, <span style="color:#e6db74">&#39;utf-8&#39;</span>))
+</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">.</span>attach(MIMEText(<span style="color:#e6db74">&#39;&lt;h1&gt;HTML版本&lt;/h1&gt;&#39;</span>, <span style="color:#e6db74">&#39;html&#39;</span>, <span style="color:#e6db74">&#39;utf-8&#39;</span>))
+</span></span></code></pre></div><h3 id="4-授权码过期">4. 授权码过期</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 授权码可能过期，需要处理这种情况</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    server<span style="color:#f92672">.</span>login(sender_email, sender_password)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> smtplib<span style="color:#f92672">.</span>SMTPAuthenticationError:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;❌ 授权码可能已过期，请重新获取&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;QQ邮箱：设置 → 账户 → 生成授权码&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="进阶定时自动发送">进阶：定时自动发送</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> schedule
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">job</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;定时任务&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;开始执行定时邮件任务 - </span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> send_report(SENDER_EMAIL, SENDER_PASSWORD, RECIPIENTS)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> result:
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;邮件发送成功&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#34;邮件发送失败&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 每天早上9点自动发送</span>
+</span></span><span style="display:flex;"><span>schedule<span style="color:#f92672">.</span>every()<span style="color:#f92672">.</span>day<span style="color:#f92672">.</span>at(<span style="color:#e6db74">&#34;09:00&#34;</span>)<span style="color:#f92672">.</span>do(job)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 工作日发送（周一到周五）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># schedule.every().monday.at(&#34;09:00&#34;).do(job)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># schedule.every().tuesday.at(&#34;09:00&#34;).do(job)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... 或者自己判断</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;🤖 邮件自动发送服务已启动&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;⏰ 每天早上 09:00 自动发送报告&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    schedule<span style="color:#f92672">.</span>run_pending()
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">60</span>)  <span style="color:#75715e"># 每分钟检查一次</span>
+</span></span></code></pre></div><h3 id="工作日判断版本">工作日判断版本</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> schedule
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">weekday_job</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;只在工作日执行&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    today <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 0=周一, 4=周五, 5=周六, 6=周日</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> today<span style="color:#f92672">.</span>weekday() <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>        send_report(SENDER_EMAIL, SENDER_PASSWORD, RECIPIENTS)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;今天是周末，跳过发送&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 每天9点检查</span>
+</span></span><span style="display:flex;"><span>schedule<span style="color:#f92672">.</span>every()<span style="color:#f92672">.</span>day<span style="color:#f92672">.</span>at(<span style="color:#e6db74">&#34;09:00&#34;</span>)<span style="color:#f92672">.</span>do(weekday_job)
+</span></span></code></pre></div><hr>
+<hr>
+<h2 id="-推荐python-零基础实战营">📚 推荐：Python 零基础实战营</h2>
+<p><strong>系统学习Python，推荐这个免费入门课程 👇</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>特点</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🎯 专为0基础设计</td>
+          <td>门槛低，上手快</td>
+      </tr>
+      <tr>
+          <td>📹 配套视频讲解</td>
+          <td>配合文章学习效果更好</td>
+      </tr>
+      <tr>
+          <td>💬 专属答疑群</td>
+          <td>遇到问题有人带</td>
+      </tr>
+      <tr>
+          <td>🎁 实体书赠送</td>
+          <td>优秀学员送《Python编程从入门到实践》</td>
+      </tr>
+  </tbody>
+</table>
+<p>👉 <strong><a href="https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397">点击免费领取 Python 零基础实战营</a></strong></p>
+<h2 id="本讲小结">本讲小结</h2>
+<p>用到的知识：</p>
+<table>
+  <thead>
+      <tr>
+          <th>知识</th>
+          <th>用途</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>smtplib</code></td>
+          <td>SMTP协议发送邮件</td>
+      </tr>
+      <tr>
+          <td><code>email.mime</code></td>
+          <td>构造HTML邮件和附件</td>
+      </tr>
+      <tr>
+          <td><code>csv</code></td>
+          <td>生成CSV文件</td>
+      </tr>
+      <tr>
+          <td><code>datetime</code></td>
+          <td>获取当前日期</td>
+      </tr>
+      <tr>
+          <td><code>os.environ</code></td>
+          <td>安全获取环境变量</td>
+      </tr>
+      <tr>
+          <td><code>schedule</code></td>
+          <td>定时任务调度</td>
+      </tr>
+      <tr>
+          <td><code>logging</code></td>
+          <td>日志记录</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="下节预告">下节预告</h2>
+<p>第三个实战项目是<strong>天气查询机器人</strong>——查天气、做提醒，特别实用！</p>
+<p>👉 <strong><a href="./22-Python%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE-%E5%A4%A9%E6%B0%94%E6%9F%A5%E8%AF%A2%E6%9C%BA%E5%99%A8%E4%BA%BA.md">继续阅读：Python实战项目-天气查询机器人</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="./20-Python%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE-%E8%87%AA%E5%8A%A8%E6%95%B4%E7%90%86%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E5%A4%B9.md">Python实战项目-自动整理下载文件夹</a></p>
+<p><strong>下一篇：</strong> <a href="./22-Python%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE-%E5%A4%A9%E6%B0%94%E6%9F%A5%E8%AF%A2%E6%9C%BA%E5%99%A8%E4%BA%BA.md">Python实战项目-天气查询机器人</a></p>
+<hr>
+<p><em>PS：邮件自动化是办公提效的神器。学会这个，每天省下半小时！</em></p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20-python%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE-%E8%87%AA%E5%8A%A8%E6%95%B4%E7%90%86%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E5%A4%B9/">上一篇：Python实战项目：我写了50行代码，自动整理乱糟糟的下载文件夹</a>
+        
+        
+        <a href="http://localhost:4002/22-python%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE-%E5%A4%A9%E6%B0%94%E6%9F%A5%E8%AF%A2%E6%9C%BA%E5%99%A8%E4%BA%BA/">下一篇：Python实战项目：我做了个天气查询机器人，每天自动推送天气提醒</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

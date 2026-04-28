@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 5 讲：AI 生成数据报表 - 一键搞定月度汇报 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 5 讲：AI 生成数据报表 - 一键搞定月度汇报</h1>
+        <div class="post-meta">
+            <span>2026-03-02 16:20</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/ai-%E8%87%AA%E5%8A%A8%E5%8C%96excel%E6%95%B0%E6%8D%AE%E6%8A%A5%E8%A1%A8/" class="tag">AI 自动化，Excel，数据报表</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+<h2 id="-场景导入月底汇报的痛苦">😫 场景导入：月底汇报的痛苦</h2>
+<p><strong>场景：又到月底了&hellip;</strong></p>
+<pre tabindex="0"><code>老板：下周一月度会议，大家准备一下月度汇报
+
+你的内心：
+❌ 又要做PPT...
+❌ 又要从各个表里拉数据...
+❌ 又要做图表...
+❌ 又要写分析...
+❌ 整整一天就没了...
+
+实际操作：
+- 打开销售系统，导出数据 → 30分钟
+- 整理数据，去掉重复、空行 → 30分钟
+- 做透视表，计算各种指标 → 1小时
+- 做图表，调整样式 → 1小时
+- 写文字分析 → 1小时
+- 做PPT，排版调整 → 1小时
+总计：5小时+
+</code></pre><p><strong>如果用AI自动化呢？</strong></p>
+<pre tabindex="0"><code>- 用AI自动汇总数据 → 5分钟
+- 用AI生成图表 → 3分钟
+- 用AI写分析报告 → 5分钟
+- 用AI生成PPT → 5分钟
+总计：18分钟
+</code></pre><p><strong>这一讲，我教你如何用AI一键生成数据报表。</strong></p>
+<hr>
+<h2 id="-一常见报表类型与结构">📊 一、常见报表类型与结构</h2>
+<h3 id="1-销售报表">1. 销售报表</h3>
+<p><strong>核心指标：</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>指标类别</th>
+          <th>具体指标</th>
+          <th>计算方式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>总量指标</td>
+          <td>总销售额、总订单数</td>
+          <td>SUM求和</td>
+      </tr>
+      <tr>
+          <td>增长指标</td>
+          <td>环比增长、同比增长</td>
+          <td>(本期-上期)/上期</td>
+      </tr>
+      <tr>
+          <td>排名指标</td>
+          <td>Top10产品、Top10销售</td>
+          <td>排序取前10</td>
+      </tr>
+      <tr>
+          <td>分布指标</td>
+          <td>区域分布、品类分布</td>
+          <td>分组汇总</td>
+      </tr>
+      <tr>
+          <td>效率指标</td>
+          <td>客单价、转化率</td>
+          <td>销售额/订单数</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>标准结构：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># XX月销售报表
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 一、整体业绩
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 本月销售额：XXX万元
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 环比增长：XX%
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 同比增长：XX%
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 目标完成率：XX%
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二、产品分析
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Top10产品销售情况
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 产品结构占比
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 三、区域分析
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 各区域销售排名
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 增长最快/最慢区域
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 四、客户分析
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 新老客户占比
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 客户集中度
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 五、问题与建议
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 发现的问题
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 改进建议
+</span></span></code></pre></div><h3 id="2-财务报表">2. 财务报表</h3>
+<p><strong>核心指标：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 财务报表关键指标</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 收入类</span>
+</span></span><span style="display:flex;"><span>总收入 <span style="color:#f92672">=</span> SUM(所有收入科目)
+</span></span><span style="display:flex;"><span>主营业务收入占比 <span style="color:#f92672">=</span> 主营业务收入 <span style="color:#f92672">/</span> 总收入
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 支出类</span>
+</span></span><span style="display:flex;"><span>总支出 <span style="color:#f92672">=</span> SUM(所有支出科目)
+</span></span><span style="display:flex;"><span>成本率 <span style="color:#f92672">=</span> 总成本 <span style="color:#f92672">/</span> 总收入
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 利润类</span>
+</span></span><span style="display:flex;"><span>毛利润 <span style="color:#f92672">=</span> 总收入 <span style="color:#f92672">-</span> 总成本
+</span></span><span style="display:flex;"><span>净利润 <span style="color:#f92672">=</span> 毛利润 <span style="color:#f92672">-</span> 费用 <span style="color:#f92672">-</span> 税金
+</span></span><span style="display:flex;"><span>利润率 <span style="color:#f92672">=</span> 净利润 <span style="color:#f92672">/</span> 总收入
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 现金流类</span>
+</span></span><span style="display:flex;"><span>经营现金流 <span style="color:#f92672">=</span> 经营活动现金流入 <span style="color:#f92672">-</span> 经营活动现金流出
+</span></span><span style="display:flex;"><span>自由现金流 <span style="color:#f92672">=</span> 经营现金流 <span style="color:#f92672">-</span> 资本支出
+</span></span></code></pre></div><h3 id="3-运营报表">3. 运营报表</h3>
+<p><strong>核心指标：</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>指标</th>
+          <th>定义</th>
+          <th>计算公式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>DAU</td>
+          <td>日活跃用户数</td>
+          <td>当日登录用户数</td>
+      </tr>
+      <tr>
+          <td>MAU</td>
+          <td>月活跃用户数</td>
+          <td>当月登录用户数</td>
+      </tr>
+      <tr>
+          <td>留存率</td>
+          <td>用户留存比例</td>
+          <td>N日后仍在使用的用户 / 新增用户</td>
+      </tr>
+      <tr>
+          <td>转化率</td>
+          <td>用户转化比例</td>
+          <td>完成目标用户数 / 总用户数</td>
+      </tr>
+      <tr>
+          <td>ARPU</td>
+          <td>平均每用户收入</td>
+          <td>总收入 / 用户数</td>
+      </tr>
+      <tr>
+          <td>LTV</td>
+          <td>用户生命周期价值</td>
+          <td>ARPU × 平均生命周期</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-二用-ai-自动汇总数据">🤖 二、用 AI 自动汇总数据</h2>
+<h3 id="方法1chatexcel-快速汇总">方法1：ChatExcel 快速汇总</h3>
+<p><strong>场景：</strong> 生成月度销售报表</p>
+<p><strong>提示词：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>帮我生成一份完整的月度销售报表。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>原始数据包含：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 日期：订单日期
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 产品：产品名称
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 销售员：负责人
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 销售额：订单金额
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 区域：销售区域
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>报表要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 本月总销售额、总订单数
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 环比增长（与上月对比）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 同比增长（与去年同月对比）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> Top10产品销售排名
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 各区域销售汇总
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">6.</span> 各销售员业绩排名
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输出格式：多个表格，每个表格一个主题
+</span></span></code></pre></div><p><strong>ChatExcel执行过程：</strong></p>
+<pre tabindex="0"><code>[处理中...]
+✅ 统计本月总销售额：152.3万元
+✅ 统计本月订单数：328单
+✅ 计算环比增长：+15.2%
+✅ 计算同比增长：+28.6%
+✅ 提取Top10产品
+✅ 按区域汇总
+✅ 按销售员排名
+
+[生成报表预览]
+</code></pre><h3 id="方法2claudechatgpt-深度分析">方法2：Claude/ChatGPT 深度分析</h3>
+<p><strong>场景：</strong> 需要更深入的数据分析</p>
+<p><strong>提示词模板：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名资深的数据分析师。
+</span></span><span style="display:flex;"><span>请分析以下销售数据，生成一份完整的分析报告。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据概览：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 时间范围：2026年1月-3月
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 数据量：1000条订单记录
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 字段：日期、产品、销售员、销售额、区域、客户类型
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据内容：
+</span></span><span style="display:flex;"><span>[粘贴数据或上传文件]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>分析要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 整体业绩分析
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 总销售额、订单数、客单价
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 环比、同比增长情况
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 目标完成情况
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 产品分析
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> Top10产品及占比
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 增长最快的产品
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 产品结构分析
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 区域分析
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 各区域销售情况
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 区域增长对比
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 区域问题识别
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 客户分析
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 新老客户占比
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 客户集中度（Top10客户占比）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 趋势分析
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 月度趋势
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 周度规律
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">6.</span> 问题与建议
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 发现的问题
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 改进建议
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 风险预警
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输出格式：
+</span></span><span style="display:flex;"><span>用Markdown格式，包含表格、图表描述、分析文字。
+</span></span></code></pre></div><p><strong>AI返回示例：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 2026年Q1销售分析报告
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 一、整体业绩分析
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 1.1 核心指标
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>| 指标 | 数值 | 环比 | 同比 |
+</span></span><span style="display:flex;"><span>|------|------|------|------|
+</span></span><span style="display:flex;"><span>| 总销售额 | 452.6万元 | +12.3% | +28.6% |
+</span></span><span style="display:flex;"><span>| 订单数 | 968单 | +8.5% | +15.2% |
+</span></span><span style="display:flex;"><span>| 客单价 | 4676元 | +3.5% | +11.6% |
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**分析：**</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Q1整体业绩表现良好，超额完成季度目标（目标450万）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 同比增长显著，说明业务扩张有效
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 客单价提升，说明产品结构优化
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 1.2 月度趋势
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>| 月份 | 销售额 | 环比增长 |
+</span></span><span style="display:flex;"><span>|------|--------|---------|
+</span></span><span style="display:flex;"><span>| 1月 | 138.2万 | - |
+</span></span><span style="display:flex;"><span>| 2月 | 142.4万 | +3.0% |
+</span></span><span style="display:flex;"><span>| 3月 | 172.0万 | +20.8% |
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**分析：**</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 3月增长明显，主要受春节后复工和新品上市影响
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 整体呈上升趋势
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二、产品分析
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 2.1 Top10产品
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>| 排名 | 产品名称 | 销售额 | 占比 | 同比 |
+</span></span><span style="display:flex;"><span>|------|---------|--------|------|------|
+</span></span><span style="display:flex;"><span>| 1 | 产品A | 85.3万 | 18.8% | +45% |
+</span></span><span style="display:flex;"><span>| 2 | 产品B | 72.1万 | 15.9% | +22% |
+</span></span><span style="display:flex;"><span>| 3 | 产品C | 58.6万 | 12.9% | +18% |
+</span></span><span style="display:flex;"><span>| ... | ... | ... | ... | ... |
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**分析：**</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Top10产品占总销售额的68%，集中度较高
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 产品A增长最快，是明星产品
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 需关注尾部产品，优化产品结构
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 2.2 产品结构
+</span></span></span></code></pre></div><p>产品A ████████████ 18.8%
+产品B ██████████ 15.9%
+产品C ████████ 12.9%
+产品D ██████ 10.5%
+产品E █████ 9.2%
+其他 ████████████████████████ 32.7%</p>
+<pre tabindex="0"><code>
+## 三、区域分析
+
+### 3.1 各区域销售情况
+
+| 区域 | 销售额 | 占比 | 环比 | 同比 | 目标完成率 |
+|------|--------|------|------|------|-----------|
+| 华东 | 152.3万 | 33.6% | +15% | +32% | 105% ✅ |
+| 华北 | 98.5万 | 21.8% | +10% | +25% | 98% ⚠️ |
+| 华南 | 85.2万 | 18.8% | +8% | +20% | 95% ⚠️ |
+| 华中 | 62.1万 | 13.7% | +5% | +15% | 92% ⚠️ |
+| 西部 | 54.5万 | 12.1% | +12% | +35% | 108% ✅ |
+
+**分析：**
+- 华东区表现最佳，贡献三分之一销售额
+- 华北、华南未达标，需重点关注
+- 西部增长最快，是潜力市场
+
+### 3.2 区域问题识别
+
+⚠️ **需要关注的问题：**
+1. 华北区目标未达成（完成率98%）
+   - 原因：3月最后一周订单延迟
+   - 建议：加强客户跟进
+
+2. 华南区增长放缓（环比仅+8%）
+   - 原因：竞品价格战
+   - 建议：调整定价策略
+
+## 四、客户分析
+
+### 4.1 新老客户占比
+
+| 客户类型 | 销售额 | 占比 | 客单价 |
+|---------|--------|------|--------|
+| 老客户 | 316.8万 | 70% | 5200元 |
+| 新客户 | 135.8万 | 30% | 3400元 |
+
+**分析：**
+- 老客户贡献主要收入，忠诚度高
+- 新客户客单价较低，需加强培育
+
+### 4.2 客户集中度
+
+Top10客户销售额：135.8万，占比30%
+
+**风险提示：** 客户集中度适中，无明显风险
+
+## 五、趋势分析
+
+### 5.1 月度趋势
+
+📈 销售额走势：
+</code></pre><p>180万 │                    ╭─── 3月
+160万 │               ╭────╯
+140万 │          ╭────╯ 2月
+120万 │     ╭────╯
+100万 │╭────╯ 1月
+└─────────────────────</p>
+<pre tabindex="0"><code>
+### 5.2 周度规律
+
+| 星期 | 平均销售额 | 占比 |
+|------|-----------|------|
+| 周一 | 15.2万 | 15% |
+| 周二 | 16.8万 | 17% |
+| 周三 | 17.5万 | 18% |
+| 周四 | 18.2万 | 18% |
+| 周五 | 19.8万 | 20% |
+| 周六 | 8.5万 | 8% |
+| 周日 | 5.2万 | 5% |
+
+**规律：** 周五销售额最高，周末较低
+
+## 六、问题与建议
+
+### 6.1 发现的问题
+
+1. **区域不均衡**
+   - 华东贡献1/3，其他区域增长慢
+   - 建议：加强其他区域的市场拓展
+
+2. **产品集中度高**
+   - Top10产品占68%
+   - 风险：明星产品下滑会影响整体
+   - 建议：培育第二增长曲线
+
+3. **新客户转化率低**
+   - 新客户客单价仅为老客户的65%
+   - 建议：优化新客户培育流程
+
+### 6.2 改进建议
+
+| 优先级 | 建议 | 预期效果 | 责任人 |
+|--------|------|---------|--------|
+| 高 | 加强华北、华南区域投入 | Q2目标达成率&gt;100% | 区域经理 |
+| 高 | 推出新品培育计划 | 降低产品集中度 | 产品部 |
+| 中 | 优化新客户转化流程 | 新客客单价提升20% | 运营部 |
+| 中 | 建立客户预警机制 | 降低客户流失率 | 客服部 |
+
+### 6.3 风险预警
+
+⚠️ **需要关注的风险：**
+1. 产品A依赖度过高（占18.8%）
+2. 华南竞品压力增大
+3. 部分区域目标未达成
+
+---
+
+报告生成时间：2026-04-01
+数据来源：ERP系统
+分析师：AI助手
+</code></pre><h3 id="方法3python-自动化脚本">方法3：Python 自动化脚本</h3>
+<p><strong>场景：</strong> 需要定期生成报表，自动化程度高</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 安装依赖：pip install pandas openpyxl matplotlib</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SalesReport</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;销售报表自动生成器&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, data_file):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;初始化&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(data_file)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>])
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>report_date <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">overall_analysis</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;整体业绩分析&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 核心指标</span>
+</span></span><span style="display:flex;"><span>        total_sales <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>        total_orders <span style="color:#f92672">=</span> len(self<span style="color:#f92672">.</span>df)
+</span></span><span style="display:flex;"><span>        avg_order_value <span style="color:#f92672">=</span> total_sales <span style="color:#f92672">/</span> total_orders
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 环比增长（假设数据包含多月份）</span>
+</span></span><span style="display:flex;"><span>        monthly_sales <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>groupby(
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)
+</span></span><span style="display:flex;"><span>        )[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(monthly_sales) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>            current_month <span style="color:#f92672">=</span> monthly_sales<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>            last_month <span style="color:#f92672">=</span> monthly_sales<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>            mom_growth <span style="color:#f92672">=</span> (current_month <span style="color:#f92672">-</span> last_month) <span style="color:#f92672">/</span> last_month
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            mom_growth <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;总销售额&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>total_sales<span style="color:#f92672">/</span><span style="color:#ae81ff">10000</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">万元&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;总订单数&#39;</span>: total_orders,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;客单价&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>avg_order_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">元&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;环比增长&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>mom_growth<span style="color:#e6db74">:</span><span style="color:#e6db74">.1%</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">product_analysis</span>(self, top_n<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;产品分析&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Top10产品</span>
+</span></span><span style="display:flex;"><span>        top_products <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;产品&#39;</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;销售额&#39;</span>: <span style="color:#e6db74">&#39;sum&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;订单号&#39;</span>: <span style="color:#e6db74">&#39;count&#39;</span>
+</span></span><span style="display:flex;"><span>        })<span style="color:#f92672">.</span>rename(columns<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;订单号&#39;</span>: <span style="color:#e6db74">&#39;订单数&#39;</span>})
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        top_products[<span style="color:#e6db74">&#39;占比&#39;</span>] <span style="color:#f92672">=</span> top_products[<span style="color:#e6db74">&#39;销售额&#39;</span>] <span style="color:#f92672">/</span> self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>        top_products <span style="color:#f92672">=</span> top_products<span style="color:#f92672">.</span>sort_values(<span style="color:#e6db74">&#39;销售额&#39;</span>, ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> top_products<span style="color:#f92672">.</span>head(top_n)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">region_analysis</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;区域分析&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        region_data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;区域&#39;</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;销售额&#39;</span>: <span style="color:#e6db74">&#39;sum&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;订单号&#39;</span>: <span style="color:#e6db74">&#39;count&#39;</span>
+</span></span><span style="display:flex;"><span>        })<span style="color:#f92672">.</span>rename(columns<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;订单号&#39;</span>: <span style="color:#e6db74">&#39;订单数&#39;</span>})
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        region_data[<span style="color:#e6db74">&#39;占比&#39;</span>] <span style="color:#f92672">=</span> region_data[<span style="color:#e6db74">&#39;销售额&#39;</span>] <span style="color:#f92672">/</span> self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>        region_data <span style="color:#f92672">=</span> region_data<span style="color:#f92672">.</span>sort_values(<span style="color:#e6db74">&#39;销售额&#39;</span>, ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> region_data
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_charts</span>(self, output_dir<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./charts/&#39;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成图表&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>makedirs(output_dir, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 设置中文字体</span>
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>, <span style="color:#e6db74">&#39;SimHei&#39;</span>]
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 1. 月度趋势图</span>
+</span></span><span style="display:flex;"><span>        monthly_sales <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>groupby(
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)
+</span></span><span style="display:flex;"><span>        )[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum() <span style="color:#f92672">/</span> <span style="color:#ae81ff">10000</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>plot(monthly_sales<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>astype(str), monthly_sales<span style="color:#f92672">.</span>values, 
+</span></span><span style="display:flex;"><span>                marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;月度销售趋势&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;月份&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;销售额（万元）&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>xticks(rotation<span style="color:#f92672">=</span><span style="color:#ae81ff">45</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">月度趋势.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 2. 产品Top10柱状图</span>
+</span></span><span style="display:flex;"><span>        top_products <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>product_analysis(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>barh(top_products<span style="color:#f92672">.</span>index, top_products[<span style="color:#e6db74">&#39;销售额&#39;</span>] <span style="color:#f92672">/</span> <span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Top10产品销售额&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;销售额（万元）&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;产品&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">产品Top10.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 3. 区域分布饼图</span>
+</span></span><span style="display:flex;"><span>        region_data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>region_analysis()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>pie(region_data[<span style="color:#e6db74">&#39;销售额&#39;</span>], labels<span style="color:#f92672">=</span>region_data<span style="color:#f92672">.</span>index,
+</span></span><span style="display:flex;"><span>               autopct<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f%%</span><span style="color:#e6db74">&#39;</span>, startangle<span style="color:#f92672">=</span><span style="color:#ae81ff">90</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;销售区域分布&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">区域分布.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;图表已保存到：</span><span style="color:#e6db74">{</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_report</span>(self, output_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售报表.xlsx&#39;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成完整报表&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(output_file, engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;openpyxl&#39;</span>) <span style="color:#66d9ef">as</span> writer:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 整体业绩</span>
+</span></span><span style="display:flex;"><span>            overall <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame([self<span style="color:#f92672">.</span>overall_analysis()])
+</span></span><span style="display:flex;"><span>            overall<span style="color:#f92672">.</span>to_excel(writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;整体业绩&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 产品分析</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>product_analysis()<span style="color:#f92672">.</span>to_excel(writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;产品分析&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 区域分析</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>region_analysis()<span style="color:#f92672">.</span>to_excel(writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;区域分析&#39;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 原始数据</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>to_excel(writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;原始数据&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;报表已生成：</span><span style="color:#e6db74">{</span>output_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用示例</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    report <span style="color:#f92672">=</span> SalesReport(<span style="color:#e6db74">&#39;销售数据.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 生成报表</span>
+</span></span><span style="display:flex;"><span>    report<span style="color:#f92672">.</span>generate_report(<span style="color:#e6db74">&#39;2026年Q1销售报表.xlsx&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 生成图表</span>
+</span></span><span style="display:flex;"><span>    report<span style="color:#f92672">.</span>generate_charts(<span style="color:#e6db74">&#39;./报表图表/&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 打印核心指标</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;=== 整体业绩 ===&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> report<span style="color:#f92672">.</span>overall_analysis()<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>value<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-三ai-生成图表">📈 三、AI 生成图表</h2>
+<h3 id="1-柱状图对比数据">1. 柱状图（对比数据）</h3>
+<p><strong>场景：</strong> 展示各产品销售额对比</p>
+<p><strong>提示词：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>我需要生成一个柱状图。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据：
+</span></span><span style="display:flex;"><span>产品A：85万
+</span></span><span style="display:flex;"><span>产品B：72万
+</span></span><span style="display:flex;"><span>产品C：58万
+</span></span><span style="display:flex;"><span>产品D：45万
+</span></span><span style="display:flex;"><span>产品E：38万
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 横向柱状图，产品名称在Y轴
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 销售额在X轴，单位：万元
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 颜色：蓝色渐变
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 标题：Top5产品销售额
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 显示数值标签
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>请给出Python代码。
+</span></span></code></pre></div><p><strong>AI返回：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 数据</span>
+</span></span><span style="display:flex;"><span>products <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;产品A&#39;</span>, <span style="color:#e6db74">&#39;产品B&#39;</span>, <span style="color:#e6db74">&#39;产品C&#39;</span>, <span style="color:#e6db74">&#39;产品D&#39;</span>, <span style="color:#e6db74">&#39;产品E&#39;</span>]
+</span></span><span style="display:flex;"><span>sales <span style="color:#f92672">=</span> [<span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">72</span>, <span style="color:#ae81ff">58</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">38</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置中文字体</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>, <span style="color:#e6db74">&#39;SimHei&#39;</span>]
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建图表</span>
+</span></span><span style="display:flex;"><span>fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 绘制横向柱状图</span>
+</span></span><span style="display:flex;"><span>colors <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>cm<span style="color:#f92672">.</span>Blues([<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.4</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.6</span>, <span style="color:#ae81ff">0.7</span>])
+</span></span><span style="display:flex;"><span>bars <span style="color:#f92672">=</span> ax<span style="color:#f92672">.</span>barh(products, sales, color<span style="color:#f92672">=</span>colors)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加数值标签</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> bar, value <span style="color:#f92672">in</span> zip(bars, sales):
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>text(value <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, bar<span style="color:#f92672">.</span>get_y() <span style="color:#f92672">+</span> bar<span style="color:#f92672">.</span>get_height()<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, 
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>value<span style="color:#e6db74">}</span><span style="color:#e6db74">万&#39;</span>, va<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置标题和标签</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Top5产品销售额&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, fontweight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;销售额（万元）&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 反转Y轴，让第一名在上面</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>invert_yaxis()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;Top5产品销售额.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h3 id="2-折线图趋势分析">2. 折线图（趋势分析）</h3>
+<p><strong>场景：</strong> 对比两年销售趋势</p>
+<p><strong>提示词：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>我需要生成一个双折线图。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据：
+</span></span><span style="display:flex;"><span>月份：1月、2月、3月、4月、5月、6月
+</span></span><span style="display:flex;"><span>2025年销售额：120万、135万、128万、145万、152万、168万
+</span></span><span style="display:flex;"><span>2026年销售额：138万、142万、172万、185万、195万、210万
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> X轴：月份
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> Y轴：销售额（万元）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 两条折线：2025年（蓝色）、2026年（橙色）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 添加数据点标记
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 图例
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">6.</span> 标题：销售趋势对比
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>请给出Python代码。
+</span></span></code></pre></div><p><strong>AI返回：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 数据</span>
+</span></span><span style="display:flex;"><span>months <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;1月&#39;</span>, <span style="color:#e6db74">&#39;2月&#39;</span>, <span style="color:#e6db74">&#39;3月&#39;</span>, <span style="color:#e6db74">&#39;4月&#39;</span>, <span style="color:#e6db74">&#39;5月&#39;</span>, <span style="color:#e6db74">&#39;6月&#39;</span>]
+</span></span><span style="display:flex;"><span>sales_2025 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">135</span>, <span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">145</span>, <span style="color:#ae81ff">152</span>, <span style="color:#ae81ff">168</span>]
+</span></span><span style="display:flex;"><span>sales_2026 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">138</span>, <span style="color:#ae81ff">142</span>, <span style="color:#ae81ff">172</span>, <span style="color:#ae81ff">185</span>, <span style="color:#ae81ff">195</span>, <span style="color:#ae81ff">210</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置中文字体</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>, <span style="color:#e6db74">&#39;SimHei&#39;</span>]
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建图表</span>
+</span></span><span style="display:flex;"><span>fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 绘制折线</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>plot(months, sales_2025, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, 
+</span></span><span style="display:flex;"><span>        label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2025年&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#3498db&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>plot(months, sales_2026, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;s&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, 
+</span></span><span style="display:flex;"><span>        label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2026年&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#e74c3c&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加数据标签</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, (v1, v2) <span style="color:#f92672">in</span> enumerate(zip(sales_2025, sales_2026)):
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>text(i, v1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>v1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>, ha<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#3498db&#39;</span>)
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>text(i, v2 <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>v2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>, ha<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#e74c3c&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置标题和标签</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;销售趋势对比&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, fontweight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;月份&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;销售额（万元）&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加图例</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加网格</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;销售趋势对比.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h3 id="3-饼图占比分析">3. 饼图（占比分析）</h3>
+<p><strong>场景：</strong> 展示销售区域分布</p>
+<p><strong>提示词：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>我需要生成一个饼图。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>数据：
+</span></span><span style="display:flex;"><span>华东：33.6%
+</span></span><span style="display:flex;"><span>华北：21.8%
+</span></span><span style="display:flex;"><span>华南：18.8%
+</span></span><span style="display:flex;"><span>华中：13.7%
+</span></span><span style="display:flex;"><span>西部：12.1%
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>要求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 饼图，显示各区域占比
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 显示百分比标签
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 突出显示最大的区域（分离效果）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 颜色：商务配色
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 标题：销售区域分布
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>请给出Python代码。
+</span></span></code></pre></div><p><strong>AI返回：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 数据</span>
+</span></span><span style="display:flex;"><span>regions <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;华东&#39;</span>, <span style="color:#e6db74">&#39;华北&#39;</span>, <span style="color:#e6db74">&#39;华南&#39;</span>, <span style="color:#e6db74">&#39;华中&#39;</span>, <span style="color:#e6db74">&#39;西部&#39;</span>]
+</span></span><span style="display:flex;"><span>percentages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">33.6</span>, <span style="color:#ae81ff">21.8</span>, <span style="color:#ae81ff">18.8</span>, <span style="color:#ae81ff">13.7</span>, <span style="color:#ae81ff">12.1</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置中文字体</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>, <span style="color:#e6db74">&#39;SimHei&#39;</span>]
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建图表</span>
+</span></span><span style="display:flex;"><span>fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置颜色（商务配色）</span>
+</span></span><span style="display:flex;"><span>colors <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;#3498db&#39;</span>, <span style="color:#e6db74">&#39;#2ecc71&#39;</span>, <span style="color:#e6db74">&#39;#f39c12&#39;</span>, <span style="color:#e6db74">&#39;#e74c3c&#39;</span>, <span style="color:#e6db74">&#39;#9b59b6&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 突出显示最大的区域（华东）</span>
+</span></span><span style="display:flex;"><span>explode <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0.05</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 绘制饼图</span>
+</span></span><span style="display:flex;"><span>wedges, texts, autotexts <span style="color:#f92672">=</span> ax<span style="color:#f92672">.</span>pie(
+</span></span><span style="display:flex;"><span>    percentages,
+</span></span><span style="display:flex;"><span>    labels<span style="color:#f92672">=</span>regions,
+</span></span><span style="display:flex;"><span>    autopct<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f%%</span><span style="color:#e6db74">&#39;</span>,
+</span></span><span style="display:flex;"><span>    colors<span style="color:#f92672">=</span>colors,
+</span></span><span style="display:flex;"><span>    explode<span style="color:#f92672">=</span>explode,
+</span></span><span style="display:flex;"><span>    startangle<span style="color:#f92672">=</span><span style="color:#ae81ff">90</span>,
+</span></span><span style="display:flex;"><span>    shadow<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置标签样式</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> autotext <span style="color:#f92672">in</span> autotexts:
+</span></span><span style="display:flex;"><span>    autotext<span style="color:#f92672">.</span>set_color(<span style="color:#e6db74">&#39;white&#39;</span>)
+</span></span><span style="display:flex;"><span>    autotext<span style="color:#f92672">.</span>set_fontweight(<span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置标题</span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;销售区域分布&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, fontweight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;销售区域分布.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h3 id="4-组合图多维度展示">4. 组合图（多维度展示）</h3>
+<p><strong>场景：</strong> 销售额与增长率组合图</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 数据</span>
+</span></span><span style="display:flex;"><span>months <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;1月&#39;</span>, <span style="color:#e6db74">&#39;2月&#39;</span>, <span style="color:#e6db74">&#39;3月&#39;</span>, <span style="color:#e6db74">&#39;4月&#39;</span>, <span style="color:#e6db74">&#39;5月&#39;</span>, <span style="color:#e6db74">&#39;6月&#39;</span>]
+</span></span><span style="display:flex;"><span>sales <span style="color:#f92672">=</span> [<span style="color:#ae81ff">138</span>, <span style="color:#ae81ff">142</span>, <span style="color:#ae81ff">172</span>, <span style="color:#ae81ff">185</span>, <span style="color:#ae81ff">195</span>, <span style="color:#ae81ff">210</span>]
+</span></span><span style="display:flex;"><span>growth_rate <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2.9</span>, <span style="color:#ae81ff">21.1</span>, <span style="color:#ae81ff">7.6</span>, <span style="color:#ae81ff">5.4</span>, <span style="color:#ae81ff">7.7</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置中文字体</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>, <span style="color:#e6db74">&#39;SimHei&#39;</span>]
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建图表</span>
+</span></span><span style="display:flex;"><span>fig, ax1 <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 柱状图：销售额</span>
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>bar(months, sales, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#3498db&#39;</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;销售额&#39;</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;月份&#39;</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;销售额（万元）&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#3498db&#39;</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>tick_params(axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;y&#39;</span>, labelcolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#3498db&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 第二个Y轴：增长率</span>
+</span></span><span style="display:flex;"><span>ax2 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>twinx()
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>plot(months, growth_rate, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#e74c3c&#39;</span>, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, 
+</span></span><span style="display:flex;"><span>         linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;增长率&#39;</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;增长率（%）&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#e74c3c&#39;</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>tick_params(axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;y&#39;</span>, labelcolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#e74c3c&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加标题</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;销售额与增长率趋势&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, fontweight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加图例</span>
+</span></span><span style="display:flex;"><span>lines1, labels1 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>get_legend_handles_labels()
+</span></span><span style="display:flex;"><span>lines2, labels2 <span style="color:#f92672">=</span> ax2<span style="color:#f92672">.</span>get_legend_handles_labels()
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>legend(lines1 <span style="color:#f92672">+</span> lines2, labels1 <span style="color:#f92672">+</span> labels2, loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;upper left&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;销售额与增长率.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><hr>
+<h2 id="-四ai-做数据透视表">🔄 四、AI 做数据透视表</h2>
+<h3 id="场景1产品区域交叉分析">场景1：产品×区域交叉分析</h3>
+<p><strong>提示词：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>你是一名Excel专家。
+</span></span><span style="display:flex;"><span>帮我创建一个数据透视表的配置说明。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>原始数据：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> A列：日期
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> B列：产品名称
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> C列：销售员
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> D列：销售额
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> E列：区域
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>透视表需求：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 行：产品名称
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列：区域
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 值：销售额（求和）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 筛选器：销售员
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>请提供：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> Excel操作步骤
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> Python pandas代码实现
+</span></span></code></pre></div><p><strong>AI返回：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## 方法1：Excel操作步骤
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 选中数据区域（A1:E100）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 插入 → 数据透视表 → 新工作表
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 配置字段：
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 行：产品名称
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 列：区域
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 值：销售额（求和）
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">-</span> 筛选器：销售员
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 设置格式：数字格式为货币
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 方法2：Python代码
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>```python
+</span></span><span style="display:flex;"><span>import pandas as pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 读取数据
+</span></span><span style="display:flex;"><span>df = pd.read_excel(&#39;销售数据.xlsx&#39;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 创建透视表
+</span></span><span style="display:flex;"><span>pivot_table = pd.pivot_table(
+</span></span><span style="display:flex;"><span>    df,
+</span></span><span style="display:flex;"><span>    values=&#39;销售额&#39;,
+</span></span><span style="display:flex;"><span>    index=&#39;产品名称&#39;,
+</span></span><span style="display:flex;"><span>    columns=&#39;区域&#39;,
+</span></span><span style="display:flex;"><span>    aggfunc=&#39;sum&#39;,
+</span></span><span style="display:flex;"><span>    fill_value=0
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 添加汇总列
+</span></span><span style="display:flex;"><span>pivot_table[&#39;合计&#39;] = pivot_table.sum(axis=1)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 格式化输出
+</span></span><span style="display:flex;"><span>print(pivot_table.style.format(&#39;{:,.0f}&#39;))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 保存到Excel
+</span></span><span style="display:flex;"><span>pivot_table.to_excel(&#39;产品区域透视表.xlsx&#39;)
+</span></span></code></pre></div><p>输出示例：</p>
+<table>
+  <thead>
+      <tr>
+          <th>产品名称</th>
+          <th>华东</th>
+          <th>华北</th>
+          <th>华南</th>
+          <th>华中</th>
+          <th>西部</th>
+          <th>合计</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>产品A</td>
+          <td>28万</td>
+          <td>22万</td>
+          <td>18万</td>
+          <td>12万</td>
+          <td>5万</td>
+          <td>85万</td>
+      </tr>
+      <tr>
+          <td>产品B</td>
+          <td>25万</td>
+          <td>20万</td>
+          <td>15万</td>
+          <td>8万</td>
+          <td>4万</td>
+          <td>72万</td>
+      </tr>
+      <tr>
+          <td>产品C</td>
+          <td>20万</td>
+          <td>15万</td>
+          <td>12万</td>
+          <td>8万</td>
+          <td>4万</td>
+          <td>58万</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td><strong>合计</strong></td>
+          <td><strong>152万</strong></td>
+          <td><strong>98万</strong></td>
+          <td><strong>85万</strong></td>
+          <td><strong>62万</strong></td>
+          <td><strong>55万</strong></td>
+          <td><strong>452万</strong></td>
+      </tr>
+  </tbody>
+</table>
+<pre tabindex="0"><code>
+### 场景2：多维度分组统计
+
+```python
+import pandas as pd
+
+# 读取数据
+df = pd.read_excel(&#39;销售数据.xlsx&#39;)
+
+# 多维度分组统计
+report = df.groupby([&#39;产品&#39;, &#39;区域&#39;, &#39;销售员&#39;]).agg({
+    &#39;销售额&#39;: [&#39;sum&#39;, &#39;count&#39;, &#39;mean&#39;],
+    &#39;订单号&#39;: &#39;nunique&#39;
+}).round(2)
+
+# 重命名列
+report.columns = [&#39;总销售额&#39;, &#39;订单数&#39;, &#39;平均订单金额&#39;, &#39;客户数&#39;]
+
+# 重置索引
+report = report.reset_index()
+
+# 筛选特定销售员的数据
+report[report[&#39;销售员&#39;] == &#39;张三&#39;]
+
+# 保存
+report.to_excel(&#39;多维度统计.xlsx&#39;, index=False)
+</code></pre><hr>
+<h2 id="-五完整案例自动化月报生成">📊 五、完整案例：自动化月报生成</h2>
+<p><strong>场景：</strong> 每月自动生成销售月报</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MonthlyReport</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;月度报表自动生成器&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, data_file, month):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        初始化
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        参数：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        - data_file: 数据文件路径
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        - month: 报表月份（格式：2026-04）
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(data_file)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>])
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>month <span style="color:#f92672">=</span> month
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>output_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;./报表输出/</span><span style="color:#e6db74">{</span>month<span style="color:#e6db74">}</span><span style="color:#e6db74">/&#39;</span>
+</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>makedirs(self<span style="color:#f92672">.</span>output_dir, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_all</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成所有报表内容&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;开始生成</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>month<span style="color:#e6db74">}</span><span style="color:#e6db74">月度报表...&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 1. 数据汇总</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_generate_summary()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 2. 图表</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_generate_charts()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 3. 分析报告</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_generate_analysis()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 4. Excel报表</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_generate_excel()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;报表已生成：</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_generate_summary</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成数据汇总&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 筛选当月数据</span>
+</span></span><span style="display:flex;"><span>        month_data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df[
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>) <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>month
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 核心指标</span>
+</span></span><span style="display:flex;"><span>        summary <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;月份&#39;</span>: self<span style="color:#f92672">.</span>month,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;总销售额&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>month_data[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">/</span><span style="color:#ae81ff">10000</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">万元&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;订单数&#39;</span>: len(month_data),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;客单价&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>month_data[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">元&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;产品数&#39;</span>: month_data[<span style="color:#e6db74">&#39;产品&#39;</span>]<span style="color:#f92672">.</span>nunique(),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;客户数&#39;</span>: month_data[<span style="color:#e6db74">&#39;客户&#39;</span>]<span style="color:#f92672">.</span>nunique()
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 保存汇总</span>
+</span></span><span style="display:flex;"><span>        pd<span style="color:#f92672">.</span>DataFrame([summary])<span style="color:#f92672">.</span>to_excel(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">核心指标.xlsx&#39;</span>,
+</span></span><span style="display:flex;"><span>            index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> summary
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_generate_charts</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成图表&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 设置中文字体</span>
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>, <span style="color:#e6db74">&#39;SimHei&#39;</span>]
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 筛选当月数据</span>
+</span></span><span style="display:flex;"><span>        month_data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df[
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>) <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>month
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 图表1：产品销售排行</span>
+</span></span><span style="display:flex;"><span>        product_sales <span style="color:#f92672">=</span> month_data<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;产品&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>sort_values()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span>        product_sales<span style="color:#f92672">.</span>tail(<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;barh&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;steelblue&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Top10产品销售额&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;销售额（元）&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">产品排行.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 图表2：区域分布</span>
+</span></span><span style="display:flex;"><span>        region_sales <span style="color:#f92672">=</span> month_data<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;区域&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>pie(region_sales, labels<span style="color:#f92672">=</span>region_sales<span style="color:#f92672">.</span>index,
+</span></span><span style="display:flex;"><span>               autopct<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f%%</span><span style="color:#e6db74">&#39;</span>, startangle<span style="color:#f92672">=</span><span style="color:#ae81ff">90</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;销售区域分布&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">区域分布.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;图表生成完成&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_generate_analysis</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成分析报告&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        month_data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df[
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>) <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>month
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 生成Markdown报告</span>
+</span></span><span style="display:flex;"><span>        report <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;# </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>month<span style="color:#e6db74">}</span><span style="color:#e6db74">销售月报
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">## 一、整体业绩
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 总销售额：</span><span style="color:#e6db74">{</span>month_data[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">/</span><span style="color:#ae81ff">10000</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">万元
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 订单数：</span><span style="color:#e6db74">{</span>len(month_data)<span style="color:#e6db74">}</span><span style="color:#e6db74">单
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- 客单价：</span><span style="color:#e6db74">{</span>month_data[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">元
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">## 二、产品分析
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Top5产品：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{</span>month_data<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;产品&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">5</span>)<span style="color:#f92672">.</span>to_markdown()<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">## 三、区域分析
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{</span>month_data<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;区域&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)<span style="color:#f92672">.</span>to_markdown()<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">## 四、问题与建议
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[需要人工补充]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">---
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">报告生成时间：</span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> %H:%M&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 保存报告</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">分析报告.md&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>            f<span style="color:#f92672">.</span>write(report)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;分析报告生成完成&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_generate_excel</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;生成Excel报表&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        month_data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df[
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;日期&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>) <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>month
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">完整报表.xlsx&#39;</span>,
+</span></span><span style="display:flex;"><span>            engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;openpyxl&#39;</span>
+</span></span><span style="display:flex;"><span>        ) <span style="color:#66d9ef">as</span> writer:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 原始数据</span>
+</span></span><span style="display:flex;"><span>            month_data<span style="color:#f92672">.</span>to_excel(writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;明细数据&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 产品汇总</span>
+</span></span><span style="display:flex;"><span>            month_data<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;产品&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>agg([<span style="color:#e6db74">&#39;sum&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>])<span style="color:#f92672">.</span>to_excel(
+</span></span><span style="display:flex;"><span>                writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;产品汇总&#39;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 区域汇总</span>
+</span></span><span style="display:flex;"><span>            month_data<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;区域&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>agg([<span style="color:#e6db74">&#39;sum&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>])<span style="color:#f92672">.</span>to_excel(
+</span></span><span style="display:flex;"><span>                writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;区域汇总&#39;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;Excel报表生成完成&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用示例</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    report <span style="color:#f92672">=</span> MonthlyReport(<span style="color:#e6db74">&#39;销售数据.xlsx&#39;</span>, <span style="color:#e6db74">&#39;2026-04&#39;</span>)
+</span></span><span style="display:flex;"><span>    report<span style="color:#f92672">.</span>generate_all()
+</span></span></code></pre></div><hr>
+<h2 id="-六避坑指南">⚠️ 六、避坑指南</h2>
+<h3 id="坑1图表美化过度">坑1：图表美化过度</h3>
+<p><strong>表现：</strong> 花2小时调整图表颜色、字体</p>
+<p><strong>建议：</strong></p>
+<ol>
+<li>使用现成模板</li>
+<li>不要过度追求完美</li>
+<li>数据准确比美观更重要</li>
+</ol>
+<h3 id="坑2指标堆砌">坑2：指标堆砌</h3>
+<p><strong>表现：</strong> 报表包含50个指标，看的人眼花缭乱</p>
+<p><strong>建议：</strong></p>
+<ol>
+<li>只放关键指标（3-5个）</li>
+<li>其他指标放附录</li>
+<li>老板只关心结果和建议</li>
+</ol>
+<h3 id="坑3没有结论">坑3：没有结论</h3>
+<p><strong>表现：</strong> 列了一堆数据，没有分析和建议</p>
+<p><strong>建议：</strong></p>
+<ol>
+<li>每个图表下面写结论</li>
+<li>最后给行动建议</li>
+<li>用&quot;发现→建议→预期效果&quot;结构</li>
+</ol>
+<hr>
+<h2 id="-七本讲作业">💡 七、本讲作业</h2>
+<h3 id="作业1生成销售报表">作业1：生成销售报表</h3>
+<p>使用课程提供的数据，生成一份完整的月度销售报表：</p>
+<ol>
+<li>核心指标（至少5个）</li>
+<li>产品分析（Top10）</li>
+<li>区域分析</li>
+<li>图表（至少3个）</li>
+</ol>
+<h3 id="作业2制作数据透视表">作业2：制作数据透视表</h3>
+<p>创建以下透视表：</p>
+<ol>
+<li>产品×区域销售额</li>
+<li>销售员×月份业绩</li>
+<li>产品×客户类型占比</li>
+</ol>
+<h3 id="作业3编写自动化脚本">作业3：编写自动化脚本</h3>
+<p>编写Python脚本，实现：</p>
+<ol>
+<li>自动读取数据</li>
+<li>自动生成图表</li>
+<li>自动生成报表</li>
+<li>自动发送邮件</li>
+</ol>
+<hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<h3 id="核心要点">核心要点</h3>
+<ol>
+<li><strong>报表类型</strong>：销售、财务、运营，各有重点</li>
+<li><strong>汇总方法</strong>：ChatExcel快速、AI深度分析、Python自动化</li>
+<li><strong>图表类型</strong>：柱状图对比、折线图趋势、饼图占比</li>
+<li><strong>透视表</strong>：多维度交叉分析</li>
+<li><strong>自动化</strong>：定期自动生成报表</li>
+</ol>
+<h3 id="实用清单">实用清单</h3>
+<pre tabindex="0"><code>✅ 报表标准结构：
+1. 整体业绩
+2. 细分分析
+3. 趋势分析
+4. 问题发现
+5. 改进建议
+
+✅ 图表选择：
+- 对比数据 → 柱状图
+- 趋势分析 → 折线图
+- 占比分析 → 饼图
+- 多维度 → 组合图
+</code></pre><hr>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/ai-automation-office/%E7%AC%AC4%E8%AE%B2-AI%E5%A4%84%E7%90%86Excel%E6%95%B0%E6%8D%AE/">上一讲：AI 处理 Excel 数据</a> | <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/ai-automation-office/%E7%AC%AC6%E8%AE%B2-Excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/">下一讲：Excel 自动化实战</a> →</p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<hr>
+<blockquote>
+<p><strong>科技不高冷，AI很好用。</strong></p>
+<p>下一讲，我们进入Excel自动化实战！</p>
+</blockquote>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260302020401-%E7%AC%AC4%E8%AE%B2-ai%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE/">上一篇：第 4 讲：AI 处理 Excel 数据 - 让 AI 帮你搞定脏数据</a>
+        
+        
+        <a href="http://localhost:4002/20260302020601-%E7%AC%AC6%E8%AE%B2-excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98/">下一篇：第 6 讲：Excel 自动化实战 - 批量处理与自动邮件</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

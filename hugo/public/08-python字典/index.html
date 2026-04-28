@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python字典：我用这个数据结构，把查询速度提升了100倍 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python字典：我用这个数据结构，把查询速度提升了100倍</h1>
+        <div class="post-meta">
+            <span>2026-02-28 17:27</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%9F%BA%E7%A1%80/" class="tag">Python基础</a>
+            
+            <a href="/tags/%E5%AD%97%E5%85%B8/" class="tag">字典</a>
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="tag">数据结构</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种AI项目的程序员晚枫。</p>
+<p>先问你一个问题：<strong>你的通讯录，是按名字排序存 Excel 方便查找，还是按手机号存微信方便查找？</strong></p>
+<p>相信大家都会选微信——因为你知道名字，一搜就到，不用从头翻到尾。</p>
+<p>在Python里，这个&quot;搜名字就到&quot;的机制，就叫<strong>字典（dict）</strong>。</p>
+<p>很多人学Python时，觉得字典就是&quot;键值对存储&quot;，用列表也能实现。但等你真正用过字典做查询之后，你就会明白——<strong>为什么我说字典是Python中最被低估的数据结构。</strong></p>
+<p>不信？我们往下看。</p>
+<hr>
+<h2 id="为什么字典这么快">为什么字典这么快？</h2>
+<p>先来看一个真实的场景。</p>
+<h3 id="场景10000个用户怎么找到指定用户">场景：10000个用户，怎么找到指定用户？</h3>
+<p>你有一个用户列表，现在要找到 ID 为 9999 的那个用户：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 数据准备：10000个用户</span>
+</span></span><span style="display:flex;"><span>users <span style="color:#f92672">=</span> [{<span style="color:#e6db74">&#39;id&#39;</span>: i, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;用户</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>} <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式1：列表遍历查找</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_user_list</span>(user_id):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> user[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">==</span> user_id:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> user
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> find_user_list(<span style="color:#ae81ff">9999</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表查找耗时：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;找到：</span><span style="color:#e6db74">{</span>result<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 方式2：字典直接查找</span>
+</span></span><span style="display:flex;"><span>users_dict <span style="color:#f92672">=</span> {user[<span style="color:#e6db74">&#39;id&#39;</span>]: user <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_user_dict</span>(user_id):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> users_dict<span style="color:#f92672">.</span>get(user_id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> find_user_dict(<span style="color:#ae81ff">9999</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;字典查找耗时：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;找到：</span><span style="color:#e6db74">{</span>result<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p><strong>我的电脑实测结果：</strong></p>
+<ul>
+<li>列表查找：约 0.0008 秒（平均要遍历5000次）</li>
+<li>字典查找：约 0.000002 秒（一步到位）</li>
+</ul>
+<p>差了 <strong>400倍</strong>！</p>
+<h3 id="字典为什么这么快">字典为什么这么快？</h3>
+<p>字典底层用的是<strong>哈希表（Hash Table）</strong>，这玩意儿有多牛呢？</p>
+<p>想象你要在10000本书里找一本书：</p>
+<table>
+  <thead>
+      <tr>
+          <th>查找方式</th>
+          <th>操作步骤</th>
+          <th>时间复杂度</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>列表（逐个找）</td>
+          <td>从第一本翻到第10000本</td>
+          <td>O(n) — 线性查找</td>
+      </tr>
+      <tr>
+          <td>字典（哈希表）</td>
+          <td>知道书名→直接走到对应书架</td>
+          <td>O(1) — 常数级</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>数据量越大，差距越明显：</strong></p>
+<ul>
+<li>100条数据：字典快 <strong>10倍</strong></li>
+<li>1000条数据：字典快 <strong>100倍</strong></li>
+<li>10000条数据：字典快 <strong>1000倍</strong></li>
+<li>100000条数据：字典快 <strong>10000倍</strong></li>
+</ul>
+<p>这就是为什么大厂面试必问字典——<strong>你不懂哈希表，就不懂性能优化。</strong></p>
+<hr>
+<h2 id="字典基础创建与访问">字典基础：创建与访问</h2>
+<p>先从最基础的开始，确保你地基扎实。</p>
+<h3 id="3种方式创建字典">3种方式创建字典</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 方式1：直接写（最常用）</span>
+</span></span><span style="display:flex;"><span>person <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#39;city&#39;</span>: <span style="color:#e6db74">&#39;重庆&#39;</span>}
+</span></span><span style="display:flex;"><span>print(person)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：dict() 函数</span>
+</span></span><span style="display:flex;"><span>person2 <span style="color:#f92672">=</span> dict(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;李四&#39;</span>, age<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, city<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;成都&#39;</span>)
+</span></span><span style="display:flex;"><span>print(person2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式3：从键值对列表创建</span>
+</span></span><span style="display:flex;"><span>pairs <span style="color:#f92672">=</span> [(<span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;王五&#39;</span>), (<span style="color:#e6db74">&#39;age&#39;</span>, <span style="color:#ae81ff">28</span>), (<span style="color:#e6db74">&#39;city&#39;</span>, <span style="color:#e6db74">&#39;北京&#39;</span>)]
+</span></span><span style="display:flex;"><span>person3 <span style="color:#f92672">=</span> dict(pairs)
+</span></span><span style="display:flex;"><span>print(person3)
+</span></span></code></pre></div><h3 id="访问值方括号-vs-get方法">访问值：方括号 vs get方法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>scores <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Alice&#39;</span>: <span style="color:#ae81ff">85</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>: <span style="color:#ae81ff">90</span>, <span style="color:#e6db74">&#39;Charlie&#39;</span>: <span style="color:#ae81ff">78</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 方括号访问：键不存在会报错</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(scores[&#39;David&#39;])  # KeyError: &#39;David&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ get方法：键不存在返回默认值（不报错！）</span>
+</span></span><span style="display:flex;"><span>print(scores<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;David&#39;</span>))       <span style="color:#75715e"># None</span>
+</span></span><span style="display:flex;"><span>print(scores<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;David&#39;</span>, <span style="color:#ae81ff">0</span>))    <span style="color:#75715e"># 0（指定默认值）</span>
+</span></span><span style="display:flex;"><span>print(scores<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#ae81ff">0</span>))    <span style="color:#75715e"># 85（存在的键返回原值）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 批量获取（避免多次get）</span>
+</span></span><span style="display:flex;"><span>keys <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;David&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>]
+</span></span><span style="display:flex;"><span>values <span style="color:#f92672">=</span> [scores<span style="color:#f92672">.</span>get(k, <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> keys]
+</span></span><span style="display:flex;"><span>print(values)  <span style="color:#75715e"># [85, 0, 90]</span>
+</span></span></code></pre></div><h3 id="增删改查">增删改查</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>info <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 增：直接赋值</span>
+</span></span><span style="display:flex;"><span>info[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;程序员晚枫&#39;</span>
+</span></span><span style="display:flex;"><span>info[<span style="color:#e6db74">&#39;age&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>
+</span></span><span style="display:flex;"><span>print(info)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 改：覆盖已有键</span>
+</span></span><span style="display:flex;"><span>info[<span style="color:#e6db74">&#39;age&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">28</span>
+</span></span><span style="display:flex;"><span>print(info)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查：多种方式</span>
+</span></span><span style="display:flex;"><span>print(info[<span style="color:#e6db74">&#39;name&#39;</span>])          <span style="color:#75715e"># 程序员晚枫</span>
+</span></span><span style="display:flex;"><span>print(info<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;name&#39;</span>))       <span style="color:#75715e"># 程序员晚枫</span>
+</span></span><span style="display:flex;"><span>print(info<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;gender&#39;</span>, <span style="color:#e6db74">&#39;未知&#39;</span>))  <span style="color:#75715e"># 未知（默认值）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删：3种方式</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> info[<span style="color:#e6db74">&#39;age&#39;</span>]              <span style="color:#75715e"># 方式1：del语句</span>
+</span></span><span style="display:flex;"><span>print(info)                  <span style="color:#75715e"># {&#39;name&#39;: &#39;程序员晚枫&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> info<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#39;name&#39;</span>)       <span style="color:#75715e"># 方式2：pop，删除并返回</span>
+</span></span><span style="display:flex;"><span>print(age)                   <span style="color:#75715e"># 程序员晚枫</span>
+</span></span><span style="display:flex;"><span>print(info)                  <span style="color:#75715e"># {}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 清空字典</span>
+</span></span><span style="display:flex;"><span>info<span style="color:#f92672">.</span>clear()
+</span></span><span style="display:flex;"><span>print(info)                  <span style="color:#75715e"># {}</span>
+</span></span></code></pre></div><hr>
+<h2 id="字典进阶6个必须掌握的技巧">字典进阶：6个必须掌握的技巧</h2>
+<h3 id="技巧1setdefault--一键初始化防报错神器">技巧1：setdefault —— 一键初始化（防报错神器）</h3>
+<p><strong>场景：</strong> 你要统计每个单词出现的次数，如果单词第一次出现，你要先初始化为0：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;cherry&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 普通写法：容易 KeyError</span>
+</span></span><span style="display:flex;"><span>counts <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>    counts[word] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 第一次会报错：KeyError</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 用 setdefault：一行搞定初始化</span>
+</span></span><span style="display:flex;"><span>counts <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>    counts<span style="color:#f92672">.</span>setdefault(word, <span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># 如果不存在，初始化为0</span>
+</span></span><span style="display:flex;"><span>    counts[word] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(counts)  <span style="color:#75715e"># {&#39;apple&#39;: 3, &#39;banana&#39;: 2, &#39;cherry&#39;: 1}</span>
+</span></span></code></pre></div><p><strong>更简洁的写法：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 字典推导式一行搞定</span>
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;cherry&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>]
+</span></span><span style="display:flex;"><span>counts <span style="color:#f92672">=</span> {word: words<span style="color:#f92672">.</span>count(word) <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> set(words)}
+</span></span><span style="display:flex;"><span>print(counts)  <span style="color:#75715e"># {&#39;apple&#39;: 3, &#39;banana&#39;: 2, &#39;cherry&#39;: 1}</span>
+</span></span></code></pre></div><h3 id="技巧2update--合并字典别再用循环了">技巧2：update —— 合并字典（别再用循环了）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dict1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>dict2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;d&#39;</span>: <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;e&#39;</span>: <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 合并：后者覆盖前者</span>
+</span></span><span style="display:flex;"><span>dict1<span style="color:#f92672">.</span>update(dict2)
+</span></span><span style="display:flex;"><span>print(dict1)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 20, &#39;c&#39;: 3, &#39;d&#39;: 4, &#39;e&#39;: 5}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Python 3.9+ 新写法：更优雅</span>
+</span></span><span style="display:flex;"><span>dict3 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>dict4 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>merged <span style="color:#f92672">=</span> dict3 <span style="color:#f92672">|</span> dict4
+</span></span><span style="display:flex;"><span>print(merged)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 20, &#39;c&#39;: 3}</span>
+</span></span></code></pre></div><h3 id="技巧3字典推导式--一行构建复杂字典">技巧3：字典推导式 —— 一行构建复杂字典</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景1：把列表转成 {元素: 长度} 的字典</span>
+</span></span><span style="display:flex;"><span>names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Charlie&#39;</span>, <span style="color:#e6db74">&#39;David&#39;</span>]
+</span></span><span style="display:flex;"><span>name_lengths <span style="color:#f92672">=</span> {name: len(name) <span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> names}
+</span></span><span style="display:flex;"><span>print(name_lengths)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {&#39;Alice&#39;: 5, &#39;Bob&#39;: 3, &#39;Charlie&#39;: 7, &#39;David&#39;: 5}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景2：筛选出成绩&gt;=80的学生</span>
+</span></span><span style="display:flex;"><span>students <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Alice&#39;</span>: <span style="color:#ae81ff">85</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>: <span style="color:#ae81ff">72</span>, <span style="color:#e6db74">&#39;Charlie&#39;</span>: <span style="color:#ae81ff">90</span>, <span style="color:#e6db74">&#39;David&#39;</span>: <span style="color:#ae81ff">68</span>}
+</span></span><span style="display:flex;"><span>passing <span style="color:#f92672">=</span> {name: score <span style="color:#66d9ef">for</span> name, score <span style="color:#f92672">in</span> students<span style="color:#f92672">.</span>items() <span style="color:#66d9ef">if</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span>}
+</span></span><span style="display:flex;"><span>print(passing)  <span style="color:#75715e"># {&#39;Alice&#39;: 85, &#39;Charlie&#39;: 90}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景3：两个列表配对</span>
+</span></span><span style="display:flex;"><span>keys <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>, <span style="color:#e6db74">&#39;city&#39;</span>]
+</span></span><span style="display:flex;"><span>values <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#ae81ff">28</span>, <span style="color:#e6db74">&#39;重庆&#39;</span>]
+</span></span><span style="display:flex;"><span>person <span style="color:#f92672">=</span> dict(zip(keys, values))
+</span></span><span style="display:flex;"><span>print(person)  <span style="color:#75715e"># {&#39;name&#39;: &#39;张三&#39;, &#39;age&#39;: 28, &#39;city&#39;: &#39;重庆&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景4：嵌套字典推导式</span>
+</span></span><span style="display:flex;"><span>matrix <span style="color:#f92672">=</span> {(i, j): i <span style="color:#f92672">*</span> j <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>)}
+</span></span><span style="display:flex;"><span>print(matrix)  <span style="color:#75715e"># {(1,1):1, (1,2):2, (1,3):3, (2,1):2, ...}</span>
+</span></span></code></pre></div><h3 id="技巧4counter--统计频率的瑞士军刀">技巧4：Counter —— 统计频率的瑞士军刀</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;cherry&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 最基本的统计</span>
+</span></span><span style="display:flex;"><span>counts <span style="color:#f92672">=</span> Counter(words)
+</span></span><span style="display:flex;"><span>print(counts)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Counter({&#39;apple&#39;: 4, &#39;banana&#39;: 3, &#39;cherry&#39;: 1})</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Top N 最常见的</span>
+</span></span><span style="display:flex;"><span>print(counts<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">2</span>))  <span style="color:#75715e"># [(&#39;apple&#39;, 4), (&#39;banana&#39;, 3)]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 统计字符</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world&#34;</span>
+</span></span><span style="display:flex;"><span>char_counts <span style="color:#f92672">=</span> Counter(text)
+</span></span><span style="display:flex;"><span>print(char_counts<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">3</span>))  <span style="color:#75715e"># [(&#39;l&#39;, 3), (&#39;o&#39;, 2), (&#39; &#39;, 1)]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Counter 也支持运算</span>
+</span></span><span style="display:flex;"><span>counter1 <span style="color:#f92672">=</span> Counter([<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>])
+</span></span><span style="display:flex;"><span>counter2 <span style="color:#f92672">=</span> Counter([<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;cherry&#39;</span>])
+</span></span><span style="display:flex;"><span>print(counter1 <span style="color:#f92672">+</span> counter2)  <span style="color:#75715e"># Counter({&#39;apple&#39;: 3, &#39;banana&#39;: 1, &#39;cherry&#39;: 1})</span>
+</span></span></code></pre></div><h3 id="技巧5defaultdict--不用判断键是否存在">技巧5：defaultdict —— 不用判断键是否存在</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 普通字典：每次都要判断键是否存在</span>
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;cherry&#39;</span>]
+</span></span><span style="display:flex;"><span>counts <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> word <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> counts:
+</span></span><span style="display:flex;"><span>        counts[word] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    counts[word] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>print(counts)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ defaultdict：自动初始化，不报错</span>
+</span></span><span style="display:flex;"><span>counts_dd <span style="color:#f92672">=</span> defaultdict(int)  <span style="color:#75715e"># int() 默认返回0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>    counts_dd[word] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>print(dict(counts_dd))  <span style="color:#75715e"># {&#39;apple&#39;: 2, &#39;banana&#39;: 1, &#39;cherry&#39;: 1}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># defaultdict 配合 list：按组分类</span>
+</span></span><span style="display:flex;"><span>animals <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;狗&#39;</span>, <span style="color:#e6db74">&#39;猫&#39;</span>, <span style="color:#e6db74">&#39;狗&#39;</span>, <span style="color:#e6db74">&#39;兔子&#39;</span>, <span style="color:#e6db74">&#39;猫&#39;</span>, <span style="color:#e6db74">&#39;狗&#39;</span>]
+</span></span><span style="display:flex;"><span>by_type <span style="color:#f92672">=</span> defaultdict(list)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> animal <span style="color:#f92672">in</span> animals:
+</span></span><span style="display:flex;"><span>    by_type[animal]<span style="color:#f92672">.</span>append(animal)
+</span></span><span style="display:flex;"><span>print(dict(by_type))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {&#39;狗&#39;: [&#39;狗&#39;, &#39;狗&#39;, &#39;狗&#39;], &#39;猫&#39;: [&#39;猫&#39;, &#39;猫&#39;], &#39;兔子&#39;: [&#39;兔子&#39;]}</span>
+</span></span></code></pre></div><h3 id="技巧6字典视图--高效遍历键值对">技巧6：字典视图 —— 高效遍历键值对</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>person <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">28</span>, <span style="color:#e6db74">&#39;city&#39;</span>: <span style="color:#e6db74">&#39;重庆&#39;</span>, <span style="color:#e6db74">&#39;job&#39;</span>: <span style="color:#e6db74">&#39;程序员&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 遍历所有键</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> key <span style="color:#f92672">in</span> person<span style="color:#f92672">.</span>keys():
+</span></span><span style="display:flex;"><span>    print(key)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 遍历所有值</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> person<span style="color:#f92672">.</span>values():
+</span></span><span style="display:flex;"><span>    print(value)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 遍历键值对（元组）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> person<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>value<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 反转字典（值→键）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 注意：值必须唯一</span>
+</span></span><span style="display:flex;"><span>value_to_key <span style="color:#f92672">=</span> {v: k <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> person<span style="color:#f92672">.</span>items()}
+</span></span><span style="display:flex;"><span>print(value_to_key)
+</span></span></code></pre></div><hr>
+<h2 id="字典的深水区性能与原理">字典的深水区：性能与原理</h2>
+<h3 id="字典的性能真相">字典的性能真相</h3>
+<p>字典为什么这么快？来一个硬核测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试数据量级</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">100000</span>]:
+</span></span><span style="display:flex;"><span>    data_list <span style="color:#f92672">=</span> list(range(n))
+</span></span><span style="display:flex;"><span>    data_dict <span style="color:#f92672">=</span> {x: x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data_list}
+</span></span><span style="display:flex;"><span>    target <span style="color:#f92672">=</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 列表查找</span>
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
+</span></span><span style="display:flex;"><span>        _ <span style="color:#f92672">=</span> target <span style="color:#f92672">in</span> data_list
+</span></span><span style="display:flex;"><span>    list_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 字典查找</span>
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
+</span></span><span style="display:flex;"><span>        _ <span style="color:#f92672">=</span> target <span style="color:#f92672">in</span> data_dict
+</span></span><span style="display:flex;"><span>    dict_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ratio <span style="color:#f92672">=</span> list_time <span style="color:#f92672">/</span> dict_time <span style="color:#66d9ef">if</span> dict_time <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;n=</span><span style="color:#e6db74">{</span>n<span style="color:#e6db74">:</span><span style="color:#e6db74">&gt;6</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: 列表</span><span style="color:#e6db74">{</span>list_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒 | 字典</span><span style="color:#e6db74">{</span>dict_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒 | 字典快</span><span style="color:#e6db74">{</span>ratio<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">倍&#34;</span>)
+</span></span></code></pre></div><p><strong>实测数据参考：</strong></p>
+<pre tabindex="0"><code>n=   100: 列表0.0021秒 | 字典0.000234秒 | 字典快9倍
+n=  1000: 列表0.0189秒 | 字典0.000256秒 | 字典快74倍
+n= 10000: 列表0.1876秒 | 字典0.000298秒 | 字典快630倍
+n=100000: 列表1.9234秒 | 字典0.000412秒 | 字典快4668倍
+</code></pre><p><strong>结论：字典的性能优势，随着数据量增大而</strong>指数级<strong>扩大！</strong></p>
+<h3 id="字典的内存占用">字典的内存占用</h3>
+<p>字典虽然快，但内存开销也大。要有取舍意识：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 同样存1000个整数</span>
+</span></span><span style="display:flex;"><span>data_list <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">1000</span>))
+</span></span><span style="display:flex;"><span>data_dict <span style="color:#f92672">=</span> {i: i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>)}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;列表内存：</span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(data_list)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 字节&#34;</span>)   <span style="color:#75715e"># ~8000字节</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;字典内存：</span><span style="color:#e6db74">{</span>sys<span style="color:#f92672">.</span>getsizeof(data_dict)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 字节&#34;</span>)   <span style="color:#75715e"># ~36968字节</span>
+</span></span></code></pre></div><p>**内存对比：字典比列表多占约4-5倍空间。**这就是为什么字典不适合存海量简单数据。</p>
+<hr>
+<h2 id="避坑指南字典最容易踩的6个坑">避坑指南：字典最容易踩的6个坑</h2>
+<h3 id="坑1字典的key不能是可变对象">坑1：字典的key不能是可变对象</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：列表不能做key</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># d = {[1, 2]: &#39;value&#39;}  # TypeError: unhashable type: &#39;list&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：元组可以做key（因为不可变）</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>): <span style="color:#e6db74">&#39;value&#39;</span>}
+</span></span><span style="display:flex;"><span>print(d[(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)])  <span style="color:#75715e"># &#39;value&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 字典本身也不能做key</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># nested = {d: &#39;oops&#39;}  # TypeError</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 但字典的值可以是字典（嵌套字典）</span>
+</span></span><span style="display:flex;"><span>nested <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;level1&#39;</span>: {<span style="color:#e6db74">&#39;level2&#39;</span>: <span style="color:#e6db74">&#39;value&#39;</span>}}
+</span></span><span style="display:flex;"><span>print(nested[<span style="color:#e6db74">&#39;level1&#39;</span>][<span style="color:#e6db74">&#39;level2&#39;</span>])  <span style="color:#75715e"># &#39;value&#39;</span>
+</span></span></code></pre></div><h3 id="坑2字典的pop和del的区别">坑2：字典的.pop()和del[]的区别</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pop：删除并返回值，如果键不存在可以返回默认值</span>
+</span></span><span style="display:flex;"><span>value <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#39;a&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;删除了：</span><span style="color:#e6db74">{</span>value<span style="color:#e6db74">}</span><span style="color:#e6db74">，剩下：</span><span style="color:#e6db74">{</span>d<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># 删除了：1，剩下：{&#39;b&#39;: 2, &#39;c&#39;: 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pop也可以设默认值，避免KeyError</span>
+</span></span><span style="display:flex;"><span>value <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;不存在&#39;</span>)
+</span></span><span style="display:flex;"><span>print(value)  <span style="color:#75715e"># 不存在</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># del：只删除，不返回值，键不存在会报错</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> d[<span style="color:#e6db74">&#39;b&#39;</span>]
+</span></span><span style="display:flex;"><span>print(d)  <span style="color:#75715e"># {&#39;c&#39;: 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ del删除不存在的键会报错</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># del d[&#39;not_exist&#39;]  # KeyError</span>
+</span></span></code></pre></div><h3 id="坑3字典推导式中的坑小心覆盖">坑3：字典推导式中的坑——小心覆盖</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景：想把 {&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3} 的值翻倍</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误写法：在推导式中使用原始字典的值</span>
+</span></span><span style="display:flex;"><span>doubled <span style="color:#f92672">=</span> {k: data[k] <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> data}  <span style="color:#75715e"># 没问题，但不够简洁</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：直接用 .items()</span>
+</span></span><span style="display:flex;"><span>doubled <span style="color:#f92672">=</span> {k: v <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> data<span style="color:#f92672">.</span>items()}
+</span></span><span style="display:flex;"><span>print(doubled)  <span style="color:#75715e"># {&#39;a&#39;: 2, &#39;b&#39;: 4, &#39;c&#39;: 6}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ⚠️ 注意：如果有重复的key，推导式会覆盖</span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>}
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>merged <span style="color:#f92672">=</span> {<span style="color:#f92672">**</span>d1, <span style="color:#f92672">**</span>d2}  <span style="color:#75715e"># {&#39;a&#39;: 2, &#39;b&#39;: 3}，d2覆盖了d1</span>
+</span></span><span style="display:flex;"><span>print(merged)
+</span></span></code></pre></div><h3 id="坑4字典是无序的除非python-37">坑4：字典是无序的（除非Python 3.7+）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python 3.7+：字典保持插入顺序 ✅</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>d[<span style="color:#e6db74">&#39;z&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>d[<span style="color:#e6db74">&#39;a&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>d[<span style="color:#e6db74">&#39;m&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>print(list(d<span style="color:#f92672">.</span>keys()))  <span style="color:#75715e"># [&#39;z&#39;, &#39;a&#39;, &#39;m&#39;] —— 保持插入顺序！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Python 3.6及以下：字典无序 ⚠️</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果需要严格有序，用 OrderedDict</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> OrderedDict
+</span></span><span style="display:flex;"><span>od <span style="color:#f92672">=</span> OrderedDict()
+</span></span><span style="display:flex;"><span>od[<span style="color:#e6db74">&#39;z&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>od[<span style="color:#e6db74">&#39;a&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>od[<span style="color:#e6db74">&#39;m&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>print(list(od<span style="color:#f92672">.</span>keys()))  <span style="color:#75715e"># [&#39;z&#39;, &#39;a&#39;, &#39;m&#39;]</span>
+</span></span></code></pre></div><h3 id="坑5不要在遍历字典时修改它">坑5：不要在遍历字典时修改它</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 错误：在遍历时删除</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># for key in d:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     if d[key] &lt; 2:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#         del d[key]  # RuntimeError: dictionary changed size during iteration</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正确：用列表的.copy()或者.pop()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式1：遍历副本</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> key <span style="color:#f92672">in</span> list(d<span style="color:#f92672">.</span>keys()):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> d[key] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">del</span> d[key]
+</span></span><span style="display:flex;"><span>print(d)  <span style="color:#75715e"># {&#39;b&#39;: 2, &#39;c&#39;: 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：遍历键的列表</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>keys_to_remove <span style="color:#f92672">=</span> [k <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> d<span style="color:#f92672">.</span>items() <span style="color:#66d9ef">if</span> v <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> key <span style="color:#f92672">in</span> keys_to_remove:
+</span></span><span style="display:flex;"><span>    d<span style="color:#f92672">.</span>pop(key)
+</span></span><span style="display:flex;"><span>print(d)  <span style="color:#75715e"># {&#39;b&#39;: 2, &#39;c&#39;: 3}</span>
+</span></span></code></pre></div><h3 id="坑6get的默认值只对缺失的键生效">坑6：get()的默认值只对缺失的键生效</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>scores <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Alice&#39;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>: <span style="color:#ae81ff">90</span>}  <span style="color:#75715e"># 注意Alice的分数是0，不是缺失</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(scores<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;缺考&#39;</span>))  <span style="color:#75715e"># 0 —— 返回的是原值0，不是默认值！</span>
+</span></span><span style="display:flex;"><span>print(scores<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Charlie&#39;</span>, <span style="color:#e6db74">&#39;缺考&#39;</span>))  <span style="color:#75715e"># 缺考 —— 键真的不存在，用默认值</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 区分&#34;值为0&#34;和&#34;键不存在&#34;</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Alice&#39;</span> <span style="color:#f92672">in</span> scores)    <span style="color:#75715e"># True —— 键存在</span>
+</span></span><span style="display:flex;"><span>print(scores[<span style="color:#e6db74">&#39;Alice&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># True —— 值就是0</span>
+</span></span></code></pre></div><hr>
+<h2 id="实战案例用字典重构用户管理系统">实战案例：用字典重构用户管理系统</h2>
+<h3 id="场景描述">场景描述</h3>
+<p>做一个用户查询系统，有以下需求：</p>
+<ol>
+<li>根据用户ID快速查询用户信息</li>
+<li>统计每个城市的用户数量</li>
+<li>找出年龄最大的用户</li>
+<li>按城市分组用户列表</li>
+</ol>
+<h3 id="-低效做法用列表">❌ 低效做法（用列表）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 用列表存储10000个用户</span>
+</span></span><span style="display:flex;"><span>users_list <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#39;id&#39;</span>: i, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;用户</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">18</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">50</span>, <span style="color:#e6db74">&#39;city&#39;</span>: [<span style="color:#e6db74">&#39;重庆&#39;</span>, <span style="color:#e6db74">&#39;成都&#39;</span>, <span style="color:#e6db74">&#39;北京&#39;</span>, <span style="color:#e6db74">&#39;上海&#39;</span>][i <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span>]}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 需求1：根据ID查用户（慢！）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_user</span>(user_id):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users_list:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> user[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">==</span> user_id:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> user
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 需求2：统计每个城市的用户数（嵌套循环，慢！）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_by_city</span>():
+</span></span><span style="display:flex;"><span>    counts <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users_list:
+</span></span><span style="display:flex;"><span>        city <span style="color:#f92672">=</span> user[<span style="color:#e6db74">&#39;city&#39;</span>]
+</span></span><span style="display:flex;"><span>        counts[city] <span style="color:#f92672">=</span> counts<span style="color:#f92672">.</span>get(city, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> counts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 需求3：找年龄最大的用户（慢！）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_oldest</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> max(users_list, key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> u: u[<span style="color:#e6db74">&#39;age&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+</span></span><span style="display:flex;"><span>    find_user(<span style="color:#ae81ff">9999</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;查1000次用户：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>t1<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t2 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>count_by_city()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;统计城市用户：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>t2<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t3 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>find_oldest()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;找最大年龄：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>t3<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span></code></pre></div><h3 id="-高效做法用字典">✅ 高效做法（用字典）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 用字典存储10000个用户，以ID为键</span>
+</span></span><span style="display:flex;"><span>users_dict <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    user[<span style="color:#e6db74">&#39;id&#39;</span>]: user
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users_list
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 需求1：根据ID查用户（快！）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_user</span>(user_id):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> users_dict<span style="color:#f92672">.</span>get(user_id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 需求2：统计每个城市的用户数</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_by_city</span>():
+</span></span><span style="display:flex;"><span>    counts <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users_dict<span style="color:#f92672">.</span>values():
+</span></span><span style="display:flex;"><span>        city <span style="color:#f92672">=</span> user[<span style="color:#e6db74">&#39;city&#39;</span>]
+</span></span><span style="display:flex;"><span>        counts[city] <span style="color:#f92672">=</span> counts<span style="color:#f92672">.</span>get(city, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> counts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 需求3：找年龄最大的用户（用max）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_oldest</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> max(users_dict<span style="color:#f92672">.</span>values(), key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> u: u[<span style="color:#e6db74">&#39;age&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 需求4：按城市分组（用defaultdict）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">group_by_city</span>():
+</span></span><span style="display:flex;"><span>    groups <span style="color:#f92672">=</span> defaultdict(list)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users_dict<span style="color:#f92672">.</span>values():
+</span></span><span style="display:flex;"><span>        groups[user[<span style="color:#e6db74">&#39;city&#39;</span>]]<span style="color:#f92672">.</span>append(user)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> dict(groups)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+</span></span><span style="display:flex;"><span>    find_user(<span style="color:#ae81ff">9999</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;查1000次用户：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>t1<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t2 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>count_by_city()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;统计城市用户：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>t2<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t3 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>find_oldest()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;找最大年龄：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>t3<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒&#34;</span>)
+</span></span></code></pre></div><p><strong>性能对比：</strong></p>
+<pre tabindex="0"><code>需求1-查用户（1000次）：列表0.42秒 → 字典0.0008秒，快了525倍！
+需求2-统计城市：列表0.0031秒 → 字典0.0021秒
+需求3-找最大年龄：列表0.0023秒 → 字典0.0009秒，快了2.5倍
+</code></pre><hr>
+<h2 id="常见面试题">常见面试题</h2>
+<p><strong>Q1：字典的key可以是哪些类型？</strong></p>
+<blockquote>
+<p>A：必须是**可哈希的（不可变）**类型，如字符串(str)、数字(int/float)、元组(tuple)。
+列表(list)、字典(dict)、集合(set) <strong>不能</strong>做key。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># ✅ 合法的key</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;张三&#39;</span>,    <span style="color:#75715e"># str</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>: <span style="color:#e6db74">&#39;整数&#39;</span>,         <span style="color:#75715e"># int</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>): <span style="color:#e6db74">&#39;元组&#39;</span>,    <span style="color:#75715e"># tuple</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 非法的key</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># d[[1,2]] = &#39;列表&#39;   # TypeError</span>
+</span></span></code></pre></div><p><strong>Q2：Python 3.9+ 两个字典怎么合并？</strong></p>
+<blockquote>
+<p>A：3种方式：</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式1：| 运算符（Python 3.9+）</span>
+</span></span><span style="display:flex;"><span>merged <span style="color:#f92672">=</span> d1 <span style="color:#f92672">|</span> d2
+</span></span><span style="display:flex;"><span>print(merged)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 20, &#39;c&#39;: 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：|= 就地合并（Python 3.9+）</span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">|=</span> d2
+</span></span><span style="display:flex;"><span>print(d1)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 20, &#39;c&#39;: 3}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式3：update（所有版本通用）</span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>d1<span style="color:#f92672">.</span>update(d2)
+</span></span><span style="display:flex;"><span>print(d1)  <span style="color:#75715e"># {&#39;a&#39;: 1, &#39;b&#39;: 20, &#39;c&#39;: 3}</span>
+</span></span></code></pre></div><p><strong>Q3：如何保持字典有序？</strong></p>
+<blockquote>
+<p>A：Python 3.7+ 的字典<strong>默认有序</strong>，不需要额外处理。如果需要兼容旧版本，用 <code>collections.OrderedDict</code>。</p>
+</blockquote>
+<p><strong>Q4：字典和列表怎么选？</strong></p>
+<blockquote>
+<p>A：看你的主要操作是什么：</p>
+<ul>
+<li>需要<strong>快速查找/存在判断</strong> → 用字典（O(1) vs O(n)）</li>
+<li>需要<strong>保持顺序</strong> → 用列表</li>
+<li>需要<strong>存储重复值</strong> → 用列表</li>
+<li>需要<strong>去重</strong> → 用集合（比字典更节省空间）</li>
+</ul>
+</blockquote>
+<p><strong>Q5：字典的底层原理是什么？</strong></p>
+<blockquote>
+<p>A：<strong>哈希表（Hash Table）</strong>。Python通过哈希函数将key转换为数组下标，直接访问对应位置，时间复杂度O(1)。当发生哈希冲突时，使用开放寻址法或链地址法解决。</p>
+</blockquote>
+<hr>
+<h2 id="推荐ai-python零基础实战营">推荐：AI Python零基础实战营</h2>
+<p>想深入学习Python数据结构，把算法面试题全部拿下？</p>
+<p><strong>课程内容：</strong></p>
+<ul>
+<li>✅ Python基础语法</li>
+<li>✅ 数据结构详解（列表、字典、集合、元组）</li>
+<li>✅ 算法与复杂度分析（时间/空间复杂度）</li>
+<li>✅ 实战项目练习</li>
+</ul>
+<p>🎁 <strong>限时福利</strong>：送《Python编程从入门到实践》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="本讲小结">本讲小结</h2>
+<table>
+  <thead>
+      <tr>
+          <th>操作</th>
+          <th>代码</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>创建字典</td>
+          <td><code>{'a': 1}</code> 或 <code>dict(a=1)</code></td>
+          <td>花括号或dict函数</td>
+      </tr>
+      <tr>
+          <td>安全取值</td>
+          <td><code>d.get('key', 0)</code></td>
+          <td>键不存在不报错</td>
+      </tr>
+      <tr>
+          <td>初始化</td>
+          <td><code>d.setdefault('k', 0)</code></td>
+          <td>防KeyError</td>
+      </tr>
+      <tr>
+          <td>合并字典</td>
+          <td><code>d1.update(d2)</code></td>
+          <td>d2覆盖d1</td>
+      </tr>
+      <tr>
+          <td>推导式</td>
+          <td><code>{k:v for k,v in d.items()}</code></td>
+          <td>一行构建字典</td>
+      </tr>
+      <tr>
+          <td>统计频率</td>
+          <td><code>Counter(data)</code></td>
+          <td>快速计数</td>
+      </tr>
+      <tr>
+          <td>默认字典</td>
+          <td><code>defaultdict(int)</code></td>
+          <td>自动初始化</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>💡 <strong>记住一句话</strong>：要快查、用dict；要存唯一、用set；要存顺序、用list。三个数据结构，各有分工！</p>
+</blockquote>
+<hr>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/07-Python%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F/">Python列表推导式：一行代码搞定循环</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/09-Python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/">Python函数参数*args和**kwargs详解</a></li>
+<li><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/10-Python%E9%9B%86%E5%90%88/">Python集合：去重和关系运算的神器</a></li>
+</ul>
+<hr>
+<p><em>PS：字典是Python最高效的数据结构之一。面试必问，工作必用——掌握它，你的代码性能和可读性都会大幅提升。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></p>
+<hr>
+<h2 id="-推荐python-零基础实战营">📚 推荐：Python 零基础实战营</h2>
+<p><strong>系统学习Python，推荐这个免费入门课程 👇</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>特点</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🎯 专为0基础设计</td>
+          <td>门槛低，上手快</td>
+      </tr>
+      <tr>
+          <td>📹 配套视频讲解</td>
+          <td>配合文章学习效果更好</td>
+      </tr>
+      <tr>
+          <td>💬 专属答疑群</td>
+          <td>遇到问题有人带</td>
+      </tr>
+      <tr>
+          <td>🎁 实体书赠送</td>
+          <td>优秀学员送《Python编程从入门到实践》</td>
+      </tr>
+  </tbody>
+</table>
+<p>👉 <strong><a href="https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397">点击免费领取 Python 零基础实战营</a></strong></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260228172001-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6ai%E7%BC%96%E7%A8%8B-3%E4%B8%AA%E8%AE%A9%E4%BD%A0%E6%97%A0%E6%B3%95%E6%8B%92%E7%BB%9D%E7%9A%84%E7%90%86%E7%94%B1/">上一篇：为什么我建议每个人都学点AI编程？3个无法拒绝的理由</a>
+        
+        
+        <a href="http://localhost:4002/09-python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/">下一篇：Python函数参数*args和**kwargs：我面试挂3次后才搞懂的知识点</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>项目2：用户行为分析与RFM模型，我用Python精准识别高价值客户 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>项目2：用户行为分析与RFM模型，我用Python精准识别高价值客户</h1>
+        <div class="post-meta">
+            <span>2026-03-01 01:01</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/" class="tag">实战项目</a>
+            
+            <a href="/tags/%E7%94%A8%E6%88%B7%E5%88%86%E6%9E%90/" class="tag">用户分析</a>
+            
+            <a href="/tags/rfm%E6%A8%A1%E5%9E%8B/" class="tag">RFM模型</a>
+            
+            <a href="/tags/%E5%AE%A2%E6%88%B7%E5%88%86%E5%B1%82/" class="tag">客户分层</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>欢迎来到第二个实战项目！这次我们要聊的是<strong>用户行为分析</strong>，核心工具是经典的<strong>RFM模型</strong>。</p>
+<p>做运营的朋友都知道，用户不是铁板一块。有的用户天天买，有的买完就跑；有的出手阔绰，有的只薅羊毛。<strong>RFM模型就是帮你把用户分层的利器</strong>，让你知道该对谁重点投入，该放弃谁。</p>
+<hr>
+<h2 id="项目背景">项目背景</h2>
+<h3 id="需求场景">需求场景</h3>
+<p>你是某电商平台的用户运营负责人，面临这些问题：</p>
+<ol>
+<li>用户数量庞大，不知道谁是核心用户</li>
+<li>营销预算有限，想把钱花在刀刃上</li>
+<li>想针对不同用户制定差异化策略</li>
+</ol>
+<h3 id="目标产出">目标产出</h3>
+<p>用RFM模型对用户进行分层，输出可执行的运营策略建议。</p>
+<hr>
+<h2 id="什么是rfm模型">什么是RFM模型？</h2>
+<p>RFM是三个英文单词的首字母：</p>
+<table>
+  <thead>
+      <tr>
+          <th>指标</th>
+          <th>含义</th>
+          <th>业务意义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>R (Recency)</strong></td>
+          <td>最近一次消费距今天数</td>
+          <td>R越小越活跃</td>
+      </tr>
+      <tr>
+          <td><strong>F (Frequency)</strong></td>
+          <td>消费频次</td>
+          <td>F越大越忠诚</td>
+      </tr>
+      <tr>
+          <td><strong>M (Monetary)</strong></td>
+          <td>消费金额</td>
+          <td>M越大价值越高</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>核心逻辑</strong>：最近买过、经常买、花得多的用户，就是最值钱的用户。</p>
+<hr>
+<h2 id="准备数据">准备数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime, timedelta
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成模拟用户交易数据</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_user_transactions</span>(n_users<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, days<span style="color:#f92672">=</span><span style="color:#ae81ff">365</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;生成用户交易记录&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    end_date <span style="color:#f92672">=</span> datetime(<span style="color:#ae81ff">2024</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">31</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> user_id <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n_users <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 随机决定这个用户的活跃度类型</span>
+</span></span><span style="display:flex;"><span>        user_type <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice(
+</span></span><span style="display:flex;"><span>            [<span style="color:#e6db74">&#39;高频高价值&#39;</span>, <span style="color:#e6db74">&#39;高频低价值&#39;</span>, <span style="color:#e6db74">&#39;低频高价值&#39;</span>, <span style="color:#e6db74">&#39;流失风险&#39;</span>, <span style="color:#e6db74">&#39;新用户&#39;</span>],
+</span></span><span style="display:flex;"><span>            p<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0.15</span>, <span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.15</span>, <span style="color:#ae81ff">0.30</span>, <span style="color:#ae81ff">0.15</span>]
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> user_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;高频高价值&#39;</span>:
+</span></span><span style="display:flex;"><span>            n_orders <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span>            avg_amount <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">500</span>, <span style="color:#ae81ff">2000</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> user_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;高频低价值&#39;</span>:
+</span></span><span style="display:flex;"><span>            n_orders <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">40</span>)
+</span></span><span style="display:flex;"><span>            avg_amount <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">200</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> user_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;低频高价值&#39;</span>:
+</span></span><span style="display:flex;"><span>            n_orders <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>            avg_amount <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">5000</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> user_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;流失风险&#39;</span>:
+</span></span><span style="display:flex;"><span>            n_orders <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>            avg_amount <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">800</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:  <span style="color:#75715e"># 新用户</span>
+</span></span><span style="display:flex;"><span>            n_orders <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>            avg_amount <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 生成订单日期（集中在不同时间段）</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> user_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;流失风险&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 流失用户：订单都在早期</span>
+</span></span><span style="display:flex;"><span>            dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(end<span style="color:#f92672">=</span>end_date <span style="color:#f92672">-</span> timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">180</span>), periods<span style="color:#f92672">=</span>n_orders, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;D&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> user_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;新用户&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 新用户：订单都在近期</span>
+</span></span><span style="display:flex;"><span>            dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(end<span style="color:#f92672">=</span>end_date, periods<span style="color:#f92672">=</span>n_orders, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;D&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 其他用户：分散在全年</span>
+</span></span><span style="display:flex;"><span>            dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(end<span style="color:#f92672">=</span>end_date, periods<span style="color:#f92672">=</span>n_orders, freq<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span><span style="color:#ae81ff">365</span><span style="color:#f92672">//</span>n_orders<span style="color:#e6db74">}</span><span style="color:#e6db74">D&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> date <span style="color:#f92672">in</span> dates[:n_orders]:
+</span></span><span style="display:flex;"><span>            data<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;用户ID&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;USER</span><span style="color:#e6db74">{</span>user_id<span style="color:#e6db74">:</span><span style="color:#e6db74">05d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;订单日期&#39;</span>: date,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;订单金额&#39;</span>: max(<span style="color:#ae81ff">10</span>, int(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(avg_amount, avg_amount <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.3</span>))),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;用户类型&#39;</span>: user_type
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> pd<span style="color:#f92672">.</span>DataFrame(data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成数据</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> generate_user_transactions(n_users<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>to_csv(<span style="color:#e6db74">&#39;user_transactions.csv&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8-sig&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生成了 </span><span style="color:#e6db74">{</span>len(df)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 条交易记录，涉及 </span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;用户ID&#39;</span>]<span style="color:#f92672">.</span>nunique()<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个用户&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="计算rfm指标">计算RFM指标</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RFMAnalyzer</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, data_path, analysis_date<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(data_path, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8-sig&#39;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;订单日期&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;订单日期&#39;</span>])
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>analysis_date <span style="color:#f92672">=</span> analysis_date <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;订单日期&#39;</span>]<span style="color:#f92672">.</span>max()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;分析基准日期: </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>analysis_date<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;共 </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>df[<span style="color:#e6db74">&#39;用户ID&#39;</span>]<span style="color:#f92672">.</span>nunique()<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个用户，</span><span style="color:#e6db74">{</span>len(self<span style="color:#f92672">.</span>df)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 笔交易&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_rfm</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;计算每个用户的RFM指标&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        rfm <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;用户ID&#39;</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;订单日期&#39;</span>: <span style="color:#66d9ef">lambda</span> x: (self<span style="color:#f92672">.</span>analysis_date <span style="color:#f92672">-</span> x<span style="color:#f92672">.</span>max())<span style="color:#f92672">.</span>days,  <span style="color:#75715e"># Recency</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;订单金额&#39;</span>: [<span style="color:#e6db74">&#39;count&#39;</span>, <span style="color:#e6db74">&#39;sum&#39;</span>]  <span style="color:#75715e"># Frequency, Monetary</span>
+</span></span><span style="display:flex;"><span>        })<span style="color:#f92672">.</span>reset_index()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 重命名列</span>
+</span></span><span style="display:flex;"><span>        rfm<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;用户ID&#39;</span>, <span style="color:#e6db74">&#39;R&#39;</span>, <span style="color:#e6db74">&#39;F&#39;</span>, <span style="color:#e6db74">&#39;M&#39;</span>]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 确保数据类型正确</span>
+</span></span><span style="display:flex;"><span>        rfm[<span style="color:#e6db74">&#39;R&#39;</span>] <span style="color:#f92672">=</span> rfm[<span style="color:#e6db74">&#39;R&#39;</span>]<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>        rfm[<span style="color:#e6db74">&#39;F&#39;</span>] <span style="color:#f92672">=</span> rfm[<span style="color:#e6db74">&#39;F&#39;</span>]<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>        rfm[<span style="color:#e6db74">&#39;M&#39;</span>] <span style="color:#f92672">=</span> rfm[<span style="color:#e6db74">&#39;M&#39;</span>]<span style="color:#f92672">.</span>astype(float)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm <span style="color:#f92672">=</span> rfm
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rfm
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">rfm_summary</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;RFM指标统计摘要&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>rfm[[<span style="color:#e6db74">&#39;R&#39;</span>, <span style="color:#e6db74">&#39;F&#39;</span>, <span style="color:#e6db74">&#39;M&#39;</span>]]<span style="color:#f92672">.</span>describe()
+</span></span></code></pre></div><hr>
+<h2 id="rfm评分与分层">RFM评分与分层</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">score_rfm</span>(self, r_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, f_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, m_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        给RFM打分（1-5分）
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        注意：R越小越好，所以分数要倒序
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 使用分位数进行打分</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;R&#39;</span>], q<span style="color:#f92672">=</span>r_bins, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;F&#39;</span>]<span style="color:#f92672">.</span>rank(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>), q<span style="color:#f92672">=</span>f_bins, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>])
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;M_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;M&#39;</span>], q<span style="color:#f92672">=</span>m_bins, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 转换为数值型</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>]<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;F_score&#39;</span>]<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;M_score&#39;</span>] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;M_score&#39;</span>]<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 综合RFM得分</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;RFM_score&#39;</span>] <span style="color:#f92672">=</span> (self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>]<span style="color:#f92672">.</span>astype(str) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                                  self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;F_score&#39;</span>]<span style="color:#f92672">.</span>astype(str) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                                  self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;M_score&#39;</span>]<span style="color:#f92672">.</span>astype(str))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>rfm
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">segment_users</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;根据RFM进行用户分层&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_segment</span>(row):
+</span></span><span style="display:flex;"><span>            r, f, m <span style="color:#f92672">=</span> row[<span style="color:#e6db74">&#39;R_score&#39;</span>], row[<span style="color:#e6db74">&#39;F_score&#39;</span>], row[<span style="color:#e6db74">&#39;M_score&#39;</span>]
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 定义分层规则</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> r <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要价值客户&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> r <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要保持客户&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> r <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要发展客户&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> r <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要挽留客户&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> r <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;新客户&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> r <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;一般保持客户&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> r <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;潜力客户&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> r <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;流失客户&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;一般客户&#39;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;客户分层&#39;</span>] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>rfm<span style="color:#f92672">.</span>apply(get_segment, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>rfm
+</span></span></code></pre></div><hr>
+<h2 id="可视化分析">可视化分析</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RFMVisualizer</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, analyzer):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>analyzer <span style="color:#f92672">=</span> analyzer
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#39;seaborn-v0_8&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_rfm_distribution</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;RFM指标分布图&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">4</span>))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># R分布</span>
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>hist(self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;R&#39;</span>], bins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;skyblue&#39;</span>, edgecolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Recency Distribution</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">(Last Purchase Days)&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Days Since Last Purchase&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;Number of Users&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>axvline(self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;R&#39;</span>]<span style="color:#f92672">.</span>mean(), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>, 
+</span></span><span style="display:flex;"><span>                       label<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Mean: </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#34;R&#34;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># F分布</span>
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>hist(self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;F&#39;</span>], bins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lightgreen&#39;</span>, edgecolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Frequency Distribution</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">(Purchase Count)&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Number of Purchases&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;Number of Users&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>axvline(self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;F&#39;</span>]<span style="color:#f92672">.</span>mean(), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>,
+</span></span><span style="display:flex;"><span>                       label<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Mean: </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#34;F&#34;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># M分布</span>
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>hist(self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;M&#39;</span>], bins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;salmon&#39;</span>, edgecolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Monetary Distribution</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">(Total Spent)&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Total Amount&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;Number of Users&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>axvline(self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;M&#39;</span>]<span style="color:#f92672">.</span>mean(), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>,
+</span></span><span style="display:flex;"><span>                       label<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Mean: ¥</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#34;M&#34;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;rfm_distribution.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>, bbox_inches<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tight&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_segment_pie</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;客户分层饼图&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        segment_counts <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;客户分层&#39;</span>]<span style="color:#f92672">.</span>value_counts()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        colors <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>cm<span style="color:#f92672">.</span>Set3(np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, len(segment_counts)))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span>        wedges, texts, autotexts <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>pie(
+</span></span><span style="display:flex;"><span>            segment_counts, 
+</span></span><span style="display:flex;"><span>            labels<span style="color:#f92672">=</span>segment_counts<span style="color:#f92672">.</span>index,
+</span></span><span style="display:flex;"><span>            autopct<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f%%</span><span style="color:#e6db74">&#39;</span>,
+</span></span><span style="display:flex;"><span>            colors<span style="color:#f92672">=</span>colors,
+</span></span><span style="display:flex;"><span>            startangle<span style="color:#f92672">=</span><span style="color:#ae81ff">90</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;User Segmentation Distribution&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, fontweight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bold&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>axis(<span style="color:#e6db74">&#39;equal&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;segment_pie.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>, bbox_inches<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tight&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> segment_counts
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_segment_comparison</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;各分层对比柱状图&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        segment_stats <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>analyzer<span style="color:#f92672">.</span>rfm<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;客户分层&#39;</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;R&#39;</span>: <span style="color:#e6db74">&#39;mean&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;F&#39;</span>: <span style="color:#e6db74">&#39;mean&#39;</span>, 
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;M&#39;</span>: <span style="color:#e6db74">&#39;mean&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;用户ID&#39;</span>: <span style="color:#e6db74">&#39;count&#39;</span>
+</span></span><span style="display:flex;"><span>        })<span style="color:#f92672">.</span>rename(columns<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;用户ID&#39;</span>: <span style="color:#e6db74">&#39;用户数&#39;</span>})<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 用户数</span>
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>barh(segment_stats<span style="color:#f92672">.</span>index, segment_stats[<span style="color:#e6db74">&#39;用户数&#39;</span>], color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;steelblue&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;User Count by Segment&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Number of Users&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 平均R值</span>
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>barh(segment_stats<span style="color:#f92672">.</span>index, segment_stats[<span style="color:#e6db74">&#39;R&#39;</span>], color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coral&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Average Recency by Segment&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Days Since Last Purchase&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 平均F值</span>
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>barh(segment_stats<span style="color:#f92672">.</span>index, segment_stats[<span style="color:#e6db74">&#39;F&#39;</span>], color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lightgreen&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Average Frequency by Segment&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Average Purchase Count&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 平均M值</span>
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>barh(segment_stats<span style="color:#f92672">.</span>index, segment_stats[<span style="color:#e6db74">&#39;M&#39;</span>], color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gold&#39;</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Average Monetary by Segment&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>        axes[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Average Total Spent&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;segment_comparison.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>, bbox_inches<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tight&#39;</span>)
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> segment_stats
+</span></span></code></pre></div><hr>
+<h2 id="运营策略建议">运营策略建议</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_strategy_report</span>(analyzer):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;生成运营策略报告&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    strategies <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;重要价值客户&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;特征&#39;</span>: <span style="color:#e6db74">&#39;最近购买、高频、高消费&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;占比&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;策略&#39;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;VIP专属服务，提供1对1客服&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;新品优先体验权&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;积分翻倍、生日特权&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;邀请成为品牌大使&#39;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;重要保持客户&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;特征&#39;</span>: <span style="color:#e6db74">&#39;最近购买、高频、但消费低&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;占比&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;策略&#39;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;推送高客单价商品&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;满减券刺激消费升级&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;组合套餐推荐&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;会员等级激励&#39;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;重要发展客户&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;特征&#39;</span>: <span style="color:#e6db74">&#39;最近购买、消费高、但频次低&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;占比&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;策略&#39;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;定期复购提醒&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;订阅制服务推荐&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;个性化推荐算法&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;限时优惠促活&#39;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;重要挽留客户&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;特征&#39;</span>: <span style="color:#e6db74">&#39;曾经高频高消费，但很久没来了&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;占比&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;策略&#39;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;大额优惠券召回&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;短信/电话关怀&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;老客专属活动&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;了解流失原因&#39;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;新客户&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;特征&#39;</span>: <span style="color:#e6db74">&#39;最近才来，消费少&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;占比&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;策略&#39;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;新手引导教程&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;首单优惠&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;新人专享礼包&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;快速建立信任&#39;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;一般保持客户&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;特征&#39;</span>: <span style="color:#e6db74">&#39;以前常来但消费低，现在不来了&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;占比&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;策略&#39;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;低成本触达（邮件/推送）&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;小额优惠券&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;随缘维护&#39;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;潜力客户&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;特征&#39;</span>: <span style="color:#e6db74">&#39;消费高但很久没来，且次数少&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;占比&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;策略&#39;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;分析首次购买体验&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;针对性改进产品&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;定向广告投放&#39;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;流失客户&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;特征&#39;</span>: <span style="color:#e6db74">&#39;很久没来、消费少、次数少&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;占比&#39;</span>: <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;策略&#39;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;放弃治疗，减少投入&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;极低成本的偶尔触达&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;资源投入到其他群体&#39;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 计算各层占比</span>
+</span></span><span style="display:flex;"><span>    segment_counts <span style="color:#f92672">=</span> analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;客户分层&#39;</span>]<span style="color:#f92672">.</span>value_counts()
+</span></span><span style="display:flex;"><span>    total_users <span style="color:#f92672">=</span> len(analyzer<span style="color:#f92672">.</span>rfm)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;【RFM用户分层运营策略报告】&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> segment, info <span style="color:#f92672">in</span> strategies<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        count <span style="color:#f92672">=</span> segment_counts<span style="color:#f92672">.</span>get(segment, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        percentage <span style="color:#f92672">=</span> count <span style="color:#f92672">/</span> total_users <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>        info[<span style="color:#e6db74">&#39;占比&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>percentage<span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">📊 </span><span style="color:#e6db74">{</span>segment<span style="color:#e6db74">}</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">{</span>count<span style="color:#e6db74">}</span><span style="color:#e6db74">人, </span><span style="color:#e6db74">{</span>percentage<span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%)&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;   特征: </span><span style="color:#e6db74">{</span>info[<span style="color:#e6db74">&#39;特征&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;   策略:&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, strategy <span style="color:#f92672">in</span> enumerate(info[<span style="color:#e6db74">&#39;策略&#39;</span>], <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;      </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">. </span><span style="color:#e6db74">{</span>strategy<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> strategies
+</span></span></code></pre></div><hr>
+<h2 id="主程序运行">主程序运行</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;主程序&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;RFM用户行为分析系统&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 1. 初始化分析器</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">[1/5] 加载数据...&#34;</span>)
+</span></span><span style="display:flex;"><span>    analyzer <span style="color:#f92672">=</span> RFMAnalyzer(<span style="color:#e6db74">&#39;user_transactions.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 2. 计算RFM</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;[2/5] 计算RFM指标...&#34;</span>)
+</span></span><span style="display:flex;"><span>    rfm <span style="color:#f92672">=</span> analyzer<span style="color:#f92672">.</span>calculate_rfm()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">RFM指标统计:&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(analyzer<span style="color:#f92672">.</span>rfm_summary())
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 3. 评分与分层</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">[3/5] RFM评分与用户分层...&#34;</span>)
+</span></span><span style="display:flex;"><span>    analyzer<span style="color:#f92672">.</span>score_rfm()
+</span></span><span style="display:flex;"><span>    analyzer<span style="color:#f92672">.</span>segment_users()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">各分层人数:&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(analyzer<span style="color:#f92672">.</span>rfm[<span style="color:#e6db74">&#39;客户分层&#39;</span>]<span style="color:#f92672">.</span>value_counts())
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 4. 可视化</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">[4/5] 生成可视化图表...&#34;</span>)
+</span></span><span style="display:flex;"><span>    visualizer <span style="color:#f92672">=</span> RFMVisualizer(analyzer)
+</span></span><span style="display:flex;"><span>    visualizer<span style="color:#f92672">.</span>plot_rfm_distribution()
+</span></span><span style="display:flex;"><span>    visualizer<span style="color:#f92672">.</span>plot_segment_pie()
+</span></span><span style="display:flex;"><span>    visualizer<span style="color:#f92672">.</span>plot_segment_comparison()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;  ✓ 图表已保存&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 5. 策略报告</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">[5/5] 生成运营策略...&#34;</span>)
+</span></span><span style="display:flex;"><span>    generate_strategy_report(analyzer)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 导出结果</span>
+</span></span><span style="display:flex;"><span>    output_file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;rfm_analysis_result.csv&#39;</span>
+</span></span><span style="display:flex;"><span>    analyzer<span style="color:#f92672">.</span>rfm<span style="color:#f92672">.</span>to_csv(output_file, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8-sig&#39;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">  ✓ 详细结果已保存: </span><span style="color:#e6db74">{</span>output_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;分析完成！&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><hr>
+<h2 id="项目总结">项目总结</h2>
+<h3 id="学到的技能">学到的技能</h3>
+<ul>
+<li>✅ RFM模型的原理与应用</li>
+<li>✅ 用户分层的量化方法</li>
+<li>✅ 基于数据的运营决策</li>
+<li>✅ 多维度数据可视化</li>
+</ul>
+<h3 id="rfm的价值">RFM的价值</h3>
+<ol>
+<li><strong>精准营销</strong>：钱花在刀刃上</li>
+<li><strong>资源优化</strong>：识别最有价值的用户</li>
+<li><strong>策略差异化</strong>：不同用户不同对待</li>
+<li><strong>效果可衡量</strong>：分层后追踪转化率</li>
+</ol>
+<h3 id="扩展方向">扩展方向</h3>
+<ul>
+<li>结合机器学习预测用户LTV</li>
+<li>构建用户流失预警模型</li>
+<li>A/B测试验证策略效果</li>
+<li>实时RFM看板开发</li>
+</ul>
+<hr>
+<h2 id="进阶用户生命周期价值ltv计算">进阶：用户生命周期价值（LTV）计算</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 计算用户LTV（Lifetime Value）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 假设已有订单数据</span>
+</span></span><span style="display:flex;"><span>ltv <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;user_id&#39;</span>)<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>    first_order<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_date&#39;</span>, <span style="color:#e6db74">&#39;min&#39;</span>),
+</span></span><span style="display:flex;"><span>    last_order<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_date&#39;</span>, <span style="color:#e6db74">&#39;max&#39;</span>),
+</span></span><span style="display:flex;"><span>    total_spend<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;sum&#39;</span>),
+</span></span><span style="display:flex;"><span>    order_count<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_id&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生命周期天数</span>
+</span></span><span style="display:flex;"><span>ltv[<span style="color:#e6db74">&#39;lifetime_days&#39;</span>] <span style="color:#f92672">=</span> (ltv[<span style="color:#e6db74">&#39;last_order&#39;</span>] <span style="color:#f92672">-</span> ltv[<span style="color:#e6db74">&#39;first_order&#39;</span>])<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>days <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 平均购买间隔</span>
+</span></span><span style="display:flex;"><span>ltv[<span style="color:#e6db74">&#39;avg_interval&#39;</span>] <span style="color:#f92672">=</span> ltv[<span style="color:#e6db74">&#39;lifetime_days&#39;</span>] <span style="color:#f92672">/</span> ltv[<span style="color:#e6db74">&#39;order_count&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># LTV预测（简单法：总消费 / 生命周期 × 365）</span>
+</span></span><span style="display:flex;"><span>ltv[<span style="color:#e6db74">&#39;predicted_ltv&#39;</span>] <span style="color:#f92672">=</span> ltv[<span style="color:#e6db74">&#39;total_spend&#39;</span>] <span style="color:#f92672">/</span> ltv[<span style="color:#e6db74">&#39;lifetime_days&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">365</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># LTV分布</span>
+</span></span><span style="display:flex;"><span>print(ltv[<span style="color:#e6db74">&#39;predicted_ltv&#39;</span>]<span style="color:#f92672">.</span>describe())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">高LTV用户(&gt;1000): </span><span style="color:#e6db74">{</span>(ltv[<span style="color:#e6db74">&#39;predicted_ltv&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1000</span>)<span style="color:#f92672">.</span>sum()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h3 id="留存分析详解">留存分析详解</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 计算N日留存率</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">retention_analysis</span>(df, user_col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;user_id&#39;</span>, date_col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;date&#39;</span>):
+</span></span><span style="display:flex;"><span>    df[date_col] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[date_col])
+</span></span><span style="display:flex;"><span>    df[<span style="color:#e6db74">&#39;cohort&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(user_col)[date_col]<span style="color:#f92672">.</span>transform(<span style="color:#e6db74">&#39;min&#39;</span>)<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)
+</span></span><span style="display:flex;"><span>    df[<span style="color:#e6db74">&#39;order_period&#39;</span>] <span style="color:#f92672">=</span> df[date_col]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    cohort_data <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;cohort&#39;</span>, <span style="color:#e6db74">&#39;order_period&#39;</span>])[user_col]<span style="color:#f92672">.</span>nunique()<span style="color:#f92672">.</span>reset_index()
+</span></span><span style="display:flex;"><span>    cohort_data <span style="color:#f92672">=</span> cohort_data<span style="color:#f92672">.</span>pivot(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cohort&#39;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;order_period&#39;</span>, values<span style="color:#f92672">=</span>user_col)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 留存率（除以首月用户数）</span>
+</span></span><span style="display:flex;"><span>    retention <span style="color:#f92672">=</span> cohort_data<span style="color:#f92672">.</span>divide(cohort_data<span style="color:#f92672">.</span>iloc[:, <span style="color:#ae81ff">0</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> retention<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>retention <span style="color:#f92672">=</span> retention_analysis(orders)
+</span></span><span style="display:flex;"><span>print(retention)
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1rfm分群不均衡">❌ 坑1：RFM分群不均衡</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># qcut在某些情况下分群不均</span>
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(rfm[<span style="color:#e6db74">&#39;R&#39;</span>], <span style="color:#ae81ff">5</span>, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>], duplicates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;drop&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 更好的方式：自定义分界点</span>
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>cut(rfm[<span style="color:#e6db74">&#39;R&#39;</span>], bins<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">365</span>], labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>])
+</span></span></code></pre></div><h3 id="rfm模型实战代码">RFM模型实战代码</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模拟用户订单数据</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>n_orders <span style="color:#f92672">=</span> <span style="color:#ae81ff">50000</span>
+</span></span><span style="display:flex;"><span>n_users <span style="color:#f92672">=</span> <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user_id&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, n_users<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, n_orders),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;order_date&#39;</span>: pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span>n_orders, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;10min&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;amount&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>exponential(<span style="color:#ae81ff">200</span>, n_orders)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># RFM计算</span>
+</span></span><span style="display:flex;"><span>today <span style="color:#f92672">=</span> orders[<span style="color:#e6db74">&#39;order_date&#39;</span>]<span style="color:#f92672">.</span>max() <span style="color:#f92672">+</span> pd<span style="color:#f92672">.</span>Timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rfm <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;user_id&#39;</span>)<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>    Recency<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_date&#39;</span>, <span style="color:#66d9ef">lambda</span> x: (today <span style="color:#f92672">-</span> x<span style="color:#f92672">.</span>max())<span style="color:#f92672">.</span>days),
+</span></span><span style="display:flex;"><span>    Frequency<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_id&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>),
+</span></span><span style="display:flex;"><span>    Monetary<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;sum&#39;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># RFM评分（5分制）</span>
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(rfm[<span style="color:#e6db74">&#39;Recency&#39;</span>], <span style="color:#ae81ff">5</span>, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>], duplicates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;drop&#39;</span>)<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(rfm[<span style="color:#e6db74">&#39;Frequency&#39;</span>]<span style="color:#f92672">.</span>rank(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>), <span style="color:#ae81ff">5</span>, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>], duplicates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;drop&#39;</span>)<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;M_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(rfm[<span style="color:#e6db74">&#39;Monetary&#39;</span>]<span style="color:#f92672">.</span>rank(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>), <span style="color:#ae81ff">5</span>, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>], duplicates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;drop&#39;</span>)<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># RFM总分</span>
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;RFM_score&#39;</span>] <span style="color:#f92672">=</span> rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> rfm[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> rfm[<span style="color:#e6db74">&#39;M_score&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用户分类</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">rfm_segment</span>(row):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> row[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> row[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> row[<span style="color:#e6db74">&#39;M_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要价值用户&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> row[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> row[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要发展用户&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> row[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> row[<span style="color:#e6db74">&#39;M_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要保持用户&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> row[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;一般发展用户&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> row[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> row[<span style="color:#e6db74">&#39;M_score&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要挽留用户&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;一般用户&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;segment&#39;</span>] <span style="color:#f92672">=</span> rfm<span style="color:#f92672">.</span>apply(rfm_segment, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 输出分群结果</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== RFM用户分群结果 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>segment_summary <span style="color:#f92672">=</span> rfm<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;segment&#39;</span>)<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>    user_count<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;RFM_score&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>),
+</span></span><span style="display:flex;"><span>    avg_monetary<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;Monetary&#39;</span>, <span style="color:#e6db74">&#39;mean&#39;</span>),
+</span></span><span style="display:flex;"><span>    avg_frequency<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;Frequency&#39;</span>, <span style="color:#e6db74">&#39;mean&#39;</span>)
+</span></span><span style="display:flex;"><span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>print(segment_summary)
+</span></span></code></pre></div><h3 id="留存分析">留存分析</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 计算N日留存率</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_retention</span>(orders, retention_days<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">30</span>]):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39;计算用户留存率&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    first_order <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;user_id&#39;</span>)[<span style="color:#e6db74">&#39;order_date&#39;</span>]<span style="color:#f92672">.</span>min()<span style="color:#f92672">.</span>reset_index()
+</span></span><span style="display:flex;"><span>    first_order<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;user_id&#39;</span>, <span style="color:#e6db74">&#39;first_date&#39;</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    results <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> day <span style="color:#f92672">in</span> retention_days:
+</span></span><span style="display:flex;"><span>        target_date <span style="color:#f92672">=</span> first_order[<span style="color:#e6db74">&#39;first_date&#39;</span>] <span style="color:#f92672">+</span> pd<span style="color:#f92672">.</span>Timedelta(days<span style="color:#f92672">=</span>day)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 检查这些用户在目标日之后是否有订单</span>
+</span></span><span style="display:flex;"><span>        retained <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;user_id&#39;</span>)[<span style="color:#e6db74">&#39;order_date&#39;</span>]<span style="color:#f92672">.</span>max()
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 简化计算</span>
+</span></span><span style="display:flex;"><span>        rate <span style="color:#f92672">=</span> len(orders[orders[<span style="color:#e6db74">&#39;order_date&#39;</span>] <span style="color:#f92672">&gt;=</span> first_order<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;user_id&#39;</span>)[<span style="color:#e6db74">&#39;first_date&#39;</span>] <span style="color:#f92672">+</span> pd<span style="color:#f92672">.</span>Timedelta(days<span style="color:#f92672">=</span>day)][<span style="color:#e6db74">&#39;user_id&#39;</span>]<span style="color:#f92672">.</span>unique()) <span style="color:#f92672">/</span> len(first_order)
+</span></span><span style="display:flex;"><span>        results[<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;D+</span><span style="color:#e6db74">{</span>day<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> rate
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> results
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>retention <span style="color:#f92672">=</span> calculate_retention(orders)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;用户留存率:&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> retention<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  </span><span style="color:#e6db74">{</span>k<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>v<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%&#34;</span>)
+</span></span></code></pre></div><h3 id="用户画像构建">用户画像构建</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 完整的用户画像构建流程</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build_user_profile</span>(orders, users):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39;构建用户画像&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 1. 基本信息维度</span>
+</span></span><span style="display:flex;"><span>    profile <span style="color:#f92672">=</span> users[[<span style="color:#e6db74">&#39;user_id&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>, <span style="color:#e6db74">&#39;gender&#39;</span>, <span style="color:#e6db74">&#39;city&#39;</span>]]<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 2. 消费维度</span>
+</span></span><span style="display:flex;"><span>    consumption <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;user_id&#39;</span>)<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>        total_spend<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;sum&#39;</span>),
+</span></span><span style="display:flex;"><span>        avg_spend<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;mean&#39;</span>),
+</span></span><span style="display:flex;"><span>        max_spend<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;max&#39;</span>),
+</span></span><span style="display:flex;"><span>        order_count<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_id&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>),
+</span></span><span style="display:flex;"><span>        first_order<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_date&#39;</span>, <span style="color:#e6db74">&#39;min&#39;</span>),
+</span></span><span style="display:flex;"><span>        last_order<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_date&#39;</span>, <span style="color:#e6db74">&#39;max&#39;</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 3. RFM维度</span>
+</span></span><span style="display:flex;"><span>    today <span style="color:#f92672">=</span> orders[<span style="color:#e6db74">&#39;order_date&#39;</span>]<span style="color:#f92672">.</span>max() <span style="color:#f92672">+</span> pd<span style="color:#f92672">.</span>Timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    consumption[<span style="color:#e6db74">&#39;recency&#39;</span>] <span style="color:#f92672">=</span> (today <span style="color:#f92672">-</span> consumption[<span style="color:#e6db74">&#39;last_order&#39;</span>])<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>days
+</span></span><span style="display:flex;"><span>    consumption[<span style="color:#e6db74">&#39;lifetime&#39;</span>] <span style="color:#f92672">=</span> (consumption[<span style="color:#e6db74">&#39;last_order&#39;</span>] <span style="color:#f92672">-</span> consumption[<span style="color:#e6db74">&#39;first_order&#39;</span>])<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>days <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 4. 合并画像</span>
+</span></span><span style="display:flex;"><span>    profile <span style="color:#f92672">=</span> profile<span style="color:#f92672">.</span>merge(consumption, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;user_id&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 5. 添加标签</span>
+</span></span><span style="display:flex;"><span>    profile[<span style="color:#e6db74">&#39;spending_level&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(profile[<span style="color:#e6db74">&#39;total_spend&#39;</span>]<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0</span>), 
+</span></span><span style="display:flex;"><span>                                         <span style="color:#ae81ff">4</span>, labels<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;低&#39;</span>, <span style="color:#e6db74">&#39;中低&#39;</span>, <span style="color:#e6db74">&#39;中高&#39;</span>, <span style="color:#e6db74">&#39;高&#39;</span>])
+</span></span><span style="display:flex;"><span>    profile[<span style="color:#e6db74">&#39;activity_level&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(profile[<span style="color:#e6db74">&#39;recency&#39;</span>]<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">999</span>), 
+</span></span><span style="display:flex;"><span>                                         <span style="color:#ae81ff">4</span>, labels<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;活跃&#39;</span>, <span style="color:#e6db74">&#39;一般&#39;</span>, <span style="color:#e6db74">&#39;沉默&#39;</span>, <span style="color:#e6db74">&#39;流失&#39;</span>])
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> profile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 输出画像摘要</span>
+</span></span><span style="display:flex;"><span>profile <span style="color:#f92672">=</span> build_user_profile(orders, users)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== 用户画像摘要 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;总用户数: </span><span style="color:#e6db74">{</span>len(profile)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>消费等级分布:<span style="color:#e6db74">&#34;)</span>
+</span></span><span style="display:flex;"><span>print(profile[<span style="color:#e6db74">&#39;spending_level&#39;</span>]<span style="color:#f92672">.</span>value_counts())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>活跃度分布:<span style="color:#e6db74">&#34;)</span>
+</span></span><span style="display:flex;"><span>print(profile[<span style="color:#e6db74">&#39;activity_level&#39;</span>]<span style="color:#f92672">.</span>value_counts())
+</span></span></code></pre></div><h3 id="完整rfm分析代码">完整RFM分析代码</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">30000</span>
+</span></span><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user_id&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5001</span>, n),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;order_date&#39;</span>: pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span>n, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;30min&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;amount&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>exponential(<span style="color:#ae81ff">200</span>, n)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;product&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>], n)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ===== RFM计算 =====</span>
+</span></span><span style="display:flex;"><span>today <span style="color:#f92672">=</span> orders[<span style="color:#e6db74">&#39;order_date&#39;</span>]<span style="color:#f92672">.</span>max() <span style="color:#f92672">+</span> pd<span style="color:#f92672">.</span>Timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rfm <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;user_id&#39;</span>)<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>    R<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_date&#39;</span>, <span style="color:#66d9ef">lambda</span> x: (today <span style="color:#f92672">-</span> x<span style="color:#f92672">.</span>max())<span style="color:#f92672">.</span>days),
+</span></span><span style="display:flex;"><span>    F<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_id&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>),
+</span></span><span style="display:flex;"><span>    M<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;sum&#39;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ===== RFM评分 =====</span>
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(rfm[<span style="color:#e6db74">&#39;R&#39;</span>], <span style="color:#ae81ff">5</span>, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>], duplicates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;drop&#39;</span>)<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(rfm[<span style="color:#e6db74">&#39;F&#39;</span>]<span style="color:#f92672">.</span>rank(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>), <span style="color:#ae81ff">5</span>, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>], duplicates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;drop&#39;</span>)<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;M_score&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(rfm[<span style="color:#e6db74">&#39;M&#39;</span>]<span style="color:#f92672">.</span>rank(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>), <span style="color:#ae81ff">5</span>, labels<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>], duplicates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;drop&#39;</span>)<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;RFM&#39;</span>] <span style="color:#f92672">=</span> rfm[<span style="color:#e6db74">&#39;R_score&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> rfm[<span style="color:#e6db74">&#39;F_score&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> rfm[<span style="color:#e6db74">&#39;M_score&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ===== 用户分类 =====</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">classify</span>(r, f, m):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> r <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要价值&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> r <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> f <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要发展&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> r <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要保持&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> f <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> m <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;重要挽留&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> r <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;一般发展&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> m <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;一般保持&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;一般用户&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rfm[<span style="color:#e6db74">&#39;segment&#39;</span>] <span style="color:#f92672">=</span> rfm<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: classify(x[<span style="color:#e6db74">&#39;R_score&#39;</span>], x[<span style="color:#e6db74">&#39;F_score&#39;</span>], x[<span style="color:#e6db74">&#39;M_score&#39;</span>]), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ===== 输出结果 =====</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;=== RFM用户分群结果 ===&#39;</span>)
+</span></span><span style="display:flex;"><span>seg <span style="color:#f92672">=</span> rfm<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;segment&#39;</span>)<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>    人数<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;RFM&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>),
+</span></span><span style="display:flex;"><span>    平均消费<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;M&#39;</span>, <span style="color:#e6db74">&#39;mean&#39;</span>),
+</span></span><span style="display:flex;"><span>    平均频次<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;F&#39;</span>, <span style="color:#e6db74">&#39;mean&#39;</span>)
+</span></span><span style="display:flex;"><span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>seg[<span style="color:#e6db74">&#39;占比&#39;</span>] <span style="color:#f92672">=</span> (seg[<span style="color:#e6db74">&#39;人数&#39;</span>] <span style="color:#f92672">/</span> seg[<span style="color:#e6db74">&#39;人数&#39;</span>]<span style="color:#f92672">.</span>sum() <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>print(seg)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ===== 可视化 =====</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>seg[<span style="color:#e6db74">&#39;人数&#39;</span>]<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>pie(ax<span style="color:#f92672">=</span>axes[<span style="color:#ae81ff">0</span>], autopct<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f%%</span><span style="color:#e6db74">&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;用户分群占比&#39;</span>)
+</span></span><span style="display:flex;"><span>rfm<span style="color:#f92672">.</span>boxplot(column<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;M&#39;</span>, by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;segment&#39;</span>, ax<span style="color:#f92672">=</span>axes[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;各群体消费金额分布&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>suptitle(<span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;rfm_analysis.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>)
+</span></span></code></pre></div><h3 id="用户行为分析进阶同期群分析">用户行为分析进阶：同期群分析</h3>
+<p>同期群分析(Cohort Analysis)是用户行为分析的核心方法，它跟踪同一时期加入的用户群体的行为变化。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>]
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;axes.unicode_minus&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模拟用户行为数据</span>
+</span></span><span style="display:flex;"><span>n_users <span style="color:#f92672">=</span> <span style="color:#ae81ff">2000</span>
+</span></span><span style="display:flex;"><span>n_orders <span style="color:#f92672">=</span> <span style="color:#ae81ff">50000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>users <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user_id&#39;</span>: range(<span style="color:#ae81ff">1</span>, n_users <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;signup_date&#39;</span>: pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span>n_users, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;6H&#39;</span>),
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user_id&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, n_users <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, n_orders),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;order_date&#39;</span>: pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span>n_orders, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;10min&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;amount&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>exponential(<span style="color:#ae81ff">200</span>, n_orders)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ===== 同期群分析 =====</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 找到每个用户的注册月份</span>
+</span></span><span style="display:flex;"><span>signup_month <span style="color:#f92672">=</span> users<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;user_id&#39;</span>)[<span style="color:#e6db74">&#39;signup_date&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 计算每笔订单的月份和注册月份</span>
+</span></span><span style="display:flex;"><span>orders[<span style="color:#e6db74">&#39;order_month&#39;</span>] <span style="color:#f92672">=</span> orders[<span style="color:#e6db74">&#39;order_date&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)
+</span></span><span style="display:flex;"><span>orders[<span style="color:#e6db74">&#39;signup_month&#39;</span>] <span style="color:#f92672">=</span> orders[<span style="color:#e6db74">&#39;user_id&#39;</span>]<span style="color:#f92672">.</span>map(signup_month)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 计算订单月份与注册月份的差（第N个月）</span>
+</span></span><span style="display:flex;"><span>orders[<span style="color:#e6db74">&#39;cohort_index&#39;</span>] <span style="color:#f92672">=</span> (orders[<span style="color:#e6db74">&#39;order_month&#39;</span>] <span style="color:#f92672">-</span> orders[<span style="color:#e6db74">&#39;signup_month&#39;</span>])<span style="color:#f92672">.</span>astype(int)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 计算留存用户数</span>
+</span></span><span style="display:flex;"><span>cohort_data <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;signup_month&#39;</span>, <span style="color:#e6db74">&#39;cohort_index&#39;</span>])[<span style="color:#e6db74">&#39;user_id&#39;</span>]<span style="color:#f92672">.</span>nunique()<span style="color:#f92672">.</span>reset_index()
+</span></span><span style="display:flex;"><span>cohort_data<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;signup_month&#39;</span>, <span style="color:#e6db74">&#39;cohort_index&#39;</span>, <span style="color:#e6db74">&#39;user_count&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 计算留存率</span>
+</span></span><span style="display:flex;"><span>cohort_pivot <span style="color:#f92672">=</span> cohort_data<span style="color:#f92672">.</span>pivot(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;signup_month&#39;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cohort_index&#39;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;user_count&#39;</span>)
+</span></span><span style="display:flex;"><span>cohort_size <span style="color:#f92672">=</span> cohort_pivot<span style="color:#f92672">.</span>iloc[:, <span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>retention <span style="color:#f92672">=</span> cohort_pivot<span style="color:#f92672">.</span>divide(cohort_size, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 6. 可视化留存率热力图</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>heatmap(retention<span style="color:#f92672">.</span>iloc[:<span style="color:#ae81ff">12</span>, :<span style="color:#ae81ff">12</span>], annot<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, fmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.1f&#39;</span>, 
+</span></span><span style="display:flex;"><span>            cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;RdYlGn&#39;</span>, vmin<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, vmax<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;用户留存率热力图(%)&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;注册后第N个月&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;注册月份&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;cohort_retention.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h3 id="用户行为漏斗分析">用户行为漏斗分析</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 漏斗分析：从访问到购买的转化率</span>
+</span></span><span style="display:flex;"><span>funnel_data <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;步骤&#39;</span>: [<span style="color:#e6db74">&#39;访问首页&#39;</span>, <span style="color:#e6db74">&#39;浏览商品&#39;</span>, <span style="color:#e6db74">&#39;加入购物车&#39;</span>, <span style="color:#e6db74">&#39;提交订单&#39;</span>, <span style="color:#e6db74">&#39;完成支付&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;用户数&#39;</span>: [<span style="color:#ae81ff">100000</span>, <span style="color:#ae81ff">65000</span>, <span style="color:#ae81ff">28000</span>, <span style="color:#ae81ff">18000</span>, <span style="color:#ae81ff">15000</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>funnel <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(funnel_data)
+</span></span><span style="display:flex;"><span>funnel[<span style="color:#e6db74">&#39;转化率&#39;</span>] <span style="color:#f92672">=</span> (funnel[<span style="color:#e6db74">&#39;用户数&#39;</span>] <span style="color:#f92672">/</span> funnel[<span style="color:#e6db74">&#39;用户数&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>funnel[<span style="color:#e6db74">&#39;步骤转化率&#39;</span>] <span style="color:#f92672">=</span> (funnel[<span style="color:#e6db74">&#39;用户数&#39;</span>] <span style="color:#f92672">/</span> funnel[<span style="color:#e6db74">&#39;用户数&#39;</span>]<span style="color:#f92672">.</span>shift(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>)<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">100</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;=== 转化漏斗 ===&#39;</span>)
+</span></span><span style="display:flex;"><span>print(funnel)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 找出流失最严重的步骤</span>
+</span></span><span style="display:flex;"><span>worst_step <span style="color:#f92672">=</span> funnel<span style="color:#f92672">.</span>loc[funnel[<span style="color:#e6db74">&#39;步骤转化率&#39;</span>]<span style="color:#f92672">.</span>idxmin(), <span style="color:#e6db74">&#39;步骤&#39;</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">⚠️ 流失最严重的步骤: </span><span style="color:#e6db74">{</span>worst_step<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span></code></pre></div><h3 id="用户生命周期价值ltv预测">用户生命周期价值(LTV)预测</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># LTV计算</span>
+</span></span><span style="display:flex;"><span>ltv <span style="color:#f92672">=</span> orders<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;user_id&#39;</span>)<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>    total_spend<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;sum&#39;</span>),
+</span></span><span style="display:flex;"><span>    first_order<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_date&#39;</span>, <span style="color:#e6db74">&#39;min&#39;</span>),
+</span></span><span style="display:flex;"><span>    last_order<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_date&#39;</span>, <span style="color:#e6db74">&#39;max&#39;</span>),
+</span></span><span style="display:flex;"><span>    order_count<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_id&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ltv[<span style="color:#e6db74">&#39;lifetime_days&#39;</span>] <span style="color:#f92672">=</span> (ltv[<span style="color:#e6db74">&#39;last_order&#39;</span>] <span style="color:#f92672">-</span> ltv[<span style="color:#e6db74">&#39;first_order&#39;</span>])<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>days <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>ltv[<span style="color:#e6db74">&#39;avg_daily_spend&#39;</span>] <span style="color:#f92672">=</span> ltv[<span style="color:#e6db74">&#39;total_spend&#39;</span>] <span style="color:#f92672">/</span> ltv[<span style="color:#e6db74">&#39;lifetime_days&#39;</span>]
+</span></span><span style="display:flex;"><span>ltv[<span style="color:#e6db74">&#39;predicted_annual&#39;</span>] <span style="color:#f92672">=</span> ltv[<span style="color:#e6db74">&#39;avg_daily_spend&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">365</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># LTV分群</span>
+</span></span><span style="display:flex;"><span>ltv[<span style="color:#e6db74">&#39;ltv_tier&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>qcut(ltv[<span style="color:#e6db74">&#39;predicted_annual&#39;</span>], <span style="color:#ae81ff">4</span>, labels<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;低&#39;</span>, <span style="color:#e6db74">&#39;中低&#39;</span>, <span style="color:#e6db74">&#39;中高&#39;</span>, <span style="color:#e6db74">&#39;高&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;=== LTV分群 ===&#39;</span>)
+</span></span><span style="display:flex;"><span>print(ltv<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;ltv_tier&#39;</span>)[<span style="color:#e6db74">&#39;predicted_annual&#39;</span>]<span style="color:#f92672">.</span>agg([<span style="color:#e6db74">&#39;mean&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>])<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">高LTV用户平均年消费: ¥</span><span style="color:#e6db74">{</span>ltv[ltv[<span style="color:#e6db74">&#34;ltv_tier&#34;</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;高&#34;</span>][<span style="color:#e6db74">&#34;predicted_annual&#34;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;低LTV用户平均年消费: ¥</span><span style="color:#e6db74">{</span>ltv[ltv[<span style="color:#e6db74">&#34;ltv_tier&#34;</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;低&#34;</span>][<span style="color:#e6db74">&#34;predicted_annual&#34;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一项目是<strong>库存分析与预测</strong>，学习如何用时间序列方法预测商品销量，优化库存管理。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301010201-%E9%A1%B9%E7%9B%AE3-%E5%BA%93%E5%AD%98%E5%88%86%E6%9E%90%E4%B8%8E%E9%94%80%E9%87%8F%E9%A2%84%E6%B5%8B/">继续阅读：项目3-库存分析与销量预测</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301001301-%E9%A1%B9%E7%9B%AE1-%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E8%A1%A8%E8%87%AA%E5%8A%A8%E5%8C%96/">项目1-销售数据分析报表自动化</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301010201-%E9%A1%B9%E7%9B%AE3-%E5%BA%93%E5%AD%98%E5%88%86%E6%9E%90%E4%B8%8E%E9%94%80%E9%87%8F%E9%A2%84%E6%B5%8B/">项目3-库存分析与销量预测</a></p>
+<hr>
+<p><em>PS：RFM模型是用户运营的核武器。掌握它，你就掌握了精细化运营的核心能力。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260301001301-%E9%A1%B9%E7%9B%AE1-%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E8%A1%A8%E8%87%AA%E5%8A%A8%E5%8C%96/">上一篇：项目1：销售数据分析报表自动化，我用Python替代了3小时的手工工作</a>
+        
+        
+        <a href="http://localhost:4002/20260301010201-%E9%A1%B9%E7%9B%AE3-%E5%BA%93%E5%AD%98%E5%88%86%E6%9E%90%E4%B8%8E%E9%94%80%E9%87%8F%E9%A2%84%E6%B5%8B/">下一篇：项目3：库存分析与销量预测，我用Python让仓库不再积压也不断货</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

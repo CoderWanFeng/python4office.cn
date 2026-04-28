@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>面试造火箭入职拧螺丝？懂CPython源码的人到底有多强 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>面试造火箭入职拧螺丝？懂CPython源码的人到底有多强</h1>
+        <div class="post-meta">
+            <span>2026-04-17 14:00</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E8%BF%9B%E9%98%B6/" class="tag">Python进阶</a>
+            
+            <a href="/tags/cpython/" class="tag">CPython</a>
+            
+            <a href="/tags/%E9%9D%A2%E8%AF%95/" class="tag">面试</a>
+            
+            <a href="/tags/%E8%81%8C%E5%9C%BA/" class="tag">职场</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <p>大家好，这里是程序员晚枫，正在all in AI编程实战。</p>
+<p>经常有人问我：<strong>&ldquo;学CPython源码有什么用？我又不去做Python核心开发。&rdquo;</strong></p>
+<p>我的回答是：<strong>你不需要去做，但你需要懂。</strong></p>
+<hr>
+<h2 id="面试的真实场景">面试的真实场景</h2>
+<h3 id="普通候选人">普通候选人</h3>
+<p>面试官：<code>a = [1,2,3]; b = a; b.append(4); print(a)</code> 输出什么？</p>
+<p>候选人：<strong>[1, 2, 3, 4]</strong></p>
+<p>面试官：为什么？</p>
+<p>候选人：<strong>因为列表是可变对象……</strong>（支支吾吾）</p>
+<h3 id="懂cpython的候选人">懂CPython的候选人</h3>
+<p>面试官：<code>a = [1,2,3]; b = a; b.append(4); print(a)</code> 输出什么？</p>
+<p>候选人：<strong>[1, 2, 3, 4]</strong>。因为a和b指向同一个PyListObject，ob_item指针数组是共享的。</p>
+<p>面试官：那 <code>a += [5]</code> 和 <code>a = a + [5]</code> 有什么区别？</p>
+<p>候选人：<code>+=</code>是INPLACE_ADD，原地修改；<code>+</code>是BINARY_ADD，创建新对象。可以看字节码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> dis
+</span></span><span style="display:flex;"><span>dis<span style="color:#f92672">.</span>dis(<span style="color:#e6db74">&#34;a += [5]&#34;</span>)   <span style="color:#75715e"># INPLACE_ADD</span>
+</span></span><span style="display:flex;"><span>dis<span style="color:#f92672">.</span>dis(<span style="color:#e6db74">&#34;a = a + [5]&#34;</span>) <span style="color:#75715e"># BINARY_ADD + STORE_NAME</span>
+</span></span></code></pre></div><p>面试官：<strong>……你被录用了。</strong></p>
+<hr>
+<h2 id="懂底层的人差距有多大">懂底层的人，差距有多大？</h2>
+<ol>
+<li><strong>写代码更高效</strong>：知道哪些操作是O(1)，哪些是O(n)</li>
+<li><strong>排查bug更快</strong>：能看懂堆栈信息，定位到源码层面</li>
+<li><strong>面试碾压对手</strong>：别人说结论，你说原理</li>
+<li><strong>薪资差距</strong>：同样3年经验，懂底层的月薪能高5-10K</li>
+</ol>
+<hr>
+<h2 id="20讲cpython源码课">20讲CPython源码课</h2>
+<p>从零开始，不需要C语言基础：</p>
+<p>👉 <a href="/course/AI/cpython-internal/00-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/">查看完整课程</a></p>
+<ul>
+<li>对象模型 → 内存管理 → 垃圾回收</li>
+<li>词法分析 → 语法分析 → 字节码编译 → 虚拟机执行</li>
+<li>内置类型实现 → GIL → 并发 → C扩展 → 性能优化</li>
+</ul>
+<p><strong>每一个Python进阶程序员都应该上的课。</strong></p>
+<hr>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲·AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/03-%E6%88%91%E7%9A%84%E7%BD%91%E7%AB%990%E5%B9%BF%E5%91%8A%E8%B4%B9%E6%9C%88%E6%B5%81%E9%87%8F%E5%87%A0%E4%B8%87geo%E4%BC%98%E5%8C%96%E5%AE%9E%E6%88%98%E5%A4%8D%E7%9B%98/">上一篇：我的网站0广告费月流量几万GEO优化实战复盘</a>
+        
+        
+        <a href="http://localhost:4002/03-%E6%89%93%E5%8C%85python%E7%A8%8B%E5%BA%8F%E9%81%87%E5%88%B0%E6%8A%A5%E9%94%99%E5%88%AB%E6%85%8C%E8%BF%99%E9%87%8C%E6%9C%8910%E4%B8%AA%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">下一篇：打包Python程序遇到报错别慌这里有10个最常见问题的解决方案</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

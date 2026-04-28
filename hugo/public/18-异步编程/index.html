@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 18 讲：Python 异步编程完全指南 | asyncio、async/await、事件循环与高并发实战 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 18 讲：Python 异步编程完全指南 | asyncio、async/await、事件循环与高并发实战</h1>
+        <div class="post-meta">
+            <span>2026-03-03 10:25</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python%E5%BC%82%E6%AD%A5/" class="tag">Python异步</a>
+            
+            <a href="/tags/asyncio/" class="tag">asyncio</a>
+            
+            <a href="/tags/async-await/" class="tag">async await</a>
+            
+            <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" class="tag">事件循环</a>
+            
+            <a href="/tags/%E5%8D%8F%E7%A8%8B/" class="tag">协程</a>
+            
+            <a href="/tags/python%E9%AB%98%E5%B9%B6%E5%8F%91/" class="tag">Python高并发</a>
+            
+            <a href="/tags/aiohttp/" class="tag">aiohttp</a>
+            
+            <a href="/tags/python%E8%BF%9B%E9%98%B6/" class="tag">Python进阶</a>
+            
+            <a href="/tags/python-io%E5%AF%86%E9%9B%86%E5%9E%8B/" class="tag">Python IO密集型</a>
+            
+            <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" class="tag">异步编程</a>
+            
+            <a href="/tags/%E6%B5%81%E7%95%85%E7%9A%84python/" class="tag">流畅的Python</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>asyncio 让 Python 单线程处理数万并发连接成为可能。但很多人学 asyncio 总是感觉&quot;懂了又没懂&quot;——这是因为没有从事件循环的角度去理解它的本质。</strong></p>
+<p>本讲从底层原理出发，带你真正搞懂异步编程。</p>
+<hr>
+<h2 id="-为什么需要异步">🔄 为什么需要异步？</h2>
+<p>传统同步代码中，IO 等待会阻塞整个线程：</p>
+<pre tabindex="0"><code>同步模型（单线程）：
+─── 请求1 ─── [等待IO 1s] ─── 处理 ─── 请求2 ─── [等待IO 1s] ─── 处理
+                                                                   → 总耗时 2s+
+
+异步模型（单线程）：
+─── 请求1 ─── [发出IO请求] ───── [IO等待期间处理请求2] ───── [IO1返回] ─── 处理1
+                           └──── 请求2 ─── [发出IO请求] ─── [IO2返回] ─── 处理2
+                                                                           → 总耗时 1s+
+</code></pre><p>关键洞察：<strong>IO 等待期间，CPU 是空闲的</strong>。异步编程就是充分利用这段空闲时间。</p>
+<hr>
+<h2 id="-核心概念事件循环与协程">🏗️ 核心概念：事件循环与协程</h2>
+<h3 id="协程coroutine">协程（Coroutine）</h3>
+<p>协程是可以暂停和恢复执行的函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">say_hello</span>(name: str, delay: float) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;协程函数：用 async def 定义&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;准备向 </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> 打招呼...&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(delay)  <span style="color:#75715e"># 让出控制权，暂停这里</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Greeted </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 协程对象不会自动执行</span>
+</span></span><span style="display:flex;"><span>coro <span style="color:#f92672">=</span> say_hello(<span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#ae81ff">1.0</span>)
+</span></span><span style="display:flex;"><span>print(type(coro))  <span style="color:#75715e"># &lt;class &#39;coroutine&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 必须通过事件循环运行</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>run(coro)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># Greeted Alice</span>
+</span></span></code></pre></div><h3 id="事件循环event-loop">事件循环（Event Loop）</h3>
+<p>事件循环是 asyncio 的核心调度器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">task1</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;task1 开始&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 暂停，交出控制权</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;task1 完成&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;result1&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">task2</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;task2 开始&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 暂停，交出控制权</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;task2 完成&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;result2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 并发运行：两个任务交替执行</span>
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>get_event_loop()<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 顺序执行（慢）：约 3 秒</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># r1 = await task1()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># r2 = await task2()</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 并发执行（快）：约 2 秒</span>
+</span></span><span style="display:flex;"><span>    r1, r2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>gather(task1(), task2())
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    elapsed <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>get_event_loop()<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;结果：</span><span style="color:#e6db74">{</span>r1<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{</span>r2<span style="color:#e6db74">}</span><span style="color:#e6db74">，耗时：</span><span style="color:#e6db74">{</span>elapsed<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>asyncio<span style="color:#f92672">.</span>run(main())
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># task1 开始</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># task2 开始</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># task2 完成    ← 1 秒后</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># task1 完成    ← 2 秒后</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 结果：result1, result2，耗时：2.00s</span>
+</span></span></code></pre></div><hr>
+<h2 id="-asyncio-核心-api">🚀 asyncio 核心 API</h2>
+<h3 id="asynciogather并发执行多个协程">asyncio.gather：并发执行多个协程</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> aiohttp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch</span>(session: aiohttp<span style="color:#f92672">.</span>ClientSession, url: str) <span style="color:#f92672">-&gt;</span> dict:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;异步 HTTP 请求&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> session<span style="color:#f92672">.</span>get(url) <span style="color:#66d9ef">as</span> response:
+</span></span><span style="display:flex;"><span>        data <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> response<span style="color:#f92672">.</span>json()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;url&#34;</span>: url, <span style="color:#e6db74">&#34;status&#34;</span>: response<span style="color:#f92672">.</span>status, <span style="color:#e6db74">&#34;data&#34;</span>: data}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch_all</span>(urls: list[str]) <span style="color:#f92672">-&gt;</span> list[dict]:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> aiohttp<span style="color:#f92672">.</span>ClientSession() <span style="color:#66d9ef">as</span> session:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># gather 并发执行，保持顺序</span>
+</span></span><span style="display:flex;"><span>        tasks <span style="color:#f92672">=</span> [fetch(session, url) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> urls]
+</span></span><span style="display:flex;"><span>        results <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>gather(<span style="color:#f92672">*</span>tasks, return_exceptions<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> results
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 并发请求 100 个 URL，约等于请求单个 URL 的时间</span>
+</span></span><span style="display:flex;"><span>urls <span style="color:#f92672">=</span> [<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/posts/</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">11</span>)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>run(fetch_all(urls))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;并发请求 </span><span style="color:#e6db74">{</span>len(urls)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个 URL 耗时：</span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span></code></pre></div><h3 id="asynciocreate_task更细粒度的任务控制">asyncio.create_task：更细粒度的任务控制</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">background_task</span>(name: str, delay: float) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(delay)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> done&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># create_task 立即开始执行（不等 await）</span>
+</span></span><span style="display:flex;"><span>    task1 <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>create_task(background_task(<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#ae81ff">2.0</span>), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task-A&#34;</span>)
+</span></span><span style="display:flex;"><span>    task2 <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>create_task(background_task(<span style="color:#e6db74">&#34;B&#34;</span>, <span style="color:#ae81ff">1.0</span>), name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task-B&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;任务已启动，做些其他事情...&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 等待特定任务</span>
+</span></span><span style="display:flex;"><span>    result2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> task2
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;task2 先完成：</span><span style="color:#e6db74">{</span>result2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    result1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> task1
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;task1 完成：</span><span style="color:#e6db74">{</span>result1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>asyncio<span style="color:#f92672">.</span>run(main())
+</span></span></code></pre></div><h3 id="asynciowait等待部分完成">asyncio.wait：等待部分完成</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">task</span>(n: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(n <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Task </span><span style="color:#e6db74">{</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74"> failed!&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    tasks <span style="color:#f92672">=</span> {asyncio<span style="color:#f92672">.</span>create_task(task(i), name<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;task-</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">6</span>)}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 等待任意一个完成</span>
+</span></span><span style="display:flex;"><span>    done, pending <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>wait(tasks, return_when<span style="color:#f92672">=</span>asyncio<span style="color:#f92672">.</span>FIRST_COMPLETED)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;最先完成的：</span><span style="color:#e6db74">{</span>[t<span style="color:#f92672">.</span>result() <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> done]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 取消剩余任务</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> pending:
+</span></span><span style="display:flex;"><span>        t<span style="color:#f92672">.</span>cancel()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 等待所有任务（包括异常）</span>
+</span></span><span style="display:flex;"><span>    tasks2 <span style="color:#f92672">=</span> {asyncio<span style="color:#f92672">.</span>create_task(task(i)) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>)}
+</span></span><span style="display:flex;"><span>    done, _ <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>wait(tasks2, return_when<span style="color:#f92672">=</span>asyncio<span style="color:#f92672">.</span>ALL_COMPLETED)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> done:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> t<span style="color:#f92672">.</span>exception():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;任务失败：</span><span style="color:#e6db74">{</span>t<span style="color:#f92672">.</span>exception()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;任务成功：</span><span style="color:#e6db74">{</span>t<span style="color:#f92672">.</span>result()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>asyncio<span style="color:#f92672">.</span>run(main())
+</span></span></code></pre></div><hr>
+<h2 id="-实战高并发爬虫">🌐 实战：高并发爬虫</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> aiohttp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Optional
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AsyncCrawler</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;高并发异步爬虫&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, max_concurrent: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>max_concurrent <span style="color:#f92672">=</span> max_concurrent
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>semaphore <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>Semaphore(max_concurrent)  <span style="color:#75715e"># 限制并发数</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>results: list[dict] <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch_one</span>(
+</span></span><span style="display:flex;"><span>        self,
+</span></span><span style="display:flex;"><span>        session: aiohttp<span style="color:#f92672">.</span>ClientSession,
+</span></span><span style="display:flex;"><span>        url: str
+</span></span><span style="display:flex;"><span>    ) <span style="color:#f92672">-&gt;</span> Optional[dict]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>semaphore:  <span style="color:#75715e"># 控制并发量，避免服务器过载</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> session<span style="color:#f92672">.</span>get(url, timeout<span style="color:#f92672">=</span>aiohttp<span style="color:#f92672">.</span>ClientTimeout(total<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)) <span style="color:#66d9ef">as</span> response:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> response<span style="color:#f92672">.</span>status <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>:
+</span></span><span style="display:flex;"><span>                        text <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> response<span style="color:#f92672">.</span>text()
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;url&#34;</span>: url,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;status&#34;</span>: response<span style="color:#f92672">.</span>status,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;length&#34;</span>: len(text),
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;url&#34;</span>: url, <span style="color:#e6db74">&#34;status&#34;</span>: response<span style="color:#f92672">.</span>status, <span style="color:#e6db74">&#34;length&#34;</span>: <span style="color:#ae81ff">0</span>}
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span> asyncio<span style="color:#f92672">.</span>TimeoutError:
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;超时：</span><span style="color:#e6db74">{</span>url<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;错误 </span><span style="color:#e6db74">{</span>url<span style="color:#e6db74">}</span><span style="color:#e6db74">：</span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">crawl</span>(self, urls: list[str]) <span style="color:#f92672">-&gt;</span> list[dict]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> aiohttp<span style="color:#f92672">.</span>ClientSession(
+</span></span><span style="display:flex;"><span>            headers<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;User-Agent&#34;</span>: <span style="color:#e6db74">&#34;AsyncCrawler/1.0&#34;</span>}
+</span></span><span style="display:flex;"><span>        ) <span style="color:#66d9ef">as</span> session:
+</span></span><span style="display:flex;"><span>            tasks <span style="color:#f92672">=</span> [self<span style="color:#f92672">.</span>fetch_one(session, url) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> urls]
+</span></span><span style="display:flex;"><span>            results <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>gather(<span style="color:#f92672">*</span>tasks, return_exceptions<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> [r <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> results <span style="color:#66d9ef">if</span> r <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    urls <span style="color:#f92672">=</span> [<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;https://httpbin.org/delay/</span><span style="color:#e6db74">{</span>i <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">20</span>)]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    crawler <span style="color:#f92672">=</span> AsyncCrawler(max_concurrent<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    results <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> crawler<span style="color:#f92672">.</span>crawl(urls)
+</span></span><span style="display:flex;"><span>    elapsed <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;抓取 </span><span style="color:#e6db74">{</span>len(results)<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">{</span>len(urls)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个 URL&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;耗时：</span><span style="color:#e6db74">{</span>elapsed<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>asyncio<span style="color:#f92672">.</span>run(main())
+</span></span></code></pre></div><hr>
+<h2 id="-异步同步原语">🔒 异步同步原语</h2>
+<h3 id="asynciolock异步锁">asyncio.Lock：异步锁</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AsyncCounter</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_lock <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>Lock()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">increment</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>_lock:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 临界区：同时只有一个协程能执行</span>
+</span></span><span style="display:flex;"><span>            value <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>value
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># 模拟一点延迟</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> value <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    counter <span style="color:#f92672">=</span> AsyncCounter()
+</span></span><span style="display:flex;"><span>    tasks <span style="color:#f92672">=</span> [asyncio<span style="color:#f92672">.</span>create_task(counter<span style="color:#f92672">.</span>increment()) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>gather(<span style="color:#f92672">*</span>tasks)
+</span></span><span style="display:flex;"><span>    print(counter<span style="color:#f92672">.</span>value)  <span style="color:#75715e"># 1000（有锁保证正确）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>asyncio<span style="color:#f92672">.</span>run(main())
+</span></span></code></pre></div><h3 id="asyncioqueue生产者消费者">asyncio.Queue：生产者消费者</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">producer</span>(queue: asyncio<span style="color:#f92672">.</span>Queue, n: int) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;生产者：放入数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>        item <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> queue<span style="color:#f92672">.</span>put(item)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生产：</span><span style="color:#e6db74">{</span>item<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.1</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 发送结束信号</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> queue<span style="color:#f92672">.</span>put(<span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">consumer</span>(queue: asyncio<span style="color:#f92672">.</span>Queue, worker_id: int) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;消费者：处理数据&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        item <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> queue<span style="color:#f92672">.</span>get()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> item <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">await</span> queue<span style="color:#f92672">.</span>put(<span style="color:#66d9ef">None</span>)  <span style="color:#75715e"># 传递结束信号给其他消费者</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Worker-</span><span style="color:#e6db74">{</span>worker_id<span style="color:#e6db74">}</span><span style="color:#e6db74"> 处理：</span><span style="color:#e6db74">{</span>item<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.2</span>)  <span style="color:#75715e"># 模拟处理</span>
+</span></span><span style="display:flex;"><span>        queue<span style="color:#f92672">.</span>task_done()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    queue <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>Queue(maxsize<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)  <span style="color:#75715e"># 限制队列大小</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 1 个生产者，3 个消费者</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>gather(
+</span></span><span style="display:flex;"><span>        producer(queue, <span style="color:#ae81ff">10</span>),
+</span></span><span style="display:flex;"><span>        consumer(queue, <span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>        consumer(queue, <span style="color:#ae81ff">2</span>),
+</span></span><span style="display:flex;"><span>        consumer(queue, <span style="color:#ae81ff">3</span>),
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>asyncio<span style="color:#f92672">.</span>run(main())
+</span></span></code></pre></div><hr>
+<h2 id="-同步代码与异步代码的桥接">🔗 同步代码与异步代码的桥接</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> concurrent.futures <span style="color:#f92672">import</span> ThreadPoolExecutor
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sync_heavy_task</span>(n: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;无法改造的同步阻塞函数（比如第三方库）&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 阻塞 IO</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    loop <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>get_event_loop()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 在线程池中运行同步阻塞函数，不阻塞事件循环</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> ThreadPoolExecutor() <span style="color:#66d9ef">as</span> executor:
+</span></span><span style="display:flex;"><span>        tasks <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            loop<span style="color:#f92672">.</span>run_in_executor(executor, sync_heavy_task, i)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        results <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>gather(<span style="color:#f92672">*</span>tasks)
+</span></span><span style="display:flex;"><span>        print(results)  <span style="color:#75715e"># [0, 2, 4, 6, 8]，约 1 秒完成</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>asyncio<span style="color:#f92672">.</span>run(main())
+</span></span></code></pre></div><hr>
+<h2 id="-多线程-vs-asyncio-对比">📊 多线程 vs asyncio 对比</h2>
+<table>
+  <thead>
+      <tr>
+          <th>对比维度</th>
+          <th>多线程（threading）</th>
+          <th>asyncio</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>并发模型</td>
+          <td>抢占式（OS 调度）</td>
+          <td>协作式（主动让出）</td>
+      </tr>
+      <tr>
+          <td>内存开销</td>
+          <td>每个线程约 8MB 栈</td>
+          <td>协程极小（几 KB）</td>
+      </tr>
+      <tr>
+          <td>适用规模</td>
+          <td>数百个线程</td>
+          <td>数万个协程</td>
+      </tr>
+      <tr>
+          <td>共享状态</td>
+          <td>需要 Lock（复杂）</td>
+          <td>单线程，较少竞态</td>
+      </tr>
+      <tr>
+          <td>调试难度</td>
+          <td>竞态条件难排查</td>
+          <td>更可预测</td>
+      </tr>
+      <tr>
+          <td>生态支持</td>
+          <td>所有库都支持</td>
+          <td>需要 async 版本库</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-常见陷阱">⚠️ 常见陷阱</h2>
+<h3 id="1-在协程中调用阻塞函数">1. 在协程中调用阻塞函数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests  <span style="color:#75715e"># 同步 HTTP 库</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bad_fetch</span>(url):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ❌ 这会阻塞整个事件循环！</span>
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url)  <span style="color:#75715e"># 阻塞 1 秒，其他协程都无法运行</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response<span style="color:#f92672">.</span>text
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">good_fetch</span>(url):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ✅ 用 aiohttp（异步版本）</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> aiohttp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> aiohttp<span style="color:#f92672">.</span>ClientSession() <span style="color:#66d9ef">as</span> session:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> session<span style="color:#f92672">.</span>get(url) <span style="color:#66d9ef">as</span> response:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">await</span> response<span style="color:#f92672">.</span>text()
+</span></span></code></pre></div><h3 id="2-忘记-await">2. 忘记 await</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ❌ 创建了协程对象，但没有 await，什么都不会发生</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> some_coroutine()  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ✅ 必须 await</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> some_coroutine()
+</span></span></code></pre></div><h3 id="3-在非-async-函数中调用-async-函数">3. 在非 async 函数中调用 async 函数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">async_func</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 不能在普通函数中直接 await</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">normal_func</span>():
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> async_func()  <span style="color:#75715e"># SyntaxError！</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 方法1：用 asyncio.run</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">normal_func</span>():
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>run(async_func())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 方法2：用 run_coroutine_threadsafe（在已有事件循环的情况下）</span>
+</span></span></code></pre></div><hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<p><strong>事件循环</strong>：asyncio 的核心调度器，单线程中交替执行协程，靠协程主动 <code>await</code> 让出控制权。</p>
+<p><strong>协程 vs 线程</strong>：协程更轻量（万级并发）、更可预测（无竞态条件）；但必须全栈 async，不能调用阻塞函数。</p>
+<p><strong>核心 API</strong>：</p>
+<ul>
+<li><code>asyncio.run()</code> —— 入口，运行顶层协程</li>
+<li><code>asyncio.gather()</code> —— 并发执行，等待全部完成</li>
+<li><code>asyncio.create_task()</code> —— 立即开始但不阻塞当前协程</li>
+<li><code>asyncio.Semaphore</code> —— 限制并发数量</li>
+</ul>
+<p><strong>桥接同步代码</strong>：用 <code>loop.run_in_executor()</code> 在线程池中运行同步阻塞函数，避免阻塞事件循环。</p>
+<p><strong>选择原则</strong>：IO 密集且并发数高（&gt;数百）→ asyncio；IO 密集并发适中 → 多线程也可以；有大量已有同步代码 → 多线程更容易迁移。</p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong><a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<p><strong>学习路线：</strong> 零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》</p>
+<hr>
+<h2 id="-加入流畅的-python直播共读营">🎓 加入《流畅的 Python》直播共读营</h2>
+<p>学到这里，如果你想系统吃透这本书——欢迎加入我的直播共读课。</p>
+<ul>
+<li>每周直播精讲，逐章拆解核心知识点</li>
+<li>专属学习群，随时答疑交流</li>
+<li>试运营特惠：<del>499 元</del> → <strong>299 元</strong></li>
+</ul>
+<p>👉 <strong>【立即报名《流畅的 Python》共读课】</strong>：https://mp.weixin.qq.com/s/ivHJwn1nNx5ug4TFrapvGg</p>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="17-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%9E%8B.md">上一讲：并发编程模型</a> | <a href="19-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md">下一讲：性能优化</a> →</p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/4f7696ff-fbef-423c-8874-38dfb05b165f/fluent-python.png" alt="fluent-python.png" title="fluent-python.png"></p>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/05-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/">上一篇：第 5 讲：词法分析器 Tokenizer——从源代码到 Token 序列的转换</a>
+        
+        
+        <a href="http://localhost:4002/06-%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/">下一篇：第 6 讲：语法分析与 AST 生成——从 Token 到抽象语法树</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

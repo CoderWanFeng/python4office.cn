@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 4 讲：垃圾回收机制详解——引用计数与循环 GC 的协同工作 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 4 讲：垃圾回收机制详解——引用计数与循环 GC 的协同工作</h1>
+        <div class="post-meta">
+            <span>2026-03-03 10:20</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python/" class="tag">python</a>
+            
+            <a href="/tags/cpython/" class="tag">CPython</a>
+            
+            <a href="/tags/gc/" class="tag">GC</a>
+            
+            <a href="/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/" class="tag">垃圾回收，循环引用</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>引用计数有个致命缺陷：无法处理循环引用。CPython 如何解决这个难题？</strong></p>
+<p>理解垃圾回收机制，能帮你避免内存泄漏，也能解释为什么有些对象的 <code>__del__</code> 不会被调用。</p>
+<p>想象一下，你有一堆书，每本书上贴着一个标签，记录有多少人正在借阅这本书。当标签上的数字变成 0 时，你就可以把书扔掉。这就是引用计数。但如果有两本书互相引用（A 书说 B 书在借阅，B 书说 A 书在借阅），即使没有人真正需要它们，标签数字也不会变成 0。这就是循环引用问题。</p>
+<hr>
+<h2 id="-引用计数的局限性">🔄 引用计数的局限性</h2>
+<h3 id="循环引用问题">循环引用问题</h3>
+<p>让我们看一个经典的循环引用示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 简单的循环引用示例</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>a[<span style="color:#e6db74">&#39;ref&#39;</span>] <span style="color:#f92672">=</span> b  <span style="color:#75715e"># a 引用 b</span>
+</span></span><span style="display:flex;"><span>b[<span style="color:#e6db74">&#39;ref&#39;</span>] <span style="color:#f92672">=</span> a  <span style="color:#75715e"># b 引用 a</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 此时引用关系：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># a.ob_refcnt = 2（变量 a + b[&#39;ref&#39;]）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># b.ob_refcnt = 2（变量 b + a[&#39;ref&#39;]）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> a  <span style="color:#75715e"># a.ob_refcnt = 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> b  <span style="color:#75715e"># b.ob_refcnt = 1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 现在两个对象都无法被访问，但引用计数都不为 0！</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 内存泄漏发生</span>
+</span></span></code></pre></div><p>这个例子展示了引用计数的致命缺陷：当两个或多个对象互相引用时，即使它们已经不再被程序使用，引用计数也不会归零，导致内存无法释放。</p>
+<h3 id="更隐蔽的例子">更隐蔽的例子</h3>
+<p>循环引用在实际代码中可能更隐蔽：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, value):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> value
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>children <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_child</span>(self, child):
+</span></span><span style="display:flex;"><span>        child<span style="color:#f92672">.</span>parent <span style="color:#f92672">=</span> self
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>children<span style="color:#f92672">.</span>append(child)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建树结构</span>
+</span></span><span style="display:flex;"><span>root <span style="color:#f92672">=</span> Node(<span style="color:#e6db74">&#34;root&#34;</span>)
+</span></span><span style="display:flex;"><span>child <span style="color:#f92672">=</span> Node(<span style="color:#e6db74">&#34;child&#34;</span>)
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>add_child(child)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除引用</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> root
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> child
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果 Node 没有正确清理，可能导致循环引用</span>
+</span></span></code></pre></div><p>在这个例子中，parent 和 children 形成了双向引用。如果程序没有正确清理这些引用，就可能导致内存泄漏。</p>
+<hr>
+<h2 id="-分代垃圾回收器">🎯 分代垃圾回收器</h2>
+<p>CPython 使用**分代垃圾回收（Generational GC）**来解决循环引用问题。</p>
+<h3 id="核心思想">核心思想</h3>
+<p>分代垃圾回收基于一个观察：<strong>对象存活时间越长，越可能长期存活。</strong></p>
+<p>基于这个观察，CPython 把对象分为三代：</p>
+<pre tabindex="0"><code>0 代（年轻代）：新创建的对象
+    ↓ 存活下来
+1 代（中年代）：经过一次 0 代回收仍存活
+    ↓ 存活下来
+2 代（老年代）：经过多次回收仍存活
+</code></pre><p>回收策略：</p>
+<ul>
+<li><strong>0 代</strong>：最频繁检查，因为大多数对象很快就死亡</li>
+<li><strong>1 代</strong>：中等频率检查</li>
+<li><strong>2 代</strong>：最少检查，因为老年代对象大多是长期存活的</li>
+</ul>
+<h3 id="三代对象的数据结构">三代对象的数据结构</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// Modules/gcmodule.c
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define NUM_GENERATIONS 3
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> gc_generation {
+</span></span><span style="display:flex;"><span>    PyGC_Head head;     <span style="color:#75715e">// 该代对象链表头
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> threshold;      <span style="color:#75715e">// 触发回收的阈值
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> count;          <span style="color:#75715e">// 当前分配的对象数
+</span></span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">struct</span> gc_generation generations[NUM_GENERATIONS] <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* 0 代 */</span> { {}, <span style="color:#ae81ff">700</span>, <span style="color:#ae81ff">0</span> },   <span style="color:#75715e">// 年轻代：最频繁检查
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* 1 代 */</span> { {}, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span> },    <span style="color:#75715e">// 中年代
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* 2 代 */</span> { {}, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span> }     <span style="color:#75715e">// 老年代：最少检查
+</span></span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><table>
+  <thead>
+      <tr>
+          <th>代数</th>
+          <th>特点</th>
+          <th>检查频率</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0 代</td>
+          <td>新创建的对象</td>
+          <td>最频繁</td>
+      </tr>
+      <tr>
+          <td>1 代</td>
+          <td>经过一次 0 代回收仍存活</td>
+          <td>中等</td>
+      </tr>
+      <tr>
+          <td>2 代</td>
+          <td>经过多次回收仍存活</td>
+          <td>最少</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="触发条件">触发条件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> gc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看各代阈值</span>
+</span></span><span style="display:flex;"><span>print(gc<span style="color:#f92672">.</span>get_threshold())  <span style="color:#75715e"># (700, 10, 10)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 含义：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - 0 代分配 700 个容器对象后检查</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - 0 代回收 10 次后检查 1 代</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - 1 代回收 10 次后检查 2 代</span>
+</span></span></code></pre></div><p>为什么是容器对象？因为只有容器对象（列表、字典、集合等）才可能参与循环引用。简单的整数、字符串不可能形成循环引用，所以不需要跟踪。</p>
+<hr>
+<h2 id="-循环检测算法">🔍 循环检测算法</h2>
+<h3 id="可达性分析">可达性分析</h3>
+<p>GC 通过<strong>可达性分析</strong>来识别垃圾：</p>
+<pre tabindex="0"><code>1. 从根对象开始（全局变量、栈上变量等）
+2. 遍历所有可达对象，标记为存活
+3. 未被标记的对象就是垃圾
+</code></pre><p>这个过程被称为&quot;标记 - 清扫&quot;（Mark and Sweep）算法。</p>
+<h3 id="具体实现">具体实现</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> Py_ssize_t
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gc_collect_generations</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1. 找出需要收集的代
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> NUM_GENERATIONS<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; i<span style="color:#f92672">--</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (generations[i].count <span style="color:#f92672">&gt;</span> generations[i].threshold) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 回收这一代及所有更年轻的代
+</span></span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">collect_with_callback</span>(i);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="回收过程">回收过程</h3>
+<p>一次完整的 GC 回收包括以下步骤：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> Py_ssize_t
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gc_collect</span>(<span style="color:#66d9ef">int</span> generation)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1. 合并待回收代的对象到年轻代
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 2. 更新引用计数（减去内部引用）
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 3. 识别 unreachable 对象
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 4. 处理 weakref 回调
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 5. 清除 unreachable 对象
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 6. 恢复 reachable 对象的引用计数
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>这个过程比较复杂，但核心思想是：暂时减去内部引用，如果某个对象的引用计数变成 0，说明它是循环引用的一部分，应该被回收。</p>
+<hr>
+<h2 id="-实战观察垃圾回收">💡 实战：观察垃圾回收</h2>
+<h3 id="强制触发-gc">强制触发 GC</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> gc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看 GC 统计</span>
+</span></span><span style="display:flex;"><span>print(gc<span style="color:#f92672">.</span>get_stats())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 手动触发全量回收</span>
+</span></span><span style="display:flex;"><span>collected <span style="color:#f92672">=</span> gc<span style="color:#f92672">.</span>collect()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;回收了 </span><span style="color:#e6db74">{</span>collected<span style="color:#e6db74">}</span><span style="color:#e6db74"> 个对象&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置调试模式</span>
+</span></span><span style="display:flex;"><span>gc<span style="color:#f92672">.</span>set_debug(gc<span style="color:#f92672">.</span>DEBUG_STATS)
+</span></span></code></pre></div><h3 id="检测循环引用">检测循环引用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> gc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Obj</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, name):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>ref <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__repr__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Obj(</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__del__</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#e6db74">}</span><span style="color:#e6db74"> 被销毁&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建循环引用</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> Obj(<span style="color:#e6db74">&#34;A&#34;</span>)
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> Obj(<span style="color:#e6db74">&#34;B&#34;</span>)
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">.</span>ref <span style="color:#f92672">=</span> b
+</span></span><span style="display:flex;"><span>b<span style="color:#f92672">.</span>ref <span style="color:#f92672">=</span> a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除引用</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> a
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 此时对象还存在（循环引用）</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;不可达对象：</span><span style="color:#e6db74">{</span>gc<span style="color:#f92672">.</span>garbage<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 触发 GC</span>
+</span></span><span style="display:flex;"><span>gc<span style="color:#f92672">.</span>collect()  <span style="color:#75715e"># 输出：Obj(A) 被销毁，Obj(B) 被销毁</span>
+</span></span></code></pre></div><h3 id="使用-objgraph-可视化">使用 objgraph 可视化</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install objgraph
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> objgraph
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 显示最常见的类型</span>
+</span></span><span style="display:flex;"><span>objgraph<span style="color:#f92672">.</span>show_most_common_types(limit<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查找循环引用</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">.</span>append(b)
+</span></span><span style="display:flex;"><span>b<span style="color:#f92672">.</span>append(a)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>objgraph<span style="color:#f92672">.</span>show_backrefs([a], filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;backrefs.png&#39;</span>)
+</span></span></code></pre></div><p>objgraph 可以生成引用关系图，帮助你可视化内存中的对象引用。</p>
+<hr>
+<h2 id="-gc-的陷阱与最佳实践">⚠️ GC 的陷阱与最佳实践</h2>
+<h3 id="1-del-方法的问题">1. <strong>del</strong> 方法的问题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BadExample</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__del__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 危险！在 GC 过程中调用__del__可能导致问题</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><p>有 <code>__del__</code> 方法的对象，GC 不能保证调用它。因为如果两个互相引用的对象都有 <code>__del__</code> 方法，GC 无法确定先调用哪个。</p>
+<p>推荐使用上下文管理器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GoodExample</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__enter__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__exit__</span>(self, exc_type, exc_val, exc_tb):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cleanup()  <span style="color:#75715e"># 确定性的清理</span>
+</span></span></code></pre></div><h3 id="2-禁用-gc-的风险">2. 禁用 GC 的风险</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> gc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gc<span style="color:#f92672">.</span>disable()  <span style="color:#75715e"># 禁用自动 GC</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... 你的代码 ...</span>
+</span></span><span style="display:flex;"><span>gc<span style="color:#f92672">.</span>enable()   <span style="color:#75715e"># 记得重新启用</span>
+</span></span></code></pre></div><p>某些性能敏感的场景（如游戏帧渲染）会临时禁用 GC，但要小心内存膨胀。</p>
+<h3 id="3-弱引用打破循环">3. 弱引用打破循环</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> weakref
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, value):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> value
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>children <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@property</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parent</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_parent() <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>_parent <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@parent.setter</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parent</span>(self, node):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_parent <span style="color:#f92672">=</span> weakref<span style="color:#f92672">.</span>ref(node) <span style="color:#66d9ef">if</span> node <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span></code></pre></div><p>使用 weakref 可以避免循环引用。弱引用不增加引用计数，所以不会阻止对象被回收。</p>
+<hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<p>通过本讲，我们深入理解了：</p>
+<p><strong>引用计数的局限</strong>：无法处理循环引用，需要 GC 补充。</p>
+<p><strong>分代垃圾回收</strong>：三代对象的分级管理，提高回收效率。</p>
+<p><strong>可达性分析</strong>：如何识别循环引用的垃圾。</p>
+<p><strong>GC 触发时机</strong>：阈值机制与手动触发。</p>
+<p><strong>最佳实践</strong>：weakref、上下文管理器等避免循环引用的技巧。</p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong><a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> - Eric Matthes 著</p>
+<p>Python 零基础入门首选。本书分为基础语法和项目实战两部分，适合完全没有编程经验的读者。</p>
+<p><strong><a href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> - Luciano Ramalho 著</p>
+<p>Python 进阶经典之作。深入讲解 Python 的高级特性，包括数据模型、函数式编程、面向对象、元编程等。</p>
+<p><strong><a href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong> - Anthony Shaw 著</p>
+<p>本书深入讲解 CPython 内部机制，从内存管理到字节码执行，从对象模型到并发编程。配合本课程学习，效果更佳。</p>
+<p><strong>学习路线建议：</strong></p>
+<pre tabindex="0"><code>零基础 → 《从入门到实践》 → 《流畅的 Python》 → 本门课程 → 《CPython 设计与实现》
+</code></pre><hr>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="03-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80.md">上一讲：内存管理机制</a> | <a href="05-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90.md">下一讲：词法分析器 Tokenizer</a> →</p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/16-%E7%B1%BB%E5%9E%8B%E6%8F%90%E7%A4%BA/">上一篇：第 16 讲：Python 类型提示完全指南 | TypeVar, Generic, Protocol, @overload 与泛型编程</a>
+        
+        
+        <a href="http://localhost:4002/17-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%9E%8B/">下一篇：第 17 讲：Python 并发编程 | GIL 详解、线程、进程、concurrent.futures 与并发策略选择</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

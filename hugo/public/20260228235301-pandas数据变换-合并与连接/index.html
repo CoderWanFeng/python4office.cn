@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pandas数据变换：我总结了merge的5种用法，轻松整合多个数据源 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Pandas数据变换：我总结了merge的5种用法，轻松整合多个数据源</h1>
+        <div class="post-meta">
+            <span>2026-02-28 23:53</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/pandas/" class="tag">Pandas</a>
+            
+            <a href="/tags/merge/" class="tag">merge</a>
+            
+            <a href="/tags/join/" class="tag">join</a>
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%90%88%E5%B9%B6/" class="tag">数据合并</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天学习<strong>数据合并与连接</strong>，这是整合多个数据源的核心技能。</p>
+<p>无论是关联订单和客户信息，还是拼接多个月份的数据，掌握这些技巧都能轻松搞定。</p>
+<hr>
+<h2 id="准备示例数据">准备示例数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 员工表</span>
+</span></span><span style="display:flex;"><span>employees <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;员工ID&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;姓名&#39;</span>: [<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;赵六&#39;</span>, <span style="color:#e6db74">&#39;钱七&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;部门ID&#39;</span>: [<span style="color:#ae81ff">101</span>, <span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">101</span>, <span style="color:#ae81ff">103</span>, <span style="color:#ae81ff">102</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 部门表</span>
+</span></span><span style="display:flex;"><span>departments <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;部门ID&#39;</span>: [<span style="color:#ae81ff">101</span>, <span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">103</span>, <span style="color:#ae81ff">104</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;部门名&#39;</span>: [<span style="color:#e6db74">&#39;技术部&#39;</span>, <span style="color:#e6db74">&#39;销售部&#39;</span>, <span style="color:#e6db74">&#39;人事部&#39;</span>, <span style="color:#e6db74">&#39;财务部&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;经理&#39;</span>: [<span style="color:#e6db74">&#39;张经理&#39;</span>, <span style="color:#e6db74">&#39;李经理&#39;</span>, <span style="color:#e6db74">&#39;王经理&#39;</span>, <span style="color:#e6db74">&#39;赵经理&#39;</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 工资表（部分员工）</span>
+</span></span><span style="display:flex;"><span>salaries <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;员工ID&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;基本工资&#39;</span>: [<span style="color:#ae81ff">15000</span>, <span style="color:#ae81ff">12000</span>, <span style="color:#ae81ff">18000</span>, <span style="color:#ae81ff">10000</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;奖金&#39;</span>: [<span style="color:#ae81ff">3000</span>, <span style="color:#ae81ff">2000</span>, <span style="color:#ae81ff">4000</span>, <span style="color:#ae81ff">1500</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><hr>
+<h2 id="merge数据库风格的连接">merge：数据库风格的连接</h2>
+<h3 id="内连接inner-join">内连接（Inner Join）</h3>
+<p>只保留两个表都有的键</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 员工+部门（内连接）</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(employees, departments, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;部门ID&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inner&#39;</span>)
+</span></span><span style="display:flex;"><span>print(result)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 只有部门ID在两张表中都存在的记录</span>
+</span></span></code></pre></div><h3 id="左连接left-join">左连接（Left Join）</h3>
+<p>保留左表所有记录，右表没有匹配的填NaN</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 员工+工资（左连接）</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(employees, salaries, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;员工ID&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>print(result)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 所有员工都有，没工资信息的显示NaN</span>
+</span></span></code></pre></div><h3 id="右连接right-join">右连接（Right Join）</h3>
+<p>保留右表所有记录</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(employees, salaries, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;员工ID&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;right&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 以工资表为主，员工表没有的显示NaN</span>
+</span></span></code></pre></div><h3 id="外连接outer-join">外连接（Outer Join）</h3>
+<p>保留两边所有记录</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(employees, salaries, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;员工ID&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;outer&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 所有员工和所有工资记录都保留</span>
+</span></span></code></pre></div><h3 id="连接方式对比">连接方式对比</h3>
+<table>
+  <thead>
+      <tr>
+          <th>how参数</th>
+          <th>结果说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>inner</td>
+          <td>交集，只保留匹配的记录</td>
+      </tr>
+      <tr>
+          <td>left</td>
+          <td>以左表为主，右表补充</td>
+      </tr>
+      <tr>
+          <td>right</td>
+          <td>以右表为主，左表补充</td>
+      </tr>
+      <tr>
+          <td>outer</td>
+          <td>并集，保留所有记录</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="多键连接">多键连接</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 当连接键列名不同时</span>
+</span></span><span style="display:flex;"><span>left_df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;A&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;B&#39;</span>: [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]})
+</span></span><span style="display:flex;"><span>right_df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;C&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;D&#39;</span>: [<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>]})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(left_df, right_df, left_on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;A&#39;</span>, right_on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;C&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 多列连接</span>
+</span></span><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;客户ID&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;日期&#39;</span>: [<span style="color:#e6db74">&#39;2024-01&#39;</span>, <span style="color:#e6db74">&#39;2024-02&#39;</span>, <span style="color:#e6db74">&#39;2024-01&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;金额&#39;</span>: [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">150</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>customers <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;客户ID&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;日期&#39;</span>: [<span style="color:#e6db74">&#39;2024-01&#39;</span>, <span style="color:#e6db74">&#39;2024-01&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;等级&#39;</span>: [<span style="color:#e6db74">&#39;VIP&#39;</span>, <span style="color:#e6db74">&#39;普通&#39;</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(orders, customers, on<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;客户ID&#39;</span>, <span style="color:#e6db74">&#39;日期&#39;</span>], how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="concat轴向连接">concat：轴向连接</h2>
+<h3 id="纵向拼接增加行">纵向拼接（增加行）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 多个月份的数据拼接</span>
+</span></span><span style="display:flex;"><span>df_jan <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;产品&#39;</span>: [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>], <span style="color:#e6db74">&#39;销量&#39;</span>: [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>]})
+</span></span><span style="display:flex;"><span>df_feb <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;产品&#39;</span>: [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>], <span style="color:#e6db74">&#39;销量&#39;</span>: [<span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">220</span>]})
+</span></span><span style="display:flex;"><span>df_mar <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;产品&#39;</span>: [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>], <span style="color:#e6db74">&#39;销量&#39;</span>: [<span style="color:#ae81ff">130</span>, <span style="color:#ae81ff">210</span>]})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 纵向拼接</span>
+</span></span><span style="display:flex;"><span>quarter_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df_jan, df_feb, df_mar], ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 保留来源信息</span>
+</span></span><span style="display:flex;"><span>quarter_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df_jan, df_feb, df_mar], 
+</span></span><span style="display:flex;"><span>                         keys<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;1月&#39;</span>, <span style="color:#e6db74">&#39;2月&#39;</span>, <span style="color:#e6db74">&#39;3月&#39;</span>])
+</span></span></code></pre></div><h3 id="横向拼接增加列">横向拼接（增加列）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df_info <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;ID&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;姓名&#39;</span>: [<span style="color:#e6db74">&#39;张三&#39;</span>, <span style="color:#e6db74">&#39;李四&#39;</span>]})
+</span></span><span style="display:flex;"><span>df_score <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;数学&#39;</span>: [<span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">85</span>], <span style="color:#e6db74">&#39;英语&#39;</span>: [<span style="color:#ae81ff">88</span>, <span style="color:#ae81ff">92</span>]})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 横向拼接</span>
+</span></span><span style="display:flex;"><span>df_full <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df_info, df_score], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><hr>
+<h2 id="join基于索引的连接">join：基于索引的连接</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 设置索引后使用join</span>
+</span></span><span style="display:flex;"><span>employees_idx <span style="color:#f92672">=</span> employees<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;员工ID&#39;</span>)
+</span></span><span style="display:flex;"><span>salaries_idx <span style="color:#f92672">=</span> salaries<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;员工ID&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 左连接</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> employees_idx<span style="color:#f92672">.</span>join(salaries_idx, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 连接多个表</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> employees_idx<span style="color:#f92672">.</span>join([salaries_idx, other_table_idx])
+</span></span></code></pre></div><hr>
+<h2 id="实战完整的数据整合流程">实战：完整的数据整合流程</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景：整合分散在多个表的销售数据</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 读取各表</span>
+</span></span><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;orders.csv&#39;</span>)      <span style="color:#75715e"># 订单表</span>
+</span></span><span style="display:flex;"><span>products <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;products.csv&#39;</span>)  <span style="color:#75715e"># 产品表</span>
+</span></span><span style="display:flex;"><span>customers <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;customers.csv&#39;</span>) <span style="color:#75715e"># 客户表</span>
+</span></span><span style="display:flex;"><span>regions <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;regions.csv&#39;</span>)     <span style="color:#75715e"># 地区表</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 逐步合并</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 订单 + 产品信息</span>
+</span></span><span style="display:flex;"><span>sales <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(orders, products, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;产品ID&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># + 客户信息</span>
+</span></span><span style="display:flex;"><span>sales <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(sales, customers, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;客户ID&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># + 地区信息</span>
+</span></span><span style="display:flex;"><span>sales <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(sales, regions, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;地区ID&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 计算字段</span>
+</span></span><span style="display:flex;"><span>sales[<span style="color:#e6db74">&#39;总金额&#39;</span>] <span style="color:#f92672">=</span> sales[<span style="color:#e6db74">&#39;单价&#39;</span>] <span style="color:#f92672">*</span> sales[<span style="color:#e6db74">&#39;数量&#39;</span>]
+</span></span><span style="display:flex;"><span>sales[<span style="color:#e6db74">&#39;利润&#39;</span>] <span style="color:#f92672">=</span> sales[<span style="color:#e6db74">&#39;总金额&#39;</span>] <span style="color:#f92672">-</span> sales[<span style="color:#e6db74">&#39;成本&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 保存结果</span>
+</span></span><span style="display:flex;"><span>sales<span style="color:#f92672">.</span>to_csv(<span style="color:#e6db74">&#39;sales_report.csv&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;数据整合完成！&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;总记录数: </span><span style="color:#e6db74">{</span>len(sales)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;总销售额: </span><span style="color:#e6db74">{</span>sales[<span style="color:#e6db74">&#39;总金额&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="常见问题与解决">常见问题与解决</h2>
+<h3 id="问题1重复列名">问题1：重复列名</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 自动添加后缀</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(df1, df2, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>, suffixes<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;_左&#39;</span>, <span style="color:#e6db74">&#39;_右&#39;</span>))
+</span></span></code></pre></div><h3 id="问题2数据类型不匹配">问题2：数据类型不匹配</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 统一类型后再合并</span>
+</span></span><span style="display:flex;"><span>df1[<span style="color:#e6db74">&#39;ID&#39;</span>] <span style="color:#f92672">=</span> df1[<span style="color:#e6db74">&#39;ID&#39;</span>]<span style="color:#f92672">.</span>astype(str)
+</span></span><span style="display:flex;"><span>df2[<span style="color:#e6db74">&#39;ID&#39;</span>] <span style="color:#f92672">=</span> df2[<span style="color:#e6db74">&#39;ID&#39;</span>]<span style="color:#f92672">.</span>astype(str)
+</span></span></code></pre></div><h3 id="问题3内存不足">问题3：内存不足</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 分块处理</span>
+</span></span><span style="display:flex;"><span>chunks <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> chunk <span style="color:#f92672">in</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;large_file.csv&#39;</span>, chunksize<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>):
+</span></span><span style="display:flex;"><span>    merged <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(chunk, lookup_table, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>)
+</span></span><span style="display:flex;"><span>    chunks<span style="color:#f92672">.</span>append(merged)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat(chunks, ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><hr>
+<h3 id="性能对比不同合并方式">性能对比：不同合并方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>left <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;key&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">100000</span>), <span style="color:#e6db74">&#39;value_l&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">100000</span>)})
+</span></span><span style="display:flex;"><span>right <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;key&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">50000</span>), <span style="color:#e6db74">&#39;value_r&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">50000</span>)})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># merge</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit pd<span style="color:#f92672">.</span>merge(left, right, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inner&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># join（需设置索引）</span>
+</span></span><span style="display:flex;"><span>left_idx <span style="color:#f92672">=</span> left<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;key&#39;</span>)
+</span></span><span style="display:flex;"><span>right_idx <span style="color:#f92672">=</span> right<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;key&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit left_idx<span style="color:#f92672">.</span>join(right_idx, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inner&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 典型结果：merge更灵活，join稍快</span>
+</span></span></code></pre></div><h2 id="进阶用法">进阶用法</h2>
+<h3 id="多条件合并">多条件合并</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 按多列合并</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(
+</span></span><span style="display:flex;"><span>    df_orders, df_customers,
+</span></span><span style="display:flex;"><span>    left_on<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;customer_id&#39;</span>, <span style="color:#e6db74">&#39;region&#39;</span>],
+</span></span><span style="display:flex;"><span>    right_on<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;id&#39;</span>, <span style="color:#e6db74">&#39;area&#39;</span>],
+</span></span><span style="display:flex;"><span>    how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>,
+</span></span><span style="display:flex;"><span>    suffixes<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;_order&#39;</span>, <span style="color:#e6db74">&#39;_customer&#39;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h3 id="merge的indicator参数">merge的indicator参数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 查看匹配情况</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(df1, df2, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;id&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;outer&#39;</span>, indicator<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>print(result[<span style="color:#e6db74">&#39;_merge&#39;</span>]<span style="color:#f92672">.</span>value_counts())
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># both          800  ← 两表都有</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># left_only     150  ← 只在左表</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># right_only     50  ← 只在右表</span>
+</span></span></code></pre></div><h3 id="合并多个dataframe">合并多个DataFrame</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> reduce
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 一次性合并多个表</span>
+</span></span><span style="display:flex;"><span>dfs <span style="color:#f92672">=</span> [df_orders, df_customers, df_products, df_payments]
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> reduce(<span style="color:#66d9ef">lambda</span> left, right: pd<span style="color:#f92672">.</span>merge(left, right, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;order_id&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>), dfs)
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1合并后行数暴增">❌ 坑1：合并后行数暴增</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 多对多合并导致笛卡尔积</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(df1, df2, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>)  <span style="color:#75715e"># 如果key有重复，行数会爆炸</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 检查合并前后行数</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;合并前: </span><span style="color:#e6db74">{</span>len(df1)<span style="color:#e6db74">}</span><span style="color:#e6db74"> + </span><span style="color:#e6db74">{</span>len(df2)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;合并后: </span><span style="color:#e6db74">{</span>len(result)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果行数异常，检查key的唯一性</span>
+</span></span><span style="display:flex;"><span>print(df1[<span style="color:#e6db74">&#39;key&#39;</span>]<span style="color:#f92672">.</span>duplicated()<span style="color:#f92672">.</span>sum(), <span style="color:#e6db74">&#34;个重复key在df1&#34;</span>)
+</span></span></code></pre></div><h3 id="-坑2列名冲突">❌ 坑2：列名冲突</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 两表有同名列</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(df1, df2, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;id&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 报错！两表都有&#39;value&#39;列</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决方案：指定suffixes</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(df1, df2, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;id&#39;</span>, suffixes<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;_left&#39;</span>, <span style="color:#e6db74">&#39;_right&#39;</span>))
+</span></span></code></pre></div><h2 id="实战案例整合多源电商数据">实战案例：整合多源电商数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>n_orders <span style="color:#f92672">=</span> <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 订单表</span>
+</span></span><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;order_id&#39;</span>: range(<span style="color:#ae81ff">10001</span>, <span style="color:#ae81ff">10001</span> <span style="color:#f92672">+</span> n_orders),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user_id&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">2001</span>, <span style="color:#ae81ff">3000</span>, n_orders),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;product_id&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">3001</span>, <span style="color:#ae81ff">3050</span>, n_orders),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;quantity&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, n_orders),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;order_date&#39;</span>: pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2025-01-01&#39;</span>, periods<span style="color:#f92672">=</span>n_orders, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2H&#39;</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用户表</span>
+</span></span><span style="display:flex;"><span>users <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;user_id&#39;</span>: range(<span style="color:#ae81ff">2001</span>, <span style="color:#ae81ff">3000</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;name&#39;</span>: [<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;用户</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">999</span>)],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;city&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;北京&#39;</span>, <span style="color:#e6db74">&#39;上海&#39;</span>, <span style="color:#e6db74">&#39;广州&#39;</span>, <span style="color:#e6db74">&#39;深圳&#39;</span>, <span style="color:#e6db74">&#39;成都&#39;</span>], <span style="color:#ae81ff">999</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;vip_level&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], <span style="color:#ae81ff">999</span>, p<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.15</span>, <span style="color:#ae81ff">0.05</span>])
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 商品表</span>
+</span></span><span style="display:flex;"><span>products <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;product_id&#39;</span>: range(<span style="color:#ae81ff">3001</span>, <span style="color:#ae81ff">3050</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;name&#39;</span>: [<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;商品</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">:</span><span style="color:#e6db74">03d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">49</span>)],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;category&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#e6db74">&#39;电子产品&#39;</span>, <span style="color:#e6db74">&#39;服装&#39;</span>, <span style="color:#e6db74">&#39;食品&#39;</span>, <span style="color:#e6db74">&#39;家居&#39;</span>], <span style="color:#ae81ff">49</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;price&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">49</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 合并三张表</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> (orders
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>merge(users, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;user_id&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>merge(products, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;product_id&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>, suffixes<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;_order&#39;</span>, <span style="color:#e6db74">&#39;_product&#39;</span>))
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 计算订单金额</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;amount&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;quantity&#39;</span>] <span style="color:#f92672">*</span> df[<span style="color:#e6db74">&#39;price&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 各城市销售分析</span>
+</span></span><span style="display:flex;"><span>city_sales <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;city&#39;</span>)<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>    total_amount<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;sum&#39;</span>),
+</span></span><span style="display:flex;"><span>    order_count<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;order_id&#39;</span>, <span style="color:#e6db74">&#39;count&#39;</span>),
+</span></span><span style="display:flex;"><span>    avg_amount<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;amount&#39;</span>, <span style="color:#e6db74">&#39;mean&#39;</span>),
+</span></span><span style="display:flex;"><span>    vip_ratio<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;vip_level&#39;</span>, <span style="color:#66d9ef">lambda</span> x: (x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>mean())
+</span></span><span style="display:flex;"><span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;各城市销售分析:&#34;</span>)
+</span></span><span style="display:flex;"><span>print(city_sales)
+</span></span></code></pre></div><h3 id="合并方式对比详解">合并方式对比详解</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>left <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;key&#39;</span>: [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>], <span style="color:#e6db74">&#39;value_l&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]})
+</span></span><span style="display:flex;"><span>right <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;key&#39;</span>: [<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>, <span style="color:#e6db74">&#39;E&#39;</span>], <span style="color:#e6db74">&#39;value_r&#39;</span>: [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>]})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># inner：只保留两表都有的key</span>
+</span></span><span style="display:flex;"><span>pd<span style="color:#f92672">.</span>merge(left, right, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inner&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># key  value_l  value_r</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  B       2        5</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  C       3        6</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  D       4        7</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># left：保留左表所有key</span>
+</span></span><span style="display:flex;"><span>pd<span style="color:#f92672">.</span>merge(left, right, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># key  value_l  value_r</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  A       1      NaN</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  B       2        5</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  C       3        6</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  D       4        7</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># right：保留右表所有key</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># outer：保留所有key</span>
+</span></span></code></pre></div><h3 id="合并性能优化">合并性能优化</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 大表合并前先设置索引，速度更快</span>
+</span></span><span style="display:flex;"><span>df1 <span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;key&#39;</span>)
+</span></span><span style="display:flex;"><span>df2 <span style="color:#f92672">=</span> df2<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;key&#39;</span>)
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>join(df2, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或者先筛选再合并，减少数据量</span>
+</span></span><span style="display:flex;"><span>small <span style="color:#f92672">=</span> df2[df2[<span style="color:#e6db74">&#39;year&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">2025</span>]  <span style="color:#75715e"># 先筛选</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>merge(small, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>)  <span style="color:#75715e"># 再合并</span>
+</span></span></code></pre></div><h3 id="sql-join-vs-pandas-merge对照表">SQL JOIN vs Pandas merge对照表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># SQL:  SELECT * FROM A INNER JOIN B ON A.id = B.id</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pandas: pd.merge(A, B, on=&#39;id&#39;, how=&#39;inner&#39;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SQL:  SELECT * FROM A LEFT JOIN B ON A.id = B.id</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pandas: pd.merge(A, B, on=&#39;id&#39;, how=&#39;left&#39;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SQL:  SELECT * FROM A FULL OUTER JOIN B ON A.id = B.id</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pandas: pd.merge(A, B, on=&#39;id&#39;, how=&#39;outer&#39;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SQL:  SELECT * FROM A CROSS JOIN B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pandas: A.merge(B, how=&#39;cross&#39;)  # Pandas 1.2+</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SQL:  SELECT * FROM A UNION ALL SELECT * FROM B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pandas: pd.concat([A, B], ignore_index=True)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SQL:  SELECT * FROM A UNION SELECT * FROM B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pandas: pd.concat([A, B]).drop_duplicates()</span>
+</span></span></code></pre></div><h3 id="合并性能对比">合并性能对比</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 准备数据</span>
+</span></span><span style="display:flex;"><span>A <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;key&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100000</span>, <span style="color:#ae81ff">1000000</span>), <span style="color:#e6db74">&#39;val_a&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">1000000</span>)})
+</span></span><span style="display:flex;"><span>B <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;key&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100000</span>, <span style="color:#ae81ff">500000</span>), <span style="color:#e6db74">&#39;val_b&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">500000</span>)})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试不同合并方式</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 直接merge</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(A, B, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inner&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;merge: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒, </span><span style="color:#e6db74">{</span>len(result)<span style="color:#e6db74">}</span><span style="color:#e6db74">行&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 先设索引再join</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> A<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;key&#39;</span>)<span style="color:#f92672">.</span>join(B<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;key&#39;</span>), how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inner&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;join: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒, </span><span style="color:#e6db74">{</span>len(result)<span style="color:#e6db74">}</span><span style="color:#e6db74">行&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 先筛选再merge</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>small_b <span style="color:#f92672">=</span> B[B[<span style="color:#e6db74">&#39;key&#39;</span>]<span style="color:#f92672">.</span>isin(A[<span style="color:#e6db74">&#39;key&#39;</span>]<span style="color:#f92672">.</span>unique())]
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(A, small_b, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;key&#39;</span>, how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inner&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;筛选+merge: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>start<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒, </span><span style="color:#e6db74">{</span>len(result)<span style="color:#e6db74">}</span><span style="color:#e6db74">行&#34;</span>)
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一课我们将学习<strong>分组聚合groupby</strong>，这是数据分析最强大的功能之一。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235401-Pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88groupby/">继续阅读：Pandas数据变换-分组聚合groupby</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235201-Pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E8%A1%8C%E5%88%97%E6%93%8D%E4%BD%9C/">Pandas数据变换-行列操作</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260228235401-Pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88groupby/">Pandas数据变换-分组聚合groupby</a></p>
+<hr>
+<p><em>PS：数据合并是日常工作中最常见的操作。理解不同连接方式的差异，选择合适的方法。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260228235201-pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E8%A1%8C%E5%88%97%E6%93%8D%E4%BD%9C/">上一篇：Pandas数据变换：我用这8个操作，把混乱的数据整理成标准表格</a>
+        
+        
+        <a href="http://localhost:4002/20260301000101-pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88groupby/">下一篇：Pandas分组聚合：我用groupby把100万行数据秒变统计报表</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

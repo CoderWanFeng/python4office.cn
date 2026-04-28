@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>为什么AI按&#34;Token&#34;收费而不是按字数？ - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="新闻总说Token计费、32K上下文窗口，到底是个啥？程序员晚枫用大白话帮你3分钟搞懂AI的计费逻辑，看完再也不怕被坑！">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>为什么AI按&#34;Token&#34;收费而不是按字数？</h1>
+        <div class="post-meta">
+            <span>2026-04-16 16:56</span>
+            
+            <span> · </span>
+            
+            <span class="category">AI</span>
+            
+            <span class="category">基础概念</span>
+            
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python/" class="tag">Python</a>
+            
+            <a href="/tags/ai%E7%BC%96%E7%A8%8B/" class="tag">AI编程</a>
+            
+            <a href="/tags/token/" class="tag">Token</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p><strong>作者：程序员晚枫</strong></p>
+</blockquote>
+<p>你问AI一个100字的问题，被扣了5毛钱。你问一个1000字的问题，被扣了3块。</p>
+<p><strong>凭什么？我明明只问了100个字啊！</strong></p>
+<p>因为AI不按&quot;字数&quot;收费，它按&quot;Token&quot;收费。Token是AI真正的&quot;工作量单位&quot;——而且中文比英文&quot;贵&quot;。</p>
+<p>搞懂Token，你才知道自己每次用AI到底花了多少钱、怎么花得更省。</p>
+<hr>
+<h2 id="-一句话先说清楚">🎯 一句话先说清楚</h2>
+<p>::: tip 核心结论
+<strong>Token = AI理解语言的最小单位，1个中文字≈1-2个Token，1个英文单词≈1个Token</strong></p>
+<p>AI按Token收费，不是按字数。同样1000字，中文比英文花更多Token，所以中文更&quot;贵&quot;。
+:::</p>
+<hr>
+<h2 id="-token到底是什么直观感受一下">💡 Token到底是什么？直观感受一下</h2>
+<p>AI不会像人一样&quot;一个字一个字&quot;地读，它把文字拆成更小的&quot;块&quot;来理解，每一块就是一个Token。</p>
+<table>
+  <thead>
+      <tr>
+          <th>你写的</th>
+          <th>AI怎么拆</th>
+          <th>Token数</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>你好</td>
+          <td>你、好</td>
+          <td>2个</td>
+      </tr>
+      <tr>
+          <td>程序员晚枫</td>
+          <td>程、序、员、晚、枫</td>
+          <td>5个</td>
+      </tr>
+      <tr>
+          <td>Hello</td>
+          <td>Hello</td>
+          <td>1个</td>
+      </tr>
+      <tr>
+          <td>OpenAI</td>
+          <td>Open、AI</td>
+          <td>2个</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>关键发现：中文1个字通常就是1个Token，英文1个单词才是1个Token。</strong></p>
+<p>这意味着同样表达一个意思，中文的Token数比英文多——<strong>中文用AI天然更贵。</strong></p>
+<hr>
+<h2 id="-为什么按token收费不按字数">💰 为什么按Token收费，不按字数？</h2>
+<p>你可能会想：按字数算多简单，为什么要搞个Token？</p>
+<p>因为<strong>Token才是AI真正的&quot;工作量&quot;</strong>。</p>
+<table>
+  <thead>
+      <tr>
+          <th>类比</th>
+          <th>为什么这么收费</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>出租车按公里算，不按时间</td>
+          <td>堵车时按时间你亏死，按公里才公平</td>
+      </tr>
+      <tr>
+          <td>奶茶按配料算，不按杯子</td>
+          <td>大杯小杯配料不同，按杯不公正</td>
+      </tr>
+      <tr>
+          <td><strong>AI按Token算，不按字数</strong></td>
+          <td><strong>中英文处理难度不同，按字数不公平</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>你问的问题越复杂、字数越多 → Token越多 → AI算得越久 → 收费越多。</p>
+<p>这是<strong>按实际工作量收费</strong>，非常合理。</p>
+<hr>
+<h2 id="-算一笔真实的账">💵 算一笔真实的账</h2>
+<p>你问AI：&ldquo;帮我写一篇1000字的Python入门教程&rdquo;</p>
+<p>::: info 费用计算（以DeepSeek-V3为例）
+<strong>你的问题（1000字）</strong>：</p>
+<ul>
+<li>1000个中文字 ≈ 1300个Token</li>
+<li>输入费用：1300 ÷ 1000000 × ¥2 = <strong>0.003元</strong></li>
+</ul>
+<p><strong>AI的回答（2000字）</strong>：</p>
+<ul>
+<li>2000个中文字 ≈ 2600个Token</li>
+<li>输出费用：2600 ÷ 1000000 × ¥8 = <strong>0.02元</strong></li>
+</ul>
+<p><strong>总费用：0.023元</strong>
+:::</p>
+<p>::: danger 同样问题用GPT-4o</p>
+<ul>
+<li>输入费用：1300 ÷ 1000000 × ¥18 = <strong>0.023元</strong></li>
+<li>输出费用：2600 ÷ 1000000 × ¥72 = <strong>0.187元</strong></li>
+<li><strong>总费用：0.21元</strong>——贵了10倍！
+:::</li>
+</ul>
+<p><strong>结论：同样一次对话，DeepSeek比GPT-4o便宜10倍。中文场景用国产模型是真省钱。</strong></p>
+<hr>
+<h2 id="-新闻里那些token术语人话翻译">🔥 新闻里那些Token术语，人话翻译</h2>
+<h3 id="token计费">&ldquo;Token计费&rdquo;</h3>
+<p>= AI按实际处理的文字量收费，用多少付多少</p>
+<h3 id="上下文窗口-32k-token">&ldquo;上下文窗口 32K Token&rdquo;</h3>
+<p>= AI一次对话最多能记住的内容量</p>
+<table>
+  <thead>
+      <tr>
+          <th>上下文窗口</th>
+          <th>大约等于</th>
+          <th>你能理解成</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>4K</td>
+          <td>3000字</td>
+          <td>一篇公众号文章</td>
+      </tr>
+      <tr>
+          <td>32K</td>
+          <td>2.4万字</td>
+          <td>一份行业报告</td>
+      </tr>
+      <tr>
+          <td>128K</td>
+          <td>9.6万字</td>
+          <td>一本短书</td>
+      </tr>
+      <tr>
+          <td>1M</td>
+          <td>75万字</td>
+          <td>半本《三体》</td>
+      </tr>
+      <tr>
+          <td>10M</td>
+          <td>750万字</td>
+          <td>《三体》全套</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>上下文窗口 = AI的&quot;记性&quot;。窗口越大，AI一次能记住的东西越多。</strong></p>
+<h3 id="1m-token上下文">&ldquo;1M Token上下文&rdquo;</h3>
+<p>= AI一次能处理100万Token（约75万字）。Llama 4已经支持10M上下文</p>
+<hr>
+<h2 id="-token最坑的三个误区">⚠️ Token最坑的三个误区</h2>
+<h3 id="-1000字--1000个token">❌ &ldquo;1000字 = 1000个Token&rdquo;</h3>
+<p><strong>错！</strong> 1000个中文字 ≈ 1300个Token，中英混合更多</p>
+<h3 id="-字数一样费用就一样">❌ &ldquo;字数一样，费用就一样&rdquo;</h3>
+<p><strong>错！</strong> 英文比中文&quot;便宜&quot;。因为1个英文单词≈1个Token，1个中文字≈1-2个Token</p>
+<h3 id="-包月一定比按量计费划算">❌ &ldquo;包月一定比按量计费划算&rdquo;</h3>
+<p><strong>不一定！</strong> 偶尔用，按Token更省钱。每天大量用才考虑包月</p>
+<hr>
+<h2 id="-2025-2026年token价格对比">💰 2025-2026年Token价格对比</h2>
+<h3 id="国产模型便宜到离谱">国产模型：便宜到离谱</h3>
+<table>
+  <thead>
+      <tr>
+          <th>模型</th>
+          <th>输入（/百万Token）</th>
+          <th>输出（/百万Token）</th>
+          <th>1万字约花多少</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>DeepSeek-V3</td>
+          <td>¥2</td>
+          <td>¥8</td>
+          <td>约0.1元</td>
+      </tr>
+      <tr>
+          <td>Qwen-Plus</td>
+          <td>¥2</td>
+          <td>¥6</td>
+          <td>约0.1元</td>
+      </tr>
+      <tr>
+          <td>Qwen-Turbo</td>
+          <td>¥0.3</td>
+          <td>¥0.6</td>
+          <td>约0.01元</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="海外模型贵但强">海外模型：贵但强</h3>
+<table>
+  <thead>
+      <tr>
+          <th>模型</th>
+          <th>输入（/百万Token）</th>
+          <th>输出（/百万Token）</th>
+          <th>1万字约花多少</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GPT-4o</td>
+          <td>¥18</td>
+          <td>¥72</td>
+          <td>约1元</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>¥1</td>
+          <td>¥4.3</td>
+          <td>约0.06元</td>
+      </tr>
+      <tr>
+          <td>Claude 3.5 Sonnet</td>
+          <td>¥22</td>
+          <td>¥108</td>
+          <td>约1.5元</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>💡 价格为2025-2026年参考价，各平台经常调整，以官网为准</p>
+</blockquote>
+<hr>
+<h2 id="-省token的4个实战技巧">🎯 省Token的4个实战技巧</h2>
+<h3 id="技巧1精简提问别堆废话">技巧1：精简提问，别堆废话</h3>
+<pre tabindex="0"><code>❌ 浪费Token的问法：
+&#34;你好，我是一个Python初学者，最近在学Python编程，想请你帮我写一个爬虫程序，不知道能不能帮帮我？&#34;
+
+✅ 省Token的问法：
+&#34;用Python写一个爬取豆瓣Top250电影的脚本&#34;
+</code></pre><p>第二种省了50%以上的Token，效果还更好（AI不被废话干扰）。</p>
+<h3 id="技巧2国产做初稿gpt做精修">技巧2：国产做初稿，GPT做精修</h3>
+<pre tabindex="0"><code>第一步：用 DeepSeek/Qwen 生成初稿（便宜10倍）
+第二步：用 GPT-4o 润色优化（贵但精）
+总成本：比全程用GPT省70%
+</code></pre><p>这是很多资深开发者的真实工作流。</p>
+<h3 id="技巧3长文档分段处理">技巧3：长文档分段处理</h3>
+<pre tabindex="0"><code>❌ 一次丢10万字 → 超出上下文窗口，报错+浪费Token
+✅ 分段处理：每次5000字 → 稳定运行+省Token
+</code></pre><h3 id="技巧4用system-prompt避免重复发送">技巧4：用System Prompt避免重复发送</h3>
+<p>把角色设定、格式要求放在System Prompt里——设一次，每次对话自动带上，不用每次重复发送。</p>
+<hr>
+<h2 id="-2025-2026年token计费三大趋势">📈 2025-2026年Token计费三大趋势</h2>
+<ol>
+<li>
+<p><strong>Token价格持续走低，&ldquo;Token自由&quot;正在到来</strong>：DeepSeek已经把价格打到OpenAI的1/10，国产模型在&quot;卷价格&rdquo;。个人开发者也能大量使用</p>
+</li>
+<li>
+<p><strong>按效果计费开始出现</strong>：部分平台尝试&quot;只有AI给出满意答案才收费&quot;的模式，不再是发一次请求就扣一次钱</p>
+</li>
+<li>
+<p><strong>统一API格式让切换模型零成本</strong>：OpenAI兼容格式成为事实标准，换模型不用改代码，只换Key和接口地址就行</p>
+</li>
+</ol>
+<hr>
+<h2 id="-互动时间">💬 互动时间</h2>
+<p>看完这篇，你现在能算明白：</p>
+<ul>
+<li>✅ 问AI一个500字的问题要花多少钱？——DeepSeek约0.01元，GPT-4o约0.1元</li>
+<li>✅ 中文为什么比英文&quot;贵&quot;？——1个中文字≈1-2个Token，1个英文单词≈1个Token</li>
+<li>✅ 怎么省Token？——精简提问+国产做初稿+分段处理+System Prompt</li>
+</ul>
+<p><strong>评论区聊聊：你平时用AI一个月花多少钱？有没有觉得被&quot;坑&quot;过？</strong></p>
+<hr>
+<h2 id="-课程导航">📚 课程导航</h2>
+<p>👆 <strong>上一讲</strong>：<a href="./02-api-key">什么是API Key？</a> - 如何安全地&quot;解锁&quot;AI服务</p>
+<p>👇 <strong>下一讲</strong>：<a href="./04-gpt">什么是GPT？</a> - AI&quot;大脑&quot;的进化史</p>
+<hr>
+<blockquote>
+<p>📢 <strong>程序员晚枫</strong>专注分享：程序员副业、AI工具、Python办公自动化</p>
+</blockquote>
+<p>关注公众号【程序员晚枫】，回复【AI词汇】，获取全套课程原文</p>
+<hr>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA">好险！差点被裁，多亏我学了AI</a></li>
+</ul>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/02-api-key/">上一篇：想用AI写代码？先申请个&#34;API Key&#34;身份证</a>
+        
+        
+        <a href="http://localhost:4002/04-gpt/">下一篇：GPT是什么意思？揭秘ChatGPT背后的&#34;大脑&#34;</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

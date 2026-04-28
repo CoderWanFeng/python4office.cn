@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>震惊！0.1&#43;0.2≠0.3，Python也有Bug吗？ - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>震惊！0.1&#43;0.2≠0.3，Python也有Bug吗？</h1>
+        <div class="post-meta">
+            <span>2023-12-27 14:16</span>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <p>朋友们，问一个简单的问题：0.1+0.2=？</p>
+<p>你肯定会说：中国人不骗中国人，0.1+0.2=0.3。</p>
+<p>但是在Python里，0.1+0.2≠0.3 ，我们今天一起来看看这个，并且看一下解决办法。</p>
+<h2 id="离奇的错误">离奇的错误</h2>
+<p>在python里编写下列代码，这个代码的含义我就不解释了，我相信即使不懂编程你也能看懂。</p>
+<p>编写完成后，运行这个代码，你得到的结果是多少？</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>b<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>
+</span></span><span style="display:flex;"><span>c<span style="color:#f92672">=</span>a<span style="color:#f92672">+</span>b
+</span></span><span style="display:flex;"><span>print(c) <span style="color:#75715e"># 在屏幕上，输出这个结果</span>
+</span></span></code></pre></div><p>我运行这个程序的输出结果，如下图所示，👇</p>
+<p><img src="https://article-1300615378.cos.ap-nanjing.myqcloud.com/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%AD%BE%E7%BA%A6/0.1%2B0.2/20231227-4182cd80.png" alt=""></p>
+<p>为什么会出现这个结果呢？</p>
+<blockquote>
+<p>这和浮点数在计算机里的表示方法有关，不只是Python有这个问题，其实其它编程语言也这样。
+感兴趣的朋友可以点赞本文，点赞满20个，我就专门写一篇文章来解释这一现象的原因。</p>
+</blockquote>
+<p>今天我们先来看一下，出现这种问题，应该如何解决。</p>
+<h2 id="有点复杂的解决方法">有点复杂的解决方法。</h2>
+<p>这种小数点计算的误差，平时我们可能也察觉不出来，但是这种微小的误差，对于金融类对数字敏感的程序，影响就很大了。</p>
+<p>比如我之前写了一个开源项目<code>pofinance</code>，可以通过一行代码计算量化交易中的做T盈亏，如下图所示，👇</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># pip install pofinance</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pofinance
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>good <span style="color:#f92672">=</span> pofinance<span style="color:#f92672">.</span>t0(<span style="color:#ae81ff">11.2</span>, <span style="color:#ae81ff">11.4</span>, <span style="color:#ae81ff">10000</span>) <span style="color:#75715e"># 针对10000股，11.2买入，11.4卖出，能赚多少钱？</span>
+</span></span><span style="display:flex;"><span>print(good)
+</span></span></code></pre></div><p>其中t0的函数作用，是进行股票买入卖出的价格计算，经常会涉及到分甚至毫厘的价格计算，必须保证结果100%正确。</p>
+<p>我是如何保证结果100%正确的呢？</p>
+<p><strong>使用Python里自带的库：decimal和内置函数str</strong>，比如上面0.1+0.2的代码，如果想得到正确的结果，代码可以这么写。👇</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> decimal <span style="color:#f92672">import</span> Decimal
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> Decimal(str(<span style="color:#ae81ff">0.1</span>)) <span style="color:#75715e"># 先把0.1转成字符串，再把字符串转成数字</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> Decimal(str(<span style="color:#ae81ff">0.2</span>)) <span style="color:#75715e"># 同上</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
+</span></span><span style="display:flex;"><span>print(c)
+</span></span></code></pre></div><p>以上代码，运行后的结果，如下图所示，👇</p>
+<p><img src="https://article-1300615378.cos.ap-nanjing.myqcloud.com/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%AD%BE%E7%BA%A6/0.1%2B0.2/20231227-ddcb582c.png?" alt=""></p>
+<hr>
+<p>这个解决方法是不是有点复杂，我也觉得太复杂了。</p>
+<p>但你还有没有更好的办法呢？欢迎在读者群交流一下~👇</p>
+<p><img src="https://cos.python-office.com/group/0816.jpg" alt=""></p>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/1219-%E8%87%AA%E5%AA%92%E4%BD%93%E6%80%BB%E7%BB%93/">上一篇：哭了！我今年开通了50&#43;账户，为什么还是没挣到钱？</a>
+        
+        
+        <a href="http://localhost:4002/99-get-all/">下一篇：Python自动化办公（课程资料）</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

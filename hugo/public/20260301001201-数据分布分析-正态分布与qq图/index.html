@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数据分布分析：我用QQ图5秒钟判断数据是否正态分布 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>数据分布分析：我用QQ图5秒钟判断数据是否正态分布</h1>
+        <div class="post-meta">
+            <span>2026-03-01 00:12</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" class="tag">统计学</a>
+            
+            <a href="/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/" class="tag">正态分布</a>
+            
+            <a href="/tags/qq%E5%9B%BE/" class="tag">QQ图</a>
+            
+            <a href="/tags/%E5%88%86%E5%B8%83%E6%A3%80%E9%AA%8C/" class="tag">分布检验</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天学习<strong>数据分布分析</strong>，重点掌握如何判断数据是否符合正态分布。</p>
+<p>为什么重要？因为很多统计方法（如t检验）都假设数据正态分布。用错方法会导致错误结论。</p>
+<hr>
+<h2 id="什么是正态分布">什么是正态分布？</h2>
+<h3 id="特征">特征</h3>
+<ul>
+<li>钟形曲线，对称分布</li>
+<li>均值 = 中位数 = 众数</li>
+<li>约68%数据在μ±σ内，95%在μ±2σ内</li>
+</ul>
+<h3 id="为什么要检验正态性">为什么要检验正态性？</h3>
+<ul>
+<li>t检验、ANOVA要求正态分布</li>
+<li>线性回归假设残差正态</li>
+<li>很多机器学习算法对分布敏感</li>
+</ul>
+<hr>
+<h2 id="可视化判断">可视化判断</h2>
+<h3 id="直方图--密度曲线">直方图 + 密度曲线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成三种分布的数据</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>normal_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">1000</span>)      <span style="color:#75715e"># 正态</span>
+</span></span><span style="display:flex;"><span>skewed_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>exponential(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1000</span>)       <span style="color:#75715e"># 右偏</span>
+</span></span><span style="display:flex;"><span>uniform_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">1000</span>)     <span style="color:#75715e"># 均匀</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">4</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data_list <span style="color:#f92672">=</span> [normal_data, skewed_data, uniform_data]
+</span></span><span style="display:flex;"><span>titles <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;正态分布&#39;</span>, <span style="color:#e6db74">&#39;指数分布（右偏）&#39;</span>, <span style="color:#e6db74">&#39;均匀分布&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ax, data, title <span style="color:#f92672">in</span> zip(axes, data_list, titles):
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>hist(data, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, density<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>, edgecolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 叠加理论正态曲线</span>
+</span></span><span style="display:flex;"><span>    mu, sigma <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>mean(), data<span style="color:#f92672">.</span>std()
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(data<span style="color:#f92672">.</span>min(), data<span style="color:#f92672">.</span>max(), <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>plot(x, stats<span style="color:#f92672">.</span>norm<span style="color:#f92672">.</span>pdf(x, mu, sigma), <span style="color:#e6db74">&#39;r-&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;正态拟合&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>set_title(title)
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><hr>
+<h2 id="qq图quantile-quantile-plot">QQ图（Quantile-Quantile Plot）</h2>
+<h3 id="原理">原理</h3>
+<p>将数据的分位数与理论正态分布的分位数对比。如果点在一条直线上，说明符合正态分布。</p>
+<h3 id="python实现">Python实现</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> statsmodels.api <span style="color:#66d9ef">as</span> sm
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">4</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ax, data, title <span style="color:#f92672">in</span> zip(axes, data_list, titles):
+</span></span><span style="display:flex;"><span>    sm<span style="color:#f92672">.</span>qqplot(data, line<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;45&#39;</span>, ax<span style="color:#f92672">=</span>ax)
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>title<span style="color:#e6db74">}</span><span style="color:#e6db74"> - QQ图&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解读：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 点落在对角线上 → 正态分布</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 点呈S形 → 厚尾或薄尾</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 点呈弧形 → 偏态分布</span>
+</span></span></code></pre></div><hr>
+<h2 id="统计检验">统计检验</h2>
+<h3 id="shapiro-wilk检验小样本推荐">Shapiro-Wilk检验（小样本推荐）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正态数据</span>
+</span></span><span style="display:flex;"><span>stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>shapiro(normal_data[:<span style="color:#ae81ff">500</span>])  <span style="color:#75715e"># 最多500个样本</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;正态数据 - W统计量: </span><span style="color:#e6db74">{</span>stat<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 非正态数据</span>
+</span></span><span style="display:flex;"><span>stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>shapiro(skewed_data[:<span style="color:#ae81ff">500</span>])
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;偏态数据 - W统计量: </span><span style="color:#e6db74">{</span>stat<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解读：p &gt; 0.05不能拒绝正态性假设</span>
+</span></span></code></pre></div><h3 id="kolmogorov-smirnov检验">Kolmogorov-Smirnov检验</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># KS检验</span>
+</span></span><span style="display:flex;"><span>stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>kstest(normal_data, <span style="color:#e6db74">&#39;norm&#39;</span>, args<span style="color:#f92672">=</span>(normal_data<span style="color:#f92672">.</span>mean(), normal_data<span style="color:#f92672">.</span>std()))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;KS检验 - 统计量: </span><span style="color:#e6db74">{</span>stat<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h3 id="anderson-darling检验">Anderson-Darling检验</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>result <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>anderson(normal_data, dist<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;norm&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;A-D统计量: </span><span style="color:#e6db74">{</span>result<span style="color:#f92672">.</span>statistic<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;临界值:&#34;</span>, result<span style="color:#f92672">.</span>critical_values)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;显著性水平:&#34;</span>, result<span style="color:#f92672">.</span>significance_level)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果统计量 &gt; 临界值，拒绝正态性</span>
+</span></span></code></pre></div><hr>
+<h2 id="偏度和峰度">偏度和峰度</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 计算偏度和峰度</span>
+</span></span><span style="display:flex;"><span>skewness <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>skew(normal_data)
+</span></span><span style="display:flex;"><span>kurtosis <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>kurtosis(normal_data)  <span style="color:#75715e"># 超额峰度（减去3）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;偏度: </span><span style="color:#e6db74">{</span>skewness<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;峰度: </span><span style="color:#e6db74">{</span>kurtosis<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 判断标准（近似）</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> abs(skewness) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">and</span> abs(kurtosis) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.5</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;大致符合正态分布&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;偏离正态分布&#34;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="数据变换">数据变换</h2>
+<p>当数据不正态时，可以尝试变换：</p>
+<h3 id="对数变换右偏数据">对数变换（右偏数据）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>log_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(skewed_data[skewed_data <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 检查变换后是否正态</span>
+</span></span><span style="display:flex;"><span>stats<span style="color:#f92672">.</span>probplot(log_data, dist<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;norm&#34;</span>, plot<span style="color:#f92672">=</span>plt)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;对数变换后的QQ图&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h3 id="平方根变换">平方根变换</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sqrt_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sqrt(skewed_data[skewed_data <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>])
+</span></span></code></pre></div><h3 id="box-cox变换自动选择最优变换">Box-Cox变换（自动选择最优变换）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.stats <span style="color:#f92672">import</span> boxcox
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Box-Cox要求数据为正</span>
+</span></span><span style="display:flex;"><span>data_positive <span style="color:#f92672">=</span> skewed_data[skewed_data <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>boxcox_data, lambda_param <span style="color:#f92672">=</span> boxcox(data_positive)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;最优lambda参数: </span><span style="color:#e6db74">{</span>lambda_param<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># lambda ≈ 0: 对数变换</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># lambda ≈ 0.5: 平方根变换</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># lambda ≈ 1: 无需变换</span>
+</span></span></code></pre></div><hr>
+<h2 id="实战完整分析流程">实战：完整分析流程</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> statsmodels.api <span style="color:#66d9ef">as</span> sm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">normality_analysis</span>(data, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;数据&#34;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;完整的正态性分析&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">=== </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">的正态性分析 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 1. 基础统计</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">【描述统计】&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  样本量: </span><span style="color:#e6db74">{</span>len(data)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  均值: </span><span style="color:#e6db74">{</span>np<span style="color:#f92672">.</span>mean(data)<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  中位数: </span><span style="color:#e6db74">{</span>np<span style="color:#f92672">.</span>median(data)<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  标准差: </span><span style="color:#e6db74">{</span>np<span style="color:#f92672">.</span>std(data, ddof<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  偏度: </span><span style="color:#e6db74">{</span>stats<span style="color:#f92672">.</span>skew(data)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  峰度: </span><span style="color:#e6db74">{</span>stats<span style="color:#f92672">.</span>kurtosis(data)<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 2. Shapiro-Wilk检验</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(data) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5000</span>:
+</span></span><span style="display:flex;"><span>        stat, p_value <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>shapiro(data)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">【Shapiro-Wilk检验】&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  W统计量: </span><span style="color:#e6db74">{</span>stat<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  p值: </span><span style="color:#e6db74">{</span>p_value<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> p_value <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.05</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  ✓ 不能拒绝正态性假设（p &gt; 0.05）&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  ✗ 拒绝正态性假设（p ≤ 0.05）&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 3. 可视化</span>
+</span></span><span style="display:flex;"><span>    fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">4</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 直方图+密度</span>
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>hist(data, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, density<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>, edgecolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>    mu, sigma <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>mean(), data<span style="color:#f92672">.</span>std()
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(data<span style="color:#f92672">.</span>min(), data<span style="color:#f92672">.</span>max(), <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>plot(x, stats<span style="color:#f92672">.</span>norm<span style="color:#f92672">.</span>pdf(x, mu, sigma), <span style="color:#e6db74">&#39;r-&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;正态分布&#39;</span>)
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> - 分布直方图&#39;</span>)
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># QQ图</span>
+</span></span><span style="display:flex;"><span>    sm<span style="color:#f92672">.</span>qqplot(data, line<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;45&#39;</span>, ax<span style="color:#f92672">=</span>axes[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> - QQ图&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">_normality.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;mean&#39;</span>: np<span style="color:#f92672">.</span>mean(data),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;std&#39;</span>: np<span style="color:#f92672">.</span>std(data, ddof<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;skewness&#39;</span>: stats<span style="color:#f92672">.</span>skew(data),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;kurtosis&#39;</span>: stats<span style="color:#f92672">.</span>kurtosis(data),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;shapiro_p&#39;</span>: p_value <span style="color:#66d9ef">if</span> len(data) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5000</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试不同分布</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>normal <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span>exponential <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>exponential(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span>uniform <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> data, name <span style="color:#f92672">in</span> [(normal, <span style="color:#e6db74">&#34;正态数据&#34;</span>), (exponential, <span style="color:#e6db74">&#34;指数数据&#34;</span>), (uniform, <span style="color:#e6db74">&#34;均匀数据&#34;</span>)]:
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> normality_analysis(data, name)
+</span></span><span style="display:flex;"><span>    results<span style="color:#f92672">.</span>append(result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 汇总比较</span>
+</span></span><span style="display:flex;"><span>summary <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(results, index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;正态&#34;</span>, <span style="color:#e6db74">&#34;指数&#34;</span>, <span style="color:#e6db74">&#34;均匀&#34;</span>])
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">=== 汇总比较 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>print(summary)
+</span></span></code></pre></div><hr>
+<h3 id="性能对比正态性检验方法">性能对比：正态性检验方法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Shapiro-Wilk（小样本首选，n&lt;5000）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit stats<span style="color:#f92672">.</span>shapiro(data[:<span style="color:#ae81ff">5000</span>])   <span style="color:#75715e"># 约5ms</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># D&#39;Agostino-Pearson（大样本）</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit stats<span style="color:#f92672">.</span>normaltest(data)        <span style="color:#75715e"># 约2ms</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Kolmogorov-Smirnov</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit stats<span style="color:#f92672">.</span>kstest(data, <span style="color:#e6db74">&#39;norm&#39;</span>)    <span style="color:#75715e"># 约1ms</span>
+</span></span></code></pre></div><h2 id="进阶用法">进阶用法</h2>
+<h3 id="qq图详解">QQ图详解</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> statsmodels.api <span style="color:#66d9ef">as</span> sm
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 标准QQ图</span>
+</span></span><span style="display:flex;"><span>sm<span style="color:#f92672">.</span>qqplot(data, line<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;45&#39;</span>, fit<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;QQ图：检验正态性&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果点基本在45度线上 → 数据近似正态</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果两端偏离 → 有重尾或轻尾</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果整体弯曲 → 偏态分布</span>
+</span></span></code></pre></div><h3 id="偏度和峰度-1">偏度和峰度</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>skewness <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>skew(data)    <span style="color:#75715e"># 偏度：0=对称，&gt;0=右偏，&lt;0=左偏</span>
+</span></span><span style="display:flex;"><span>kurtosis <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>kurtosis(data)  <span style="color:#75715e"># 峰度：0=正态，&gt;0=尖峰，&lt;0=平峰</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;偏度: </span><span style="color:#e6db74">{</span>skewness<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;峰度: </span><span style="color:#e6db74">{</span>kurtosis<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正态分布：偏度≈0，峰度≈0</span>
+</span></span></code></pre></div><h3 id="常见分布拟合">常见分布拟合</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 拟合多种分布，找最合适的</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>distributions <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;norm&#39;</span>, <span style="color:#e6db74">&#39;lognorm&#39;</span>, <span style="color:#e6db74">&#39;expon&#39;</span>, <span style="color:#e6db74">&#39;gamma&#39;</span>, <span style="color:#e6db74">&#39;beta&#39;</span>]
+</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> dist_name <span style="color:#f92672">in</span> distributions:
+</span></span><span style="display:flex;"><span>    dist <span style="color:#f92672">=</span> getattr(stats, dist_name)
+</span></span><span style="display:flex;"><span>    params <span style="color:#f92672">=</span> dist<span style="color:#f92672">.</span>fit(data)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># KS检验</span>
+</span></span><span style="display:flex;"><span>    D, p <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>kstest(data, dist_name, args<span style="color:#f92672">=</span>params)
+</span></span><span style="display:flex;"><span>    results[dist_name] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;D&#39;</span>: D, <span style="color:#e6db74">&#39;p&#39;</span>: p, <span style="color:#e6db74">&#39;params&#39;</span>: params}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>best <span style="color:#f92672">=</span> min(results, key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: results[x][<span style="color:#e6db74">&#39;D&#39;</span>])
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;最佳拟合分布: </span><span style="color:#e6db74">{</span>best<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1大样本下正态检验太敏感">❌ 坑1：大样本下正态检验太敏感</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 10万条数据，轻微偏离正态就会被拒绝</span>
+</span></span><span style="display:flex;"><span>stats<span style="color:#f92672">.</span>shapiro(data[:<span style="color:#ae81ff">5000</span>])  <span style="color:#75715e"># 大样本几乎都拒绝正态</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 解决方案：看QQ图 + 实际偏度峰度</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 偏度|&lt;2|, 峰度|&lt;7| → 大致正态，很多统计方法仍然适用</span>
+</span></span></code></pre></div><h3 id="-坑2忘记检查分布就用了参数检验">❌ 坑2：忘记检查分布就用了参数检验</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># t检验假设数据正态分布</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果数据严重偏态，应该用非参数检验</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 参数检验：t检验</span>
+</span></span><span style="display:flex;"><span>stats<span style="color:#f92672">.</span>ttest_ind(group_a, group_b)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 非参数替代：Mann-Whitney U检验</span>
+</span></span><span style="display:flex;"><span>stats<span style="color:#f92672">.</span>mannwhitneyu(group_a, group_b)
+</span></span></code></pre></div><h2 id="实战案例分析用户消费金额分布">实战案例：分析用户消费金额分布</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 消费金额通常服从对数正态分布</span>
+</span></span><span style="display:flex;"><span>raw <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>lognormal(mean<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>, sigma<span style="color:#f92672">=</span><span style="color:#ae81ff">1.2</span>, size<span style="color:#f92672">=</span>n)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;spending&#39;</span>: raw})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== 消费金额分布分析 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;均值: ¥</span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;spending&#39;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;中位数: ¥</span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;spending&#39;</span>]<span style="color:#f92672">.</span>median()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;偏度: </span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;spending&#39;</span>]<span style="color:#f92672">.</span>skew()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">（右偏）&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;峰度: </span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;spending&#39;</span>]<span style="color:#f92672">.</span>kurt()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">（尖峰）&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 正态性检验</span>
+</span></span><span style="display:flex;"><span>stat, p <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>normaltest(df[<span style="color:#e6db74">&#39;spending&#39;</span>])
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">正态检验: p=</span><span style="color:#e6db74">{</span>p<span style="color:#e6db74">:</span><span style="color:#e6db74">.2e</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> → </span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;拒绝正态&#39;</span> <span style="color:#66d9ef">if</span> p <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;不能拒绝正态&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 对数变换后检验</span>
+</span></span><span style="display:flex;"><span>log_spending <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(df[<span style="color:#e6db74">&#39;spending&#39;</span>])
+</span></span><span style="display:flex;"><span>stat2, p2 <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>normaltest(log_spending)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;对数变换后正态检验: p=</span><span style="color:#e6db74">{</span>p2<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> → </span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;近似正态&#39;</span> <span style="color:#66d9ef">if</span> p2 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.05</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;仍非正态&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 分布拟合</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats <span style="color:#66d9ef">as</span> sp_stats
+</span></span><span style="display:flex;"><span>params <span style="color:#f92672">=</span> sp_stats<span style="color:#f92672">.</span>lognorm<span style="color:#f92672">.</span>fit(df[<span style="color:#e6db74">&#39;spending&#39;</span>])
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">对数正态拟合参数: s=</span><span style="color:#e6db74">{</span>params[<span style="color:#ae81ff">0</span>]<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, loc=</span><span style="color:#e6db74">{</span>params[<span style="color:#ae81ff">1</span>]<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, scale=</span><span style="color:#e6db74">{</span>params[<span style="color:#ae81ff">2</span>]<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h3 id="常见分布及其python实现">常见分布及其Python实现</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 正态分布 - 自然界最常见的分布</span>
+</span></span><span style="display:flex;"><span>norm_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(loc<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, scale<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)  <span style="color:#75715e"># 均值0, 标准差1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 对数正态分布 - 收入、房价等</span>
+</span></span><span style="display:flex;"><span>lognorm_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>lognormal(mean<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, sigma<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 指数分布 - 等待时间</span>
+</span></span><span style="display:flex;"><span>exp_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>exponential(scale<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 泊松分布 - 计数数据（订单数、访问量）</span>
+</span></span><span style="display:flex;"><span>poisson_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>poisson(lam<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 均匀分布 - 随机数</span>
+</span></span><span style="display:flex;"><span>uniform_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(low<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, high<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 6. 二项分布 - 成功/失败（转化率）</span>
+</span></span><span style="display:flex;"><span>binom_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>binomial(n<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, p<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 可视化对比</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ax, data, name <span style="color:#f92672">in</span> zip(axes<span style="color:#f92672">.</span>flat, 
+</span></span><span style="display:flex;"><span>    [norm_data, lognorm_data, exp_data, poisson_data, uniform_data, binom_data],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;正态&#39;</span>, <span style="color:#e6db74">&#39;对数正态&#39;</span>, <span style="color:#e6db74">&#39;指数&#39;</span>, <span style="color:#e6db74">&#39;泊松&#39;</span>, <span style="color:#e6db74">&#39;均匀&#39;</span>, <span style="color:#e6db74">&#39;二项&#39;</span>]):
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>hist(data, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>, density<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>)
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>set_title(name)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span></code></pre></div><h3 id="box-cox变换让数据更接近正态">Box-Cox变换（让数据更接近正态）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 对偏态数据做Box-Cox变换</span>
+</span></span><span style="display:flex;"><span>original_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>lognormal(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1.5</span>, <span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span>transformed, lambda_val <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>boxcox(original_data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;变换前偏度: </span><span style="color:#e6db74">{</span>stats<span style="color:#f92672">.</span>skew(original_data)<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;变换后偏度: </span><span style="color:#e6db74">{</span>stats<span style="color:#f92672">.</span>skew(transformed)<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;最优lambda: </span><span style="color:#e6db74">{</span>lambda_val<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 反变换</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.special <span style="color:#f92672">import</span> inv_boxcox
+</span></span><span style="display:flex;"><span>restored <span style="color:#f92672">=</span> inv_boxcox(transformed, lambda_val)
+</span></span></code></pre></div><h3 id="分布分析工作流">分布分析工作流</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">distribution_analysis</span>(data, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;数据&#39;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39;完整的分布分析流程&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;=== </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">分布分析 ===</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;)</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 1. 基本统计</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;均值: </span><span style="color:#e6db74">{</span>data<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;中位数: </span><span style="color:#e6db74">{</span>data<span style="color:#f92672">.</span>median()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;标准差: </span><span style="color:#e6db74">{</span>data<span style="color:#f92672">.</span>std()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;偏度: </span><span style="color:#e6db74">{</span>data<span style="color:#f92672">.</span>skew()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;右偏&#39;</span> <span style="color:#66d9ef">if</span> data<span style="color:#f92672">.</span>skew() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;左偏&#39;</span> <span style="color:#66d9ef">if</span> data<span style="color:#f92672">.</span>skew() <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;对称&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;峰度: </span><span style="color:#e6db74">{</span>data<span style="color:#f92672">.</span>kurt()<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;尖峰&#39;</span> <span style="color:#66d9ef">if</span> data<span style="color:#f92672">.</span>kurt() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;平峰&#39;</span> <span style="color:#66d9ef">if</span> data<span style="color:#f92672">.</span>kurt() <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;正态&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 2. 正态性检验</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(data) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5000</span>:
+</span></span><span style="display:flex;"><span>        stat, p <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>shapiro(data)
+</span></span><span style="display:flex;"><span>        test_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Shapiro-Wilk&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        stat, p <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>normaltest(data)
+</span></span><span style="display:flex;"><span>        test_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;D&#39;Agostino&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>正态性检验({test_name}): p<span style="color:#f92672">=</span>{p:<span style="color:#ae81ff">.4</span>f}<span style="color:#e6db74">&#34;)</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;结论: </span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;正态分布&#39;</span> <span style="color:#66d9ef">if</span> p <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.05</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;非正态分布&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 3. 可视化</span>
+</span></span><span style="display:flex;"><span>    fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">4</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 直方图 + KDE</span>
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>hist(data, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, density<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>)
+</span></span><span style="display:flex;"><span>    data<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>kde(ax<span style="color:#f92672">=</span>axes[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;分布图&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># QQ图</span>
+</span></span><span style="display:flex;"><span>    stats<span style="color:#f92672">.</span>probplot(data, plot<span style="color:#f92672">=</span>axes[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;QQ图&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 箱线图</span>
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>boxplot(data)
+</span></span><span style="display:flex;"><span>    axes[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;箱线图&#39;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">_distribution.png&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;p_value&#39;</span>: p, <span style="color:#e6db74">&#39;is_normal&#39;</span>: p <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.05</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> distribution_analysis(df[<span style="color:#e6db74">&#39;salary&#39;</span>], <span style="color:#e6db74">&#39;薪资&#39;</span>)
+</span></span></code></pre></div><h3 id="数据变换参考">数据变换参考</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 不同偏度的推荐变换方法</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">auto_transform</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39;根据偏度自动选择变换方法&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    skew <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>skew()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> abs(skew) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.5</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;近似正态，无需变换&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> data
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> skew <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.5</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;右偏分布，推荐对数变换&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (data <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>all():
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>log(data)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>log1p(data <span style="color:#f92672">-</span> data<span style="color:#f92672">.</span>min() <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;左偏分布，推荐平方变换&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> data <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一课我们将进入<strong>实战项目</strong>部分，第一个项目是销售数据分析报表。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301001301-%E9%A1%B9%E7%9B%AE1-%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E8%A1%A8%E8%87%AA%E5%8A%A8%E5%8C%96/">继续阅读：项目1-销售数据分析报表自动化</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301001101-%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E5%85%A5%E9%97%A8-%E7%94%A8%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E4%BD%A0%E7%9A%84%E7%8C%9C%E6%83%B3/">假设检验入门-用数据验证你的猜想</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301001301-%E9%A1%B9%E7%9B%AE1-%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E8%A1%A8%E8%87%AA%E5%8A%A8%E5%8C%96/">项目1-销售数据分析报表自动化</a></p>
+<hr>
+<p><em>PS：QQ图是判断正态分布最直观的方法。记住：点越接近对角线，越像正态分布。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260301001101-%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E5%85%A5%E9%97%A8-%E7%94%A8%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E4%BD%A0%E7%9A%84%E7%8C%9C%E6%83%B3/">上一篇：假设检验入门：我用t检验和卡方检验，证明了产品改版确实有效</a>
+        
+        
+        <a href="http://localhost:4002/20260301001301-%E9%A1%B9%E7%9B%AE1-%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E8%A1%A8%E8%87%AA%E5%8A%A8%E5%8C%96/">下一篇：项目1：销售数据分析报表自动化，我用Python替代了3小时的手工工作</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

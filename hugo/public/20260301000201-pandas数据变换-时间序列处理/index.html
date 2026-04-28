@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pandas时间序列：我总结了8个时间处理技巧，轻松搞定日期数据分析 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Pandas时间序列：我总结了8个时间处理技巧，轻松搞定日期数据分析</h1>
+        <div class="post-meta">
+            <span>2026-03-01 00:02</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag">数据分析</a>
+            
+            <a href="/tags/pandas/" class="tag">Pandas</a>
+            
+            <a href="/tags/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97/" class="tag">时间序列</a>
+            
+            <a href="/tags/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/" class="tag">日期处理</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>大家好，我是正在实战各种<!-- raw HTML omitted -->AI项目<!-- raw HTML omitted -->的程序员晚枫。</p>
+<p>今天学习<strong>时间序列数据处理</strong>，这是金融、销售、运营等领域必备的技能。</p>
+<p>无论是分析日活趋势、计算同比环比，还是预测未来销量，都需要掌握时间序列的处理方法。</p>
+<hr>
+<h2 id="datetimeindex时间索引">DatetimeIndex：时间索引</h2>
+<h3 id="创建时间序列">创建时间序列</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式1：从字符串转换</span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime([<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, <span style="color:#e6db74">&#39;2024-01-02&#39;</span>, <span style="color:#e6db74">&#39;2024-01-03&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 方式2：生成日期范围</span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(start<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;D&#39;</span>)  <span style="color:#75715e"># 每日</span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(start<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2024-01-01&#39;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2024-12-31&#39;</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;M&#39;</span>)  <span style="color:#75715e"># 每月</span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(start<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MS&#39;</span>)  <span style="color:#75715e"># 每月初</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 常见频率</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># D: 日历日, B: 工作日</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># W: 周, M: 月末, MS: 月初</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Q: 季末, A: 年末</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># H: 小时, T/min: 分钟, S: 秒</span>
+</span></span></code></pre></div><h3 id="创建时间序列dataframe">创建时间序列DataFrame</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 模拟销售数据</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;日期&#39;</span>: pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">365</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;D&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;销售额&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">365</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置为索引</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;日期&#39;</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>head())
+</span></span></code></pre></div><hr>
+<h2 id="时间索引切片">时间索引切片</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 按日期切片（超级方便！）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;2024-01&#39;</span>]        <span style="color:#75715e"># 2024年1月所有数据</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;2024-01&#39;</span>:<span style="color:#e6db74">&#39;2024-03&#39;</span>]  <span style="color:#75715e"># 1月到3月</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;2024-01-15&#39;</span>:<span style="color:#e6db74">&#39;2024-01-20&#39;</span>]  <span style="color:#75715e"># 具体日期范围</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按年份</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;2024&#39;</span>]       <span style="color:#75715e"># 2024年全年</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按月份</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;2024-02&#39;</span>]    <span style="color:#75715e"># 2024年2月</span>
+</span></span></code></pre></div><hr>
+<h2 id="提取时间组件">提取时间组件</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;年&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>year
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;月&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>month
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;日&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>day
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;星期&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>dayofweek  <span style="color:#75715e"># 0=周一, 6=周日</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;季度&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>quarter
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;是否周末&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>dayofweek <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 获取月初月末</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;月初&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>to_timestamp()
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;月末&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>to_timestamp(how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;end&#39;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="重采样resample">重采样Resample</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 日数据转为月数据</span>
+</span></span><span style="display:flex;"><span>monthly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>sum()      <span style="color:#75715e"># 每月总和</span>
+</span></span><span style="display:flex;"><span>monthly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>mean()     <span style="color:#75715e"># 每月平均</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 周统计</span>
+</span></span><span style="display:flex;"><span>weekly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;W&#39;</span>)<span style="color:#f92672">.</span>sum()       <span style="color:#75715e"># 每周总和（周日结束）</span>
+</span></span><span style="display:flex;"><span>weekly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;W-MON&#39;</span>)<span style="color:#f92672">.</span>sum()   <span style="color:#75715e"># 每周一结束</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 季度统计</span>
+</span></span><span style="display:flex;"><span>quarterly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;Q&#39;</span>)<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 常用聚合</span>
+</span></span><span style="display:flex;"><span>stats <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;销售额&#39;</span>: [<span style="color:#e6db74">&#39;sum&#39;</span>, <span style="color:#e6db74">&#39;mean&#39;</span>, <span style="color:#e6db74">&#39;max&#39;</span>, <span style="color:#e6db74">&#39;min&#39;</span>]
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><hr>
+<h2 id="移动窗口计算">移动窗口计算</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 7天移动平均</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;MA7&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>rolling(window<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 30天移动平均</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;MA30&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>rolling(window<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 指数加权移动平均（更重视近期数据）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;EMA&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>ewm(span<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 其他窗口函数</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;7天总和&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>rolling(window<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;7天标准差&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>rolling(window<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)<span style="color:#f92672">.</span>std()
+</span></span></code></pre></div><hr>
+<h2 id="滞后与差分">滞后与差分</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 滞后1期（前一天的数据）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;昨日销售&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>shift(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 滞后7期（上周同一天）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;上周同日&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>shift(<span style="color:#ae81ff">7</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 日环比</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;日环比&#39;</span>] <span style="color:#f92672">=</span> (df[<span style="color:#e6db74">&#39;销售额&#39;</span>] <span style="color:#f92672">-</span> df[<span style="color:#e6db74">&#39;昨日销售&#39;</span>]) <span style="color:#f92672">/</span> df[<span style="color:#e6db74">&#39;昨日销售&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 周同比</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;周同比&#39;</span>] <span style="color:#f92672">=</span> (df[<span style="color:#e6db74">&#39;销售额&#39;</span>] <span style="color:#f92672">-</span> df[<span style="color:#e6db74">&#39;上周同日&#39;</span>]) <span style="color:#f92672">/</span> df[<span style="color:#e6db74">&#39;上周同日&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 差分（相邻数据的差）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;日增量&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>diff()
+</span></span></code></pre></div><hr>
+<h2 id="实战完整的销售时间分析">实战：完整的销售时间分析</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成一年的销售数据</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, <span style="color:#e6db74">&#39;2024-12-31&#39;</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;D&#39;</span>)
+</span></span><span style="display:flex;"><span>base_sales <span style="color:#f92672">=</span> <span style="color:#ae81ff">3000</span>
+</span></span><span style="display:flex;"><span>trend <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1000</span>, len(dates))  <span style="color:#75715e"># 增长趋势</span>
+</span></span><span style="display:flex;"><span>seasonal <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>sin(<span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>pi <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>arange(len(dates)) <span style="color:#f92672">/</span> <span style="color:#ae81ff">365.25</span>)  <span style="color:#75715e"># 季节性</span>
+</span></span><span style="display:flex;"><span>noise <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">200</span>, len(dates))  <span style="color:#75715e"># 随机波动</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sales <span style="color:#f92672">=</span> base_sales <span style="color:#f92672">+</span> trend <span style="color:#f92672">+</span> seasonal <span style="color:#f92672">+</span> noise
+</span></span><span style="display:flex;"><span>sales <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>maximum(sales, <span style="color:#ae81ff">1000</span>)  <span style="color:#75715e"># 最小值1000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;销售额&#39;</span>: sales}, index<span style="color:#f92672">=</span>dates)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== 时间序列分析报告 ===</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 基础统计</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;【年度概览】&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;总销售额: ¥</span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;日均销售: ¥</span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;最高单日: ¥</span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>max()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>idxmax()<span style="color:#f92672">.</span>date()<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;最低单日: ¥</span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>min()<span style="color:#e6db74">:</span><span style="color:#e6db74">,.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>idxmin()<span style="color:#f92672">.</span>date()<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 月度趋势</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">【月度销售】&#34;</span>)
+</span></span><span style="display:flex;"><span>monthly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>print(monthly)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 星期模式</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">【星期销售模式】&#34;</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;星期&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>day_name()
+</span></span><span style="display:flex;"><span>weekly_pattern <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;星期&#39;</span>)[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>print(weekly_pattern)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 移动平均趋势</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">【7日移动平均（最近10天）】&#34;</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;MA7&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;销售额&#39;</span>]<span style="color:#f92672">.</span>rolling(<span style="color:#ae81ff">7</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>print(df[[<span style="color:#e6db74">&#39;销售额&#39;</span>, <span style="color:#e6db74">&#39;MA7&#39;</span>]]<span style="color:#f92672">.</span>tail(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 同比增长（假设有去年数据）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># df[&#39;去年今日&#39;] = ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># df[&#39;同比增长&#39;] = (df[&#39;销售额&#39;] - df[&#39;去年今日&#39;]) / df[&#39;去年今日&#39;]</span>
+</span></span></code></pre></div><hr>
+<h3 id="性能对比不同时间处理方式">性能对比：不同时间处理方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2020-01-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;H&#39;</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;value&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">100000</span>)}, index<span style="color:#f92672">=</span>dates)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># resample重采样</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;D&#39;</span>)<span style="color:#f92672">.</span>mean()     <span style="color:#75715e"># 约5ms</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># rolling滚动窗口</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>timeit df<span style="color:#f92672">.</span>rolling(<span style="color:#e6db74">&#39;7D&#39;</span>)<span style="color:#f92672">.</span>mean()     <span style="color:#75715e"># 约10ms</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 手动循环实现</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 约需几十秒到几分钟</span>
+</span></span></code></pre></div><h2 id="进阶用法">进阶用法</h2>
+<h3 id="重采样详解">重采样详解</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 日数据 → 月数据</span>
+</span></span><span style="display:flex;"><span>monthly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;open&#39;</span>: <span style="color:#e6db74">&#39;first&#39;</span>,    <span style="color:#75715e"># 月初开盘价</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;close&#39;</span>: <span style="color:#e6db74">&#39;last&#39;</span>,    <span style="color:#75715e"># 月末收盘价</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;high&#39;</span>: <span style="color:#e6db74">&#39;max&#39;</span>,      <span style="color:#75715e"># 月内最高</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;low&#39;</span>: <span style="color:#e6db74">&#39;min&#39;</span>,       <span style="color:#75715e"># 月内最低</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;volume&#39;</span>: <span style="color:#e6db74">&#39;sum&#39;</span>     <span style="color:#75715e"># 月内总量</span>
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 自定义重采样频率</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;2W&#39;</span>)   <span style="color:#75715e"># 两周</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;QS&#39;</span>)   <span style="color:#75715e"># 季度初</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;BA&#39;</span>)   <span style="color:#75715e"># 年末工作日</span>
+</span></span></code></pre></div><h3 id="滚动窗口高级用法">滚动窗口高级用法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 多指标滚动计算</span>
+</span></span><span style="display:flex;"><span>rolling_stats <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>rolling(<span style="color:#ae81ff">20</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;mean&#39;</span>: <span style="color:#e6db74">&#39;mean&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;std&#39;</span>: <span style="color:#e6db74">&#39;std&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;min&#39;</span>: <span style="color:#e6db74">&#39;min&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;max&#39;</span>: <span style="color:#e6db74">&#39;max&#39;</span>
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 指数加权移动平均（EMA）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;ema_12&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>ewm(span<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;ema_26&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>ewm(span<span style="color:#f92672">=</span><span style="color:#ae81ff">26</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 扩展窗口（从开始到当前）</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;cummax&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;price&#39;</span>]<span style="color:#f92672">.</span>expanding()<span style="color:#f92672">.</span>max()
+</span></span></code></pre></div><h2 id="避坑指南">避坑指南</h2>
+<h3 id="-坑1时区问题">❌ 坑1：时区问题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 时间戳默认无时区</span>
+</span></span><span style="display:flex;"><span>ts <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Timestamp(<span style="color:#e6db74">&#39;2025-01-01 10:00&#39;</span>)
+</span></span><span style="display:flex;"><span>print(ts<span style="color:#f92672">.</span>tz)  <span style="color:#75715e"># None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加时区</span>
+</span></span><span style="display:flex;"><span>ts <span style="color:#f92672">=</span> ts<span style="color:#f92672">.</span>tz_localize(<span style="color:#e6db74">&#39;Asia/Shanghai&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 转换时区</span>
+</span></span><span style="display:flex;"><span>ts_utc <span style="color:#f92672">=</span> ts<span style="color:#f92672">.</span>tz_convert(<span style="color:#e6db74">&#39;UTC&#39;</span>)
+</span></span><span style="display:flex;"><span>print(ts_utc)  <span style="color:#75715e"># 2025-01-01 02:00:00+00:00</span>
+</span></span></code></pre></div><h3 id="-坑2resample的label和closed">❌ 坑2：resample的label和closed</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 默认：左闭右开，左标签</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>mean()  <span style="color:#75715e"># 1月数据标签为1月31日</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 改为右标签</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;right&#39;</span>)<span style="color:#f92672">.</span>mean()  <span style="color:#75715e"># 标签为2月1日</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 通常金融数据用右闭右标签</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>, closed<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;right&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;right&#39;</span>)<span style="color:#f92672">.</span>mean()
+</span></span></code></pre></div><h2 id="实战案例分析股票价格数据">实战案例：分析股票价格数据</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 模拟股票日K线数据</span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>bdate_range(<span style="color:#e6db74">&#39;2024-01-01&#39;</span>, <span style="color:#e6db74">&#39;2025-12-31&#39;</span>)  <span style="color:#75715e"># 工作日</span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> len(dates)
+</span></span><span style="display:flex;"><span>price <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>cumprod(<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">0.001</span>, <span style="color:#ae81ff">0.02</span>, n))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;open&#39;</span>: price <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.01</span>, <span style="color:#ae81ff">0.01</span>, n)),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;close&#39;</span>: price,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;high&#39;</span>: price <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>abs(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.02</span>, n))),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;low&#39;</span>: price <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>abs(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.02</span>, n))),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;volume&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1000000</span>, <span style="color:#ae81ff">10000000</span>, n)
+</span></span><span style="display:flex;"><span>}, index<span style="color:#f92672">=</span>dates)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. 计算技术指标</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;MA5&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;close&#39;</span>]<span style="color:#f92672">.</span>rolling(<span style="color:#ae81ff">5</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;MA20&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;close&#39;</span>]<span style="color:#f92672">.</span>rolling(<span style="color:#ae81ff">20</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;EMA12&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;close&#39;</span>]<span style="color:#f92672">.</span>ewm(span<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;EMA26&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;close&#39;</span>]<span style="color:#f92672">.</span>ewm(span<span style="color:#f92672">=</span><span style="color:#ae81ff">26</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;MACD&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;EMA12&#39;</span>] <span style="color:#f92672">-</span> df[<span style="color:#e6db74">&#39;EMA26&#39;</span>]
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;returns&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;close&#39;</span>]<span style="color:#f92672">.</span>pct_change()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 月度汇总</span>
+</span></span><span style="display:flex;"><span>monthly <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>)<span style="color:#f92672">.</span>agg({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;open&#39;</span>: <span style="color:#e6db74">&#39;first&#39;</span>, <span style="color:#e6db74">&#39;close&#39;</span>: <span style="color:#e6db74">&#39;last&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;high&#39;</span>: <span style="color:#e6db74">&#39;max&#39;</span>, <span style="color:#e6db74">&#39;low&#39;</span>: <span style="color:#e6db74">&#39;min&#39;</span>, <span style="color:#e6db74">&#39;volume&#39;</span>: <span style="color:#e6db74">&#39;sum&#39;</span>
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>monthly[<span style="color:#e6db74">&#39;change_pct&#39;</span>] <span style="color:#f92672">=</span> monthly[<span style="color:#e6db74">&#39;close&#39;</span>]<span style="color:#f92672">.</span>pct_change() <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=== 月度收益 ===&#34;</span>)
+</span></span><span style="display:flex;"><span>print(monthly[[<span style="color:#e6db74">&#39;close&#39;</span>, <span style="color:#e6db74">&#39;change_pct&#39;</span>]]<span style="color:#f92672">.</span>tail(<span style="color:#ae81ff">12</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 波动率分析</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;volatility_20d&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;returns&#39;</span>]<span style="color:#f92672">.</span>rolling(<span style="color:#ae81ff">20</span>)<span style="color:#f92672">.</span>std() <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">252</span>)  <span style="color:#75715e"># 年化波动率</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">当前20日年化波动率: </span><span style="color:#e6db74">{</span>df[<span style="color:#e6db74">&#39;volatility_20d&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.1f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%&#34;</span>)
+</span></span></code></pre></div><h3 id="时间序列处理速查">时间序列处理速查</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 创建时间索引</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2025-01-01&#39;</span>, periods<span style="color:#f92672">=</span><span style="color:#ae81ff">365</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;D&#39;</span>)
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;date&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 日期提取</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;year&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>year
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;month&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>month
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;day&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>day
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;weekday&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>day_name()  <span style="color:#75715e"># Monday, Tuesday...</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;is_weekend&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>dayofweek <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;quarter&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>quarter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 时间偏移</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;yesterday&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index <span style="color:#f92672">-</span> pd<span style="color:#f92672">.</span>Timedelta(days<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;next_month&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index <span style="color:#f92672">+</span> pd<span style="color:#f92672">.</span>DateOffset(months<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;month_end&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index <span style="color:#f92672">+</span> pd<span style="color:#f92672">.</span>offsets<span style="color:#f92672">.</span>MonthEnd(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 时间差计算</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;days_since&#39;</span>] <span style="color:#f92672">=</span> (pd<span style="color:#f92672">.</span>Timestamp(<span style="color:#e6db74">&#39;today&#39;</span>) <span style="color:#f92672">-</span> df<span style="color:#f92672">.</span>index)<span style="color:#f92672">.</span>days
+</span></span></code></pre></div><h3 id="时区处理">时区处理</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 本地化时间</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>tz_localize(<span style="color:#e6db74">&#39;Asia/Shanghai&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 转换时区</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>tz_convert(<span style="color:#e6db74">&#39;UTC&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 去掉时区信息</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>tz_localize(<span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div><h3 id="时间序列处理场景速查">时间序列处理场景速查</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 场景1：日期列转datetime</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[<span style="color:#e6db74">&#39;date&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景2：提取年月日</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;year&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;date&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>year
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;month&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;date&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>month
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;weekday&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;date&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>day_name()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景3：计算时间差</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;days_since&#39;</span>] <span style="color:#f92672">=</span> (pd<span style="color:#f92672">.</span>Timestamp(<span style="color:#e6db74">&#39;today&#39;</span>) <span style="color:#f92672">-</span> df[<span style="color:#e6db74">&#39;date&#39;</span>])<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>days
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景4：按月汇总</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#39;M&#39;</span>, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;date&#39;</span>)[<span style="color:#e6db74">&#39;sales&#39;</span>]<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景5：7天移动平均</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;ma7&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;sales&#39;</span>]<span style="color:#f92672">.</span>rolling(<span style="color:#ae81ff">7</span>)<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景6：同比增长率</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;yoy&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;sales&#39;</span>]<span style="color:#f92672">.</span>pct_change(<span style="color:#ae81ff">12</span>)  <span style="color:#75715e"># 12个月前的对比</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景7：环比增长率</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;mom&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;sales&#39;</span>]<span style="color:#f92672">.</span>pct_change(<span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 上月对比</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 场景8：日期范围生成</span>
+</span></span><span style="display:flex;"><span>dates <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>date_range(<span style="color:#e6db74">&#39;2025-01-01&#39;</span>, <span style="color:#e6db74">&#39;2025-12-31&#39;</span>, freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;B&#39;</span>)  <span style="color:#75715e"># 工作日</span>
+</span></span></code></pre></div><h2 id="下节预告">下节预告</h2>
+<p>下一课我们将学习<strong>字符串处理技巧</strong>，掌握文本数据的分析方法。</p>
+<p>👉 <strong><a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301000301-Pandas%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86%E6%8A%80%E5%B7%A7/">继续阅读：Pandas字符串处理技巧</a></strong></p>
+<hr>
+<h2 id="-加入学习交流群">💬 加入学习交流群</h2>
+<p>扫码加入<strong>Python学习交流群</strong>，和数千名同学一起进步：</p>
+<p>👉 <strong><a href="https://www.python4office.cn/wechat-group/">点击加入交流群</a></strong></p>
+<p>群里不定期分享：</p>
+<ul>
+<li>数据分析实战案例</li>
+<li>Python学习资料</li>
+<li>求职面试经验</li>
+<li>行业最新动态</li>
+</ul>
+<hr>
+<h2 id="推荐ai-python数据分析实战营">推荐：AI Python数据分析实战营</h2>
+<p>🎁 <strong>限时福利</strong>：送《利用Python进行数据分析》实体书</p>
+<p>👉 <strong><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">点击了解详情</a></strong></p>
+<hr>
+<h2 id="课程导航">课程导航</h2>
+<p><strong>上一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301000101-Pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88groupby/">Pandas数据变换-分组聚合groupby</a></p>
+<p><strong>下一篇：</strong> <a href="/course/AI%E7%9B%B8%E5%85%B3/%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE/ads/openclaw/data-analysis/20260301000301-Pandas%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86%E6%8A%80%E5%B7%A7/">Pandas字符串处理技巧</a></p>
+<hr>
+<p><em>PS：时间序列是数据分析的重要领域。掌握这些技巧，你就能分析任何带时间戳的数据。</em></p>
+<hr>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong>主教材</strong>：<a href="https://u.jd.com/N6MUwXO">《Excel+Python 飞速搞定数据分析与处理（图灵出品）》</a></p>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260301000101-pandas%E6%95%B0%E6%8D%AE%E5%8F%98%E6%8D%A2-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88groupby/">上一篇：Pandas分组聚合：我用groupby把100万行数据秒变统计报表</a>
+        
+        
+        <a href="http://localhost:4002/20260301000301-pandas%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86%E6%8A%80%E5%B7%A7/">下一篇：Pandas字符串处理：我用这10个方法，5分钟清洗完 messy 的文本数据</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

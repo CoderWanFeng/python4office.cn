@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>全网首发！1行代码，实现「铁路电子客票」批量识别，自动保存到Excel！ - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>全网首发！1行代码，实现「铁路电子客票」批量识别，自动保存到Excel！</h1>
+        <div class="post-meta">
+            <span>2025-01-19 21:42</span>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <p>大家好，这里是程序员晚枫，正在all in <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">AI编程实战</a>，这个周末我在粉丝的要求下，给<code>poocr</code>库增加了一种新的火车票识别：铁路电子客票。</p>
+<ul>
+<li><a href="https://baike.baidu.com/item/%E7%94%B5%E5%AD%90%E5%8F%91%E7%A5%A8%EF%BC%88%E9%93%81%E8%B7%AF%E7%94%B5%E5%AD%90%E5%AE%A2%E7%A5%A8%EF%BC%89/65013126">百度百科：铁路电子客票</a></li>
+</ul>
+<p>下面我们来一起看一下如何通过1行代码实现这个功能吧~</p>
+<h2 id="什么是铁路电子客票">什么是铁路电子客票？</h2>
+<p>简单来说，这是一种专门用于报销的火车票，具有发票的功能。以下解释来自百度百科：</p>
+<blockquote>
+<p>电子发票（铁路电子客票），是中国铁路客运领域使用的电子发票，属于数电发票的一种。
+2024年11月1日起，在中国铁路客运领域推广使用全面数字化的电子发票——电子发票（铁路电子客票），全国首张铁路电子发票在苏州开具。</p>
+</blockquote>
+<p>作为一种新的报销凭证。你用过吗？</p>
+<h2 id="安装库">安装库</h2>
+<p>本次功能，还是集成到我们的开源项目：<code>poocr</code>中，你可以通过以下命令免费安装：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pip install poocr 
+</span></span></code></pre></div><p>这里要特别说明一下，我一直推荐用清华大学的镜像安装库，因为速度快。</p>
+<p>但是最近有粉丝反馈，清华大学的镜像有时候会失效。我查了一下官网发现，清华大学的镜像链接改了：</p>
+<blockquote>
+<p>如果您正在使用 TUNA 镜像站，可以使用 pypi.tuna.tsinghua.edu.cn 替换下面所有的 mirrors.tuna.tsinghua.edu.cn/pypi/web。</p>
+</blockquote>
+<h2 id="示例代码">示例代码</h2>
+<p>代码很简单，只需要一行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> poocr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SecretId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;你的id&#34;</span>
+</span></span><span style="display:flex;"><span>SecretKey <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;你的key&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>potx<span style="color:#f92672">.</span>ocr2excel<span style="color:#f92672">.</span>RET2excel(img_path<span style="color:#f92672">=</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;d:/程序员晚枫的火车票/&#39;</span>, 
+</span></span><span style="display:flex;"><span>                        id<span style="color:#f92672">=</span>SecretId, key<span style="color:#f92672">=</span>SecretKey<span style="color:#960050;background-color:#1e0010">，</span>
+</span></span><span style="display:flex;"><span>                        output_path<span style="color:#f92672">=</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;./&#39;</span>, output_excel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;RET2excel.xlsx&#39;</span>)
+</span></span></code></pre></div><h3 id="参数说明">参数说明</h3>
+<ul>
+<li>img_path：火车票所在的文件夹路径，可以改成你自己的位置，之前的课程里给大家讲过。参考：发票批量识别，自动保存到Excel！</li>
+<li>id：你的腾讯云的SecretId，在腾讯云后台可以查到。</li>
+<li>key：你的腾讯云的SecretKey，在腾讯云后台可以查到。</li>
+<li>output_path：输出的Excel所在的文件夹，可以改成你自己的位置。</li>
+<li>output_excel：输出的Excel文件名，可以改成你自己的文件名。</li>
+</ul>
+<h2 id="写在最后">写在最后</h2>
+<p>关于各类票据的识别，我一直在更新。如果你有需求，可以在评论区留言。</p>
+<ul>
+<li><a href="https://cloud.tencent.com/developer/article/2479388">好家伙！仅需1行Python，腾讯云智能OCR让手写发票识别效率飙升！</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/2436227">腾讯出品！1行代码，识别营业执照</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/2424251">手把手教程来了，批量识别发票自动保存为Excel文件，1行Python代码实现！</a></li>
+</ul>
+<p><img src="https://cos.python-office.com/ads/gzh/sub-py.jpg" alt=""></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/fad13012-c22f-4c3a-b56e-c70787a55699/172ca166340cd6d0f52d356402901d4f.jpg" alt="扫一扫，领红包"></p>
+<p><img src="https://raw.atomgit.com/user-images/assets/5027920/6aa9a60e-bb4a-423c-a75d-cbd6ecf6f370/4dbea2fec93c415c75311666f19a1022.jpg" alt="美团红包"></p>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/0115-%E6%9B%B4%E6%96%B0%E7%9A%84%E5%80%BA/">上一篇：为什么我的更新速度变慢了？</a>
+        
+        
+        <a href="http://localhost:4002/20250120-%E9%9D%9E%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E5%85%A5%E9%97%A8%E8%AF%BE/">下一篇：【15讲】零基础Python入门课</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python爬虫如何加速？异步、协程还是多进程？分享一个常用做法，小白也能看懂。 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>Python爬虫如何加速？异步、协程还是多进程？分享一个常用做法，小白也能看懂。</h1>
+        <div class="post-meta">
+            <span>2022-07-09 15:23</span>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <p><img src="https://www.python-office.com/api/img-cdn/pro-python/spider-speed/spider-cover.jpg" alt=""></p>
+<p>最近在知识星球：Python读者圈，遇到读者提问：Python爬虫如何加速？</p>
+<p>这个问题涉及到一个爬虫里，甚至是整个Python编程里都非常重要的问题：</p>
+<blockquote>
+<p>如果同时下载1w张图片，如何有效地加速程序运行，缩短下载时间？</p>
+</blockquote>
+<p>今天我们一起来看一下常用的解决方案。</p>
+<h2 id="1为什么慢">1、为什么慢？</h2>
+<p>首先我们先看一下，原来的代码里，是什么原因导致程序慢的？
+下面是代码和运行结果：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> office
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">18</span>):
+</span></span><span style="display:flex;"><span>    url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.python-office.com/api/img-cdn/test/spider/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">.jpg&#39;</span><span style="color:#f92672">.</span>format(str(i))
+</span></span><span style="display:flex;"><span>    office<span style="color:#f92672">.</span>image<span style="color:#f92672">.</span>down4img(url, output_name<span style="color:#f92672">=</span>str(i))
+</span></span></code></pre></div><p><img src="https://www.python-office.com/api/img-cdn/pro-python/spider-speed/normal.jpg" alt=""></p>
+<p>顺序执行看起来很完美，但是完美的背后是不是有陷阱呢？</p>
+<p>为了更好的理解这个代码，我们先举一个例子：你面前有10台洗衣机编号是从1到10，里面转满了衣服需要你清洗，<code>有的脏可能要强力洗洗的久，有的干净只需要速洗洗的快。</code></p>
+<p><strong>清洗以后，需要你记录下他们的清理顺序，有下列2种方案供你选择：</strong></p>
+<ol>
+<li><code>一个挨一个的洗完。</code>先启动洗衣机1号，等1号洗完了，再启动2号，依次类推。这样你记录的结果和上图一样，是完美的按顺序完成。</li>
+<li><code>先同时打开所有的洗衣机，哪一个洗完了就记录哪一个。</code>因为有的洗得快，有的洗得慢，这样你记录的结果是混乱的。</li>
+</ol>
+<p>哪种方式最快呢？毫无疑问是第2种，因为可以让所有的洗衣机同时工作，时间资源可以复用。</p>
+<p>回到我们的程序，我们下载一张图片也是分为2步：请求图片资源，保存到本地。</p>
+<p>**上面的代码之所以慢，就是因为它是请求到第1张的资源，保存到本地之后，再去请求第2张的资源。**看起来很完美，但其实问题很大。</p>
+<p>如何加快速度呢？我们如果可以先请求到所有的图片资源（打开所有的洗衣机），然后再统一保存图片（哪台洗完衣服，就先记录哪台），这样是不是就会快很多呢？</p>
+<p><img src="https://www.python-office.com/api/img-cdn/pro-python/spider-speed/cartoon.png" alt=""></p>
+<p><strong>下面我们按照第2种思路，在Python里的实现实现一下。</strong></p>
+<h2 id="2解决代码">2、解决代码</h2>
+<p>Talk is cheap,show me the code.
+先上代码和运行结果。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> asyncio
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> aiohttp <span style="color:#f92672">import</span> ClientSession
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tasks <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.python-office.com/api/img-cdn/test/spider/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello</span>(url, i<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;wanfeng&#39;</span>, type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;jpg&#39;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> ClientSession() <span style="color:#66d9ef">as</span> session:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> session<span style="color:#f92672">.</span>get(url) <span style="color:#66d9ef">as</span> response:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> response<span style="color:#f92672">.</span>status<span style="color:#f92672">==</span><span style="color:#ae81ff">200</span>:
+</span></span><span style="display:flex;"><span>                response <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> response<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># print(response)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> aiofiles<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;.&#39;</span><span style="color:#f92672">.</span>join((str(i), type)), <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> output_img:
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># for chunk in response:</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">await</span> output_img<span style="color:#f92672">.</span>write(response)
+</span></span><span style="display:flex;"><span>                    output_img<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;下载成功，图片名称：</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;.&#39;</span><span style="color:#f92672">.</span>join((str(i), type))<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">18</span>):
+</span></span><span style="display:flex;"><span>        task <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>ensure_future(hello(url<span style="color:#f92672">.</span>format(i), i))
+</span></span><span style="display:flex;"><span>        tasks<span style="color:#f92672">.</span>append(task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    loop <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>get_event_loop()
+</span></span><span style="display:flex;"><span>    run()
+</span></span><span style="display:flex;"><span>    loop<span style="color:#f92672">.</span>run_until_complete(asyncio<span style="color:#f92672">.</span>wait(tasks))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><p><img src="https://www.python-office.com/api/img-cdn/pro-python/spider-speed/yield.jpg" alt="">
+主要使用的库是：</p>
+<ul>
+<li>asyncio：协程，让图片下载不按顺序，可以加快速度</li>
+<li>aiohttp：替代requests，用来异步发送请求。</li>
+<li>aiofiles：异步写入文件内容</li>
+</ul>
+<h2 id="3还有其它方法吗">3、还有其它方法吗？</h2>
+<p>还有多进程也可以试试，但是多进程更大的优势体现在计算密集型的场景下。
+爬虫获取网络请求属于I/O密集型操作，多进程的优势不大。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># -*- coding:utf-8 -*-</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> multiprocessing
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os<span style="color:#f92672">,</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> multiprocessing <span style="color:#f92672">import</span> Pool
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.python-office.com/api/img-cdn/test/spider/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">down4img</span>(url, output_name, type):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    下载指定url的一张图片，支持所有格式:jpg\png\gif .etc
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># print(&#34;子进程开始执行&gt;&gt;&gt; pid={},ppid={},编号{}&#34;.format(os.getpid(), os.getppid(), output_name))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;.&#39;</span><span style="color:#f92672">.</span>join((output_name, type)), <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> output_img:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> chunk <span style="color:#f92672">in</span> response:
+</span></span><span style="display:flex;"><span>            output_img<span style="color:#f92672">.</span>write(chunk)
+</span></span><span style="display:flex;"><span>        output_img<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;下载成功，图片名称：</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;.&#39;</span><span style="color:#f92672">.</span>join((output_name, type))<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># print(&#34;子进程终止&gt;&gt;&gt; pid={},ppid={},编号{}&#34;.format(os.getpid(), os.getppid(), output_name))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;主进程开始执行&gt;&gt;&gt; pid=</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(os<span style="color:#f92672">.</span>getpid()))
+</span></span><span style="display:flex;"><span>    ps <span style="color:#f92672">=</span> Pool(multiprocessing<span style="color:#f92672">.</span>cpu_count())
+</span></span><span style="display:flex;"><span>    ps <span style="color:#f92672">=</span> Pool(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">18</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># ps.apply(worker,args=(i,))          # 同步执行</span>
+</span></span><span style="display:flex;"><span>        output_name <span style="color:#f92672">=</span> str(i)
+</span></span><span style="display:flex;"><span>        type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;jpg&#39;</span>
+</span></span><span style="display:flex;"><span>        ps<span style="color:#f92672">.</span>apply_async(down4img, args<span style="color:#f92672">=</span>(url<span style="color:#f92672">.</span>format(str(i)), output_name, type,))  <span style="color:#75715e"># 异步执行</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># ps.apply(down4img, args=(url.format(str(i)), output_name[0], type,))  # 同步执行</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 关闭进程池，停止接受其它进程</span>
+</span></span><span style="display:flex;"><span>    ps<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 阻塞进程</span>
+</span></span><span style="display:flex;"><span>    ps<span style="color:#f92672">.</span>join()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;主进程终止&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><p>主要使用的库是：</p>
+<ul>
+<li>multiprocessing：创建进程池</li>
+</ul>
+<h2 id="4写在最后">4、写在最后</h2>
+<p>希望能给你带来帮助。如果想系统的学习Python，欢迎大家扫码加入我的知识星球👉<a href="https://mp.weixin.qq.com/s/nNhFPD-xNsp2QvFc6HWLNQ">Python读者圈</a>，我们一起学习提高~</p>
+<!-- raw HTML omitted -->
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">给小白的《30讲 · AI编程训练营》</a></li>
+</ul>
+<p>程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">《30讲 · AI编程训练营》</a>就能上手做AI项目。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/chuangshirenbiji/">上一篇：pandas创始人：我写了1本《利用Python进行数据分析》，提供全套代码</a>
+        
+        
+        <a href="http://localhost:4002/pdf2imgs/">下一篇：1行Python代码，实现PDF转图片，速度太太太太太快了</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

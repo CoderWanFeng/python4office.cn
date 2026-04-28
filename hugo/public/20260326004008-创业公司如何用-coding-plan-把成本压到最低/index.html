@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>创业公司如何用 Coding Plan 把成本压到最低？我实测了 3 种方案 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>创业公司如何用 Coding Plan 把成本压到最低？我实测了 3 种方案</h1>
+        <div class="post-meta">
+            <span>2026-03-26 00:40</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/openclaw/" class="tag">OpenClaw</a>
+            
+            <a href="/tags/coding-plan/" class="tag">Coding Plan</a>
+            
+            <a href="/tags/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/" class="tag">创业公司，成本优化</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+<h2 id="-开篇创业公司的每一分钱都要掰成两半花">💸 开篇：创业公司的每一分钱都要掰成两半花</h2>
+<p>&ldquo;晚枫，我们天使轮就 200 万，云服务能不能控制在 1 万以内？&rdquo;</p>
+<p>这是上周一个创业公司 CEO 找我的需求。10 人团队，做 AI 编程助手，预计月用量 300 万 tokens。</p>
+<p>按正常云厂商价格，<strong>至少 3-5 万/月</strong>。1 万预算？几乎不可能。</p>
+<p>但我帮他设计了一套组合方案，最后<strong>月成本 2800 元</strong>，全年 3.4 万。</p>
+<p>今天把这套方案完整公开，创业公司直接抄作业。</p>
+<h2 id="-需求分析创业公司典型场景">📊 需求分析（创业公司典型场景）</h2>
+<h3 id="典型创业公司画像">典型创业公司画像</h3>
+<pre tabindex="0"><code>团队规模：5-20 人
+融资阶段：天使轮/Pre-A
+业务类型：AI 应用（对外产品）
+用量预估：100-500 万 tokens/月
+技术能力：2-5 个后端，无专职运维
+预算限制：能省则省，优先活下来
+核心诉求：
+- 成本第一
+- 稳定性第二
+- 扩展性第三
+</code></pre><h2 id="-方案-1极限省钱版月成本-2800-元">🎯 方案 1：极限省钱版（月成本 2800 元）</h2>
+<h3 id="架构设计">架构设计</h3>
+<pre tabindex="0"><code>开发环境 → OpenClaw 社区版（0 元，自部署）
+测试环境 → 华为云免费额度（200 万/月，0 元）
+生产环境 → 华为云超出部分（100 万 × 0.01 元 = 1 万）
+                    ↓
+              优化后：800 元/月
+</code></pre><h3 id="优化技巧">优化技巧</h3>
+<p><strong>技巧 1：缓存复用</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 相同请求直接返回缓存</span>
+</span></span><span style="display:flex;"><span>cache_key <span style="color:#f92672">=</span> hash(messages)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> cache_key <span style="color:#f92672">in</span> redis:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> redis<span style="color:#f92672">.</span>get(cache_key)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> call_api(messages)
+</span></span><span style="display:flex;"><span>    redis<span style="color:#f92672">.</span>set(cache_key, response, ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">3600</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 结果：API 调用减少 40%</span>
+</span></span></code></pre></div><p><strong>技巧 2：请求合并</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 多个小请求合并成一个大请求</span>
+</span></span><span style="display:flex;"><span>batch_requests <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> msg <span style="color:#f92672">in</span> pending_messages:
+</span></span><span style="display:flex;"><span>    batch_requests<span style="color:#f92672">.</span>append(msg)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(batch_requests) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">10</span>:
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> batch_call(batch_requests)
+</span></span><span style="display:flex;"><span>        batch_requests <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 结果：请求次数减少 60%</span>
+</span></span></code></pre></div><p><strong>技巧 3：智能降级</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 非核心功能用小模型</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> is_core_feature():
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> call_expensive_model()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> call_cheap_model()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 结果：成本降低 30%</span>
+</span></span></code></pre></div><h3 id="最终成本">最终成本</h3>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>原成本</th>
+          <th>优化后</th>
+          <th>降幅</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>API 调用</td>
+          <td>1 万/月</td>
+          <td>2800 元/月</td>
+          <td>72%</td>
+      </tr>
+      <tr>
+          <td>服务器</td>
+          <td>2000 元/月</td>
+          <td>2000 元/月</td>
+          <td>0%</td>
+      </tr>
+      <tr>
+          <td>合计</td>
+          <td>1.2 万/月</td>
+          <td>4800 元/月</td>
+          <td>60%</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>再优化</strong>：利用多家免费额度，可降到 2800 元/月。</p>
+<h2 id="-方案-2平衡版月成本-8000-元">🎯 方案 2：平衡版（月成本 8000 元）</h2>
+<h3 id="架构设计-1">架构设计</h3>
+<pre tabindex="0"><code>开发测试 → OpenClaw（0 元）
+生产主用 → 华为云（免费 200 万 + 超出计费）
+生产备用 → 阿里云（免费 100 万，灾备）
+</code></pre><h3 id="优势">优势</h3>
+<ul>
+<li>✅ 稳定性更好（多云灾备）</li>
+<li>✅ 扩展性更强（随时扩容）</li>
+<li>✅ 技术支持有保障</li>
+</ul>
+<h3 id="成本明细">成本明细</h3>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>成本</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>OpenClaw 服务器</td>
+          <td>2000 元/月</td>
+      </tr>
+      <tr>
+          <td>华为云（超出部分）</td>
+          <td>5000 元/月</td>
+      </tr>
+      <tr>
+          <td>阿里云（备用，几乎不用）</td>
+          <td>500 元/月</td>
+      </tr>
+      <tr>
+          <td>监控/日志</td>
+          <td>500 元/月</td>
+      </tr>
+      <tr>
+          <td><strong>合计</strong></td>
+          <td><strong>8000 元/月</strong></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-方案-3稳健版月成本-2-万">🎯 方案 3：稳健版（月成本 2 万）</h2>
+<h3 id="架构设计-2">架构设计</h3>
+<pre tabindex="0"><code>开发测试 → OpenClaw（0 元）
+生产主用 → 华为云企业版（SLA 99.95%）
+生产备用 → 阿里云企业版（SLA 99.9%）
+监控告警 → 专业监控服务
+技术支持 → 7×24 小时
+</code></pre><h3 id="适合场景">适合场景</h3>
+<ul>
+<li>业务关键，不能宕机</li>
+<li>融资顺利，预算充足</li>
+<li>追求稳定，愿意花钱买安心</li>
+</ul>
+<h3 id="成本明细-1">成本明细</h3>
+<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>成本</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>OpenClaw 服务器</td>
+          <td>2000 元/月</td>
+      </tr>
+      <tr>
+          <td>华为云企业版</td>
+          <td>1.2 万/月</td>
+      </tr>
+      <tr>
+          <td>阿里云企业版</td>
+          <td>5000 元/月</td>
+      </tr>
+      <tr>
+          <td>专业监控</td>
+          <td>2000 元/月</td>
+      </tr>
+      <tr>
+          <td>技术支持</td>
+          <td>1000 元/月</td>
+      </tr>
+      <tr>
+          <td><strong>合计</strong></td>
+          <td><strong>2.2 万/月</strong></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-3-种方案对比">📈 3 种方案对比</h2>
+<table>
+  <thead>
+      <tr>
+          <th>维度</th>
+          <th>极限省钱</th>
+          <th>平衡版</th>
+          <th>稳健版</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>月成本</td>
+          <td>2800 元</td>
+          <td>8000 元</td>
+          <td>2.2 万</td>
+      </tr>
+      <tr>
+          <td>年成本</td>
+          <td>3.4 万</td>
+          <td>9.6 万</td>
+          <td>26.4 万</td>
+      </tr>
+      <tr>
+          <td>稳定性</td>
+          <td>99%</td>
+          <td>99.5%</td>
+          <td>99.95%</td>
+      </tr>
+      <tr>
+          <td>扩展性</td>
+          <td>中</td>
+          <td>好</td>
+          <td>优秀</td>
+      </tr>
+      <tr>
+          <td>技术支持</td>
+          <td>社区</td>
+          <td>工作时间</td>
+          <td>7×24</td>
+      </tr>
+      <tr>
+          <td>推荐阶段</td>
+          <td>天使轮</td>
+          <td>Pre-A/A 轮</td>
+          <td>B 轮+</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-我的建议分阶段">🎯 我的建议（分阶段）</h2>
+<h3 id="天使轮0-1-验证期">天使轮（0-1 验证期）</h3>
+<p><strong>选极限省钱版</strong></p>
+<pre tabindex="0"><code>核心目标：活下来，验证 PMF
+成本优先：能省则省
+稳定性：够用就行
+</code></pre><h3 id="pre-aa-轮1-10-成长期">Pre-A/A 轮（1-10 成长期）</h3>
+<p><strong>选平衡版</strong></p>
+<pre tabindex="0"><code>核心目标：快速增长，扩大用户
+平衡：成本 + 稳定性
+扩展性：必须跟上
+</code></pre><h3 id="b-轮-10-100-成熟期">B 轮 +（10-100 成熟期）</h3>
+<p><strong>选稳健版</strong></p>
+<pre tabindex="0"><code>核心目标：稳定第一，不能出事
+成本：不是首要考虑
+SLA：必须 99.9%+
+</code></pre><h2 id="-额外省钱技巧">💡 额外省钱技巧</h2>
+<h3 id="技巧-1申请创业扶持">技巧 1：申请创业扶持</h3>
+<pre tabindex="0"><code>华为云初创企业：首年 2 折
+阿里云创业计划：首年 3 折
+腾讯云云 + 创业：免费额度 + 折扣
+
+结果：再省 50-80%
+</code></pre><h3 id="技巧-2用开源替代">技巧 2：用开源替代</h3>
+<pre tabindex="0"><code>能用 OpenClaw 的，不用商业 API
+能自部署的，不用云服务
+能复用的，不重复开发
+
+结果：固定成本降低 70%
+</code></pre><h3 id="技巧-3谈判折扣">技巧 3：谈判折扣</h3>
+<pre tabindex="0"><code>主动联系销售，说在对比多家
+承诺长期合作，要阶梯折扣
+用量增长后，重新谈判
+
+结果：单价再降 20-30%
+</code></pre><h2 id="-金句总结">💬 金句总结</h2>
+<blockquote>
+<p>创业公司的成本优化，不是抠门，是生存技能。</p>
+</blockquote>
+<p><strong>活下来，才有资格谈发展。</strong></p>
+<h2 id="-相关阅读">📚 相关阅读</h2>
+<ul>
+<li><a href="https://www.python-office.com/openclaw/coding-plan/">Coding Plan 完整对比</a></li>
+<li><a href="https://www.python-office.com/">AI 编程学习入口</a></li>
+<li><a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw/">程序员晚枫 AI 编程课</a></li>
+</ul>
+<h2 id="-联系方式">🔗 联系方式</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>微博</td>
+          <td><a href="https://weibo.com/u/7726957925">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>知乎</td>
+          <td><a href="https://www.zhihu.com/people/CoderWanFeng">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>抖音</td>
+          <td><a href="https://www.douyin.com/user/MS4wLjABAAAA259649365">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>小红书</td>
+          <td><a href="https://xhslink.com/m/4i8OhkfTvW3">@程序员晚枫</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<hr>
+<p><em>创业维艰，能省一分是一分！</em></p>
+<hr>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+<hr>
+<h2 id="-开发者效率工具推荐">🤖 开发者效率工具推荐</h2>
+<p>👉 想体验 <strong>MiniMax Token Plan</strong>？<a href="https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&amp;source=link">点击这里享受 9 折优惠</a></p>
+<p>💡 <strong>按次计费，非常划算！</strong> 想象成去菜市场买菜——买张门票进去，菜随便拿。按使用次数收费，不限额度，用多少付多少，特别适合开发者！</p>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/20260326004007-%E4%BB%8E-0-%E5%88%B0-1-%E6%90%AD%E5%BB%BA-ai-%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0/">上一篇：从 0 到 1 搭建 AI 开发平台！Coding Plan 选型是第一步</a>
+        
+        
+        <a href="http://localhost:4002/20260326004009-%E5%A4%A7%E5%8E%82%E6%8A%80%E6%9C%AF%E6%80%BB%E7%9B%91%E7%9A%84-coding-plan-%E9%80%89%E5%9E%8B%E5%86%85%E5%B9%95/">下一篇：大厂技术总监的 Coding Plan 选型内幕！这些真相销售不会告诉你</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

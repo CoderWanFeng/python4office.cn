@@ -1,0 +1,56 @@
+---
+title: "Python知识图谱+免费资源整合"
+date: "2022-06-06T13:49:42+08:00"
+tags:
+---
+
+
+<!-- more -->
+# Python知识图谱+免费资源整合 V1.0版本
+
+| 项目持续维护中.......
+
+项目包含：脑图、png图片和md文档。方便你在不同场景下使用学习。
+不仅是一个自学的Python路径，项目包括Python自学的路径+知识图谱+免费视频的整合。
+
+| 视频说明：[https://www.bilibili.com/video/BV1Ry4y1m7Ai](https://www.bilibili.com/video/BV1Ry4y1m7Ai)
+
+你按照这个图谱学习Python，完全可以自学成功。
+
+我还建立了一个微信自学群，方便和我一起进步学习。我的微信号：aiwf365，加上我好友后，可以发送“我要学习”，我24小时内就会邀请你入群。
+承诺：群内无收费、无广告、无买卖行为，只为学习使用。
+
+另外，推荐关注微博“程序员晚枫”，有编程学习答疑 + 编程相关资料推送。
+
+![程序员晚枫公众号](https://www.python4office.cn/images/account-display/%E7%AD%94%E7%96%91%E5%BE%AE%E5%8D%9A.jpg)
+
+
+
+## 程序员晚枫的Python学习路径
+免费学习资源整合
+
+## Python基础
+基础语法很简单，把下面这套课，认真看完，足够了。
+- [10天自学Python，轻松掌握Python基础（精华版）](https://www.bilibili.com/video/BV1MM4y1G76j?spm_id_from=333.999.0.0)
+
+
+## Python中级
+我正在学习这个阶段的内容
+- [Python高级核心技术97讲](https://www.acfun.cn/v/ac35152150_24)
+    - [代码仓库](https://gitee.com/CoderWanFeng/python-course/tree/master/Python%E9%AB%98%E7%BA%A7%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF97%E8%AE%B2)
+
+## 相关阅读
+
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+
+
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。
+
+
+## 🎓 AI 编程实战课程
+
+想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
+
+- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+

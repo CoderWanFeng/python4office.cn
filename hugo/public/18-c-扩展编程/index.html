@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 18 讲：C 扩展编程——Python/C API 与扩展模块开发 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>第 18 讲：C 扩展编程——Python/C API 与扩展模块开发</h1>
+        <div class="post-meta">
+            <span>2026-03-03 11:30</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/python/" class="tag">python</a>
+            
+            <a href="/tags/cpython/" class="tag">CPython</a>
+            
+            <a href="/tags/c-%E6%89%A9%E5%B1%95python/c-api/" class="tag">C 扩展，Python/C API</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <blockquote>
+<p>大家好，我是正在实战各种 AI 项目的程序员晚枫。</p>
+</blockquote>
+<p><strong>用 C 编写 Python 模块，突破性能瓶颈！NumPy、Pandas 为什么这么快？答案就在这一讲。</strong></p>
+<hr>
+<h2 id="-开篇为什么需要-c-扩展">📖 开篇：为什么需要 C 扩展？</h2>
+<p>Python 很快，但不是所有场景都快：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python 循环：慢</span>
+</span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">7</span>):
+</span></span><span style="display:flex;"><span>    total <span style="color:#f92672">+=</span> i <span style="color:#f92672">*</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># NumPy：快！底层是 C 实现</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">7</span>) <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>NumPy、Pandas、TensorFlow 都是 C/C++ 扩展的典型例子。</p>
+<hr>
+<h2 id="-开发环境准备">🔧 开发环境准备</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 安装编译工具</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># macOS</span>
+</span></span><span style="display:flex;"><span>xcode-select --install
+</span></span><span style="display:flex;"><span>brew install python3-dev
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ubuntu/Debian</span>
+</span></span><span style="display:flex;"><span>sudo apt install python3-dev build-essential
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Windows: 安装 Visual Studio Build Tools</span>
+</span></span></code></pre></div><hr>
+<h2 id="-最简单的-c-扩展">📝 最简单的 C 扩展</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// mymodule.c
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define PY_SSIZE_T_CLEAN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Python.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 函数签名必须是 PyObject* 函数名(PyObject* self, PyObject* args)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 参数通过 PyArg_ParseTuple 解析
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> PyObject<span style="color:#f92672">*</span> <span style="color:#a6e22e">hello</span>(PyObject<span style="color:#f92672">*</span> self, PyObject<span style="color:#f92672">*</span> args) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// &#34;s&#34; 表示解析一个字符串参数
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">PyArg_ParseTuple</span>(args, <span style="color:#e6db74">&#34;s&#34;</span>, <span style="color:#f92672">&amp;</span>name)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">PyUnicode_FromFormat</span>(<span style="color:#e6db74">&#34;Hello, %s!&#34;</span>, name);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 方法表：定义模块中的函数
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> PyMethodDef MyMethods[] <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#34;hello&#34;</span>, hello, METH_VARARGS, <span style="color:#e6db74">&#34;Say hello to someone.&#34;</span>},
+</span></span><span style="display:flex;"><span>    {NULL, NULL, <span style="color:#ae81ff">0</span>, NULL}  <span style="color:#75715e">// 哨兵：方法表结束标记
+</span></span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 模块定义
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">struct</span> PyModuleDef mymodule <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    PyModuleDef_HEAD_INIT,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;mymodule&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;My first C extension module.&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,  <span style="color:#75715e">// 模块状态（-1 表示全局状态）
+</span></span></span><span style="display:flex;"><span>    MyMethods
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 模块初始化函数：必须是 PyInit_模块名()
+</span></span></span><span style="display:flex;"><span>PyMODINIT_FUNC <span style="color:#a6e22e">PyInit_mymodule</span>(<span style="color:#66d9ef">void</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">PyModule_Create</span>(<span style="color:#f92672">&amp;</span>mymodule);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="编译安装">编译安装</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># setup.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> setup, Extension
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>setup(
+</span></span><span style="display:flex;"><span>    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mymodule&#39;</span>,
+</span></span><span style="display:flex;"><span>    version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1.0&#39;</span>,
+</span></span><span style="display:flex;"><span>    ext_modules<span style="color:#f92672">=</span>[Extension(<span style="color:#e6db74">&#39;mymodule&#39;</span>, [<span style="color:#e6db74">&#39;mymodule.c&#39;</span>])],
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 编译并安装</span>
+</span></span><span style="display:flex;"><span>python setup.py build_ext --inplace
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或安装到系统</span>
+</span></span><span style="display:flex;"><span>pip install .
+</span></span></code></pre></div><h3 id="使用">使用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> mymodule
+</span></span><span style="display:flex;"><span>print(mymodule<span style="color:#f92672">.</span>hello(<span style="color:#e6db74">&#34;Python&#34;</span>))  <span style="color:#75715e"># Hello, Python!</span>
+</span></span></code></pre></div><hr>
+<h2 id="-参数解析">📊 参数解析</h2>
+<p>PyArg_ParseTuple 是 C 扩展中最重要的函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> PyObject<span style="color:#f92672">*</span> <span style="color:#a6e22e">math_ops</span>(PyObject<span style="color:#f92672">*</span> self, PyObject<span style="color:#f92672">*</span> args) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a, b;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> op;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// &#34;is&#34; 表示：int 和 string
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">PyArg_ParseTuple</span>(args, <span style="color:#e6db74">&#34;is&#34;</span>, <span style="color:#f92672">&amp;</span>a, <span style="color:#f92672">&amp;</span>op)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">strcmp</span>(op, <span style="color:#e6db74">&#34;add&#34;</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">PyLong_FromLong</span>(a <span style="color:#f92672">+</span> b);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">PyLong_FromLong</span>(a <span style="color:#f92672">-</span> b);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="常用格式字符串">常用格式字符串</h3>
+<table>
+  <thead>
+      <tr>
+          <th>格式</th>
+          <th>Python 类型</th>
+          <th>C 类型</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>i</code></td>
+          <td>int</td>
+          <td>int</td>
+      </tr>
+      <tr>
+          <td><code>l</code></td>
+          <td>int</td>
+          <td>long</td>
+      </tr>
+      <tr>
+          <td><code>d</code></td>
+          <td>float</td>
+          <td>double</td>
+      </tr>
+      <tr>
+          <td><code>s</code></td>
+          <td>str</td>
+          <td>char*</td>
+      </tr>
+      <tr>
+          <td><code>O</code></td>
+          <td>任意</td>
+          <td>PyObject*</td>
+      </tr>
+      <tr>
+          <td><code>ii</code></td>
+          <td>int, int</td>
+          <td>int, int</td>
+      </tr>
+      <tr>
+          <td><code>(i,i)</code></td>
+          <td>tuple</td>
+          <td>int*, int*</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-处理-python-对象">🧠 处理 Python 对象</h2>
+<h3 id="操作-python-列表">操作 Python 列表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> PyObject<span style="color:#f92672">*</span> <span style="color:#a6e22e">sum_list</span>(PyObject<span style="color:#f92672">*</span> self, PyObject<span style="color:#f92672">*</span> args) {
+</span></span><span style="display:flex;"><span>    PyObject<span style="color:#f92672">*</span> py_list;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// &#34;O&#34; 解析任意 Python 对象
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">PyArg_ParseTuple</span>(args, <span style="color:#e6db74">&#34;O&#34;</span>, <span style="color:#f92672">&amp;</span>py_list)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">PyList_Check</span>(py_list)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">PyErr_SetString</span>(PyExc_TypeError, <span style="color:#e6db74">&#34;Expected a list!&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    Py_ssize_t size <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyList_Size</span>(py_list);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (Py_ssize_t i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> size; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        PyObject<span style="color:#f92672">*</span> item <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyList_GetItem</span>(py_list, i);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// PyNumber_Check 可以检查是否是数字
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">PyLong_Check</span>(item)) {
+</span></span><span style="display:flex;"><span>            total <span style="color:#f92672">+=</span> <span style="color:#a6e22e">PyLong_AsDouble</span>(item);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">PyFloat_FromDouble</span>(total);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="引用计数最重要">引用计数（最重要！）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 规则 1：PyArg_ParseTuple 不增加引用计数，无需 DECREF
+</span></span></span><span style="display:flex;"><span>PyObject<span style="color:#f92672">*</span> obj;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">PyArg_ParseTuple</span>(args, <span style="color:#e6db74">&#34;O&#34;</span>, <span style="color:#f92672">&amp;</span>obj);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// obj 借用引用，不要 Py_DECREF(obj)
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 规则 2：PyList_GetItem 返回借用引用，不要 DECREF
+</span></span></span><span style="display:flex;"><span>PyObject<span style="color:#f92672">*</span> item <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyList_GetItem</span>(list, <span style="color:#ae81ff">0</span>);  <span style="color:#75715e">// 借用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 不要 Py_DECREF(item)
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 规则 3：PyLong_FromLong 返回新引用，必须 DECREF
+</span></span></span><span style="display:flex;"><span>PyObject<span style="color:#f92672">*</span> result <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyLong_FromLong</span>(<span style="color:#ae81ff">42</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> result;  <span style="color:#75715e">// 转移所有权给调用者
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 或者 Py_DECREF(result);
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 规则 4：Py_INCREF 增加引用计数
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">Py_INCREF</span>(obj);  <span style="color:#75715e">// 增加引用
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">Py_DECREF</span>(obj);  <span style="color:#75715e">// 减少引用
+</span></span></span></code></pre></div><p><strong>引用计数错误是 C 扩展中最常见的 bug</strong>：</p>
+<ul>
+<li>忘记 DECREF → 内存泄漏</li>
+<li>多次 DECREF → 崩溃</li>
+</ul>
+<hr>
+<h2 id="-高性能示例向量化加法">⚡ 高性能示例：向量化加法</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// fastmath.c
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> PyObject<span style="color:#f92672">*</span> <span style="color:#a6e22e">vector_add</span>(PyObject<span style="color:#f92672">*</span> self, PyObject<span style="color:#f92672">*</span> args) {
+</span></span><span style="display:flex;"><span>    PyObject <span style="color:#f92672">*</span>list_a, <span style="color:#f92672">*</span>list_b;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">PyArg_ParseTuple</span>(args, <span style="color:#e6db74">&#34;OO&#34;</span>, <span style="color:#f92672">&amp;</span>list_a, <span style="color:#f92672">&amp;</span>list_b)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Py_ssize_t size <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyList_Size</span>(list_a);
+</span></span><span style="display:flex;"><span>    PyObject<span style="color:#f92672">*</span> result <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyList_New</span>(size);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (Py_ssize_t i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> size; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> a <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyFloat_AsDouble</span>(<span style="color:#a6e22e">PyList_GetItem</span>(list_a, i));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> b <span style="color:#f92672">=</span> <span style="color:#a6e22e">PyFloat_AsDouble</span>(<span style="color:#a6e22e">PyList_GetItem</span>(list_b, i));
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">PyList_SET_ITEM</span>(result, i, <span style="color:#a6e22e">PyFloat_FromDouble</span>(a <span style="color:#f92672">+</span> b));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>对比性能：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python 版本</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">py_add</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [x <span style="color:#f92672">+</span> y <span style="color:#66d9ef">for</span> x, y <span style="color:#f92672">in</span> zip(a, b)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># C 扩展版本</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> fastmath
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> [random<span style="color:#f92672">.</span>random() <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> [random<span style="color:#f92672">.</span>random() <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>perf_counter()
+</span></span><span style="display:flex;"><span>c1 <span style="color:#f92672">=</span> py_add(a, b)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Python: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>perf_counter()<span style="color:#f92672">-</span>t1<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t2 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>perf_counter()
+</span></span><span style="display:flex;"><span>c2 <span style="color:#f92672">=</span> fastmath<span style="color:#f92672">.</span>vector_add(a, b)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;C 扩展: </span><span style="color:#e6db74">{</span>time<span style="color:#f92672">.</span>perf_counter()<span style="color:#f92672">-</span>t2<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#39;</span>)
+</span></span></code></pre></div><hr>
+<h2 id="-cython更简单的方式">🔄 Cython（更简单的方式）</h2>
+<p>如果不想直接写 C 代码，可以用 Cython：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cython" data-lang="cython"><span style="display:flex;"><span><span style="color:#75715e"># fastcython.pyx</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vector_add</span>(list a, list b):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cdef</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cdef</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> len(a)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cdef</span> <span style="color:#66d9ef">list</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.0</span>] <span style="color:#f92672">*</span> n
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>        result[i] <span style="color:#f92672">=</span> float(a[i]) <span style="color:#f92672">+</span> float(b[i])
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># setup.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> setup
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> Cython.Build <span style="color:#f92672">import</span> cythonize
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>setup(
+</span></span><span style="display:flex;"><span>    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;fastcython&#39;</span>,
+</span></span><span style="display:flex;"><span>    ext_modules<span style="color:#f92672">=</span>cythonize(<span style="color:#e6db74">&#39;fastcython.pyx&#39;</span>),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><hr>
+<h2 id="-本节作业">💡 本节作业</h2>
+<ol>
+<li>用 C 扩展实现一个 <code>factorial(n)</code> 函数</li>
+<li>用 <code>PyArg_ParseTuple</code> 解析多个参数</li>
+<li>尝试用 Cython 改写一个 Python 函数</li>
+</ol>
+<hr>
+<h2 id="-本讲总结">🎯 本讲总结</h2>
+<p><strong>C 扩展基础</strong>：PyObject*、PyArg_ParseTuple、方法表、模块初始化函数。</p>
+<p><strong>参数解析</strong>：格式字符串（i、s、O 等）解析 Python 参数为 C 类型。</p>
+<p><strong>引用计数</strong>：借用引用 vs 新引用，DECREF 错误是最常见的 bug。</p>
+<p><strong>性能对比</strong>：C 扩展比纯 Python 快 10-100 倍，Cython 是更简单的替代方案。</p>
+<hr>
+<h2 id="-推荐教材">📚 推荐教材</h2>
+<p><strong><a href="https://u.jd.com/NGMHz3T">《Python 编程从入门到实践（第 3 版）》</a></strong> | <strong><a href="https://u.jd.com/NOMBOOz">《流畅的 Python（第 2 版）》</a></strong> | <strong><a href="https://u.jd.com/NaM5rNE">《CPython 设计与实现》</a></strong></p>
+<hr>
+<h2 id="-课程导航">🔗 课程导航</h2>
+<p>← <a href="17-%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E7%B3%BB%E7%BB%9F.md">上一讲：模块导入系统</a> | <a href="19-%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96.md">下一讲：性能分析与优化</a> →</p>
+<hr>
+<h2 id="-联系我">💬 联系我</h2>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>账号/链接</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>微信</td>
+          <td><a href="https://www.python4office.cn/wechat-qrcode/">扫码加好友</a></td>
+      </tr>
+      <tr>
+          <td>B 站</td>
+          <td><a href="https://space.bilibili.com/259649365">Python 自动化办公社区</a></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>主营业务</strong>：AI 编程培训、企业内训、技术咨询</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/17-%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E7%B3%BB%E7%BB%9F/">上一篇：第 17 讲：模块导入系统——import 机制与 sys.modules 详解</a>
+        
+        
+        <a href="http://localhost:4002/19-%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96/">下一篇：第 19 讲：性能分析与优化——cProfile、perf 与优化技巧</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>

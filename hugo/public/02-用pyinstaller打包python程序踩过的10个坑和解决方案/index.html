@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4002&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用PyInstaller打包Python程序，踩过的10个坑和解决方案 - 程序员晚枫 - Python自动化办公与AI编程</title>
+    <meta name="description" content="程序员晚枫的个人网站，专注于Python自动化办公、AI编程技术分享">
+    <meta name="author" content="程序员晚枫">
+    <link rel="icon" type="image/jpeg" href="https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px 0; }
+        header h1 a { color: #333; text-decoration: none; font-size: 24px; }
+        nav { display: flex; gap: 20px; margin-top: 15px; }
+        nav a { color: #666; text-decoration: none; }
+        nav a:hover { color: #007bff; }
+        main { padding: 40px 0; }
+        .post-list { display: grid; gap: 20px; }
+        .post-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .post-card h2 { margin-bottom: 10px; }
+        .post-card h2 a { color: #333; text-decoration: none; }
+        .post-card h2 a:hover { color: #007bff; }
+        .post-meta { color: #999; font-size: 14px; margin-bottom: 10px; }
+        .post-excerpt { color: #666; }
+        .post-cover { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 40px; }
+        .pagination a { padding: 8px 16px; background: #fff; border-radius: 4px; text-decoration: none; color: #333; }
+        .pagination a:hover { background: #007bff; color: #fff; }
+        footer { background: #fff; padding: 20px 0; text-align: center; color: #999; margin-top: 40px; border-top: 1px solid #eee; }
+        footer a { color: #666; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: #e9ecef; padding: 4px 12px; border-radius: 20px; font-size: 12px; color: #666; text-decoration: none; }
+        .categories { margin-bottom: 10px; }
+        .category { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="http://localhost:4002/">程序员晚枫 - Python自动化办公与AI编程</a></h1>
+            <nav>
+                <a href="http://localhost:4002/">首页</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+<article class="single-post">
+    <header class="post-header">
+        <h1>用PyInstaller打包Python程序，踩过的10个坑和解决方案</h1>
+        <div class="post-meta">
+            <span>2026-04-17 22:20</span>
+            
+        </div>
+        
+        <div class="tags">
+            
+            <a href="/tags/pyinstaller/" class="tag">PyInstaller</a>
+            
+            <a href="/tags/python/" class="tag">Python</a>
+            
+            <a href="/tags/%E6%89%93%E5%8C%85/" class="tag">打包</a>
+            
+            <a href="/tags/%E5%9D%91/" class="tag">坑</a>
+            
+            <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="tag">解决方案</a>
+            
+        </div>
+        
+    </header>
+
+    
+
+    <div class="post-content">
+        <h2 id="写在前面">写在前面</h2>
+<p>大家好，我是程序员晚枫。</p>
+<p>在维护python-office开源项目的过程中，我帮很多用户解决过PyInstaller打包的问题。说实话，PyInstaller虽然好用，但坑是真的不少。</p>
+<p>今天我把最常遇到的10个坑整理出来，附上解决方案。如果你也遇到了打包问题，看看这里有没有你的答案。</p>
+<h2 id="坑1打包后运行提示no-module-named-xxx">坑1：打包后运行提示&quot;No module named xxx&quot;</h2>
+<p><strong>最常见的问题，没有之一。</strong></p>
+<p>你本地运行好好的，打包成exe之后就报找不到模块。</p>
+<p><strong>原因</strong>：PyInstaller有时候检测不到隐式导入的模块。</p>
+<p><strong>解决方案</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pyinstaller --hidden-import<span style="color:#f92672">=</span>missing_module your_script.py
+</span></span></code></pre></div><p>如果有多个：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pyinstaller --hidden-import<span style="color:#f92672">=</span>module1 --hidden-import<span style="color:#f92672">=</span>module2 your_script.py
+</span></span></code></pre></div><h2 id="坑2打包后找不到数据文件">坑2：打包后找不到数据文件</h2>
+<p>程序在代码目录下能读到配置文件，打包后就读不到了。</p>
+<p><strong>原因</strong>：PyInstaller打包后，运行路径会变化，相对路径不再有效。</p>
+<p><strong>解决方案</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">resource_path</span>(relative_path):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;获取资源文件的绝对路径（兼容开发环境和打包后环境）&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> hasattr(sys, <span style="color:#e6db74">&#39;_MEIPASS&#39;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(sys<span style="color:#f92672">.</span>_MEIPASS, relative_path)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(<span style="color:#e6db74">&#34;.&#34;</span>), relative_path)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用</span>
+</span></span><span style="display:flex;"><span>config_file <span style="color:#f92672">=</span> resource_path(<span style="color:#e6db74">&#34;config.json&#34;</span>)
+</span></span></code></pre></div><h2 id="坑3打包文件太大">坑3：打包文件太大</h2>
+<p>一个简单的脚本打包出来上百MB，让人怀疑人生。</p>
+<p><strong>解决方案</strong>：</p>
+<ol>
+<li>在虚拟环境中打包，避免打包不必要的库</li>
+<li>排除不需要的模块：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pyinstaller --exclude-module matplotlib --exclude-module numpy your_script.py
+</span></span></code></pre></div><ol start="3">
+<li>使用UPX压缩（可减小30%-50%体积）</li>
+</ol>
+<h2 id="坑4windows-defender误报病毒">坑4：Windows Defender误报病毒</h2>
+<p>打包的exe被杀毒软件拦截，提示&quot;有病毒&quot;。</p>
+<p><strong>原因</strong>：PyInstaller打包的exe确实容易被误报。</p>
+<p><strong>解决方案</strong>：</p>
+<ol>
+<li>代码签名（需要购买证书，推荐正式产品使用）</li>
+<li>提交到杀毒软件白名单</li>
+<li>用户手动添加信任</li>
+</ol>
+<h2 id="坑5打包后启动很慢">坑5：打包后启动很慢</h2>
+<p>双击exe之后要等好几秒才出现界面。</p>
+<p><strong>原因</strong>：单文件模式（-F）启动时需要先解压临时文件。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li>如果不要求单文件，用默认的文件夹模式，启动会快很多</li>
+<li>或者使用<code>--noupx</code>禁用UPX压缩，也能加快启动</li>
+</ul>
+<h2 id="坑6动态库找不到">坑6：动态库找不到</h2>
+<p>报错类似&quot;libxxx.so not found&quot;或&quot;DLL load failed&quot;。</p>
+<p><strong>解决方案</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pyinstaller --add-binary <span style="color:#e6db74">&#34;/usr/lib/libxxx.so:.&#34;</span> your_script.py
+</span></span></code></pre></div><p>把动态库手动指定进去。</p>
+<h2 id="坑7打包后gui不显示">坑7：打包后GUI不显示</h2>
+<p>命令行程序打包正常，但GUI程序打包后界面不出来。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li>确保你加了<code>-w</code>参数隐藏控制台</li>
+<li>如果是PyQt/PySide，确保用了正确的导入方式</li>
+<li>检查GUI库是否在hidden-import中</li>
+</ul>
+<h2 id="坑8mac上打包后无法运行">坑8：Mac上打包后无法运行</h2>
+<p>在Windows上打包没问题，换到Mac上就不行了。</p>
+<p><strong>原因</strong>：Mac有严格的代码签名和公证要求。</p>
+<p><strong>解决方案</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 打包后手动签名</span>
+</span></span><span style="display:flex;"><span>codesign --deep --force --verify --verbose --sign <span style="color:#e6db74">&#34;Developer ID&#34;</span> dist/your_app
+</span></span></code></pre></div><h2 id="坑9多进程程序打包后报错">坑9：多进程程序打包后报错</h2>
+<p>使用了multiprocessing的程序，打包后运行崩溃。</p>
+<p><strong>解决方案</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> multiprocessing
+</span></span><span style="display:flex;"><span>multiprocessing<span style="color:#f92672">.</span>freeze_support()  <span style="color:#75715e"># 必须加这行</span>
+</span></span></code></pre></div><p>并且确保主程序入口在<code>if __name__ == '__main__':</code>下面。</p>
+<h2 id="坑10spec文件配置混乱">坑10：spec文件配置混乱</h2>
+<p>命令行参数太多记不住，想用spec文件配置，但不知道怎么改。</p>
+<p><strong>解决方案</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 先生成spec文件（不要直接打包）</span>
+</span></span><span style="display:flex;"><span>pyinstaller --onefile --windowed your_script.py
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 修改生成的your_script.spec文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 然后用spec文件打包</span>
+</span></span><span style="display:flex;"><span>pyinstaller your_script.spec
+</span></span></code></pre></div><p>spec文件是PyInstaller的配置文件，修改起来比命令行参数更清晰。</p>
+<h2 id="-总结">📚 总结</h2>
+<table>
+  <thead>
+      <tr>
+          <th>坑</th>
+          <th>关键词</th>
+          <th>难度</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>隐藏导入</td>
+          <td>⭐</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>资源路径</td>
+          <td>⭐⭐</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>文件太大</td>
+          <td>⭐⭐</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>误报病毒</td>
+          <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>启动慢</td>
+          <td>⭐</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>动态库</td>
+          <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>GUI不显示</td>
+          <td>⭐⭐</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>Mac签名</td>
+          <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>多进程</td>
+          <td>⭐⭐</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>spec配置</td>
+          <td>⭐</td>
+      </tr>
+  </tbody>
+</table>
+<p>如果你在打包过程中遇到了其他问题，欢迎来找我交流。</p>
+<p>👇 扫码添加微信，咨询PyInstaller打包问题
+微信号：aiwf365</p>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a href="01-%E5%86%99%E5%A5%BD%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E6%80%8E%E4%B9%88%E5%88%86%E4%BA%AB%E7%BB%99%E5%88%AB%E4%BA%BAPyInstaller%E6%89%93%E5%8C%85%E6%95%99%E7%A8%8B.md">写好的Python程序怎么分享给别人？PyInstaller打包教程</a></li>
+<li><a href="03-%E4%B8%80%E4%B8%AAPython%E8%84%9A%E6%9C%AC%E5%8F%98%E6%88%90%E7%8B%AC%E7%AB%8Bexe%E5%8F%AA%E9%9C%80%E8%A6%81%E8%BF%993%E6%AD%A5.md">一个Python脚本变成独立exe，只需要这3步</a></li>
+</ul>
+<p>程序员晚枫专注Python自动化办公和AI编程实战教学，github 1000+ star开源项目python-office作者。</p>
+<h2 id="-ai-编程实战课程">🎓 AI 编程实战课程</h2>
+<p>想系统学习 AI 编程？程序员晚枫的 <strong>AI 编程实战课</strong> 帮你从零上手！</p>
+<ul>
+<li>👉 <strong>课程报名</strong>：<a href="https://r7up9.xetslk.com/s/1uP5YW">点击这里报名，前3讲免费试听</a></li>
+<li>👉 <strong>免费试看</strong>：<a href="https://www.bilibili.com/cheese/play/ss982042944">B站免费试看前3讲，先看看适不适合自己</a></li>
+</ul>
+
+    </div>
+
+    <nav class="post-nav">
+        
+        <a href="http://localhost:4002/02-%E6%80%8E%E4%B9%88%E8%AE%A9ai%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8E%A8%E8%8D%90%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99geo%E4%BC%98%E5%8C%96%E5%AE%9E%E6%93%8D%E6%8C%87%E5%8D%97/">上一篇：怎么让AI搜索引擎推荐你的网站？GEO优化实操指南</a>
+        
+        
+        <a href="http://localhost:4002/02-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9D%A2%E8%AF%95%E5%AE%98%E7%88%B1%E9%97%AEpython%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%BA%95%E5%B1%82%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E7%9A%84/">下一篇：为什么面试官爱问Python的数据类型底层是怎么实现的</a>
+        
+    </nav>
+</article>
+
+<style>
+.single-post { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.post-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.post-header h1 { font-size: 32px; margin-bottom: 15px; }
+.post-content { line-height: 1.8; }
+.post-content h2 { margin: 30px 0 15px; font-size: 24px; }
+.post-content h3 { margin: 25px 0 10px; font-size: 20px; }
+.post-content p { margin: 15px 0; }
+.post-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+.post-content pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+.post-content pre code { background: none; padding: 0; }
+.post-nav { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.post-nav a { color: #007bff; }
+</style>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2020-2026 程序员晚枫</p>
+            <p>备案号：<a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021040536号-1</a></p>
+        </div>
+    </footer>
+</body>
+</html>
