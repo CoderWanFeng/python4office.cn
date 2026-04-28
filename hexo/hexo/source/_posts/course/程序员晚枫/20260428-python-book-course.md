@@ -133,9 +133,7 @@ cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&
 
 ### 扫码立即报名
 
-<p align="center">
-<img src="/Users/wanfeng/Downloads/Python编程：从入门到实践（第3版） .png" width="100%" alt="课程海报"/>
-</p>
+![Python编程：从入门到实践（第3版） .png](https://raw.atomgit.com/user-images/assets/5027920/a8bdeb7d-f6a8-4ad5-8020-e206055dd039/Python编程：从入门到实践_第3版__.png 'Python编程：从入门到实践（第3版） .png')
 
 **扫码添加我的微信，备注「Python入门」即可报名咨询**
 
