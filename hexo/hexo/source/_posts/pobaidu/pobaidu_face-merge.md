@@ -1,10 +1,14 @@
 ﻿---
 
+
 title: 1行Python代码实现AI换脸，难辨真假！网友：细思极恐
 date: 2023-02-03 23:33:58
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+
 
 ---
+
 
 
 

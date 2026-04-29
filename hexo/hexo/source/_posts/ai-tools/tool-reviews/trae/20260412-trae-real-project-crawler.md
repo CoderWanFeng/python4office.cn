@@ -1,4 +1,4 @@
----
+﻿---
 title: "用 Trae 做了一个爬虫：真实记录全过程"
 date: 2026-04-12 00:00:00
 categories:
@@ -17,6 +17,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![用 Trae 做了一个爬虫：真实记录全过程 - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![用 Trae 做了一个爬虫：真实记录全过程 - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+
 # 用 Trae 做了一个爬虫：真实记录全过程
 
 ## 先说结论

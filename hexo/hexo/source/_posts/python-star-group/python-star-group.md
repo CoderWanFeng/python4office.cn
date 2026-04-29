@@ -1,14 +1,22 @@
 ﻿---
 
+
 title: python-star-group
 date: 2022-07-07 10:17:21
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+
 
 ---
 
 
 
+
 <!-- more -->
+
+![python-star-group - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![python-star-group - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)。
 
 今年下半年开始，我打算做一个知识星球，和你一起学习。

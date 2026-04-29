@@ -1,4 +1,4 @@
----
+﻿---
 title: 京东云 JD Cloud Coding Plan 入门教程：从注册到用上 AI 编程（2026最新版）
 keywords: [京东云 Coding Plan 教程, JD Cloud AI 编程入门, 京点点使用教程, 程序员晚枫]
 description: 程序员晚枫手把手教你用京东云 JD Cloud Coding Plan，从注册到配置开发工具，图文并茂适合小白。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![京东云 JD Cloud Coding Plan 入门教程：从注册到用上 AI 编程（2026最新版） - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![京东云 JD Cloud Coding Plan 入门教程：从注册到用上 AI 编程（2026最新版） - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

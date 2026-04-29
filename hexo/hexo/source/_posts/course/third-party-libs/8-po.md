@@ -1,4 +1,4 @@
----
+﻿---
 title: 26.7万下载！Python自动化办公专用库：python-office，发布1.0.0版本
 date: 2024-12-4 00:41:49
 tags: [ 第三方库,pip ]
@@ -8,6 +8,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![26.7万下载！Python自动化办公专用库：python-office，发布1.0.0版本 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/%E5%B0%81%E9%9D%A2/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93.jpg)

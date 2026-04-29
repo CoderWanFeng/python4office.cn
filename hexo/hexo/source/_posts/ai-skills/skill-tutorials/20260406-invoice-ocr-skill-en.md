@@ -1,4 +1,4 @@
----
+﻿---
 title: "Invoice OCR Recognition Skill Practice: Auto-Extract Information to Generate Reimbursement Form"
 date: 2026-04-06 10:42:00
 tags: [OCR, Invoice Recognition, Skill, AI Office, Finance Automation, Tutorial]
@@ -11,6 +11,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 </p>
 
 <!-- more -->
+
+![Invoice OCR Recognition Skill Practice: Auto-Extract Information to Generate Reimbursement Form - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 
 Hello everyone, I'm Programmer Wanfeng, practicing various AI projects.
 

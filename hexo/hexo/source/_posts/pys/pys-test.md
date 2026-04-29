@@ -1,13 +1,21 @@
 ﻿---
 
+
 title: pys-test
 date: 2022-12-17 03:16:55
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![pys-test - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![pys-test - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 ## 相关阅读
 
 - [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)

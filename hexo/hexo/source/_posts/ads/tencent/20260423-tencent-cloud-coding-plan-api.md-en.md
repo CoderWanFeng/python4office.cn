@@ -1,4 +1,4 @@
----
+﻿---
 title: "Tencent Cloud Coding Plan API Tutorial: How Programmers Integrate Tencent Hunyuan Large Model"
 keywords: [Tencent Cloud Coding Plan API, Tencent Hunyuan API, AI Programming Integration, 程序员晚枫]
 description: Programmer Wan Feng teaches you: Tencent Cloud Coding Plan API integration tutorial, integrate Hunyuan in 3 steps, with code examples.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Tencent Cloud Coding Plan API Tutorial: How Programmers Integrate Tencent Hunyuan Large Model - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Tencent Cloud Coding Plan API Tutorial: How Programmers Integrate Tencent Hunyuan Large Model - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 >

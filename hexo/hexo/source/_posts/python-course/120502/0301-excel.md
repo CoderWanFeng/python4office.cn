@@ -1,4 +1,4 @@
----
+﻿---
 title: 给小白的《30讲 · Python数据分析》
 date: 2024-03-01 10:31:05
 tags: pandas
@@ -9,6 +9,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ## 课程资料
 
 <!-- more -->
+
+![给小白的《30讲 · Python数据分析》 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 
 
 课程代码 + excel文档 + 软件 + 学习群 

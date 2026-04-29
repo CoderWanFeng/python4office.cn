@@ -1,4 +1,4 @@
----
+﻿---
 title: Alibaba Cloud Coding Plan Comparison: vs Volcano Ark vs Tencent Cloud TOKEN Plan, Which One Is Right for You?
 tags: [Alibaba Cloud Coding Plan Comparison, Coding Plan Evaluation, Alibaba vs Volcano Ark, Alibaba vs Tencent Cloud, AI Programming Tool Selection, Programmer Wanfeng]
 categories: [AI Programming, Tool Comparison]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Alibaba Cloud Coding Plan Comparison: vs Volcano Ark vs Tencent Cloud TOKEN Plan, Which One Is Right for You? - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![Alibaba Cloud Coding Plan Comparison: vs Volcano Ark vs Tencent Cloud TOKEN Plan, Which One Is Right for You? - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 > **Author: Programmer Wanfeng | AI Programming Evangelist | Focus on AI Tool Evaluation and Teaching**
 > 
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office

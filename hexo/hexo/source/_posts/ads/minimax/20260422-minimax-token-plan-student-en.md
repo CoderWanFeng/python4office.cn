@@ -1,5 +1,6 @@
 ﻿---
 
+
 title: "MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭"
 date: 2026-04-22 00:00:00
 categories:
@@ -15,11 +16,18 @@ tags:
   - 省钱
   - 优惠
 description: "学生党也能用得起的 AI 助手！29元/月，走链接9折，更便宜"
+cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 # MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭
 

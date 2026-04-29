@@ -1,4 +1,4 @@
----
+﻿---
 title: "第1讲：什么是 AI Skill？为什么现在必须学？"
 date: 2026-04-06 11:00:00
 tags: ["AI Skill", "入门", "课程"]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![第1讲：什么是 AI Skill？为什么现在必须学？ - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # 第1讲：什么是 AI Skill？为什么现在必须学？
 
 > 本讲是整个课程的起点，带你建立对 AI Skill 的完整认知。

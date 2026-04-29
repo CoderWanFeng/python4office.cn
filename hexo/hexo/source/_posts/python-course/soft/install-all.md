@@ -1,4 +1,4 @@
----
+﻿---
 title: 学习Python，必须安装的几个软件
 date: 2024-03-11 01:41:49
 tags: [Python,软件]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![学习Python，必须安装的几个软件 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![学习Python，必须安装的几个软件 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## 相关阅读
 
 - [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)

@@ -1,4 +1,4 @@
----
+﻿---
 title: VsCode开发C++程序 - 环境配置：编译器和插件
 date: 2023-02-10 23:19:54
 tags: C++
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 <!-- more -->
+
+![VsCode开发C++程序 - 环境配置：编译器和插件 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![VsCode开发C++程序 - 环境配置：编译器和插件 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 下载mingw：https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/
 
 ## 相关阅读

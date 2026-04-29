@@ -1,4 +1,4 @@
----
+﻿---
 title: 对比了5款AI助手方案后，我选择了腾讯云OpenClaw｜4月10日郑州分享选型心得
 keywords: 程序员晚枫, 腾讯云OpenClaw, AI助手方案对比, 选型指南, 郑州龙虾课, AI工具选型
 description: 程序员晚枫对比5款AI助手方案：腾讯云OpenClaw、自己搭建、SaaS服务等，分享选型思路和成本分析，4月10日郑州龙虾课交流。
@@ -19,6 +19,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 最近想给业务搭个AI助手，调研了市面上5种方案。今天分享对比过程和最终选择，**4月10日郑州龙虾课**，现场聊聊选型那些坑。
 
 <!-- more -->
+
+![对比了5款AI助手方案后，我选择了腾讯云OpenClaw｜4月10日郑州分享选型心得 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![对比了5款AI助手方案后，我选择了腾讯云OpenClaw｜4月10日郑州分享选型心得 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 ## 我的需求背景
 

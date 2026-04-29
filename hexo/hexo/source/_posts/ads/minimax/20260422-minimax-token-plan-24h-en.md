@@ -1,5 +1,6 @@
 ﻿---
 
+
 title: "凌晨2点问 AI：MiniMax TOKEN Plan 救命实测"
 date: 2026-04-22 00:00:00
 categories:
@@ -15,11 +16,18 @@ tags:
   - 救命
   - 开发者
 description: "凌晨2点代码突然崩了，AI居然秒回救命！用 TOKEN Plan 真的很靠谱"
+cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![凌晨2点问 AI：MiniMax TOKEN Plan 救命实测 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![凌晨2点问 AI：MiniMax TOKEN Plan 救命实测 - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 # 凌晨2点问 AI：MiniMax TOKEN Plan 救命实测
 

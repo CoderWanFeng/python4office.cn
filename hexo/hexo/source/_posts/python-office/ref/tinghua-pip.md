@@ -1,4 +1,4 @@
----
+﻿---
 title: 下载速度提升100倍，清华大学杀疯了！
 date: 2023-09-30 18:41:04
 tags: 开源
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![下载速度提升100倍，清华大学杀疯了！ - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![下载速度提升100倍，清华大学杀疯了！ - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)。国庆假期，大家去哪里玩耍了？
 
 这个假期我哪也没去，一直待在家里更新课程：[给小白的《50讲Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)，截止今晚的这篇文章发布，已经更新到第41讲了。

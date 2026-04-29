@@ -1,4 +1,4 @@
----
+﻿---
 title: Python0基础，如何识别照片信息并且保存在Excel中？
 date: 2023-04-25 22:32:02
 tags: 1对1咨询
@@ -11,6 +11,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![Python0基础，如何识别照片信息并且保存在Excel中？ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python0基础，如何识别照片信息并且保存在Excel中？ - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 
 # 1、学习资料
 

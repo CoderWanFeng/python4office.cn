@@ -1,5 +1,6 @@
 ﻿---
 
+
 title: "MiniMax TOKEN Plan vs 百度智能云文心一言：2026年最新API价格对比"
 date: 2026-04-22 00:00:00
 categories:
@@ -22,11 +23,18 @@ keywords:
   - 文心一言价格
   - AI大模型对比
   - 2026 API费用
+cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![MiniMax TOKEN Plan vs 百度智能云文心一言：2026年最新API价格对比 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![MiniMax TOKEN Plan vs 百度智能云文心一言：2026年最新API价格对比 - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 # MiniMax TOKEN Plan vs 百度智能云文心一言：2026年最新API价格对比
 

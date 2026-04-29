@@ -1,4 +1,4 @@
----
+﻿---
 title: 写了5年Python，我才意识到自己有多少坏习惯
 date: 2026-04-08 20:30:00
 tags: [python, 流畅的 Python, Python 进阶, Pythonic, 最佳实践, 程序员晚枫]
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![写了5年Python，我才意识到自己有多少坏习惯 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > 大家好，我是正在实战各种 AI 项目的程序员晚枫。
 

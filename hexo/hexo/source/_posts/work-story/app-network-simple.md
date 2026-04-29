@@ -1,4 +1,4 @@
----
+﻿---
 title: 开发功能简单的联网APP，学习计划
 date: 2023-04-14 23:49:06
 tags: 1对1咨询
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![开发功能简单的联网APP，学习计划 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # 1、整体思路
 
 开发一个形式上能通过专业认可的app，实现工作中的简单任务，必须联网。

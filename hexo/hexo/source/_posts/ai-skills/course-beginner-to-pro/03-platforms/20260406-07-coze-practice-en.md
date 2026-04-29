@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lecture 7: Coze Practice: Build Office Assistant Skill"
 date: 2026-04-06 14:30:00
 tags: ["AI Skill", "Coze", "Practice", "Office Assistant"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Lecture 7: Coze Practice: Build Office Assistant Skill - 配图1](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Lecture 7: Coze Practice: Build Office Assistant Skill - 配图2](https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop)
+
 # Lecture 7: Coze Practice: Build Office Assistant Skill
 
 > Build a complete office assistant hands-on, master Coze practical development.

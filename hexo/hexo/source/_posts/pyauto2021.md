@@ -1,13 +1,20 @@
 ﻿---
 
+
 title: Python自动化办公（2021最新版！有源代码 ，适合小白~）
 date: 2022-04-08 11:37:17
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![Python自动化办公（2021最新版！有源代码 ，适合小白~） - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 ## 视频 + 代码
 Python自动化办公（2021最新版！有源代码 ，适合小白~）
 - [视频点我](https://www.bilibili.com/video/BV1wB4y1w7KV)

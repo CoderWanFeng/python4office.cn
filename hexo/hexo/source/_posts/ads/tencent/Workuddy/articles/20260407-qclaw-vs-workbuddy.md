@@ -1,4 +1,4 @@
----
+﻿---
 title: QClaw和WorkBuddy，傻傻分不清楚？一文讲清楚！
 date: 2026-04-07 00:00:00
 categories: [广告, 腾讯, WorkBuddy]
@@ -8,6 +8,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![QClaw和WorkBuddy，傻傻分不清楚？一文讲清楚！ - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # QClaw和WorkBuddy，傻傻分不清楚？一文讲清楚！
 
 ## 一、你是不是也分不清？

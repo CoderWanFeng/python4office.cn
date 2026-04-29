@@ -1,4 +1,4 @@
----
+﻿---
 title: 敲了5年代码，我怎么还是一事无成？
 date: 2023-12-24 14:16:17
 tags: 日记
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![敲了5年代码，我怎么还是一事无成？ - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![敲了5年代码，我怎么还是一事无成？ - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)。
 
 上次活动认识了一位程序员同行，最近他被裁员一位被裁员的朋友找我聊了一下午，隔着屏幕都感觉到了他的焦虑。

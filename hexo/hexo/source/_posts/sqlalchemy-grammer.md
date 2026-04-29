@@ -1,4 +1,4 @@
----
+﻿---
 title: sqlalchemy常用语法
 date: 2022-02-10 14:17:07
 tags: sqlalchemy
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![sqlalchemy常用语法 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![sqlalchemy常用语法 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 ```python
 # 查询代码如下：
 0.like:模糊查询

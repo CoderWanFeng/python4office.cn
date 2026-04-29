@@ -1,4 +1,4 @@
----
+﻿---
 title: 0代码半天上线！我用WorkBuddy做了个OPC一人商业闭环官网，普通人直接复刻就能赚钱
 date: 2026-04-01 15:01:00
 tags: [WorkBuddy,AI 编程，前端开发，个人网站]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![0代码半天上线！我用WorkBuddy做了个OPC一人商业闭环官网，普通人直接复刻就能赚钱 - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![0代码半天上线！我用WorkBuddy做了个OPC一人商业闭环官网，普通人直接复刻就能赚钱 - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 > 发布链接🔗https://mp.weixin.qq.com/s/6qbuz_SitlIRL_ZrjHfy-Q

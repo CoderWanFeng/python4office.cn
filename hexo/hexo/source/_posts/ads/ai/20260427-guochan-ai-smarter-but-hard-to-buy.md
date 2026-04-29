@@ -1,4 +1,4 @@
----
+﻿---
 title: 国产AI越来越聪明了，但我想用的时候却用不起
 keywords: [国产AI, Coding Plan, 太难买, 程序员晚枫]
 description: 程序员晚枫吐槽：国产AI越来越聪明了，但想用的时候发现 Coding Plan 买起来太麻烦了。推荐一个一站式选购平台。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![国产AI越来越聪明了，但我想用的时候却用不起 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![国产AI越来越聪明了，但我想用的时候却用不起 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

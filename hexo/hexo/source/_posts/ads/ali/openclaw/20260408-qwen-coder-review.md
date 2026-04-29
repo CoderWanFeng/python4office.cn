@@ -1,4 +1,4 @@
----
+﻿---
 title: 通义千问代码能力实测：Qwen3-Coder系列到底有多强？
 date: 2026-04-08 00:42:00
 tags: [通义千问代码能力, Qwen3Coder评测, 阿里云CodingPlan, 通义千问编程, 国产AI编程模型]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![通义千问代码能力实测：Qwen3-Coder系列到底有多强？ - 配图1](https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，这里是程序员晚枫。
 
 阿里云Coding Plan最大的卖点之一，就是**通义千问系列的代码能力**。

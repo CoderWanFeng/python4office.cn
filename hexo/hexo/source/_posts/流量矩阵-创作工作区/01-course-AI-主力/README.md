@@ -1,4 +1,4 @@
-# course/AI 主力产品 - 创作规划
+﻿# course/AI 主力产品 - 创作规划
 
 **定位：** AI自动化办公第一课  
 **优先级：** ⭐⭐⭐⭐⭐ 最高  
@@ -24,6 +24,10 @@
 - **变现路径**：工具会员、课程转化
 
 ---
+
+![README.md - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![README.md - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 ## 📝 标题规范
 

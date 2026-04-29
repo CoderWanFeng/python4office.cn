@@ -1,4 +1,4 @@
----
+﻿---
 title: Python 3.12 抢先看——关于 f-string 的改动
 date: 2023-02-27 01:07:57
 tags: 3.12
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Python 3.12 抢先看——关于 f-string 的改动 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python 3.12 抢先看——关于 f-string 的改动 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## 相关阅读
 
 - [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)

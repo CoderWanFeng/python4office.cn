@@ -5,6 +5,9 @@ tags: [50讲Python自动化办公]
 ---
 <!-- more -->
 
+![20250727用Python模拟海量Excel数据你的数据分析工作任务有救了.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
+
 
 大家好，我是晚枫，用通俗易懂的方式，教小白学python。
 

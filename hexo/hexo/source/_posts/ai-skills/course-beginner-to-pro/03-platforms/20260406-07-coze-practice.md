@@ -1,4 +1,4 @@
----
+﻿---
 title: "第7讲：Coze 实战：搭建办公助手 Skill"
 date: 2026-04-06 14:30:00
 tags: ["AI Skill", "Coze", "实战", "办公助手"]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![第7讲：Coze 实战：搭建办公助手 Skill - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # 第7讲：Coze 实战：搭建办公助手 Skill
 
 > 动手搭建一个完整的办公助手，掌握 Coze 实战开发。

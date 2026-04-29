@@ -1,4 +1,4 @@
----
+﻿---
 title: 深入解析 Python `__slots__`：内存优化与性能提升的利器
 date: 2025-08-21 00:41:49
 tags: [python,下载]
@@ -9,6 +9,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![深入解析 Python `__slots__`：内存优化与性能提升的利器 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## 引言
 
 在 Python 的世界里，“灵活性”是其核心哲学之一。默认情况下，Python 对象的实例属性都存储在一个动态的字典 `__dict__` 中，这使得我们可以随时随地、随心所欲地为对象添加新的属性。然而，这种灵活性并非没有代价，它带来了显著的内存开销和相对缓慢的属性访问速度。

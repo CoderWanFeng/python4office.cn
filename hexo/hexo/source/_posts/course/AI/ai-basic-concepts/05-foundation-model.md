@@ -1,4 +1,4 @@
----
+﻿---
 
 title: 什么是大模型？为什么AI圈总提这个概念
 date: 2026-04-16 16:58:00
@@ -16,6 +16,10 @@ description: 新闻总说"百亿参数大模型"、"千亿级模型"，到底有
 
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+![什么是大模型？为什么AI圈总提这个概念 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![什么是大模型？为什么AI圈总提这个概念 - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 > **作者：程序员晚枫**

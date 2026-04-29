@@ -1,4 +1,4 @@
----
+﻿---
 title: First Post
 date: 2025-08-03 00:06:19
 tags: 10 Lessons Kids Programming
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![First Post - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![First Post - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 ## Related Reading
 
 - [《30 Lessons · AI Programming Training Camp》for Beginners](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)

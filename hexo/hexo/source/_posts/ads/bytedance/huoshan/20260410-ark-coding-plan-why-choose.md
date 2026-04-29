@@ -1,4 +1,4 @@
----
+﻿---
 title: 为什么我选择火山方舟Coding Plan？一个程序员的真诚分享
 keywords: 程序员晚枫, 火山方舟Coding Plan选择, AI编程工具选择, 程序员工具推荐, 为什么选火山方舟
 description: 程序员晚枫真诚分享：为什么我选择火山方舟Coding Plan？一个程序员的AI编程工具选择心得与使用体验。
@@ -23,6 +23,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 用火山方舟Coding Plan已经3个月了，今天想真诚分享一下：为什么我选择它，以及它给我带来了什么改变。
 
 <!-- more -->
+
+![为什么我选择火山方舟Coding Plan？一个程序员的真诚分享 - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![为什么我选择火山方舟Coding Plan？一个程序员的真诚分享 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 ## 我的背景
 
@@ -159,9 +163,9 @@ AI帮我审查代码，发现了很多自己没注意到的问题。
 
 ## 相关阅读
 
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
+- [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
 - [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)

@@ -1,4 +1,4 @@
----
+﻿---
 title: MiniMax Coding Plan 教程：多模态编程 + 海螺语音联动（2026最新版）
 keywords: [MiniMax Coding Plan 教程, 多模态编程, 海螺语音, AI编程教程, 程序员晚枫]
 description: 程序员晚枫手把手教你用 MiniMax Coding Plan，如何利用多模态能力和海螺语音进行编程。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![MiniMax Coding Plan 教程：多模态编程 + 海螺语音联动（2026最新版） - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![MiniMax Coding Plan 教程：多模态编程 + 海螺语音联动（2026最新版） - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

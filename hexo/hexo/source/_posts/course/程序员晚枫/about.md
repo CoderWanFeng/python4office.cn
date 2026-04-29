@@ -1,4 +1,4 @@
----
+﻿---
 title: 关于我 - 程序员晚枫
 date: 2026-04-23 00:00:00
 tags: [程序员晚枫,个人介绍]
@@ -8,6 +8,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![关于我 - 程序员晚枫 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 
 <div align="center">
 

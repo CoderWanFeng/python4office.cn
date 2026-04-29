@@ -1,10 +1,14 @@
 ﻿---
 
+
 title: 终究还是错付了！这2种Python字符串格式化的写法已经被淘汰了，你是不是还在用？
 date: 2022-08-16 15:54:09
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+
 
 ---
+
 
 
 

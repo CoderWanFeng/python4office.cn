@@ -1,4 +1,4 @@
----
+﻿---
 title: 百度智能云 Baidu Cloud Coding Plan 来了！文心+飞桨，国产 AI 编程老将新出发
 keywords: [百度智能云 Coding Plan, Baidu Cloud, 文心一言, AI编程, 程序员晚枫]
 description: 程序员晚枫推荐：百度智能云 Baidu Cloud Coding Plan，文心大模型+飞桨框架，国产 AI 编程老将新出发。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![百度智能云 Baidu Cloud Coding Plan 来了！文心+飞桨，国产 AI 编程老将新出发 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![百度智能云 Baidu Cloud Coding Plan 来了！文心+飞桨，国产 AI 编程老将新出发 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

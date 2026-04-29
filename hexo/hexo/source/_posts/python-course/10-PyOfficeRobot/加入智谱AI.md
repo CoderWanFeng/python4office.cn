@@ -8,6 +8,10 @@ tags: 微信机器人
 
 <!-- more -->
 
+![加入智谱AI.md - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![加入智谱AI.md - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
+
 
 新年开始以后，这个悬念陆续揭晓了，今天给大家做一个近期已有大模型的汇总，跟着操作，你就可以使用智能聊天了。
 

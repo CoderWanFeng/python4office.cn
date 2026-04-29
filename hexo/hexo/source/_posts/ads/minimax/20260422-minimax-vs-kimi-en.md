@@ -1,5 +1,6 @@
 ﻿---
 
+
 title: "MiniMax TOKEN Plan vs Kimi月之暗面：2026年最新价格对比测评"
 date: 2026-04-22 00:00:00
 categories:
@@ -23,11 +24,18 @@ keywords:
   - AI大模型对比
   - Kimi涨价
   - 2026 AI工具
+cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![MiniMax TOKEN Plan vs Kimi月之暗面：2026年最新价格对比测评 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![MiniMax TOKEN Plan vs Kimi月之暗面：2026年最新价格对比测评 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 # MiniMax TOKEN Plan vs Kimi月之暗面：2026年最新价格对比测评
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 优秀的第三方库
 date: 2024-12-1 00:41:49
 tags: [ 第三方库,pip ]
@@ -14,6 +14,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![优秀的第三方库 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 > 这是专栏[优秀的第三方库](https://www.python4office.cn/course/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/all/)的第2篇原创文章。

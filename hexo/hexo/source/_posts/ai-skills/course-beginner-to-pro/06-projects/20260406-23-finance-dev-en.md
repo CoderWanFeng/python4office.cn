@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lecture 23: Project Practice - Financial Intelligent Assistant Development Implementation"
 date: 2026-04-06 40:00:00
 tags: ["AI Skill", "Project Practice", "Finance"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Lecture 23: Project Practice - Financial Intelligent Assistant Development Implementation - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Lecture 23: Project Practice - Financial Intelligent Assistant Development Implementation - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # Lecture 23: Project Practice - Financial Intelligent Assistant Development Implementation
 
 > Implement core functions of the Financial Intelligent Assistant, including invoice recognition, report generation, and data processing.

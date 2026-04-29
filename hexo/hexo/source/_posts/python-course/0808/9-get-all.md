@@ -1,4 +1,4 @@
----
+﻿---
 title: Python自动化办公（课程资料）
 date: 2023-10-04 10:08:24
 tags: 原创课程
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Python自动化办公（课程资料） - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 以下是您付费文章后，可以获得的4个资料
 
 ## 0808 - 课程资料

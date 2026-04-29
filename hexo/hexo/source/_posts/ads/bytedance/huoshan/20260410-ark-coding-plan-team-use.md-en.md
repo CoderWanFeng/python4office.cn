@@ -1,4 +1,4 @@
----
+﻿---
 title: "How Can Small Teams Use Volcano Ark Coding Plan? 5-Person Team Practice Sharing"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Team, Small Team AI Programming, AI Tool Management, Team Efficiency Improvement
 description: Shared by Programmer Wan Feng: How can small teams use Volcano Ark Coding Plan? Complete guide on cost sharing, permission management, efficiency improvement.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![How Can Small Teams Use Volcano Ark Coding Plan? 5-Person Team Practice Sharing - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![How Can Small Teams Use Volcano Ark Coding Plan? 5-Person Team Practice Sharing - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office

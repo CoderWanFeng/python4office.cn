@@ -1,10 +1,14 @@
----
+﻿---
 title: "Participate in AI Programming Competition with Zero Foundation? Start from Lobster Challenge!"
 date: 2026-04-14 08:00:00
 tags: [AI Programming, Zero Foundation, Competition Guide, Python, Beginner Guide]
 categories: Beginner Guide
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
+![Participate in AI Programming Competition with Zero Foundation? Start from Lobster Challenge! - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![Participate in AI Programming Competition with Zero Foundation? Start from Lobster Challenge! - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > Hello everyone, I'm Programmer Wanfeng.
 

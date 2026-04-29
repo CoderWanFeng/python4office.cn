@@ -1,4 +1,4 @@
----
+﻿---
 
 title: 什么是RAG？让AI不再"瞎编"的神器
 date: 2026-04-16 17:12:00
@@ -16,6 +16,10 @@ description: 为什么AI回答问题时会"瞎编"？程序员晚枫用大白话
 
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+![什么是RAG？让AI不再"瞎编"的神器 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![什么是RAG？让AI不再"瞎编"的神器 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 > **作者：程序员晚枫**

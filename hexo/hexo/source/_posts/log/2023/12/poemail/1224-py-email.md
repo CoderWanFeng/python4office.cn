@@ -1,4 +1,4 @@
----
+﻿---
 title: Python终于可以操作邮件了
 date: 2023-12-24 01:16:17
 tags: 自动化办公
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Python终于可以操作邮件了 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python终于可以操作邮件了 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)。
 
 今天给大家分享一个可以**用1行代码**自动收发邮件的Python第三方库：``poemail``。

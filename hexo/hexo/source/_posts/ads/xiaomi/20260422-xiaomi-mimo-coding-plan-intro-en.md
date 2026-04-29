@@ -1,4 +1,4 @@
----
+﻿---
 title: "Xiaomi MiMo Coding Plan Is Here! Xiaomi Large Model + Ecosystem Advantages, a New Choice for Programmers"
 keywords: ["Xiaomi MiMo Coding Plan", "Xiaomi Large Model", "MiMo AI", "AI Programming", "程序员晚枫"]
 description: "Programmer Wanfeng's recommendation: Xiaomi MiMo Coding Plan, Xiaomi large model + ecosystem advantages — a noteworthy new choice for programmers."
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Xiaomi MiMo Coding Plan Is Here! Xiaomi Large Model + Ecosystem Advantages, a New Choice for Programmers - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Xiaomi MiMo Coding Plan Is Here! Xiaomi Large Model + Ecosystem Advantages, a New Choice for Programmers - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **Article Author: 程序员晚枫 | AI Programming Advocate | Specializing in AI Tool Reviews & Teaching**
 >

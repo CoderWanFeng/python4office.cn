@@ -1,4 +1,4 @@
----
+﻿---
 title: 华为没有 Coding Plan？OpenRouter 可能是全球模型最全的选择
 keywords: [华为 Coding Plan, OpenRouter, 全球大模型, 统一接口, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐 OpenRouter，一个 API 访问全球所有大模型，适合需要全球模型的研究者和开发者。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![华为没有 Coding Plan？OpenRouter 可能是全球模型最全的选择 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![华为没有 Coding Plan？OpenRouter 可能是全球模型最全的选择 - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

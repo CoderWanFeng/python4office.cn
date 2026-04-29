@@ -1,4 +1,4 @@
----
+﻿---
 title: Actual Measurement of Tongyi Qianwen's Code Capabilities: How Strong is the Qwen3-Coder Series Really?
 date: 2026-04-08 00:42:00
 tags: [Tongyi Qianwen code capabilities, Qwen3Coder review, Alibaba Cloud CodingPlan, Tongyi Qianwen programming, domestic AI programming model]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Actual Measurement of Tongyi Qianwen's Code Capabilities: How Strong is the Qwen3-Coder Series Really? - 配图1](https://images.unsplash.com/photo-145118685?w=800&h=400&fit=crop)
+
 Hello everyone, this is Programmer Wanfeng.
 
 One of the biggest selling points of Alibaba Cloud Coding Plan is **the code capabilities of the Tongyi Qianwen series**.

@@ -1,4 +1,4 @@
----
+﻿---
 
 title: 华为没有 Coding Plan？字节火山方舟可能是性价比最高的选择
 keywords: [华为 Coding Plan, 火山方舟, 字节跳动, 性价比, 程序员晚枫]
@@ -11,6 +11,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![华为没有 Coding Plan？字节火山方舟可能是性价比最高的选择 - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![华为没有 Coding Plan？字节火山方舟可能是性价比最高的选择 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

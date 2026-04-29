@@ -1,4 +1,4 @@
----
+﻿---
 title: 2026年AI大模型能力对比：GPT-4o、DeepSeek-V3、Claude 3.5、Kimi谁更强？
 date: 2026-04-21 14:47:00
 tags: [AI大模型, GPT-4o, DeepSeek-V3, Claude 3.5, Kimi, 模型对比]
@@ -7,6 +7,10 @@ keywords: [AI大模型对比, GPT-4o vs DeepSeek, Claude 3.5, Kimi, 大模型能
 description: 2026年最全AI大模型对比：GPT-4o、DeepSeek-V3、Claude 3.5、Kimi、GLM-4谁更强？附详细测试结果和选型建议。
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
+![2026年AI大模型能力对比：GPT-4o、DeepSeek-V3、Claude 3.5、Kimi谁更强？ - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![2026年AI大模型能力对比：GPT-4o、DeepSeek-V3、Claude 3.5、Kimi谁更强？ - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 # 2026年AI大模型能力对比：GPT-4o、DeepSeek-V3、Claude 3.5、Kimi谁更强？
 

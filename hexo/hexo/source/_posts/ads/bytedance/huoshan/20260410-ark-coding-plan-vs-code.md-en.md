@@ -1,4 +1,4 @@
----
+﻿---
 title: "VS Code + Volcano Ark Coding Plan Tutorial: Free Plugin Solution"
 keywords: Programmer Wan Feng, Volcano Coding Plan VS Code, VS Code AI Programming, Continue Plugin Configuration, Free AI Programming
 description: Tutorial by Programmer Wan Feng: VS Code + Volcano Coding Plan configuration tutorial, free plugin solution, set up AI programming environment in 5 minutes.
@@ -25,6 +25,10 @@ Don't want to spend money on Cursor? VS Code + Volcano Coding Plan is the best f
 Today hand-holding you through configuration.
 
 <!-- more -->
+
+![VS Code + Volcano Ark Coding Plan Tutorial: Free Plugin Solution - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![VS Code + Volcano Ark Coding Plan Tutorial: Free Plugin Solution - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 ## Solution Advantages
 

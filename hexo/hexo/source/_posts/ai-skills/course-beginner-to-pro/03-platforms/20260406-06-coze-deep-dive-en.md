@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lecture 6: Coze Platform Deep Dive"
 date: 2026-04-06 14:00:00
 tags: ["AI Skill", "Coze", "Platform"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Lecture 6: Coze Platform Deep Dive - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![Lecture 6: Coze Platform Deep Dive - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # Lecture 6: Coze Platform Deep Dive
 
 > Comprehensively master Coze platform's core features and advanced techniques.

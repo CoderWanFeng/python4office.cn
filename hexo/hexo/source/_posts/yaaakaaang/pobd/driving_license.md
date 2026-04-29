@@ -1,4 +1,4 @@
----
+﻿---
 title: 车在路上必有证！AI自动识别驾驶证
 date: 2025-05-09 12:15:32
 tags: [pobd]
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![车在路上必有证！AI自动识别驾驶证 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 <span style="font-size:20px;"><span style="color:#66a3e0;">经常开车的朋友都知道，持证驾驶很重要，从各种意义上来说都是这样。今天咱就谈谈AI识别驾驶证。 </span></span>
 
 #  一、需求背景与解决方案

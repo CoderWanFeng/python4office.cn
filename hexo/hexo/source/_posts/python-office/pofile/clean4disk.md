@@ -1,4 +1,4 @@
----
+﻿---
 title: 你的隐私堪忧！彻底清空磁盘，只需要1行Python代码
 date: 2024-03-11 20:41:49
 tags: [Python,自动化办公]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![你的隐私堪忧！彻底清空磁盘，只需要1行Python代码 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![你的隐私堪忧！彻底清空磁盘，只需要1行Python代码 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 大家好，这是程序员晚枫，小红书/B站都叫这个名字。
 
 今天给大家分享Python自动化办公的第81个功能：彻底抹除磁盘的使用记录。

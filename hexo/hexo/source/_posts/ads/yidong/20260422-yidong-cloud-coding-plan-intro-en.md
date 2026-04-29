@@ -1,4 +1,4 @@
----
+﻿---
 title: "China Mobile Coding Plan Is Here! China Mobile Large Model + Carrier Advantages, a New Choice for Domestic Developers"
 keywords: ["China Mobile Coding Plan", "China Mobile", "AI Programming", "Carrier AI", "程序员晚枫"]
 description: "Programmer Wanfeng's recommendation: China Mobile Coding Plan, China Mobile large model + carrier advantages — a noteworthy new choice for domestic developers."
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![China Mobile Coding Plan Is Here! China Mobile Large Model + Carrier Advantages, a New Choice for Domestic Developers - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![China Mobile Coding Plan Is Here! China Mobile Large Model + Carrier Advantages, a New Choice for Domestic Developers - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **Article Author: 程序员晚枫 | AI Programming Advocate | Specializing in AI Tool Reviews & Teaching**
 >

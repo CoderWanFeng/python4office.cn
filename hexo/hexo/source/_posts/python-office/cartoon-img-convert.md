@@ -1,4 +1,4 @@
----
+﻿---
 title: 某宝动漫头像一张50元？1行Python代码实现，别再去交智商税了
 date: 2022-06-21 11:33:40
 tags: python-office
@@ -18,6 +18,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 听说某宝需要50块钱一张？别再去交智商税了！
 
 <!-- more -->
+
+![某宝动漫头像一张50元？1行Python代码实现，别再去交智商税了 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 
 ## 1. 安装python-office
 安装很简单，在有python环境的电脑上，只需要执行下面这一行命令。

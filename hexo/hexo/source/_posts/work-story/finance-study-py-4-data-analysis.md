@@ -1,4 +1,4 @@
----
+﻿---
 title: 财务 + Python的学习计划
 date: 2023-04-05 09:42:38
 tags: 学习计划
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 ---
 
 <!-- more -->
+
+![财务 + Python的学习计划 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![财务 + Python的学习计划 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 # 一、方向在哪里
 
 经过沟通，大致明确了学习方向：结合财务知识，掌握Python技术，不走程序员路线。

@@ -1,3 +1,7 @@
+﻿
+
+![CREATION_RULES.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![CREATION_RULES.md - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 # 给文案创作Agent的专属设定指令
 请你严格按照以下所有规则，完成自我设定，永久生效。后续所有文案创作，必须100%贴合本设定，不得有任何偏离。
 

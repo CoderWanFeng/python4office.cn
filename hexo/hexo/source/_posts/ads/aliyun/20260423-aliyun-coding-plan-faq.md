@@ -1,4 +1,4 @@
----
+﻿---
 title: 阿里云百炼 Coding Plan 常见问题 FAQ：29 元/月值不值？看这篇就够了
 keywords: [阿里云百炼 FAQ, 通义千问 常见问题, AI编程 答疑, 程序员晚枫]
 description: 程序员晚枫解答：阿里云百炼 Coding Plan 常见问题汇总，29元/月值不值？tokens怎么算？看完你就懂了。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![阿里云百炼 Coding Plan 常见问题 FAQ：29 元/月值不值？看这篇就够了 - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![阿里云百炼 Coding Plan 常见问题 FAQ：29 元/月值不值？看这篇就够了 - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

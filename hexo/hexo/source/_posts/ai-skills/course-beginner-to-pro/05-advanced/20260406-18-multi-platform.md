@@ -1,4 +1,4 @@
----
+﻿---
 title: "第18讲：多平台 Skill 适配与迁移"
 date: 2026-04-06 35:00:00
 tags: ["AI Skill", "进阶开发", "多平台"]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![第18讲：多平台 Skill 适配与迁移 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # 第18讲：多平台 Skill 适配与迁移
 
 > 掌握 Skill 在多平台间的适配与迁移技巧，实现"一次开发，多处部署"，最大化 Skill 的复用价值。

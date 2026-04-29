@@ -1,4 +1,4 @@
----
+﻿---
 title: 腾讯放大招了！发布了直接运行Python的网站，不用安装任何软件
 date: 2024-1-15 21:16:17
 tags: 自动化办公
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![腾讯放大招了！发布了直接运行Python的网站，不用安装任何软件 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![腾讯放大招了！发布了直接运行Python的网站，不用安装任何软件 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，抖音也叫这个名字。
 
 今天给大家分享一个腾讯最近推出的Python编程网站：不用安装任何软件，就可以运行Python代码。

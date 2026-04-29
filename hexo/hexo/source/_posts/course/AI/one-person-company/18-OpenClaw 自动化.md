@@ -1,4 +1,4 @@
----
+﻿---
 title: "第 18 讲｜用 OpenClaw 搭建自动化工作流"
 date: 2026-03-19 00:00:00
 tags: ["一人公司", "OpenClaw", "自动化"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![第 18 讲｜用 OpenClaw 搭建自动化工作流 - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![第 18 讲｜用 OpenClaw 搭建自动化工作流 - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+
 # 第 18 讲｜用 OpenClaw 搭建自动化工作流
 
 > **自动化，是一人公司的终极武器。**

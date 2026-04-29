@@ -1,4 +1,4 @@
----
+﻿---
 title: 写一个Excel数据分析的软件，应该怎么学习？
 date: 2024-08-20 00:24:04
 tags: 1v1
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![写一个Excel数据分析的软件，应该怎么学习？ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 今天是关于Python + Excel的咨询，因为Excel自动化办公的学习计划，之前整理过很多了，这次沟通非常顺利。
 
 

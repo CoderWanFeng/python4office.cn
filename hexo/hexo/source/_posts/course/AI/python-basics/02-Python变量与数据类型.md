@@ -1,8 +1,12 @@
 ﻿---
+
 title: Python变量与数据类型：我用7大数据类型，处理所有业务场景
 date: 2026-02-28 19:55:00
 tags: [Python基础, 变量, 数据类型]
+cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+
 ---
+
 
 <p align="center" id='扫码查看 AI 编程训练营'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw'>

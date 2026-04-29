@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI小红书内容创作！3个爆款方向，看完你就知道怎么写了"
 date: 2026-04-22 00:00:00
 tags: ["ai副业", "小红书", "副业变现"]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![AI小红书内容创作！3个爆款方向，看完你就知道怎么写了 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI小红书内容创作！3个爆款方向，看完你就知道怎么写了 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 
 兄弟们！！！
 

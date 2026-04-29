@@ -1,4 +1,4 @@
----
+﻿---
 title: 找到想认真学Python的人，和他们一起把这本书读完
 date: 2026-04-08 21:00:00
 tags: [python, 流畅的Python, 共读营, 学习社群, 程序员晚枫]
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![找到想认真学Python的人，和他们一起把这本书读完 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > 澶у濂斤紝鎴戞槸姝ｅ湪瀹炴垬鍚勭 AI 椤圭洰鐨勭▼搴忓憳鏅氭灚銆?
 

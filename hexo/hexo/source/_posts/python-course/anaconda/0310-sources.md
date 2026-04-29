@@ -1,4 +1,4 @@
----
+﻿---
 title: Anaconda数据分析&人工智能教程（课程资料）
 date: 2024-03-10 13:49:42
 tags: 人工智能
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Anaconda数据分析&人工智能教程（课程资料） - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，抖音/快手/小红书/微博，都叫这个名字。
 
 Python学习网站：[www.python-office.com](www.python-office.com)

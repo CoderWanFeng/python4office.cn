@@ -1,4 +1,4 @@
----
+﻿---
 title: "Tencent Cloud Coding Plan is Here! Hunyuan + Multi-Model Support, A New Choice for Domestic Developers"
 keywords: [Tencent Cloud Coding Plan, Tencent Hunyuan, Tencent Cloud, AI Programming, 程序员晚枫]
 description: Programmer Wan Feng recommends: Tencent Cloud Coding Plan, Hunyuan large model + multi-model support, a worthwhile new choice for domestic developers.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Tencent Cloud Coding Plan is Here! Hunyuan + Multi-Model Support, A New Choice for Domestic Developers - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Tencent Cloud Coding Plan is Here! Hunyuan + Multi-Model Support, A New Choice for Domestic Developers - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 >

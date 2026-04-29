@@ -1,4 +1,4 @@
----
+﻿---
 title: "第21讲：性能优化与监控"
 date: 2026-04-06 38:00:00
 tags: ["AI Skill", "进阶开发", "性能优化"]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![第21讲：性能优化与监控 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # 第21讲：性能优化与监控
 
 > 掌握 Skill 的性能优化和监控技巧，确保 Skill 高效稳定运行。

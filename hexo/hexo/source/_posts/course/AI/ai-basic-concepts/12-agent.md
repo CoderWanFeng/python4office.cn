@@ -1,4 +1,4 @@
----
+﻿---
 
 title: 什么是AI Agent？让AI从"聊天机器"变成"数字员工"
 date: 2026-04-16 17:11:00
@@ -17,6 +17,10 @@ description: 为什么AI现在能"干活"了？程序员晚枫用大白话揭秘
 
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+![什么是AI Agent？让AI从"聊天机器"变成"数字员工" - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是AI Agent？让AI从"聊天机器"变成"数字员工" - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 
 
 > **作者：程序员晚枫**

@@ -1,4 +1,4 @@
----
+﻿---
 title: 火山方舟Coding Plan API调用详解：代码接入实战
 keywords: 程序员晚枫, 火山方舟Coding Plan API, AI编程API接入, 代码调用示例, API教程
 description: 程序员晚枫详解：火山方舟Coding Plan API调用实战，代码接入示例，手把手教你用API实现AI编程。
@@ -25,6 +25,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 今天详细讲解API调用方法，附带完整代码示例。
 
 <!-- more -->
+
+![火山方舟Coding Plan API调用详解：代码接入实战 - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![火山方舟Coding Plan API调用详解：代码接入实战 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 ## 获取API凭证
 
@@ -207,9 +211,9 @@ API调用让火山方舟Coding Plan的应用场景大大扩展。
 
 ## 相关阅读
 
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
+- [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
 - [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)

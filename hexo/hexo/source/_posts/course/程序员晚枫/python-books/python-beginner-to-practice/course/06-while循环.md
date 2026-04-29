@@ -1,4 +1,4 @@
----
+﻿---
 title: 第6讲 用户输入与while循环
 date: 2026-04-28 23:54:00
 tags: [python,入门,课程,第6讲]
@@ -12,6 +12,12 @@ cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&
 </p>
 
 <!-- more -->
+<p align="center">
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/a8bdeb7d-f6a8-4ad5-8020-e206055dd039/Python编程：从入门到实践_第3版__.png" alt="Python编程：从入门到实践（第3版）" width="400"/>
+</p>
+> 📖 **一起读书吧！** 加入《Python编程：从入门到实践》共读营 👉 [点击参加](https://mp.weixin.qq.com/s/ehe2vMrfAFscRLqbM9TF-g)
+
+
 
 ## 本讲内容
 

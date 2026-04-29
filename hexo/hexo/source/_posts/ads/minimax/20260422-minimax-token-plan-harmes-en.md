@@ -1,5 +1,6 @@
 ﻿---
 
+
 title: "用 MiniMax TOKEN Plan 养"Harmes"：这个 AI 变现思路太野了"
 date: 2026-04-22 00:00:00
 categories:
@@ -16,11 +17,18 @@ tags:
   - AI副业
   - Harmes
 description: "什么是养Harmes？用 AI 自动生产内容、自动发布，躺着月入过万的方法"
+cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![用 MiniMax TOKEN Plan 养"Harmes"：这个 AI 变现思路太野了 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![用 MiniMax TOKEN Plan 养"Harmes"：这个 AI 变现思路太野了 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 # 用 MiniMax TOKEN Plan 养"Harmes"：这个 AI 变现思路太野了
 

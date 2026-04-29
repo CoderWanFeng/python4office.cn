@@ -1,4 +1,4 @@
----
+﻿---
 title: Kimi Coding Plan 适合谁用？长上下文爱好者 vs 其他人群选购分析
 keywords: [Kimi Coding Plan 适合谁, Moonshot 选购建议, 长上下文, 程序员晚枫]
 description: 程序员晚枫分析：月之暗面 Kimi Coding Plan 适合哪些人？128K 上下文适合什么场景？
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Kimi Coding Plan 适合谁用？长上下文爱好者 vs 其他人群选购分析 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Kimi Coding Plan 适合谁用？长上下文爱好者 vs 其他人群选购分析 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

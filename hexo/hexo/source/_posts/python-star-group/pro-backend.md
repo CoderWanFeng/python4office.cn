@@ -1,10 +1,14 @@
 ﻿---
 
+
 title: 初级Python后端开发 - 配套学习资料
 date: 2022-08-13 01:47:08
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+
 
 ---
+
 
 
 如果你是一位连Python基础都不会的小白，本套系列不适合你。请加入晚枫的：[Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)，去1对1指导学习：有关基础的ABCD。

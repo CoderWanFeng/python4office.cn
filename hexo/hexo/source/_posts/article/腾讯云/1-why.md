@@ -1,4 +1,4 @@
----
+﻿---
 title: 20个平台评测！程序员适合在哪个平台写文章赚钱？
 date: 2024-05-25 14:25:46
 tags: 原创文章
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![20个平台评测！程序员适合在哪个平台写文章赚钱？ - 配图1](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 做自媒体5年了，全网积累了30w+粉丝，用过几十个平台：[85个自媒体平台和变现大全（强烈推荐收藏）](https://mp.weixin.qq.com/s/vG7AnDJ50KF-CbuserHPkA)
 
 今天就站在程序员的角度，给大家分享一个哪些平台适合程序员写作？

@@ -1,4 +1,4 @@
----
+﻿---
 title: "AtomCode实战案例！5个真实场景，看完就知道怎么用"
 date: 2026-04-22 00:00:00
 tags: ["atomgit", "atomcode", "ai编程"]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![AtomCode实战案例！5个真实场景，看完就知道怎么用 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AtomCode实战案例！5个真实场景，看完就知道怎么用 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 
 兄弟们！！！
 

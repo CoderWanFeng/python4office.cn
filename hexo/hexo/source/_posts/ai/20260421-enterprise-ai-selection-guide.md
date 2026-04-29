@@ -1,4 +1,4 @@
----
+﻿---
 title: 企业选型指南：2026年AI大模型采购决策手册（含成本对比）
 date: 2026-04-21 15:05:00
 tags: [企业AI选型, AI采购决策, Coding Plan企业, DeepSeek企业, AI成本对比]
@@ -7,6 +7,10 @@ keywords: [企业AI选型, AI采购决策, Coding Plan企业版, DeepSeek企业,
 description: 企业选型指南：2026年AI大模型采购决策手册，含详细成本对比和选型建议。企业如何选择最适合的AI平台？附12家厂商对比。
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
+![企业选型指南：2026年AI大模型采购决策手册（含成本对比） - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![企业选型指南：2026年AI大模型采购决策手册（含成本对比） - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 # 企业选型指南：2026年AI大模型采购决策手册（含成本对比）
 

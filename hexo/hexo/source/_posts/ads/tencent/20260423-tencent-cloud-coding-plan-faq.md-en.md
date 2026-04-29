@@ -1,4 +1,4 @@
----
+﻿---
 title: "Tencent Cloud Coding Plan Common Questions FAQ: Is 49 yuan/month Worth It? Read This Article!"
 keywords: [Tencent Cloud Coding Plan FAQ, Tencent Hunyuan Common Questions, AI Programming Q&A, 程序员晚枫]
 description: Programmer Wan Feng answers: Tencent Cloud Coding Plan common questions summary, is 49 yuan/month worth it? How are tokens calculated? After reading you'll understand.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Tencent Cloud Coding Plan Common Questions FAQ: Is 49 yuan/month Worth It? Read This Article! - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Tencent Cloud Coding Plan Common Questions FAQ: Is 49 yuan/month Worth It? Read This Article! - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 >

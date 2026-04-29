@@ -1,4 +1,4 @@
----
+﻿---
 title: 给非程序员的Python入门课，0基础适用（课程资料）
 date: 2022-10-17 14:59:36
 tags: 课程资料
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 <!-- more -->
+
+![给非程序员的Python入门课，0基础适用（课程资料） - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![给非程序员的Python入门课，0基础适用（课程资料） - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 本页内容，已经升级为以下链接👇
 
 点击直达：[https://www.python-office.com/guide/init.html](https://www.python-office.com/guide/init.html)

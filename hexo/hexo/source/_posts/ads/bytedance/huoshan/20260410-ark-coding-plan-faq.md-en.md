@@ -1,4 +1,4 @@
----
+﻿---
 title: "Volcano Ark Coding Plan FAQ: All Your Concerns Answered Here"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan FAQ, AI Programming Common Questions, Coding Plan Questions Answered, Volcano Engine Help
 description: Compiled by Programmer Wan Feng: Volcano Ark Coding Plan FAQ, subscription, models, tools, usage questions answered at once.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Volcano Ark Coding Plan FAQ: All Your Concerns Answered Here - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Volcano Ark Coding Plan FAQ: All Your Concerns Answered Here - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office

@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI 时代一人公司实战课"
 date: 2026-03-19 00:00:00
 tags: ["AI", "一人公司", "创业", "副业", "自动化"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![AI 时代一人公司实战课 - 配图1](https://images.unsplash.com/photo-1559136555?w=800&h=400&fit=crop)
+![AI 时代一人公司实战课 - 配图2](https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # 🚀 AI 时代一人公司实战课
 
 > **一个人 + AI = 一家公司**

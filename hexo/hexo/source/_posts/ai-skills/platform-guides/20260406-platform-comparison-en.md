@@ -1,4 +1,4 @@
----
+﻿---
 title: "Three Major AI Office Platform Comparison: Coze vs OpenClaw vs Feishu CLI, Which is Right for You?"
 date: 2026-04-06 10:36:00
 tags: [Coze, OpenClaw, Feishu, Platform Comparison, AI Office, Skill]
@@ -11,6 +11,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 </p>
 
 <!-- more -->
+
+![Three Major AI Office Platform Comparison: Coze vs OpenClaw vs Feishu CLI, Which is Right for You? - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+
 
 Hello everyone, I'm Programmer Wanfeng, practicing various AI projects.
 

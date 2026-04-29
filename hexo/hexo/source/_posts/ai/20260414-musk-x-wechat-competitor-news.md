@@ -18,6 +18,10 @@ cover: /img/ai/musk-x-app.jpg
 
 
 <!-- more -->
+
+![马斯克出手了！X应用对标微信，AI时代超级应用之战打响 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![马斯克出手了！X应用对标微信，AI时代超级应用之战打响 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # 马斯克出手了！X应用对标微信，AI时代超级应用之战打响
 
 刚刚，马斯克宣布X应用将全面升级，直接对标微信，打造AI时代的超级应用。这一消息在科技圈引发地震级震动。

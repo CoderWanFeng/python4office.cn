@@ -1,10 +1,14 @@
----
+﻿---
 title: Python入门后，你最该掌握的5个技能
 date: 2026-04-17 22:30:00
 tags: [Python基础, 进阶技能, 装饰器, 正则表达式, 面向对象]
 categories: Python基础
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
+![Python入门后，你最该掌握的5个技能 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python入门后，你最该掌握的5个技能 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 # Python入门后，你最该掌握的5个技能
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Python过滤器入门到精通，全面介绍filter()函数的用法和相关知识点
 date: 2024-1-10 21:16:17
 tags: 内置函数
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![Python过滤器入门到精通，全面介绍filter()函数的用法和相关知识点 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python过滤器入门到精通，全面介绍filter()函数的用法和相关知识点 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，又来分享有用的Python知识了。
 
 Python之所以好用，是因为有大量用于科学计算的内置函数和第三方库。用好这些第三方库，可以显著提高我们编程的速度和质量。

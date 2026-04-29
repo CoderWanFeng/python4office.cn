@@ -1,4 +1,4 @@
----
+﻿---
 title: Python知识图谱+免费资源整合
 date: 2022-06-06 13:49:42
 tags: 免费教程
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Python知识图谱+免费资源整合 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # Python知识图谱+免费资源整合 V1.0版本
 
 | 项目持续维护中.......

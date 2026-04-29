@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lecture 9: OpenClaw Practice: Develop Data Processing Skill"
 date: 2026-04-06 15:30:00
 tags: ["AI Skill", "OpenClaw", "Practice", "Data Processing"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Lecture 9: OpenClaw Practice: Develop Data Processing Skill - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Lecture 9: OpenClaw Practice: Develop Data Processing Skill - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 # Lecture 9: OpenClaw Practice: Develop Data Processing Skill
 
 > Build a complete data processing Skill hands-on, master OpenClaw practical techniques.

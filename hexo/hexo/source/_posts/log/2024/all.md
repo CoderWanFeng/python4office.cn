@@ -1,4 +1,4 @@
----
+﻿---
 title: 2024年的总结
 date: 2024-11-11 00:41:49
 tags: [日志]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![2024年的总结 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![2024年的总结 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 - [晚枫的10月总结：我又转行了！](https://mp.weixin.qq.com/s/7z6_-cbEGGCFd6ikXIrMhA)
 - [晚枫的9月总结：没有一天是用来休息的](https://mp.weixin.qq.com/s/rKirSg9GmH1IPAywLb7nuA)
 

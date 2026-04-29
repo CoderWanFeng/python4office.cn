@@ -1,4 +1,4 @@
----
+﻿---
 title: "30岁，我被裁员了：那一夜，我终于想明白了一件事"
 date: 2026-04-21 14:43:00
 tags: [裁员, 职场, 30岁, 人生感悟]
@@ -7,6 +7,10 @@ keywords: [30岁裁员, 职场危机, 程序员被裁, 人生感悟]
 description: 一个30岁程序员被裁员后的真实记录，那一夜他想了什么，后来又做了什么。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+![30岁，我被裁员了：那一夜，我终于想明白了一件事 - 配图1](https://images.unsplash.com/photo-149975031?w=800&h=400&fit=crop)
+![30岁，我被裁员了：那一夜，我终于想明白了一件事 - 配图2](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 # 30岁，我被裁员了：那一夜，我终于想明白了一件事
 
@@ -254,8 +258,8 @@ HR说话的时候，眼神刻意回避我。
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
+- [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 
 **END**
 

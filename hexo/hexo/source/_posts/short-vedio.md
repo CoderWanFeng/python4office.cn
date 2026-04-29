@@ -1,12 +1,20 @@
 ﻿---
 
+
 title: 短视频
 date: 2021-03-01 13:39:08
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop
+
 
 ---
 
+
 <!-- more -->
+
+![短视频 - 配图1](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
+![短视频 - 配图2](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
+
 什么是爬虫？
 出现错误怎么办？
 程序员一定会用的软件

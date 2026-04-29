@@ -1,4 +1,4 @@
----
+﻿---
 title: Azure OpenAI Coding Plan Tutorial: Enterprise-level GPT-4 Access Practice (2026 Latest Version)
 keywords: [Azure OpenAI Coding Plan Tutorial, Azure GPT-4, Enterprise-level AI, API Access, Programmer Wanfeng]
 description: Programmer Wanfeng teaches you how to use Azure OpenAI Coding Plan, enterprise-level GPT-4 access practice tutorial.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Azure OpenAI Coding Plan Tutorial: Enterprise-level GPT-4 Access Practice (2026 Latest Version) - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Azure OpenAI Coding Plan Tutorial: Enterprise-level GPT-4 Access Practice (2026 Latest Version) - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **Author: Programmer Wanfeng | AI Programming Evangelist | Focus on AI Tool Evaluation and Teaching**
 >

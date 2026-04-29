@@ -1,4 +1,4 @@
----
+﻿---
 title: 第 1 讲：CPython 概览与源码编译——开启解释器源码探索之旅
 date: 2026-03-03 10:05:00
 tags: [python, CPython, 解释器，源码结构，编译]
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![第 1 讲：CPython 概览与源码编译——开启解释器源码探索之旅 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![第 1 讲：CPython 概览与源码编译——开启解释器源码探索之旅 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 
 > 大家好，我是正在实战各种 AI 项目的程序员晚枫。
 

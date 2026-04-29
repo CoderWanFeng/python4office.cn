@@ -1,4 +1,4 @@
----
+﻿---
 title: 华为没有 Coding Plan？小米 MiMo 可能是端侧 AI 的最佳选择
 keywords: [华为 Coding Plan, 小米MiMo, 端侧AI, 小米生态, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐小米 MiMo，端侧 AI 能力强+小米生态加持，适合 IoT 和移动端开发。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![华为没有 Coding Plan？小米 MiMo 可能是端侧 AI 的最佳选择 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![华为没有 Coding Plan？小米 MiMo 可能是端侧 AI 的最佳选择 - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

@@ -1,4 +1,4 @@
----
+﻿---
 title: "程序员晚枫2022年学习计划 | 待办事项清单(持续更新)"
 date: 2022-01-24 21:15:48
 tags: ["学习计划", "程序员成长", "Python学习", "待办清单", "2022计划"]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![程序员晚枫2022年学习计划 | 待办事项清单(持续更新) - 配图1](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+![程序员晚枫2022年学习计划 | 待办事项清单(持续更新) - 配图2](https://images.unsplash.com/photo-146092589?w=800&h=400&fit=crop)
+
 # 程序员晚枫2022年学习计划 | 待办事项清单(持续更新)
 
 > 本文记录我的个人学习计划和待办事项，持续更新中。
