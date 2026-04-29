@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Huawei Cloud Temporarily Has No Coding Plan? But These AI Services Are Worth Developers' Attention"
 keywords: ["Huawei Cloud AI Services", "Pangu Large Model", "Ascend AI", "Developer Services", "程序员晚枫"]
 description: "Programmer Wanfeng's deep analysis: Although Huawei Cloud doesn't have a Coding Plan, Pangu large model and Ascend AI services also have value for developers."
@@ -7,6 +7,7 @@ tags: ["Huawei Cloud", "Pangu Large Model", "Ascend AI", "Developer Services"]
 categories: ["AI Programming", "Tool Review"]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

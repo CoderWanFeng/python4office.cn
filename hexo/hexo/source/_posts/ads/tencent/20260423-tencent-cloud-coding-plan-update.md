@@ -1,4 +1,4 @@
-﻿---
+---
 title: 腾讯云 Coding Plan 最新消息：2026 年有哪些新功能？
 keywords: [腾讯云 Coding Plan 更新, 腾讯混元 新功能, AI编程 新闻, 程序员晚枫]
 description: 程序员晚枫追踪：2026年腾讯云 Coding Plan 新功能汇总，腾讯混元大模型更新内容一览。
@@ -7,6 +7,7 @@ tags: [腾讯云, 腾讯混元, Coding Plan 更新, AI编程]
 categories: [AI编程, 新闻]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

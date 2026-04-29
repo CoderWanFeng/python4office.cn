@@ -1,9 +1,10 @@
-﻿---
+---
 title: 如果有人让你推荐 Python 经典书，请让他看这个列表
 date: 2024-05-28 21:29:42
 tags: 电子书
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

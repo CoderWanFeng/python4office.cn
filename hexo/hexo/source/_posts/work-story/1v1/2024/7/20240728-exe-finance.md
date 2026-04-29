@@ -1,9 +1,10 @@
-﻿---
+---
 title: 开发一个自己的盯盘软件？
 date: 2024-07-28 18:14:24
 tags: 1对1
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

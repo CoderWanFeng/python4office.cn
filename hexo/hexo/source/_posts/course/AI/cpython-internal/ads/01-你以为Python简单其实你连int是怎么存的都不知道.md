@@ -1,9 +1,10 @@
-﻿---
+---
 title: 你以为Python简单？其实你连int是怎么存的都不知道
 date: 2026-04-17 08:00:00
 tags: [Python进阶, CPython, 源码解析]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![你以为Python简单？其实你连int是怎么存的都不知道 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![你以为Python简单？其实你连int是怎么存的都不知道 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)

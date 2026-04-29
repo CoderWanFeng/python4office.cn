@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: Python定时打开世界杯直播，还有小姐姐语音提醒哦~不错过每一场世界杯比赛
 date: 2022-11-20 00:37:16
 tags: [Python, AI编程]
 cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

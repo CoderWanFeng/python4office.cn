@@ -1,4 +1,4 @@
-﻿---
+---
 title: 26元/月 MiniMax vs 72元/月 GitHub Copilot，亲测结果让我意外
 keywords: [MiniMax, GitHub Copilot, 26元/月, AI编程对比, 程序员晚枫]
 description: 程序员晚枫实测对比：26元/月的 MiniMax 和 72元/月的 GitHub Copilot 哪个更值？结果让我意外！
@@ -7,6 +7,7 @@ tags: [MiniMax, GitHub Copilot, AI编程对比, 26元/月, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

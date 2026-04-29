@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: 还原复旦博士OCR代码
 date: 2022-04-21 18:28:13
 tags: [Python, AI编程]
 cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

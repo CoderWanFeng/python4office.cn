@@ -1,9 +1,10 @@
-﻿---
+---
 title: 从手动处理Excel到AI自动化我用了这12个工具
 date: 2026-04-17 14:00:00
 tags: [AI自动化办公, Excel, 工具推荐, 效率]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![从手动处理Excel到AI自动化我用了这12个工具 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![从手动处理Excel到AI自动化我用了这12个工具 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)

@@ -5,6 +5,7 @@ tags: 重庆
 cover: https://images.unsplash.com/photo-1579208578152-875549830880?q=80&w=1000&auto=format&fit=crop
 ---
 
+
 ![100-2](/images/chongqing-company/cq-light.jpg)
 
 要看你大学学的什么专业？毕业后想做什么行业？

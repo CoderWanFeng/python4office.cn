@@ -1,9 +1,10 @@
-﻿---
+---
 title: AI学习 · 交流群
 date: 2022-08-22 22:36:44
 tags: 微信群
 cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 <p align="center" id='扫码查看AI编程训练营'>

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 腾讯云 Coding Plan 薅羊毛指南：49 元/月怎么用最划算？
 keywords: [腾讯云 Coding Plan 省钱, 腾讯混元 薅羊毛, AI编程 性价比, 程序员晚枫]
 description: 程序员晚枫省钱攻略：腾讯云 Coding Plan 49元/月，怎么用最划算？这些技巧帮你省大钱！
@@ -7,6 +7,7 @@ tags: [腾讯云, 腾讯混元, 省钱攻略, AI编程]
 categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

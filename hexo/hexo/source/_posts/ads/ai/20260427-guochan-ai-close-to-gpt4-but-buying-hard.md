@@ -1,4 +1,4 @@
-﻿---
+---
 title: 我用国产AI写代码，效果已经接近GPT-4了，但购买流程让我崩溃
 keywords: [国产AI, GPT-4, Coding Plan购买, 程序员晚枫]
 description: 程序员晚枫实测：国产AI写代码，效果已经接近GPT-4了，但购买流程太复杂。推荐一站式选购平台，省心。
@@ -7,6 +7,7 @@ tags: [国产AI, GPT-4, Coding Plan, 购买流程, 程序员晚枫]
 categories: [AI编程, 实测]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

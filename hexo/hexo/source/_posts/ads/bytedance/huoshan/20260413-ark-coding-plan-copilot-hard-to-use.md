@@ -1,22 +1,19 @@
-﻿---
-
-
+---
 title: 2026年了，为什么GitHub Copilot反而越来越难用了？
 date: 2026-04-13 00:00:00
 tags:
-  - GitHub Copilot
-  - 开源
-  - AI编程
-  - GitHub
-  - Copilot
-  - 火山方舟
-  - 国内替代
+- GitHub Copilot
+- 开源
+- AI编程
+- GitHub
+- Copilot
+- 火山方舟
+- 国内替代
 categories:
-  - AI工具
+- AI工具
 cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

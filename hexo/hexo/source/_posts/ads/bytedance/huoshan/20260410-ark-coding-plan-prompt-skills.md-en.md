@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Volcano Ark Coding Plan Prompt Skills: Make AI Generate Better Code"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Prompt Skills, AI Programming Prompt Skills, Prompt Engineering, Code Generation Optimization
 description: Shared by Programmer Wan Feng: Volcano Ark Coding Plan Prompt skills, help generate better code, practical tips to improve AI programming efficiency.
@@ -7,6 +7,7 @@ tags: [Volcano Ark Coding Plan Prompt, AI Programming Prompt Skills, Prompt Engi
 categories: [AI Programming, Prompt Engineering]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 腾讯云 vs 阿里云 Coding Plan 对比：49 元 vs 29 元，谁更值得选？
 keywords: [腾讯云 vs 阿里云, Coding Plan 对比, 腾讯混元 vs 通义千问, 程序员晚枫]
 description: 程序员晚枫硬核对比：腾讯云 Coding Plan（49元/月）vs 阿里云百炼（29元/月），微信生态 vs 阿里生态怎么选？
@@ -7,6 +7,7 @@ tags: [腾讯云, 阿里云, Coding Plan 对比, 腾讯混元, 通义千问]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

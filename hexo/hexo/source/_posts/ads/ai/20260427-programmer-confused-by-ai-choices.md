@@ -1,4 +1,4 @@
-﻿---
+---
 title: 国产AI越来越聪明，但作为程序员，我却不知道该买哪个
 keywords: [国产AI, 程序员, 不知道买哪个, Coding Plan, 程序员晚枫]
 description: 程序员晚枫的困惑：国产AI越来越聪明，但面对十几家厂商的Coding Plan，作为程序员却不知道该买哪个。一站式选购平台推荐。
@@ -7,6 +7,7 @@ tags: [国产AI, 程序员, Coding Plan选购, 程序员晚枫]
 categories: [AI编程, 选购指南]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

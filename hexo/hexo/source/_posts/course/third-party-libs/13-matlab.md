@@ -6,6 +6,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
+
 <!-- more -->
 Matplotlib 是 Python 中一个非常强大的绘图库，广泛用于数据可视化，能够生成各种静态、动画和交互式图表。以下是关于如何使用 Matplotlib 的一些基础内容和示例。
 ## 1、安装 Matplotlib

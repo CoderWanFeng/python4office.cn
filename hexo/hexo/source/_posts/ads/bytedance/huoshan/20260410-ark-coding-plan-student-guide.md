@@ -1,4 +1,4 @@
-﻿---
+---
 title: 学生党专属：火山方舟Coding Plan使用指南（含教育优惠攻略）
 keywords: 程序员晚枫, 火山方舟Coding Plan学生, 学生AI编程, 教育优惠, 编程学习工具
 description: 程序员晚枫出品：学生党专属火山方舟Coding Plan使用指南，含教育优惠攻略，学生AI编程入门教程。
@@ -7,6 +7,7 @@ tags: [火山方舟Coding Plan学生, 学生AI编程, 教育优惠, 火山引擎
 categories: [AI编程, 学生专区]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 

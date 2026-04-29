@@ -1,4 +1,4 @@
-﻿---
+---
 title: 华为没有 Coding Plan？移动云可能是央企背书最稳的选择
 keywords: [华为 Coding Plan, 移动云, 中国移动, 央企AI, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐移动云，九天大模型+央企背书，数据安全有保障的选择。
@@ -7,6 +7,7 @@ tags: [华为, 移动云, 中国移动, Coding Plan, 央企]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

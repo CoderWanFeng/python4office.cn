@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: 视频教程推荐
 date: 2022-02-09 13:08:33
 tags: [Python, AI编程]
 cover: https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

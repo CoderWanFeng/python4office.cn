@@ -1,9 +1,10 @@
-﻿---
+---
 title: 第6讲 用户输入与while循环
 date: 2026-04-28 23:54:00
 tags: [python,入门,课程,第6讲]
 cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>

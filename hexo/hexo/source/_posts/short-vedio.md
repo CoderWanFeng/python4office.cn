@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: 短视频
 date: 2021-03-01 13:39:08
 tags: [Python, AI编程]
 cover: https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 <!-- more -->

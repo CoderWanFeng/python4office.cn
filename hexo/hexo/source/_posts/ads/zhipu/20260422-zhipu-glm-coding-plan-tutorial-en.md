@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Zhipu AI GLM Coding Plan Getting Started: From API Key Application to Code Calling (2026 Latest)"
 keywords: ["Zhipu AI Coding Plan Tutorial", "GLM API Getting Started", "AI Programming Tutorial", "程序员晚枫"]
 description: "Programmer Wanfeng's hands-on guide to Zhipu AI GLM Coding Plan — from API Key application to first code call, a must-read for developers."
@@ -7,6 +7,7 @@ tags: ["Zhipu AI", "GLM", "Coding Plan Tutorial", "API Getting Started"]
 categories: ["AI Programming", "Tutorial"]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

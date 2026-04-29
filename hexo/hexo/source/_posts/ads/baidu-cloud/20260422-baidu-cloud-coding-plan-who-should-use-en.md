@@ -1,4 +1,4 @@
-﻿---
+---
 title: Who Should Use Baidu Cloud Coding Plan? PaddlePaddle Users vs Enterprise Users Selection Analysis
 keywords: [Who Should Use Baidu Cloud Coding Plan, Baidu Cloud Selection Advice, PaddlePaddle, Enterprise Users, Programmer Wanfeng]
 description: Programmer Wanfeng's analysis: Who is Baidu Cloud Coding Plan suitable for? How do PaddlePaddle users and enterprise users choose?
@@ -7,6 +7,7 @@ tags: [Baidu Cloud, Coding Plan Selection, PaddlePaddle, Enterprise Users]
 categories: [AI Programming, Tool Evaluation]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

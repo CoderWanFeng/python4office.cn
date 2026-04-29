@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Student-Exclusive: Volcano Ark Coding Plan Usage Guide (Including Education Discount Tips"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Student, Student AI Programming, Education Discount, Programming Learning Tool
 description: By Programmer Wan Feng: Student-exclusive Volcano Ark Coding Plan guide, including education discount tips.
@@ -7,6 +7,7 @@ tags: [Volcano Coding Plan Student, Student AI Programming, Education Discount, 
 categories: [AI Programming, Student Zone]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

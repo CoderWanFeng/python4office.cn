@@ -1,10 +1,11 @@
-﻿---
+---
 title: 阿里云Coding Plan省钱攻略：怎么用出最大价值？
 date: 2026-04-08 00:44:00
 tags: [阿里云CodingPlan省钱, 百炼CodingPlan优惠, 阿里云AI编程省钱, 通义千问性价比, 程序员省钱]
 categories: [AI编程, 省钱攻略]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

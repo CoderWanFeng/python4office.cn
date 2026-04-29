@@ -1,9 +1,10 @@
-﻿---
+---
 title: 用Python写一个300行的Web框架挑战你的编程极限
 date: 2026-04-17 10:00:00
 tags: [Python进阶, Web框架, 元类, 综合实战]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![用Python写一个300行的Web框架挑战你的编程极限 - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 ![用Python写一个300行的Web框架挑战你的编程极限 - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)

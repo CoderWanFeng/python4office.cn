@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 为什么AI有的免费有的收费？揭秘"开源"背后的真相
 date: 2026-04-16 16:40:00
 author: 程序员晚枫
@@ -13,9 +12,9 @@ tags:
 - Open Source
 order: 1
 description: 开源到底是什么？为什么AI圈总提"开源大模型"？程序员晚枫用大白话帮你搞懂开源，看完就明白为什么有的AI能免费用了！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![为什么AI有的免费有的收费？揭秘"开源"背后的真相 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![为什么AI有的免费有的收费？揭秘"开源"背后的真相 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)

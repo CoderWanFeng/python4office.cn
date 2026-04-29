@@ -1,4 +1,4 @@
-﻿---
+---
 title: OpenRouter Coding Plan 适合谁用？追求全球模型 vs 国内用户选购分析
 keywords: [OpenRouter Coding Plan 适合谁, OpenRouter 选购建议, 全球模型, 程序员晚枫]
 description: 程序员晚枫分析：OpenRouter Coding Plan 适合哪些人？和国内厂商比怎么选？
@@ -7,6 +7,7 @@ tags: [OpenRouter, Coding Plan 选购, 全球模型, 选购建议]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

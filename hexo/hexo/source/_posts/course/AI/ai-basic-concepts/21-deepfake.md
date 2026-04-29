@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 什么是AI换脸？假视频的时代来了
 date: 2026-04-16 17:20:00
 author: 程序员晚枫
@@ -14,9 +13,9 @@ tags:
 - AIGC
 order: 21
 description: 视频里的人是真的吗？程序员晚枫用大白话揭秘AI换脸，让你学会识别假视频！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![什么是AI换脸？假视频的时代来了 - 配图1](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
 ![什么是AI换脸？假视频的时代来了 - 配图2](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 腾讯云 Coding Plan 入门教程：49 元/月体验腾讯混元 AI 编程（图文详解）
 keywords: [腾讯云 Coding Plan 教程, 腾讯混元 注册, AI编程 入门, 程序员晚枫]
 description: 程序员晚枫手把手教你开通讯腾云 Coding Plan，49元/月体验腾讯混元大模型，附详细图文教程。
@@ -7,6 +7,7 @@ tags: [腾讯云, 腾讯混元, Coding Plan 教程, AI编程入门]
 categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

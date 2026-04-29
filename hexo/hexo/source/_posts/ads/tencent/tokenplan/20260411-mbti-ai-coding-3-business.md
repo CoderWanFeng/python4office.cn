@@ -1,28 +1,25 @@
-﻿---
-
-
+---
 title: 我用AI编程做的MBTI测试网站，上线一周赚了3000+，普通人也能复制的变现思路
 keywords: 程序员晚枫, MBTI测试变现, AI编程赚钱, 副业项目, 网站变现, 普通人创业, 编程副业
 description: 程序员晚枫分享用AI编程做MBTI测试网站的变现经验。上线一周收入3000+，详细拆解普通人也能复制的变现思路和操作方法。
 date: 2026-04-11 14:00:00
 tags:
-  - Python
-  - AI变现
-  - AI编程
-  - 副业变现
-  - 程序员晚枫
-  - MBTI测试
-  - AI编程变现
-  - 副业项目
-  - 赚钱思路
-categories: 
-  - AI编程变现
-  - 副业项目
+- Python
+- AI变现
+- AI编程
+- 副业变现
+- 程序员晚枫
+- MBTI测试
+- AI编程变现
+- 副业项目
+- 赚钱思路
+categories:
+- AI编程变现
+- 副业项目
 author: 程序员晚枫
 cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

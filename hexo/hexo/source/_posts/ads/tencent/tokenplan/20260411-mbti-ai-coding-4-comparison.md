@@ -1,25 +1,22 @@
-﻿---
-
-
+---
 title: 传统编程 vs AI编程：我做MBTI测试网站的亲身经历，效率差距太明显了
 keywords: 程序员晚枫, 传统编程, AI编程对比, 编程效率, AI代码生成, 程序员转型, AI时代编程
 description: 程序员晚枫亲身经历对比传统编程和AI编程。用两种方式做同一个MBTI测试网站，效率差距10倍以上。AI编程时代，普通人如何抓住机会？
 date: 2026-04-11 15:00:00
 tags:
-  - Python
-  - AI编程
-  - 程序员晚枫
-  - 传统编程
-  - 效率对比
-  - 程序员转型
-categories: 
-  - AI编程观察
-  - 技术趋势
+- Python
+- AI编程
+- 程序员晚枫
+- 传统编程
+- 效率对比
+- 程序员转型
+categories:
+- AI编程观察
+- 技术趋势
 author: 程序员晚枫
 cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

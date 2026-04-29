@@ -1,19 +1,20 @@
-﻿---
+---
 title: "用 Trae 做了一个爬虫：真实记录全过程"
 date: 2026-04-12 00:00:00
 categories:
-  - AI工具评测
+- AI工具评测
 tags:
-  - Trae
-  - Python自动化
-  - AI编程
-  - Python爬虫
-  - AI工具
-  - 爬虫
-  - 实战
+- Trae
+- Python自动化
+- AI编程
+- Python爬虫
+- AI工具
+- 爬虫
+- 实战
 description: "用 Trae AI 编程做了一个爬虫，记录全过程和真实感受"
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 <!-- more -->

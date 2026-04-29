@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MiniMax Coding Plan is Here! Multimodal + Creative Capability, A New Choice for Domestic AI Programming"
 keywords: [MiniMax Coding Plan, MiniMax AI, AI Programming, Multimodal, Programmer Wan Feng]
 description: "Programmer Wan Feng recommends: MiniMax Coding Plan, multimodal + creative capability, a new choice for domestic AI programming."
@@ -6,12 +6,13 @@ date: 2026-04-22 19:40:00
 tags: [MiniMax, Coding Plan, AI Programming, Multimodal, Programmer Wan Feng]
 categories: [AI Programming, Tool Review]
 hreflang:
-  en: /20260422-minimax-coding-plan-intro/
-  zh: /20260422-minimax-coding-plan-intro/
+en: /20260422-minimax-coding-plan-intro/
+zh: /20260422-minimax-coding-plan-intro/
 canonical: /20260422-minimax-coding-plan-intro/
 translation: complete
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

@@ -1,9 +1,10 @@
-﻿---
+---
 title: "Is ChatGPT Dead? The Paradigm Shift Behind OpenClaw's Rise"
 date: 2026-03-03 10:40:00
 tags: [OpenClaw, Industry Analysis]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

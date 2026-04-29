@@ -1,4 +1,4 @@
-﻿---
+---
 title: 腾讯云 Coding Plan 来了！腾讯混元+多模型支持，国内开发者的新选择
 keywords: [腾讯云 Coding Plan, 腾讯混元, Tencent Cloud, AI编程, 程序员晚枫]
 description: 程序员晚枫推荐：腾讯云 Coding Plan，腾讯混元大模型+多模型支持，国内开发者值得考虑的新选择。
@@ -7,6 +7,7 @@ tags: [腾讯云, 腾讯混元, Coding Plan, AI编程, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

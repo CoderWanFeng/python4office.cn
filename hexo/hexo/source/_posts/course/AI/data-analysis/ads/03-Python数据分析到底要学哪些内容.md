@@ -1,10 +1,11 @@
-﻿---
+---
 title: Python数据分析到底要学哪些内容？附完整学习路线图
 date: 2026-04-17 23:00:00
 tags: [数据分析, 学习路线, Python, SQL, 可视化]
 categories: Python数据分析
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![Python数据分析到底要学哪些内容？附完整学习路线图 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![Python数据分析到底要学哪些内容？附完整学习路线图 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)

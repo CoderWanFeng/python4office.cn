@@ -1,4 +1,4 @@
-﻿---
+---
 title: MiniMax Coding Plan 来了！多模态+创意能力，国产 AI 编程新选择
 keywords: [MiniMax Coding Plan, MiniMax AI, AI编程, 多模态, 程序员晚枫]
 description: 程序员晚枫推荐：MiniMax Coding Plan，多模态+创意能力，国产 AI 编程新选择。
@@ -7,6 +7,7 @@ tags: [MiniMax, Coding Plan, AI编程, 多模态, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

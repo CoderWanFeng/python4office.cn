@@ -1,24 +1,21 @@
-﻿---
-
-
+---
 title: "MiniMax TOKEN Plan 收费揭秘：按次收费居然这么划算"
 date: 2026-04-22 00:00:00
 categories:
-  - AI工具评测
+- AI工具评测
 tags:
-  - 大模型
-  - Token Plan
-  - AI编程
-  - MiniMax
-  - 腾讯云
-  - TOKEN Plan
-  - AI助手
-  - 省钱
+- 大模型
+- Token Plan
+- AI编程
+- MiniMax
+- 腾讯云
+- TOKEN Plan
+- AI助手
+- 省钱
 description: "按次收费的 AI 服务到底划不划算？算了一笔账，发现 Token Plan 真的是价格屠夫"
 cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

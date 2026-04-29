@@ -1,4 +1,4 @@
-﻿---
+---
 title: 月之暗面 Kimi Coding Plan 教程：如何用 128K 上下文处理大型代码项目（2026版）
 keywords: [Kimi Coding Plan 教程, Moonshot AI 入门, 长上下文代码分析, 程序员晚枫]
 description: 程序员晚枫手把手教你用月之暗面 Kimi Coding Plan，如何利用 128K 超长上下文处理大型代码项目。
@@ -7,6 +7,7 @@ tags: [月之暗面, Kimi, Coding Plan 教程, 长上下文, 代码分析]
 categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

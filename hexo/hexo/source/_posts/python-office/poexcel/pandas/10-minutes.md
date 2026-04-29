@@ -5,6 +5,7 @@ tags: [自动化办公,Excel,pandas]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，之前在B站账号：**Python自动化办公社区**发布了一套关于**Excel + Python实现自动化办公**的教程，目前已经有40w+的播放了。
 

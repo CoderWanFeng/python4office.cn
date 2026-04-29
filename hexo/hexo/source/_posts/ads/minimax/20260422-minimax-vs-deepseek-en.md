@@ -1,32 +1,29 @@
-﻿---
-
-
+---
 title: "MiniMax TOKEN Plan vs DeepSeek API：2026年最新价格对比测评"
 date: 2026-04-22 00:00:00
 categories:
-  - AI工具横评
+- AI工具横评
 tags:
-  - 大模型
-  - Token Plan
-  - AI编程
-  - DeepSeek
-  - MiniMax
-  - 腾讯云
-  - API价格
-  - AI大模型
-  - 价格对比
-  - 2026
+- 大模型
+- Token Plan
+- AI编程
+- DeepSeek
+- MiniMax
+- 腾讯云
+- API价格
+- AI大模型
+- 价格对比
+- 2026
 description: "2026年最新！MiniMax TOKEN Plan和DeepSeek API哪个更划算？从价格、模型能力、适用场景全面对比"
 keywords:
-  - MiniMax TOKEN Plan
-  - DeepSeek API
-  - DeepSeek价格
-  - AI大模型对比
-  - 2026 API费用
+- MiniMax TOKEN Plan
+- DeepSeek API
+- DeepSeek价格
+- AI大模型对比
+- 2026 API费用
 cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

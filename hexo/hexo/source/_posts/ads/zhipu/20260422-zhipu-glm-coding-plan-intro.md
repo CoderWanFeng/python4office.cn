@@ -1,4 +1,4 @@
-﻿---
+---
 title: 智谱 AI GLM Coding Plan 来了！国产大模型+API全家桶，开发者友好度拉满
 keywords: [智谱 AI Coding Plan, GLM Coding Plan, 智谱大模型, AI编程, 程序员晚枫]
 description: 程序员晚枫推荐：智谱 AI GLM Coding Plan，国产大模型+API全家桶，开发者友好度拉满的新选择。
@@ -7,6 +7,7 @@ tags: [智谱 AI, GLM, Coding Plan, AI编程, 国产大模型]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

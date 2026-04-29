@@ -1,23 +1,20 @@
-﻿---
-
-
+---
 title: Claude Code太贵？我把月费从500元压到了39元（腾讯云Token Plan攻略）
 date: 2026-04-16 00:00:00
 tags:
-  - Token Plan
-  - AI编程
-  - Claude Code
-  - AI工具
-  - 腾讯云
-  - CC
-  - 省钱攻略
-  - 性价比
+- Token Plan
+- AI编程
+- Claude Code
+- AI工具
+- 腾讯云
+- CC
+- 省钱攻略
+- 性价比
 categories:
-  - AI工具
+- AI工具
 cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

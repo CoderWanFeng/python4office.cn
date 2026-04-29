@@ -1,4 +1,4 @@
-﻿---
+---
 title: 小米 MiMo Coding Plan 来了！小米大模型+生态优势，程序员的新选择
 keywords: [小米 MiMo Coding Plan, 小米大模型, MiMo AI, AI编程, 程序员晚枫]
 description: 程序员晚枫推荐：小米 MiMo Coding Plan，小米大模型+生态优势，程序员值得关注的新选择。
@@ -7,6 +7,7 @@ tags: [小米, MiMo, Coding Plan, AI编程, 小米生态]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

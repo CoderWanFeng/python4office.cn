@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 什么是AI克隆声音？
 date: 2026-04-16 17:30:00
 author: 程序员晚枫
@@ -16,9 +15,9 @@ tags:
 - 语音合成
 order: 27
 description: 什么是AI克隆声音？程序员晚枫用通俗语言解释，AI是怎么复制你声音的，以及怎么防诈骗。
-
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![什么是AI克隆声音？ - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 ![什么是AI克隆声音？ - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)

@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: GPT是什么意思？揭秘ChatGPT背后的"大脑"
 date: 2026-04-16 16:57:00
 author: 程序员晚枫
@@ -13,9 +12,9 @@ tags:
 - GPT
 order: 4
 description: 大家都说ChatGPT，但GPT到底是什么意思？程序员晚枫用大白话拆解G-P-T三个字母，让你真正看懂AI"大脑"的进化史！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![GPT是什么意思？揭秘ChatGPT背后的"大脑" - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 ![GPT是什么意思？揭秘ChatGPT背后的"大脑" - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)

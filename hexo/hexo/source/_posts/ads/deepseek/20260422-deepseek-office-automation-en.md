@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DeepSeek Office Automation! 10 Practical Cases, You'll Learn How to Use It After Reading"
 date: 2026-04-22 00:00:00
 tags: ["deepseek", "ai office", "office automation"]
@@ -6,6 +6,7 @@ categories: ["DeepSeek Practice"]
 description: "10 practical cases of DeepSeek office automation: Excel, Word, PPT, PDF, email, data visualization, copywriting generation, you'll know how to use it after reading."
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

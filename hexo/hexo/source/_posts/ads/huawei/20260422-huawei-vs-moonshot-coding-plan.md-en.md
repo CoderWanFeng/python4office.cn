@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Huawei Doesn't Have Coding Plan? Moonshot Kimi May Be the Best Choice for Long Text"
 keywords: [Huawei Coding Plan, Moonshot, Kimi, Long Text, Programmer Wan Feng]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends Moonshot Kimi, 200K character long text support, a powerful tool for programmers reading code documentation.
@@ -7,6 +7,7 @@ tags: [Huawei, Moonshot, Kimi, Coding Plan, Long Text]
 categories: [AI Programming, Tool Review]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

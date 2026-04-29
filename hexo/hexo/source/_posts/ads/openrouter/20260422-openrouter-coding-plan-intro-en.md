@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: OpenRouter Coding Plan 来了！统一接口访问全球大模型，开发者必备工具
 keywords: [OpenRouter Coding Plan, OpenRouter AI, 统一接口, 全球大模型, 程序员晚枫]
 description: 程序员晚枫推荐：OpenRouter Coding Plan，统一接口访问全球大模型，一个 API 搞定所有主流模型。
@@ -8,6 +7,7 @@ tags: [OpenRouter, Coding Plan, 全球大模型, 统一接口, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 <!-- more -->

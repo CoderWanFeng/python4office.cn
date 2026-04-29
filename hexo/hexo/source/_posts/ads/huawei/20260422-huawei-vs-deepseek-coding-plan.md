@@ -1,4 +1,4 @@
-﻿---
+---
 title: 华为没有 Coding Plan？DeepSeek 可能是性价比最高的国产之光
 keywords: [华为 Coding Plan, DeepSeek, 深度求索, 性价比, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐 DeepSeek，价格便宜+效果强，国产 AI 性价比之王！
@@ -7,6 +7,7 @@ tags: [华为, DeepSeek, 深度求索, Coding Plan, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

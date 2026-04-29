@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: install-postgresql-config
 date: 2022-09-09 10:37:00
 tags: [Python, AI编程]
 cover: https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

@@ -1,9 +1,10 @@
-﻿---
+---
 title: 从0开始，用Python做一个投票小程序
 date: 2024-03-16 23:22:05
 tags: 1v1
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 <!-- more -->

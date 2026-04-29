@@ -1,4 +1,4 @@
-﻿---
+---
 title: 阿里云百炼 Coding Plan 入门教程：29 元/月体验通义千问（图文详解）
 keywords: [阿里云百炼 Coding Plan 教程, 通义千问 注册, AI编程 入门, 程序员晚枫]
 description: 程序员晚枫手把手教你开通阿里云百炼 Coding Plan，29元/月体验通义千问大模型，附详细图文教程。
@@ -7,6 +7,7 @@ tags: [阿里云, 百炼, 通义千问, Coding Plan 教程, AI编程入门]
 categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

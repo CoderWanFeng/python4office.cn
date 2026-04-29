@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 为什么AI按"Token"收费而不是按字数？
 date: 2026-04-16 16:56:00
 author: 程序员晚枫
@@ -12,9 +11,9 @@ tags:
 - Token
 order: 3
 description: 新闻总说Token计费、32K上下文窗口，到底是个啥？程序员晚枫用大白话帮你3分钟搞懂AI的计费逻辑，看完再也不怕被坑！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![为什么AI按"Token"收费而不是按字数？ - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 ![为什么AI按"Token"收费而不是按字数？ - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)

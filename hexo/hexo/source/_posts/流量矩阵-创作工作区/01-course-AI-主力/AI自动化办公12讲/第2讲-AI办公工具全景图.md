@@ -1,12 +1,11 @@
-﻿---
-
+---
 title: 第2讲：AI办公工具全景图
 date: 2026-04-16 17:02:00
 tags: [AI工具，办公自动化，工具推荐]
 categories: [AI自动化办公12讲]
 cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
-
 ---
+
 
 ![第2讲：AI办公工具全景图 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 ![第2讲：AI办公工具全景图 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)

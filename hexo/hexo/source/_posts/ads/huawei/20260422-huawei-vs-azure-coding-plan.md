@@ -1,4 +1,4 @@
-﻿---
+---
 title: 华为没有 Coding Plan？企业级需求看 Azure OpenAI
 keywords: [华为 Coding Plan, Azure OpenAI, 企业级AI, GPT-4, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐 Azure OpenAI，企业级安全合规+GPT-4，适合对安全要求高的企业用户。
@@ -7,6 +7,7 @@ tags: [华为, Azure OpenAI, 企业级AI, Coding Plan, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

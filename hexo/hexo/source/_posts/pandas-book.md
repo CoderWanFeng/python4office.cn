@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: 学习pandas应该看哪本书？pandas创始人，推荐了1本《利用Python进行数据分析》
 date: 2022-07-03 02:03:16
 tags: [Python数据分析, Python, pandas, AI编程]
 cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

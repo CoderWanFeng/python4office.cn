@@ -1,4 +1,4 @@
-﻿---
+---
 title: 讯飞星火 Coding Plan 价格出炉：低至 3.9 元/月，语音编程白菜价！
 keywords: [讯飞星火 Coding Plan 价格, iFLYTEK Spark 多少钱, 语音编程 便宜, AI编程 月费]
 description: 程序员晚枫实测：讯飞星火 Coding Plan 最低只要 3.9 元/月，语音编程+国产大模型，价格打下来了！
@@ -7,6 +7,7 @@ tags: [讯飞星火, iFLYTEK Spark, Coding Plan 价格, 语音编程, AI编程]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 
