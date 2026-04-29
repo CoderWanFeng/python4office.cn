@@ -1,9 +1,10 @@
-﻿---
+---
 title: 毕业校招，不是计算机专业，能在深圳找到实习吗？
 date: 2025-02-16 22:22:05
 tags: 1v1
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 <!-- more -->

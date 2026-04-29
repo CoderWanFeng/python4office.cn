@@ -5,6 +5,7 @@ tags: [poemail]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
 #  一、安装python
 双击这个像两条蟒蛇的图标(正好今年是蛇年哈哈)

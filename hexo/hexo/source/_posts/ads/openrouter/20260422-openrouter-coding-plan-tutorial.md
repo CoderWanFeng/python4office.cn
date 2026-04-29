@@ -1,4 +1,4 @@
-﻿---
+---
 title: OpenRouter Coding Plan 教程：一个 API 调用全球模型（2026最新版）
 keywords: [OpenRouter Coding Plan 教程, 统一接口, 全球模型, API 调用, 程序员晚枫]
 description: 程序员晚枫手把手教你用 OpenRouter，一个 API 调用全球所有主流大模型的实战教程。
@@ -7,6 +7,7 @@ tags: [OpenRouter, Coding Plan 教程, API 调用, 全球模型]
 categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

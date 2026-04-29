@@ -7,6 +7,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 
 
+
 <p align="center" id='扫码查看AI编程训练营'>
     <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />

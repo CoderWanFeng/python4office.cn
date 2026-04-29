@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 想用AI写代码？先申请个"API Key"身份证
 date: 2026-04-16 16:55:00
 author: 程序员晚枫
@@ -13,9 +12,9 @@ tags:
 - API
 order: 2
 description: 每次看AI教程都让你"申请API Key"搞不懂？程序员晚枫用大白话帮你搞懂API Key是什么，怎么用，怎么保安全！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![想用AI写代码？先申请个"API Key"身份证 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 ![想用AI写代码？先申请个"API Key"身份证 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Huawei Doesn't Have Coding Plan? OpenRouter May Be the Most Complete Choice for Global Models"
 keywords: [Huawei Coding Plan, OpenRouter, Global Large Models, Unified Interface, Programmer Wan Feng]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends OpenRouter, one API to access all global large models, suitable for researchers and developers needing global models.
@@ -7,6 +7,7 @@ tags: [Huawei, OpenRouter, Global Large Models, Coding Plan, Programmer Wan Feng
 categories: [AI Programming, Tool Review]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

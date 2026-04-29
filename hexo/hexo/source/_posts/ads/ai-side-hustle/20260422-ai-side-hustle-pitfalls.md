@@ -1,4 +1,4 @@
-﻿---
+---
 title: "AI副业避坑！别踩这10个坑，很多人都栽过"
 date: 2026-04-22 00:00:00
 tags: ["ai副业", "副业避坑"]
@@ -6,6 +6,7 @@ categories: ["AI副业变现"]
 description: "AI副业避坑：别踩这10个坑，不要all in、不要投机、不要违规、要坚持，很多人都栽过。"
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

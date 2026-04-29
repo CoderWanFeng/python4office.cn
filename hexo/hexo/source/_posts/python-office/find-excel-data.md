@@ -7,6 +7,7 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 
 
 
+
 <!-- more -->
 ![](https://www.python-office.com/api/img-cdn/python-office/find_excel_data/cover.jpg)
 

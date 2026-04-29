@@ -1,14 +1,15 @@
-﻿---
+---
 title: 4月12日郑州见！腾讯云OpenClaw全能助手实战体验
 keywords: 程序员晚枫, 腾讯云OpenClaw, AI编程, 郑州龙虾课, 全能助手部署, AI助手搭建, 轻量服务器
 description: 程序员晚枫4月12日郑州龙虾课：腾讯云OpenClaw全能助手实战体验，现场演示3分钟云端部署AI助手，支持微信/QQ/企业微信/飞书/钉钉全平台接入。
 date: 2026-04-08 23:30:00
 sidebar:
-  - toc
+- toc
 hide:
-  - toc
+- toc
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 

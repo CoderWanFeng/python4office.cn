@@ -5,6 +5,7 @@ tags: 1v1
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
 最近咨询的朋友很多，马上5.1了，大家想的不是出去玩，而是找我学习？
 

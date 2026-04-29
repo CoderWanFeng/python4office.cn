@@ -1,4 +1,4 @@
-﻿---
+---
 title: 智谱 AI GLM Coding Plan 适合谁用？API 开发者 vs 普通用户选购分析
 keywords: [智谱 AI GLM Coding Plan 适合谁, 智谱选购建议, API 开发, 程序员晚枫]
 description: 程序员晚枫分析：智谱 AI GLM Coding Plan 适合哪些人？和火山方舟、阿里云比怎么选？
@@ -7,6 +7,7 @@ tags: [智谱 AI, GLM, Coding Plan 选购, API 开发]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

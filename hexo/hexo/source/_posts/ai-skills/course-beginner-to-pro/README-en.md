@@ -1,10 +1,11 @@
-﻿---
+---
 title: Skills Beginner to Practice - Systematic Course
 date: 2026-04-08 00:00:00
 tags: [AI, Skill, Course, Tutorial]
 description: A complete AI Skill learning path from beginner to independent development, deployment, and monetization
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

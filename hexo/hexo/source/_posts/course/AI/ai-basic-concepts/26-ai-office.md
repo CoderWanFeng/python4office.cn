@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 什么是AI办公？AI帮你写PPT做表格
 date: 2026-04-16 17:25:00
 author: 程序员晚枫
@@ -16,9 +15,9 @@ tags:
 - AI写文档
 order: 26
 description: 为什么现在办公这么快了？程序员晚枫用大白话揭秘AI办公，让你了解AI帮你做PPT写Word处理Excel！
-
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![什么是AI办公？AI帮你写PPT做表格 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 ![什么是AI办公？AI帮你写PPT做表格 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)

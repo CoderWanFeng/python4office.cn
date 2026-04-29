@@ -1,10 +1,11 @@
-﻿---
+---
 title: Kubernetes 部署 OpenClaw 完整手册！高可用架构就靠它
 date: 2026-03-26 02:19:08
 tags: [OpenClaw, Kubernetes, K8s, 高可用]
 categories: AI 编程实战
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

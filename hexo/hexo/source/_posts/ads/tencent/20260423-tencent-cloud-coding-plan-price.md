@@ -1,4 +1,4 @@
-﻿---
+---
 title: 腾讯云 Coding Plan 价格出炉：最低仅需 49 元/月，混元大模型带回家！
 keywords: [腾讯云 Coding Plan 价格, 腾讯混元 多少钱, AI编程 月费, 程序员晚枫]
 description: 程序员晚枫实测：腾讯云 Coding Plan 最低 49 元/月，腾讯混元大模型+多模型支持，价格详解！
@@ -7,6 +7,7 @@ tags: [腾讯云, 腾讯混元, Coding Plan 价格, AI编程]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "AI Agent Office Automation! 5 Scenarios That Show You How to Use It"
 date: 2026-04-22 00:00:00
 tags: ["ai agent", "ai office", "automation"]
@@ -6,6 +6,7 @@ categories: ["AI Agent Practice"]
 description: "AI Agent office automation cases: 5 scenarios including email processing, schedule management, document organization, data analysis, and customer service."
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

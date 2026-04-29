@@ -1,25 +1,22 @@
-﻿---
-
-
+---
 title: "凌晨2点问 AI：MiniMax TOKEN Plan 救命实测"
 date: 2026-04-22 00:00:00
 categories:
-  - AI工具评测
+- AI工具评测
 tags:
-  - 大模型
-  - Token Plan
-  - AI编程
-  - MiniMax
-  - 腾讯云
-  - TOKEN Plan
-  - 7x24
-  - 救命
-  - 开发者
+- 大模型
+- Token Plan
+- AI编程
+- MiniMax
+- 腾讯云
+- TOKEN Plan
+- 7x24
+- 救命
+- 开发者
 description: "凌晨2点代码突然崩了，AI居然秒回救命！用 TOKEN Plan 真的很靠谱"
 cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

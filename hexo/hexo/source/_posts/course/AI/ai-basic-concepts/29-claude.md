@@ -1,6 +1,4 @@
-﻿---
-
-
+---
 title: 什么是Claude？
 date: 2026-04-16 17:32:00
 author: 程序员晚枫
@@ -18,10 +16,9 @@ tags:
 - 大模型
 order: 29
 description: 什么是Claude？程序员晚枫用通俗语言解释，Anthropic出品的AI助手和ChatGPT有什么区别。
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
-
 ---
+
 
 ![什么是Claude？ - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 ![什么是Claude？ - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)

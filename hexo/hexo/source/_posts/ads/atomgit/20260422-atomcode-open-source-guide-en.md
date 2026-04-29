@@ -1,4 +1,4 @@
-﻿---
+---
 title: "AtomCode Open Source Project Hosting Guide! From 0 to 1, You'll Learn It After Reading"
 date: 2026-04-22 00:00:00
 tags: ["atomgit", "atomcode", "open source project"]
@@ -6,6 +6,7 @@ categories: ["AI Tools"]
 description: "AtomCode open source project hosting guide! From 0 to 1, registration, creating repository, uploading code, collaborative development, you'll learn it after reading."
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

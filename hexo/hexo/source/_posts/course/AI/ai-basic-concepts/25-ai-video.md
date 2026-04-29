@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 什么是AI视频？一句话生成视频
 date: 2026-04-16 17:24:00
 author: 程序员晚枫
@@ -15,9 +14,9 @@ tags:
 - 视频生成
 order: 25
 description: 为什么Sora这么火？程序员晚枫用大白话揭秘AI视频，让你了解文字生成视频的魔法！
-
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![什么是AI视频？一句话生成视频 - 配图1](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![什么是AI视频？一句话生成视频 - 配图2](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)

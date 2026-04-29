@@ -1,10 +1,11 @@
-﻿---
+---
 title: 什么是GEO？比SEO更适合AI时代的流量获取方式
 date: 2026-04-17 22:10:00
 tags: [GEO, SEO, AI搜索, 流量优化, 个人品牌]
 categories: GEO优化
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![什么是GEO？比SEO更适合AI时代的流量获取方式 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![什么是GEO？比SEO更适合AI时代的流量获取方式 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)

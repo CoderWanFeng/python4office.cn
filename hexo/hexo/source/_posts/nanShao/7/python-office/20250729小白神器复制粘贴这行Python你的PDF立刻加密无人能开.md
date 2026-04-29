@@ -1,8 +1,9 @@
-﻿﻿---
+---
 title: 小白神器：复制粘贴这行Python，你的PDF立刻加密无人能开
 date: 2025-07-29 23:41:49
 tags: [50讲Python自动化办公]
 ---
+
 <!-- more -->
 
 ![20250729小白神器复制粘贴这行Python你的PDF立刻加密无人能开.md - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)

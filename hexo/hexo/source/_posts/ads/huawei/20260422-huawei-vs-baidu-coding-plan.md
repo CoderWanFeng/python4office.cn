@@ -1,4 +1,4 @@
-﻿---
+---
 title: 华为没有 Coding Plan？百度智能云可能是代码能力最强的选择
 keywords: [华为 Coding Plan, 百度智能云, 文心一言, 代码能力, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐百度智能云，文心一言+代码能力超强，国产 AI 的另一极。
@@ -7,6 +7,7 @@ tags: [华为, 百度智能云, 文心一言, Coding Plan, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

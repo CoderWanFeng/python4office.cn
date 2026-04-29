@@ -1,21 +1,20 @@
-﻿---
-
+---
 title: X vs 微信：AI程序员该选择哪个生态？深度分析
 date: 2026-04-14 11:00:00
 author: 晚枫
 tags:
-  - Python
-  - AI编程
-  - AI
-  - 马斯克
-  - X应用
-  - 微信
-  - 技术分析
+- Python
+- AI编程
+- AI
+- 马斯克
+- X应用
+- 微信
+- 技术分析
 categories:
-  - ai
+- ai
 cover: /img/ai/x-vs-wechat.jpg
-
 ---
+
 
 
 <!-- more -->

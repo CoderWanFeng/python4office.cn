@@ -1,26 +1,23 @@
-﻿---
-
-
+---
 title: 我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用
 keywords: 程序员晚枫, AI导航网站, AI工具合集, AI工具导航, python-office, AI编程, AI效率工具, 免费AI工具
 description: 程序员晚枫全新发布AI导航网站，收录100+精选AI工具，涵盖编程、设计、办公、学习等多个领域。零代码基础也能快速上手，一站式解决AI工具查找难题。
 date: 2026-04-11 11:00:00
 tags:
-  - Python
-  - AI编程
-  - 程序员晚枫
-  - AI导航
-  - AI工具
-  - 效率工具
-  - python-office
-categories: 
-  - AI工具推荐
-  - 项目分享
+- Python
+- AI编程
+- 程序员晚枫
+- AI导航
+- AI工具
+- 效率工具
+- python-office
+categories:
+- AI工具推荐
+- 项目分享
 author: 程序员晚枫
 cover: https://images.unsplash.com/photo-1432888?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 华为云暂时没有 Coding Plan？但这些 AI 服务值得开发者关注
 keywords: [华为云 AI 服务, 盘古大模型, 昇腾 AI, 开发者服务, 程序员晚枫]
 description: 程序员晚枫深度解析：华为云虽然没有 Coding Plan，但盘古大模型和昇腾 AI 服务对开发者也有价值。
@@ -7,6 +7,7 @@ tags: [华为云, 盘古大模型, 昇腾 AI, 开发者服务]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

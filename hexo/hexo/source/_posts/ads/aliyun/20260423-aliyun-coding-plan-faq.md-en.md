@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Alibaba Cloud Bailian Coding Plan FAQ: Is 29 yuan/month Worth It? Read This Article!"
 keywords: [Alibaba Cloud Bailian FAQ, Tongyi Qianwen Common Questions, AI Programming Q&A, Programmer Wan Feng]
 description: Programmer Wan Feng answers: Alibaba Cloud Bailian Coding Plan common questions summary, is 29 yuan/month worth it? How are tokens calculated? After reading you'll understand.
@@ -7,6 +7,7 @@ tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, FAQ, AI Programming]
 categories: [AI Programming, Tutorial]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

@@ -6,6 +6,7 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 ---
 
 
+
 <!-- more -->
 近日，全球知名的代码托管平台 GitLab 发布了一则重要通知《Important Change to Your GitLab.com Account》，宣布将不再为位于中国大陆、澳门和香港的用户提供 GitLab.com 账户服务。
 

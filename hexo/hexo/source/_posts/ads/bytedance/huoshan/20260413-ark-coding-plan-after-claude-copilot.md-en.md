@@ -1,4 +1,4 @@
-﻿---
+---
 title: "After 1 Month with Volcano, I Abandoned Claude and Copilot"
 keywords: Programmer Wan Feng's Experience, Volcano Experience, Claude Usage, Copilot Alternative, Domestic AI Programming
 description: After 1 month with Volcano Coding Plan, I completely abandoned Claude and Copilot. Real experience sharing.
@@ -7,6 +7,7 @@ tags: [Volcano Experience, Claude Usage, Copilot Alternative, Domestic AI Progra
 categories: [AI Programming, Tool Reviews]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

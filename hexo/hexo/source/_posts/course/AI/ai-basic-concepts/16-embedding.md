@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 什么是嵌入？AI是怎么"理解"文字含义的
 date: 2026-04-16 17:15:00
 author: 程序员晚枫
@@ -14,9 +13,9 @@ tags:
 - 语义搜索
 order: 16
 description: AI是怎么理解"苹果"既是水果又是手机的？程序员晚枫用大白话揭秘嵌入技术！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![什么是嵌入？AI是怎么"理解"文字含义的 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 ![什么是嵌入？AI是怎么"理解"文字含义的 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)

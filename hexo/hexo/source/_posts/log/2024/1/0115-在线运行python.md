@@ -1,9 +1,10 @@
-﻿---
+---
 title: 腾讯放大招了！发布了直接运行Python的网站，不用安装任何软件
 date: 2024-1-15 21:16:17
 tags: 自动化办公
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

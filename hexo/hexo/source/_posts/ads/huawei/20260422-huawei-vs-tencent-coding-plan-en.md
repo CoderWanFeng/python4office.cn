@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 华为没有 Coding Plan？腾讯云混元可能是你的菜
 keywords: [华为 Coding Plan, 腾讯混元, 腾讯云, 国产AI对比, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐腾讯云混元，微信生态加持+企业级服务，同样值得考虑。
@@ -8,6 +7,7 @@ tags: [华为, 腾讯云, 腾讯混元, Coding Plan, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 <!-- more -->

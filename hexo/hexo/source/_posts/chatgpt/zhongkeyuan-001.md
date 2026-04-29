@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: 中科院科研工作专用ChatGPT，免费下载！国家队YYDS
 date: 2023-03-27 23:09:46
 tags: [AI编程, ChatGPT, OpenAI]
 cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Baidu Cloud Coding Plan is Here! Wenxin + PaddlePaddle, Domestic AI Programming Veteran's New Journey
 keywords: [Baidu Cloud Coding Plan, Baidu Cloud, Wenxin Yiyan, AI Programming, Programmer Wanfeng]
 description: Recommended by Programmer Wanfeng: Baidu Cloud Coding Plan, Wenxin large model + PaddlePaddle framework, domestic AI programming veteran's new journey.
@@ -7,6 +7,7 @@ tags: [Baidu Cloud, Coding Plan, Wenxin Yiyan, AI Programming]
 categories: [AI Programming, Tool Evaluation]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

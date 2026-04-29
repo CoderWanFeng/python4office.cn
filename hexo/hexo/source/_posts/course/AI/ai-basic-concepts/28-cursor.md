@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 什么是Cursor？
 date: 2026-04-16 17:31:00
 author: 程序员晚枫
@@ -15,9 +14,9 @@ tags:
 - Copilot
 order: 28
 description: 什么是Cursor？程序员晚枫用通俗语言解释，这个让程序员效率翻倍的AI编程工具到底是什么。
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![什么是Cursor？ - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 ![什么是Cursor？ - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)

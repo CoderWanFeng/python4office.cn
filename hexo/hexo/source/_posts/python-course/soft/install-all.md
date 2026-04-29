@@ -1,9 +1,10 @@
-﻿---
+---
 title: 学习Python，必须安装的几个软件
 date: 2024-03-11 01:41:49
 tags: [Python,软件]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 <!-- more -->

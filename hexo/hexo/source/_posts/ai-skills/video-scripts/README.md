@@ -1,4 +1,13 @@
-﻿<!-- more -->
+---
+title: AI短视频文案库
+date: 2026-04-12 00:00:00
+tags: [AI, 短视频, 文案, 创作]
+categories: ["AI Skills"]
+cover: https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop
+---
+
+
+<!-- more -->
 
 ![README.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![README.md - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)

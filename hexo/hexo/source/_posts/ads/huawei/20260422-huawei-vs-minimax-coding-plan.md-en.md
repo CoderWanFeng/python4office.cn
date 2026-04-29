@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Huawei Doesn't Have Coding Plan? MiniMax May Be Hailuo AI's Strongest Support"
 keywords: [Huawei Coding Plan, MiniMax, Hailuo AI, Voice + AI, Programmer Wan Feng]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends MiniMax, Hailuo AI support + strong voice synthesis, suitable for content creation and voice scenarios.
@@ -7,6 +7,7 @@ tags: [Huawei, MiniMax, Hailuo AI, Coding Plan, Programmer Wan Feng]
 categories: [AI Programming, Tool Review]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

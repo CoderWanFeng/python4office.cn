@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Who Is MiniMax Coding Plan Best For? Multimodal Needs vs Other User Purchase Analysis"
 keywords: ["MiniMax Coding Plan Who Is It For", "MiniMax Purchase Advice", "Multimodal", "程序员晚枫"]
 description: "Programmer Wanfeng's analysis: Who is MiniMax Coding Plan best for? What scenarios suit multimodal capabilities?"
@@ -7,6 +7,7 @@ tags: ["MiniMax", "Coding Plan Purchase", "Multimodal", "Purchase Advice"]
 categories: ["AI Programming", "Tool Review"]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "JD Cloud Coding Plan Getting Started Tutorial: From Registration to AI Programming (2026 Latest)"
 keywords: ["JD Cloud Coding Plan Tutorial", "JD Cloud AI Programming Getting Started", "Jingdiandian Usage Tutorial", "程序员晚枫"]
 description: "Programmer Wanfeng's hands-on guide to JD Cloud Coding Plan — from registration to configuring development tools, with screenshots suitable for beginners."
@@ -7,6 +7,7 @@ tags: ["JD Cloud", "JD Cloud", "Coding Plan Tutorial", "AI Programming Getting S
 categories: ["AI Programming", "Tutorial"]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

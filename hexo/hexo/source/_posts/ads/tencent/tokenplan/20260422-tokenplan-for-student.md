@@ -1,22 +1,19 @@
-﻿---
-
-
+---
 title: 学生党必看：我是如何用腾讯云Token Plan从零开始学AI编程的
 date: 2026-04-22 16:39:00
 tags:
-  - Python
-  - 腾讯云
-  - Token Plan
-  - AI编程
-  - 学生党
-  - 零基础
-  - 学习指南
+- Python
+- 腾讯云
+- Token Plan
+- AI编程
+- 学生党
+- 零基础
+- 学习指南
 categories:
-  - 教程
+- 教程
 cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

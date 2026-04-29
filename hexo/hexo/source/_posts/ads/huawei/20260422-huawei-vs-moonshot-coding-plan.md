@@ -1,4 +1,4 @@
-﻿---
+---
 title: 华为没有 Coding Plan？Moonshot Kimi 可能是长文本最强的选择
 keywords: [华为 Coding Plan, Moonshot, Kimi, 长文本, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐 Moonshot Kimi，20 万字长文本支持，程序员读代码文档的神器。
@@ -7,6 +7,7 @@ tags: [华为, Moonshot, Kimi, Coding Plan, 长文本]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Azure OpenAI Coding Plan 教程：企业级 GPT-4 接入实战（2026最新版）
 keywords: [Azure OpenAI Coding Plan 教程, Azure GPT-4, 企业级AI, API接入, 程序员晚枫]
 description: 程序员晚枫手把手教你用 Azure OpenAI Coding Plan，企业级 GPT-4 接入实战教程。
@@ -7,6 +7,7 @@ tags: [Azure OpenAI, Coding Plan 教程, GPT-4, API接入]
 categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

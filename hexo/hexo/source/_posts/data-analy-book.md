@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: 278页PDF：《Python数据分析基础》，0基础入门专用~
 date: 2022-04-01 16:40:28
 tags: [Python自动化办公, Python, PDF自动化, AI编程]
 cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

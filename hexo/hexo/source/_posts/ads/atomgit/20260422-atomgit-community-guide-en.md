@@ -1,4 +1,4 @@
-﻿---
+---
 title: "AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~"
 date: 2026-04-22 00:00:00
 tags: ["atomgit", "ai programming", "community"]
@@ -6,6 +6,7 @@ categories: ["AI Tools"]
 description: "AtomGit AI Programming Community Entry Guide! Step-by-step to join~"
 cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

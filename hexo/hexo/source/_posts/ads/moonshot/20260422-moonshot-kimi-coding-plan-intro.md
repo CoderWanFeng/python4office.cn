@@ -1,4 +1,4 @@
-﻿---
+---
 title: 月之暗面 Moonshot AI Kimi Coding Plan 来了！长上下文+多模型，国产 AI 编程新势力
 keywords: [Moonshot AI Coding Plan, Kimi Coding Plan, 月之暗面, AI编程, 长上下文, 程序员晚枫]
 description: 程序员晚枫推荐：月之暗面 Moonshot AI Kimi Coding Plan，128K超长上下文，国产 AI 编程新势力。
@@ -7,6 +7,7 @@ tags: [月之暗面, Moonshot, Kimi, Coding Plan, AI编程, 长上下文]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

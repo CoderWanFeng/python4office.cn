@@ -1,10 +1,11 @@
-﻿---
+---
 title: 告别加班！用Python自动处理Excel、Word、PDF、邮件，每月省出100小时
 date: 2026-04-17 22:30:00
 tags: [Python, 自动化办公, 效率提升, Excel, Word, PDF]
 categories: 50讲自动化办公
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![告别加班！用Python自动处理Excel、Word、PDF、邮件，每月省出100小时 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 ![告别加班！用Python自动处理Excel、Word、PDF、邮件，每月省出100小时 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)

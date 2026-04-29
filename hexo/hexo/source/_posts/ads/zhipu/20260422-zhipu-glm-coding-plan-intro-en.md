@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Zhipu AI GLM Coding Plan Is Here! Domestic LLM + Full API Toolkit, Developer-Friendliness Maxed Out"
 keywords: ["Zhipu AI Coding Plan", "GLM Coding Plan", "Zhipu LLM", "AI Programming", "程序员晚枫"]
 description: "Programmer Wanfeng's recommendation: Zhipu AI GLM Coding Plan, domestic LLM + full API toolkit, a new choice with maxed-out developer-friendliness."
@@ -7,6 +7,7 @@ tags: ["Zhipu AI", "GLM", "Coding Plan", "AI Programming", "Domestic LLM"]
 categories: ["AI Programming", "Tool Review"]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

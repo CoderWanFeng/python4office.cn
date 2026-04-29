@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DeepSeek V4 is Coming! 1M Context + Fully Open Source, Programmers Collectively Explode"
 date: 2026-04-22 00:00:00
 tags: ["deepseek", "ai programming", "LLM", "open source", "claude"]
@@ -6,6 +6,7 @@ categories: ["2026 Hot Topics"]
 description: "DeepSeek V4 is about to be released, 1M Token context + fully open source, programming capability surpasses Claude and GPT-4, reasoning cost is only 1/70 of GPT-4. This article tells you what this means for programmers."
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

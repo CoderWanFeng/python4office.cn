@@ -1,4 +1,4 @@
-﻿---
+---
 title: Claude 4深夜炸场！程序员用它写代码，效率直接翻倍
 date: 2026-04-21 14:42:00
 tags: [Claude, AI编程, 程序员, 效率工具]
@@ -7,6 +7,7 @@ keywords: [Claude 4, AI编程, 程序员工具, 效率提升]
 description: Claude 4实测体验，程序员用它写代码、Debug、做架构设计，效率提升200%。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![Claude 4深夜炸场！程序员用它写代码，效率直接翻倍 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 ![Claude 4深夜炸场！程序员用它写代码，效率直接翻倍 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)

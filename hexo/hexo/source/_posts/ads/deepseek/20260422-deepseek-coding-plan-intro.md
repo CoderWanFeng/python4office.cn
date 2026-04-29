@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DeepSeek Coding Plan来了！开源+性价比之王，程序员的明智之选"
 date: 2026-04-22 19:20:00
 tags: ["deepseek", "coding plan", "ai编程", "开源大模型"]
@@ -6,6 +6,7 @@ categories: ["DeepSeek实战"]
 description: "程序员晚枫推荐：DeepSeek Coding Plan，开源模型+性价比之王，程序员的明智之选。"
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

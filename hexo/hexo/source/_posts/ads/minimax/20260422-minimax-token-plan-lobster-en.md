@@ -1,26 +1,23 @@
-﻿---
-
-
+---
 title: "用 MiniMax TOKEN Plan 养"龙虾"：7x24 赚钱神器实测"
 date: 2026-04-22 00:00:00
 categories:
-  - AI工具评测
+- AI工具评测
 tags:
-  - 大模型
-  - Token Plan
-  - AI编程
-  - MiniMax
-  - 腾讯云
-  - AI变现
-  - TOKEN Plan
-  - 赚钱
-  - AI副业
-  - 龙虾
+- 大模型
+- Token Plan
+- AI编程
+- MiniMax
+- 腾讯云
+- AI变现
+- TOKEN Plan
+- 赚钱
+- AI副业
+- 龙虾
 description: "什么是用AI养龙虾？用 MiniMax TOKEN Plan 7x24 小时自动回复，竟能躺着赚钱？"
 cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

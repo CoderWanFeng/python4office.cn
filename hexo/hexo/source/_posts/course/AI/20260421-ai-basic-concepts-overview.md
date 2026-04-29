@@ -1,6 +1,4 @@
-﻿---
-
-
+---
 title: 2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径
 date: 2026-04-21 15:00:00
 author: 程序员晚枫
@@ -18,9 +16,8 @@ tags: [Python, AI编程]
 order: 0
 description: 2026年AI入门必读！程序员晚枫用大白话整理29个AI核心概念，附三阶段学习路径。收藏这篇，看新闻不再懵。
 cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
-
-
 ---
+
 
 ![2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)

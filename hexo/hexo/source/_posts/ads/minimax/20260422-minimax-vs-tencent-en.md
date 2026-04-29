@@ -1,29 +1,26 @@
-﻿---
-
-
+---
 title: "MiniMax TOKEN Plan vs 腾讯云Token Plan：2026年最新价格对比测评"
 date: 2026-04-22 00:00:00
 categories:
-  - AI工具横评
+- AI工具横评
 tags:
-  - 大模型
-  - Token Plan
-  - AI编程
-  - MiniMax
-  - 腾讯云
-  - 价格对比
-  - 2026
+- 大模型
+- Token Plan
+- AI编程
+- MiniMax
+- 腾讯云
+- 价格对比
+- 2026
 description: "2026年最新！MiniMax TOKEN Plan和腾讯云Token Plan哪个更划算？从价格、额度、适用场景全面对比测评"
 keywords:
-  - MiniMax TOKEN Plan
-  - 腾讯云 Token Plan
-  - AI工具对比
-  - 程序员AI助手
-  - 2026 AI编程
+- MiniMax TOKEN Plan
+- 腾讯云 Token Plan
+- AI工具对比
+- 程序员AI助手
+- 2026 AI编程
 cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

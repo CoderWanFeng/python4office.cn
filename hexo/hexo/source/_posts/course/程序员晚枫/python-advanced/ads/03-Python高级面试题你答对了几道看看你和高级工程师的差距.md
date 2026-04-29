@@ -1,9 +1,10 @@
-﻿---
+---
 title: Python高级面试题你答对了几道？看看你和高级工程师的差距
 date: 2026-04-17 14:00:00
 tags: [Python进阶, 面试, 高级特性]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![Python高级面试题你答对了几道？看看你和高级工程师的差距 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![Python高级面试题你答对了几道？看看你和高级工程师的差距 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "iFLYTEK Spark Coding Plan is Here! Domestic Large Model + Voice Integration, A New Choice for AI Programming"
 keywords: [iFLYTEK Spark Coding Plan, iFLYTEK Spark, AI Programming, iFlytek, Programmer Wan Feng]
 description: "Programmer Wan Feng recommends: iFLYTEK Spark Coding Plan, voice + large model dual capability, a new choice for domestic AI programming."
@@ -6,12 +6,13 @@ date: 2026-04-22 18:20:00
 tags: [iFLYTEK Spark, iFLYTEK Spark, Coding Plan, AI Programming, iFlytek]
 categories: [AI Programming, Tool Review]
 hreflang:
-  en: /20260422-iflytek-spark-coding-plan-intro/
-  zh: /20260422-iflytek-spark-coding-plan-intro/
+en: /20260422-iflytek-spark-coding-plan-intro/
+zh: /20260422-iflytek-spark-coding-plan-intro/
 canonical: /20260422-iflytek-spark-coding-plan-intro/
 translation: complete
 cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

@@ -1,9 +1,10 @@
-﻿---
+---
 title: 打包Python程序遇到报错别慌这里有10个最常见问题的解决方案
 date: 2026-04-17 14:00:00
 tags: [PyInstaller, Python打包, 报错解决, 排查]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![打包Python程序遇到报错别慌这里有10个最常见问题的解决方案 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![打包Python程序遇到报错别慌这里有10个最常见问题的解决方案 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)

@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: 好家伙，花了一个月时间，用Python写了个网易云！
 date: 2022-12-02 01:15:08
 tags: [Python, AI编程]
 cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

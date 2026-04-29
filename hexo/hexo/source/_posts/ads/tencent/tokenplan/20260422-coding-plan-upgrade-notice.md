@@ -1,17 +1,18 @@
-﻿---
+---
 title: 重要更新：腾讯云Coding Plan已全面升级为Token Plan，更便宜、更灵活！
 date: 2026-04-22 15:54:00
 tags:
-  - 大模型
-  - Token Plan
-  - AI编程
-  - 腾讯云
-  - Coding Plan
-  - 重要更新
+- 大模型
+- Token Plan
+- AI编程
+- 腾讯云
+- Coding Plan
+- 重要更新
 categories:
-  - 重要公告
+- 重要公告
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 > ⚠️ **重要提醒**：腾讯云 **Coding Plan** 已于近期全面升级为 **Token Plan**！如果你还在找"Coding Plan"的入口，现在可以直接选择 Token Plan，功能更强、价格更优。

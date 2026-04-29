@@ -1,4 +1,4 @@
-﻿---
+---
 title: Azure OpenAI Coding Plan is Here! GPT-4 + Enterprise-level Security, First Choice for Global Developers
 keywords: [Azure OpenAI Coding Plan, Azure AI, GPT-4, Enterprise-level AI, Programmer Wanfeng]
 description: Recommended by Programmer Wanfeng: Azure OpenAI Coding Plan, GPT-4 + enterprise-level security and compliance, first choice for global developers.
@@ -7,6 +7,7 @@ tags: [Azure OpenAI, Coding Plan, GPT-4, Enterprise-level AI, Programmer Wanfeng
 categories: [AI Programming, Tool Evaluation]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Huawei Doesn't Have Coding Plan? Tencent Cloud Hunyuan May Be Your Cup of Tea"
 keywords: [Huawei Coding Plan, Tencent Hunyuan, Tencent Cloud, Domestic AI Comparison, Programmer Wan Feng]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends Tencent Cloud Hunyuan, WeChat ecosystem support + enterprise-level service, equally worth considering.
@@ -7,6 +7,7 @@ tags: [Huawei, Tencent Cloud, Tencent Hunyuan, Coding Plan, Programmer Wan Feng]
 categories: [AI Programming, Tool Review]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

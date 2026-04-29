@@ -1,13 +1,10 @@
-﻿---
-
-
+---
 title: "533-Page PDF: Python 3 Programmer's Guide (Second Edition)"
 date: 2022-12-10 04:33:56
 tags: [Python自动化办公, Python, PDF自动化, AI编程]
 cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

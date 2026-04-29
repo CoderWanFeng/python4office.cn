@@ -1,4 +1,4 @@
-﻿---
+---
 title: 华为没有 Coding Plan？智谱 AI 可能是国产开源的最强代表
 keywords: [华为 Coding Plan, 智谱AI, GLM大模型, 国产开源, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐智谱 AI，GLM 大模型开源+技术开放，国产 AI 的技术派代表。
@@ -7,6 +7,7 @@ tags: [华为, 智谱AI, GLM, Coding Plan, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

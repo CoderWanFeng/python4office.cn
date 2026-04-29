@@ -1,4 +1,4 @@
-﻿---
+---
 title: 华为没有 Coding Plan？MiniMax 可能是海螺 AI 的最强加持
 keywords: [华为 Coding Plan, MiniMax, 海螺AI, 语音+AI, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐 MiniMax，海螺 AI 加持+语音合成强，适合内容创作和语音场景。
@@ -7,6 +7,7 @@ tags: [华为, MiniMax, 海螺AI, Coding Plan, 程序员晚枫]
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 

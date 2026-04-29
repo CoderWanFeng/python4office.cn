@@ -8,6 +8,7 @@ cover: https://images.unsplash.com/photo-1547658719-da2b51169186?q=80&w=1200&aut
 
 
 
+
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>

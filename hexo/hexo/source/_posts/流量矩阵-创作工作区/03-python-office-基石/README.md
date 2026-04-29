@@ -1,4 +1,4 @@
-﻿# python-office SEO基石 - 创作规划
+# python-office SEO基石 - 创作规划
 
 **定位：** 技术解决方案，SEO长尾流量  
 **优先级：** ⭐⭐⭐⭐ 高  

@@ -1,26 +1,23 @@
-﻿---
-
-
+---
 title: 关于用AI编程做MBTI测试网站的10个常见问题，新手必看！
 keywords: 程序员晚枫, AI编程FAQ, MBTI测试开发, 新手入门, AI编程问题, 零基础编程, 编程答疑
 description: 程序员晚枫整理用AI编程做MBTI测试网站的常见问题。从工具选择到变现方法，新手最关心的10个问题一次性解答，帮你快速上手AI编程。
 date: 2026-04-11 16:00:00
 tags:
-  - Python
-  - AI编程
-  - 程序员晚枫
-  - AI编程FAQ
-  - MBTI测试
-  - 新手入门
-  - 编程答疑
-categories: 
-  - AI编程教程
-  - 常见问题
+- Python
+- AI编程
+- 程序员晚枫
+- AI编程FAQ
+- MBTI测试
+- 新手入门
+- 编程答疑
+categories:
+- AI编程教程
+- 常见问题
 author: 程序员晚枫
 cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
-
-
 ---
+
 
 
 

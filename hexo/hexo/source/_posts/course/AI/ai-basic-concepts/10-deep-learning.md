@@ -1,5 +1,4 @@
-﻿---
-
+---
 title: 什么是深度学习？让AI从"玩具"变成"超能力"的技术
 date: 2026-04-16 17:03:00
 author: 程序员晚枫
@@ -13,9 +12,9 @@ tags:
 - Deep Learning
 order: 10
 description: 为什么AI突然变强了？程序员晚枫用大白话揭秘深度学习，让你理解让AI从"玩具"变成"超能力"的关键技术！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 ![什么是深度学习？让AI从"玩具"变成"超能力"的技术 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 ![什么是深度学习？让AI从"玩具"变成"超能力"的技术 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)

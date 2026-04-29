@@ -1,4 +1,4 @@
-﻿---
+---
 title: iFLYTEK Spark Coding Plan Prices Released: As Low As 3.9 yuan/month, Voice Programming at Dirt Cheap Prices!
 keywords: [iFLYTEK Spark Coding Plan price, How much is iFLYTEK Spark, Voice programming cheap, AI programming monthly fee]
 description: Tested by Programmer Wanfeng: iFLYTEK Spark Coding Plan starts at only 3.9 yuan/month, voice programming + domestic large model, prices have been slashed!
@@ -7,6 +7,7 @@ tags: [iFLYTEK Spark, iFLYTEK Spark, Coding Plan price, voice programming, AI pr
 categories: [AI programming, tool evaluation]
 cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 
