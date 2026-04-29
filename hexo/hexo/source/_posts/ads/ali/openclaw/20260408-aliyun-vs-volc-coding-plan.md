@@ -1,4 +1,4 @@
----
+﻿---
 title: 阿里云Coding Plan vs 火山方舟Coding Plan：国产AI编程工具怎么选？
 date: 2026-04-08 00:40:00
 tags: [阿里云CodingPlan, 火山方舟CodingPlan, 国产AI编程工具对比, 通义千问vs豆包, AI编程选型]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![阿里云Coding Plan vs 火山方舟Coding Plan：国产AI编程工具怎么选？ - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+
 大家好，这里是程序员晚枫。
 
 最近国产AI编程工具扎堆上线，很多粉丝问我：**阿里云Coding Plan和火山方舟Coding Plan到底选哪个？**

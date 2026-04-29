@@ -1,4 +1,4 @@
----
+﻿---
 title: 小团队怎么用火山方舟Coding Plan？5人团队实战分享
 keywords: 程序员晚枫, 火山方舟Coding Plan团队, 小团队AI编程, AI工具管理, 团队效率提升
 description: 程序员晚枫分享：小团队怎么用火山方舟Coding Plan？5人团队实战分享，成本分摊、权限管理、效率提升全攻略。
@@ -23,6 +23,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 我们团队5个人，用火山方舟Coding Plan已经2个月了。今天分享小团队的使用经验。
 
 <!-- more -->
+
+![小团队怎么用火山方舟Coding Plan？5人团队实战分享 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![小团队怎么用火山方舟Coding Plan？5人团队实战分享 - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 ## 团队配置方案
 
@@ -114,9 +118,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 相关阅读
 
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
+- [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
 - [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)

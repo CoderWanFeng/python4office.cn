@@ -1,4 +1,4 @@
----
+﻿---
 title: "Huawei Doesn't Have Coding Plan? Xiaomi MiMo May Be the Best Choice for Edge AI"
 keywords: [Huawei Coding Plan, Xiaomi MiMo, Edge AI, Xiaomi Ecosystem, Programmer Wan Feng]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends Xiaomi MiMo, strong edge AI capability + Xiaomi ecosystem support, suitable for IoT and mobile development.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Huawei Doesn't Have Coding Plan? Xiaomi MiMo May Be the Best Choice for Edge AI - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Huawei Doesn't Have Coding Plan? Xiaomi MiMo May Be the Best Choice for Edge AI - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 阿里云百炼Coding Plan来了！通义千问+第三方模型，一个订阅全搞定
 date: 2026-04-08 00:35:00
 tags: [阿里云CodingPlan, 百炼CodingPlan, 通义千问, AI编程, 阿里云AI]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![阿里云百炼Coding Plan来了！通义千问+第三方模型，一个订阅全搞定 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，这里是程序员晚枫。
 
 阿里云终于也入局AI编程订阅了！

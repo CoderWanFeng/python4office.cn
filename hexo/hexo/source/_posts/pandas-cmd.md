@@ -1,13 +1,21 @@
 ﻿---
 
+
 title: pandas常用操作
 date: 2022-04-14 11:28:34
 tags: [Python数据分析, pandas]
+cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![pandas常用操作 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![pandas常用操作 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 - 查看所有列的数据类型
 df.dtypes
 

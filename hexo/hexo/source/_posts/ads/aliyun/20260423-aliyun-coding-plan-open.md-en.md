@@ -1,4 +1,4 @@
----
+﻿---
 title: "Alibaba Cloud Bailian Coding Plan Getting Started Tutorial: Experience Tongyi Qianwen for 29 yuan/month (Illustrated)"
 keywords: [Alibaba Cloud Bailian Coding Plan Tutorial, Tongyi Qianwen Registration, AI Programming Getting Started, Programmer Wan Feng]
 description: Programmer Wan Feng hand-holds you through activating Alibaba Cloud Bailian Coding Plan, 29 yuan/month to experience Tongyi Qianwen large model, with detailed illustrated tutorial.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Alibaba Cloud Bailian Coding Plan Getting Started Tutorial: Experience Tongyi Qianwen for 29 yuan/month (Illustrated) - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Alibaba Cloud Bailian Coding Plan Getting Started Tutorial: Experience Tongyi Qianwen for 29 yuan/month (Illustrated) - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 

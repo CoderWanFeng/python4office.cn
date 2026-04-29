@@ -1,4 +1,4 @@
----
+﻿---
 title: 熬了个通宵，整理了22个Python自动化办公项目
 date: 2023-08-07 00:12:40
 tags: python-office
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 <!-- more -->
+
+![熬了个通宵，整理了22个Python自动化办公项目 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![熬了个通宵，整理了22个Python自动化办公项目 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，读者群👉[点我直达](https://www.python4office.cn/wechat-group/)
 
 按照惯例，这个周末还是又是周六加班，周天更文。

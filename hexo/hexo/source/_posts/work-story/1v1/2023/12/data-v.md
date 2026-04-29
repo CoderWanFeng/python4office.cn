@@ -1,4 +1,4 @@
----
+﻿---
 title: 0基础做一个大屏数据可视化，应该怎么学？
 date: 2023-12-11 14:16:17
 tags: 学习计划
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 ---
 
 <!-- more -->
+
+![0基础做一个大屏数据可视化，应该怎么学？ - 配图1](https://images.unsplash.com/photo-155128848?w=800&h=400&fit=crop)
+![0基础做一个大屏数据可视化，应该怎么学？ - 配图2](https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 今天的沟通读者，来自抖音账号：程序员晚枫。
 
 沟通的主题是：如何把公司的大屏用起来？科技感展示内部的数据。

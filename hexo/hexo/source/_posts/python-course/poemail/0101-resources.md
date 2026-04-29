@@ -1,4 +1,4 @@
----
+﻿---
 title: 6讲 · Python自动收发邮件（已完结）
 date: 2024-01-01 14:08:24
 tags: 原创课程
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![6讲 · Python自动收发邮件（已完结） - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 感谢您付费购买《6讲Python自动收发邮件》，下面是课程的配套资料 + 专用答疑群，课程持续更新中。
 
 

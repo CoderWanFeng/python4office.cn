@@ -1,4 +1,4 @@
----
+﻿---
 title: AI Skills Column
 date: 2026-04-08 00:00:00
 tags: [AI, Skill, Column]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![AI Skills Column - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI Skills Column - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # AI Skills Column
 
 > Focus on AI office scenario Skill creation, usage, and promotion

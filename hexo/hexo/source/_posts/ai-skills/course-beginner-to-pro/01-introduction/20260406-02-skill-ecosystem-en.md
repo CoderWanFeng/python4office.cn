@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users"
 date: 2026-04-06 11:30:00
 tags: ["AI Skill", "Ecosystem", "Platform Comparison"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users
 
 > Understand participants in the Skill ecosystem, find your positioning and opportunities.

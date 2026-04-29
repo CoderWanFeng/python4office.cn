@@ -1,4 +1,4 @@
----
+﻿---
 title: 从0开始，掌握优秀的Python嗅觉
 date: 2024-03-17 00:22:05
 tags: 1v1
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 <!-- more -->
+
+![从0开始，掌握优秀的Python嗅觉 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 今晚的沟通比较有意思，是一位外行的朋友想学一些转行的技能。
 
 这虽然是一个找我咨询中常出现的话题，但是这次聊的比较投入，有一个原因是咨询的人比较认真，甚至有些执着。

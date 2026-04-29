@@ -1,4 +1,4 @@
----
+﻿---
 title: 国内10大云服务器厂商，你用过几个？
 date: 2023-08-10 00:24:04
 tags: 福利
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![国内10大云服务器厂商，你用过几个？ - 配图1](https://images.unsplash.com/photo-160257088?w=800&h=400&fit=crop)
+
 云服务器厂商排名，你知道自家服务商排第几吗？
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)。

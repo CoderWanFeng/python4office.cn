@@ -1,15 +1,22 @@
 ﻿---
 
+
 title: Python真难！！！
 date: 2022-08-13 01:34:43
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+
 
 ---
 
 
 
 
+
 <!-- more -->
+
+![Python真难！！！ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，[https://www.python4office.cn/wechat-qrcode/Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
 
 昨晚收到一个常见的星球提问，今天来详细回复一下。

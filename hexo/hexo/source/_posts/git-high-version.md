@@ -1,4 +1,4 @@
----
+﻿---
 title: git-high-version
 date: 2022-06-02 10:17:33
 tags: git
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1000&
 ---
 
 <!-- more -->
+
+![git-high-version - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![git-high-version - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 centos安装高版本git
 
 yum默认安装1.8.1，版本太低了，vscode的插件会报版本过低

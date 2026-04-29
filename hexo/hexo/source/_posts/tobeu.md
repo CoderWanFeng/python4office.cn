@@ -1,4 +1,4 @@
----
+﻿---
 title: "刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功"
 date: 2021-01-06 14:04:09
 tags: ["学习方法", "刻意练习", "程序员成长", "一万小时定律", "编程学习"]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # 刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功
 
 > 一万小时定律是作家格拉德威尔在《异类》一书中指出的定律。但这个理论真的正确吗？作为程序员，我的看法是：**努力绝对有用，但方向比努力更重要。**
@@ -184,7 +188,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 相关阅读
 
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
 - [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [《30讲·AI编程训练营》- 零基础入门AI编程](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)

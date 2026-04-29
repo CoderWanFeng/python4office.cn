@@ -1,4 +1,4 @@
----
+﻿---
 title: Complete DeepSeek API Tutorial: From Registration to Usage, This Article Is All You Need
 date: 2026-04-22 00:00:00
 tags: [deepseek,api,ai编程
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Complete DeepSeek API Tutorial: From Registration to Usage, This Article Is All You Need - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Complete DeepSeek API Tutorial: From Registration to Usage, This Article Is All You Need - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 Today I saw many friends asking: How to use DeepSeek API? Can you explain it in detail?
 

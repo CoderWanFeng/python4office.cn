@@ -1,4 +1,4 @@
----
+﻿---
 title: 用Python实现Excel的数据筛选，并且保留格式
 date: 2024-01-07 12:22:05
 tags: 1v1
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![用Python实现Excel的数据筛选，并且保留格式 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 今天是一个关于Excel的沟通，总结一下这次的沟通内容。
 
 

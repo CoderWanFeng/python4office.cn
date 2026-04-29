@@ -1,4 +1,4 @@
----
+﻿---
 title: 文科小白，如何快速入门Python数据分析？
 date: 2025-02-05 22:22:05
 tags: 1v1
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![文科小白，如何快速入门Python数据分析？ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![文科小白，如何快速入门Python数据分析？ - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 今晚是一个常见的咨询问题：零基础如何快速入门，达到实用的水平？
 
 

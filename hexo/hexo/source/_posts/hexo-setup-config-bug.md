@@ -1,10 +1,14 @@
 ﻿---
 
+
 title: Hexo的安装和配置
 date: 2022-01-25 09:06:25
 tags: [Hexo, 博客]
+cover: https://images.unsplash.com/photo-158695320?w=800&h=400&fit=crop
+
 
 ---
+
 
 
 ## 问题解决
@@ -17,6 +21,10 @@ tags: [Hexo, 博客]
 
 
 <!-- more -->
+
+![Hexo的安装和配置 - 配图1](https://images.pexels.com/photos/270632/pexels-photo-270632.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Hexo的安装和配置 - 配图2](https://images.unsplash.com/photo-158695320?w=800&h=400&fit=crop)
+
 
 ## 参考资料
 

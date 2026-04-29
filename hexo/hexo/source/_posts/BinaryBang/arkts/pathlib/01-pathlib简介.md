@@ -1,4 +1,4 @@
----
+﻿---
 title: 鸿蒙ArkUI开发|文件路径管理好帮手pathlib
 date: 2025-07-05 23:46:00 
 tags: [鸿蒙开发,pathlib,文件管理]
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![鸿蒙ArkUI开发|文件路径管理好帮手pathlib - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ![image.png](https://raw.atomgit.com/user-images/assets/5027920/5e8c4bf3-f19b-42c0-a06c-5ca0191bfc7f/image.png)
 # 前言
 在鸿蒙开发中,避免不了对沙盒中的文件进行操作.最近遇到的一个问题是,将一个目录下的所有文件和文件夹全部删除,但是系统提供的fs对象只能删除一个空目录,对于非空目录进行处理,就会比较棘手.

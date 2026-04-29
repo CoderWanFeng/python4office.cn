@@ -1,4 +1,4 @@
----
+﻿---
 title: "File Operations and IO Streams"
 date: 2025-07-21 07:15:00
 tags: [Cangjie Development, Programming Beginner Tutorial]
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![File Operations and IO Streams - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![File Operations and IO Streams - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # 01-Introduction
 File management is one of the core functionalities we encounter in daily life. In this lesson, we'll mainly cover file-related operations and file streams.
 

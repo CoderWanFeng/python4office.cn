@@ -1,4 +1,4 @@
----
+﻿---
 title: 火山方舟Coding Plan常见问题FAQ：你想知道的都在这里
 keywords: 程序员晚枫, 火山方舟Coding Plan FAQ, AI编程常见问题, Coding Plan问题解答, 方舟Coding Plan使用问题
 description: 程序员晚枫整理：火山方舟Coding Plan常见问题FAQ，订阅、模型、工具、用量等23个问题一次性解答。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![火山方舟Coding Plan常见问题FAQ：你想知道的都在这里 - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![火山方舟Coding Plan常见问题FAQ：你想知道的都在这里 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
@@ -233,9 +237,9 @@ Claude Code支持自定义API，配置火山方舟的API信息后，即可使用
 
 ## 相关阅读
 
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
+- [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
 - [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)

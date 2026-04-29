@@ -1,4 +1,4 @@
----
+﻿---
 title: "Alibaba Cloud Coding Plan FAQ: 20 Questions You Want to Know Are All Here"
 keywords: Programmer Wan Feng, Alibaba Cloud Coding Plan FAQ, Alibaba Cloud Bailian Coding Plan Questions, AI Programming Common Questions, Qianwen Code Model Usage
 description: Programmer Wan Feng compiled: Alibaba Cloud Coding Plan FAQ, 20 questions you want to know are all here, subscription, models, tools, usage all answered.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Alibaba Cloud Coding Plan FAQ: 20 Questions You Want to Know Are All Here - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Alibaba Cloud Coding Plan FAQ: 20 Questions You Want to Know Are All Here - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office

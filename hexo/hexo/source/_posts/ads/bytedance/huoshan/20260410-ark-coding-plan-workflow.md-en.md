@@ -1,4 +1,4 @@
----
+﻿---
 title: "My AI Programming Workflow: One Day of Volcano Ark Coding Plan Usage Record"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Workflow, AI Programming Workflow, Programmer Daily Life, AI Efficiency Practice
 description: Programmer Wan Feng shares: My AI programming workflow, one day of Volcano Ark Coding Plan usage record, real programmer efficiency improvement practice sharing.
@@ -25,6 +25,10 @@ Many people ask me: How to actually use Volcano Ark Coding Plan?
 Today recording my real usage scenarios for reference.
 
 <!-- more -->
+
+![My AI Programming Workflow: One Day of Volcano Ark Coding Plan Usage Record - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![My AI Programming Workflow: One Day of Volcano Ark Coding Plan Usage Record - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 ## 9:00 AM - Start Work
 

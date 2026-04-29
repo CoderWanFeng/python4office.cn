@@ -1,4 +1,4 @@
----
+﻿---
 title: Alibaba Cloud Coding Plan vs Volcano Engine Coding Plan: How to Choose Domestic AI Programming Tools?
 date: 2026-04-08 00:40:00
 tags: [Alibaba Cloud CodingPlan, Volcano Engine CodingPlan, domestic AI programming tool comparison, Tongyi Qianwen vs Doubao, AI programming selection]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Alibaba Cloud Coding Plan vs Volcano Engine Coding Plan: How to Choose Domestic AI Programming Tools? - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 Hello everyone, this is Programmer Wanfeng.
 
 Recently, domestic AI programming tools have been launched in batches, and many fans ask me: **Which one should I choose between Alibaba Cloud Coding Plan and Volcano Engine Coding Plan?**

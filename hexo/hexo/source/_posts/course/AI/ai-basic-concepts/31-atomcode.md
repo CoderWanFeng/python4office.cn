@@ -1,4 +1,4 @@
----
+﻿---
 
 title: AtomCode是什么？Claude Code的开源替代，用自然语言写代码
 date: 2026-04-22 00:00:00
@@ -13,6 +13,10 @@ tags:
 
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
+![AtomCode是什么？Claude Code的开源替代，用自然语言写代码 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![AtomCode是什么？Claude Code的开源替代，用自然语言写代码 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 
 你有没有过这种感觉——想做一个工具，但一想到要写代码就放弃了？或者拿到一个开源项目，看了两眼就关掉了，因为根本不知道从哪入手？

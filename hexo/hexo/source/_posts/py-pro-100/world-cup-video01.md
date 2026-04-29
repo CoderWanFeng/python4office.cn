@@ -1,10 +1,14 @@
 ﻿---
 
+
 title: 世界杯定时程序 - 关键词配套代码
 date: 2022-11-20 00:36:19
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+
 
 ---
+
 
 
 

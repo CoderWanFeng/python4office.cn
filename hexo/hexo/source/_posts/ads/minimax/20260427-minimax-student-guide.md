@@ -1,4 +1,4 @@
----
+﻿---
 title: 学生党必看！MiniMax 26元/月，零基础用 AI 写代码
 keywords: [学生党, MiniMax, AI编程, 26元/月, 程序员晚枫]
 description: 学生党想学 AI 编程？MiniMax 26元/月，性价比炸裂！程序员晚枫手把手教学生用 AI 写代码，从零入门。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![学生党必看！MiniMax 26元/月，零基础用 AI 写代码 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![学生党必看！MiniMax 26元/月，零基础用 AI 写代码 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

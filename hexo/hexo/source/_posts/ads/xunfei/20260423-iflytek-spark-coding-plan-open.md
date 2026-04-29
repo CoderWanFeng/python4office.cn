@@ -1,4 +1,4 @@
----
+﻿---
 title: 白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程）
 keywords: [讯飞星火 Coding Plan 开通, 3.9元语音编程, iFLYTEK Spark 注册, AI编程 白菜价]
 description: 程序员晚枫带你用 3.9 元开通讯飞星火 Coding Plan，语音编程入门只要一杯奶茶钱，附详细图文教程。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程） - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程） - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

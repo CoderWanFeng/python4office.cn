@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI 办公效率手册 · 9.9 元资料包"
 date: 2026-04-27 00:00:00
 tags: ["AI", "办公", "资料包", "产品"]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![AI 办公效率手册 · 9.9 元资料包 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI 办公效率手册 · 9.9 元资料包 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 # 🚀 AI 办公效率手册
 

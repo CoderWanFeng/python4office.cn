@@ -19,6 +19,10 @@ cover: /img/ai/x-vs-wechat.jpg
 
 
 <!-- more -->
+
+![X vs 微信：AI程序员该选择哪个生态？深度分析 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![X vs 微信：AI程序员该选择哪个生态？深度分析 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # X vs 微信：AI程序员该选择哪个生态？深度分析
 
 马斯克X应用对标微信的消息让无数开发者兴奋。但作为AI程序员，**你真的选对战场了吗？**

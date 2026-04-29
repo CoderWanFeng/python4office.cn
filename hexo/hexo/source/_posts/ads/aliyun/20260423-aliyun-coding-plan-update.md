@@ -1,4 +1,4 @@
----
+﻿---
 title: 阿里云百炼 Coding Plan 最新消息：2026 年有哪些新功能？
 keywords: [阿里云百炼 更新, 通义千问 新功能, AI编程 新闻, 程序员晚枫]
 description: 程序员晚枫追踪：2026年阿里云百炼 Coding Plan 新功能汇总，通义千问大模型更新内容一览。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![阿里云百炼 Coding Plan 最新消息：2026 年有哪些新功能？ - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![阿里云百炼 Coding Plan 最新消息：2026 年有哪些新功能？ - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

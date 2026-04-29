@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lecture 1: What is AI Skill? Why You Must Learn It Now?"
 date: 2026-04-06 11:00:00
 tags: ["AI Skill", "Beginner", "Course"]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Lecture 1: What is AI Skill? Why You Must Learn It Now? - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # Lecture 1: What is AI Skill? Why You Must Learn It Now?
 
 > This lecture is the starting point of the entire course, helping you build a complete understanding of AI Skills.

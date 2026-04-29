@@ -1,4 +1,4 @@
----
+﻿---
 title: Dirt Cheap! Activate iFLYTEK Spark Coding Plan Voice Programming for 3.9 yuan/month (Illustrated Tutorial)
 keywords: [iFLYTEK Spark Coding Plan activation, 3.9 yuan voice programming, iFLYTEK Spark registration, AI programming cheap]
 description: Programmer Wanfeng shows you how to activate iFLYTEK Spark Coding Plan for 3.9 yuan, get started with voice programming for the price of a cup of milk tea, with detailed illustrated tutorial.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Dirt Cheap! Activate iFLYTEK Spark Coding Plan Voice Programming for 3.9 yuan/month (Illustrated Tutorial) - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![Dirt Cheap! Activate iFLYTEK Spark Coding Plan Voice Programming for 3.9 yuan/month (Illustrated Tutorial) - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **Author: Programmer Wanfeng | AI Programming Evangelist | Focus on AI tool evaluation and teaching**
 >

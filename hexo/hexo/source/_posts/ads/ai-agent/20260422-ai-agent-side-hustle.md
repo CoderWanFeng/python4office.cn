@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI Agent副业变现！3个普通人的真实故事，看完你就知道怎么开始了"
 date: 2026-04-22 00:00:00
 tags: ["ai agent", "ai副业", "副业变现"]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![AI Agent副业变现！3个普通人的真实故事，看完你就知道怎么开始了 - 配图1](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI Agent副业变现！3个普通人的真实故事，看完你就知道怎么开始了 - 配图2](https://images.unsplash.com/photo-149975031?w=800&h=400&fit=crop)
+
 
 兄弟们！！！
 

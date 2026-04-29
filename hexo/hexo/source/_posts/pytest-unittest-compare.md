@@ -1,4 +1,4 @@
----
+﻿---
 title: 面试常问，必收藏：pytest和unittest两者的区别
 date: 2022-06-16 14:40:50
 tags: 单元测试
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![面试常问，必收藏：pytest和unittest两者的区别 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![面试常问，必收藏：pytest和unittest两者的区别 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## 相关阅读
 
 - [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)

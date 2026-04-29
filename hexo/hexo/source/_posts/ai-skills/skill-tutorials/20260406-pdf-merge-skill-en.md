@@ -1,4 +1,4 @@
----
+﻿---
 title: "PDF Merge Split Skill Complete Tutorial: One-Click Process Hundreds of PDF Files"
 date: 2026-04-06 10:40:00
 tags: [PDF, Skill, Merge, Split, AI Office, Tutorial]
@@ -11,6 +11,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 </p>
 
 <!-- more -->
+
+![PDF Merge Split Skill Complete Tutorial: One-Click Process Hundreds of PDF Files - 配图1](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 Hello everyone, I'm Programmer Wanfeng, practicing various AI projects.
 

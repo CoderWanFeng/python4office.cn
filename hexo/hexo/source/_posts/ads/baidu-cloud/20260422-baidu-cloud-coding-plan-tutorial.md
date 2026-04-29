@@ -1,4 +1,4 @@
----
+﻿---
 title: 百度智能云 Coding Plan 教程：文心一言接入 + 飞桨开发实战（2026最新版）
 keywords: [百度智能云 Coding Plan 教程, 文心一言, 飞桨, AI编程教程, 程序员晚枫]
 description: 程序员晚枫手把手教你用百度智能云 Coding Plan，文心一言接入和飞桨开发的实战教程。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![百度智能云 Coding Plan 教程：文心一言接入 + 飞桨开发实战（2026最新版） - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![百度智能云 Coding Plan 教程：文心一言接入 + 飞桨开发实战（2026最新版） - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

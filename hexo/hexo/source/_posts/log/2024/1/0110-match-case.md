@@ -1,4 +1,4 @@
----
+﻿---
 title: 深入讲解Python的条件分支：match-case！
 date: 2024-1-10 01:16:17
 tags: 电子书
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![深入讲解Python的条件分支：match-case！ - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![深入讲解Python的条件分支：match-case！ - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 https://cloud.tencent.com/developer/article/2306031
 1、修改文章标题，可将此文章改为Python判断语句之类相关的
 2、扩写此文章，增加 if 、elif等条件判断语句的定义、讲解，让初学者看见这篇文章后，可以学会判断语句这一类知识

@@ -1,4 +1,4 @@
----
+﻿---
 title: Alibaba Cloud Coding Plan FAQ: 20 Common Questions Answered
 tags: [Alibaba Cloud Coding Plan FAQ, Alibaba Cloud Bailian Coding Plan Questions, Coding Plan Common Questions, Alibaba Cloud AI Programming, Qianwen Code Model, Programmer Wanfeng]
 categories: [AI Programming, Common Questions]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Alibaba Cloud Coding Plan FAQ: 20 Common Questions Answered - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Alibaba Cloud Coding Plan FAQ: 20 Common Questions Answered - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 > **Author: Programmer Wanfeng | AI Programming Evangelist | Focus on AI Tool Evaluation and Teaching**
 > 
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office

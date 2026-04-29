@@ -1,4 +1,4 @@
----
+﻿---
 title: 从0开始，用Python做一个投票小程序
 date: 2024-03-16 23:22:05
 tags: 1v1
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![从0开始，用Python做一个投票小程序 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 今晚的沟通主题非常明确，做一个投票小程序，并且通过做这个小程序，学习数据分析。
 
 

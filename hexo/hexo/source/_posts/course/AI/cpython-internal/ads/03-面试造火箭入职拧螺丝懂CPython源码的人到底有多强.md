@@ -1,9 +1,13 @@
----
+﻿---
 title: 面试造火箭入职拧螺丝？懂CPython源码的人到底有多强
 date: 2026-04-17 14:00:00
 tags: [Python进阶, CPython, 面试, 职场]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
+![面试造火箭入职拧螺丝？懂CPython源码的人到底有多强 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![面试造火箭入职拧螺丝？懂CPython源码的人到底有多强 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。
 

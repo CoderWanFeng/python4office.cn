@@ -1,5 +1,6 @@
 ﻿---
 
+
 title: "MiniMax TOKEN Plan vs Azure OpenAI：国内开发者选哪个？2026年深度对比"
 date: 2026-04-22 00:00:00
 categories:
@@ -21,11 +22,18 @@ keywords:
   - GPT-4 API
   - 国内开发者AI工具
   - OpenAI API对比
+cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![MiniMax TOKEN Plan vs Azure OpenAI：国内开发者选哪个？2026年深度对比 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![MiniMax TOKEN Plan vs Azure OpenAI：国内开发者选哪个？2026年深度对比 - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 # MiniMax TOKEN Plan vs Azure OpenAI：国内开发者选哪个？2026年深度对比
 

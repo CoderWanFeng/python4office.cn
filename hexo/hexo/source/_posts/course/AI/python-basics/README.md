@@ -1,4 +1,4 @@
-# Python 基础课 · 导读
+﻿# Python 基础课 · 导读
 
 > 共 23 篇文章，建议按顺序学习。零基础可直接从第 1 篇开始。
 
@@ -7,7 +7,11 @@
 ## 🟢 第一阶段：编程入门（第 1-5 篇）
 
 | 序号 | 文章 | 核心内容 |
-|:---:|------|---------|
+|:---
+
+![README.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![README.md - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+:|------|---------|
 | 01 | [Python零基础入门](./01-Python零基础入门.md) | 安装环境、写出第一行代码 |
 | 02 | [Python变量与数据类型](./02-Python变量与数据类型.md) | 字符串、数字、列表、字典等7大数据类型 |
 | 03 | [Python运算符与表达式](./03-Python运算符与表达式.md) | 算术、比较、逻辑运算，写出高效代码 |

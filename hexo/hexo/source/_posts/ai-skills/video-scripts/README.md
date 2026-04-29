@@ -1,4 +1,8 @@
-<!-- more -->
+﻿<!-- more -->
+
+![README.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![README.md - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # 短视频文案库
 
 > 「科技不高冷，AI很好用」—— 程序员的 AI 生活方式

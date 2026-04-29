@@ -1,4 +1,4 @@
----
+﻿---
 title: 华为没有 Coding Plan？别急，先看看阿里云百炼
 keywords: [华为 Coding Plan, 阿里云百炼, 通义千问, 国产AI对比, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？别慌！程序员晚枫推荐你看阿里云百炼，通义千问全系支持，同样是国产大模型的顶级选择。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![华为没有 Coding Plan？别急，先看看阿里云百炼 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![华为没有 Coding Plan？别急，先看看阿里云百炼 - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

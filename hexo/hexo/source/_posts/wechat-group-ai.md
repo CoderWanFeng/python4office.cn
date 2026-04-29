@@ -1,4 +1,4 @@
----
+﻿---
 title: AI工具 · 交流群
 date: 2024-01-10 22:36:44
 tags: 微信群
@@ -10,6 +10,9 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 
 <!-- more -->
+
+![AI工具 · 交流群 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 我有一个复杂的Excel操作，想用Python实现，怎么做？
 date: 2024-02-24 16:16:17
 tags: 技术咨询
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![我有一个复杂的Excel操作，想用Python实现，怎么做？ - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 今天的1对1咨询（我的微信：[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)）是一个关于Excel自动化办公的问题：**在一个文件夹中有若干个excel工作簿，每个工作簿里都有相同个数的工作表，这些工作表的格式都是肯定的。我需要把文件夹中的工作簿汇总成一个工作簿，工作薄中的不同的工作表，也对应汇总。**也想深入学一些Python技术。
 
 说得简单点，可以理解成：如何把多个相同格式的Excel表格汇总到1个Excel表格里？

@@ -1,4 +1,4 @@
-# work-story 引流引擎 - 创作规划
+﻿# work-story 引流引擎 - 创作规划
 
 **定位：** 情感共鸣引流利器  
 **优先级：** ⭐⭐⭐⭐ 高  
@@ -25,6 +25,10 @@
 - **激励机制**：稿费/课程/曝光
 
 ---
+
+![README.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![README.md - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 
 ## 📝 标题规范
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Top 10 Domestic Cloud Server Providers - How Many Have You Used?
 date: 2023-08-16 00:24:04
 tags: Advertisement
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 
 <!-- more -->
+
+![Top 10 Domestic Cloud Server Providers - How Many Have You Used? - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Top 10 Domestic Cloud Server Providers - How Many Have You Used? - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 AI helped me make money again!
 
 Hello everyone, this is Programmer Wanfeng, currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw), also known as the same name on Xiaohongshu.

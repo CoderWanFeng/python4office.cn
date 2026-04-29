@@ -1,4 +1,4 @@
----
+﻿---
 title: 京东云 JD Cloud Coding Plan 适合谁用？适合人群分析与选购建议
 keywords: [JD Cloud Coding Plan 适合谁, 京东云 AI 编程, 京点点选购建议, 程序员晚枫]
 description: 程序员晚枫分析：京东云 JD Cloud Coding Plan 适合哪些人？不适合哪些人？选购建议全在这里。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![京东云 JD Cloud Coding Plan 适合谁用？适合人群分析与选购建议 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![京东云 JD Cloud Coding Plan 适合谁用？适合人群分析与选购建议 - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

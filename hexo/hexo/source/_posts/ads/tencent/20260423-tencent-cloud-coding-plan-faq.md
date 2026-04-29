@@ -1,4 +1,4 @@
----
+﻿---
 title: 腾讯云 Coding Plan 常见问题 FAQ：49 元/月值不值？看这篇就够了
 keywords: [腾讯云 Coding Plan FAQ, 腾讯混元 常见问题, AI编程 答疑, 程序员晚枫]
 description: 程序员晚枫解答：腾讯云 Coding Plan 常见问题汇总，49元/月值不值？tokens怎么算？看完你就懂了。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![腾讯云 Coding Plan 常见问题 FAQ：49 元/月值不值？看这篇就够了 - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![腾讯云 Coding Plan 常见问题 FAQ：49 元/月值不值？看这篇就够了 - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

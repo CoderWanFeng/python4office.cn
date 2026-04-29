@@ -1,9 +1,13 @@
-本文件夹为「AtomGit AI龙虾挑战赛·重庆站」系列宣传文章
+﻿本文件夹为「AtomGit AI龙虾挑战赛·重庆站」系列宣传文章
 
 ## 文章规划
 
 | 序号 | 文件名 | 主题 | 目的 |
-|------|--------|------|------|
+|------
+
+![README.md - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![README.md - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+|--------|------|------|
 | 01 | 01-从月薪3000到副业过万：一个法学生转行的血泪经验.md | 个人故事/成长经历 | 情感共鸣，建立信任 |
 | 02 | 02-Python-AI-Agent-2026年普通人的搞钱新机会.md | 热点蹭文 | 吸引眼球，引出比赛 |
 | 03 | 03-AtomGit-OpenClaw-2026年最强AI编程组合.md | 工具介绍 | 介绍参赛工具链 |

@@ -5,6 +5,9 @@ tags: [50讲Python自动化办公]
 ---
 <!-- more -->
 
+![20250729别再改后缀了！1行Python代码让doc-docx秒互转文件秒复活.md - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
+
 
 大家好，我是晚枫，用通俗易懂的方式，教小白学python。
 

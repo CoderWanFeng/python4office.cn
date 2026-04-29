@@ -1,4 +1,4 @@
----
+﻿---
 title: "Why I Choose Volcano Ark Coding Plan? A Programmer's Sincere Sharing"
 keywords: Programmer Wan Feng, Why Choose Volcano Ark Coding Plan, AI Programming Tool Selection, Programmer Tool Recommendations
 description: Programmer Wan Feng's sincere sharing: Why I choose Volcano Ark Coding Plan, one programmer's AI programming tool selection experience.
@@ -23,6 +23,10 @@ Hello everyone, this is programmer Wan Feng.
 I've been using Volcano Ark Coding Plan for 3 months, today sincerely sharing why I choose it, and what changes it brought me.
 
 <!-- more -->
+
+![Why I Choose Volcano Ark Coding Plan? A Programmer's Sincere Sharing - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Why I Choose Volcano Ark Coding Plan? A Programmer's Sincere Sharing - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 ## My Background
 

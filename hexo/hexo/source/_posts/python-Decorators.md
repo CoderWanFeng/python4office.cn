@@ -1,4 +1,4 @@
----
+﻿---
 title: 常见的Python装饰器
 date: 2022-02-09 16:02:05
 tags: 装饰器
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 <!-- more -->
+
+![常见的Python装饰器 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![常见的Python装饰器 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 ## 相关阅读
 
 - [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)

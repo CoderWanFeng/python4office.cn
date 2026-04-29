@@ -1,4 +1,4 @@
----
+﻿---
 title: 为什么我做不好客服，也讨厌做营销？
 date: 2026-04-27 22:46:00
 tags: [个人成长, 创作感悟, 自媒体, 程序员晚枫]
@@ -9,6 +9,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![为什么我做不好客服，也讨厌做营销？ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > *"Let the work speak for itself."*
 > 让作品自己说话。

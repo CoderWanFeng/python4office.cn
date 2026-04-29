@@ -1,4 +1,4 @@
----
+﻿---
 
 title: Python也开始卷虚拟机了？
 date: 2024-05-08 00:24:04
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 <!-- more -->
+
+![Python也开始卷虚拟机了？ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python也开始卷虚拟机了？ - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 手写 Python 虚拟机
 华为编译专家揭秘 Python 底层原理
 海纳

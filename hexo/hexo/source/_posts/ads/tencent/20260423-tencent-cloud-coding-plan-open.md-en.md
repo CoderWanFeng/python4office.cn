@@ -1,4 +1,4 @@
----
+﻿---
 title: "Tencent Cloud Coding Plan Getting Started Tutorial: Experience Hunyuan AI Programming for 49 yuan/month (Illustrated)"
 keywords: [Tencent Cloud Coding Plan Tutorial, Tencent Hunyuan Registration, AI Programming Getting Started, 程序员晚枫]
 description: Programmer Wan Feng hand-holds you through activating Tencent Cloud Coding Plan, 49 yuan/month to experience Hunyuan large model, with detailed illustrated tutorial.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Tencent Cloud Coding Plan Getting Started Tutorial: Experience Hunyuan AI Programming for 49 yuan/month (Illustrated) - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Tencent Cloud Coding Plan Getting Started Tutorial: Experience Hunyuan AI Programming for 49 yuan/month (Illustrated) - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 >

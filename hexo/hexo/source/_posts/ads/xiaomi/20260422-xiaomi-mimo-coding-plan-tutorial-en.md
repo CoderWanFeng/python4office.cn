@@ -1,4 +1,4 @@
----
+﻿---
 title: "Xiaomi MiMo Coding Plan Tutorial: Xiaomi Ecosystem Development Practice (2026 Latest)"
 keywords: ["Xiaomi MiMo Coding Plan Tutorial", "Xiaomi Ecosystem Development", "AI Programming Tutorial", "程序员晚枫"]
 description: "Programmer Wanfeng's hands-on guide to Xiaomi MiMo Coding Plan — Xiaomi ecosystem development practice tutorial."
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Xiaomi MiMo Coding Plan Tutorial: Xiaomi Ecosystem Development Practice (2026 Latest) - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Xiaomi MiMo Coding Plan Tutorial: Xiaomi Ecosystem Development Practice (2026 Latest) - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **Article Author: 程序员晚枫 | AI Programming Advocate | Specializing in AI Tool Reviews & Teaching**
 >

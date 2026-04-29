@@ -1,4 +1,4 @@
----
+﻿---
 title: 人在杭州，没有优势如何转行程序员？
 date: 2025-02-08 22:22:05
 tags: 1v1
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![人在杭州，没有优势如何转行程序员？ - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![人在杭州，没有优势如何转行程序员？ - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 今晚是一位大哥的沟通，学历也没有优势，但是想转行程序员。
 
 还有没有机会呢？

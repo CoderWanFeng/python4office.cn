@@ -1,4 +1,4 @@
----
+﻿---
 title: 性能优化必备！深入掌握Python性能分析神器cProfile
 date: 2024-11-11 00:41:49
 tags: [第三方库,pip]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![性能优化必备！深入掌握Python性能分析神器cProfile - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 <p align="center" id='腾讯云-banner'>
     <a target="_blank" href='https://curl.qcloud.com/3csDz9jU'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F1040x100-tencent.jpg" width="100%"/>

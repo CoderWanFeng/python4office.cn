@@ -1,4 +1,4 @@
-# 流量矩阵创作工作区
+﻿# 流量矩阵创作工作区
 
 **创建时间：** 2026-04-16  
 **核心策略：** 三驾马车流量矩阵 - 主力产品 + 引流引擎 + SEO基石
@@ -27,6 +27,10 @@
 ```
 
 ---
+
+![README.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![README.md - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 
 ## 🎯 三驾马车流量公式
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Feishu CLI Office Skill Quick Start: 19 Official Skills Let AI Take Over Your Work"
 date: 2026-04-06 10:34:00
 tags: [Feishu, CLI, Lark, Skill, AI Office, Tutorial]
@@ -13,6 +13,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 </p>
 
 <!-- more -->
+
+![Feishu CLI Office Skill Quick Start: 19 Official Skills Let AI Take Over Your Work - 配图1](https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop)
+
 
 Hello everyone, I'm Programmer Wanfeng,实战 various AI projects.
 

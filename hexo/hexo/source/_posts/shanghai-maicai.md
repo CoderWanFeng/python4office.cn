@@ -1,10 +1,14 @@
 ﻿---
 
+
 title: 【上海买菜攻略】
 date: 2022-04-08 19:59:40
 tags: [Python, AI编程]
+cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+
 
 ---
+
 
 
 
@@ -30,6 +34,9 @@ tags: [Python, AI编程]
 - 👉静安区：https://mp.weixin.qq.com/s/u6U88oP30kXWUKZv65rung
 
 <!-- more -->
+
+![【上海买菜攻略】 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 ### 上海 - 买菜互助群
 请添加我的微信，备注：上海，我来邀请你进群

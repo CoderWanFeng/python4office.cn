@@ -1,4 +1,4 @@
----
+﻿---
 title: "Huawei Doesn't Have Coding Plan? iFlytek Spark May Be the Best Choice for Voice + AI"
 keywords: [Huawei Coding Plan, iFlytek Spark, iFlytek, Voice AI, Programmer Wan Feng]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends iFlytek Spark, strongest voice + AI capability, suitable for voice programming and intelligent assistant development.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Huawei Doesn't Have Coding Plan? iFlytek Spark May Be the Best Choice for Voice + AI - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![Huawei Doesn't Have Coding Plan? iFlytek Spark May Be the Best Choice for Voice + AI - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 非程序员可以用Python做什么？
 date: 2023-11-29 00:16:17
 tags: 自动化办公
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![非程序员可以用Python做什么？ - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![非程序员可以用Python做什么？ - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## 先回答一个问题
 
 Python很热门，我又不是程序员，我有必要学习吗？

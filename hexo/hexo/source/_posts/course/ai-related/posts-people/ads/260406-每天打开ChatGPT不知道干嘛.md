@@ -1,4 +1,4 @@
----
+﻿---
 title: 小白学AI编程：每天打开ChatGPT不知道干嘛？零基础入门指南
 date: 2026-04-06 10:11:00
 categories:
@@ -15,6 +15,9 @@ tags:
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 <!-- more -->
+
+![小白学AI编程：每天打开ChatGPT不知道干嘛？零基础入门指南 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+
 你有没有这种感觉：
 
 AI工具装了十几个，ChatGPT、Claude、Midjourney、文心一言，全注册了。

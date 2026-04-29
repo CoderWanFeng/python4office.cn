@@ -1,4 +1,4 @@
----
+﻿---
 title: 《流畅的 Python》共读课销售方案
 date: 2026-03-03 10:00:00
 tags: [流畅的Python, 课程销售, 营销方案, Python课程]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![《流畅的 Python》共读课销售方案 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 # 《流畅的 Python》共读课销售方案
 
 **目标**：首发文章即成交，3个月内完成第一批 200-500 名付费学员

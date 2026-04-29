@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lecture 21: Performance Optimization and Monitoring"
 date: 2026-04-06 38:00:00
 tags: ["AI Skill", "Advanced Development", "Performance Optimization"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Lecture 21: Performance Optimization and Monitoring - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Lecture 21: Performance Optimization and Monitoring - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # Lecture 21: Performance Optimization and Monitoring
 
 > Master Skill performance optimization and monitoring techniques to ensure efficient and stable Skill operation.

@@ -1,5 +1,6 @@
 ﻿---
 
+
 title: 我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用
 keywords: 程序员晚枫, AI导航网站, AI工具合集, AI工具导航, python-office, AI编程, AI效率工具, 免费AI工具
 description: 程序员晚枫全新发布AI导航网站，收录100+精选AI工具，涵盖编程、设计、办公、学习等多个领域。零代码基础也能快速上手，一站式解决AI工具查找难题。
@@ -16,11 +17,18 @@ categories:
   - AI工具推荐
   - 项目分享
 author: 程序员晚枫
+cover: https://images.unsplash.com/photo-1432888?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 > **本文关键词**：程序员晚枫、AI导航、AI工具合集、效率工具、python-office
@@ -199,9 +207,9 @@ AI时代，工具就是生产力。
 
 ## 相关阅读
 
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
+- [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
 - [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 - [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)

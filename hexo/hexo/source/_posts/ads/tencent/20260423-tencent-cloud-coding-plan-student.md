@@ -1,4 +1,4 @@
----
+﻿---
 title: 腾讯云 Coding Plan 学生优惠：49 元/月降到 19 元，学生党也能用得起！
 keywords: [腾讯云 Coding Plan 学生优惠, 腾讯混元 学生, AI编程 学生, 程序员晚枫]
 description: 学生党福利！腾讯云 Coding Plan 学生专属优惠，49元/月降到19元，腾讯混元大模型白菜价！
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![腾讯云 Coding Plan 学生优惠：49 元/月降到 19 元，学生党也能用得起！ - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![腾讯云 Coding Plan 学生优惠：49 元/月降到 19 元，学生党也能用得起！ - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

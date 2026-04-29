@@ -1,4 +1,4 @@
----
+﻿---
 title: Azure OpenAI Coding Plan 来了！GPT-4+企业级安全，全球开发者的首选
 keywords: [Azure OpenAI Coding Plan, Azure AI, GPT-4, 企业级AI, 程序员晚枫]
 description: 程序员晚枫推荐：Azure OpenAI Coding Plan，GPT-4+企业级安全合规，全球开发者的首选。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Azure OpenAI Coding Plan 来了！GPT-4+企业级安全，全球开发者的首选 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Azure OpenAI Coding Plan 来了！GPT-4+企业级安全，全球开发者的首选 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

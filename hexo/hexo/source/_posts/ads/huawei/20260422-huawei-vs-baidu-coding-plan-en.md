@@ -1,4 +1,4 @@
----
+﻿---
 title: "Huawei Has No Coding Plan? Baidu Cloud May Be the Strongest Choice for Code Capability"
 keywords: ["Huawei Coding Plan", "Baidu Cloud", "Wenxin Yiyan", "Code Capability", "程序员晚枫"]
 description: "Huawei temporarily has no Coding Plan? Programmer Wanfeng recommends Baidu Cloud — Wenxin Yiyan + strong code capability, another pole of domestic AI."
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Huawei Has No Coding Plan? Baidu Cloud May Be the Strongest Choice for Code Capability - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Huawei Has No Coding Plan? Baidu Cloud May Be the Strongest Choice for Code Capability - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **Article Author: 程序员晚枫 | AI Programming Advocate | Specializing in AI Tool Reviews & Teaching**
 >

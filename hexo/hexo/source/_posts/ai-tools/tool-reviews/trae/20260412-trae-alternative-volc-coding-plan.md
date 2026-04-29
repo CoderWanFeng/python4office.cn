@@ -1,5 +1,6 @@
 ﻿---
 
+
 title: "Trae 免费模式排队太久？换个思路，便宜又快"
 date: 2026-04-12 00:00:00
 categories:
@@ -11,11 +12,18 @@ tags:
   - 火山方舟
   - Coding Plan
 description: "Trae 免费模式排队？火山方舟 Coding Plan 了解一下，便宜又快"
+cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+
 
 ---
 
 
+
 <!-- more -->
+
+![Trae 免费模式排队太久？换个思路，便宜又快 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Trae 免费模式排队太久？换个思路，便宜又快 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 # Trae 免费模式排队太久？换个思路，便宜又快
 
 ## 先说结论

@@ -1,4 +1,4 @@
----
+﻿---
 title: 操作PDF的Python库有哪些？分别有什么优缺点
 date: 2024-05-29 01:25:17
 tags: python-office
@@ -6,6 +6,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![操作PDF的Python库有哪些？分别有什么优缺点 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![操作PDF的Python库有哪些？分别有什么优缺点 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，有一个10w+关注的B站账号：Python自动化办公社区，帮助小白快速学习Python。
 
 2年前发布了一个开源项目：python-office，目前在GitHub上有800+⭐，最近在开发新功能时感觉Python知识有点不够用了。

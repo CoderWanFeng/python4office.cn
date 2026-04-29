@@ -1,4 +1,4 @@
----
+﻿---
 title: "JD Cloud JD Cloud Coding Plan Is Here! Jingdiandian + Multi-Model, a New Choice for Domestic Developers"
 keywords: ["JD Cloud Coding Plan", "JD Cloud AI", "Jingdiandian", "AI Programming", "程序员晚枫"]
 description: "Programmer Wanfeng's recommendation: JD Cloud Coding Plan, powered by Jingdiandian, multi-model support — a high value choice for domestic developers."
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![JD Cloud JD Cloud Coding Plan Is Here! Jingdiandian + Multi-Model, a New Choice for Domestic Developers - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![JD Cloud JD Cloud Coding Plan Is Here! Jingdiandian + Multi-Model, a New Choice for Domestic Developers - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
 
 > **Article Author: 程序员晚枫 | AI Programming Advocate | Specializing in AI Tool Reviews & Teaching**
 >

@@ -1,4 +1,4 @@
----
+﻿---
 title: 《50讲 · Python自动化办公》 - 录制流程
 date: 2023-08-27 10:08:24
 tags: 原创课程
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
+
+![《50讲 · Python自动化办公》 - 录制流程 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![《50讲 · Python自动化办公》 - 录制流程 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 大家久等了，我给说一下我录制这套课程的流程，内容包含：
 
 > 录制建议、使用的软件、思路、剪辑方法

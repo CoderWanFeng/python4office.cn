@@ -1,4 +1,4 @@
----
+﻿---
 title: 阿里云Coding Plan使用教程：从订阅到上手，完整指南
 date: 2026-04-08 00:41:00
 tags: [阿里云CodingPlan教程, 百炼CodingPlan怎么用, 通义千问编程, 阿里云AI编程入门, CodingPlan配置]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![阿里云Coding Plan使用教程：从订阅到上手，完整指南 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，这里是程序员晚枫。
 
 买了阿里云Coding Plan不知道怎么用？今天这篇教程手把手教你，从订阅到上手，完整流程一次讲清楚。

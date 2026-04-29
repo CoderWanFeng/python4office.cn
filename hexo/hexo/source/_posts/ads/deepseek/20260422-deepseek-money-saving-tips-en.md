@@ -1,4 +1,4 @@
----
+﻿---
 title: "DeepSeek Money Saving Tips! You Can Save Thousands a Year, Really Great"
 date: 2026-04-22 00:00:00
 tags: ["deepseek", "money saving tips", "api"]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![DeepSeek Money Saving Tips! You Can Save Thousands a Year, Really Great - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![DeepSeek Money Saving Tips! You Can Save Thousands a Year, Really Great - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 Hey everyone!!!
 

@@ -1,4 +1,8 @@
-<!-- more -->
+﻿<!-- more -->
+
+![README-en.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![README-en.md - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+
 # Short Video Script Library
 
 > "Technology is not cold, AI is easy to use" - Programmer's AI Lifestyle

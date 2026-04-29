@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lecture 5: Skill Interaction Design: Making Conversations More Natural"
 date: 2026-04-06 14:00:00
 tags: ["AI Skill", "Interaction Design", "Prompt", "User Experience"]
@@ -7,6 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Lecture 5: Skill Interaction Design: Making Conversations More Natural - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![Lecture 5: Skill Interaction Design: Making Conversations More Natural - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # Lecture 5: Skill Interaction Design: Making Conversations More Natural
 
 > Master core skills of Skill interaction design, make your Skill as natural and smooth as a real person.

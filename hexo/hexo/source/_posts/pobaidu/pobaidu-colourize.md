@@ -1,4 +1,4 @@
----
+﻿---
 title: pobaidu-colourize
 date: 2023-01-25 01:19:28
 tags: [pobaidu,AI]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 
 <!-- more -->
+
+![pobaidu-colourize - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家过年好，这里是程序员晚枫。
 
 作为一个除了敲代码啥也不会的程序员，我一直在想自己能给身边的人带来什么帮助。

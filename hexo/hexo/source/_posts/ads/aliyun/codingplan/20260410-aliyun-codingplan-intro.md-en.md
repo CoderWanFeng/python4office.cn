@@ -1,4 +1,4 @@
----
+﻿---
 title: "Alibaba Cloud Coding Plan is Here! Starting from 7.9 yuan/month, Qwen + Kimi + GLM Multi-Model Freely Use"
 keywords: Programmer Wan Feng, Alibaba Cloud Coding Plan, Alibaba Cloud Bailian Coding Plan, Qianwen Code Model, AI Programming Tool Recommendations
 description: Programmer Wan Feng recommends: Alibaba Cloud Coding Plan starts at 7.9 yuan/month first month, Qwen + Kimi + GLM multi-model freely use, best value choice among domestic AI programming.
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Alibaba Cloud Coding Plan is Here! Starting from 7.9 yuan/month, Qwen + Kimi + GLM Multi-Model Freely Use - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Alibaba Cloud Coding Plan is Here! Starting from 7.9 yuan/month, Qwen + Kimi + GLM Multi-Model Freely Use - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office

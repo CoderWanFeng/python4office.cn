@@ -1,4 +1,4 @@
----
+﻿---
 title: "Coze Skill Store Complete Guide: Zero-Code Install Office Skills"
 date: 2026-04-06 10:30:00
 tags: [Coze, Coze, Skill, AI Office, Tutorial]
@@ -13,6 +13,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 </p>
 
 <!-- more -->
+
+![Coze Skill Store Complete Guide: Zero-Code Install Office Skills - 配图1](https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop)
+
 
 Hello everyone, I'm Programmer Wanfeng,实战 various AI projects.
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 25个Python学习资源（文字版），摸鱼必备，可以用到就业
 date: 2022-08-23 22:01:57
 tags: 知识星球
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 
 
 <!-- more -->
+
+![25个Python学习资源（文字版），摸鱼必备，可以用到就业 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，这里是Python程序员晚枫，[知识星球：Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)。
 
 最近在星球收到一个提问，直击打工人的灵魂👇

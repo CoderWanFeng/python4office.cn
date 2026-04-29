@@ -1,4 +1,4 @@
----
+﻿---
 title: "AtomCode vs Claude Code！深度对比，看完就知道选哪个"
 date: 2026-04-22 00:00:00
 tags: ["atomgit", "atomcode", "claude code", "ai编程"]
@@ -8,6 +8,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![AtomCode vs Claude Code！深度对比，看完就知道选哪个 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![AtomCode vs Claude Code！深度对比，看完就知道选哪个 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 兄弟们！！！
 

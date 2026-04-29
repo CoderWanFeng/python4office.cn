@@ -1,10 +1,14 @@
----
+﻿---
 title: 普通人学Python数据分析，能找到工作吗？
 date: 2026-04-17 22:40:00
 tags: [数据分析, 转行, 就业, Python, 职业发展]
 categories: Python数据分析
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
+![普通人学Python数据分析，能找到工作吗？ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![普通人学Python数据分析，能找到工作吗？ - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 
 # 普通人学Python数据分析，能找到工作吗？
 

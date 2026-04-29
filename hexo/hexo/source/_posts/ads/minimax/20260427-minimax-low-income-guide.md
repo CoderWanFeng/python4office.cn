@@ -1,4 +1,4 @@
----
+﻿---
 title: 月薪3000也能用！MiniMax 26元/月，程序员的第一个AI编程工具
 keywords: [月薪3000, MiniMax, AI编程, 26元/月, 程序员晚枫]
 description: 程序员晚枫推荐：月薪3000也能用上AI编程！MiniMax 26元/月，不需要信用卡，不需要科学上网，零门槛入门AI。
@@ -9,6 +9,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![月薪3000也能用！MiniMax 26元/月，程序员的第一个AI编程工具 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![月薪3000也能用！MiniMax 26元/月，程序员的第一个AI编程工具 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >

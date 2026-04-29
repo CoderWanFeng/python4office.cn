@@ -1,4 +1,4 @@
----
+﻿---
 title: "第2讲：Skill 生态全景图：平台、开发者、用户"
 date: 2026-04-06 11:30:00
 tags: ["AI Skill", "生态", "平台对比"]
@@ -7,6 +7,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![第2讲：Skill 生态全景图：平台、开发者、用户 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # 第2讲：Skill 生态全景图：平台、开发者、用户
 
 > 了解 Skill 生态的参与者，找到你的定位和机会。

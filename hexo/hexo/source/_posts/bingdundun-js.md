@@ -1,4 +1,4 @@
----
+﻿---
 title: Python绘制冬奥吉祥物“冰墩墩”，源代码给你，复制粘贴就可以运行！(3D款)
 date: 2022-02-10 10:45:09
 tags: JavaScript
@@ -6,6 +6,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 <!-- more -->
+
+![Python绘制冬奥吉祥物“冰墩墩”，源代码给你，复制粘贴就可以运行！(3D款) - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 ### 你好呀，我是[程序员晚枫](https://www.python4office.cn/wechat-qrcode/)
 - 🐧 编程知识博主
 - 👨‍💻 我的B站，点击查看👉[千万别来重庆工作，别问为什么](https://www.bilibili.com/video/BV1aD4y1N7ai)
