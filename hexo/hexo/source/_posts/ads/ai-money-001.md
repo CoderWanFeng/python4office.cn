@@ -57,6 +57,7 @@ AI又帮我赚钱了！
 加群方法，关注公众号：Python自动化办公社区，在后台发送命令：**0816**，即可24小时自动进群~
 
 ## 相关阅读
+- [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
 
 - [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
 

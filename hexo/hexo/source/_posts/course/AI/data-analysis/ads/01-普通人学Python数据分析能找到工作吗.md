@@ -177,6 +177,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 ## 相关阅读
+- [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
 
 - [数据分析师30岁会被裁员？50岁还在做数据分析的大叔的故事](./02-数据分析师30岁会被裁员.md)
 - [Python数据分析到底要学哪些内容？附完整学习路线图](./03-Python数据分析到底要学哪些内容.md)

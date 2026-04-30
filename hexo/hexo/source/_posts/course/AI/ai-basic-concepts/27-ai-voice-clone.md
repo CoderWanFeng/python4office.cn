@@ -351,6 +351,7 @@ AI克隆声音把"声音验证"这件事彻底打破了。
 ---
 
 ## 相关阅读
+- [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 
