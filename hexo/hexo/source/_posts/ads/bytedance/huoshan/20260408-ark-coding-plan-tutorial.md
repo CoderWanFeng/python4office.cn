@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![火山方舟Coding Plan使用教程：从订阅到上手，完整指南 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![火山方舟Coding Plan使用教程：从订阅到上手，完整指南](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 

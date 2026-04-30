@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![转码学习 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![转码学习 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![转码学习](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![转码学习](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 一、方向在哪里
 

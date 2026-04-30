@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![一次性更新10个平台，我写文章的顺序是什么？ - 配图1](https://images.unsplash.com/photo-146092589?w=800&h=400&fit=crop)
+![一次性更新10个平台，我写文章的顺序是什么？](https://images.unsplash.com/photo-146092589?w=800&h=400&fit=crop)
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>

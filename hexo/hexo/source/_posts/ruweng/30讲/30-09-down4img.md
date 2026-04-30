@@ -1,5 +1,5 @@
 ---
-title: "Python批量下载图片：1键抓取全网页图片，支持指定格式和尺寸，自动重命名"
+title: Python批量下载图片：1键抓取全网页图片，支持指定格式和尺寸，自动重命名
 date: 2025-08-22 00:00:00
 tags: [星河计划]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop

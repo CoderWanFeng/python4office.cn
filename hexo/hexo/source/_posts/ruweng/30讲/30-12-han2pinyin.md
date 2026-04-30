@@ -1,5 +1,5 @@
 ---
-title: "Python汉字转拼音：1行代码搞定，支持声调、多音字自动识别，做拼音工具"
+title: Python汉字转拼音：1行代码搞定，支持声调、多音字自动识别，做拼音工具
 date: 2025-08-22 00:00:00
 tags: [星河计划]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop

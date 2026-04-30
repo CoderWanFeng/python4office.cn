@@ -1,5 +1,5 @@
 ---
-title: "White Water AI Community · Course Collection"
+title: White Water AI Community · Course Collection
 date: 2026-03-12 20:56:34
 tags: White Water AI Community
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![White Water AI Community · Course Collection - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![White Water AI Community · Course Collection](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 # 🌊 White Water AI Community
 

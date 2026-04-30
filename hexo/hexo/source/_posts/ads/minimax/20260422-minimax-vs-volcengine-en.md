@@ -1,5 +1,5 @@
 ---
-title: "MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比"
+title: MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比
 date: 2026-04-22 00:00:00
 categories:
 - AI工具横评
@@ -15,7 +15,7 @@ tags:
 - 字节跳动
 - 价格对比
 - 2026
-description: "2026年最新！MiniMax TOKEN Plan和火山方舟Coding Plan哪个好？从价格、模型、额度、适用场景全面对比测评"
+description: 2026年最新！MiniMax TOKEN Plan和火山方舟Coding Plan哪个好？从价格、模型、额度、适用场景全面对比测评
 keywords:
 - MiniMax TOKEN Plan
 - 火山方舟 Coding Plan
@@ -30,8 +30,8 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 
 <!-- more -->
 
-![MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比 - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比 - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 
 # MiniMax TOKEN Plan vs 火山方舟 Coding Plan：字节系AI编程工具深度对比

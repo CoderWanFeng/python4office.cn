@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![html-css-js - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![html-css-js](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 css入门demo：https://baijiahao.baidu.com/s?id=1709526903926421120&wfr=spider&for=pc
 

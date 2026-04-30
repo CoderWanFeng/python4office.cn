@@ -15,8 +15,8 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 ---
 
 
-![WorkBuddy Launches Expert Mode, They Take Naming AI Seriously - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![WorkBuddy Launches Expert Mode, They Take Naming AI Seriously - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![WorkBuddy Launches Expert Mode, They Take Naming AI Seriously](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![WorkBuddy Launches Expert Mode, They Take Naming AI Seriously](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

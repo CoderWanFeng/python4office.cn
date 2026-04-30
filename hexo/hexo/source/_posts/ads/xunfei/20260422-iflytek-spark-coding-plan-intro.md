@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 <!-- more -->
 
-![讯飞星火 iFLYTEK Spark Coding Plan 来了！国产大模型+语音加持，AI 编程新选择 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
-![讯飞星火 iFLYTEK Spark Coding Plan 来了！国产大模型+语音加持，AI 编程新选择 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![讯飞星火 iFLYTEK Spark Coding Plan 来了！国产大模型+语音加持，AI 编程新选择](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![讯飞星火 iFLYTEK Spark Coding Plan 来了！国产大模型+语音加持，AI 编程新选择](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

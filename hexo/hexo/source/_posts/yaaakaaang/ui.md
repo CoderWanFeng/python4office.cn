@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![poui的功能 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![poui的功能 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![poui的功能](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![poui的功能](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #  一、选择需要操作的文件目录
 

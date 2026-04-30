@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![2026年免费AI API大盘点：DeepSeek、火山方舟、智谱哪家强？（附薅羊毛教程） - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![2026年免费AI API大盘点：DeepSeek、火山方舟、智谱哪家强？（附薅羊毛教程） - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![2026年免费AI API大盘点：DeepSeek、火山方舟、智谱哪家强？（附薅羊毛教程）](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![2026年免费AI API大盘点：DeepSeek、火山方舟、智谱哪家强？（附薅羊毛教程）](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 # 2026年免费AI API大盘点：DeepSeek、火山方舟、智谱哪家强？（附薅羊毛教程）

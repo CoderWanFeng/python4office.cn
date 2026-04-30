@@ -1,17 +1,17 @@
 ---
-title: "AI副业避坑！别踩这10个坑，很多人都栽过"
+title: AI副业避坑！别踩这10个坑，很多人都栽过
 date: 2026-04-22 00:00:00
 tags: ["ai副业", "副业避坑"]
 categories: ["AI副业变现"]
-description: "AI副业避坑：别踩这10个坑，不要all in、不要投机、不要违规、要坚持，很多人都栽过。"
+description: AI副业避坑：别踩这10个坑，不要all in、不要投机、不要违规、要坚持，很多人都栽过。
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![AI副业避坑！别踩这10个坑，很多人都栽过 - 配图1](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
-![AI副业避坑！别踩这10个坑，很多人都栽过 - 配图2](https://images.unsplash.com/photo-149975031?w=800&h=400&fit=crop)
+![AI副业避坑！别踩这10个坑，很多人都栽过](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI副业避坑！别踩这10个坑，很多人都栽过](https://images.unsplash.com/photo-149975031?w=800&h=400&fit=crop)
 
 
 兄弟们！！！

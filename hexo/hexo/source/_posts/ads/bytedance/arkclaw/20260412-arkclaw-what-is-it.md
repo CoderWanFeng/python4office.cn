@@ -1,5 +1,5 @@
 ---
-title: "养虾养什么虾？ArkClaw 零门槛开箱即用体验"
+title: 养虾养什么虾？ArkClaw 零门槛开箱即用体验
 date: 2026-04-12 00:00:00
 categories:
 - AI工具评测
@@ -11,7 +11,7 @@ tags:
 - AI助手
 - 养虾
 - 火山引擎
-description: "朋友说让我一起养虾，听着一脸懵。后来才知道是火山引擎的 ArkClaw。试试看，体验如何？"
+description: 朋友说让我一起养虾，听着一脸懵。后来才知道是火山引擎的 ArkClaw。试试看，体验如何？
 cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 ---
 
@@ -20,8 +20,8 @@ cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![养虾养什么虾？ArkClaw 零门槛开箱即用体验 - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
-![养虾养什么虾？ArkClaw 零门槛开箱即用体验 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![养虾养什么虾？ArkClaw 零门槛开箱即用体验](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![养虾养什么虾？ArkClaw 零门槛开箱即用体验](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 # 养虾养什么虾？ArkClaw 零门槛开箱即用体验
 

@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![At 30, I Was Laid Off: That Night, I Finally Understood Something - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![At 30, I Was Laid Off: That Night, I Finally Understood Something - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![At 30, I Was Laid Off: That Night, I Finally Understood Something](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![At 30, I Was Laid Off: That Night, I Finally Understood Something](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 # At 30, I Was Laid Off: That Night, I Finally Understood Something

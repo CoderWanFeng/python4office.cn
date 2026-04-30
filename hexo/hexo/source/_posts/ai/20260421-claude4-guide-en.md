@@ -1,5 +1,5 @@
 ---
-title: "Claude 4 Exploded on Late Night! Programmers Using It to Write Code Doubled Efficiency"
+title: Claude 4 Exploded on Late Night! Programmers Using It to Write Code Doubled Efficiency
 date: 2026-04-21 14:42:00
 tags: [Claude, AI Programming, Programmer, Efficiency Tools]
 categories: [AI Tools]
@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![Claude 4 Exploded on Late Night! Programmers Using It to Write Code Doubled Efficiency - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![Claude 4 Exploded on Late Night! Programmers Using It to Write Code Doubled Efficiency - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Claude 4 Exploded on Late Night! Programmers Using It to Write Code Doubled Efficiency](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![Claude 4 Exploded on Late Night! Programmers Using It to Write Code Doubled Efficiency](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 
 # Claude 4 Exploded on Late Night! Programmers Using It to Write Code Doubled Efficiency

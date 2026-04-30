@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![ByteDance Volcano Ark Coding Plan is Here! 10% Off Subscription, Starting from 36 yuan, Multi-Model Freely Use - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![ByteDance Volcano Ark Coding Plan is Here! 10% Off Subscription, Starting from 36 yuan, Multi-Model Freely Use - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![ByteDance Volcano Ark Coding Plan is Here! 10% Off Subscription, Starting from 36 yuan, Multi-Model Freely Use](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![ByteDance Volcano Ark Coding Plan is Here! 10% Off Subscription, Starting from 36 yuan, Multi-Model Freely Use](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 

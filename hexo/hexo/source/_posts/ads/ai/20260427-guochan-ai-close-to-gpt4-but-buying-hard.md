@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![我用国产AI写代码，效果已经接近GPT-4了，但购买流程让我崩溃 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![我用国产AI写代码，效果已经接近GPT-4了，但购买流程让我崩溃 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![我用国产AI写代码，效果已经接近GPT-4了，但购买流程让我崩溃](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![我用国产AI写代码，效果已经接近GPT-4了，但购买流程让我崩溃](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

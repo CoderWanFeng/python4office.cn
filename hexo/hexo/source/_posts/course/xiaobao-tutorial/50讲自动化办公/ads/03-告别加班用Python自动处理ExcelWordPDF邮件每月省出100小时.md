@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![告别加班！用Python自动处理Excel、Word、PDF、邮件，每月省出100小时 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
-![告别加班！用Python自动处理Excel、Word、PDF、邮件，每月省出100小时 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![告别加班！用Python自动处理Excel、Word、PDF、邮件，每月省出100小时](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![告别加班！用Python自动处理Excel、Word、PDF、邮件，每月省出100小时](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 ## 你有没有算过，你每月在重复劳动上花了多少时间？

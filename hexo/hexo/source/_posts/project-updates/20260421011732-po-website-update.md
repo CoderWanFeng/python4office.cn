@@ -1,5 +1,5 @@
 ---
-title: "🐍 python-office官网更新 | 功能更新"
+title: 🐍 python-office官网更新 | 功能更新
 date: 2026-04-21 01:17:32
 categories:
 - 项目更新
@@ -7,7 +7,7 @@ tags:
 - Python
 - AI编程
 - po-website
-description: "python-office官网 最新更新播报"
+description: python-office官网 最新更新播报
 cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
 ---
 
@@ -16,8 +16,8 @@ cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![🐍 python-office官网更新 | 功能更新 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
-![🐍 python-office官网更新 | 功能更新 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![🐍 python-office官网更新 | 功能更新](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![🐍 python-office官网更新 | 功能更新](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 🐍 python-office官网 更新啦！
 

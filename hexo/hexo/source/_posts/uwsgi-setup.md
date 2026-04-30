@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![uwsgi-setup - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![uwsgi-setup - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![uwsgi-setup](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![uwsgi-setup](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 服务器超时
 https://blog.csdn.net/ch_improve/article/details/104203272/

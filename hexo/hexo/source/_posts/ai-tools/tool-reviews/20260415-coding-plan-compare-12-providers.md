@@ -1,5 +1,5 @@
 ---
-title: "2026年12家云厂商 Coding Plan 对比：开发者薅羊毛指南"
+title: 2026年12家云厂商 Coding Plan 对比：开发者薅羊毛指南
 date: 2026-04-15 00:00:00
 categories:
 - AI工具
@@ -21,7 +21,7 @@ tags:
 - OpenClaw
 - AI开发
 - 免费额度
-description: "12家云厂商 Coding Plan 横向对比，DeepSeek免费额度大、阿里百炼生态强、火山方舟工具多、Kimi中文好…收藏这一篇，选型不迷路。"
+description: 12家云厂商 Coding Plan 横向对比，DeepSeek免费额度大、阿里百炼生态强、火山方舟工具多、Kimi中文好…收藏这一篇，选型不迷路。
 cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 ---
 

@@ -13,7 +13,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Excel Batch Merge Skill Usage Guide: Merge 100 Tables in 3 Minutes - 配图1](https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Excel Batch Merge Skill Usage Guide: Merge 100 Tables in 3 Minutes](https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 Hello everyone, I'm Programmer Wanfeng, practicing various AI projects.

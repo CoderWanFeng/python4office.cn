@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![str-func - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![str-func - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![str-func](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![str-func](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 45个方法
 str = 'pip install python-office {content}'

@@ -15,8 +15,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![为什么AI按"Token"收费而不是按字数？ - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![为什么AI按"Token"收费而不是按字数？ - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![为什么AI按"Token"收费而不是按字数？](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![为什么AI按"Token"收费而不是按字数？](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

@@ -14,7 +14,7 @@ tags:
 - 赚钱
 - AI副业
 - 龙虾
-description: "什么是用AI养龙虾？用 MiniMax TOKEN Plan 7x24 小时自动回复，竟能躺着赚钱？"
+description: 什么是用AI养龙虾？用 MiniMax TOKEN Plan 7x24 小时自动回复，竟能躺着赚钱？
 cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
 ---
 
@@ -23,8 +23,8 @@ cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=
 
 <!-- more -->
 
-![用 MiniMax TOKEN Plan 养"龙虾"：7x24 赚钱神器实测 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![用 MiniMax TOKEN Plan 养"龙虾"：7x24 赚钱神器实测 - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![用 MiniMax TOKEN Plan 养"龙虾"：7x24 赚钱神器实测](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![用 MiniMax TOKEN Plan 养"龙虾"：7x24 赚钱神器实测](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 # 用 MiniMax TOKEN Plan 养"龙虾"：7x24 赚钱神器实测

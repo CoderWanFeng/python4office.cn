@@ -27,8 +27,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![学生党专属：火山方舟Coding Plan使用指南（含教育优惠攻略） - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![学生党专属：火山方舟Coding Plan使用指南（含教育优惠攻略） - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![学生党专属：火山方舟Coding Plan使用指南（含教育优惠攻略）](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![学生党专属：火山方舟Coding Plan使用指南（含教育优惠攻略）](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 ## 为什么学生党适合火山方舟Coding Plan？

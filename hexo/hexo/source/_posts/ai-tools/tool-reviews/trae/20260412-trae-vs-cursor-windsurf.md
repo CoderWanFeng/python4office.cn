@@ -1,5 +1,5 @@
 ---
-title: "Trae vs Cursor vs Windsurf：3大AI编程工具横评，帮你选"
+title: Trae vs Cursor vs Windsurf：3大AI编程工具横评，帮你选
 date: 2026-04-12 00:00:00
 categories:
 - AI工具评测
@@ -11,7 +11,7 @@ tags:
 - Cursor
 - Windsurf
 - 工具对比
-description: "Trae vs Cursor vs Windsurf，3大AI编程工具横向对比，帮你找到最适合你的那一款"
+description: Trae vs Cursor vs Windsurf，3大AI编程工具横向对比，帮你找到最适合你的那一款
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
@@ -19,8 +19,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Trae vs Cursor vs Windsurf：3大AI编程工具横评，帮你选 - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![Trae vs Cursor vs Windsurf：3大AI编程工具横评，帮你选 - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Trae vs Cursor vs Windsurf：3大AI编程工具横评，帮你选](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![Trae vs Cursor vs Windsurf：3大AI编程工具横评，帮你选](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 # Trae vs Cursor vs Windsurf：3大AI编程工具横评，帮你选
 

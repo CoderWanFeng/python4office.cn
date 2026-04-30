@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![1行代码计算运行时间的神器：potime库使用指南 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![1行代码计算运行时间的神器：potime库使用指南](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 <p align="center" id='腾讯云-banner'>
     <a target="_blank" href='https://curl.qcloud.com/3csDz9jU'>

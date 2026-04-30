@@ -16,8 +16,8 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 <!-- more -->
 
-![iFLYTEK Spark Coding Plan Getting Started: From Registration to Voice Programming Practice (2026 Latest Version) - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
-![iFLYTEK Spark Coding Plan Getting Started: From Registration to Voice Programming Practice (2026 Latest Version) - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![iFLYTEK Spark Coding Plan Getting Started: From Registration to Voice Programming Practice (2026 Latest Version)](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![iFLYTEK Spark Coding Plan Getting Started: From Registration to Voice Programming Practice (2026 Latest Version)](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**

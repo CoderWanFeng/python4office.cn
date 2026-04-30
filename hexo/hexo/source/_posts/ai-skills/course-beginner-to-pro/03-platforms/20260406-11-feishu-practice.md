@@ -1,5 +1,5 @@
 ---
-title: "第11讲：飞书 CLI 实战：团队协作 Skill"
+title: 第11讲：飞书 CLI 实战：团队协作 Skill
 date: 2026-04-06 16:30:00
 tags: ["AI Skill", "飞书", "实战", "团队协作"]
 categories: ["AI Skills 课程"]
@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![第11讲：飞书 CLI 实战：团队协作 Skill - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![第11讲：飞书 CLI 实战：团队协作 Skill](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 第11讲：飞书 CLI 实战：团队协作 Skill
 

@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![用AI自动识别社保卡，让数据处理更高效！ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![用AI自动识别社保卡，让数据处理更高效！](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 <span style="font-size:20px;"><span style="color:#66a3e0;">在上次分享的发票识别工具之后，许多用户反馈希望能够扩展功能，支持其他类型证件的识别，比如社保卡。社保卡作为重要的个人信息载体，其识别和处理同样是一项繁琐的任务。为了满足这一需求，我开发了一个基于AI的自动识别社保卡工具，可以将社保卡信息自动识别并保存为Excel文件，进一步提升数据处理的效率。
  </span></span>

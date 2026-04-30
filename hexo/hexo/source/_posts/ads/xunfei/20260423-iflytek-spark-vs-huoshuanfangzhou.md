@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 <!-- more -->
 
-![3.9 元/月的讯飞星火 vs 36 元/月的火山方舟：谁更值得买？ - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![3.9 元/月的讯飞星火 vs 36 元/月的火山方舟：谁更值得买？ - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![3.9 元/月的讯飞星火 vs 36 元/月的火山方舟：谁更值得买？](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![3.9 元/月的讯飞星火 vs 36 元/月的火山方舟：谁更值得买？](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

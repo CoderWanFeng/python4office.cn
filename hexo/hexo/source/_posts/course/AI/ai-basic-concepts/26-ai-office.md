@@ -19,8 +19,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![什么是AI办公？AI帮你写PPT做表格 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![什么是AI办公？AI帮你写PPT做表格 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是AI办公？AI帮你写PPT做表格](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![什么是AI办公？AI帮你写PPT做表格](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

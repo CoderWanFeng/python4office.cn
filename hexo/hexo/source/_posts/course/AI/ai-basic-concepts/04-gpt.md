@@ -16,8 +16,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![GPT是什么意思？揭秘ChatGPT背后的"大脑" - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![GPT是什么意思？揭秘ChatGPT背后的"大脑" - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![GPT是什么意思？揭秘ChatGPT背后的"大脑"](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![GPT是什么意思？揭秘ChatGPT背后的"大脑"](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

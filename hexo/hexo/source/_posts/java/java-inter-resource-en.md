@@ -1,5 +1,5 @@
 ---
-title: "java-inter-resource"
+title: java-inter-resource
 date: 2021-12-07 21:09:19
 tags: java
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![java-inter-resource - 配图1](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
-![java-inter-resource - 配图2](https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop)
+![java-inter-resource](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
+![java-inter-resource](https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop)
 
 # Table of Contents (Use Ctrl+F Wisely)
 

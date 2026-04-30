@@ -25,8 +25,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![为什么我选择火山方舟Coding Plan？一个程序员的真诚分享 - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
-![为什么我选择火山方舟Coding Plan？一个程序员的真诚分享 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![为什么我选择火山方舟Coding Plan？一个程序员的真诚分享](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![为什么我选择火山方舟Coding Plan？一个程序员的真诚分享](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 ## 我的背景

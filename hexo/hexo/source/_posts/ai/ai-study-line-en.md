@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![AI Study Line - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![AI Study Line - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI Study Line](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI Study Line](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 Autonomous Driving High-Precision Map Technology Current Status and Future https://www.bilibili.com/video/BV19o4y1k7T3
 

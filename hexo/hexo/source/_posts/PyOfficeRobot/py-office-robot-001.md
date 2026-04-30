@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![又一个微信聊天机器人横空出世了，人人可用！ - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![又一个微信聊天机器人横空出世了，人人可用！](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 又一个微信聊天机器人横空出世了，人人可用！
 

@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![国内10大云服务器厂商，你用过几个？ - 配图1](https://images.unsplash.com/photo-160257088?w=800&h=400&fit=crop)
+![国内10大云服务器厂商，你用过几个？](https://images.unsplash.com/photo-160257088?w=800&h=400&fit=crop)
 
 云服务器厂商排名，你知道自家服务商排第几吗？
 

@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users
 

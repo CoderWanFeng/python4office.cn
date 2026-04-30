@@ -1,5 +1,5 @@
 ---
-title: "Why is Pandas So Slow?"
+title: Why is Pandas So Slow?
 date: 2023-10-07 14:25:46
 tags: pandas
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Why is Pandas So Slow? - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Why is Pandas So Slow? - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Why is Pandas So Slow?](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Why is Pandas So Slow?](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 ### References
 

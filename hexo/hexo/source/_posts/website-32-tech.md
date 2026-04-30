@@ -19,8 +19,8 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 PS：每个网站都是学计算机混互联网必须知道的，真的牛杯，我就不过多介绍了，大家自行探索，觉得没用的，尽管留言吐槽吧😎
 <!-- more -->
 
-![website-32-tech - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![website-32-tech - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![website-32-tech](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![website-32-tech](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 社区类

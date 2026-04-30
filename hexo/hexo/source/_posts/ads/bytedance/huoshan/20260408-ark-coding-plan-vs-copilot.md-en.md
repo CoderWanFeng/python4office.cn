@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Volcano Ark Coding Plan vs GitHub Copilot Comparison: Which is More Suitable for Chinese Developers? - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
-![Volcano Ark Coding Plan vs GitHub Copilot Comparison: Which is More Suitable for Chinese Developers? - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![Volcano Ark Coding Plan vs GitHub Copilot Comparison: Which is More Suitable for Chinese Developers?](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Volcano Ark Coding Plan vs GitHub Copilot Comparison: Which is More Suitable for Chinese Developers?](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 

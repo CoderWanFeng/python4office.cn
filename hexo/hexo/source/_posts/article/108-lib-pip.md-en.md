@@ -1,5 +1,5 @@
 ---
-title: "108 Python精选库，建议收藏留用！"
+title: 108 Python精选库，建议收藏留用！
 date: 2022-06-08 14:25:46
 tags: 第三方库
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
@@ -23,7 +23,7 @@ A tall building rises from the ground, and Python's strength comes from the supp
 
 <!-- more -->
 
-![108 Python精选库，建议收藏留用！ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![108 Python精选库，建议收藏留用！](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

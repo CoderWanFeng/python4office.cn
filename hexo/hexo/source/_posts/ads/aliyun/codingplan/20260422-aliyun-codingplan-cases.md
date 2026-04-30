@@ -1,17 +1,17 @@
 ---
-title: "阿里云Coding Plan用户案例！3个真实故事，看完你就知道怎么用了"
+title: 阿里云Coding Plan用户案例！3个真实故事，看完你就知道怎么用了
 date: 2026-04-22 00:00:00
 tags: ["阿里云", "coding plan", "用户案例"]
 categories: ["阿里云Coding Plan"]
-description: "阿里云Coding Plan用户案例：3个真实故事，学生、上班族、创业者，看完你就知道怎么用了。"
+description: 阿里云Coding Plan用户案例：3个真实故事，学生、上班族、创业者，看完你就知道怎么用了。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![阿里云Coding Plan用户案例！3个真实故事，看完你就知道怎么用了 - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![阿里云Coding Plan用户案例！3个真实故事，看完你就知道怎么用了 - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![阿里云Coding Plan用户案例！3个真实故事，看完你就知道怎么用了](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![阿里云Coding Plan用户案例！3个真实故事，看完你就知道怎么用了](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 兄弟们！！！

@@ -1,5 +1,5 @@
 ---
-title: "WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的"
+title: WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的
 date: 2026-04-15 00:00:00
 categories:
 - AI工具评测
@@ -9,13 +9,13 @@ tags:
 - 腾讯云
 - AI专家
 - 产品评测
-description: "WorkBuddy 上线专家模式，每个 AI 专家都有名字。单必成是销售教练，关德宽是项目管理专家。这命名…我服了"
+description: WorkBuddy 上线专家模式，每个 AI 专家都有名字。单必成是销售教练，关德宽是项目管理专家。这命名…我服了
 cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 ---
 
 
-![WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
-![WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的 - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
 
 
 

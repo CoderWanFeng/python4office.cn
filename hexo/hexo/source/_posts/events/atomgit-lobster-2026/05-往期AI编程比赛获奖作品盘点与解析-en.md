@@ -1,5 +1,5 @@
 ---
-title: "Previous AI Programming Competition Award-Winning Projects Review and Analysis"
+title: Previous AI Programming Competition Award-Winning Projects Review and Analysis
 date: 2026-04-14 08:00:00
 tags: [AI Programming, Competition, Award-Winning Projects, Project Analysis, Python]
 categories: Case Sharing
@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![Previous AI Programming Competition Award-Winning Projects Review and Analysis - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![Previous AI Programming Competition Award-Winning Projects Review and Analysis - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Previous AI Programming Competition Award-Winning Projects Review and Analysis](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![Previous AI Programming Competition Award-Winning Projects Review and Analysis](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > Hello everyone, I'm Programmer Wanfeng.

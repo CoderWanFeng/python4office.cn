@@ -1,5 +1,5 @@
 ---
-title: "🌍 数字游民签证大全更新 | 功能更新"
+title: 🌍 数字游民签证大全更新 | 功能更新
 date: 2026-04-21 01:16:58
 categories:
 - 项目更新
@@ -7,7 +7,7 @@ tags:
 - Python
 - AI编程
 - how-to-digital-nomad
-description: "数字游民签证大全 最新更新播报"
+description: 数字游民签证大全 最新更新播报
 cover: https://images.unsplash.com/photo-146092589?w=800&h=400&fit=crop
 ---
 
@@ -16,8 +16,8 @@ cover: https://images.unsplash.com/photo-146092589?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![🌍 数字游民签证大全更新 | 功能更新 - 配图1](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
-![🌍 数字游民签证大全更新 | 功能更新 - 配图2](https://images.unsplash.com/photo-146092589?w=800&h=400&fit=crop)
+![🌍 数字游民签证大全更新 | 功能更新](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+![🌍 数字游民签证大全更新 | 功能更新](https://images.unsplash.com/photo-146092589?w=800&h=400&fit=crop)
 
 # 🌍 数字游民签证大全 更新啦！
 

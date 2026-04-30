@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Volcano Ark Coding Plan FAQ: All Your Concerns Answered Here - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Volcano Ark Coding Plan FAQ: All Your Concerns Answered Here - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![Volcano Ark Coding Plan FAQ: All Your Concerns Answered Here](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Volcano Ark Coding Plan FAQ: All Your Concerns Answered Here](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 

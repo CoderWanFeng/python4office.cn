@@ -6,8 +6,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![AI搜索时代你的内容凭什么被推荐？GEO优化的核心逻辑 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![AI搜索时代你的内容凭什么被推荐？GEO优化的核心逻辑 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI搜索时代你的内容凭什么被推荐？GEO优化的核心逻辑](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI搜索时代你的内容凭什么被推荐？GEO优化的核心逻辑](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

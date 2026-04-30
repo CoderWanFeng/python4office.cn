@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Skills Beginner to Practice - Systematic Course - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Skills Beginner to Practice - Systematic Course - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![Skills Beginner to Practice - Systematic Course](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Skills Beginner to Practice - Systematic Course](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 # Skills Beginner to Practice - Systematic Course
 

@@ -6,7 +6,7 @@ tags: [50讲Python自动化办公]
 
 <!-- more -->
 
-![20250729拯救加班狗用Python快速搞定PPT批量转PDF打印前再也不抓狂.md - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![20250729拯救加班狗用Python快速搞定PPT批量转PDF打印前再也不抓狂.md](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 
 

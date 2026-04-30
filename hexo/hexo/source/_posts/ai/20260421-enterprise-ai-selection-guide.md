@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![企业选型指南：2026年AI大模型采购决策手册（含成本对比） - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![企业选型指南：2026年AI大模型采购决策手册（含成本对比） - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![企业选型指南：2026年AI大模型采购决策手册（含成本对比）](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![企业选型指南：2026年AI大模型采购决策手册（含成本对比）](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 # 企业选型指南：2026年AI大模型采购决策手册（含成本对比）

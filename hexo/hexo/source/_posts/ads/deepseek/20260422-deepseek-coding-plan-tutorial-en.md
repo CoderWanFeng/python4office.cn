@@ -15,8 +15,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![DeepSeek Coding Plan Tutorial: API Call + Local Deployment, 2 Ways to Play - Can't Learn Both? I'll Beat You - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![DeepSeek Coding Plan Tutorial: API Call + Local Deployment, 2 Ways to Play - Can't Learn Both? I'll Beat You - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![DeepSeek Coding Plan Tutorial: API Call + Local Deployment, 2 Ways to Play - Can't Learn Both? I'll Beat You](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![DeepSeek Coding Plan Tutorial: API Call + Local Deployment, 2 Ways to Play - Can't Learn Both? I'll Beat You](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 Brothers!!!

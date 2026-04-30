@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1200&
 
 <!-- more -->
 
-![85本电子书、视频教程和读者群 - 配图1](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
-![85本电子书、视频教程和读者群 - 配图2](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
+![85本电子书、视频教程和读者群](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
+![85本电子书、视频教程和读者群](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
 
 你好，这里是程序员晚枫，B站账号：Python自动化办公社区，里面有很多免费学习资料哟~👇
 

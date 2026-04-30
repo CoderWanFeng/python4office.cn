@@ -9,8 +9,8 @@
 | 序号 | 文章 | 核心内容 |
 |:---
 
-![README.md - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![README.md - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![README.md](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![README.md](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 :|------|---------|
 | 01 | [Python零基础入门](./01-Python零基础入门.md) | 安装环境、写出第一行代码 |
 | 02 | [Python变量与数据类型](./02-Python变量与数据类型.md) | 字符串、数字、列表、字典等7大数据类型 |

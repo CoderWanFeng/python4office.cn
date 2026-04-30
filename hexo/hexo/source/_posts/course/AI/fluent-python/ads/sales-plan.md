@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![《流畅的 Python》共读课销售方案 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![《流畅的 Python》共读课销售方案](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 # 《流畅的 Python》共读课销售方案
 

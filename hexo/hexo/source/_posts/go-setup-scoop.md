@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![go-setup-scoop - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![go-setup-scoop - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![go-setup-scoop](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![go-setup-scoop](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 安装scoop：https://www.freesion.com/article/5185635713/
 安装go：https://www.jianshu.com/p/ec5691e4b7d6

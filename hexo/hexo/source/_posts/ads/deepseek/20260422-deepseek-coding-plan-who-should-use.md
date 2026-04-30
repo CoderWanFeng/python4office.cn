@@ -1,17 +1,17 @@
 ---
-title: "DeepSeek Coding Plan适合谁？开源爱好者 vs 追求性价比用户选购指南"
+title: DeepSeek Coding Plan适合谁？开源爱好者 vs 追求性价比用户选购指南
 date: 2026-04-22 19:30:00
 tags: ["deepseek", "coding plan选购", "开源", "性价比", "选购建议"]
 categories: ["DeepSeek实战"]
-description: "程序员晚枫分析：DeepSeek Coding Plan适合哪些人？API调用和本地部署怎么选？"
+description: 程序员晚枫分析：DeepSeek Coding Plan适合哪些人？API调用和本地部署怎么选？
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![DeepSeek Coding Plan适合谁？开源爱好者 vs 追求性价比用户选购指南 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![DeepSeek Coding Plan适合谁？开源爱好者 vs 追求性价比用户选购指南 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![DeepSeek Coding Plan适合谁？开源爱好者 vs 追求性价比用户选购指南](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![DeepSeek Coding Plan适合谁？开源爱好者 vs 追求性价比用户选购指南](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 兄弟们！！！

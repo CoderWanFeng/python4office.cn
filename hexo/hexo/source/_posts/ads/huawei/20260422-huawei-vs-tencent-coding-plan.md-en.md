@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Huawei Doesn't Have Coding Plan? Tencent Cloud Hunyuan May Be Your Cup of Tea - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![Huawei Doesn't Have Coding Plan? Tencent Cloud Hunyuan May Be Your Cup of Tea - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Huawei Doesn't Have Coding Plan? Tencent Cloud Hunyuan May Be Your Cup of Tea](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Huawei Doesn't Have Coding Plan? Tencent Cloud Hunyuan May Be Your Cup of Tea](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**

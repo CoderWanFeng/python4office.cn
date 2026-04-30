@@ -1,5 +1,5 @@
 ---
-title: "用 ArkClaw 7×24 智能伙伴做了3件事：真实记录"
+title: 用 ArkClaw 7×24 智能伙伴做了3件事：真实记录
 date: 2026-04-12 00:00:00
 categories:
 - AI工具评测
@@ -11,7 +11,7 @@ tags:
 - AI助手
 - 实战
 - 智能伙伴
-description: "7×24 在线是什么意思？真的有人半夜问 AI 问题吗？我试了3个真实任务，结果出乎意料"
+description: 7×24 在线是什么意思？真的有人半夜问 AI 问题吗？我试了3个真实任务，结果出乎意料
 cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 ---
 
@@ -20,8 +20,8 @@ cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![用 ArkClaw 7×24 智能伙伴做了3件事：真实记录 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![用 ArkClaw 7×24 智能伙伴做了3件事：真实记录 - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![用 ArkClaw 7×24 智能伙伴做了3件事：真实记录](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![用 ArkClaw 7×24 智能伙伴做了3件事：真实记录](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 用 ArkClaw 7×24 智能伙伴做了3件事：真实记录
 

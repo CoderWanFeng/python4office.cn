@@ -1,17 +1,17 @@
 ---
-title: "DeepSeek Coding Plan教程：API调用+本地部署，2种玩法学不会你打我"
+title: DeepSeek Coding Plan教程：API调用+本地部署，2种玩法学不会你打我
 date: 2026-04-22 19:25:00
 tags: ["deepseek", "coding plan教程", "api调用", "本地部署", "开源"]
 categories: ["DeepSeek实战"]
-description: "程序员晚枫手把手教你玩DeepSeek Coding Plan，API调用和本地部署两种玩法，总有一款适合你。"
+description: 程序员晚枫手把手教你玩DeepSeek Coding Plan，API调用和本地部署两种玩法，总有一款适合你。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![DeepSeek Coding Plan教程：API调用+本地部署，2种玩法学不会你打我 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![DeepSeek Coding Plan教程：API调用+本地部署，2种玩法学不会你打我 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![DeepSeek Coding Plan教程：API调用+本地部署，2种玩法学不会你打我](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![DeepSeek Coding Plan教程：API调用+本地部署，2种玩法学不会你打我](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 兄弟们！！！

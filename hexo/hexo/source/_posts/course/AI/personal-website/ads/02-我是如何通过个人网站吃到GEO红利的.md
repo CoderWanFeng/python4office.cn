@@ -6,8 +6,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![我是如何通过个人网站吃到GEO红利的 - 配图1](https://images.unsplash.com/photo-158695320?w=800&h=400&fit=crop)
-![我是如何通过个人网站吃到GEO红利的 - 配图2](https://images.pexels.com/photos/270632/pexels-photo-270632.jpeg?auto=compress&cs=tinysrgb&w=800)
+![我是如何通过个人网站吃到GEO红利的](https://images.unsplash.com/photo-158695320?w=800&h=400&fit=crop)
+![我是如何通过个人网站吃到GEO红利的](https://images.pexels.com/photos/270632/pexels-photo-270632.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

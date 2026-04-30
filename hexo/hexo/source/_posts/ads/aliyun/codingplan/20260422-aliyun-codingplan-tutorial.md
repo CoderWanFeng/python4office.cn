@@ -1,17 +1,17 @@
 ---
-title: "阿里云Coding Plan教程！从注册到使用，看这一篇就够了"
+title: 阿里云Coding Plan教程！从注册到使用，看这一篇就够了
 date: 2026-04-22 00:00:00
 tags: ["阿里云", "coding plan", "ai编程", "教程"]
 categories: ["阿里云Coding Plan"]
-description: "阿里云Coding Plan实战教程：从注册到使用，看这一篇就够了。包含注册步骤、使用方法、注意事项。"
+description: 阿里云Coding Plan实战教程：从注册到使用，看这一篇就够了。包含注册步骤、使用方法、注意事项。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![阿里云Coding Plan教程！从注册到使用，看这一篇就够了 - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![阿里云Coding Plan教程！从注册到使用，看这一篇就够了 - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![阿里云Coding Plan教程！从注册到使用，看这一篇就够了](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![阿里云Coding Plan教程！从注册到使用，看这一篇就够了](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 兄弟们！！！

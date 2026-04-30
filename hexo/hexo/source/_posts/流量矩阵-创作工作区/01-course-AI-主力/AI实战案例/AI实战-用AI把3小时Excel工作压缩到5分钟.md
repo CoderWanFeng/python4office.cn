@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-155128848?w=800&h=400&fit=crop
 ---
 
 
-![AI实战：用AI把3小时Excel工作压缩到5分钟 - 配图1](https://images.unsplash.com/photo-155128848?w=800&h=400&fit=crop)
-![AI实战：用AI把3小时Excel工作压缩到5分钟 - 配图2](https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI实战：用AI把3小时Excel工作压缩到5分钟](https://images.unsplash.com/photo-155128848?w=800&h=400&fit=crop)
+![AI实战：用AI把3小时Excel工作压缩到5分钟](https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

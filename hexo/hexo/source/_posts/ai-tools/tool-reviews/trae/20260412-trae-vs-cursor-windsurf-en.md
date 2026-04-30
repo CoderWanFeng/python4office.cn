@@ -20,8 +20,8 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 
 <!-- more -->
 
-![Trae vs Cursor vs Windsurf: 3 Major AI Coding Tools Comparison, Help You Choose - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
-![Trae vs Cursor vs Windsurf: 3 Major AI Coding Tools Comparison, Help You Choose - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![Trae vs Cursor vs Windsurf: 3 Major AI Coding Tools Comparison, Help You Choose](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Trae vs Cursor vs Windsurf: 3 Major AI Coding Tools Comparison, Help You Choose](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 # Trae vs Cursor vs Windsurf: 3 Major AI Coding Tools Comparison, Help You Choose
 

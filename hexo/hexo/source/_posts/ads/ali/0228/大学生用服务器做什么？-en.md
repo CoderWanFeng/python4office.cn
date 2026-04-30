@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![What Can College Students Do with a Server? - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![What Can College Students Do with a Server? - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![What Can College Students Do with a Server?](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![What Can College Students Do with a Server?](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 A server can be understood as a computer that runs 24/7, and it's very affordable.
 

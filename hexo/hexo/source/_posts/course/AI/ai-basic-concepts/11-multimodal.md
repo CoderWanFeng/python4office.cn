@@ -16,8 +16,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![什么是多模态？让AI同时拥有"眼耳口鼻"的神奇能力 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![什么是多模态？让AI同时拥有"眼耳口鼻"的神奇能力 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![什么是多模态？让AI同时拥有"眼耳口鼻"的神奇能力](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是多模态？让AI同时拥有"眼耳口鼻"的神奇能力](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 
 

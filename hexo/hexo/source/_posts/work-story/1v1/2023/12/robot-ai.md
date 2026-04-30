@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![想有一个自己的GPT机器人 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![想有一个自己的GPT机器人 - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![想有一个自己的GPT机器人](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![想有一个自己的GPT机器人](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 把GPT接入自己的机器人，应该怎么学？
 

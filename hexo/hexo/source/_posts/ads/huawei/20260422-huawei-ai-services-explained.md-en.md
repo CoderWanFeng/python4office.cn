@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![Huawei Cloud Doesn't Have Coding Plan Yet? But These AI Services are Worth Developers' Attention - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![Huawei Cloud Doesn't Have Coding Plan Yet? But These AI Services are Worth Developers' Attention - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Huawei Cloud Doesn't Have Coding Plan Yet? But These AI Services are Worth Developers' Attention](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Huawei Cloud Doesn't Have Coding Plan Yet? But These AI Services are Worth Developers' Attention](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**

@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![短视频 - 配图1](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
-![短视频 - 配图2](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
+![短视频](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
+![短视频](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
 
 什么是爬虫？
 出现错误怎么办？

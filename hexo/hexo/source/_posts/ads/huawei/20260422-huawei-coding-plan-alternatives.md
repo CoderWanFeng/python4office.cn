@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![华为云 Coding Plan 选购指南：没有也没关系，这些替代方案帮你省心 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
-![华为云 Coding Plan 选购指南：没有也没关系，这些替代方案帮你省心 - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![华为云 Coding Plan 选购指南：没有也没关系，这些替代方案帮你省心](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![华为云 Coding Plan 选购指南：没有也没关系，这些替代方案帮你省心](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

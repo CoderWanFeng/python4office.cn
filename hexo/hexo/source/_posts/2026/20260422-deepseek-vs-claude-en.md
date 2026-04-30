@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![DeepSeek vs Claude Code, Which is Better? You'll Know After Reading This - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
-![DeepSeek vs Claude Code, Which is Better? You'll Know After Reading This - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![DeepSeek vs Claude Code, Which is Better? You'll Know After Reading This](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![DeepSeek vs Claude Code, Which is Better? You'll Know After Reading This](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 
 Wait!!

@@ -1,5 +1,5 @@
 ---
-title: "ArkClaw 邀请码怎么用？专属折上折完整攻略"
+title: ArkClaw 邀请码怎么用？专属折上折完整攻略
 date: 2026-04-12 00:00:00
 categories:
 - AI工具评测
@@ -11,7 +11,7 @@ tags:
 - 邀请码
 - 优惠
 - 火山引擎
-description: "ArkClaw 首月低至26元，用邀请码还能折上折。完整教程+避坑指南"
+description: ArkClaw 首月低至26元，用邀请码还能折上折。完整教程+避坑指南
 cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 ---
 
@@ -20,8 +20,8 @@ cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![ArkClaw 邀请码怎么用？专属折上折完整攻略 - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
-![ArkClaw 邀请码怎么用？专属折上折完整攻略 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![ArkClaw 邀请码怎么用？专属折上折完整攻略](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![ArkClaw 邀请码怎么用？专属折上折完整攻略](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 # ArkClaw 邀请码怎么用？专属折上折完整攻略
 

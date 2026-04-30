@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![2026年最全AI编程工具对比：ChatGPT vs Claude vs DeepSeek vs Kimi（开发者必看） - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![2026年最全AI编程工具对比：ChatGPT vs Claude vs DeepSeek vs Kimi（开发者必看） - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![2026年最全AI编程工具对比：ChatGPT vs Claude vs DeepSeek vs Kimi（开发者必看）](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![2026年最全AI编程工具对比：ChatGPT vs Claude vs DeepSeek vs Kimi（开发者必看）](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 
 # 2026年最全AI编程工具对比：ChatGPT vs Claude vs DeepSeek vs Kimi（开发者必看）
