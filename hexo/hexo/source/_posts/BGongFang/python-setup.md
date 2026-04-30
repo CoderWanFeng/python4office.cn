@@ -1,8 +1,8 @@
 ---
 title: Python安装包
-date: 2023-10-03 00:24:04
+date: "2023-10-03 00:24:04"
 tags: 工房
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

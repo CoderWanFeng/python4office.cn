@@ -1,6 +1,6 @@
 ---
 title: MiniMax TOKEN Plan API 接入教程：3分钟搞定，看这篇就够了
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 categories:
 - AI工具评测
 tags:
@@ -14,7 +14,7 @@ tags:
 - 教程
 - 接入
 description: MiniMax TOKEN Plan API 接入教程，3分钟搞定，附 Python 示例代码
-cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop"
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 title: 我用了AtomCode！被它的速度震惊了
-date: 2026-04-22 21:18:00
+date: "2026-04-22 21:18:00"
 tags: ["AI编程", "AtomCode", "Rust"]
 categories: ["AI工具"]
 description: 我用了AtomCode！被它的速度震惊了
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

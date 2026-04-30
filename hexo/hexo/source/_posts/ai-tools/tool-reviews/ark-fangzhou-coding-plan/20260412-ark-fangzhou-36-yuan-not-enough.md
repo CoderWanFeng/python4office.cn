@@ -1,6 +1,6 @@
 ---
 title: 方舟 Coding Plan 说工具不限，但36块真的不够用...
-date: 2026-04-12 00:00:00
+date: "2026-04-12 00:00:00"
 categories:
 - AI工具评测
 tags:
@@ -11,7 +11,7 @@ tags:
 - 方舟 Coding Plan
 - 吐槽
 description: 方舟 Coding Plan 支持那么多模型，Doubao、GLM、DeepSeek、Kimi、MiniMax...但36块一个月，根本不够用啊
-cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop"
 ---
 
 

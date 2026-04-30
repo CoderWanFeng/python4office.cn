@@ -1,8 +1,8 @@
 ---
 title: 【Python助力疫情】100+不同格式的Excel、100w+数据，1秒找出1个人的信息，怎么做到的？
-date: 2022-08-26 11:16:31
+date: "2022-08-26 11:16:31"
 tags: python-office
-cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

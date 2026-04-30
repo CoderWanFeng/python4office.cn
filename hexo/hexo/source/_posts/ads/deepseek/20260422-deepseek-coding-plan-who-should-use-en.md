@@ -1,6 +1,6 @@
 ---
 title: Who is DeepSeek Coding Plan Suitable For? Open Source Enthusiasts vs Cost Performance Users Purchase Guide
-date: 2026-04-22 19:30:00
+date: "2026-04-22 19:30:00"
 tags: ["deepseek", "coding plan purchase", "open source", "cost performance", "purchase suggestions"]
 categories: ["DeepSeek Practice"]
 description: "Programmer Wan Feng analyzes: Who is DeepSeek Coding Plan suitable for? How to choose between API call and local deployment?"
@@ -9,7 +9,7 @@ en: /20260422-deepseek-coding-plan-who-should-use/
 zh: /20260422-deepseek-coding-plan-who-should-use/
 canonical: /20260422-deepseek-coding-plan-who-should-use/
 translation: complete
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

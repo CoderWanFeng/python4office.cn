@@ -1,11 +1,11 @@
 ---
 title: "Tencent Cloud Coding Plan Money-Saving Guide: How to Get the Best Value from 49 yuan/month?"
-keywords: [Tencent Cloud Coding Plan Save Money, Tencent Hunyuan Money-Saving, AI Programming Value for Money, 程序员晚枫]
-description: Programmer Wan Feng's money-saving guide: Tencent Cloud Coding Plan 49 yuan/month, how to get the best value? These tips help you save big!
-date: 2026-04-23 16:00:00
-tags: [Tencent Cloud, Tencent Hunyuan, Money-Saving Guide, AI Programming]
-categories: [AI Programming, Tutorial]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+keywords: ["Tencent Cloud Coding Plan Save Money", "Tencent Hunyuan Money-Saving", "AI Programming Value for Money", "程序员晚枫"]
+description: "Programmer Wan Feng's money-saving guide: Tencent Cloud Coding Plan 49 yuan/month, how to get the best value? These tips help you save big!"
+date: "2026-04-23 16:00:00"
+tags: ["Tencent Cloud", "Tencent Hunyuan", "Money-Saving Guide", "AI Programming"]
+categories: ["AI Programming", "Tutorial"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

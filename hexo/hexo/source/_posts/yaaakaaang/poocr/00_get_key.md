@@ -1,8 +1,8 @@
 ---
 title: 获取腾讯云ocr  的 密码账号（id 、 key）
-date: 2025-05-24 11:05:32
-tags: [poocr]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-05-24 11:05:32"
+tags: ["poocr"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

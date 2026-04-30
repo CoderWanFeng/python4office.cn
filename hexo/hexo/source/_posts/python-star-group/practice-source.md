@@ -1,8 +1,8 @@
 ---
 title: practice-source
-date: 2022-07-11 14:12:57
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+date: "2022-07-11 14:12:57"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop"
 ---
 
 

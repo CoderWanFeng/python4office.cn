@@ -1,9 +1,9 @@
 ---
 title: "Excel Batch Merge Skill Usage Guide: Merge 100 Tables in 3 Minutes"
-date: 2026-04-06 10:38:00
-tags: [Excel, Skill, Batch Merge, AI Office, Tutorial]
-categories: [AI Skills, Skill Tutorial]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-06 10:38:00"
+tags: ["Excel", "Skill", "Batch Merge", "AI Office", "Tutorial"]
+categories: ["AI Skills", "Skill Tutorial"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

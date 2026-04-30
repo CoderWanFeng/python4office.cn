@@ -1,8 +1,8 @@
 ---
 title: ChatGPT：这门课适合"被AI焦虑"的人
-date: 2026-04-14 16:00:00
-tags: [AI编程]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-14 16:00:00"
+tags: ["AI编程"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

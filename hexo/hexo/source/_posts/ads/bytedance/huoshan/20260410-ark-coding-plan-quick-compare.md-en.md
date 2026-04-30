@@ -1,11 +1,11 @@
 ---
 title: "Volcano Ark Coding Plan Quick Comparison: Lite vs Pro, Starting from 8.91 yuan, How to Choose?"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Comparison, Lite vs Pro, AI Programming Tool Selection
-description: Programmer Wan Feng's quick comparison: Volcano Ark Coding Plan Lite vs Pro, starting from 8.91 yuan, help you make the best choice in one minute.
-date: 2026-04-10 02:45:00
-tags: [Volcano Ark Coding Plan, Coding Plan Comparison, Lite vs Pro, AI Programming Tool Selection, Programmer Wan Feng]
-categories: [AI Programming, Tool Comparison]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+description: "Programmer Wan Feng's quick comparison: Volcano Ark Coding Plan Lite vs Pro, starting from 8.91 yuan, help you make the best choice in one minute."
+date: "2026-04-10 02:45:00"
+tags: ["Volcano Ark Coding Plan", "Coding Plan Comparison", "Lite vs Pro", "AI Programming Tool Selection", "Programmer Wan Feng"]
+categories: ["AI Programming", "Tool Comparison"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

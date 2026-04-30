@@ -1,10 +1,10 @@
 ---
 title: 用AtomCode！一行代码都不用写，把开源项目读懂改好
-date: 2026-04-22 10:00:00
+date: "2026-04-22 10:00:00"
 tags: ["AI编程", "AtomCode", "开源项目"]
 categories: ["AI工具"]
 description: 用AtomCode！一行代码都不用写，把开源项目读懂改好
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

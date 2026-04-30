@@ -1,9 +1,9 @@
 ---
 title: AtomGit + OpenClaw = Strongest AI Programming Combination in 2026
-date: 2026-04-12 08:00:00
-tags: [AI Programming, AtomGit, OpenClaw, Tool Recommendation, Python]
+date: "2026-04-12 08:00:00"
+tags: ["AI Programming", "AtomGit", "OpenClaw", "Tool Recommendation", "Python"]
 categories: Tool Tutorial
-cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,9 +1,9 @@
 ---
 title: 怎么让AI搜索引擎推荐你的网站？GEO优化实操指南
-date: 2026-04-17 22:20:00
-tags: [GEO, AI搜索, 实操指南, 流量优化, 内容优化]
+date: "2026-04-17 22:20:00"
+tags: ["GEO", "AI搜索", "实操指南", "流量优化", "内容优化"]
 categories: GEO优化
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: CentOS 官方下载地址
-date: 2022-02-07 15:30:09
-tags: [CentOS,Linux]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2022-02-07 15:30:09"
+tags: ["CentOS", "Linux"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

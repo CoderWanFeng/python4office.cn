@@ -1,10 +1,10 @@
 ---
 title: 程序员晚枫联系方式 | 1对1编程答疑服务
-date: 2022-04-20 15:29:23
+date: "2022-04-20 15:29:23"
 tags: ["程序员晚枫", "编程答疑", "Python学习", "AI编程", "一对一辅导"]
 categories: ["联系方式"]
 description: 程序员晚枫提供1对1编程答疑服务，包含Python、AI编程、自动化办公等技术方向的个性化辅导。扫码添加微信，获得专属学习指导。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -2,7 +2,7 @@
 title: 云计算终结20年降价史！AI算力涨价潮下，程序员如何用Coding Plan破局？
 keywords: 程序员晚枫, AI算力涨价, 云计算, 阿里云, 腾讯云, 百度智能云, AI编程, Coding Plan, 算力成本, 云厂商涨价
 description: 程序员晚枫深度解读：阿里云、腾讯云、百度智能云集体涨价，云计算20年降价周期终结。AI时代算力成稀缺资源，普通开发者如何用Coding Plan低成本破局？
-date: 2026-04-10 10:00:00
+date: "2026-04-10 10:00:00"
 tags:
 - 大模型
 - Coding Plan
@@ -14,7 +14,7 @@ categories:
 - AI行业观察
 - 技术趋势
 author: 程序员晚枫
-cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop"
 ---
 
 

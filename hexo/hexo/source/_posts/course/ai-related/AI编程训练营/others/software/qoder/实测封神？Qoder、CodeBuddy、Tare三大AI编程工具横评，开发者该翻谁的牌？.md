@@ -1,8 +1,8 @@
 ---
 title: 实测封神？Qoder、CodeBuddy、Tare三大AI编程工具横评，开发者该翻谁的牌？
-date: 2025-11-10 22:41:49
-tags: [AI编程]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2025-11-10 22:41:49"
+tags: ["AI编程"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

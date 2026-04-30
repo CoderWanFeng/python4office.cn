@@ -1,8 +1,8 @@
 ---
 title: 我用AI画了一个女朋友（附教程）
-date: 2023-03-12 20:56:34
+date: "2023-03-12 20:56:34"
 tags: AI
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

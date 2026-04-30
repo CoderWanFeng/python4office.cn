@@ -1,8 +1,8 @@
 ---
 title: 白开水 AI社区 · 简介
-date: 2025-12-10 20:56:34
+date: "2025-12-10 20:56:34"
 tags: 白开水 AI社区
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

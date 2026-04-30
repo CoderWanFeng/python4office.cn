@@ -1,9 +1,9 @@
 ---
 title: OpenClaw 案例库里的 AI Agent 开发，新手能学会吗？
-date: 2026-03-16 18:29:00
-tags: [OpenClaw, 案例库，AI Agent, 新手学习]
-categories: [AI 编程，AI Agent]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-03-16 18:29:00"
+tags: ["OpenClaw", "案例库，AI Agent", "新手学习"]
+categories: ["AI 编程，AI Agent"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 title: "AI Agent是什么？2026年最火赛道，5分钟给你讲明白"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["ai agent", "ai编程", "openclaw", "coze"]
 categories: ["2026热点"]
 description: "AI Agent是什么？从0到1入门，看完这篇你就懂了。本文用通俗易懂的方式解释AI Agent，还附上了实际落地案例。"
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

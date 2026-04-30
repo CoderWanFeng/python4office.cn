@@ -1,8 +1,8 @@
 ---
 title: 内幕 | 报价上万的大屏数据可视化，成本只有10分钟？（附18套可视化模板）
-date: 2022-11-27 02:15:23
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-155128848?w=800&h=400&fit=crop
+date: "2022-11-27 02:15:23"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-155128848?w=800&h=400&fit=crop"
 ---
 
 

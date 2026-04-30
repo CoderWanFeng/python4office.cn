@@ -1,8 +1,8 @@
 ---
 title: 常见的Python装饰器
-date: 2022-02-09 16:02:05
+date: "2022-02-09 16:02:05"
 tags: 装饰器
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

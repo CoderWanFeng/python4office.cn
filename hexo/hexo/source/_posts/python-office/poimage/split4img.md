@@ -1,8 +1,8 @@
 ---
 title: 用Python发一个优雅的朋友圈，1行代码搞定
-date: 2023-10-24 00:08:24
-tags: [开源项目,poimage]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2023-10-24 00:08:24"
+tags: ["开源项目", "poimage"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

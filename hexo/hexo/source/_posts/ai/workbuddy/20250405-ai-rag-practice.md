@@ -1,8 +1,8 @@
 ---
 title: 我用RAG做了一个企业知识库问答系统：从0到1完整实战记录
-date: 2025-04-05 20:00:00
+date: "2025-04-05 20:00:00"
 tags: AI
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

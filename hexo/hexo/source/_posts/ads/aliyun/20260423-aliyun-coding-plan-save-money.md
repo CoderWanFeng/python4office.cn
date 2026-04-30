@@ -1,11 +1,11 @@
 ---
 title: 阿里云百炼 Coding Plan 薅羊毛指南：29 元/月怎么用最划算？
-keywords: [阿里云百炼 省钱, 通义千问 薅羊毛, AI编程 性价比, 程序员晚枫]
+keywords: ["阿里云百炼 省钱", "通义千问 薅羊毛", "AI编程 性价比", "程序员晚枫"]
 description: 程序员晚枫省钱攻略：阿里云百炼 Coding Plan 29元/月，怎么用最划算？这些技巧帮你省大钱！
-date: 2026-04-23 20:30:00
-tags: [阿里云, 百炼, 通义千问, 省钱攻略, AI编程]
-categories: [AI编程, 教程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-23 20:30:00"
+tags: ["阿里云", "百炼", "通义千问", "省钱攻略", "AI编程"]
+categories: ["AI编程", "教程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

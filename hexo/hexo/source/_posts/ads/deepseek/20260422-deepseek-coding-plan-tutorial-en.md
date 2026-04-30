@@ -1,6 +1,6 @@
 ---
 title: "DeepSeek Coding Plan Tutorial: API Call + Local Deployment, 2 Ways to Play - Can't Learn Both? I'll Beat You"
-date: 2026-04-22 19:25:00
+date: "2026-04-22 19:25:00"
 tags: ["deepseek", "coding plan tutorial", "api call", "local deployment", "open source"]
 categories: ["DeepSeek Practice"]
 description: "Programmer Wan Feng teaches you hands-on how to play DeepSeek Coding Plan, 2 ways: API call and local deployment. There's always one suitable for you."
@@ -9,7 +9,7 @@ en: /20260422-deepseek-coding-plan-tutorial/
 zh: /20260422-deepseek-coding-plan-tutorial/
 canonical: /20260422-deepseek-coding-plan-tutorial/
 translation: complete
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

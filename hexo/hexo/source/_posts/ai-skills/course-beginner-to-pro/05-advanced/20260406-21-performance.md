@@ -1,9 +1,9 @@
 ---
 title: 第21讲：性能优化与监控
-date: 2026-04-06 38:00:00
+date: "2026-04-06 38:00:00"
 tags: ["AI Skill", "进阶开发", "性能优化"]
 categories: ["AI Skills 课程"]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

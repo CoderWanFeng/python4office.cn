@@ -1,8 +1,8 @@
 ---
 title: 人到中年，学历不占优势，转行程序员还有机会吗？
-date: 2024-03-07 22:22:05
+date: "2024-03-07 22:22:05"
 tags: 1v1
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

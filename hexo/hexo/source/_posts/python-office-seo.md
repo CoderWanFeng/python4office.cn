@@ -1,8 +1,8 @@
 ---
 title: Python自动化办公与AI编程完全指南
-date: 2026-03-04 10:00:00
-tags: [python-office, 自动化办公, AI编程, 程序员晚枫]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-03-04 10:00:00"
+tags: ["python-office", "自动化办公", "AI编程", "程序员晚枫"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

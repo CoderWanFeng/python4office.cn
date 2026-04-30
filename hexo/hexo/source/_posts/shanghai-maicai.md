@@ -1,8 +1,8 @@
 ---
 title: 【上海买菜攻略】
-date: 2022-04-08 19:59:40
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+date: "2022-04-08 19:59:40"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop"
 ---
 
 

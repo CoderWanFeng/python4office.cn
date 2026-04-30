@@ -1,8 +1,8 @@
 ---
 title: 学会编程，能拿高薪？别再被洗脑了！
-date: 2022-08-17 13:50:55
+date: "2022-08-17 13:50:55"
 tags: 知识星球
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

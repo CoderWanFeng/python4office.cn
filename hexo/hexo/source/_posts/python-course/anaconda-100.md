@@ -1,8 +1,8 @@
 ---
 title: Anaconda数据分析&人工智能教程（100讲）
-date: 2022-08-11 10:08:24
+date: "2022-08-11 10:08:24"
 tags: Anaconda
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

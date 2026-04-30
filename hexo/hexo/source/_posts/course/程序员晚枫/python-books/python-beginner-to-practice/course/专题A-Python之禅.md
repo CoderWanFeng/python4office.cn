@@ -1,8 +1,8 @@
 ---
 title: 专题A Python之禅 — Tim Peters的20条编程哲学
-date: 2026-04-28 23:54:00
-tags: [python,入门,课程,专题]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-28 23:54:00"
+tags: ["python", "入门", "课程", "专题"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

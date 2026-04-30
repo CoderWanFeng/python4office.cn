@@ -1,8 +1,8 @@
 ---
 title: 项目二 数据可视化
-date: 2026-04-28 23:54:00
-tags: [python,入门,课程,项目实战,数据可视化]
-cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-28 23:54:00"
+tags: ["python", "入门", "课程", "项目实战", "数据可视化"]
+cover: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

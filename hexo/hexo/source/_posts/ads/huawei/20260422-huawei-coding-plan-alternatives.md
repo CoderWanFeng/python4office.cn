@@ -1,11 +1,11 @@
 ---
 title: 华为云 Coding Plan 选购指南：没有也没关系，这些替代方案帮你省心
-keywords: [华为云 Coding Plan 选购, 替代方案, AI编程订阅, 程序员晚枫]
+keywords: ["华为云 Coding Plan 选购", "替代方案", "AI编程订阅", "程序员晚枫"]
 description: 程序员晚枫的华为云 Coding Plan 选购指南：虽然华为没有，但这些替代方案可以帮你找到合适的 AI 编程工具。
-date: 2026-04-22 20:30:00
-tags: [华为云, Coding Plan 选购, 替代方案, AI编程]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 20:30:00"
+tags: ["华为云", "Coding Plan 选购", "替代方案", "AI编程"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

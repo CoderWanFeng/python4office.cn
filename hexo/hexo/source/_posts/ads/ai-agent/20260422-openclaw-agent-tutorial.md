@@ -1,10 +1,10 @@
 ---
 title: OpenClaw Agent实战教程！从0到1创建你的第一个AI Agent，手把手教
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["openclaw", "ai agent", "ai编程"]
 categories: ["AI Agent实战"]
 description: OpenClaw Agent实战教程：从0到1创建你的第一个AI Agent，包含安装、配置、创建、测试、优化。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

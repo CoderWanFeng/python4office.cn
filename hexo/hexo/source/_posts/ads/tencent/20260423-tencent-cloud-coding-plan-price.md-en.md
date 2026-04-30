@@ -1,11 +1,11 @@
 ---
 title: "Tencent Cloud Coding Plan Price Released: Starting from Just 49 yuan/month, Take Hunyuan Home!"
-keywords: [Tencent Cloud Coding Plan Price, Tencent Hunyuan How Much, AI Programming Monthly Fee, 程序员晚枫]
-description: Programmer Wan Feng's actual test: Tencent Cloud Coding Plan starts at 49 yuan/month, Hunyuan large model + multi-model support, detailed price breakdown!
-date: 2026-04-23 12:00:00
-tags: [Tencent Cloud, Tencent Hunyuan, Coding Plan Price, AI Programming]
-categories: [AI Programming, Tool Review]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+keywords: ["Tencent Cloud Coding Plan Price", "Tencent Hunyuan How Much", "AI Programming Monthly Fee", "程序员晚枫"]
+description: "Programmer Wan Feng's actual test: Tencent Cloud Coding Plan starts at 49 yuan/month, Hunyuan large model + multi-model support, detailed price breakdown!"
+date: "2026-04-23 12:00:00"
+tags: ["Tencent Cloud", "Tencent Hunyuan", "Coding Plan Price", "AI Programming"]
+categories: ["AI Programming", "Tool Review"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

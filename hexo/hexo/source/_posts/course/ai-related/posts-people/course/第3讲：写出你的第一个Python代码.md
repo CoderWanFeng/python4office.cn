@@ -1,8 +1,8 @@
 ---
 title: 第3讲：写出第一个Python程序——AI辅助下的工程化入门
-date: 2026-03-09 18:00:00
+date: "2026-03-09 18:00:00"
 tags: AI编程
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

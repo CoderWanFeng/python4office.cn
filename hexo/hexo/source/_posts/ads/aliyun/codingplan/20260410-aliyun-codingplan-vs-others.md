@@ -2,10 +2,10 @@
 title: 阿里云Coding Plan对比评测：vs 火山方舟 vs 腾讯云TOKEN Plan，哪个更适合你？
 keywords: 程序员晚枫, 阿里云Coding Plan对比, Coding Plan评测, 阿里云vs火山方舟, AI编程工具选择
 description: 程序员晚枫深度评测：阿里云Coding Plan vs 火山方舟 vs 腾讯云TOKEN Plan，三大AI编程工具全面对比，帮你选出最适合的。
-date: 2026-04-10 02:57:00
-tags: [阿里云Coding Plan对比, Coding Plan评测, 阿里云vs火山方舟, 阿里云vs腾讯云, AI编程工具选择, 程序员晚枫]
-categories: [AI编程, 工具对比]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 02:57:00"
+tags: ["阿里云Coding Plan对比", "Coding Plan评测", "阿里云vs火山方舟", "阿里云vs腾讯云", "AI编程工具选择", "程序员晚枫"]
+categories: ["AI编程", "工具对比"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

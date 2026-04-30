@@ -1,8 +1,8 @@
 ---
 title: 手动识别 PDF发票太慢？用这个方法让速度提高 50 倍！
-date: 2025-04-15 21:56:17
+date: "2025-04-15 21:56:17"
 tags: 码匠er
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

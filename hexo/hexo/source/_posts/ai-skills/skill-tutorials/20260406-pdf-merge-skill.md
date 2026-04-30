@@ -1,9 +1,9 @@
 ---
 title: PDF合并拆分Skill完整教程：一键处理上百个PDF文件
-date: 2026-04-06 10:40:00
-tags: [PDF, Skill, 合并, 拆分, AI办公, 教程]
-categories: [AI Skills, Skill使用教程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-06 10:40:00"
+tags: ["PDF", "Skill", "合并", "拆分", "AI办公", "教程"]
+categories: ["AI Skills", "Skill使用教程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

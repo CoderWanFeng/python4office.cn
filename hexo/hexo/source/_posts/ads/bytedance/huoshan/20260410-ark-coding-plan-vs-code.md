@@ -2,10 +2,10 @@
 title: VS Code + 火山方舟Coding Plan配置教程：免费插件方案
 keywords: 程序员晚枫, 火山方舟Coding Plan VS Code, VS Code AI编程, Continue插件配置, 免费AI编程
 description: 程序员晚枫教程：VS Code + 火山方舟Coding Plan配置教程，免费插件方案，5分钟搭建AI编程环境。
-date: 2026-04-10 00:07:00
-tags: [火山方舟Coding Plan VS Code, VS Code AI编程, Continue插件, 火山引擎VS Code, 免费AI编程, 程序员晚枫]
-categories: [AI编程, 教程]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 00:07:00"
+tags: ["火山方舟Coding Plan VS Code", "VS Code AI编程", "Continue插件", "火山引擎VS Code", "免费AI编程", "程序员晚枫"]
+categories: ["AI编程", "教程"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

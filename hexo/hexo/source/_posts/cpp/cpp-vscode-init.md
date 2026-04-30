@@ -1,8 +1,8 @@
 ---
 title: VsCode开发C++程序 - 环境配置：编译器和插件
-date: 2023-02-10 23:19:54
+date: "2023-02-10 23:19:54"
 tags: C++
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

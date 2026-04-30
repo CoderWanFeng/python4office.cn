@@ -1,8 +1,8 @@
 ---
 title: 24小时从0到1上手Python：从环境搭建到第一个程序实战
-date: 2025-11-14 00:24:04
+date: "2025-11-14 00:24:04"
 tags: 广告
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

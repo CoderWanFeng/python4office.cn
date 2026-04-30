@@ -1,8 +1,8 @@
 ---
 title: 适合程序员写作变现的互联网平台有哪些？
-date: 2022-06-14 22:49:53
+date: "2022-06-14 22:49:53"
 tags: 平台
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

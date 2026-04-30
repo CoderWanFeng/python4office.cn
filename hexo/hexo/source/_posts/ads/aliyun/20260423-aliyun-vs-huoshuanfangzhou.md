@@ -1,11 +1,11 @@
 ---
 title: 阿里云百炼 vs 火山方舟：29 元 vs 36 元，价格差 7 元差在哪？
-keywords: [阿里云 vs 火山方舟, Coding Plan 对比, 通义千问 vs 豆包, 程序员晚枫]
+keywords: ["阿里云 vs 火山方舟", "Coding Plan 对比", "通义千问 vs 豆包", "程序员晚枫"]
 description: 程序员晚枫硬核对比：阿里云百炼（29元/月）vs 火山方舟（36元/月），通义千问 vs 多模型，谁更值得选？
-date: 2026-04-23 18:30:00
-tags: [阿里云, 火山方舟, Coding Plan 对比, 通义千问]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-23 18:30:00"
+tags: ["阿里云", "火山方舟", "Coding Plan 对比", "通义千问"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

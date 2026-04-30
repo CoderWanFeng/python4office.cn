@@ -1,9 +1,9 @@
 ---
 title: 日报自动生成Skill配置教程：每天节省30分钟
-date: 2026-04-06 10:44:00
-tags: [日报, 自动化, Skill, AI办公, 工作汇报, 教程]
-categories: [AI Skills, Skill使用教程]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-06 10:44:00"
+tags: ["日报", "自动化", "Skill", "AI办公", "工作汇报", "教程"]
+categories: ["AI Skills", "Skill使用教程"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

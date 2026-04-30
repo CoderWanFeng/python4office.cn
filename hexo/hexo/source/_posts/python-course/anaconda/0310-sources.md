@@ -1,8 +1,8 @@
 ---
 title: Anaconda数据分析&人工智能教程（课程资料）
-date: 2024-03-10 13:49:42
+date: "2024-03-10 13:49:42"
 tags: 人工智能
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

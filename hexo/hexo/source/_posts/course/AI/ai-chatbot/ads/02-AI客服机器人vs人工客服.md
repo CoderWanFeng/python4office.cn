@@ -1,9 +1,9 @@
 ---
 title: AI客服机器人 vs 人工客服：效率提升10倍的秘密
-date: 2026-04-17 23:20:00
-tags: [AI客服, 效率提升, 企业应用, 成本优化]
+date: "2026-04-17 23:20:00"
+tags: ["AI客服", "效率提升", "企业应用", "成本优化"]
 categories: AI对话机器人
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

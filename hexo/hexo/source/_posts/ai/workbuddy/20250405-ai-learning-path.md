@@ -1,8 +1,8 @@
 ---
 title: 2025年AI学习路线图：从0基础到能上手项目，我花了3年踩出的路径
-date: 2025-04-05 19:30:00
+date: "2025-04-05 19:30:00"
 tags: AI
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

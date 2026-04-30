@@ -1,6 +1,6 @@
 ---
 title: Trae 免费模式排队太久？换个思路，便宜又快
-date: 2026-04-12 00:00:00
+date: "2026-04-12 00:00:00"
 categories:
 - AI工具评测
 tags:
@@ -10,7 +10,7 @@ tags:
 - 火山方舟
 - Coding Plan
 description: Trae 免费模式排队？火山方舟 Coding Plan 了解一下，便宜又快
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

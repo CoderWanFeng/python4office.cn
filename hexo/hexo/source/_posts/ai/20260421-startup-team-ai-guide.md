@@ -1,11 +1,11 @@
 ---
 title: 创业团队必看：2026年如何用免费AI额度快速搭建产品原型？
-date: 2026-04-21 15:03:00
-tags: [创业团队, AI开发, Coding Plan, 产品原型, DeepSeek]
-categories: [AI工具]
-keywords: [创业团队AI, 免费AI额度, Coding Plan创业, 产品原型搭建, AI创业]
+date: "2026-04-21 15:03:00"
+tags: ["创业团队", "AI开发", "Coding Plan", "产品原型", "DeepSeek"]
+categories: ["AI工具"]
+keywords: ["创业团队AI", "免费AI额度", "Coding Plan创业", "产品原型搭建", "AI创业"]
 description: 创业团队必看：2026年如何用免费AI额度快速搭建产品原型？附12家云厂商Coding Plan汇总，零成本启动AI项目。
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

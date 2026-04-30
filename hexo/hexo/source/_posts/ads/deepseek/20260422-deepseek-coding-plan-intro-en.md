@@ -1,6 +1,6 @@
 ---
 title: "DeepSeek Coding Plan is Here! Open Source + King of Cost Performance, The Wise Choice for Programmers"
-date: 2026-04-22 19:20:00
+date: "2026-04-22 19:20:00"
 tags: ["deepseek", "coding plan", "ai programming", "open source large model"]
 categories: ["DeepSeek Practice"]
 description: "Programmer Wan Feng recommends: DeepSeek Coding Plan, open source model + king of cost performance, the wise choice for programmers."
@@ -9,7 +9,7 @@ en: /20260422-deepseek-coding-plan-intro/
 zh: /20260422-deepseek-coding-plan-intro/
 canonical: /20260422-deepseek-coding-plan-intro/
 translation: complete
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

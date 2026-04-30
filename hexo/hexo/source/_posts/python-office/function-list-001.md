@@ -1,8 +1,8 @@
 ---
 title: 5个有趣的 Python 自动化办公程序，建议收藏！超实用~
-date: 2022-05-06 13:31:42
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+date: "2022-05-06 13:31:42"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop"
 ---
 
 

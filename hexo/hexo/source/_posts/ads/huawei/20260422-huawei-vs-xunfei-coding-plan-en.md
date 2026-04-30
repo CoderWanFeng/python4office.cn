@@ -1,11 +1,11 @@
 ---
 title: 华为没有 Coding Plan？讯飞星火可能是语音+AI 的最强选择
-keywords: [华为 Coding Plan, 讯飞星火, 科大讯飞, 语音AI, 程序员晚枫]
+keywords: ["华为 Coding Plan", "讯飞星火", "科大讯飞", "语音AI", "程序员晚枫"]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐讯飞星火，语音+AI 能力最强，适合语音编程和智能助手开发。
-date: 2026-04-22 23:05:00
-tags: [华为, 讯飞星火, 科大讯飞, Coding Plan, 语音AI]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 23:05:00"
+tags: ["华为", "讯飞星火", "科大讯飞", "Coding Plan", "语音AI"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: Linux上安装Python
-date: 2022-02-23 15:22:31
-tags: [Linux,Python]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2022-02-23 15:22:31"
+tags: ["Linux", "Python"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

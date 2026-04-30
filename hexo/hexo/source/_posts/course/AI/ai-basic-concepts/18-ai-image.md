@@ -1,6 +1,6 @@
 ---
 title: 什么是AI画图？文字生成图片的魔法
-date: 2026-04-16 17:17:00
+date: "2026-04-16 17:17:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -15,7 +15,7 @@ tags:
 - Stable Diffusion
 order: 18
 description: 为什么AI能画画？程序员晚枫用大白话揭秘AI画图技术，让你了解文字生成图片的魔法！
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

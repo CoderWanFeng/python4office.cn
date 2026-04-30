@@ -1,8 +1,8 @@
 ---
 title: 《流畅的 Python》20 讲·高阶编程实战——课程导航与学习指南
-date: 2026-03-03 10:40:00
-tags: [python, 流畅的 Python, 课程导航]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-03-03 10:40:00"
+tags: ["python", "流畅的 Python", "课程导航"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

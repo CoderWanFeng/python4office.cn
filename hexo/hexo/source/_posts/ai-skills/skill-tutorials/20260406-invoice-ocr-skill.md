@@ -1,9 +1,9 @@
 ---
 title: 发票OCR识别Skill实战：自动提取信息生成报销表
-date: 2026-04-06 10:42:00
-tags: [OCR, 发票识别, Skill, AI办公, 财务自动化, 教程]
-categories: [AI Skills, Skill使用教程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-06 10:42:00"
+tags: ["OCR", "发票识别", "Skill", "AI办公", "财务自动化", "教程"]
+categories: ["AI Skills", "Skill使用教程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

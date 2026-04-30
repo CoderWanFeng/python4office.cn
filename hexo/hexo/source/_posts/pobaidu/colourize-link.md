@@ -1,8 +1,8 @@
 ---
 title: 百度AI - 黑白照片还原
-date: 2023-01-21 16:29:30
-tags: [pobaidu,AI]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2023-01-21 16:29:30"
+tags: ["pobaidu", "AI"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

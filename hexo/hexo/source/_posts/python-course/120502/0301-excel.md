@@ -1,8 +1,8 @@
 ---
 title: 给小白的《30讲 · Python数据分析》
-date: 2024-03-01 10:31:05
+date: "2024-03-01 10:31:05"
 tags: pandas
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

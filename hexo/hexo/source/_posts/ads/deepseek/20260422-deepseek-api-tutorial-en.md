@@ -1,10 +1,10 @@
 ---
-title: Complete DeepSeek API Tutorial: From Registration to Usage, This Article Is All You Need
-date: 2026-04-22 00:00:00
-tags: [deepseek,api,ai编程
-categories: [AI Tools]
-description: Complete DeepSeek API Tutorial: From registration to usage, this article is all you need. Includes registration steps, usage methods, code examples, and precautions.
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+title: "Complete DeepSeek API Tutorial: From Registration to Usage, This Article Is All You Need"
+date: "2026-04-22 00:00:00"
+tags: ["deepseek", "api", "ai编程"]
+categories: ["AI Tools"]
+description: "Complete DeepSeek API Tutorial: From registration to usage, this article is all you need. Includes registration steps, usage methods, code examples, and precautions."
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

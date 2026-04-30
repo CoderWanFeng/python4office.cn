@@ -1,8 +1,8 @@
 ---
 title: 423页PDF：《Python编程初学者指南》
-date: 2022-12-10 04:26:43
+date: "2022-12-10 04:26:43"
 tags: 电子书
-cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

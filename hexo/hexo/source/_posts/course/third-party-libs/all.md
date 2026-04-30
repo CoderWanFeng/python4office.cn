@@ -1,8 +1,8 @@
 ---
 title: 优秀的第三方库
-date: 2024-12-1 00:41:49
-tags: [ 第三方库,pip ]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2024-12-1 00:41:49"
+tags: ["第三方库", "pip"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

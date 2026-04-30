@@ -1,8 +1,8 @@
 ---
 title: 2026年最全AI编程CLI工具盘点：从Claude到Kimi，12款AI终端助手一文打尽
-date: 2026-04-27 22:12:00
-tags: [AI编程, CLI工具, claude-code, opencode, cursor]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-27 22:12:00"
+tags: ["AI编程", "CLI工具", "claude-code", "opencode", "cursor"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

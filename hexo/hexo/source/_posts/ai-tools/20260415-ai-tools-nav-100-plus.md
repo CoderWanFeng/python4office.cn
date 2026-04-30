@@ -1,6 +1,6 @@
 ---
 title: 2026年最全AI工具导航：100+免费AI软件一网打尽（含ChatGPT、Midjourney、Cursor等）
-date: 2026-04-15 00:00:00
+date: "2026-04-15 00:00:00"
 categories:
 - AI工具
 tags:
@@ -28,7 +28,7 @@ tags:
 - 通义千问
 - 讯飞星火
 description: 收藏这一篇就够了。100+热门AI工具大全，涵盖AI对话、AI办公、AI绘画、AI编程、AI视频、AI搜索等8大分类，国内外全覆盖，免费导航网站推荐。
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

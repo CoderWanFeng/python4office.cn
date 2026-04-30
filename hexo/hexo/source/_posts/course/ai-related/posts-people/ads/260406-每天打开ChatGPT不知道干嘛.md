@@ -1,6 +1,6 @@
 ---
 title: 小白学AI编程：每天打开ChatGPT不知道干嘛？零基础入门指南
-date: 2026-04-06 10:11:00
+date: "2026-04-06 10:11:00"
 categories:
 - AI编程
 tags:
@@ -12,7 +12,7 @@ tags:
 - 龙虾AI
 - AI工具
 - ChatGPT教程
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 <!-- more -->

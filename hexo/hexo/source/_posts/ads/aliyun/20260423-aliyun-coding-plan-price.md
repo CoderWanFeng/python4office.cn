@@ -1,11 +1,11 @@
 ---
 title: 阿里云百炼 Coding Plan 价格出炉：低至 29 元/月，通义千问带回家！
-keywords: [阿里云百炼 Coding Plan 价格, 通义千问 多少钱, AI编程 月费, 程序员晚枫]
+keywords: ["阿里云百炼 Coding Plan 价格", "通义千问 多少钱", "AI编程 月费", "程序员晚枫"]
 description: 程序员晚枫实测：阿里云百炼 Coding Plan 最低 29 元/月，通义千问大模型+阿里生态，价格详解！
-date: 2026-04-23 17:00:00
-tags: [阿里云, 百炼, 通义千问, Coding Plan 价格, AI编程]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-23 17:00:00"
+tags: ["阿里云", "百炼", "通义千问", "Coding Plan 价格", "AI编程"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

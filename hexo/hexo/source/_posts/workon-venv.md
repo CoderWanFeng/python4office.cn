@@ -1,8 +1,8 @@
 ---
 title: 使用virtualenvwrapper搭建Linux虚拟环境，并用workon命令启动
-date: 2022-01-23 15:58:41
-tags: [Linux,Python]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2022-01-23 15:58:41"
+tags: ["Linux", "Python"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

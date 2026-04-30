@@ -1,6 +1,6 @@
 ---
 title: 2026年，Claude Code在国内其实可以免费用（腾讯云Token Plan版）
-date: 2026-04-16 00:00:00
+date: "2026-04-16 00:00:00"
 tags:
 - Token Plan
 - AI编程
@@ -12,7 +12,7 @@ tags:
 - 白嫖
 categories:
 - AI工具
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

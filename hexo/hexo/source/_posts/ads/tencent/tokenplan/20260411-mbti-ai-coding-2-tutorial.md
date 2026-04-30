@@ -2,7 +2,7 @@
 title: 手把手教程：用AI编程30分钟做出MBTI测试网站，完整代码可复制
 keywords: 程序员晚枫, MBTI测试网站, AI编程教程, 30分钟做网站, AI代码生成, 编程入门, 项目源码
 description: 程序员晚枫手把手教你用AI编程30分钟做出MBTI性格测试网站。提供完整Prompt和代码，零基础也能跟着做出来，快速上手AI编程开发。
-date: 2026-04-11 13:00:00
+date: "2026-04-11 13:00:00"
 tags:
 - Python
 - AI编程
@@ -15,7 +15,7 @@ categories:
 - AI编程教程
 - 实战案例
 author: 程序员晚枫
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

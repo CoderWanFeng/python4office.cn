@@ -1,9 +1,9 @@
 ---
 title: 写好的Python程序怎么分享给别人？PyInstaller打包教程
-date: 2026-04-17 22:10:00
-tags: [PyInstaller, Python, 打包, exe, 分发]
+date: "2026-04-17 22:10:00"
+tags: ["PyInstaller", "Python", "打包", "exe", "分发"]
 categories: PyInstaller打包
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

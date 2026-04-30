@@ -1,8 +1,8 @@
 ---
 title: Python装饰器：我给函数加了计时功能，代码只多了2行
-date: 2026-02-28 17:30:00
-tags: [Python基础, 装饰器, 高级特性]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-02-28 17:30:00"
+tags: ["Python基础", "装饰器", "高级特性"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

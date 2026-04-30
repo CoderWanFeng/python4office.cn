@@ -1,8 +1,8 @@
 ---
 title: 天呐！1行Python代码，收集微信群资料，太方便了~
-date: 2023-02-23 21:40:24
+date: "2023-02-23 21:40:24"
 tags: 机器人
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

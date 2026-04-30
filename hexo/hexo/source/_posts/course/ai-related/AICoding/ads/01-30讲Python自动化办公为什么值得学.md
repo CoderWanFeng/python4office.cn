@@ -1,9 +1,9 @@
 ---
 title: 30讲Python自动化办公，为什么值得学
-date: 2026-04-19 11:00:00
-tags: [Python, 自动化办公, 效率, 职场技能]
-categories: [Python, 自动化办公]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-19 11:00:00"
+tags: ["Python", "自动化办公", "效率", "职场技能"]
+categories: ["Python", "自动化办公"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

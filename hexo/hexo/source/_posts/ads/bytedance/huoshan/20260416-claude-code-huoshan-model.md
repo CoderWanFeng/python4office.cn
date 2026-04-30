@@ -1,6 +1,6 @@
 ---
 title: Claude Code国内能装但用不了？接上火山方舟的模型，真香！
-date: 2026-04-16 00:00:00
+date: "2026-04-16 00:00:00"
 tags:
 - AI编程
 - Claude Code
@@ -12,7 +12,7 @@ tags:
 - 模型配置
 categories:
 - AI工具
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

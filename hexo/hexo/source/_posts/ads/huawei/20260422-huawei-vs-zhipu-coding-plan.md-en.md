@@ -1,11 +1,11 @@
 ---
 title: "Huawei Doesn't Have Coding Plan? Zhipu AI May Be the Strongest Representative of Domestic Open Source"
-keywords: [Huawei Coding Plan, Zhipu AI, GLM Large Model, Domestic Open Source, Programmer Wan Feng]
+keywords: ["Huawei Coding Plan", "Zhipu AI", "GLM Large Model", "Domestic Open Source", "Programmer Wan Feng"]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends Zhipu AI, GLM large model open source + technical openness, representative of technical domestic AI.
-date: 2026-04-22 23:10:00
-tags: [Huawei, Zhipu AI, GLM, Coding Plan, Programmer Wan Feng]
-categories: [AI Programming, Tool Review]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 23:10:00"
+tags: ["Huawei", "Zhipu AI", "GLM", "Coding Plan", "Programmer Wan Feng"]
+categories: ["AI Programming", "Tool Review"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

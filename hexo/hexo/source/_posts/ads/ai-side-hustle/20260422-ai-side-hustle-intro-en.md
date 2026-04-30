@@ -1,6 +1,6 @@
 ---
 title: "AI Side Hustle for Beginners! 5 Directions Ordinary People Can Do, You'll Know How to Start After Reading This"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["AI Side Hustle", "AI Programming", "Side Hustle Monetization"]
 categories: ["AI Side Hustle Monetization"]
 description: "AI Side Hustle for Beginners: 5 directions ordinary people can do, including AI writing, AI design, AI training, AI Skill development, AI digital humans. You'll know how to start after reading this."
@@ -9,7 +9,7 @@ en: /20260422-ai-side-hustle-intro/
 zh: /20260422-ai-side-hustle-intro/
 canonical: /20260422-ai-side-hustle-intro/
 translation: complete
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

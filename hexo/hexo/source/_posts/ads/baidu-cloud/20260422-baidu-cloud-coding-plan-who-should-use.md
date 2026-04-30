@@ -1,11 +1,11 @@
 ---
 title: 百度智能云 Coding Plan 适合谁用？飞桨用户 vs 企业用户选购分析
-keywords: [百度智能云 Coding Plan 适合谁, Baidu Cloud 选购建议, 飞桨, 企业用户, 程序员晚枫]
+keywords: ["百度智能云 Coding Plan 适合谁", "Baidu Cloud 选购建议", "飞桨", "企业用户", "程序员晚枫"]
 description: 程序员晚枫分析：百度智能云 Coding Plan 适合哪些人？飞桨用户和企业用户怎么选？
-date: 2026-04-22 20:10:00
-tags: [百度智能云, Baidu Cloud, Coding Plan 选购, 飞桨, 企业用户]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 20:10:00"
+tags: ["百度智能云", "Baidu Cloud", "Coding Plan 选购", "飞桨", "企业用户"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

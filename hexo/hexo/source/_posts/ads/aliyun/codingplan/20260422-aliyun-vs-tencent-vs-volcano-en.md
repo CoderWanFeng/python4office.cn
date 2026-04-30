@@ -1,10 +1,10 @@
 ---
 title: "Alibaba Cloud vs Tencent vs Volcano! Which is More Cost-Effective? You'll Know After Comparing"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["Alibaba Cloud", "Tencent Cloud", "Volcano Engine", "ai programming", "comparison"]
 categories: ["Alibaba Cloud Coding Plan"]
 description: "Alibaba Cloud vs Tencent vs Volcano: Which is more cost-effective? Price, features, ecosystem, user experience, you'll know after comparing."
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

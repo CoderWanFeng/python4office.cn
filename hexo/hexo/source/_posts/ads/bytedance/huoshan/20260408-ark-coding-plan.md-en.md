@@ -1,11 +1,11 @@
 ---
 title: "ByteDance Volcano Ark Coding Plan is Here! 10% Off Subscription, Starting from 36 yuan, Multi-Model Freely Use"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan, AI Programming Tool, ByteDance AI, Doubao Code Model, DeepSeek Programming, Domestic AI Programming
-description: Programmer Wan Feng recommends: ByteDance Volcano Ark Coding Plan, starting from 36 yuan/month, supports Doubao, DeepSeek, Kimi, and other multi-models, value choice for AI programming.
-date: 2026-04-08 00:15:00
-tags: [Volcano Engine, Ark CodingPlan, AI Programming, Doubao, DeepSeek, Programmer Wan Feng, AI Programming Tool]
-categories: [AI Programming, Tool Review]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+description: "Programmer Wan Feng recommends: ByteDance Volcano Ark Coding Plan, starting from 36 yuan/month, supports Doubao, DeepSeek, Kimi, and other multi-models, value choice for AI programming."
+date: "2026-04-08 00:15:00"
+tags: ["Volcano Engine", "Ark CodingPlan", "AI Programming", "Doubao", "DeepSeek", "Programmer Wan Feng", "AI Programming Tool"]
+categories: ["AI Programming", "Tool Review"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

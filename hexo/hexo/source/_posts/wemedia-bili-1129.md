@@ -1,8 +1,8 @@
 ---
 title: wemedia-bili-1129
-date: 2022-11-29 19:17:26
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+date: "2022-11-29 19:17:26"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop"
 ---
 
 

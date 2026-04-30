@@ -1,8 +1,8 @@
 ---
 title: 2025年最值得用的7款AI办公神器：我实测了3个月，效率提升300%
-date: 2025-04-05 18:30:00
+date: "2025-04-05 18:30:00"
 tags: AI
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: DeepSeek：这门课的实战性，我给满分
-date: 2026-04-14 16:30:00
-tags: [AI编程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-14 16:30:00"
+tags: ["AI编程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,11 +1,11 @@
 ---
 title: MiniMax 26元/月，这些真实场景我用了一年，真香！
-keywords: [MiniMax, 26元/月, 真实场景, 使用体验, 程序员晚枫]
+keywords: ["MiniMax", "26元/月", "真实场景", "使用体验", "程序员晚枫"]
 description: 程序员晚枫分享：26元/月的 MiniMax 一年使用体验。这5个真实场景，让我从不愿意续费变成了强烈推荐。
-date: 2026-04-27 14:30:00
-tags: [MiniMax, 26元/月, 真实场景, 使用体验, 程序员晚枫]
-categories: [AI编程, 使用体验]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-27 14:30:00"
+tags: ["MiniMax", "26元/月", "真实场景", "使用体验", "程序员晚枫"]
+categories: ["AI编程", "使用体验"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

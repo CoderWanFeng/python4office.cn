@@ -1,9 +1,9 @@
 ---
 title: 飞书 CLI 办公 Skill 快速上手：19个官方Skill让AI接管你的工作
-date: 2026-04-06 10:34:00
-tags: [飞书, CLI, Lark, Skill, AI办公, 教程]
-categories: [AI Skills, 平台攻略]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-06 10:34:00"
+tags: ["飞书", "CLI", "Lark", "Skill", "AI办公", "教程"]
+categories: ["AI Skills", "平台攻略"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

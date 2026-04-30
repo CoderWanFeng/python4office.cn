@@ -2,10 +2,10 @@
 title: 小团队怎么用火山方舟Coding Plan？5人团队实战分享
 keywords: 程序员晚枫, 火山方舟Coding Plan团队, 小团队AI编程, AI工具管理, 团队效率提升
 description: 程序员晚枫分享：小团队怎么用火山方舟Coding Plan？5人团队实战分享，成本分摊、权限管理、效率提升全攻略。
-date: 2026-04-10 00:02:00
-tags: [火山方舟Coding Plan团队, 团队AI工具, 小团队AI编程, 火山引擎团队版, AI工具管理, 程序员晚枫]
-categories: [AI编程, 团队管理]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 00:02:00"
+tags: ["火山方舟Coding Plan团队", "团队AI工具", "小团队AI编程", "火山引擎团队版", "AI工具管理", "程序员晚枫"]
+categories: ["AI编程", "团队管理"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

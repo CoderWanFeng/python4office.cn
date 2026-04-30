@@ -1,10 +1,10 @@
 ---
 title: 我要去郑州讲课了！腾讯云龙虾公开课，手把手教你用AI搞定龙虾
-date: 2026-04-07 00:00:00
-categories: [广告, 腾讯, WorkBuddy]
-tags: [OpenClaw, 龙虾, AI, 线下活动, 郑州]
+date: "2026-04-07 00:00:00"
+categories: ["广告", "腾讯", "WorkBuddy"]
+tags: ["OpenClaw", "龙虾", "AI", "线下活动", "郑州"]
 description: 腾讯云龙虾公开课郑州站，程序员晚枫分享OpenClaw如何赋能一人公司
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

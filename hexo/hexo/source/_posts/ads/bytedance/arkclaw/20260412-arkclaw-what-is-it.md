@@ -1,6 +1,6 @@
 ---
 title: 养虾养什么虾？ArkClaw 零门槛开箱即用体验
-date: 2026-04-12 00:00:00
+date: "2026-04-12 00:00:00"
 categories:
 - AI工具评测
 tags:
@@ -12,7 +12,7 @@ tags:
 - 养虾
 - 火山引擎
 description: 朋友说让我一起养虾，听着一脸懵。后来才知道是火山引擎的 ArkClaw。试试看，体验如何？
-cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop"
 ---
 
 

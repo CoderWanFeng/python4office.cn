@@ -1,6 +1,6 @@
 ---
 title: 什么是AI办公？AI帮你写PPT做表格
-date: 2026-04-16 17:25:00
+date: "2026-04-16 17:25:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -15,7 +15,7 @@ tags:
 - AI写文档
 order: 26
 description: 为什么现在办公这么快了？程序员晚枫用大白话揭秘AI办公，让你了解AI帮你做PPT写Word处理Excel！
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: Python函数基础：我把重复代码封装成函数，维护成本降低80%
-date: 2026-02-28 21:04:00
-tags: [Python基础, 函数, 封装]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-02-28 21:04:00"
+tags: ["Python基础", "函数", "封装"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

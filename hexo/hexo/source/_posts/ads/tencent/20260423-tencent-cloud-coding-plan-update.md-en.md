@@ -1,11 +1,11 @@
 ---
 title: "Tencent Cloud Coding Plan Latest News: What New Features in 2026?"
-keywords: [Tencent Cloud Coding Plan Update, Tencent Hunyuan New Features, AI Programming News, 程序员晚枫]
-description: Programmer Wan Feng tracks: 2026 Tencent Cloud Coding Plan new features summary, Hunyuan large model update content overview.
-date: 2026-04-23 16:30:00
-tags: [Tencent Cloud, Tencent Hunyuan, Coding Plan Update, AI Programming]
-categories: [AI Programming, News]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+keywords: ["Tencent Cloud Coding Plan Update", "Tencent Hunyuan New Features", "AI Programming News", "程序员晚枫"]
+description: "Programmer Wan Feng tracks: 2026 Tencent Cloud Coding Plan new features summary, Hunyuan large model update content overview."
+date: "2026-04-23 16:30:00"
+tags: ["Tencent Cloud", "Tencent Hunyuan", "Coding Plan Update", "AI Programming"]
+categories: ["AI Programming", "News"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

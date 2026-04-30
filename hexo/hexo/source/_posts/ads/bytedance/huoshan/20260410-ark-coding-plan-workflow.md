@@ -2,10 +2,10 @@
 title: 我的AI编程工作流：火山方舟Coding Plan一天使用实录
 keywords: 程序员晚枫, 火山方舟Coding Plan工作流, AI编程工作流, 程序员日常, AI提效实战
 description: 程序员晚枫分享：我的AI编程工作流，火山方舟Coding Plan一天使用实录，真实程序员AI提效实战分享。
-date: 2026-04-10 00:09:00
-tags: [火山方舟Coding Plan工作流, AI编程工作流, 程序员日常, 火山引擎实战, AI提效, 程序员晚枫]
-categories: [AI编程, 实战分享]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 00:09:00"
+tags: ["火山方舟Coding Plan工作流", "AI编程工作流", "程序员日常", "火山引擎实战", "AI提效", "程序员晚枫"]
+categories: ["AI编程", "实战分享"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

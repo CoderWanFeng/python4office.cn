@@ -1,8 +1,8 @@
 ---
 title: 自动群发节日祝福，1行Python代码搞定!
-date: 2023-09-30 15:50:11
+date: "2023-09-30 15:50:11"
 tags: 微信机器人
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

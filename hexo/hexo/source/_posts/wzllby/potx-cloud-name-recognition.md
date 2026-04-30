@@ -1,8 +1,8 @@
 ---
 title: 少数民族名字总丢 “・”？一行代码让识别秒更精确！
-date: 2025-04-15 22:00:17
+date: "2025-04-15 22:00:17"
 tags: 码匠er
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

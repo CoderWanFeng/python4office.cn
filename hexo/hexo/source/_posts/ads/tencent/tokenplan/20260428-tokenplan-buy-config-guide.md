@@ -1,6 +1,6 @@
 ---
 title: 【手把手教程】腾讯云Token Plan购买和配置详解（2026最新）
-date: 2026-04-28 10:10:00
+date: "2026-04-28 10:10:00"
 tags:
 - AI编程
 - 腾讯云
@@ -9,7 +9,7 @@ tags:
 - Claude Code
 - Cursor
 categories: AI工具配置
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: Python网站开发 - Django & Flask必备知识点
-date: 2022-01-11 01:07:27
-tags: [网站开发,Python]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2022-01-11 01:07:27"
+tags: ["网站开发", "Python"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

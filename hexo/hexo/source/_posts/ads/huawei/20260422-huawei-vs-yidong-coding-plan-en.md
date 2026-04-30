@@ -2,10 +2,10 @@
 title: Huawei Has No Coding Plan? China Mobile Cloud May Be the Most Stable SOE-Backed Choice
 keywords: ["Huawei Coding Plan", "China Mobile Cloud", "China Mobile", "SOE AI", "程序员晚枫"]
 description: "Huawei temporarily has no Coding Plan? Programmer Wanfeng recommends China Mobile Cloud — Jiutian large model + SOE backing, a choice with guaranteed data security."
-date: 2026-04-22 23:30:00
+date: "2026-04-22 23:30:00"
 tags: ["Huawei", "China Mobile Cloud", "China Mobile", "Coding Plan", "SOE"]
 categories: ["AI Programming", "Tool Review"]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

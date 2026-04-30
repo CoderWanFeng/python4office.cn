@@ -1,8 +1,8 @@
 ---
 title: Python文件操作：我总结了读写文件的10种姿势，最后一种最优雅
-date: 2026-02-28 18:58:00
-tags: [Python基础, 文件操作, IO]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-02-28 18:58:00"
+tags: ["Python基础", "文件操作", "IO"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

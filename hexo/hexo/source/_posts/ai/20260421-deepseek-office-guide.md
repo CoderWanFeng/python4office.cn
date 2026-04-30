@@ -1,11 +1,11 @@
 ---
 title: 刚刚！DeepSeek发布最强办公助手，普通人用它效率提升10倍
-date: 2026-04-21 14:39:00
-tags: [DeepSeek, AI办公, 效率提升, 人工智能]
-categories: [AI工具]
-keywords: [DeepSeek办公, AI办公助手, 效率提升工具, 人工智能办公]
+date: "2026-04-21 14:39:00"
+tags: ["DeepSeek", "AI办公", "效率提升", "人工智能"]
+categories: ["AI工具"]
+keywords: ["DeepSeek办公", "AI办公助手", "效率提升工具", "人工智能办公"]
 description: DeepSeek最新发布的AI办公助手实测，普通人用它处理Excel、写报告、做PPT效率提升10倍，附详细教程。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

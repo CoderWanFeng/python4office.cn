@@ -1,8 +1,8 @@
 ---
 title: 项目三 Web应用程序（学习笔记）
-date: 2026-04-28 23:54:00
-tags: [python,入门,课程,项目实战,Django]
-cover: https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-28 23:54:00"
+tags: ["python", "入门", "课程", "项目实战", "Django"]
+cover: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

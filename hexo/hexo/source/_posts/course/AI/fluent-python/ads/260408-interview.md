@@ -1,8 +1,8 @@
 ---
 title: 背了三个月八股文，还是答不上这道题？面试官真正想考你的，根本不是背答案
-date: 2026-04-08 20:00:00
-tags: [python, 流畅的 Python, 面试, Python 进阶, 程序员晚枫]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-08 20:00:00"
+tags: ["python", "流畅的 Python", "面试", "Python 进阶", "程序员晚枫"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

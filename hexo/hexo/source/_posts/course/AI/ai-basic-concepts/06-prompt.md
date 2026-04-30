@@ -1,6 +1,6 @@
 ---
 title: 什么是提示词？为什么AI有时候很"笨"
-date: 2026-04-16 16:59:00
+date: "2026-04-16 16:59:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -12,7 +12,7 @@ tags:
 - Prompt
 order: 6
 description: 为什么AI有时候很"笨"？可能是你没问好！程序员晚枫用大白话教你写好提示词，让AI听懂你的话、干出你想要的事！
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,11 +1,11 @@
 ---
 title: 讯飞星火 iFLYTEK Spark Coding Plan 来了！国产大模型+语音加持，AI 编程新选择
-keywords: [讯飞星火 Coding Plan, iFLYTEK Spark, AI编程, 科大讯飞, 程序员晚枫]
+keywords: ["讯飞星火 Coding Plan", "iFLYTEK Spark", "AI编程", "科大讯飞", "程序员晚枫"]
 description: 程序员晚枫推荐：讯飞星火 iFLYTEK Spark Coding Plan，语音+大模型双能力，国产 AI 编程新选择。
-date: 2026-04-22 18:20:00
-tags: [讯飞星火, iFLYTEK Spark, Coding Plan, AI编程, 科大讯飞]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 18:20:00"
+tags: ["讯飞星火", "iFLYTEK Spark", "Coding Plan", "AI编程", "科大讯飞"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: Python批量创建文件夹：1键生成100个子文件夹，支持序号/日期命名，工作效率翻倍
-date: 2025-08-22 00:00:00
-tags: [星河计划]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-08-22 00:00:00"
+tags: ["星河计划"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

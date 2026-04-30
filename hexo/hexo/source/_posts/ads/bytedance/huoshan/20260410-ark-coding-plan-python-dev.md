@@ -2,10 +2,10 @@
 title: Python开发者专属：火山方舟Coding Plan使用指南
 keywords: 程序员晚枫, 火山方舟Coding Plan, Python AI编程, AI写Python, Python开发工具
 description: 程序员晚枫（Python开源项目作者）分享：Python开发者专属火山方舟Coding Plan使用指南，AI辅助Python开发最佳实践。
-date: 2026-04-10 00:03:00
-tags: [火山方舟Coding Plan Python, Python AI编程, 火山引擎Python, Doubao Python, AI写Python, 程序员晚枫]
-categories: [AI编程, Python]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 00:03:00"
+tags: ["火山方舟Coding Plan Python", "Python AI编程", "火山引擎Python", "Doubao Python", "AI写Python", "程序员晚枫"]
+categories: ["AI编程", "Python"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

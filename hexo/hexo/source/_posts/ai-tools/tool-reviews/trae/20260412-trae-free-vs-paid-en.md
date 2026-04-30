@@ -1,6 +1,6 @@
 ---
 title: "Trae Free vs Paid: How Big is the Feature Gap? Real Test Tells You"
-date: 2026-04-12 00:00:00
+date: "2026-04-12 00:00:00"
 categories:
 - AI Tools Review
 tags:
@@ -11,7 +11,7 @@ tags:
 - Free
 - Paid
 description: "What's the difference between Trae free and paid? Is it worth upgrading? Real comparison tells you"
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

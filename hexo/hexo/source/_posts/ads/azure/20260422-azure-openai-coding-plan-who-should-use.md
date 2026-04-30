@@ -1,11 +1,11 @@
 ---
 title: Azure OpenAI Coding Plan 适合谁用？企业用户 vs 普通开发者选购分析
-keywords: [Azure OpenAI Coding Plan 适合谁, Azure选购建议, 企业级AI, 程序员晚枫]
+keywords: ["Azure OpenAI Coding Plan 适合谁", "Azure选购建议", "企业级AI", "程序员晚枫"]
 description: 程序员晚枫分析：Azure OpenAI Coding Plan 适合哪些人？企业用户和普通开发者怎么选？
-date: 2026-04-22 22:10:00
-tags: [Azure OpenAI, Coding Plan 选购, 企业级AI, GPT-4]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 22:10:00"
+tags: ["Azure OpenAI", "Coding Plan 选购", "企业级AI", "GPT-4"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

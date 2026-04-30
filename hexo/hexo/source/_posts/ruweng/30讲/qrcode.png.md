@@ -1,8 +1,8 @@
 ---
 title: pdf转word
-date: 2025-08-22 00:00:00
-tags: [星河计划]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2025-08-22 00:00:00"
+tags: ["星河计划"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

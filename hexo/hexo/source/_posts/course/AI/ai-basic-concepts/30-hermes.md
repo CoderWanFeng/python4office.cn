@@ -1,6 +1,6 @@
 ---
 title: Hermes是什么？和龙虾有啥区别？一个会"长大"的AI助手
-date: 2026-04-22 17:58:00
+date: "2026-04-22 17:58:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -13,7 +13,7 @@ tags:
 - OpenClaw
 order: 30
 description: Hermes最近全网爆火！它和龙虾（OpenClaw）到底有啥区别？程序员晚枫用大白话告诉你：一个让AI"活"了，一个让AI"长大"了。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

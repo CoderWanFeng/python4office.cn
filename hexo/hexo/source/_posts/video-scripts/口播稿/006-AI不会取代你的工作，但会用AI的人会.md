@@ -1,6 +1,6 @@
 ---
 title: 006 | 为什么说AI不会取代你的工作？真相扎心了
-date: 2026-04-29 18:00:00
+date: "2026-04-29 18:00:00"
 tags:
 - AI热点
 - 职场
@@ -9,7 +9,7 @@ tags:
 categories:
 - 视频文案库
 description: 短视频逐字脚本 | 时长60-90s | 全平台通用
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop"
 ---
 
 <!-- more -->

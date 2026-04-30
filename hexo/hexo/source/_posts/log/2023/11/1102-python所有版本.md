@@ -1,8 +1,8 @@
 ---
 title: 整理了python所有版本的下载链接（Windows/Mac/Linux）
-date: 2023-11-02 10:30:17
+date: "2023-11-02 10:30:17"
 tags: python基础
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

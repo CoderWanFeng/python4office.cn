@@ -1,9 +1,9 @@
 ---
 title: OpenClaw Skill 安装与管理指南：1700+技能等你探索
-date: 2026-04-06 10:32:00
-tags: [OpenClaw, Skill, AI办公, 教程, ClawHub]
-categories: [AI Skills, 平台攻略]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-06 10:32:00"
+tags: ["OpenClaw", "Skill", "AI办公", "教程", "ClawHub"]
+categories: ["AI Skills", "平台攻略"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

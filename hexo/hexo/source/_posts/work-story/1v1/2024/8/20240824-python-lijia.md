@@ -1,8 +1,8 @@
 ---
 title: 零基础学习Python-礼嘉1V1
-date: 2024-08-24 00:24:04
+date: "2024-08-24 00:24:04"
 tags: 1v1
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

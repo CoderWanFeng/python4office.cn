@@ -1,8 +1,8 @@
 ---
 title: Python学习路线图：我从零基础到能独立做项目，花了30天
-date: 2026-02-28 21:12:00
-tags: [Python, 学习路线, 进阶指南]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-02-28 21:12:00"
+tags: ["Python", "学习路线", "进阶指南"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 title: 咖啡种类大全 | 拿铁/卡布奇诺/摩卡的区别与做法(详解)
-date: 2022-02-21 10:42:38
-tags: [咖啡, 咖啡种类, 拿铁, 卡布奇诺, 摩卡, 浓缩咖啡, 咖啡做法]
-categories: [生活百科]
+date: "2022-02-21 10:42:38"
+tags: ["咖啡", "咖啡种类", "拿铁", "卡布奇诺", "摩卡", "浓缩咖啡", "咖啡做法"]
+categories: ["生活百科"]
 description: 咖啡种类大全！详解拿铁、卡布奇诺、摩卡、美式等常见咖啡的区别和做法。附详细配方和制作技巧，在家也能做出专业咖啡馆的味道。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

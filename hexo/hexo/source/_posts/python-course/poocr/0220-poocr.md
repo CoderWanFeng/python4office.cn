@@ -1,8 +1,8 @@
 ---
 title: OCR批量识别，Python版（已完结）
-date: 2024-02-20 14:08:24
+date: "2024-02-20 14:08:24"
 tags: 原创课程
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

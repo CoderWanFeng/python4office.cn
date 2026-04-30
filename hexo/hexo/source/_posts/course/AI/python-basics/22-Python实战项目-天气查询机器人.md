@@ -1,8 +1,8 @@
 ---
 title: Python实战项目：我做了个天气查询机器人，每天自动推送天气提醒
-date: 2026-02-28 21:11:00
-tags: [Python实战, API, 天气, 自动化]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-02-28 21:11:00"
+tags: ["Python实战", "API", "天气", "自动化"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

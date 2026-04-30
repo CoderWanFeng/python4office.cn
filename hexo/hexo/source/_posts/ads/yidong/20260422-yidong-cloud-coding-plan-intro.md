@@ -1,11 +1,11 @@
 ---
 title: 移动云 Coding Plan 来了！中国移动大模型+运营商优势，国内开发者的新选择
-keywords: [移动云 Coding Plan, 中国移动, AI编程, 运营商AI, 程序员晚枫]
+keywords: ["移动云 Coding Plan", "中国移动", "AI编程", "运营商AI", "程序员晚枫"]
 description: 程序员晚枫推荐：移动云 Coding Plan，中国移动大模型+运营商优势，国内开发者值得考虑的新选择。
-date: 2026-04-22 21:20:00
-tags: [移动云, 中国移动, Coding Plan, AI编程, 程序员晚枫]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 21:20:00"
+tags: ["移动云", "中国移动", "Coding Plan", "AI编程", "程序员晚枫"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

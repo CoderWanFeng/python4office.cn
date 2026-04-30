@@ -1,8 +1,8 @@
 ---
 title: c语言学习笔记
-date: 2025-07-01 9:00:00
-tags: [wwp,c语言]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-07-01 9:00:00"
+tags: ["wwp", "c语言"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

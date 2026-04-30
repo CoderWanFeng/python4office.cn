@@ -1,10 +1,10 @@
 ---
 title: "What is an AI Agent? The Hottest Track of 2026, Explained in 5 Minutes"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["ai agent", "ai programming", "openclaw", "coze"]
 categories: ["2026 Trends"]
 description: "What is an AI Agent? A comprehensive guide from 0 to 1. This article explains AI Agents in plain language, with practical implementation cases."
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

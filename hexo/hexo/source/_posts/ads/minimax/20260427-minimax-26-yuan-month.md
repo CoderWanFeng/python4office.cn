@@ -1,11 +1,11 @@
 ---
 title: 26元/月，用 MiniMax 写代码！比奶茶还便宜的 AI 编程工具
-keywords: [MiniMax, 26元/月, AI编程, 性价比, 程序员晚枫]
+keywords: ["MiniMax", "26元/月", "AI编程", "性价比", "程序员晚枫"]
 description: 程序员晚枫推荐：26元/月用 MiniMax，随时随地 AI 编程。比一杯奶茶还便宜，比外卖还划算，程序员入门 AI 的第一选择。
-date: 2026-04-27 14:15:00
-tags: [MiniMax, 26元/月, AI编程, 性价比, 程序员晚枫]
-categories: [AI编程, 省钱攻略]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-27 14:15:00"
+tags: ["MiniMax", "26元/月", "AI编程", "性价比", "程序员晚枫"]
+categories: ["AI编程", "省钱攻略"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

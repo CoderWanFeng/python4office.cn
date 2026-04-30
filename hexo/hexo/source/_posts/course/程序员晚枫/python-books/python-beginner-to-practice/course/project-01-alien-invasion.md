@@ -1,8 +1,8 @@
 ---
 title: 项目一 外星人入侵（游戏开发）
-date: 2026-04-28 23:54:00
-tags: [python,入门,课程,项目实战,Pygame]
-cover: https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-28 23:54:00"
+tags: ["python", "入门", "课程", "项目实战", "Pygame"]
+cover: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

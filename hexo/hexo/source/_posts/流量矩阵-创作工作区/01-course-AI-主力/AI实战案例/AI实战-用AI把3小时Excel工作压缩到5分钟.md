@@ -1,9 +1,9 @@
 ---
 title: AI实战：用AI把3小时Excel工作压缩到5分钟
-date: 2026-04-16 17:02:00
-tags: [AI实战，Excel自动化，效率提升]
-categories: [AI实战案例]
-cover: https://images.unsplash.com/photo-155128848?w=800&h=400&fit=crop
+date: "2026-04-16 17:02:00"
+tags: ["AI实战，Excel自动化，效率提升"]
+categories: ["AI实战案例"]
+cover: "https://images.unsplash.com/photo-155128848?w=800&h=400&fit=crop"
 ---
 
 

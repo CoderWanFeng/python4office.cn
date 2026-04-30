@@ -1,10 +1,10 @@
 ---
 title: "AtomCode vs Claude Code! In-depth Comparison, You'll Know Which to Choose After Reading"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["atomgit", "atomcode", "claude code", "ai programming"]
 categories: ["AI Tools"]
 description: "AtomCode vs Claude Code comparison! Price, features, programming capabilities, open source, cost performance, in-depth comparison, you'll know which to choose after reading."
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: git-high-version
-date: 2022-06-02 10:17:33
+date: "2022-06-02 10:17:33"
 tags: git
-cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1000&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1000&auto=format&fit=crop"
 ---
 
 

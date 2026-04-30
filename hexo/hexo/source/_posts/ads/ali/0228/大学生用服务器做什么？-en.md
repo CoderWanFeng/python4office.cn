@@ -1,8 +1,8 @@
 ---
 title: What Can College Students Do with a Server?
-date: 2023-08-09 00:24:04
+date: "2023-08-09 00:24:04"
 tags: Business Cooperation
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

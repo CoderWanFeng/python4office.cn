@@ -1,8 +1,8 @@
 ---
 title: 第1讲：AI打开新世界：AI编程的优缺点分析
-date: 2026-03-02 08:00:00
+date: "2026-03-02 08:00:00"
 tags: AI编程
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

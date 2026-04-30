@@ -1,8 +1,8 @@
 ---
 title: CPython 设计与实现 20 讲——课程导航与学习指南
-date: 2026-03-03 11:45:00
-tags: [python, CPython, 课程导航]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-03-03 11:45:00"
+tags: ["python", "CPython", "课程导航"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 
