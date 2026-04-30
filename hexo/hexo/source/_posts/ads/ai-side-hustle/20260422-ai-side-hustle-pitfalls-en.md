@@ -16,7 +16,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 <!-- more -->
 
 ![AI Side Hustle Pitfalls to Avoid! Don't Fall into These 10 Traps, Many People Have Already Fallen](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![AI Side Hustle Pitfalls to Avoid! Don't Fall into These 10 Traps, Many People Have Already Fallen](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI Side Hustle Pitfalls to Avoid! Don't Fall into These 10 Traps, Many People Have Already Fallen](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 
 Brothers!!!

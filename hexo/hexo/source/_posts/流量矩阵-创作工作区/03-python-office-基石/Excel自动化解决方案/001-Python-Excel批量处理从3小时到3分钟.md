@@ -5,12 +5,12 @@ tags: [Python, Excel, 自动化, 批量处理]
 keywords: [python excel批量处理, python处理excel, python批量处理excel文件]
 description: 使用Python批量处理Excel文件，将3小时的人工工作压缩到3分钟，附完整代码下载。
 categories: [Excel自动化解决方案]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
 
 ![Python Excel批量处理：从3小时到3分钟](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Python Excel批量处理：从3小时到3分钟](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python Excel批量处理：从3小时到3分钟](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 
 

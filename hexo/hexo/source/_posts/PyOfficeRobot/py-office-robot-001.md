@@ -2,14 +2,14 @@
 title: 又一个微信聊天机器人横空出世了，人人可用！
 date: 2022-09-12 15:50:11
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
 
 <!-- more -->
 
-![又一个微信聊天机器人横空出世了，人人可用！](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![又一个微信聊天机器人横空出世了，人人可用！](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 又一个微信聊天机器人横空出世了，人人可用！
 

@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Python自动化办公（课程资料）](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python自动化办公（课程资料）](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 以下是您付费文章后，可以获得的4个资料
 

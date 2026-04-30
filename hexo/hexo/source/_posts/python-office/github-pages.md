@@ -2,7 +2,7 @@
 title: python-office是如何搭建的？
 date: 2022-05-31 18:54:16
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
 

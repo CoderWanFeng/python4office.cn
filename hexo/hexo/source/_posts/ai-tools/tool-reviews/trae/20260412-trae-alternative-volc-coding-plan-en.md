@@ -11,7 +11,7 @@ tags:
 - Volcano Ark
 - Coding Plan
 description: "Trae free mode queue too long? Try Volcano Ark's Coding Plan - cheaper and faster"
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 
 <!-- more -->
 
-![Trae Free Mode Queue Too Long? Change Your Strategy - Cheaper and Faster](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Trae Free Mode Queue Too Long? Change Your Strategy - Cheaper and Faster](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 ![Trae Free Mode Queue Too Long? Change Your Strategy - Cheaper and Faster](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 # Trae Free Mode Queue Too Long? Change Your Strategy - Cheaper and Faster

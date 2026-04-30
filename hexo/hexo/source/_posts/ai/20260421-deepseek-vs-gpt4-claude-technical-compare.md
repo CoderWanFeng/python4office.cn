@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 ![技术深度对比：DeepSeek-V3 vs GPT-4o vs Claude 3.5，谁是最强代码模型？](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![技术深度对比：DeepSeek-V3 vs GPT-4o vs Claude 3.5，谁是最强代码模型？](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![技术深度对比：DeepSeek-V3 vs GPT-4o vs Claude 3.5，谁是最强代码模型？](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 # 技术深度对比：DeepSeek-V3 vs GPT-4o vs Claude 3.5，谁是最强代码模型？

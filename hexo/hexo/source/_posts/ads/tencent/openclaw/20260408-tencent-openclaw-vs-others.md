@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![对比了5款AI助手方案后，我选择了腾讯云OpenClaw｜4月10日郑州分享选型心得](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![对比了5款AI助手方案后，我选择了腾讯云OpenClaw｜4月10日郑州分享选型心得](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 ![对比了5款AI助手方案后，我选择了腾讯云OpenClaw｜4月10日郑州分享选型心得](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 

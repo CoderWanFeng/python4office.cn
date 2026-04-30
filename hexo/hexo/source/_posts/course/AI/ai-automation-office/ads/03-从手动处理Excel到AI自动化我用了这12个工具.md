@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 
 ![从手动处理Excel到AI自动化我用了这12个工具](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![从手动处理Excel到AI自动化我用了这12个工具](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![从手动处理Excel到AI自动化我用了这12个工具](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

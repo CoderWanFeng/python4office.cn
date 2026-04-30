@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![Python入门后，你最该掌握的5个技能](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python入门后，你最该掌握的5个技能](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 ![Python入门后，你最该掌握的5个技能](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 

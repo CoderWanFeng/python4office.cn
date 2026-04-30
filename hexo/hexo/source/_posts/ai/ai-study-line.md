@@ -2,7 +2,7 @@
 title: ai-study-line
 date: 2022-12-15 02:38:37
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![ai-study-line](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![ai-study-line](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![ai-study-line](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 自动驾驶高精地图技术的现状和未来 https://www.bilibili.com/video/BV19o4y1k7T3

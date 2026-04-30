@@ -23,7 +23,7 @@ cover: https://images.unsplash.com/photo-1432888?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

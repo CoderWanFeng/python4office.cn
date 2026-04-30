@@ -2,7 +2,7 @@
 title: 还原复旦博士OCR代码
 date: 2022-04-21 18:28:13
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 <!-- more -->
 
 ![还原复旦博士OCR代码](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![还原复旦博士OCR代码](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![还原复旦博士OCR代码](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 # 
 

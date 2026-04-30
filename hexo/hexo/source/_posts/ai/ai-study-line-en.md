@@ -2,7 +2,7 @@
 title: AI Study Line
 date: 2022-12-15 02:38:37
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 <!-- more -->
 
 ![AI Study Line](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![AI Study Line](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI Study Line](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 Autonomous Driving High-Precision Map Technology Current Status and Future https://www.bilibili.com/video/BV19o4y1k7T3
 

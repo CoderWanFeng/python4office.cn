@@ -3,11 +3,11 @@ title: 第1讲：为什么AI自动化办公是普通人的最佳机会
 date: 2026-04-16 17:02:00
 tags: [AI自动化，办公效率，职场提升]
 categories: [AI自动化办公12讲]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
 
-![第1讲：为什么AI自动化办公是普通人的最佳机会](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![第1讲：为什么AI自动化办公是普通人的最佳机会](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 ![第1讲：为什么AI自动化办公是普通人的最佳机会](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 

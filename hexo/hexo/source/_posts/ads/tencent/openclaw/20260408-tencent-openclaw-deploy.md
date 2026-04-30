@@ -13,7 +13,7 @@ tags:
 - 微信机器人
 - 智能助手
 - 程序员晚枫
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 
 <!-- more -->
 
-![腾讯云OpenClaw来了！云端一键部署AI助手，还能接入微信](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![腾讯云OpenClaw来了！云端一键部署AI助手，还能接入微信](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 

@@ -12,7 +12,7 @@ tags:
 - 省钱
 categories:
 - AI工具
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -28,7 +28,7 @@ Claude涨价、Copilot涨价、Cursor涨价——程序员们正在经历一场"
 
 <!-- more -->
 
-![为什么Claude和Copilot越来越贵？国内程序员的应对策略](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![为什么Claude和Copilot越来越贵？国内程序员的应对策略](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 ![为什么Claude和Copilot越来越贵？国内程序员的应对策略](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 

@@ -11,7 +11,7 @@ tags:
 - 学习指南
 categories:
 - 教程
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -28,7 +28,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 <!-- more -->
 
 ![学生党必看：我是如何用腾讯云Token Plan从零开始学AI编程的](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![学生党必看：我是如何用腾讯云Token Plan从零开始学AI编程的](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![学生党必看：我是如何用腾讯云Token Plan从零开始学AI编程的](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 ## 🤔 为什么学生更需要 AI 编程工具？

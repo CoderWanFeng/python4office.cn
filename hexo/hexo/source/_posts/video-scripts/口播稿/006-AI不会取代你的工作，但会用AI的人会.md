@@ -9,12 +9,12 @@ tags:
 categories:
 - 视频文案库
 description: 短视频逐字脚本 | 时长60-90s | 全平台通用
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 <!-- more -->
 
-![006 | 为什么说AI不会取代你的工作？真相扎心了](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![006 | 为什么说AI不会取代你的工作？真相扎心了](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>

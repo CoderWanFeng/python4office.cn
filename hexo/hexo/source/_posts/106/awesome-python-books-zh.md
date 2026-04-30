@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![如果有人让你推荐 Python 经典书，请让他看这个列表](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![如果有人让你推荐 Python 经典书，请让他看这个列表](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 ![如果有人让你推荐 Python 经典书，请让他看这个列表](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 好的技术书籍可以帮助我们快速地成长，大部分人或多或少地受益于经典的技术书籍。在[「Python图书馆」](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)微信公号后台，我们经常能收到让帮忙推荐书籍的消息。

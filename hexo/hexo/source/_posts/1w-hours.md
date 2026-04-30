@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&
 <!-- more -->
 
 ![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 > 一万小时定律是作家格拉德威尔在《异类》一书中指出的定律。**“人们眼中的天才之所以卓越非凡，并非天资超人一等，而是付出了持续不断的努力。1万小时的锤炼是任何人从平凡变成世界级大师的必要条件。**”他将此称为“一万小时定律”。
 

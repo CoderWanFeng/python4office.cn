@@ -18,7 +18,7 @@ cover: /img/ai/x-app-opportunity.jpg
 
 <!-- more -->
 
-![马斯克X应用开放平台，这是普通人年入百万的机会吗？](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![马斯克X应用开放平台，这是普通人年入百万的机会吗？](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![马斯克X应用开放平台，这是普通人年入百万的机会吗？](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 马斯克X应用开放平台，这是普通人年入百万的机会吗？

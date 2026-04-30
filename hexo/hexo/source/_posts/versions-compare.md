@@ -2,7 +2,7 @@
 title: Python一共有多少个版本？不同Python版本之间，究竟有什么区别？
 date: 2022-02-14 14:12:20
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
 
@@ -62,7 +62,7 @@ Python3和Python2，是兼容性非常低的一次大的版本升级。作为新
 <!-- more -->
 
 ![Python一共有多少个版本？不同Python版本之间，究竟有什么区别？](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Python一共有多少个版本？不同Python版本之间，究竟有什么区别？](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python一共有多少个版本？不同Python版本之间，究竟有什么区别？](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 
 

@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![毕业校招，不是计算机专业，能在深圳找到实习吗？](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![毕业校招，不是计算机专业，能在深圳找到实习吗？](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![毕业校招，不是计算机专业，能在深圳找到实习吗？](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 今晚的沟通主要围绕如何在深圳找到实习机会展开。考虑到你并非计算机专业，但仍有机会在深圳找到合适的实习岗位。以下是一些建议和步骤：

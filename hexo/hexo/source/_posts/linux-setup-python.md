@@ -18,7 +18,7 @@ wget https://www.python.org/ftp/python/3.9.10/Python-3.9.10.tgz
 
 <!-- more -->
 
-![Linux上安装Python](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Linux上安装Python](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 ![Linux上安装Python](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 3、make

@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 <!-- more -->
 
 ![给非程序员的Python入门课，0基础适用（课程资料）](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![给非程序员的Python入门课，0基础适用（课程资料）](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![给非程序员的Python入门课，0基础适用（课程资料）](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 本页内容，已经升级为以下链接👇
 

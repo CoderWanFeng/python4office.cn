@@ -3,12 +3,12 @@ title: AI不会取代你的工作，但会用AI的人会
 date: 2026-04-29 18:00:00
 tags: ["公众号文章", "AI", "职场发展", "避坑指南"]
 categories: ["公众号文章"]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 <!-- more -->
 
-![AI不会取代你的工作，但会用AI的人会](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI不会取代你的工作，但会用AI的人会](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>

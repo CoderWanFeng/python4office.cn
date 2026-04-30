@@ -9,7 +9,7 @@ tags:
 - 省钱攻略
 categories:
 - AI工具
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -24,7 +24,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 <!-- more -->
 
 ![为什么最近程序员的AI编程工具都在集体涨价？](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![为什么最近程序员的AI编程工具都在集体涨价？](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![为什么最近程序员的AI编程工具都在集体涨价？](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 ## 🚨 这波涨价有多猛？

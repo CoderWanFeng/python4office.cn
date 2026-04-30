@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Python 3.12 抢先看——关于 f-string 的改动](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python 3.12 抢先看——关于 f-string 的改动](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 ![Python 3.12 抢先看——关于 f-string 的改动](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## 相关阅读

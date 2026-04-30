@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![转行程序员3年后，我更坚定了！](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![转行程序员3年后，我更坚定了！](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![转行程序员3年后，我更坚定了！](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 你好，我是在重庆的程序员晚枫，今天讲讲自己的经历。个人微信👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)

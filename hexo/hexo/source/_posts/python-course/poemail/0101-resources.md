@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![6讲 · Python自动收发邮件（已完结）](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![6讲 · Python自动收发邮件（已完结）](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 感谢您付费购买《6讲Python自动收发邮件》，下面是课程的配套资料 + 专用答疑群，课程持续更新中。
 

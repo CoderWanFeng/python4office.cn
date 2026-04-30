@@ -2,7 +2,7 @@
 title: str-func
 date: 2022-07-14 18:07:30
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![str-func](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![str-func](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![str-func](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 45个方法

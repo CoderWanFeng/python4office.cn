@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 <!-- more -->
 
 ![财务 + Python的学习计划](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![财务 + Python的学习计划](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![财务 + Python的学习计划](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 # 一、方向在哪里
 

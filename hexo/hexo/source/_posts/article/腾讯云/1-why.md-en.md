@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![20 Platform Review! Which Platform is Best for Programmers to Write Articles and Earn Money?](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![20 Platform Review! Which Platform is Best for Programmers to Write Articles and Earn Money?](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 I've been doing self-media for 5 years, accumulating 300k+ followers across all platforms, and used dozens of platforms: [85 Self-Media Platforms and Monetization Guide (Strongly Recommended)](https://mp.weixin.qq.com/s/vG7AnDJ50KF-CbuserHPkA)
 

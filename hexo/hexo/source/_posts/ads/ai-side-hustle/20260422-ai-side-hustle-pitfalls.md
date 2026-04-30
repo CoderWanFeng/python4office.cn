@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 <!-- more -->
 
 ![AI副业避坑！别踩这10个坑，很多人都栽过](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
-![AI副业避坑！别踩这10个坑，很多人都栽过](https://images.unsplash.com/photo-149975031?w=800&h=400&fit=crop)
+![AI副业避坑！别踩这10个坑，很多人都栽过](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop)
 
 
 兄弟们！！！

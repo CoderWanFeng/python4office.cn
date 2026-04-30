@@ -2,7 +2,7 @@
 title: 人脸门禁系统
 date: 2022-11-20 01:01:33
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 

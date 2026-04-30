@@ -14,7 +14,7 @@ categories:
 - AI编程观察
 - 技术趋势
 author: 程序员晚枫
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 
 <!-- more -->
 
-![传统编程 vs AI编程：我做MBTI测试网站的亲身经历，效率差距太明显了](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![传统编程 vs AI编程：我做MBTI测试网站的亲身经历，效率差距太明显了](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 ![传统编程 vs AI编程：我做MBTI测试网站的亲身经历，效率差距太明显了](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

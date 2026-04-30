@@ -2,7 +2,7 @@
 title: 如何戒掉短视频？2个方法适合职场人，从未失败过
 date: 2022-08-30 00:15:55
 tags: [职场进阶, AI编程, AI提效]
-cover: https://images.unsplash.com/photo-149975031?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop
 ---
 
 

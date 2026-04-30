@@ -12,7 +12,7 @@ tags:
 - 性价比
 categories:
 - AI工具
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -31,7 +31,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 <!-- more -->
 
 ![Claude Code太贵？我把月费从500元压到了39元（腾讯云Token Plan攻略）](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![Claude Code太贵？我把月费从500元压到了39元（腾讯云Token Plan攻略）](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Claude Code太贵？我把月费从500元压到了39元（腾讯云Token Plan攻略）](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 ## 💰 先算笔账：你到底花了多少钱？

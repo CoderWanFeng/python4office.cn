@@ -2,7 +2,7 @@
 title: Python入门第一书：我带你3个项目从入门到实战，不学完不罢休
 date: 2026-04-28 23:54:00
 tags: [python,入门,书籍,课程,付费课程]
-cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf9355098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
 ---
 
 

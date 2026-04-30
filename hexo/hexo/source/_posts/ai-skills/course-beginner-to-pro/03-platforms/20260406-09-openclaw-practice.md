@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![第9讲：OpenClaw 实战：开发数据处理 Skill](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![第9讲：OpenClaw 实战：开发数据处理 Skill](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 # 第9讲：OpenClaw 实战：开发数据处理 Skill
 

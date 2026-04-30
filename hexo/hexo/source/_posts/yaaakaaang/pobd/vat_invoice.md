@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![告别手动录入！AI自动识别发票](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![告别手动录入！AI自动识别发票](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 <span style="font-size:20px;"><span style="color:#66a3e0;">最近有朋友向我吐槽："每天对着几十张发票手动录入系统，眼睛都快看花了，还总担心数字打错。" 这种重复性高、容错率低的工作，确实让财务和行政人员苦不堪言。作为程序员，我深知这类场景完全可以通过技术手段优化。 </span></span>
 

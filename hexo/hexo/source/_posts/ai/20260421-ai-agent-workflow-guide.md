@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 
 ![AI Agent浪潮来袭：2026年职场人必备的10个AI工具清单](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
-![AI Agent浪潮来袭：2026年职场人必备的10个AI工具清单](https://images.unsplash.com/photo-149975031?w=800&h=400&fit=crop)
+![AI Agent浪潮来袭：2026年职场人必备的10个AI工具清单](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop)
 
 
 # AI Agent浪潮来袭：2026年职场人必备的10个AI工具清单

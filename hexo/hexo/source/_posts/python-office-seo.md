@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![Python自动化办公与AI编程完全指南](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Python自动化办公与AI编程完全指南](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 ![Python自动化办公与AI编程完全指南](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 # Python自动化办公与AI编程完全指南

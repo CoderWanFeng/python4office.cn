@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 <!-- more -->
 
 ![京东云 JD Cloud Coding Plan 入门教程：从注册到用上 AI 编程（2026最新版）](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![京东云 JD Cloud Coding Plan 入门教程：从注册到用上 AI 编程（2026最新版）](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![京东云 JD Cloud Coding Plan 入门教程：从注册到用上 AI 编程（2026最新版）](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

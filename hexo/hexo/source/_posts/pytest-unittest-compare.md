@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![面试常问，必收藏：pytest和unittest两者的区别](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![面试常问，必收藏：pytest和unittest两者的区别](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![面试常问，必收藏：pytest和unittest两者的区别](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## 相关阅读

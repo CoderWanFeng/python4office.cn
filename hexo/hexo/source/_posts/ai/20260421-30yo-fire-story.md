@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![30岁，我被裁员了：那一夜，我终于想明白了一件事](https://images.unsplash.com/photo-149975031?w=800&h=400&fit=crop)
+![30岁，我被裁员了：那一夜，我终于想明白了一件事](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop)
 ![30岁，我被裁员了：那一夜，我终于想明白了一件事](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 

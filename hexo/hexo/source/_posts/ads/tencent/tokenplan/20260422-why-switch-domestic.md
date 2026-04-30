@@ -28,7 +28,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 <!-- more -->
 
 ![为什么程序员都在转向国内AI编程工具？一位老用户的真实心路](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![为什么程序员都在转向国内AI编程工具？一位老用户的真实心路](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![为什么程序员都在转向国内AI编程工具？一位老用户的真实心路](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 ## 😤 一年前的我：非官方不用

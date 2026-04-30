@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 <!-- more -->
 
 ![AI Agent是什么？2026年最火赛道，5分钟给你讲明白](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![AI Agent是什么？2026年最火赛道，5分钟给你讲明白](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI Agent是什么？2026年最火赛道，5分钟给你讲明白](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 
 等等！

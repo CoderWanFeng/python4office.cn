@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 <!-- more -->
 
 ![OpenClaw Tops GitHub Global Trending! The Story Behind 248k Stars](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![OpenClaw Tops GitHub Global Trending! The Story Behind 248k Stars](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![OpenClaw Tops GitHub Global Trending! The Story Behind 248k Stars](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 # OpenClaw Tops GitHub Global Trending! The Story Behind 248k Stars
 

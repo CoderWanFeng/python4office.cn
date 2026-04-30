@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![关于我 - 程序员晚枫](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![关于我 - 程序员晚枫](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 
 <div align="center">

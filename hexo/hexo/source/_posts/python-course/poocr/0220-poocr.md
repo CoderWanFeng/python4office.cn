@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![OCR批量识别，Python版（已完结）](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![OCR批量识别，Python版（已完结）](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 > 友情提示：课程持续更新中，请一定要添加我的微信👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)，我来给你提供课程最新资料
 

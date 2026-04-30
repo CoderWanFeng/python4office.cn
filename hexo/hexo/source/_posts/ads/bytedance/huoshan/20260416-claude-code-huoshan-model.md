@@ -12,7 +12,7 @@ tags:
 - 模型配置
 categories:
 - AI工具
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -29,7 +29,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 <!-- more -->
 
 ![Claude Code国内能装但用不了？接上火山方舟的模型，真香！](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![Claude Code国内能装但用不了？接上火山方舟的模型，真香！](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Claude Code国内能装但用不了？接上火山方舟的模型，真香！](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 ## 🤔 先搞清楚：Claude Code 是什么？

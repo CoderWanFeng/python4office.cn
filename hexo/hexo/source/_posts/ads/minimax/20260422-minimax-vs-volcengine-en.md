@@ -22,7 +22,7 @@ keywords:
 - 字节跳动AI工具
 - AI编程工具对比
 - 程序员AI助手
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop
 ---
 
 
@@ -31,7 +31,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 <!-- more -->
 
 ![MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![MiniMax TOKEN Plan vs 火山方舟Coding Plan：字节系AI编程工具深度对比](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 # MiniMax TOKEN Plan vs 火山方舟 Coding Plan：字节系AI编程工具深度对比

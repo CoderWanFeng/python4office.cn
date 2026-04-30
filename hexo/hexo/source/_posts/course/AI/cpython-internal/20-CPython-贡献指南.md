@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![第 20 讲：CPython 贡献指南——参与开源的正确姿势](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![第 20 讲：CPython 贡献指南——参与开源的正确姿势](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 ![第 20 讲：CPython 贡献指南——参与开源的正确姿势](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 

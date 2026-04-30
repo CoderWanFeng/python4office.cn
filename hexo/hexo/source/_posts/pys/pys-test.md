@@ -2,7 +2,7 @@
 title: pys-test
 date: 2022-12-17 03:16:55
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 <!-- more -->
 
 ![pys-test](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![pys-test](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![pys-test](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 ## 相关阅读
 

@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 <!-- more -->
 
 ![《50讲 · Python自动化办公》 - 录制流程](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![《50讲 · Python自动化办公》 - 录制流程](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![《50讲 · Python自动化办公》 - 录制流程](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 大家久等了，我给说一下我录制这套课程的流程，内容包含：
 

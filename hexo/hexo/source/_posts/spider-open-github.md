@@ -2,7 +2,7 @@
 title: 23个Python爬虫开源项目代码：微信、淘宝、豆瓣、知乎、微博...
 date: 2022-11-30 20:43:07
 tags: [Python, Python自动化, AI编程, Python爬虫]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
 

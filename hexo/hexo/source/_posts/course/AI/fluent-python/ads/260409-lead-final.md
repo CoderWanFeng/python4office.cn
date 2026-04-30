@@ -43,7 +43,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 三个问题，说明这个差距具体在哪里：
 
-![自以为Python还行](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![自以为Python还行](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 ---
 
@@ -137,7 +137,7 @@ Flask 的路由装饰器、Django 的 ORM 字段、asyncio 的事件循环……
 **第三，面试不怕追问。**
 面试官问深一层，不是因为他们刻意刁难，而是他们想确认你是真的理解了这个机制，而不是只背了结论。
 
-![自以为Python还行](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![自以为Python还行](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 ---
 

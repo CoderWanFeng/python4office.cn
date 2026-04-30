@@ -15,12 +15,12 @@ tags: [Python, AI编程]
 - AI零基础
 order: 0
 description: 2026年AI入门必读！程序员晚枫用大白话整理29个AI核心概念，附三阶段学习路径。收藏这篇，看新闻不再懵。
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
 ![2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 
 

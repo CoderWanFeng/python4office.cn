@@ -35,7 +35,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 鐭ヨ瘑鍙槸"鐪嬭繃"锛屼笉鐢ㄤ笉璁ㄨ涓嶈緭鍑猴紝灏变細寰堝揩閬楀繕銆傜嫭鑷涔犵己涔忓弽棣堬紝寰堝涓滆タ"鐪嬫噦浜?浣嗘病鏈夌湡姝ｅ唴鍖栥€?
 
-![找到想认真学Python的人](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![找到想认真学Python的人](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 ---
@@ -48,7 +48,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 閭ｄ竴涓皬鏃讹紝澶у瀛︾殑姣旂嫭鑷椃澶磋涓€鍛ㄦ洿鎵庡疄銆傝繖灏辨槸**鍏辫鐨勫姏閲?*鈥斺€旀湁浜洪櫔鐫€浣犳€濊€冿紝姣旇嚜宸辩‖鍟冩湁鏁堝緱澶氥€?
 
-![找到想认真学Python的人](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![找到想认真学Python的人](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 
 ---

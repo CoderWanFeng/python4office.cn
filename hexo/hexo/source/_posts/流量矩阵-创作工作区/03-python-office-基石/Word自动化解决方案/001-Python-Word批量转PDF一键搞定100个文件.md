@@ -5,11 +5,11 @@ tags: [Python, Word, PDF, 批量转换]
 keywords: [python word转pdf, python批量转换word, python docx转pdf]
 description: 使用Python批量将Word文档转换为PDF，一键搞定100个文件，附完整代码下载。
 categories: [Word自动化解决方案]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
 
-![Python Word批量转PDF，一键搞定100个文件](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python Word批量转PDF，一键搞定100个文件](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 ![Python Word批量转PDF，一键搞定100个文件](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 

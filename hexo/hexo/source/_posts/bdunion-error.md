@@ -2,7 +2,7 @@
 title: bdunion-error
 date: 2022-09-04 22:46:10
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 <!-- more -->
 
 ![bdunion-error](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![bdunion-error](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![bdunion-error](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 许多朋友都用过百度联盟，不过，我相信好多朋友都会遇到过这种情况，不管你的网站是备案了还是没备案，你在申请百度联盟的时候都会遇到网站验证不成功的问题，提示获取验证文件失败或文件错误，请您确认正确放置后，再次点击“完成验证”按钮，如下图：
 

@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![人在杭州，没有优势如何转行程序员？](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![人在杭州，没有优势如何转行程序员？](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![人在杭州，没有优势如何转行程序员？](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 今晚是一位大哥的沟通，学历也没有优势，但是想转行程序员。

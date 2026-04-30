@@ -6,7 +6,7 @@ tags: [50讲Python自动化办公]
 
 <!-- more -->
 
-![20250729安全又免一行Python指令让PDF水印立刻到位.md](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![20250729安全又免一行Python指令让PDF水印立刻到位.md](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 
 

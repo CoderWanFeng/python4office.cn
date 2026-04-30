@@ -73,7 +73,7 @@ class Config:
 
 这些东西，网上的教程其实都有，但分散、零碎、语焉不详。这本书是我见过讲得最系统的。
 
-![写了5年Python坏习惯](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![写了5年Python坏习惯](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 ---
 
@@ -109,7 +109,7 @@ def my_generator(n):
 
 更重要的是：**我对 Python 的理解，从"使用者"升级到了"理解者"。**
 
-![写了5年Python坏习惯](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![写了5年Python坏习惯](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 ---
 

@@ -49,7 +49,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ✅ **配套练习**
 读完不等于学会，每周还有配套练习帮你把知识内化。
 
-![流畅的Python共读营正式开营](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![流畅的Python共读营正式开营](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 ---
 
@@ -80,7 +80,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ⚠️ **如果你只是想找一份速成教程，那不适合你。**
 
-![流畅的Python共读营正式开营](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![流畅的Python共读营正式开营](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 ---
 

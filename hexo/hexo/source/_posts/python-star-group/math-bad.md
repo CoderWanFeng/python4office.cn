@@ -2,7 +2,7 @@
 title: 数学不好，能学编程吗？
 date: 2022-08-16 16:06:37
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
@@ -23,7 +23,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![数学不好，能学编程吗？](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![数学不好，能学编程吗？](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
 ## 1、编程本身和数学的关系

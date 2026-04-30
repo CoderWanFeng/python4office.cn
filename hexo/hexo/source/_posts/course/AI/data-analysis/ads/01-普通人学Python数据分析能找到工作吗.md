@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 ![普通人学Python数据分析，能找到工作吗？](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![普通人学Python数据分析，能找到工作吗？](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![普通人学Python数据分析，能找到工作吗？](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 
 # 普通人学Python数据分析，能找到工作吗？

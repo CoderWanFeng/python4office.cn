@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![学习Python，必须安装的几个软件](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![学习Python，必须安装的几个软件](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 ![学习Python，必须安装的几个软件](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## 相关阅读

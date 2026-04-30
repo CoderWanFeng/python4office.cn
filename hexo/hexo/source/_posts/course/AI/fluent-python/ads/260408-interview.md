@@ -43,7 +43,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 《流畅的 Python（第2版）》，就是那本让面试官和候选人都绕不开的书——它正面回答了几乎所有高频面试考点，而且回答的方式，比任何题库都更透彻。
 
-![背了三个月八股文](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![背了三个月八股文](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 ---
 
@@ -77,7 +77,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 配套深度解读文章，帮你梳理、记忆、形成自己的笔记
 - 专属学习群，遇到卡点随时问，有人陪着你一起走
 
-![背了三个月八股文](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![背了三个月八股文](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 ---
 

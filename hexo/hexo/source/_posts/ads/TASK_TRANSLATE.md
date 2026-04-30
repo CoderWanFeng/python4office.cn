@@ -1,5 +1,5 @@
 ![TASK_TRANSLATE.md](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![TASK_TRANSLATE.md](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![TASK_TRANSLATE.md](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 # 批量翻译任务说明
 
 ## 目标

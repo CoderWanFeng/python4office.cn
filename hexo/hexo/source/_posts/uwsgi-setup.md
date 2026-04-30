@@ -2,7 +2,7 @@
 title: uwsgi-setup
 date: 2022-03-16 09:48:50
 tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
 
 
@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 <!-- more -->
 
 ![uwsgi-setup](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![uwsgi-setup](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![uwsgi-setup](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 
 服务器超时
 https://blog.csdn.net/ch_improve/article/details/104203272/
