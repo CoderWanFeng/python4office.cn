@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 
 <!-- more -->
 
-![什么是大数据抓嫖？看完一身冷汗，普通人也跑不了 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是大数据抓嫖？看完一身冷汗，普通人也跑不了](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 什么是大数据抓嫖？看完一身冷汗，普通人也跑不了
 

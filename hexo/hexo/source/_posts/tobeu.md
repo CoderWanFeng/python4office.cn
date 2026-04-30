@@ -1,17 +1,17 @@
 ---
-title: "刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功"
+title: 刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功
 date: 2021-01-06 14:04:09
 tags: ["学习方法", "刻意练习", "程序员成长", "一万小时定律", "编程学习"]
 categories: ["学习方法"]
-description: "一万小时定律真的有用吗？程序员晚枫告诉你：刻意练习比1万小时更重要。附编程学习正确姿势和实用建议。"
+description: 一万小时定律真的有用吗？程序员晚枫告诉你：刻意练习比1万小时更重要。附编程学习正确姿势和实用建议。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 # 刻意练习比1万小时更重要！程序员告诉你为什么努力不一定成功
 

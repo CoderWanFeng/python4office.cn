@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![开发功能简单的联网APP，学习计划 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![开发功能简单的联网APP，学习计划](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 # 1、整体思路
 

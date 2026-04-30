@@ -49,6 +49,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ✅ **配套练习**
 读完不等于学会，每周还有配套练习帮你把知识内化。
 
+![流畅的Python共读营正式开营](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+
 ---
 
 ## 20周内容安排
@@ -77,6 +79,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 想系统提升Python水平，从会用走到精通的。
 
 ⚠️ **如果你只是想找一份速成教程，那不适合你。**
+
+![流畅的Python共读营正式开营](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 ---
 

@@ -6,8 +6,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![同事花3小时合并Excel我用Python只用了30秒 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
-![同事花3小时合并Excel我用Python只用了30秒 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![同事花3小时合并Excel我用Python只用了30秒](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![同事花3小时合并Excel我用Python只用了30秒](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 大家好，这里是程序员晚枫，专注Python自动化办公5年了。

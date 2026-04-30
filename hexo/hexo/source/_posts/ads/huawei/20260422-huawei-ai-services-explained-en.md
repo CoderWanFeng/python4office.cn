@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![Huawei Cloud Temporarily Has No Coding Plan? But These AI Services Are Worth Developers' Attention - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![Huawei Cloud Temporarily Has No Coding Plan? But These AI Services Are Worth Developers' Attention - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Huawei Cloud Temporarily Has No Coding Plan? But These AI Services Are Worth Developers' Attention](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Huawei Cloud Temporarily Has No Coding Plan? But These AI Services Are Worth Developers' Attention](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **Article Author: 程序员晚枫 | AI Programming Advocate | Specializing in AI Tool Reviews & Teaching**

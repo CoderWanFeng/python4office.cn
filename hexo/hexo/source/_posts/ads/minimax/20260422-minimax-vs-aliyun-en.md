@@ -1,5 +1,5 @@
 ---
-title: "MiniMax TOKEN Plan vs 阿里云百炼 Coding Plan：2026年最全对比测评"
+title: MiniMax TOKEN Plan vs 阿里云百炼 Coding Plan：2026年最全对比测评
 date: 2026-04-22 00:00:00
 categories:
 - AI工具横评
@@ -14,7 +14,7 @@ tags:
 - TOKEN Plan
 - 价格对比
 - 2026
-description: "2026年最新！MiniMax TOKEN Plan和阿里云百炼Coding Plan哪个更划算？从价格、模型、额度、适用场景全面对比测评"
+description: 2026年最新！MiniMax TOKEN Plan和阿里云百炼Coding Plan哪个更划算？从价格、模型、额度、适用场景全面对比测评
 keywords:
 - MiniMax TOKEN Plan
 - 阿里云百炼 Coding Plan
@@ -29,8 +29,8 @@ cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=
 
 <!-- more -->
 
-![MiniMax TOKEN Plan vs 阿里云百炼 Coding Plan：2026年最全对比测评 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![MiniMax TOKEN Plan vs 阿里云百炼 Coding Plan：2026年最全对比测评 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![MiniMax TOKEN Plan vs 阿里云百炼 Coding Plan：2026年最全对比测评](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![MiniMax TOKEN Plan vs 阿里云百炼 Coding Plan：2026年最全对比测评](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 # MiniMax TOKEN Plan vs 阿里云百炼 Coding Plan：2026年最全对比测评

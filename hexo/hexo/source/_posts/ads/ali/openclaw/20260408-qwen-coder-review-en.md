@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![Actual Measurement of Tongyi Qianwen's Code Capabilities: How Strong is the Qwen3-Coder Series Really? - 配图1](https://images.unsplash.com/photo-145118685?w=800&h=400&fit=crop)
+![Actual Measurement of Tongyi Qianwen's Code Capabilities: How Strong is the Qwen3-Coder Series Really?](https://images.unsplash.com/photo-145118685?w=800&h=400&fit=crop)
 
 Hello everyone, this is Programmer Wanfeng.
 

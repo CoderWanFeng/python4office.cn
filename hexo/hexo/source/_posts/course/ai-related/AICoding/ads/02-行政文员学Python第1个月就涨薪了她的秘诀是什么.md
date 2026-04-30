@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![行政文员学Python，第1个月就涨薪了，她的秘诀是什么 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![行政文员学Python，第1个月就涨薪了，她的秘诀是什么 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![行政文员学Python，第1个月就涨薪了，她的秘诀是什么](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![行政文员学Python，第1个月就涨薪了，她的秘诀是什么](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 
 # 行政文员学Python，第1个月就涨薪了，她的秘诀是什么

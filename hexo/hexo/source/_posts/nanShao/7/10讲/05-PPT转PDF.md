@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![05-PPT转PDF - 配图1](https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop)
-![05-PPT转PDF - 配图2](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
+![05-PPT转PDF](https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop)
+![05-PPT转PDF](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 哈喽，大家好，今天开始学习我们的第5讲，用Python代码将PPT文件转换成PDF文件。
 

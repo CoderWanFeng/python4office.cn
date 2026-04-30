@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![数字化转型50讲 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![数字化转型50讲 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![数字化转型50讲](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![数字化转型50讲](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 - 信通院院长：https://www.bilibili.com/video/BV1uq4y1a7r8
     - 边缘计算、数字孪生、工业模型、低代码工具

@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![5 AI Keywords with Exploding Search Volume in 2026 - #2 Will Surprise You! - 配图1](https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop)
-![5 AI Keywords with Exploding Search Volume in 2026 - #2 Will Surprise You! - 配图2](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
+![5 AI Keywords with Exploding Search Volume in 2026 - #2 Will Surprise You!](https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop)
+![5 AI Keywords with Exploding Search Volume in 2026 - #2 Will Surprise You!](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 5 AI Keywords with Exploding Search Volume in 2026 - #2 Will Surprise You!
 

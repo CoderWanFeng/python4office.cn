@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![华为没有 Coding Plan？百度智能云可能是代码能力最强的选择 - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
-![华为没有 Coding Plan？百度智能云可能是代码能力最强的选择 - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![华为没有 Coding Plan？百度智能云可能是代码能力最强的选择](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![华为没有 Coding Plan？百度智能云可能是代码能力最强的选择](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

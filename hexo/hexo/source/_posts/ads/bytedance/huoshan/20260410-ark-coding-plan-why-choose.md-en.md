@@ -25,8 +25,8 @@ I've been using Volcano Ark Coding Plan for 3 months, today sincerely sharing wh
 
 <!-- more -->
 
-![Why I Choose Volcano Ark Coding Plan? A Programmer's Sincere Sharing - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Why I Choose Volcano Ark Coding Plan? A Programmer's Sincere Sharing - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![Why I Choose Volcano Ark Coding Plan? A Programmer's Sincere Sharing](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Why I Choose Volcano Ark Coding Plan? A Programmer's Sincere Sharing](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 ## My Background

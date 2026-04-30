@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Alibaba Cloud Bailian vs Volcano Ark: 29 Yuan vs 36 Yuan, What's the 7 Yuan Difference? - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![Alibaba Cloud Bailian vs Volcano Ark: 29 Yuan vs 36 Yuan, What's the 7 Yuan Difference? - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Alibaba Cloud Bailian vs Volcano Ark: 29 Yuan vs 36 Yuan, What's the 7 Yuan Difference?](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![Alibaba Cloud Bailian vs Volcano Ark: 29 Yuan vs 36 Yuan, What's the 7 Yuan Difference?](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **Author: Programmer Wanfeng | AI Programming Evangelist | Focus on AI Tool Evaluation and Teaching**

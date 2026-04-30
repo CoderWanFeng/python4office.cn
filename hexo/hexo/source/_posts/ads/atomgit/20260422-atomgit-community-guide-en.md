@@ -1,17 +1,17 @@
 ---
-title: "AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~"
+title: AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~
 date: 2026-04-22 00:00:00
 tags: ["atomgit", "ai programming", "community"]
 categories: ["AI Tools"]
-description: "AtomGit AI Programming Community Entry Guide! Step-by-step to join~"
+description: AtomGit AI Programming Community Entry Guide! Step-by-step to join~
 cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~ - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~ - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 Brothers!!!

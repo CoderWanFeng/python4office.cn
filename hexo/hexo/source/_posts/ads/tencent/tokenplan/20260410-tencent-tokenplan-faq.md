@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![腾讯云TOKEN Plan常见问题FAQ：CODING Plan用户最关心的20个问题 - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![腾讯云TOKEN Plan常见问题FAQ：CODING Plan用户最关心的20个问题 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![腾讯云TOKEN Plan常见问题FAQ：CODING Plan用户最关心的20个问题](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![腾讯云TOKEN Plan常见问题FAQ：CODING Plan用户最关心的20个问题](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 

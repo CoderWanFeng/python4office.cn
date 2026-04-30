@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![通义千问代码能力实测：Qwen3-Coder系列到底有多强？ - 配图1](https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800)
+![通义千问代码能力实测：Qwen3-Coder系列到底有多强？](https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 大家好，这里是程序员晚枫。
 

@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&
 
 <!-- more -->
 
-![收藏！Python操作微信机器人，总结了10个常见问题 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![收藏！Python操作微信机器人，总结了10个常见问题 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![收藏！Python操作微信机器人，总结了10个常见问题](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![收藏！Python操作微信机器人，总结了10个常见问题](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，已经发布了2个月了，大家在学习过程中产生了一些问题，今天这篇文章 统一给大家回复一下~
 

@@ -1,5 +1,5 @@
 ---
-title: "程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？"
+title: 程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？
 date: 2026-04-22 00:00:00
 categories:
 - AI工具评测
@@ -13,7 +13,7 @@ tags:
 - 推荐
 - 程序员
 - 晚枫
-description: "程序员晚枫推荐：这款 AI 助手按次收费、响应快、24小时在线，29元/月就能用"
+description: 程序员晚枫推荐：这款 AI 助手按次收费、响应快、24小时在线，29元/月就能用
 cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
 ---
 
@@ -22,8 +22,8 @@ cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=
 
 <!-- more -->
 
-![程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？ - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？ - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 # 程序员晚枫推荐的 AI 助手：MiniMax TOKEN Plan 到底好在哪？

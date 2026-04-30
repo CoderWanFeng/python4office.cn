@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![Huawei Doesn't Have Coding Plan? Baidu Smart Cloud May Be the Choice with Strongest Code Capability - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![Huawei Doesn't Have Coding Plan? Baidu Smart Cloud May Be the Choice with Strongest Code Capability - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Huawei Doesn't Have Coding Plan? Baidu Smart Cloud May Be the Choice with Strongest Code Capability](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Huawei Doesn't Have Coding Plan? Baidu Smart Cloud May Be the Choice with Strongest Code Capability](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**

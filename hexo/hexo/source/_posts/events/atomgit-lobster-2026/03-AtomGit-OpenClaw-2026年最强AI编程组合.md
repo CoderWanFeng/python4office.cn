@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 ---
 
 
-![AtomGit + OpenClaw = 2026年最强AI编程组合 - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![AtomGit + OpenClaw = 2026年最强AI编程组合 - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![AtomGit + OpenClaw = 2026年最强AI编程组合](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![AtomGit + OpenClaw = 2026年最强AI编程组合](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 
 > 大家好，我是程序员晚枫。

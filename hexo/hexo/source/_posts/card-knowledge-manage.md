@@ -1,9 +1,9 @@
 ---
-title: "氢刻Heti卡片笔记工具 | 最好用的记忆卡片App(支持电脑手机)"
+title: 氢刻Heti卡片笔记工具 | 最好用的记忆卡片App(支持电脑手机)
 date: 2022-02-24 13:54:41
 tags: ["氢刻", "卡片笔记", "记忆工具", "Anki替代", "知识管理", "学习工具"]
 categories: ["效率工具"]
-description: "氢刻Heti - 全新的卡片式知识管理工具，支持记忆曲线复习、电脑手机多端同步。替代Anki的最佳选择，附详细使用教程。"
+description: 氢刻Heti - 全新的卡片式知识管理工具，支持记忆曲线复习、电脑手机多端同步。替代Anki的最佳选择，附详细使用教程。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 

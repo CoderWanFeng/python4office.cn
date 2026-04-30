@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![Top 10 Domestic Cloud Server Providers - How Many Have You Used? - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Top 10 Domestic Cloud Server Providers - How Many Have You Used? - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![Top 10 Domestic Cloud Server Providers - How Many Have You Used?](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Top 10 Domestic Cloud Server Providers - How Many Have You Used?](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 AI helped me make money again!
 

@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![Python真难！！！ - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python真难！！！](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，[https://www.python4office.cn/wechat-qrcode/Python读者圈](https://www.bilibili.com/video/BV1sd4y1c7T9)
 

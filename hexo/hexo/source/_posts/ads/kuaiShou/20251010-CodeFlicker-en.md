@@ -1,5 +1,5 @@
 ---
-title: "Kuaishou Also Made an AI Programming Tool? The Ambition Behind CodeFlicker Entering the Developer Track"
+title: Kuaishou Also Made an AI Programming Tool? The Ambition Behind CodeFlicker Entering the Developer Track
 date: 2025-10-10 02:24:04
 tags: ["AI Programming"]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop

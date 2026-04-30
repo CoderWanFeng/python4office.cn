@@ -15,8 +15,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![AI Writing Monetization! From 0 to 1, You'll Know How to Start After Reading This - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![AI Writing Monetization! From 0 to 1, You'll Know How to Start After Reading This - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI Writing Monetization! From 0 to 1, You'll Know How to Start After Reading This](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI Writing Monetization! From 0 to 1, You'll Know How to Start After Reading This](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 Brothers!!!

@@ -18,8 +18,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![什么是AI音乐？文字生成音乐的魔法 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![什么是AI音乐？文字生成音乐的魔法 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是AI音乐？文字生成音乐的魔法](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![什么是AI音乐？文字生成音乐的魔法](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 
@@ -207,7 +207,7 @@ AI唱的歌，能商用吗？
 ```
 ✅ 让不懂音乐的人也能创作
 ✅ 降低音乐制作门槛
-✅ �普通人也能出"专辑"
+✅ 🎯普通人也能出"专辑"
 ✅ 音乐创作民主化
 ```
 

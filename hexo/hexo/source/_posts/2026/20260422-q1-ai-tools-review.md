@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![2026年Q1 AI工具大盘点！深挖5大爆款赛道 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![2026年Q1 AI工具大盘点！深挖5大爆款赛道 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![2026年Q1 AI工具大盘点！深挖5大爆款赛道](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![2026年Q1 AI工具大盘点！深挖5大爆款赛道](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 
 兄弟们！！！
@@ -155,7 +155,7 @@ VLOOKUP记不住，透视表不会用，几百行数据搞死人。
 
 ---
 
-## � 怎么快速上手？
+## 🄟 怎么快速上手？
 
 我把最常用的10个AI编程场景，整理成了一份指南。
 

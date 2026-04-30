@@ -1,5 +1,5 @@
 ---
-title: "006 | 为什么说AI不会取代你的工作？真相扎心了"
+title: 006 | 为什么说AI不会取代你的工作？真相扎心了
 date: 2026-04-29 18:00:00
 tags:
 - AI热点
@@ -8,13 +8,13 @@ tags:
 - 视频脚本
 categories:
 - 视频文案库
-description: "短视频逐字脚本 | 时长60-90s | 全平台通用"
+description: 短视频逐字脚本 | 时长60-90s | 全平台通用
 cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 ---
 
 <!-- more -->
 
-![006 | 为什么说AI不会取代你的工作？真相扎心了 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![006 | 为什么说AI不会取代你的工作？真相扎心了](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>

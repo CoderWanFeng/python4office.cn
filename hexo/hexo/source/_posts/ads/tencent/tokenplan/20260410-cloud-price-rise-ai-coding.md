@@ -22,8 +22,8 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![云计算终结20年降价史！AI算力涨价潮下，程序员如何用Coding Plan破局？ - 配图1](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
-![云计算终结20年降价史！AI算力涨价潮下，程序员如何用Coding Plan破局？ - 配图2](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![云计算终结20年降价史！AI算力涨价潮下，程序员如何用Coding Plan破局？](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![云计算终结20年降价史！AI算力涨价潮下，程序员如何用Coding Plan破局？](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者

@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![阿里太强了！用AI让兵马俑跳起了科目三(通义舞王，使用教程) - 配图1](https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800)
-![阿里太强了！用AI让兵马俑跳起了科目三(通义舞王，使用教程) - 配图2](https://images.unsplash.com/photo-145118685?w=800&h=400&fit=crop)
+![阿里太强了！用AI让兵马俑跳起了科目三(通义舞王，使用教程)](https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800)
+![阿里太强了！用AI让兵马俑跳起了科目三(通义舞王，使用教程)](https://images.unsplash.com/photo-145118685?w=800&h=400&fit=crop)
 
 大家赶紧去体验一下吧~👇
 

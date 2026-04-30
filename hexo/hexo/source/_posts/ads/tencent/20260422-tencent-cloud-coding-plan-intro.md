@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![腾讯云 Coding Plan 来了！腾讯混元+多模型支持，国内开发者的新选择 - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![腾讯云 Coding Plan 来了！腾讯混元+多模型支持，国内开发者的新选择 - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![腾讯云 Coding Plan 来了！腾讯混元+多模型支持，国内开发者的新选择](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![腾讯云 Coding Plan 来了！腾讯混元+多模型支持，国内开发者的新选择](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

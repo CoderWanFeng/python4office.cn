@@ -6,8 +6,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![Python为什么不能多线程加速？搞懂GIL只需这一篇 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Python为什么不能多线程加速？搞懂GIL只需这一篇 - 配图2](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python为什么不能多线程加速？搞懂GIL只需这一篇](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python为什么不能多线程加速？搞懂GIL只需这一篇](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

@@ -1,5 +1,5 @@
 ---
-title: "第3讲：Skill 的核心概念：Intent、Action、Tool"
+title: 第3讲：Skill 的核心概念：Intent、Action、Tool
 date: 2026-04-06 12:00:00
 tags: ["AI Skill", "入门", "核心概念"]
 categories: ["AI Skills 课程"]
@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![第3讲：Skill 的核心概念：Intent、Action、Tool - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![第3讲：Skill 的核心概念：Intent、Action、Tool](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 第3讲：Skill 的核心概念：Intent、Action、Tool
 

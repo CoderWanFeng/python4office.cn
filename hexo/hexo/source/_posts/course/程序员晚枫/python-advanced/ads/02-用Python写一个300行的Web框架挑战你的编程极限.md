@@ -6,8 +6,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![用Python写一个300行的Web框架挑战你的编程极限 - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![用Python写一个300行的Web框架挑战你的编程极限 - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![用Python写一个300行的Web框架挑战你的编程极限](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![用Python写一个300行的Web框架挑战你的编程极限](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![二维码绑定商品信息，实现动态更新 - 配图1](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+![二维码绑定商品信息，实现动态更新](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 以下是今晚的沟通总结，本链接永久有效，并且下次课程也会更新在这里面，请收藏关注。
 

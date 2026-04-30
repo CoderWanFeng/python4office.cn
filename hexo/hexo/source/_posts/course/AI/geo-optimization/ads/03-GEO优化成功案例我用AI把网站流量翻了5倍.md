@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![GEO优化成功案例：我用AI把网站流量翻了5倍 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![GEO优化成功案例：我用AI把网站流量翻了5倍 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![GEO优化成功案例：我用AI把网站流量翻了5倍](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![GEO优化成功案例：我用AI把网站流量翻了5倍](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 ## 一个真实的流量增长故事

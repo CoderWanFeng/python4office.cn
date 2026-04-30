@@ -1,5 +1,5 @@
 ---
-title: "Trae 免费版 vs 付费版：功能差距有多大？实测告诉你"
+title: Trae 免费版 vs 付费版：功能差距有多大？实测告诉你
 date: 2026-04-12 00:00:00
 categories:
 - AI工具评测
@@ -9,7 +9,7 @@ tags:
 - AI编程
 - 免费版
 - 付费版
-description: "Trae 免费版和付费版差在哪里？值不值得花钱升级？实测对比告诉你"
+description: Trae 免费版和付费版差在哪里？值不值得花钱升级？实测对比告诉你
 cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
 ---
 
@@ -18,8 +18,8 @@ cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=
 
 <!-- more -->
 
-![Trae 免费版 vs 付费版：功能差距有多大？实测告诉你 - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![Trae 免费版 vs 付费版：功能差距有多大？实测告诉你 - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![Trae 免费版 vs 付费版：功能差距有多大？实测告诉你](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![Trae 免费版 vs 付费版：功能差距有多大？实测告诉你](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 # Trae 免费版 vs 付费版：功能差距有多大？实测告诉你
 

@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![0代码半天上线！我用WorkBuddy做了个OPC一人商业闭环官网，普通人直接复刻就能赚钱 - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![0代码半天上线！我用WorkBuddy做了个OPC一人商业闭环官网，普通人直接复刻就能赚钱 - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![0代码半天上线！我用WorkBuddy做了个OPC一人商业闭环官网，普通人直接复刻就能赚钱](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![0代码半天上线！我用WorkBuddy做了个OPC一人商业闭环官网，普通人直接复刻就能赚钱](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

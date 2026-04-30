@@ -25,8 +25,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![小团队怎么用火山方舟Coding Plan？5人团队实战分享 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![小团队怎么用火山方舟Coding Plan？5人团队实战分享 - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![小团队怎么用火山方舟Coding Plan？5人团队实战分享](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![小团队怎么用火山方舟Coding Plan？5人团队实战分享](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 ## 团队配置方案

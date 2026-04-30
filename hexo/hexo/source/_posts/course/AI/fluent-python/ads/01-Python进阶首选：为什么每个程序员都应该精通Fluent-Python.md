@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![Python进阶首选：为什么每个程序员都应该精通Fluent Python - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
-![Python进阶首选：为什么每个程序员都应该精通Fluent Python - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python进阶首选：为什么每个程序员都应该精通Fluent Python](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python进阶首选：为什么每个程序员都应该精通Fluent Python](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > 大家好，我是程序员晚枫。
@@ -93,6 +93,8 @@ Fluent Python 是进阶内容，门槛稍高。
 想把Python写进简历？想在大厂面试中脱颖而出？
 
 Fluent Python 是加分项。
+
+![Python进阶首选](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 ---
 

@@ -8,8 +8,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![2023年想完成的事情 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![2023年想完成的事情 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![2023年想完成的事情](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![2023年想完成的事情](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 1. 提交Python源码
 2. C++学习

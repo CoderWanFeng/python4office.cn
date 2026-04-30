@@ -1,5 +1,5 @@
 ---
-title: "Auto Send Holiday Greetings with 1 Line of Python Code!"
+title: Auto Send Holiday Greetings with 1 Line of Python Code!
 date: 2023-09-30 15:50:11
 tags: WeChat Bot
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop

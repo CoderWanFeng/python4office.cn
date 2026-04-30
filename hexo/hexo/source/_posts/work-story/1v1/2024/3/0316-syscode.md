@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![从0开始，掌握优秀的Python嗅觉 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![从0开始，掌握优秀的Python嗅觉](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 今晚的沟通比较有意思，是一位外行的朋友想学一些转行的技能。
 

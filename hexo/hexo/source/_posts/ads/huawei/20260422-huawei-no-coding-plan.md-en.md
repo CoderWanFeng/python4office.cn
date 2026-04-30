@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Huawei Cloud Coding Plan Temporarily Doesn't Exist, But These Alternatives are More Suitable for Chinese Developers - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![Huawei Cloud Coding Plan Temporarily Doesn't Exist, But These Alternatives are More Suitable for Chinese Developers - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Huawei Cloud Coding Plan Temporarily Doesn't Exist, But These Alternatives are More Suitable for Chinese Developers](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Huawei Cloud Coding Plan Temporarily Doesn't Exist, But These Alternatives are More Suitable for Chinese Developers](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**

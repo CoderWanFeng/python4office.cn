@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![给小白的《30讲 · Python数据分析》 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![给小白的《30讲 · Python数据分析》](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 
 

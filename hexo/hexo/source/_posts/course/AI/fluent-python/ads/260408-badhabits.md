@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![写了5年Python，我才意识到自己有多少坏习惯 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![写了5年Python，我才意识到自己有多少坏习惯](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > 大家好，我是正在实战各种 AI 项目的程序员晚枫。
@@ -73,6 +73,8 @@ class Config:
 
 这些东西，网上的教程其实都有，但分散、零碎、语焉不详。这本书是我见过讲得最系统的。
 
+![写了5年Python坏习惯](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+
 ---
 
 ## 坏习惯 4：觉得生成器和迭代器"差不多"
@@ -106,6 +108,8 @@ def my_generator(n):
 - 面对复杂问题，思路更清晰了——知道该用什么工具
 
 更重要的是：**我对 Python 的理解，从"使用者"升级到了"理解者"。**
+
+![写了5年Python坏习惯](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 ---
 

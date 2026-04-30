@@ -1,17 +1,17 @@
 ---
-title: "DeepSeek vs Claude Code谁更香？看完这篇你就知道了"
+title: DeepSeek vs Claude Code谁更香？看完这篇你就知道了
 date: 2026-04-22 00:00:00
 tags: ["deepseek", "claude code", "ai编程", "代码模型"]
 categories: ["2026热点"]
-description: "DeepSeek vs Claude Code谁更香？从价格、功能、编程能力、性价比四个维度对比，看完这篇你就知道该选谁了。"
+description: DeepSeek vs Claude Code谁更香？从价格、功能、编程能力、性价比四个维度对比，看完这篇你就知道该选谁了。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![DeepSeek vs Claude Code谁更香？看完这篇你就知道了 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
-![DeepSeek vs Claude Code谁更香？看完这篇你就知道了 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![DeepSeek vs Claude Code谁更香？看完这篇你就知道了](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![DeepSeek vs Claude Code谁更香？看完这篇你就知道了](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 
 等等！！

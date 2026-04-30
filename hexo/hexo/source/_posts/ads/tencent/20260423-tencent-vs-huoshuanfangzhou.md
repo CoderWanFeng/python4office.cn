@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![腾讯云 Coding Plan vs 火山方舟：49 元 vs 36 元，多模型还是微信生态？ - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![腾讯云 Coding Plan vs 火山方舟：49 元 vs 36 元，多模型还是微信生态？ - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![腾讯云 Coding Plan vs 火山方舟：49 元 vs 36 元，多模型还是微信生态？](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![腾讯云 Coding Plan vs 火山方舟：49 元 vs 36 元，多模型还是微信生态？](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

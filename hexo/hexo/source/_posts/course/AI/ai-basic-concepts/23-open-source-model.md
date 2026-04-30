@@ -18,8 +18,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![什么是开源大模型？免费的AI - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![什么是开源大模型？免费的AI - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是开源大模型？免费的AI](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![什么是开源大模型？免费的AI](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

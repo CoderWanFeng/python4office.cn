@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Python中@property的用法和作用 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python中@property的用法和作用](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
 
 在Python中，`@property` 装饰器用于将一个类的方法转变为属性访问的形式。这通常用于当你想提供一个方法，让它表现得像是一个属性，或者当你想在访问属性时加入一些逻辑处理。
 

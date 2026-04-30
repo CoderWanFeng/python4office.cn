@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![install-postgresql-config - 配图1](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
-![install-postgresql-config - 配图2](https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop)
+![install-postgresql-config](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
+![install-postgresql-config](https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop)
 
 查看用户和密码
 https://blog.csdn.net/weixin_42344757/article/details/104699806

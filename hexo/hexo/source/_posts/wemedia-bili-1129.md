@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![wemedia-bili-1129 - 配图1](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
-![wemedia-bili-1129 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![wemedia-bili-1129](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![wemedia-bili-1129](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 直播间：https://live.bilibili.com/26539414
 

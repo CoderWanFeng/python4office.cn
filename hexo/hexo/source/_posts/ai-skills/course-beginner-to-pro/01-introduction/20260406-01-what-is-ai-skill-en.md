@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![Lecture 1: What is AI Skill? Why You Must Learn It Now? - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Lecture 1: What is AI Skill? Why You Must Learn It Now?](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # Lecture 1: What is AI Skill? Why You Must Learn It Now?
 

@@ -8,8 +8,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![CPython 设计与实现 20 讲——课程导航与学习指南 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
-![CPython 设计与实现 20 讲——课程导航与学习指南 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![CPython 设计与实现 20 讲——课程导航与学习指南](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![CPython 设计与实现 20 讲——课程导航与学习指南](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > 大家好，我是正在实战各种 AI 项目的程序员晚枫。

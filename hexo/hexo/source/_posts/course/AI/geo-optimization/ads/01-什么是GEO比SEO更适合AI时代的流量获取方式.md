@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ---
 
 
-![什么是GEO？比SEO更适合AI时代的流量获取方式 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![什么是GEO？比SEO更适合AI时代的流量获取方式 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![什么是GEO？比SEO更适合AI时代的流量获取方式](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是GEO？比SEO更适合AI时代的流量获取方式](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 
 ## SEO的时代，正在过去

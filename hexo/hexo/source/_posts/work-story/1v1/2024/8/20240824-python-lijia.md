@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![零基础学习Python-礼嘉1V1 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![零基础学习Python-礼嘉1V1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 这个文档是1v1学习的总结，每次沟通后更新，请收藏此链接：[点我查看](https://www.python4office.cn/work-story/1v1/2024/8/20240824-python-lijia/)。
 

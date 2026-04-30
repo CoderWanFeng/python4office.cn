@@ -13,8 +13,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![AtomCode是什么？Claude Code的开源替代，用自然语言写代码 - 配图1](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
-![AtomCode是什么？Claude Code的开源替代，用自然语言写代码 - 配图2](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![AtomCode是什么？Claude Code的开源替代，用自然语言写代码](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![AtomCode是什么？Claude Code的开源替代，用自然语言写代码](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 
 

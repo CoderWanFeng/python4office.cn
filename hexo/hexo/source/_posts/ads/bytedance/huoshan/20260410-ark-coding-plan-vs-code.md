@@ -27,8 +27,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-![VS Code + 火山方舟Coding Plan配置教程：免费插件方案 - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![VS Code + 火山方舟Coding Plan配置教程：免费插件方案 - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![VS Code + 火山方舟Coding Plan配置教程：免费插件方案](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![VS Code + 火山方舟Coding Plan配置教程：免费插件方案](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 ## 方案优势

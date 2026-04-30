@@ -12,8 +12,8 @@ cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
 
 <!-- more -->
 
-![近期项目知识点整理 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![近期项目知识点整理 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![近期项目知识点整理](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![近期项目知识点整理](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 ## Redis
 

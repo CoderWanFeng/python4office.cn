@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![MiniMax 26元/月，这些真实场景我用了一年，真香！ - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![MiniMax 26元/月，这些真实场景我用了一年，真香！ - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![MiniMax 26元/月，这些真实场景我用了一年，真香！](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![MiniMax 26元/月，这些真实场景我用了一年，真香！](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

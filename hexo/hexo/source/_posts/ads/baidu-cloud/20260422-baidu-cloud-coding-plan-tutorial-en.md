@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-![Baidu Cloud Coding Plan Tutorial: Wenxin Yiyan Access + PaddlePaddle Development Practice (2026 Latest Version) - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![Baidu Cloud Coding Plan Tutorial: Wenxin Yiyan Access + PaddlePaddle Development Practice (2026 Latest Version) - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Baidu Cloud Coding Plan Tutorial: Wenxin Yiyan Access + PaddlePaddle Development Practice (2026 Latest Version)](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Baidu Cloud Coding Plan Tutorial: Wenxin Yiyan Access + PaddlePaddle Development Practice (2026 Latest Version)](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **Author: Programmer Wanfeng | AI Programming Evangelist | Focus on AI Tool Evaluation and Teaching**

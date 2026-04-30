@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![JD Cloud Coding Plan Getting Started Tutorial: From Registration to AI Programming (2026 Latest) - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
-![JD Cloud Coding Plan Getting Started Tutorial: From Registration to AI Programming (2026 Latest) - 配图2](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![JD Cloud Coding Plan Getting Started Tutorial: From Registration to AI Programming (2026 Latest)](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![JD Cloud Coding Plan Getting Started Tutorial: From Registration to AI Programming (2026 Latest)](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 > **Article Author: 程序员晚枫 | AI Programming Advocate | Specializing in AI Tool Reviews & Teaching**

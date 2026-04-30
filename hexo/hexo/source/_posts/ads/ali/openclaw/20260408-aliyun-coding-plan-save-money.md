@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![阿里云Coding Plan省钱攻略：怎么用出最大价值？ - 配图1](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![阿里云Coding Plan省钱攻略：怎么用出最大价值？](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
 
 大家好，这里是程序员晚枫。
 

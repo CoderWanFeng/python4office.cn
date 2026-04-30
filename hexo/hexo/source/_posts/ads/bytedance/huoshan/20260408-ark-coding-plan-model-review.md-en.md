@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Five Models Real Test on Volcano Ark Coding Plan: Doubao, GLM, DeepSeek, Kimi, MiniMax, Which is Strongest? - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Five Models Real Test on Volcano Ark Coding Plan: Doubao, GLM, DeepSeek, Kimi, MiniMax, Which is Strongest? - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![Five Models Real Test on Volcano Ark Coding Plan: Doubao, GLM, DeepSeek, Kimi, MiniMax, Which is Strongest?](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Five Models Real Test on Volcano Ark Coding Plan: Doubao, GLM, DeepSeek, Kimi, MiniMax, Which is Strongest?](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 

@@ -1,17 +1,17 @@
 ---
-title: "AI Agent落地案例（5个）！看完你就知道怎么用了"
+title: AI Agent落地案例（5个）！看完你就知道怎么用了
 date: 2026-04-22 00:00:00
 tags: ["ai agent", "ai编程", "openclaw", "coze"]
 categories: ["2026热点"]
-description: "AI Agent实际落地案例（5个），制造业、保险、银行、物流、电商，看完你就知道怎么用了。"
+description: AI Agent实际落地案例（5个），制造业、保险、银行、物流、电商，看完你就知道怎么用了。
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
 
 <!-- more -->
 
-![AI Agent落地案例（5个）！看完你就知道怎么用了 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![AI Agent落地案例（5个）！看完你就知道怎么用了 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![AI Agent落地案例（5个）！看完你就知道怎么用了](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI Agent落地案例（5个）！看完你就知道怎么用了](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 
 等等！！

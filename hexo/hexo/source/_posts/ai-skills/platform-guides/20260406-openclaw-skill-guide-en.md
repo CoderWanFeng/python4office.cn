@@ -15,7 +15,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![OpenClaw Skill Installation and Management Guide: 1700+ Skills Await Your Exploration - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![OpenClaw Skill Installation and Management Guide: 1700+ Skills Await Your Exploration](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
 
 
 Hello everyone, I'm Programmer Wanfeng,实战 various AI projects.

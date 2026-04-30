@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![公众号排版工具大比拼：MarkdownHere vs 秀米 vs 白开水，谁最香？ - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![公众号排版工具大比拼：MarkdownHere vs 秀米 vs 白开水，谁最香？ - 配图2](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![公众号排版工具大比拼：MarkdownHere vs 秀米 vs 白开水，谁最香？](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![公众号排版工具大比拼：MarkdownHere vs 秀米 vs 白开水，谁最香？](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 大家好，我是正在实战各种 AI 项目的程序员晚枫。
 

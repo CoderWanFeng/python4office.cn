@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![Huawei Doesn't Have Coding Plan? MiniMax May Be Hailuo AI's Strongest Support - 配图1](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
-![Huawei Doesn't Have Coding Plan? MiniMax May Be Hailuo AI's Strongest Support - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![Huawei Doesn't Have Coding Plan? MiniMax May Be Hailuo AI's Strongest Support](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Huawei Doesn't Have Coding Plan? MiniMax May Be Hailuo AI's Strongest Support](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**

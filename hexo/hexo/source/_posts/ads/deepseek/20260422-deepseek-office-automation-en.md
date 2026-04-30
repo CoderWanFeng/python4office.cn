@@ -10,8 +10,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![DeepSeek Office Automation! 10 Practical Cases, You'll Learn How to Use It After Reading - 配图1](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
-![DeepSeek Office Automation! 10 Practical Cases, You'll Learn How to Use It After Reading - 配图2](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![DeepSeek Office Automation! 10 Practical Cases, You'll Learn How to Use It After Reading](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![DeepSeek Office Automation! 10 Practical Cases, You'll Learn How to Use It After Reading](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 Hey everyone!!!

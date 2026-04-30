@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
 ---
 
 
-![第1讲：为什么AI自动化办公是普通人的最佳机会 - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
-![第1讲：为什么AI自动化办公是普通人的最佳机会 - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![第1讲：为什么AI自动化办公是普通人的最佳机会](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![第1讲：为什么AI自动化办公是普通人的最佳机会](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 

@@ -9,8 +9,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![程序员晚枫的VLOG · 合集 - 配图1](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
-![程序员晚枫的VLOG · 合集 - 配图2](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
+![程序员晚枫的VLOG · 合集](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
+![程序员晚枫的VLOG · 合集](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
 
 - [【VLOG.01】重庆程序员的周末，从给女朋友做早餐开始](https://www.bilibili.com/video/BV1mz4y177j1/)
 - [【VLOG.02】重庆上班，来回通勤3个小时](https://www.bilibili.com/video/BV1PV4y1t7Jc/?t=80.570515&spm_id_from=333.1350.jump_directly&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)

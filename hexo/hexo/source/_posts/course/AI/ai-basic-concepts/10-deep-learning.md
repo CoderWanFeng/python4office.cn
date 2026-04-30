@@ -16,8 +16,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![什么是深度学习？让AI从"玩具"变成"超能力"的技术 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
-![什么是深度学习？让AI从"玩具"变成"超能力"的技术 - 配图2](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
+![什么是深度学习？让AI从"玩具"变成"超能力"的技术](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是深度学习？让AI从"玩具"变成"超能力"的技术](https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop)
 
 
 
@@ -224,7 +224,7 @@ model = AutoModelForSequenceClassification.from_pretrained('bert-base-chinese')
 
 - ✅ 为什么叫"深度"学习？——层数多，1层→100层
 - ✅ 为什么AI突然变强了？——数据+算力+算法三个条件终于凑齐了
-- �怎么入门？——先跑项目，用预训练模型，蹭免费GPU
+- 🎯 怎么入门？——先跑项目，用预训练模型，蹭免费GPU
 
 **评论区聊聊：你用过的哪些AI产品背后是深度学习？最让你惊讶的是哪个？**
 

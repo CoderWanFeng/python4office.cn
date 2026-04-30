@@ -1,5 +1,5 @@
 ---
-title: "第5讲：Skill 的交互设计：让对话更自然"
+title: 第5讲：Skill 的交互设计：让对话更自然
 date: 2026-04-06 14:00:00
 tags: ["AI Skill", "交互设计", "Prompt", "用户体验"]
 categories: ["AI Skills 课程"]
@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![第5讲：Skill 的交互设计：让对话更自然 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![第5讲：Skill 的交互设计：让对话更自然](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 第5讲：Skill 的交互设计：让对话更自然
 

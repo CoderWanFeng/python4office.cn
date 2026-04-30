@@ -7,8 +7,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
-![为什么我要做OPC一人公司课程？这是我的答案 - 配图1](https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800)
-![为什么我要做OPC一人公司课程？这是我的答案 - 配图2](https://images.unsplash.com/photo-1559136555?w=800&h=400&fit=crop)
+![为什么我要做OPC一人公司课程？这是我的答案](https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800)
+![为什么我要做OPC一人公司课程？这是我的答案](https://images.unsplash.com/photo-1559136555?w=800&h=400&fit=crop)
 
 
 # 为什么我要做OPC一人公司课程？这是我的答案

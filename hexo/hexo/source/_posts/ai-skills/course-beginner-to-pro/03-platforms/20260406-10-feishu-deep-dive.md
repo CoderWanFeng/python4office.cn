@@ -1,5 +1,5 @@
 ---
-title: "第10讲：飞书 CLI 平台深度解析"
+title: 第10讲：飞书 CLI 平台深度解析
 date: 2026-04-06 16:00:00
 tags: ["AI Skill", "飞书", "Feishu", "CLI", "企业"]
 categories: ["AI Skills 课程"]
@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![第10讲：飞书 CLI 平台深度解析 - 配图1](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![第10讲：飞书 CLI 平台深度解析](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 # 第10讲：飞书 CLI 平台深度解析
 

@@ -6,8 +6,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
-![Python打包成exe发给别人用他们不需要安装Python - 配图1](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
-![Python打包成exe发给别人用他们不需要安装Python - 配图2](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python打包成exe发给别人用他们不需要安装Python](https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop)
+![Python打包成exe发给别人用他们不需要安装Python](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。

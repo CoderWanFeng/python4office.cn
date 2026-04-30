@@ -11,8 +11,8 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 <!-- more -->
 
-![白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程） - 配图1](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
-![白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程） - 配图2](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
+![白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程）](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程）](https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop)
 
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**

@@ -27,8 +27,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![火山方舟Coding Plan API调用详解：代码接入实战 - 配图1](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
-![火山方舟Coding Plan API调用详解：代码接入实战 - 配图2](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![火山方舟Coding Plan API调用详解：代码接入实战](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![火山方舟Coding Plan API调用详解：代码接入实战](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 
 ## 获取API凭证
