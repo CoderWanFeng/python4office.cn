@@ -1,10 +1,10 @@
 ---
 title: "DeepSeek Money Saving Tips! You Can Save Thousands a Year, Really Great"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["deepseek", "money saving tips", "api"]
 categories: ["DeepSeek Practice"]
 description: "Collection of DeepSeek money saving tips: optimize prompts, cache, batch requests, monitor usage, you can save thousands a year."
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

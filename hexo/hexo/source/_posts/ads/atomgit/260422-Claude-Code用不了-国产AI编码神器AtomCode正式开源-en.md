@@ -1,10 +1,10 @@
 ---
 title: "Can't Use Claude Code? Domestic AI Coding神器AtomCode Officially Open Source!"
-date: 2026-04-22 14:00:00
+date: "2026-04-22 14:00:00"
 tags: ["AI Programming", "AtomCode", "Open Source Tools"]
 categories: ["AI Tools"]
 description: "Can't use Claude Code? Domestic AI coding神器AtomCode officially open source!"
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

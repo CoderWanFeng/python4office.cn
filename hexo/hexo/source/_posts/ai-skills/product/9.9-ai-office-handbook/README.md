@@ -1,10 +1,10 @@
 ---
 title: AI 办公效率手册 · 9.9 元资料包
-date: 2026-04-27 00:00:00
+date: "2026-04-27 00:00:00"
 tags: ["AI", "办公", "资料包", "产品"]
 categories: ["AI Skills", "产品"]
 description: 40 条 Prompt + 平台选型 + 工具清单 + 学习路线图，你的 AI 办公第一份装备包
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

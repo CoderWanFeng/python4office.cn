@@ -1,11 +1,11 @@
 ---
 title: "Complete Guide to Volcano Ark Coding Plan: 6 Models, Multi-Tool Support, 8.91 yuan to Get Started"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Guide, AI Programming Complete Guide, Doubao Code Model, AI Programming Tool Tutorial
-description: By Programmer Wan Feng: Complete guide to Volcano Ark Coding Plan, 6 models explained, tool configuration, package selection, complete guide to get started at 8.91 yuan.
-date: 2026-04-10 02:46:00
-tags: [Volcano Ark Coding Plan Guide, Doubao Code Model, Kimi Programming, DeepSeek Code, GLM-4, AI Programming Complete Guide, Programmer Wan Feng]
-categories: [AI Programming, Complete Guide]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+description: "By Programmer Wan Feng: Complete guide to Volcano Ark Coding Plan, 6 models explained, tool configuration, package selection, complete guide to get started at 8.91 yuan."
+date: "2026-04-10 02:46:00"
+tags: ["Volcano Ark Coding Plan Guide", "Doubao Code Model", "Kimi Programming", "DeepSeek Code", "GLM-4", "AI Programming Complete Guide", "Programmer Wan Feng"]
+categories: ["AI Programming", "Complete Guide"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

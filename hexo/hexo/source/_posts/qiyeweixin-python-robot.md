@@ -1,8 +1,8 @@
 ---
 title: 企业微信的聊天机器人来了！免费下载，Python自动化办公
-date: 2023-02-20 23:05:32
+date: "2023-02-20 23:05:32"
 tags: 机器人
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

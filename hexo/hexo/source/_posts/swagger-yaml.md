@@ -1,8 +1,8 @@
 ---
 title: Swagger编写API文档的YAML中文示例
-date: 2022-06-08 15:11:04
+date: "2022-06-08 15:11:04"
 tags: Swagger
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

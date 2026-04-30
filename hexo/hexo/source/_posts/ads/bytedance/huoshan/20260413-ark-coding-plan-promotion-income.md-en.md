@@ -1,11 +1,11 @@
 ---
 title: How I Earned 10k+ Monthly Through Promoting AI Tools? Real Sharing
-keywords: [Programmer Wan Feng, AI Tool Promotion, Volcano Ark Promotion, Side Income, Promotion Commission, AI Programming Side Income]
+keywords: ["Programmer Wan Feng", "AI Tool Promotion", "Volcano Ark Promotion", "Side Income", "Promotion Commission", "AI Programming Side Income"]
 description: "Programmer Wan Feng's real sharing: How I earned 10k+ monthly through promoting Volcano Coding Plan? Complete guide from 0 to 1."
-date: 2026-04-13 00:00:00
-tags: [AI Tool Promotion, Volcano Promotion, Side Income, Promotion Commission, AI Programming Side Income]
-categories: [AI Programming, Side Income]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-13 00:00:00"
+tags: ["AI Tool Promotion", "Volcano Promotion", "Side Income", "Promotion Commission", "AI Programming Side Income"]
+categories: ["AI Programming", "Side Income"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

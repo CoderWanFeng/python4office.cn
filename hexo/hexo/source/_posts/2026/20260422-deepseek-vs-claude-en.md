@@ -1,10 +1,10 @@
 ---
 title: "DeepSeek vs Claude Code, Which is Better? You'll Know After Reading This"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["deepseek", "claude code", "ai programming", "code model"]
 categories: ["2026 Hot Topics"]
 description: "DeepSeek vs Claude Code, which is better? Compared from four dimensions of price, functionality, programming capability, cost performance, you'll know which to choose after reading this."
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

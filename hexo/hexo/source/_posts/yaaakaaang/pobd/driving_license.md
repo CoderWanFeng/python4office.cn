@@ -1,8 +1,8 @@
 ---
 title: 车在路上必有证！AI自动识别驾驶证
-date: 2025-05-09 12:15:32
-tags: [pobd]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-05-09 12:15:32"
+tags: ["pobd"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

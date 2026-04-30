@@ -2,10 +2,10 @@
 title: GitHub Copilot涨价后，我为什么转投了火山方舟？
 keywords: 程序员晚枫, Copilot涨价, GitHub Copilot订阅, 火山方舟Coding Plan, AI编程工具替代, 国产AI编程
 description: 程序员晚枫真实经历：Copilot突然涨价后，我为什么选择火山方舟Coding Plan？国内访问稳定+多模型+36元/月，真香。
-date: 2026-04-13 00:00:00
-tags: [Copilot涨价, GitHub Copilot, 火山方舟Coding Plan, AI编程工具替代, 国产AI编程, 程序员晚枫]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-13 00:00:00"
+tags: ["Copilot涨价", "GitHub Copilot", "火山方舟Coding Plan", "AI编程工具替代", "国产AI编程", "程序员晚枫"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

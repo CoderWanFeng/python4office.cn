@@ -1,8 +1,8 @@
 ---
 title: 非程序员可以用Python做什么？
-date: 2023-11-29 00:16:17
+date: "2023-11-29 00:16:17"
 tags: 自动化办公
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

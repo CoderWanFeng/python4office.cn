@@ -1,14 +1,14 @@
 ---
 title: AI Programming Tool Price Hike? Must-Read Money-Saving Guide
-description: Programmer Wan Feng reminds: AI programming tools are collectively raising prices. Must-see domestic alternatives, starting from 36 yuan/month.
-date: 2026-04-13 00:00:00
+description: "Programmer Wan Feng reminds: AI programming tools are collectively raising prices. Must-see domestic alternatives, starting from 36 yuan/month."
+date: "2026-04-13 00:00:00"
 tags:
 - AI Programming
 - Money-Saving Guide
 categories:
 - AI Programming
 - Money-Saving Guide
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

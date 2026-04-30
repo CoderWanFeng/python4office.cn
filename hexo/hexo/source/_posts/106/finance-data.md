@@ -1,8 +1,8 @@
 ---
 title: 580页PDF：《Python金融大数据分析》
-date: 2022-11-04 23:30:27
+date: "2022-11-04 23:30:27"
 tags: 电子书
-cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

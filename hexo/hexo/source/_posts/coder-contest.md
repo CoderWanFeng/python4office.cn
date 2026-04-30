@@ -1,8 +1,8 @@
 ---
 title: 除了杨超越杯,这8个编程大赛程序员都该了解下!
-date: 2022-02-08 17:10:13
+date: "2022-02-08 17:10:13"
 tags: 程序员比赛
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,11 +1,11 @@
 ---
 title: Who is Tencent Cloud Coding Plan Suitable For? WeChat Developers vs Other Groups In-Depth Analysis
-keywords: [Who is Tencent Cloud Coding Plan for, Tencent Hunyuan Purchase, AI Programming Which to Choose, 程序员晚枫]
-description: Programmer Wan Feng analyzes: Who is Tencent Cloud Coding Plan suitable for? WeChat developers first choice? What advantages compared to other vendors?
-date: 2026-04-23 13:00:00
-tags: [Tencent Cloud, Tencent Hunyuan, Coding Plan Selection, AI Programming]
-categories: [AI Programming, Tool Review]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+keywords: ["Who is Tencent Cloud Coding Plan for", "Tencent Hunyuan Purchase", "AI Programming Which to Choose", "程序员晚枫"]
+description: "Programmer Wan Feng analyzes: Who is Tencent Cloud Coding Plan suitable for? WeChat developers first choice? What advantages compared to other vendors?"
+date: "2026-04-23 13:00:00"
+tags: ["Tencent Cloud", "Tencent Hunyuan", "Coding Plan Selection", "AI Programming"]
+categories: ["AI Programming", "Tool Review"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

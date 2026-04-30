@@ -1,8 +1,8 @@
 ---
 title: 批量下载邮件的附件
-date: 2025-05-14 12:50:32
-tags: [poemail]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2025-05-14 12:50:32"
+tags: ["poemail"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

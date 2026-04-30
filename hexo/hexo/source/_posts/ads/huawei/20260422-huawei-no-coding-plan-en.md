@@ -2,10 +2,10 @@
 title: "Huawei Cloud Coding Plan Temporarily Not Available, But These Alternatives Are Better for Chinese Developers"
 keywords: ["Huawei Cloud Coding Plan", "Huawei AI Programming", "HarmonyOS Development", "程序员晚枫"]
 description: "Programmer Wanfeng found: Huawei Cloud currently doesn't have a Coding Plan, but there are better alternatives. Let's see which vendors are worth choosing."
-date: 2026-04-22 20:20:00
+date: "2026-04-22 20:20:00"
 tags: ["Huawei Cloud", "Coding Plan", "AI Programming", "HarmonyOS Development", "程序员晚枫"]
 categories: ["AI Programming", "Tool Review"]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

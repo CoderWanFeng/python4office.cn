@@ -1,11 +1,11 @@
 ---
 title: 智谱 AI GLM Coding Plan 入门：API Key 申请到代码调用（2026最新版）
-keywords: [智谱 AI Coding Plan 教程, GLM API 入门, AI编程教程, 程序员晚枫]
+keywords: ["智谱 AI Coding Plan 教程", "GLM API 入门", "AI编程教程", "程序员晚枫"]
 description: 程序员晚枫手把手教你用智谱 AI GLM Coding Plan，从 API Key 申请到代码调用，开发者必看。
-date: 2026-04-22 18:45:00
-tags: [智谱 AI, GLM, Coding Plan 教程, API 入门]
-categories: [AI编程, 教程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 18:45:00"
+tags: ["智谱 AI", "GLM", "Coding Plan 教程", "API 入门"]
+categories: ["AI编程", "教程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

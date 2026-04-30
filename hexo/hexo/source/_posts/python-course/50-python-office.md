@@ -1,8 +1,8 @@
 ---
 title: 50讲 · Python自动化办公（已完结）
-date: 2019-08-11 10:08:24
+date: "2019-08-11 10:08:24"
 tags: 原创课程
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

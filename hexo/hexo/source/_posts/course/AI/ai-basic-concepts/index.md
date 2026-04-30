@@ -1,6 +1,6 @@
 ---
 title: AI基础概念全29讲
-date: 2026-04-16 17:00:00
+date: "2026-04-16 17:00:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -16,7 +16,7 @@ tags:
 - AI入门
 order: 0
 description: AI基础概念全29讲，用大白话解释你会在新闻里看到的AI词汇。程序员晚枫出品，0基础也能看懂。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

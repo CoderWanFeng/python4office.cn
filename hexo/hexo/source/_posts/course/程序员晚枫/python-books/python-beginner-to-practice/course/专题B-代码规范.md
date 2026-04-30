@@ -1,8 +1,8 @@
 ---
 title: 专题B 代码规范 — PEP 8入门指南
-date: 2026-04-28 23:54:00
-tags: [python,入门,课程,专题]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-28 23:54:00"
+tags: ["python", "入门", "课程", "专题"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

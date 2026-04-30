@@ -1,8 +1,8 @@
 ---
 title: python-star-group
-date: 2022-07-07 10:17:21
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+date: "2022-07-07 10:17:21"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop"
 ---
 
 

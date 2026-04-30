@@ -1,8 +1,8 @@
 ---
 title: python-office自动化办公：Word批量转PDF
-date: 2022-04-25 10:41:04
-tags: [AI编程, Python自动化办公, Python, Word自动化, PDF自动化]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+date: "2022-04-25 10:41:04"
+tags: ["AI编程", "Python自动化办公", "Python", "Word自动化", "PDF自动化"]
+cover: "https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop"
 ---
 
 

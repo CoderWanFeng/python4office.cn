@@ -1,6 +1,6 @@
 ---
 title: 什么是神经网络？AI的"大脑"是怎么工作的
-date: 2026-04-16 17:02:00
+date: "2026-04-16 17:02:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -12,7 +12,7 @@ tags:
 - Neural Network
 order: 9
 description: AI的"大脑"是怎么工作的？程序员晚枫用大白话揭秘神经网络，让你理解AI是怎么"思考"、怎么学习的！
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

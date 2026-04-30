@@ -1,11 +1,11 @@
 ---
 title: 华为没有 Coding Plan？字节火山方舟可能是性价比最高的选择
-keywords: [华为 Coding Plan, 火山方舟, 字节跳动, 性价比, 程序员晚枫]
+keywords: ["华为 Coding Plan", "火山方舟", "字节跳动", "性价比", "程序员晚枫"]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐字节火山方舟，36元/月，可能是性价比最高的选择！
-date: 2026-04-22 22:40:00
-tags: [华为, 火山方舟, 字节跳动, Coding Plan, 程序员晚枫]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 22:40:00"
+tags: ["华为", "火山方舟", "字节跳动", "Coding Plan", "程序员晚枫"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

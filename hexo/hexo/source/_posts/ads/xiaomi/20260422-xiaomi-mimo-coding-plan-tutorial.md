@@ -1,11 +1,11 @@
 ---
 title: 小米 MiMo Coding Plan 教程：小米生态开发实战（2026最新版）
-keywords: [小米 MiMo Coding Plan 教程, 小米生态开发, AI编程教程, 程序员晚枫]
+keywords: ["小米 MiMo Coding Plan 教程", "小米生态开发", "AI编程教程", "程序员晚枫"]
 description: 程序员晚枫手把手教你用小米 MiMo Coding Plan，小米生态开发实战教程。
-date: 2026-04-22 21:45:00
-tags: [小米, MiMo, Coding Plan 教程, 小米生态开发]
-categories: [AI编程, 教程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 21:45:00"
+tags: ["小米", "MiMo", "Coding Plan 教程", "小米生态开发"]
+categories: ["AI编程", "教程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

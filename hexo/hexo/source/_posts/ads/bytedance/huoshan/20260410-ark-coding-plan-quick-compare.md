@@ -2,10 +2,10 @@
 title: 火山方舟Coding Plan快速对比：Lite vs Pro，8.91元起怎么选？
 keywords: 程序员晚枫, 火山方舟Coding Plan对比, Lite vs Pro, AI编程工具选择, Coding Plan套餐对比
 description: 程序员晚枫快速对比：火山方舟Coding Plan Lite vs Pro，8.91元起怎么选？一分钟帮你做出最佳选择。
-date: 2026-04-10 02:45:00
-tags: [火山方舟Coding Plan, Coding Plan对比, Lite轻量版, Pro专业版, AI编程工具选择, 程序员晚枫]
-categories: [AI编程, 工具对比]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 02:45:00"
+tags: ["火山方舟Coding Plan", "Coding Plan对比", "Lite轻量版", "Pro专业版", "AI编程工具选择", "程序员晚枫"]
+categories: ["AI编程", "工具对比"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

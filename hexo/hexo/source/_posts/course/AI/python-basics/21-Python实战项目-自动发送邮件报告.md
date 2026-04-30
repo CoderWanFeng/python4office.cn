@@ -1,8 +1,8 @@
 ---
 title: Python实战项目：我做了个自动邮件系统，每天定时发送数据报告
-date: 2026-02-28 21:10:00
-tags: [Python实战, 自动化, 邮件]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-02-28 21:10:00"
+tags: ["Python实战", "自动化", "邮件"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

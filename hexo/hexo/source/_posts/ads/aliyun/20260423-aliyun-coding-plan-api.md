@@ -1,11 +1,11 @@
 ---
 title: 阿里云百炼 Coding Plan API 教程：程序员如何接入通义千问大模型
-keywords: [阿里云百炼 API, 通义千问 API, AI编程 接入, 程序员晚枫]
+keywords: ["阿里云百炼 API", "通义千问 API", "AI编程 接入", "程序员晚枫"]
 description: 程序员晚枫教你：阿里云百炼 Coding Plan API 接入教程，3步接入通义千问大模型，附代码示例。
-date: 2026-04-23 20:00:00
-tags: [阿里云, 百炼, 通义千问, API 教程, AI编程]
-categories: [AI编程, 教程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-23 20:00:00"
+tags: ["阿里云", "百炼", "通义千问", "API 教程", "AI编程"]
+categories: ["AI编程", "教程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

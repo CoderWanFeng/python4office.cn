@@ -1,8 +1,8 @@
 ---
 title: AI编程如何让每个开发者都成为全能型人才
-date: 2025-12-04 22:41:49
-tags: [AI编程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-12-04 22:41:49"
+tags: ["AI编程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

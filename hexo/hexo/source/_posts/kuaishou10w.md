@@ -1,8 +1,8 @@
 ---
 title: 第一次10w+播放，我发现了3个流量密码，原来成功才是成功之母
-date: 2022-06-28 20:20:58
+date: "2022-06-28 20:20:58"
 tags: 自媒体
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

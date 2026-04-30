@@ -1,8 +1,8 @@
 ---
 title: Python中@property的用法和作用
-date: 2024-05-31 01:25:17
+date: "2024-05-31 01:25:17"
 tags: Python进阶
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 <!-- more -->

@@ -1,9 +1,9 @@
 ---
 title: 为什么面试官爱问Python的数据类型底层是怎么实现的
-date: 2026-04-17 22:20:00
-tags: [Python基础, 面试, 数据类型, 底层原理, 算法]
+date: "2026-04-17 22:20:00"
+tags: ["Python基础", "面试", "数据类型", "底层原理", "算法"]
 categories: Python基础
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: NGINX 配置 同一域名端口下，根据URL 导向不同的项目目录
-date: 2022-01-24 21:10:26
-tags: [Linux,Nginx]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2022-01-24 21:10:26"
+tags: ["Linux", "Nginx"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

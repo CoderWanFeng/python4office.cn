@@ -1,11 +1,11 @@
 ---
 title: 华为云 Coding Plan 暂时没有，但这些替代方案更适合中国开发者
-keywords: [华为云 Coding Plan, 华为 AI 编程, 鸿蒙开发, 程序员晚枫]
+keywords: ["华为云 Coding Plan", "华为 AI 编程", "鸿蒙开发", "程序员晚枫"]
 description: 程序员晚枫发现：华为云目前没有 Coding Plan，但有更好的替代方案。来看看哪些厂商值得选择。
-date: 2026-04-22 20:20:00
-tags: [华为云, Coding Plan, AI编程, 鸿蒙开发, 程序员晚枫]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 20:20:00"
+tags: ["华为云", "Coding Plan", "AI编程", "鸿蒙开发", "程序员晚枫"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

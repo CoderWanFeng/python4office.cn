@@ -1,8 +1,8 @@
 ---
 title: 用Python制作一个大屏数据可视化系统
-date: 2022-08-16 16:13:12
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+date: "2022-08-16 16:13:12"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop"
 ---
 
 

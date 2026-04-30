@@ -2,12 +2,12 @@
 title: 从0到1：腾讯云OpenClaw部署全攻略，4月10日郑州现场答疑
 keywords: 程序员晚枫, 腾讯云OpenClaw部署, AI助手搭建教程, 郑州龙虾课, 轻量服务器配置
 description: 程序员晚枫出品：腾讯云OpenClaw部署全攻略，从选购服务器到配置IM通道，4月10日郑州龙虾课现场答疑。
-date: 2026-04-08 23:35:00
+date: "2026-04-08 23:35:00"
 sidebar:
 - toc
 hide:
 - toc
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

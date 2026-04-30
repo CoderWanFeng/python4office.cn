@@ -1,9 +1,9 @@
 ---
 title: 为什么我要做OPC一人公司课程？这是我的答案
-date: 2026-04-19 11:00:00
-tags: [OPC, 一人公司, AI创业, 程序员转型]
-categories: [一人公司, AI创业]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-19 11:00:00"
+tags: ["OPC", "一人公司", "AI创业", "程序员转型"]
+categories: ["一人公司", "AI创业"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

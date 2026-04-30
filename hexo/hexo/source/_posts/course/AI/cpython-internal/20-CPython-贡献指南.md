@@ -1,8 +1,8 @@
 ---
 title: 第 20 讲：CPython 贡献指南——参与开源的正确姿势
-date: 2026-03-03 11:40:00
-tags: [python, CPython, 开源, GitHub, 贡献]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-03-03 11:40:00"
+tags: ["python", "CPython", "开源", "GitHub", "贡献"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

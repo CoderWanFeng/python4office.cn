@@ -1,11 +1,11 @@
 ---
 title: "Volcano Ark Coding Plan Tutorial: Complete Guide from Subscription to Hands-On"
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Tutorial, AI Programming Getting Started, How to Use Ark Coding Plan, AI Programming Tool Tutorial
-description: By Programmer Wan Feng: Complete tutorial on Volcano Ark Coding Plan, from subscription to configuring Cursor/VS Code, hand-holding you through AI programming.
-date: 2026-04-08 00:21:00
-tags: [Volcano Ark Coding Plan Tutorial, How to Use Ark Coding Plan, Volcano Engine AI Programming, Coding Plan Getting Started, AI Programming Tool Tutorial, Programmer Wan Feng]
-categories: [AI Programming, Tutorial]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+description: "By Programmer Wan Feng: Complete tutorial on Volcano Ark Coding Plan, from subscription to configuring Cursor/VS Code, hand-holding you through AI programming."
+date: "2026-04-08 00:21:00"
+tags: ["Volcano Ark Coding Plan Tutorial", "How to Use Ark Coding Plan", "Volcano Engine AI Programming", "Coding Plan Getting Started", "AI Programming Tool Tutorial", "Programmer Wan Feng"]
+categories: ["AI Programming", "Tutorial"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

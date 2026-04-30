@@ -1,6 +1,6 @@
 ---
 title: 什么是提示词工程？让AI听懂你的高级技巧
-date: 2026-04-16 17:18:00
+date: "2026-04-16 17:18:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -13,7 +13,7 @@ tags:
 - 提示词工程
 order: 19
 description: 为什么同样的AI，别人用得那么溜？程序员晚枫用大白话揭秘提示词工程，让你掌握和AI高效沟通的秘诀！
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

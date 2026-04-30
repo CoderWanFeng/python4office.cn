@@ -1,11 +1,11 @@
 ---
 title: 腾讯云 Coding Plan 适合谁用？微信开发者 vs 企业用户选购分析
-keywords: [腾讯云 Coding Plan 适合谁, 腾讯云选购建议, 微信开发者, 程序员晚枫]
+keywords: ["腾讯云 Coding Plan 适合谁", "腾讯云选购建议", "微信开发者", "程序员晚枫"]
 description: 程序员晚枫分析：腾讯云 Coding Plan 适合哪些人？微信开发者和企业用户怎么选？
-date: 2026-04-22 21:10:00
-tags: [腾讯云, 腾讯混元, Coding Plan 选购, 微信开发者, 企业用户]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 21:10:00"
+tags: ["腾讯云", "腾讯混元", "Coding Plan 选购", "微信开发者", "企业用户"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

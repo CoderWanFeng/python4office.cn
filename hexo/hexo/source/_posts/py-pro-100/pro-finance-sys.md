@@ -1,8 +1,8 @@
 ---
 title: 合同和财务系统的源码
-date: 2022-11-20 00:59:02
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+date: "2022-11-20 00:59:02"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: Java学习路线
-date: 2022-11-02 00:06:19
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop
+date: "2022-11-02 00:06:19"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop"
 ---
 
 

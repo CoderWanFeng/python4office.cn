@@ -1,8 +1,8 @@
 ---
 title: 208页PDF：《从Python开始学编程》
-date: 2022-12-10 02:53:54
+date: "2022-12-10 02:53:54"
 tags: 电子书
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

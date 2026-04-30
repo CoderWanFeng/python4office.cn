@@ -1,8 +1,8 @@
 ---
 title: java-inter-resource
-date: 2021-12-07 21:09:19
+date: "2021-12-07 21:09:19"
 tags: java
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

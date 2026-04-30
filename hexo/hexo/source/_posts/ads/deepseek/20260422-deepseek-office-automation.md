@@ -1,10 +1,10 @@
 ---
 title: DeepSeek办公自动化！10个实战案例，看完你就学会用了
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["deepseek", "ai办公", "自动化办公"]
 categories: ["DeepSeek实战"]
 description: DeepSeek办公自动化10个实战案例：Excel、Word、PPT、PDF、邮件、数据可视化、文案生成，看完你就知道怎么用了。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

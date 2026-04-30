@@ -2,10 +2,10 @@
 title: 阿里云Coding Plan常见问题FAQ：你想知道的20个问题都在这里
 keywords: 程序员晚枫, 阿里云Coding Plan FAQ, 阿里云百炼Coding Plan问题, AI编程常见问题, 千问代码模型使用
 description: 程序员晚枫整理：阿里云Coding Plan常见问题FAQ，你想知道的20个问题都在这里，订阅、模型、工具、用量全解答。
-date: 2026-04-10 02:58:00
-tags: [阿里云Coding Plan FAQ, 阿里云百炼Coding Plan问题, Coding Plan常见问题, 阿里云AI编程, 千问代码模型, 程序员晚枫]
-categories: [AI编程, 常见问题]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 02:58:00"
+tags: ["阿里云Coding Plan FAQ", "阿里云百炼Coding Plan问题", "Coding Plan常见问题", "阿里云AI编程", "千问代码模型", "程序员晚枫"]
+categories: ["AI编程", "常见问题"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

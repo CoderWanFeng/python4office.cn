@@ -1,9 +1,9 @@
 ---
 title: 想进大厂做Python开发？这些面试题你必须会
-date: 2026-04-17 22:30:00
-tags: [Python面试, Python进阶, 大厂, 面试题]
+date: "2026-04-17 22:30:00"
+tags: ["Python面试", "Python进阶", "大厂", "面试题"]
 categories: Python进阶
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

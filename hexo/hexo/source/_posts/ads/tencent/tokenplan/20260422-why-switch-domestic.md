@@ -1,6 +1,6 @@
 ---
 title: 为什么程序员都在转向国内AI编程工具？一位老用户的真实心路
-date: 2026-04-22 16:39:00
+date: "2026-04-22 16:39:00"
 tags:
 - Python
 - AI编程
@@ -12,7 +12,7 @@ tags:
 - 真实体验
 categories:
 - 经验分享
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

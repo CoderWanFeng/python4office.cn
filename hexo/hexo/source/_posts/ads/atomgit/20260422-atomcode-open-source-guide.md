@@ -1,10 +1,10 @@
 ---
 title: AtomCode开源项目托管指南！从0到1，看完就会
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["atomgit", "atomcode", "开源项目"]
 categories: ["AI工具"]
 description: AtomCode开源项目托管指南！从0到1，注册、创建仓库、上传代码、协作开发，看完就会。
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

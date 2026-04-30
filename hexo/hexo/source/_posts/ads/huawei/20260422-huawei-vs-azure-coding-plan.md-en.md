@@ -1,11 +1,11 @@
 ---
 title: "Huawei Doesn't Have Coding Plan? For Enterprise Needs, Look at Azure OpenAI"
-keywords: [Huawei Coding Plan, Azure OpenAI, Enterprise AI, GPT-4, Programmer Wan Feng]
+keywords: ["Huawei Coding Plan", "Azure OpenAI", "Enterprise AI", "GPT-4", "Programmer Wan Feng"]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends Azure OpenAI, enterprise-level security compliance + GPT-4, suitable for enterprise users with high security requirements.
-date: 2026-04-22 22:50:00
-tags: [Huawei, Azure OpenAI, Enterprise AI, Coding Plan, Programmer Wan Feng]
-categories: [AI Programming, Tool Review]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 22:50:00"
+tags: ["Huawei", "Azure OpenAI", "Enterprise AI", "Coding Plan", "Programmer Wan Feng"]
+categories: ["AI Programming", "Tool Review"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

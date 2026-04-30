@@ -1,9 +1,9 @@
 ---
 title: 三大AI办公平台对比：Coze vs OpenClaw vs 飞书CLI，哪个更适合你？
-date: 2026-04-06 10:36:00
-tags: [Coze, OpenClaw, 飞书, 平台对比, AI办公, Skill]
-categories: [AI Skills, 平台攻略]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-06 10:36:00"
+tags: ["Coze", "OpenClaw", "飞书", "平台对比", "AI办公", "Skill"]
+categories: ["AI Skills", "平台攻略"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

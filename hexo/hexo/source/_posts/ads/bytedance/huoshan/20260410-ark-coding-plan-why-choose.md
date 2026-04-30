@@ -2,10 +2,10 @@
 title: 为什么我选择火山方舟Coding Plan？一个程序员的真诚分享
 keywords: 程序员晚枫, 火山方舟Coding Plan选择, AI编程工具选择, 程序员工具推荐, 为什么选火山方舟
 description: 程序员晚枫真诚分享：为什么我选择火山方舟Coding Plan？一个程序员的AI编程工具选择心得与使用体验。
-date: 2026-04-10 00:10:00
-tags: [火山方舟Coding Plan选择, 为什么选火山方舟, AI编程工具选择, 程序员工具推荐, 火山引擎评测, 程序员晚枫]
-categories: [AI编程, 工具评测]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 00:10:00"
+tags: ["火山方舟Coding Plan选择", "为什么选火山方舟", "AI编程工具选择", "程序员工具推荐", "火山引擎评测", "程序员晚枫"]
+categories: ["AI编程", "工具评测"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

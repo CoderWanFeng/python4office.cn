@@ -1,8 +1,8 @@
 ---
 title: Python下载、PyCharm下载、免费教程
-date: 2022-04-23 14:26:28
+date: "2022-04-23 14:26:28"
 tags: 软件
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop"
 ---
 
 

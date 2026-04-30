@@ -1,8 +1,8 @@
 ---
 title: Python绘制冬奥吉祥物“冰墩墩”，源代码给你，复制粘贴就可以运行！(3D款)
-date: 2022-02-10 10:45:09
+date: "2022-02-10 10:45:09"
 tags: JavaScript
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

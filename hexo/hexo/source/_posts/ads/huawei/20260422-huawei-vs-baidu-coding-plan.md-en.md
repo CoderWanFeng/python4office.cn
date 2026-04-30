@@ -1,11 +1,11 @@
 ---
 title: "Huawei Doesn't Have Coding Plan? Baidu Smart Cloud May Be the Choice with Strongest Code Capability"
-keywords: [Huawei Coding Plan, Baidu Smart Cloud, Ernie Bot, Code Capability, Programmer Wan Feng]
+keywords: ["Huawei Coding Plan", "Baidu Smart Cloud", "Ernie Bot", "Code Capability", "Programmer Wan Feng"]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends Baidu Smart Cloud, Ernie Bot + strongest code capability, another pole of domestic AI.
-date: 2026-04-22 22:45:00
-tags: [Huawei, Baidu Smart Cloud, Ernie Bot, Coding Plan, Programmer Wan Feng]
-categories: [AI Programming, Tool Review]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 22:45:00"
+tags: ["Huawei", "Baidu Smart Cloud", "Ernie Bot", "Coding Plan", "Programmer Wan Feng"]
+categories: ["AI Programming", "Tool Review"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: First Post
-date: 2025-08-03 00:06:19
+date: "2025-08-03 00:06:19"
 tags: 10 Lessons Kids Programming
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

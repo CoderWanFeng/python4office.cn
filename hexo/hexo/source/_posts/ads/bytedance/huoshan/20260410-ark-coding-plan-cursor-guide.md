@@ -2,10 +2,10 @@
 title: 火山方舟Coding Plan + Cursor配置指南：打造最强AI编程环境
 keywords: 程序员晚枫, 火山方舟Coding Plan, Cursor配置教程, AI编程环境搭建, Cursor接入火山引擎
 description: 程序员晚枫手把手教你：火山方舟Coding Plan + Cursor配置指南，打造最强AI编程环境，5分钟完成配置。
-date: 2026-04-10 00:01:00
-tags: [火山方舟Coding Plan, Cursor配置, AI编程环境, Cursor教程, 火山引擎接入, 程序员晚枫]
-categories: [AI编程, 教程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 00:01:00"
+tags: ["火山方舟Coding Plan", "Cursor配置", "AI编程环境", "Cursor教程", "火山引擎接入", "程序员晚枫"]
+categories: ["AI编程", "教程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

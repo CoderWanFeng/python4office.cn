@@ -1,8 +1,8 @@
 ---
 title: 第1讲 搭建开发环境与HelloWorld
-date: 2026-04-28 23:54:00
-tags: [python,入门,课程,第1讲]
-cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-28 23:54:00"
+tags: ["python", "入门", "课程", "第1讲"]
+cover: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

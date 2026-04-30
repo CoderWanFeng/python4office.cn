@@ -1,8 +1,8 @@
 ---
 title: "208-Page PDF: Starting Programming with Python"
-date: 2022-12-10 02:53:54
+date: "2022-12-10 02:53:54"
 tags: ["E-book"]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

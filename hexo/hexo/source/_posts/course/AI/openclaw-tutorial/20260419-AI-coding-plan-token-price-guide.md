@@ -1,8 +1,8 @@
 ---
 title: 2026年最全AI Coding Plan和Token购买攻略：大厂价格一站汇总
-date: 2026-04-19 11:45:00
-tags: [AI编程, openclaw]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-19 11:45:00"
+tags: ["AI编程", "openclaw"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

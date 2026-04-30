@@ -1,8 +1,8 @@
 ---
 title: 550页PDF：《量化投资以Python为工具》
-date: 2024-03-13 21:29:42
+date: "2024-03-13 21:29:42"
 tags: 电子书
-cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

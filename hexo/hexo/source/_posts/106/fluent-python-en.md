@@ -1,8 +1,8 @@
 ---
 title: "1022-Page PDF: Fluent Python - For Programming Advancement"
-date: 2022-06-07 18:09:37
+date: "2022-06-07 18:09:37"
 tags: ["E-book"]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

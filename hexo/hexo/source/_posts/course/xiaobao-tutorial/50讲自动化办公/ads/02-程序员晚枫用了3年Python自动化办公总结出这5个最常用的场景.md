@@ -1,9 +1,9 @@
 ---
 title: 程序员晚枫：用了3年Python自动化办公，总结出这5个最常用的场景
-date: 2026-04-17 22:20:00
-tags: [Python, 自动化办公, Excel, Word, PDF, 实战经验]
+date: "2026-04-17 22:20:00"
+tags: ["Python", "自动化办公", "Excel", "Word", "PDF", "实战经验"]
 categories: 50讲自动化办公
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

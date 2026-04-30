@@ -1,8 +1,8 @@
 ---
 title: 2026，Build in Public，才是属于普通程序员的突破之路
-date: 2026-01-07 20:51:51
+date: "2026-01-07 20:51:51"
 tags: 自媒体
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

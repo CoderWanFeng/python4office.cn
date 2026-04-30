@@ -1,8 +1,8 @@
 ---
 title: 程序员晚枫 - 账号汇总
-date: 2022-02-25 13:51:51
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+date: "2022-02-25 13:51:51"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop"
 ---
 
 

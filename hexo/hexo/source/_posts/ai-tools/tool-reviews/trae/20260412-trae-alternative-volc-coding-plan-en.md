@@ -1,6 +1,6 @@
 ---
 title: Trae Free Mode Queue Too Long? Change Your Strategy - Cheaper and Faster
-date: 2026-04-12 00:00:00
+date: "2026-04-12 00:00:00"
 categories:
 - AI Tools Review
 tags:
@@ -11,7 +11,7 @@ tags:
 - Volcano Ark
 - Coding Plan
 description: "Trae free mode queue too long? Try Volcano Ark's Coding Plan - cheaper and faster"
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

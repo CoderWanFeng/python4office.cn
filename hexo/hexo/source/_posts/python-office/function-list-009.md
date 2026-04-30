@@ -1,8 +1,8 @@
 ---
 title: 5个常用的Python第三方库，小白也能用
-date: 2023-10-31 01:25:17
+date: "2023-10-31 01:25:17"
 tags: 第三方库
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

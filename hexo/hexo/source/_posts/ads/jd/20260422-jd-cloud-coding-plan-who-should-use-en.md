@@ -2,10 +2,10 @@
 title: Who Is JD Cloud Coding Plan Best For? Audience Analysis and Purchase Advice
 keywords: ["Who Is JD Cloud Coding Plan For", "JD Cloud AI Programming", "Jingdiandian Purchase Advice", "程序员晚枫"]
 description: "Programmer Wanfeng's analysis: Who is JD Cloud Coding Plan best for? Who is it not for? Complete purchase advice here."
-date: 2026-04-22 18:10:00
+date: "2026-04-22 18:10:00"
 tags: ["JD Cloud", "JD Cloud", "Coding Plan Purchase", "AI Programming", "Jingdiandian"]
 categories: ["AI Programming", "Tool Review"]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

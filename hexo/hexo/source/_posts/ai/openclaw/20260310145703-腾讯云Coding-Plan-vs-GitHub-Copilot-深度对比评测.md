@@ -1,10 +1,10 @@
 ---
 title: 腾讯云Coding Plan vs GitHub Copilot - 深度对比评测
-date: 2026-03-10 14:57:03
-tags: [腾讯, 对比测评, 开源生态]
+date: "2026-03-10 14:57:03"
+tags: ["腾讯", "对比测评", "开源生态"]
 categories:
 - AI编程
-cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

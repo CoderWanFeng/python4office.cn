@@ -1,10 +1,10 @@
 ---
 title: 关于我 - 程序员晚枫
-date: 2026-04-23 00:00:00
-tags: [程序员晚枫,个人介绍]
+date: "2026-04-23 00:00:00"
+tags: ["程序员晚枫", "个人介绍"]
 description: 程序员晚枫的个人介绍页，GitHub开源项目python-office作者，专注AI编程布道，帮助非程序员用Python和AI提升工作效率。
 keywords: 程序员晚枫,个人介绍,AI编程布道,python-office
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

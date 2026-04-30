@@ -1,8 +1,8 @@
 ---
 title: 用Python自动生成图文并茂的数据分析报告
-date: 2022-08-08 09:44:27
+date: "2022-08-08 09:44:27"
 tags: 自动化办公
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

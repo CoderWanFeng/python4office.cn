@@ -1,8 +1,8 @@
 ---
 title: 我用AI Agent自动回了500条消息你还在手动打字？
-date: 2026-04-17 08:00:00
-tags: [OpenClaw, AI Agent, 自动化, 效率工具]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-17 08:00:00"
+tags: ["OpenClaw", "AI Agent", "自动化", "效率工具"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: 推荐10本Python电子书，新年学习加速
-date: 2024-1-1 01:16:17
+date: "2024-1-1 01:16:17"
 tags: 电子书
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

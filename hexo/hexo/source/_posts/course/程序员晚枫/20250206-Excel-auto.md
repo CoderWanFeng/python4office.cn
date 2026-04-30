@@ -1,8 +1,8 @@
 ---
 title: 【30讲】Excel自动化办公之Pandas
-date: 2025-02-06 00:41:49
-tags: [python,下载]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-02-06 00:41:49"
+tags: ["python", "下载"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

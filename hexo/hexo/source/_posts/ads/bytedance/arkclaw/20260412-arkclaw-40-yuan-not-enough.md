@@ -1,6 +1,6 @@
 ---
 title: 40块的ArkClaw，根本不够用啊...
-date: 2026-04-12 00:00:00
+date: "2026-04-12 00:00:00"
 categories:
 - AI工具评测
 tags:
@@ -11,7 +11,7 @@ tags:
 - 吐槽
 - AI助手
 description: 首月26块用着挺香，第二个月续费一看——40块？还不够用？说说我的真实感受
-cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop"
 ---
 
 

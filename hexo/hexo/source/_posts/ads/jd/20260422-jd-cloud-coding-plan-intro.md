@@ -1,11 +1,11 @@
 ---
 title: 京东云 JD Cloud Coding Plan 来了！京点点+多模型，国内开发者的新选择
-keywords: [京东云 Coding Plan, JD Cloud AI, 京点点, AI编程, 程序员晚枫]
+keywords: ["京东云 Coding Plan", "JD Cloud AI", "京点点", "AI编程", "程序员晚枫"]
 description: 程序员晚枫推荐：京东云 JD Cloud Coding Plan，京点点加持，多模型支持，国内开发者的高性价比之选。
-date: 2026-04-22 18:00:00
-tags: [京东云, JD Cloud, Coding Plan, AI编程, 京点点]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 18:00:00"
+tags: ["京东云", "JD Cloud", "Coding Plan", "AI编程", "京点点"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

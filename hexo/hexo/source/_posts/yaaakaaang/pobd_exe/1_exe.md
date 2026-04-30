@@ -1,8 +1,8 @@
 ---
 title: 发票识别exe版本
-date: 2025-06-04 16:15:32
-tags: [pobd]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-06-04 16:15:32"
+tags: ["pobd"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

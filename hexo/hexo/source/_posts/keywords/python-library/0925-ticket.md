@@ -1,8 +1,8 @@
 ---
 title: 免费的12306抢票神器来了！（Python版）
-date: 2023-09-24 21:13:55
+date: "2023-09-24 21:13:55"
 tags: 资源
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

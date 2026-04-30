@@ -1,6 +1,6 @@
 ---
 title: "WorkBuddy Launches Expert Mode, They Take Naming AI Seriously"
-date: 2026-04-15 00:00:00
+date: "2026-04-15 00:00:00"
 categories:
 - AI Tools Review
 tags:
@@ -11,7 +11,7 @@ tags:
 - AI Tools
 - Product Review
 description: "WorkBuddy launches Expert Mode, every AI expert has a name. Shan Bicheng is a sales coach, Guan Dekuan is a project management expert. This naming... I'm convinced"
-cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop"
 ---
 
 

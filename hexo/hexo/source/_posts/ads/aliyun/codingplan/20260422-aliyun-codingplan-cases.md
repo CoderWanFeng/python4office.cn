@@ -1,10 +1,10 @@
 ---
 title: 阿里云Coding Plan用户案例！3个真实故事，看完你就知道怎么用了
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["阿里云", "coding plan", "用户案例"]
 categories: ["阿里云Coding Plan"]
 description: 阿里云Coding Plan用户案例：3个真实故事，学生、上班族、创业者，看完你就知道怎么用了。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

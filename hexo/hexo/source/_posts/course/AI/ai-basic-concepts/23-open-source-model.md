@@ -1,6 +1,6 @@
 ---
 title: 什么是开源大模型？免费的AI
-date: 2026-04-16 17:22:00
+date: "2026-04-16 17:22:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -14,7 +14,7 @@ tags:
 - Llama
 order: 23
 description: 为什么DeepSeek火了？程序员晚枫用大白话揭秘开源大模型，让你了解免费用AI的新方式！
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

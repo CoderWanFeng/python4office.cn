@@ -1,8 +1,8 @@
 ---
 title: mongodb-python
-date: 2022-09-06 15:14:23
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+date: "2022-09-06 15:14:23"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop"
 ---
 
 

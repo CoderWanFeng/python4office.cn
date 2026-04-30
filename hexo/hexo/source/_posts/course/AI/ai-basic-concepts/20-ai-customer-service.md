@@ -1,6 +1,6 @@
 ---
 title: 什么是AI客服？24小时不睡觉的机器人
-date: 2026-04-16 17:19:00
+date: "2026-04-16 17:19:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -13,7 +13,7 @@ tags:
 - 电商AI
 order: 20
 description: 为什么现在客服响应这么快？程序员晚枫用大白话揭秘AI客服，让你了解企业如何用AI省钱！
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

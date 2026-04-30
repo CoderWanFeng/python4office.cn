@@ -1,6 +1,6 @@
 ---
 title: 什么是AI搜索？不用自己翻网页
-date: 2026-04-16 17:23:00
+date: "2026-04-16 17:23:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -13,7 +13,7 @@ tags:
 - 秘塔搜索
 order: 24
 description: 为什么AI搜索这么火？程序员程序员晚枫用大白话揭秘AI搜索，让你了解不用翻网页的搜索方式！
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

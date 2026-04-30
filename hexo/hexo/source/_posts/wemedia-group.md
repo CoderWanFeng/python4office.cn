@@ -1,8 +1,8 @@
 ---
 title: 川渝程序员 - 微信交流群、线上沙龙 & 线下活动、关于作者
-date: 2022-02-18 15:43:50
+date: "2022-02-18 15:43:50"
 tags: 社区活动
-cover: https://images.unsplash.com/photo-1611162617474-528ee0916c11?q=80&w=1000&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1611162617474-528ee0916c11?q=80&w=1000&auto=format&fit=crop"
 ---
 
 

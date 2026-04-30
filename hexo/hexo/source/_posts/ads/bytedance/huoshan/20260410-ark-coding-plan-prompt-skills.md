@@ -2,10 +2,10 @@
 title: 火山方舟Coding Plan Prompt技巧：让AI生成更好的代码
 keywords: 程序员晚枫, 火山方舟Coding Plan, AI编程Prompt技巧, Prompt工程, 代码生成优化
 description: 程序员晚枫分享：火山方舟Coding Plan Prompt技巧，让AI生成更好的代码，提升AI编程效率的实用技巧。
-date: 2026-04-10 00:04:00
-tags: [火山方舟Coding Plan Prompt, AI编程Prompt技巧, Prompt工程, 代码生成优化, 火山引擎技巧, 程序员晚枫]
-categories: [AI编程, Prompt工程]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-10 00:04:00"
+tags: ["火山方舟Coding Plan Prompt", "AI编程Prompt技巧", "Prompt工程", "代码生成优化", "火山引擎技巧", "程序员晚枫"]
+categories: ["AI编程", "Prompt工程"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

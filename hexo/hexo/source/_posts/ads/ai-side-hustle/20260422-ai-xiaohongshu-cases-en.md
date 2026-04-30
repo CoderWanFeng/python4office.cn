@@ -1,6 +1,6 @@
 ---
 title: "AI Xiaohongshu Content Creation! 3 Viral Directions, You'll Know How to Write After Reading This"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["AI Side Hustle", "Xiaohongshu", "Side Hustle Monetization"]
 categories: ["AI Side Hustle Monetization"]
 description: "AI Xiaohongshu content creation cases: 3 viral directions, dry goods tutorials, experience sharing, product reviews. You'll know how to write after reading this."
@@ -9,7 +9,7 @@ en: /20260422-ai-xiaohongshu-cases/
 zh: /20260422-ai-xiaohongshu-cases/
 canonical: /20260422-ai-xiaohongshu-cases/
 translation: complete
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

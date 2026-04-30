@@ -1,6 +1,6 @@
 ---
 title: 什么是AI音乐？文字生成音乐的魔法
-date: 2026-04-16 17:21:00
+date: "2026-04-16 17:21:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -14,7 +14,7 @@ tags:
 - AI作曲
 order: 22
 description: 为什么AI能作曲唱歌？程序员晚枫用大白话揭秘AI音乐，让你了解文字生成音乐的魔法！
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

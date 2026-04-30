@@ -1,8 +1,8 @@
 ---
 title: 我用AI写了100篇技术文章后，总结出一套不焦虑的创作工作流
-date: 2025-04-05 13:30:00
+date: "2025-04-05 13:30:00"
 tags: AI
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

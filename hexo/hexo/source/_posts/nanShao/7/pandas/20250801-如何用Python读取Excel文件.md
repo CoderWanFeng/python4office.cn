@@ -1,8 +1,8 @@
 ---
 title: 如何用Python读取Excel文件
-date: 2025-08-01 23:41:49
-tags: [30讲PythonExcel数据分析]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2025-08-01 23:41:49"
+tags: ["30讲PythonExcel数据分析"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 <!-- more -->

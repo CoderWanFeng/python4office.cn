@@ -1,8 +1,8 @@
 ---
 title: 完全不懂基础，想转行技术要求最低的程序员岗位，怎么办？
-date: 2023-08-27 22:22:05
+date: "2023-08-27 22:22:05"
 tags: 1v1
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 <!-- more -->

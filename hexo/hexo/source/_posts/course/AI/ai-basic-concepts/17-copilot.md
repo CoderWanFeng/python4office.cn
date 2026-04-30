@@ -1,6 +1,6 @@
 ---
 title: 什么是Copilot？程序员的AI"副驾驶"
-date: 2026-04-16 17:16:00
+date: "2026-04-16 17:16:00"
 author: 程序员晚枫
 categories:
 - AI
@@ -11,7 +11,7 @@ tags:
 - Copilot
 order: 17
 description: 程序员为什么现在写代码这么快？程序员晚枫用大白话揭秘Copilot，让你了解AI编程助手！
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

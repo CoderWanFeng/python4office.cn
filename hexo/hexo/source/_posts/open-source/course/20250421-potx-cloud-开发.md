@@ -1,8 +1,8 @@
 ---
 title: 怎么发布、更新Python第三方库？以potx-cloud为例
-date: 2025-04-21 00:41:49
-tags: [个人网站,开源]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-04-21 00:41:49"
+tags: ["个人网站", "开源"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
  
 

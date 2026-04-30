@@ -1,8 +1,8 @@
 ---
 title: 25个Python学习资源（文字版），摸鱼必备，可以用到就业
-date: 2022-08-23 22:01:57
+date: "2022-08-23 22:01:57"
 tags: 知识星球
-cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

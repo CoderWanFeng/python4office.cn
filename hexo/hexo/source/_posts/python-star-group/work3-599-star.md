@@ -1,8 +1,8 @@
 ---
 title: 转行程序员3年后，我更坚定了！
-date: 2022-10-10 10:41:54
+date: "2022-10-10 10:41:54"
 tags: 知识星球
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -2,7 +2,7 @@
 title: MBTI测试火爆全网！我用AI编程半天做了个性格测试网站，零代码基础也能学会
 keywords: 程序员晚枫, MBTI测试, AI编程, 性格测试网站, 零代码开发, AI编程课程, 普通人学编程
 description: 程序员晚枫教你用AI编程工具半天做出MBTI性格测试网站。MBTI火爆全网，学会AI编程，普通人也能快速开发热门应用，开启更多可能。
-date: 2026-04-11 12:00:00
+date: "2026-04-11 12:00:00"
 tags:
 - Python
 - AI编程
@@ -14,7 +14,7 @@ categories:
 - AI编程教程
 - 项目实战
 author: 程序员晚枫
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

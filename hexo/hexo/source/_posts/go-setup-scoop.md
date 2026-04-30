@@ -1,8 +1,8 @@
 ---
 title: go-setup-scoop
-date: 2022-08-09 15:24:09
-tags: [Python, AI编程]
-cover: https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop
+date: "2022-08-09 15:24:09"
+tags: ["Python", "AI编程"]
+cover: "https://images.unsplash.com/photo-151707730?w=800&h=400&fit=crop"
 ---
 
 

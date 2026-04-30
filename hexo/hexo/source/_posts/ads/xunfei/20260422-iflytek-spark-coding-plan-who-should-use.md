@@ -1,11 +1,11 @@
 ---
 title: 讯飞星火 Coding Plan 适合谁用？语音编程爱好者 vs 其他人群分析
-keywords: [讯飞星火 Coding Plan 适合谁, iFLYTEK Spark 选购建议, 语音编程, 程序员晚枫]
+keywords: ["讯飞星火 Coding Plan 适合谁", "iFLYTEK Spark 选购建议", "语音编程", "程序员晚枫"]
 description: 程序员晚枫分析：讯飞星火 Coding Plan 适合哪些人？和其他厂商比有什么优势？选购建议全在这里。
-date: 2026-04-22 18:30:00
-tags: [讯飞星火, iFLYTEK Spark, Coding Plan 选购, 语音编程]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 18:30:00"
+tags: ["讯飞星火", "iFLYTEK Spark", "Coding Plan 选购", "语音编程"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

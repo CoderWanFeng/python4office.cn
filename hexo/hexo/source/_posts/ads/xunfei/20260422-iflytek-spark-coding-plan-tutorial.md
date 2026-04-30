@@ -1,11 +1,11 @@
 ---
 title: 讯飞星火 Coding Plan 入门：从注册到语音编程实战（2026最新版）
-keywords: [讯飞星火 Coding Plan 教程, iFLYTEK Spark 入门, AI编程语音教程, 程序员晚枫]
+keywords: ["讯飞星火 Coding Plan 教程", "iFLYTEK Spark 入门", "AI编程语音教程", "程序员晚枫"]
 description: 程序员晚枫手把手教你用讯飞星火 Coding Plan，从注册到语音编程实战，图文并茂适合小白。
-date: 2026-04-22 18:25:00
-tags: [讯飞星火, iFLYTEK Spark, Coding Plan 教程, AI编程入门, 语音编程]
-categories: [AI编程, 教程]
-cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-22 18:25:00"
+tags: ["讯飞星火", "iFLYTEK Spark", "Coding Plan 教程", "AI编程入门", "语音编程"]
+categories: ["AI编程", "教程"]
+cover: "https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

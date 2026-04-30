@@ -1,8 +1,8 @@
 ---
 title: 1行代码，根据文件后缀整理文件夹
-date: 2023-03-14 22:39:22
+date: "2023-03-14 22:39:22"
 tags: 自动化办公
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 <!-- more -->

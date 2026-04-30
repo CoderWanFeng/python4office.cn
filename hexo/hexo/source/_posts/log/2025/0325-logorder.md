@@ -1,8 +1,8 @@
 ---
 title: 一次性更新10个平台，我写文章的顺序是什么？
-date: 2025-03-25 13:51:51
+date: "2025-03-25 13:51:51"
 tags: 自媒体
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

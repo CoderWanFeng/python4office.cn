@@ -1,8 +1,8 @@
 ---
 title: 用Python下载B站视频？1行命令搞定，悄悄用
-date: 2022-08-16 16:05:25
+date: "2022-08-16 16:05:25"
 tags: python-office
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

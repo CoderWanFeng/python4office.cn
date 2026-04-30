@@ -1,16 +1,16 @@
 ---
 title: "iFLYTEK Spark Coding Plan Getting Started: From Registration to Voice Programming Practice (2026 Latest Version)"
-keywords: [iFLYTEK Spark Coding Plan Tutorial, iFLYTEK Spark Getting Started, AI Programming Voice Tutorial, Programmer Wan Feng]
+keywords: ["iFLYTEK Spark Coding Plan Tutorial", "iFLYTEK Spark Getting Started", "AI Programming Voice Tutorial", "Programmer Wan Feng"]
 description: "Programmer Wan Feng teaches you hands-on how to use iFLYTEK Spark Coding Plan, from registration to voice programming practice, with pictures suitable for beginners."
-date: 2026-04-22 18:25:00
-tags: [iFLYTEK Spark, iFLYTEK Spark, Coding Plan Tutorial, AI Programming Getting Started, Voice Programming]
-categories: [AI Programming, Tutorial]
+date: "2026-04-22 18:25:00"
+tags: ["iFLYTEK Spark", "iFLYTEK Spark", "Coding Plan Tutorial", "AI Programming Getting Started", "Voice Programming"]
+categories: ["AI Programming", "Tutorial"]
 hreflang:
 en: /20260422-iflytek-spark-coding-plan-tutorial/
 zh: /20260422-iflytek-spark-coding-plan-tutorial/
 canonical: /20260422-iflytek-spark-coding-plan-tutorial/
 translation: complete
-cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,16 +1,16 @@
 ---
 title: Who Should Use Kimi Coding Plan? Long Context Enthusiasts vs Other User Groups Analysis
-keywords: [Who Should Use Kimi Coding Plan, Moonshot Purchase Suggestions, Long Context, Programmer Wan Feng]
-description: Programmer Wan Feng analyzes: Who is Kimi Coding Plan suitable for? What scenarios is 128K context suitable for?
-date: 2026-04-22 19:10:00
-tags: [Moonshot, Kimi, Coding Plan Purchase, Long Context, Purchase Suggestions]
-categories: [AI Programming, Tool Review]
+keywords: ["Who Should Use Kimi Coding Plan", "Moonshot Purchase Suggestions", "Long Context", "Programmer Wan Feng"]
+description: "Programmer Wan Feng analyzes: Who is Kimi Coding Plan suitable for? What scenarios is 128K context suitable for?"
+date: "2026-04-22 19:10:00"
+tags: ["Moonshot", "Kimi", "Coding Plan Purchase", "Long Context", "Purchase Suggestions"]
+categories: ["AI Programming", "Tool Review"]
 hreflang:
 en: /20260422-moonshot-kimi-coding-plan-who-should-use/
 zh: /20260422-moonshot-kimi-coding-plan-who-should-use/
 canonical: /20260422-moonshot-kimi-coding-plan-who-should-use/
 translation: complete
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

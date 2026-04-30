@@ -1,9 +1,9 @@
 ---
 title: 第6讲：Coze 扣子平台深度解析
-date: 2026-04-06 14:00:00
+date: "2026-04-06 14:00:00"
 tags: ["AI Skill", "Coze", "扣子", "平台"]
 categories: ["AI Skills 课程"]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

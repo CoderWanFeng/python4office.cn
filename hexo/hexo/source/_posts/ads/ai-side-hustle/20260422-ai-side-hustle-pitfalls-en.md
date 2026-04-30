@@ -1,6 +1,6 @@
 ---
 title: "AI Side Hustle Pitfalls to Avoid! Don't Fall into These 10 Traps, Many People Have Already Fallen"
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["AI Side Hustle", "Side Hustle Pitfalls"]
 categories: ["AI Side Hustle Monetization"]
 description: "AI side hustle pitfalls: Don't fall into these 10 traps, don't go all in, don't speculate, don't violate rules, be persistent. Many people have already fallen."
@@ -9,7 +9,7 @@ en: /20260422-ai-side-hustle-pitfalls/
 zh: /20260422-ai-side-hustle-pitfalls/
 canonical: /20260422-ai-side-hustle-pitfalls/
 translation: complete
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

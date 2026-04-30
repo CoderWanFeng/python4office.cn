@@ -2,12 +2,12 @@
 title: 我用腾讯云OpenClaw做了3个业务助手，4月10日郑州分享实战经验
 keywords: 程序员晚枫, 腾讯云OpenClaw, AI助手业务场景, 客服机器人, 郑州龙虾课, AI应用落地
 description: 程序员晚枫分享：3个真实的腾讯云OpenClaw业务应用案例，智能客服、社群运营助手、内部知识库问答，4月10日郑州龙虾课现场拆解。
-date: 2026-04-08 23:40:00
+date: "2026-04-08 23:40:00"
 sidebar:
 - toc
 hide:
 - toc
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

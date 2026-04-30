@@ -1,9 +1,9 @@
 ---
 title: AI短视频文案库
-date: 2026-04-12 00:00:00
-tags: [AI, 短视频, 文案, 创作]
+date: "2026-04-12 00:00:00"
+tags: ["AI", "短视频", "文案", "创作"]
 categories: ["AI Skills"]
-cover: https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

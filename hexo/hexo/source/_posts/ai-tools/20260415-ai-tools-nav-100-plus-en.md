@@ -1,6 +1,6 @@
 ---
 title: "Most Complete AI Tools Navigation 2026: 100+ Free AI Software - ChatGPT, Midjourney, Cursor and More"
-date: 2026-04-15 00:00:00
+date: "2026-04-15 00:00:00"
 categories:
 - AI Tools
 tags:
@@ -29,7 +29,7 @@ tags:
 - Tongyi Qianwen
 - iFLYTEK Spark
 description: "One bookmark is all you need. 100+ trending AI tools, covering 8 major categories: AI Chat, AI Office, AI Art, AI Coding, AI Video, AI Search and more. Domestic and international coverage, free navigation site recommendations."
-cover: https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop
+cover: "https://images.unsplash.com/photo-1518709268805-4e6709f4?w=800&h=400&fit=crop"
 ---
 
 

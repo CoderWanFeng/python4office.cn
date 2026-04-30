@@ -1,251 +1,250 @@
-const btf = {
-  debounce: function (func, wait, immediate) {
-    let timeout
-    return function () {
-      const context = this
-      const args = arguments
-      const later = function () {
-        timeout = null
-        if (!immediate) func.apply(context, args)
-      }
-      const callNow = immediate && !timeout
-      clearTimeout(timeout)
-      timeout = setTimeout(later, wait)
-      if (callNow) func.apply(context, args)
-    }
+/* global Fluid, CONFIG */
+
+window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
+
+Fluid.utils = {
+
+  listenScroll: function(callback) {
+    var dbc = new Debouncer(callback);
+    window.addEventListener('scroll', dbc, false);
+    dbc.handleEvent();
+    return dbc;
   },
 
-  throttle: function (func, wait, options) {
-    let timeout, context, args
-    let previous = 0
-    if (!options) options = {}
-
-    const later = function () {
-      previous = options.leading === false ? 0 : new Date().getTime()
-      timeout = null
-      func.apply(context, args)
-      if (!timeout) context = args = null
-    }
-
-    const throttled = function () {
-      const now = new Date().getTime()
-      if (!previous && options.leading === false) previous = now
-      const remaining = wait - (now - previous)
-      context = this
-      args = arguments
-      if (remaining <= 0 || remaining > wait) {
-        if (timeout) {
-          clearTimeout(timeout)
-          timeout = null
-        }
-        previous = now
-        func.apply(context, args)
-        if (!timeout) context = args = null
-      } else if (!timeout && options.trailing !== false) {
-        timeout = setTimeout(later, remaining)
-      }
-    }
-
-    return throttled
+  unlistenScroll: function(callback) {
+    window.removeEventListener('scroll', callback);
   },
 
-  sidebarPaddingR: () => {
-    const innerWidth = window.innerWidth
-    const clientWidth = document.body.clientWidth
-    const paddingRight = innerWidth - clientWidth
-    if (innerWidth !== clientWidth) {
-      document.body.style.paddingRight = paddingRight + 'px'
-    }
-  },
-
-  snackbarShow: (text, showAction, duration) => {
-    const sa = (typeof showAction !== 'undefined') ? showAction : false
-    const dur = (typeof duration !== 'undefined') ? duration : 2000
-    const position = GLOBAL_CONFIG.Snackbar.position
-    const bg = document.documentElement.getAttribute('data-theme') === 'light' ? GLOBAL_CONFIG.Snackbar.bgLight : GLOBAL_CONFIG.Snackbar.bgDark
-    Snackbar.show({
-      text: text,
-      backgroundColor: bg,
-      showAction: sa,
-      duration: dur,
-      pos: position
-    })
-  },
-
-  initJustifiedGallery: function (selector) {
-    if (!(selector instanceof jQuery)) {
-      selector = $(selector)
-    }
-    selector.each(function (i, o) {
-      if ($(this).is(':visible')) {
-        $(this).justifiedGallery({
-          rowHeight: 220,
-          margins: 4
-        })
-      }
-    })
-  },
-
-  diffDate: (d, more = false) => {
-    const dateNow = new Date()
-    const datePost = new Date(d)
-    const dateDiff = dateNow.getTime() - datePost.getTime()
-    const minute = 1000 * 60
-    const hour = minute * 60
-    const day = hour * 24
-    const month = day * 30
-
-    let result
-    if (more) {
-      const monthCount = dateDiff / month
-      const dayCount = dateDiff / day
-      const hourCount = dateDiff / hour
-      const minuteCount = dateDiff / minute
-
-      if (monthCount > 12) {
-        result = datePost.toLocaleDateString().replace(/\//g, '-')
-      } else if (monthCount >= 1) {
-        result = parseInt(monthCount) + ' ' + GLOBAL_CONFIG.date_suffix.month
-      } else if (dayCount >= 1) {
-        result = parseInt(dayCount) + ' ' + GLOBAL_CONFIG.date_suffix.day
-      } else if (hourCount >= 1) {
-        result = parseInt(hourCount) + ' ' + GLOBAL_CONFIG.date_suffix.hour
-      } else if (minuteCount >= 1) {
-        result = parseInt(minuteCount) + ' ' + GLOBAL_CONFIG.date_suffix.min
-      } else {
-        result = GLOBAL_CONFIG.date_suffix.just
-      }
+  listenDOMLoaded(callback) {
+    if (document.readyState !== 'loading') {
+      callback();
     } else {
-      result = parseInt(dateDiff / day)
+      document.addEventListener('DOMContentLoaded', function () {
+        callback();
+      });
     }
-    return result
   },
 
-  loadComment: (dom, callback) => {
-    if ('IntersectionObserver' in window) {
-      const observerItem = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          callback()
-          observerItem.disconnect()
+  scrollToElement: function(target, offset) {
+    var of = jQuery(target).offset();
+    if (of) {
+      jQuery('html,body').animate({
+        scrollTop: of.top + (offset || 0),
+        easing   : 'swing'
+      });
+    }
+  },
+
+  elementVisible: function(element, offsetFactor) {
+    offsetFactor = offsetFactor && offsetFactor >= 0 ? offsetFactor : 0;
+    var rect = element.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var vw = window.innerWidth || document.documentElement.clientWidth;
+    var expandH = vh * offsetFactor;
+    var expandW = vw * offsetFactor;
+    // 判断元素矩形与视口（上下左右各扩展 offsetFactor 屏）是否有重叠
+    return rect.bottom > -expandH
+      && rect.top < vh + expandH
+      && rect.right > -expandW
+      && rect.left < vw + expandW;
+  },
+
+  waitElementVisible: function(selectorOrElement, callback, offsetFactor) {
+    var runningOnBrowser = typeof window !== 'undefined';
+    var isBot = (runningOnBrowser && !('onscroll' in window))
+      || (typeof navigator !== 'undefined' && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
+    if (!runningOnBrowser || isBot) {
+      return;
+    }
+
+    offsetFactor = offsetFactor && offsetFactor >= 0 ? offsetFactor : 0;
+
+    function waitInViewport(element) {
+      Fluid.utils.listenDOMLoaded(function() {
+        if (Fluid.utils.elementVisible(element, offsetFactor)) {
+          callback();
+          return;
         }
-      }, { threshold: [0] })
-      observerItem.observe(dom)
+        if ('IntersectionObserver' in window) {
+          var margin = (window.innerHeight || document.documentElement.clientHeight) * offsetFactor + 'px';
+          var io = new IntersectionObserver(function(entries, ob) {
+            if (entries[0].isIntersecting) {
+              callback();
+              ob.disconnect();
+            }
+          }, {
+            threshold : [0],
+            rootMargin: margin + ' 0px'
+          });
+          io.observe(element);
+        } else {
+          var wrapper = Fluid.utils.listenScroll(function() {
+            if (Fluid.utils.elementVisible(element, offsetFactor)) {
+              Fluid.utils.unlistenScroll(wrapper);
+              callback();
+            }
+          });
+        }
+      });
+    }
+
+    if (typeof selectorOrElement === 'string') {
+      this.waitElementLoaded(selectorOrElement, function(element) {
+        waitInViewport(element);
+      });
     } else {
-      callback()
+      waitInViewport(selectorOrElement);
     }
   },
 
-  scrollToDest: (pos, time) => {
-    if (pos < 0 || time < 0) {
-      return
+  waitElementLoaded: function(selector, callback) {
+    var runningOnBrowser = typeof window !== 'undefined';
+    var isBot = (runningOnBrowser && !('onscroll' in window))
+      || (typeof navigator !== 'undefined' && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
+    if (!runningOnBrowser || isBot) {
+      return;
     }
 
-    const currentPos = window.scrollY || window.screenTop
-    if (currentPos > pos) pos = pos - 70
-
-    if ('CSS' in window && CSS.supports('scroll-behavior', 'smooth')) {
-      window.scrollTo({
-        top: pos,
-        behavior: 'smooth'
-      })
-      return
-    }
-
-    let start = null
-    time = time || 500
-    window.requestAnimationFrame(function step (currentTime) {
-      start = !start ? currentTime : start
-      if (currentPos < pos) {
-        const progress = currentTime - start
-        window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos)
-        if (progress < time) {
-          window.requestAnimationFrame(step)
-        } else {
-          window.scrollTo(0, pos)
+    if ('MutationObserver' in window) {
+      var mo = new MutationObserver(function(records, ob) {
+        var ele = document.querySelector(selector);
+        if (ele) {
+          callback(ele);
+          ob.disconnect();
         }
+      });
+      mo.observe(document, { childList: true, subtree: true });
+    } else {
+      Fluid.utils.listenDOMLoaded(function() {
+        var waitLoop = function() {
+          var ele = document.querySelector(selector);
+          if (ele) {
+            callback(ele);
+          } else {
+            setTimeout(waitLoop, 100);
+          }
+        };
+        waitLoop();
+      });
+    }
+  },
+
+  createScript: function(url, onload) {
+    var s = document.createElement('script');
+    s.setAttribute('src', url);
+    s.setAttribute('type', 'text/javascript');
+    s.setAttribute('charset', 'UTF-8');
+    s.async = false;
+    if (typeof onload === 'function') {
+      if (window.attachEvent) {
+        s.onreadystatechange = function() {
+          var e = s.readyState;
+          if (e === 'loaded' || e === 'complete') {
+            s.onreadystatechange = null;
+            onload();
+          }
+        };
       } else {
-        const progress = currentTime - start
-        window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time))
-        if (progress < time) {
-          window.requestAnimationFrame(step)
-        } else {
-          window.scrollTo(0, pos)
-        }
+        s.onload = onload;
       }
-    })
-  },
-
-  fadeIn: (ele, time) => {
-    ele.style.cssText = `display:block;animation: to_show ${time}s`
-  },
-
-  fadeOut: (ele, time) => {
-    ele.addEventListener('animationend', function f () {
-      ele.style.cssText = "display: none; animation: '' "
-      ele.removeEventListener('animationend', f)
-    })
-    ele.style.animation = `to_hide ${time}s`
-  },
-
-  getParents: (elem, selector) => {
-    for (; elem && elem !== document; elem = elem.parentNode) {
-      if (elem.matches(selector)) return elem
     }
-    return null
+    var ss = document.getElementsByTagName('script');
+    var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+    e.parentNode.insertBefore(s, e.nextSibling);
   },
 
-  siblings: (ele, selector) => {
-    return [...ele.parentNode.children].filter((child) => {
-      if (selector) {
-        return child !== ele && child.matches(selector)
+  createCssLink: function(url) {
+    var l = document.createElement('link');
+    l.setAttribute('rel', 'stylesheet');
+    l.setAttribute('type', 'text/css');
+    l.setAttribute('href', url);
+    var e = document.getElementsByTagName('link')[0]
+      || document.getElementsByTagName('head')[0]
+      || document.head || document.documentElement;
+    e.parentNode.insertBefore(l, e);
+  },
+
+  loadComments: function(selector, loadFunc) {
+    var ele = document.querySelector('#comments[lazyload]');
+    if (ele) {
+      var callback = function() {
+        loadFunc();
+        ele.removeAttribute('lazyload');
+      };
+      Fluid.utils.waitElementVisible(selector, callback, CONFIG.lazyload.offset_factor);
+    } else {
+      loadFunc();
+    }
+  },
+
+  getBackgroundLightness(selectorOrElement) {
+    var ele = selectorOrElement;
+    if (typeof selectorOrElement === 'string') {
+      ele = document.querySelector(selectorOrElement);
+    }
+    var view = ele.ownerDocument.defaultView;
+    if (!view) {
+      view = window;
+    }
+    var rgbArr = view.getComputedStyle(ele).backgroundColor.replace(/rgba*\(/, '').replace(')', '').split(/,\s*/);
+    if (rgbArr.length < 3) {
+      return 0;
+    }
+    var colorCast = (0.213 * rgbArr[0]) + (0.715 * rgbArr[1]) + (0.072 * rgbArr[2]);
+    return colorCast === 0 || colorCast > 255 / 2 ? 1 : -1;
+  },
+
+  retry(handler, interval, times) {
+    if (times <= 0) {
+      return;
+    }
+    var next = function() {
+      if (--times >= 0 && !handler()) {
+        setTimeout(next, interval);
       }
-      return child !== ele
-    })
+    };
+    setTimeout(next, interval);
+  }
+
+};
+
+/**
+ * Handles debouncing of events via requestAnimationFrame
+ * @see http://www.html5rocks.com/en/tutorials/speed/animations/
+ * @param {Function} callback The callback to handle whichever event
+ */
+function Debouncer(callback) {
+  this.callback = callback;
+  this.ticking = false;
+}
+
+Debouncer.prototype = {
+  constructor: Debouncer,
+
+  /**
+   * dispatches the event to the supplied callback
+   * @private
+   */
+  update: function() {
+    this.callback && this.callback();
+    this.ticking = false;
   },
 
   /**
-   *
-   * @param {*} selector
-   * @param {*} eleType the type of create element
-   * @param {*} id id
-   * @param {*} cn class name
+   * ensures events don't get stacked
+   * @private
    */
-  wrap: function (selector, eleType, id = '', cn = '') {
-    const creatEle = document.createElement(eleType)
-    if (id) creatEle.id = id
-    if (cn) creatEle.className = cn
-    selector.parentNode.insertBefore(creatEle, selector)
-    creatEle.appendChild(selector)
-  },
-
-  unwrap: function (el) {
-    const elParentNode = el.parentNode
-    if (elParentNode !== document.body) {
-      elParentNode.parentNode.insertBefore(el, elParentNode)
-      elParentNode.parentNode.removeChild(elParentNode)
+  requestTick: function() {
+    if (!this.ticking) {
+      requestAnimationFrame(this.rafCallback || (this.rafCallback = this.update.bind(this)));
+      this.ticking = true;
     }
   },
 
-  isJqueryLoad: (fn) => {
-    if (typeof jQuery === 'undefined') {
-      getScript(GLOBAL_CONFIG.source.jQuery).then(fn)
-    } else {
-      fn()
-    }
-  },
-
-  isHidden: (ele) => ele.offsetHeight === 0 && ele.offsetWidth === 0,
-
-  getEleTop: (ele) => {
-    let actualTop = ele.offsetTop
-    let current = ele.offsetParent
-
-    while (current !== null) {
-      actualTop += current.offsetTop
-      current = current.offsetParent
-    }
-
-    return actualTop
+  /**
+   * Attach this as the event listeners
+   */
+  handleEvent: function() {
+    this.requestTick();
   }
-
-}
+};

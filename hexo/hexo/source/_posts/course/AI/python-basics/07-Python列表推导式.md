@@ -1,8 +1,8 @@
 ---
 title: Python列表推导式：我用一行代码替代了10行循环，效率翻倍
-date: 2026-02-28 17:26:00
-tags: [Python基础, 列表推导式, 编程技巧]
-cover: https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop
+date: "2026-02-28 17:26:00"
+tags: ["Python基础", "列表推导式", "编程技巧"]
+cover: "https://images.unsplash.com/photo-152637909?w=800&h=400&fit=crop"
 ---
 
 

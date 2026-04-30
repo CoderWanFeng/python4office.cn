@@ -1,8 +1,8 @@
 ---
 title: 一个15分钟的视频，教你用Python创建自己的微信机器人！（源代码）
-date: 2022-03-30 17:01:54
+date: "2022-03-30 17:01:54"
 tags: 机器人
-cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop"
 ---
 
 

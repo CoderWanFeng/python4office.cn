@@ -1,8 +1,8 @@
 ---
 title: 6讲 · Python自动收发邮件（已完结）
-date: 2024-01-01 14:08:24
+date: "2024-01-01 14:08:24"
 tags: 原创课程
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

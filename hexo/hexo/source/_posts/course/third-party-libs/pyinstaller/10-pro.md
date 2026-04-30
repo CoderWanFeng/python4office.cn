@@ -1,8 +1,8 @@
 ---
 title: 第十讲：进阶主题 —— 自解压安装包、插件化架构、商业级保护一次打通
-date: 2025-07-14 04:42:49
-tags: [第三方库,pyinstaller]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-07-14 04:42:49"
+tags: ["第三方库", "pyinstaller"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

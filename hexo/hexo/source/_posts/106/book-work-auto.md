@@ -1,8 +1,8 @@
 ---
 title: 409页PDF：《Python：让繁琐工作自动化》
-date: 2022-11-20 23:44:09
+date: "2022-11-20 23:44:09"
 tags: 电子书
-cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

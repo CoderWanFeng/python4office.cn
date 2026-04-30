@@ -2,10 +2,10 @@
 title: 火山方舟Coding Plan vs GitHub Copilot对比：哪个更适合中国开发者？
 keywords: 程序员晚枫, 火山方舟Coding Plan, GitHub Copilot对比, AI编程工具, 国产AI编程, 代码补全工具对比
 description: 程序员晚枫深度对比：火山方舟Coding Plan vs GitHub Copilot，价格、功能、模型全面对比，帮你选出最适合的AI编程工具。
-date: 2026-04-08 00:20:00
-tags: [火山方舟Coding Plan, GitHub Copilot, AI编程工具对比, 代码补全工具, 国产AI编程, 程序员晚枫]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-08 00:20:00"
+tags: ["火山方舟Coding Plan", "GitHub Copilot", "AI编程工具对比", "代码补全工具", "国产AI编程", "程序员晚枫"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

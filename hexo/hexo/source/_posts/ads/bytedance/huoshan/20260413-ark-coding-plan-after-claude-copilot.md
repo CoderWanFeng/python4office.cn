@@ -2,10 +2,10 @@
 title: 用了1个月火山方舟后，我放弃了Claude和Copilot
 keywords: 程序员晚枫, 火山方舟体验, Claude使用, Copilot替代, 国产AI编程, AI编程工具对比
 description: 程序员晚枫真实体验：用了1个月火山方舟Coding Plan后，我彻底放弃了Claude和Copilot。原因就3个。
-date: 2026-04-13 00:00:00
-tags: [火山方舟体验, Claude使用, Copilot替代, 国产AI编程, AI编程工具对比, 程序员晚枫]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-13 00:00:00"
+tags: ["火山方舟体验", "Claude使用", "Copilot替代", "国产AI编程", "AI编程工具对比", "程序员晚枫"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

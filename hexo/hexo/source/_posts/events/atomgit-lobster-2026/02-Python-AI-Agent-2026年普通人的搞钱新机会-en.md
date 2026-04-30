@@ -1,9 +1,9 @@
 ---
 title: Python + AI Agent = New Money-Making Opportunity for Ordinary People in 2026
-date: 2026-04-11 08:00:00
-tags: [AI Programming, Python, Agent, Side Hustle, Make Money]
+date: "2026-04-11 08:00:00"
+tags: ["AI Programming", "Python", "Agent", "Side Hustle", "Make Money"]
 categories: Insights
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

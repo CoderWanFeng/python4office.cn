@@ -1,10 +1,10 @@
 ---
 title: Tencent Cloud Coding Plan vs GitHub Copilot - In-Depth Comparison Review
-date: 2026-03-10 14:57:03
-tags: [Tencent, Comparison Review, Open Source Ecosystem]
+date: "2026-03-10 14:57:03"
+tags: ["Tencent", "Comparison Review", "Open Source Ecosystem"]
 categories:
 - AI Programming
-cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

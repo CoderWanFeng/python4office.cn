@@ -1,8 +1,8 @@
 ---
 title: AI编程太狠了！我认怂了——以前1个月的活，现在1晚搞定
-date: 2026-01-12 20:41:49
-tags: [AI编程]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-01-12 20:41:49"
+tags: ["AI编程"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: pdf-add-water-mark
-date: 2022-04-26 10:37:11
-tags: [AI编程, Python自动化办公, 火山方舟, 字节, PDF自动化]
-cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
+date: "2022-04-26 10:37:11"
+tags: ["AI编程", "Python自动化办公", "火山方舟", "字节", "PDF自动化"]
+cover: "https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop"
 ---
 
 

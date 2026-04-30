@@ -1,8 +1,8 @@
 ---
 title: 迷茫！我30岁被裁员了，程序员高薪就是一个笑话
-date: 2023-03-07 01:21:40
+date: "2023-03-07 01:21:40"
 tags: 职场
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,9 +1,9 @@
 ---
 title: 2000元奖金+无限Token！「AI 龙虾挑战赛」重庆站，怎么报名？
-date: 2026-04-08 00:00:00
-tags: [线下活动, AI编程, 重庆, AtomGit, OpenClaw]
+date: "2026-04-08 00:00:00"
+tags: ["线下活动", "AI编程", "重庆", "AtomGit", "OpenClaw"]
 categories: 活动
-cover: https://images.unsplash.com/photo-1579208578152-875549830880?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1579208578152-875549830880?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

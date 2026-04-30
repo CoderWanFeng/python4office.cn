@@ -1,8 +1,8 @@
 ---
 title: 整理了100个Python实战项目，从入门到应用，够用了！
-date: 2022-10-12 09:57:08
+date: "2022-10-12 09:57:08"
 tags: Python项目
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

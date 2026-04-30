@@ -1,10 +1,10 @@
 ---
 title: AI小红书内容创作！3个爆款方向，看完你就知道怎么写了
-date: 2026-04-22 00:00:00
+date: "2026-04-22 00:00:00"
 tags: ["ai副业", "小红书", "副业变现"]
 categories: ["AI副业变现"]
 description: AI小红书内容创作案例：3个爆款方向，干货教程、经验分享、产品测评，看完你就知道怎么写了。
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

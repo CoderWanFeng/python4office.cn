@@ -1,11 +1,11 @@
 ---
 title: 技术深度对比：DeepSeek-V3 vs GPT-4o vs Claude 3.5，谁是最强代码模型？
-date: 2026-04-21 15:06:00
-tags: [技术对比, DeepSeek-V3, GPT-4o, Claude 3.5, 代码模型]
-categories: [AI工具]
-keywords: [DeepSeek vs GPT-4, Claude代码能力, AI代码模型对比, DeepSeek-V3评测, 最强代码AI]
+date: "2026-04-21 15:06:00"
+tags: ["技术对比", "DeepSeek-V3", "GPT-4o", "Claude 3.5", "代码模型"]
+categories: ["AI工具"]
+keywords: ["DeepSeek vs GPT-4", "Claude代码能力", "AI代码模型对比", "DeepSeek-V3评测", "最强代码AI"]
 description: 技术深度对比：DeepSeek-V3 vs GPT-4o vs Claude 3.5，从代码生成、Debug、架构设计三个维度实测，找出最强代码模型。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

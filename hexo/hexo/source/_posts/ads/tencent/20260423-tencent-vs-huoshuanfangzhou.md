@@ -1,11 +1,11 @@
 ---
 title: 腾讯云 Coding Plan vs 火山方舟：49 元 vs 36 元，多模型还是微信生态？
-keywords: [腾讯云 vs 火山方舟, Coding Plan 对比, 腾讯混元, 程序员晚枫]
+keywords: ["腾讯云 vs 火山方舟", "Coding Plan 对比", "腾讯混元", "程序员晚枫"]
 description: 程序员晚枫对比：腾讯云 Coding Plan（49元/月）vs 火山方舟（36元/月），多模型随便用 vs 微信生态，你选哪个？
-date: 2026-04-23 15:30:00
-tags: [腾讯云, 火山方舟, Coding Plan 对比, AI编程]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-23 15:30:00"
+tags: ["腾讯云", "火山方舟", "Coding Plan 对比", "AI编程"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

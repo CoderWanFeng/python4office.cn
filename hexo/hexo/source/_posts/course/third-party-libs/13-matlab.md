@@ -1,8 +1,8 @@
 ---
 title: 《Python绘图必备！Matplotlib超全入门教程，看完秒变数据可视化大神！》
-date: 2025-01-29 16:24:04
+date: "2025-01-29 16:24:04"
 tags: 第三方库
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

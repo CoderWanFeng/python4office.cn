@@ -1,8 +1,8 @@
 ---
 title: Python正则表达式：我用这10个模式，搞定了90%的文本处理需求
-date: 2026-02-28 19:03:00
-tags: [Python基础, 正则表达式, 文本处理]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2026-02-28 19:03:00"
+tags: ["Python基础", "正则表达式", "文本处理"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 title: I Used AtomCode! Shocked by Its Speed
-date: 2026-04-22 21:18:00
+date: "2026-04-22 21:18:00"
 tags: ["AI Programming", "AtomCode", "Rust"]
 categories: ["AI Tools"]
 description: I used AtomCode! Shocked by its speed
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

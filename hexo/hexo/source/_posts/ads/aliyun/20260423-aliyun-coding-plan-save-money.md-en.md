@@ -1,11 +1,11 @@
 ---
 title: "Alibaba Cloud Bailian Coding Plan Money-Saving Guide: How to Get the Best Value from 29 yuan/month?"
-keywords: [Alibaba Cloud Bailian Save Money, Tongyi Qianwen Money-Saving, AI Programming Value for Money, Programmer Wan Feng]
-description: Programmer Wan Feng's money-saving guide: Alibaba Cloud Bailian Coding Plan 29 yuan/month, how to get the best value? These tips help you save big!
-date: 2026-04-23 20:30:00
-tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, Money-Saving Guide, AI Programming]
-categories: [AI Programming, Tutorial]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+keywords: ["Alibaba Cloud Bailian Save Money", "Tongyi Qianwen Money-Saving", "AI Programming Value for Money", "Programmer Wan Feng"]
+description: "Programmer Wan Feng's money-saving guide: Alibaba Cloud Bailian Coding Plan 29 yuan/month, how to get the best value? These tips help you save big!"
+date: "2026-04-23 20:30:00"
+tags: ["Alibaba Cloud", "Bailian", "Tongyi Qianwen", "Money-Saving Guide", "AI Programming"]
+categories: ["AI Programming", "Tutorial"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

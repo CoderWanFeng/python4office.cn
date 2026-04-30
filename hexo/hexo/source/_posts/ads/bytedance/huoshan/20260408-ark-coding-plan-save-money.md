@@ -2,10 +2,10 @@
 title: 火山方舟Coding Plan省钱攻略：36元/月怎么用出100元的效果？
 keywords: 程序员晚枫, 火山方舟Coding Plan省钱, AI编程省钱技巧, Coding Plan优惠, 程序员省钱攻略
 description: 程序员晚枫分享：火山方舟Coding Plan省钱攻略，36元/月用出100元效果，AI编程成本控制技巧大公开。
-date: 2026-04-08 00:22:00
-tags: [火山方舟Coding Plan省钱, Coding Plan优惠, AI编程工具省钱, 火山引擎折扣, 程序员省钱, 程序员晚枫]
-categories: [AI编程, 省钱攻略]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-08 00:22:00"
+tags: ["火山方舟Coding Plan省钱", "Coding Plan优惠", "AI编程工具省钱", "火山引擎折扣", "程序员省钱", "程序员晚枫"]
+categories: ["AI编程", "省钱攻略"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

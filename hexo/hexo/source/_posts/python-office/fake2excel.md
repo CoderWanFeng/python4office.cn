@@ -1,8 +1,8 @@
 ---
 title: python-office专业造数功能：fake2excel，满足你对模拟数据的所有需求。
-date: 2022-05-13 00:25:59
+date: "2022-05-13 00:25:59"
 tags: 自动化办公
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

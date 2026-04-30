@@ -1,8 +1,8 @@
 ---
 title: 文科小白，如何快速入门Python数据分析？
-date: 2025-02-05 22:22:05
+date: "2025-02-05 22:22:05"
 tags: 1v1
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

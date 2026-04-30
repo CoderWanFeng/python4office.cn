@@ -1,8 +1,8 @@
 ---
 title: Hexo的安装和配置
-date: 2022-01-25 09:06:25
-tags: [Hexo, 博客]
-cover: https://images.unsplash.com/photo-158695320?w=800&h=400&fit=crop
+date: "2022-01-25 09:06:25"
+tags: ["Hexo", "博客"]
+cover: "https://images.unsplash.com/photo-158695320?w=800&h=400&fit=crop"
 ---
 
 

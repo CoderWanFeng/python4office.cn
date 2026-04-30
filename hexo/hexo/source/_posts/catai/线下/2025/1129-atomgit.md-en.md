@@ -1,8 +1,8 @@
 ---
 title: "Chongqing's Tech Atmosphere is Getting Better and Better"
-date: 2025-11-30 20:56:34
+date: "2025-11-30 20:56:34"
 tags: AI
-cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

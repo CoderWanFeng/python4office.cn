@@ -2,10 +2,10 @@
 title: Huawei Has No Coding Plan? JD Cloud May Be the Most Stable Domestic Choice
 keywords: ["Huawei Coding Plan", "JD Cloud", "JD AI", "Domestic Cloud Service", "程序员晚枫"]
 description: "Huawei temporarily has no Coding Plan? Programmer Wanfeng recommends JD Cloud — stable domestic access + reliable service, a choice for domestic projects."
-date: 2026-04-22 23:00:00
+date: "2026-04-22 23:00:00"
 tags: ["Huawei", "JD Cloud", "Coding Plan", "Domestic Cloud Service", "程序员晚枫"]
 categories: ["AI Programming", "Tool Review"]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

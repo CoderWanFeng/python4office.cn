@@ -1,10 +1,10 @@
 ---
 title: 视频脚本库
-date: 2026-04-14 00:00:00
-tags: [视频脚本, 口播稿]
-categories: [视频文案库]
+date: "2026-04-14 00:00:00"
+tags: ["视频脚本", "口播稿"]
+categories: ["视频文案库"]
 description: 视频脚本库 - 包含口播稿（用于视频号、抖音）
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

@@ -2,10 +2,10 @@
 title: Who Is China Mobile Cloud Coding Plan Best For? Government & Enterprise vs Individual Developer Purchase Analysis
 keywords: ["Who Is China Mobile Cloud Coding Plan For", "China Mobile Purchase Advice", "Government & Enterprise", "程序员晚枫"]
 description: "Programmer Wanfeng's analysis: Who is China Mobile Cloud Coding Plan best for? How should government/enterprise and individual developers choose?"
-date: 2026-04-22 21:30:00
+date: "2026-04-22 21:30:00"
 tags: ["China Mobile", "China Mobile", "Coding Plan Purchase", "Government & Enterprise", "Enterprise Users"]
 categories: ["AI Programming", "Tool Review"]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

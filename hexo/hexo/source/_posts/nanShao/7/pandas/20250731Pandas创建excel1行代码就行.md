@@ -1,8 +1,8 @@
 ---
 title: Pandas创建excel，1行代码就行。
-date: 2025-07-31 23:41:49
-tags: [30讲Python+Excel数据分析]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-07-31 23:41:49"
+tags: ["30讲Python+Excel数据分析"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 <!-- more -->

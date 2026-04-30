@@ -1,8 +1,8 @@
 ---
 title: spark + python安装教程
-date: 2022-08-08 16:21:16
+date: "2022-08-08 16:21:16"
 tags:  spark
-cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1000&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1000&auto=format&fit=crop"
 ---
 
 

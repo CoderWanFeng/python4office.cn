@@ -1,8 +1,8 @@
 ---
 title: CodeBuddy锁死GLM4.6！老用户实测疯传：这波免费福利炸了
-date: 2025-11-07 00:24:04
-tags: [CodeBuddy,vibecoding]
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+date: "2025-11-07 00:24:04"
+tags: ["CodeBuddy", "vibecoding"]
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

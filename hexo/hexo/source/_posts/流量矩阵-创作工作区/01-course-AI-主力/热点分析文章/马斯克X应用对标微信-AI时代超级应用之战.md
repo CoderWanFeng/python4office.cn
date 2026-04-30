@@ -1,9 +1,9 @@
 ---
 title: 马斯克出手了！X应用对标微信，AI时代超级应用之战打响
-date: 2026-04-14 17:02:00
-tags: [马斯克，X应用，AI超级应用，微信]
-categories: [热点分析]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-14 17:02:00"
+tags: ["马斯克，X应用，AI超级应用，微信"]
+categories: ["热点分析"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

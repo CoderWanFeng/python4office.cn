@@ -1,8 +1,8 @@
 ---
 title: 性能优化必备！深入掌握Python性能分析神器cProfile
-date: 2024-11-11 00:41:49
-tags: [第三方库,pip]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2024-11-11 00:41:49"
+tags: ["第三方库", "pip"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

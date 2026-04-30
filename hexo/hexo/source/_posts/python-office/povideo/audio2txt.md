@@ -1,8 +1,8 @@
 ---
 title: 音视频转文字不求人， 腾讯云AI来帮您
-date: 2024-05-23 13:00:35
+date: "2024-05-23 13:00:35"
 tags: 开源项目
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

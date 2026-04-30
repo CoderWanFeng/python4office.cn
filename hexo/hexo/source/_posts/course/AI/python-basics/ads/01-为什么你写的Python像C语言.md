@@ -1,9 +1,9 @@
 ---
 title: 为什么你写的Python像C语言？看完这篇就懂了
-date: 2026-04-17 22:10:00
-tags: [Python基础, Pythonic, 编程风格, 列表推导式]
+date: "2026-04-17 22:10:00"
+tags: ["Python基础", "Pythonic", "编程风格", "列表推导式"]
 categories: Python基础
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

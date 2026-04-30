@@ -1,8 +1,8 @@
 ---
 title: 考研失败，加入国企当程序员，真香！
-date: 2023-03-01 23:10:13
+date: "2023-03-01 23:10:13"
 tags: 找工作
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

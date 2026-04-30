@@ -1,11 +1,11 @@
 ---
 title: 开发者省钱指南：2026年如何零成本使用AI大模型？（附12家免费额度汇总）
-date: 2026-04-21 15:02:00
-tags: [开发者省钱, 免费AI额度, Coding Plan, DeepSeek, 火山方舟]
-categories: [AI工具]
-keywords: [开发者省钱, 免费AI额度, Coding Plan薅羊毛, DeepSeek免费, AI开发成本]
+date: "2026-04-21 15:02:00"
+tags: ["开发者省钱", "免费AI额度", "Coding Plan", "DeepSeek", "火山方舟"]
+categories: ["AI工具"]
+keywords: ["开发者省钱", "免费AI额度", "Coding Plan薅羊毛", "DeepSeek免费", "AI开发成本"]
 description: 开发者省钱指南：2026年如何零成本使用AI大模型？附12家云厂商免费Coding Plan汇总，最高省10万元开发成本。
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

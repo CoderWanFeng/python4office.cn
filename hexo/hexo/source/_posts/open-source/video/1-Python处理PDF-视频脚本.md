@@ -1,8 +1,8 @@
 ---
 title: 深度解析：Python中处理PDF的库有很多，我应该选择哪一个？
-date: 2025-10-01 19:25:17
+date: "2025-10-01 19:25:17"
 tags: 视频脚本
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

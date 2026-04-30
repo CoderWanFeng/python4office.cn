@@ -1,8 +1,8 @@
 ---
 title: Supervisor使用详解
-date: 2022-01-23 19:08:02
-tags: [Linux,Python]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2022-01-23 19:08:02"
+tags: ["Linux", "Python"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

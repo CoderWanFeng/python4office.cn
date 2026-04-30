@@ -2,10 +2,10 @@
 title: 字节火山方舟 Coding Plan 来了！9折订阅，低至36元，多模型随心用
 keywords: 程序员晚枫, 火山方舟Coding Plan, AI编程工具, 字节跳动AI, 豆包代码模型, DeepSeek编程, 国产AI编程
 description: 程序员晚枫推荐：字节火山方舟Coding Plan，36元/月起，支持豆包、DeepSeek、Kimi等多模型，AI编程性价比之选。
-date: 2026-04-08 00:15:00
-tags: [火山引擎, 方舟CodingPlan, AI编程, Doubao, DeepSeek, 程序员晚枫, AI编程工具]
-categories: [AI编程, 工具测评]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2026-04-08 00:15:00"
+tags: ["火山引擎", "方舟CodingPlan", "AI编程", "Doubao", "DeepSeek", "程序员晚枫", "AI编程工具"]
+categories: ["AI编程", "工具测评"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

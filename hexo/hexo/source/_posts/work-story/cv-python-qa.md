@@ -1,8 +1,8 @@
 ---
 title: 想学习Python做副业？我看行！
-date: 2023-06-12 23:28:21
+date: "2023-06-12 23:28:21"
 tags: 副业
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

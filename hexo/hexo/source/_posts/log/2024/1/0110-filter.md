@@ -1,8 +1,8 @@
 ---
 title: Python过滤器入门到精通，全面介绍filter()函数的用法和相关知识点
-date: 2024-1-10 21:16:17
+date: "2024-1-10 21:16:17"
 tags: 内置函数
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

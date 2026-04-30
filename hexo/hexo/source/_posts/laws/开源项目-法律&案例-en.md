@@ -1,8 +1,8 @@
 ---
 title: Open Source Project - Laws & Cases
-date: 2025-04-16 21:13:55
-tags: [Open Source Project, Legal Risks]
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+date: "2025-04-16 21:13:55"
+tags: ["Open Source Project", "Legal Risks"]
+cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

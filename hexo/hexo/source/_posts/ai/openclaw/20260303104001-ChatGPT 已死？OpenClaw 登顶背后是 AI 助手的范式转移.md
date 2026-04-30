@@ -1,8 +1,8 @@
 ---
 title: ChatGPT 已死？OpenClaw 登顶背后是 AI 助手的范式转移
-date: 2026-03-03 10:40:00
-tags: [OpenClaw, 行业分析]
-cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
+date: "2026-03-03 10:40:00"
+tags: ["OpenClaw", "行业分析"]
+cover: "https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop"
 ---
 
 

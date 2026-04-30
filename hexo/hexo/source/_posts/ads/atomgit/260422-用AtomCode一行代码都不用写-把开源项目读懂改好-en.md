@@ -1,10 +1,10 @@
 ---
 title: "Use AtomCode! No Code Needed, Understand and Modify Open Source Projects"
-date: 2026-04-22 10:00:00
+date: "2026-04-22 10:00:00"
 tags: ["AI Programming", "AtomCode", "Open Source Projects"]
 categories: ["AI Tools"]
 description: "Use AtomCode! No code needed, understand and modify open source projects"
-cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
+cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 ---
 
 
