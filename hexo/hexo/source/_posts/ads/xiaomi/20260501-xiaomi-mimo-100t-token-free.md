@@ -26,6 +26,8 @@ cover: https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&
 
 今天这篇攻略，帮你搞清楚：**怎么领、能领多少、怎么用**。
 
+![](https://raw.atomgit.com/user-images/assets/5027920/6eaa18d1-8634-4790-9c68-3eea5489608c/image.png 'image.png')
+
 ---
 
 ## 一、这是什么活动？
@@ -59,6 +61,8 @@ Token 是 AI 调用计费的基本单位，100万亿 Token 是什么概念呢？
 
 所以这次活动的规模是相当大的。
 
+![](https://raw.atomgit.com/user-images/assets/5027920/3a724236-5409-4dfe-9567-59e85108b7d2/image.png 'image.png')
+
 ---
 
 ## 三、什么是 MiMo？
@@ -76,6 +80,8 @@ Xiaomi MiMo 是小米自研的大模型，V2.5 是最新系列，包含：
 ---
 
 ## 四、怎么申请？超详细步骤
+
+![image.png](https://raw.atomgit.com/user-images/assets/5027920/15de119c-f51c-4de2-8cb0-cdf73a81d1e6/image.png 'image.png')
 
 ### 第一步：填写申请表单
 
@@ -195,6 +201,9 @@ Xiaomi MiMo 是小米自研的大模型，V2.5 是最新系列，包含：
 
 **建议尽快去申请，赠完即止。**
 
+
+> 📢 **点击查看所有厂商的 Coding Plan**：👉 **[https://www.python-office.com/token](https://www.python-office.com/token)**
+
 ---
 
 ## 相关阅读
@@ -206,7 +215,6 @@ Xiaomi MiMo 是小米自研的大模型，V2.5 是最新系列，包含：
 
 ---
 
-> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
 
 ---
 
