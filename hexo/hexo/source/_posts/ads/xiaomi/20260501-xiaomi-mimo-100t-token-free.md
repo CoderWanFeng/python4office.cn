@@ -1,5 +1,5 @@
 ---
-title: 小米 MiMo 百万亿 Token 发放中，个人开发者薅羊毛攻略
+title: 太豪了！小米送100万亿Token，个人开发者白嫖全攻略
 keywords: [小米 MiMo, 免费 Token, 百万亿 Token, AI 开发, Token 领取, 程序员晚枫]
 description: 小米 MiMo 正在免费发放百万亿 Token，开发者现在申请可获得高额权益。本文详解如何申请、评估标准、权益到账，附薅羊毛攻略。
 date: 2026-05-01 14:00:00
