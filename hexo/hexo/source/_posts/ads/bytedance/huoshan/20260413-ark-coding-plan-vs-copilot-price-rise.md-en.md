@@ -59,4 +59,11 @@ Want to learn AI programming systematically? Check out **CoderWanFeng's AI Progr
 
 - 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **Free Preview**: [Watch the first 3 lessons on Bilibili for free](https://www.bilibili.com/cheese/play/ss982042944)
+---
+
+## 🤖 MiniMax Token Plan 推广
+
+🚀 MiniMax Token Plan 惊喜上线！新增语音、音乐、视频和图片生成权益。邀请好友享双重好礼，助力开发体验！
+好友立享 9折 专属优惠 + Builder 权益，你赢返利 + 社区特权！
+👉 立即参与：https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link
 
