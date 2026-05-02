@@ -1,5 +1,5 @@
 ---
-title: "MiniMax Token Plan 重磅更新！语音、音乐、视频、图片全部上线"
+title: MiniMax Token Plan 重磅更新！语音、音乐、视频、图片全部上线
 date: 2026-05-01 16:40:00
 tags:
   - MiniMax

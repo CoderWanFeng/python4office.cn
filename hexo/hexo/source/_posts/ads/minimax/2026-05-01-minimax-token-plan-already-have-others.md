@@ -1,5 +1,5 @@
 ---
-title: "手里已经有其他Token Plan了，还要买MiniMax吗？"
+title: 手里已经有其他Token Plan了，还要买MiniMax吗？
 date: 2026-05-01 16:50:00
 tags:
   - MiniMax

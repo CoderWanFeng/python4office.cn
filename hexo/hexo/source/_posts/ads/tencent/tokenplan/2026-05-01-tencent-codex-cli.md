@@ -1,5 +1,5 @@
 ---
-title: "在 Codex CLI 里使用腾讯云 Token Plan"
+title: 在 Codex CLI 里使用腾讯云 Token Plan
 date: 2026-05-01 17:48:00
 tags:
   - Codex CLI

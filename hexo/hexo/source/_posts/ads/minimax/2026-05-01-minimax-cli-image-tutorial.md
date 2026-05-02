@@ -1,5 +1,5 @@
 ---
-title: "一行命令搞定图片生成！MiniMax CLI保姆级教程"
+title: 一行命令搞定图片生成！MiniMax CLI保姆级教程
 date: 2026-05-01 16:55:00
 tags:
   - MiniMax

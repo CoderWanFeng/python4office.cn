@@ -1,5 +1,5 @@
 ---
-title: "在 Claude Code 里使用阿里云百炼 Coding Plan"
+title: 在 Claude Code 里使用阿里云百炼 Coding Plan
 date: 2026-05-01 17:32:00
 tags:
   - Claude Code

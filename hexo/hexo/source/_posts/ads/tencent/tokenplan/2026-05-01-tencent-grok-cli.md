@@ -1,5 +1,5 @@
 ---
-title: "在 Grok CLI 里使用腾讯云 Token Plan"
+title: 在 Grok CLI 里使用腾讯云 Token Plan
 date: 2026-05-01 17:46:00
 tags:
   - Grok CLI

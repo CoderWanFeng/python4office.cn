@@ -28,14 +28,14 @@ ai-tools/
 
 ```markdown
 ---
-title: "工具名称 | 真实评测"
+title: 工具名称 | 真实评测
 date: YYYY-MM-DD
 categories:
   - AI工具评测
 tags:
   - 工具类型
   - 使用场景
-description: "一句话说明这个工具是干嘛的"
+description: 一句话说明这个工具是干嘛的
 ---
 
 <!-- more -->

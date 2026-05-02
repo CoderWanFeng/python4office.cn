@@ -1,5 +1,5 @@
 ---
-title: "在 Zed 里使用腾讯云 Token Plan"
+title: 在 Zed 里使用腾讯云 Token Plan
 date: 2026-05-01 17:52:00
 tags:
   - Zed

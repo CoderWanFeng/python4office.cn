@@ -1,5 +1,5 @@
 ---
-title: "在 Codex CLI 里使用 MiniMax M2.7"
+title: 在 Codex CLI 里使用 MiniMax M2.7
 date: 2026-05-01 17:22:00
 tags:
   - Codex CLI

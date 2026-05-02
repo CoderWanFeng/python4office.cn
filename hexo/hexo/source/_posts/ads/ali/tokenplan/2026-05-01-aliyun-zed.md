@@ -1,5 +1,5 @@
 ---
-title: "在 Zed 里使用阿里云百炼 Coding Plan"
+title: 在 Zed 里使用阿里云百炼 Coding Plan
 date: 2026-05-01 17:54:00
 tags:
   - Zed

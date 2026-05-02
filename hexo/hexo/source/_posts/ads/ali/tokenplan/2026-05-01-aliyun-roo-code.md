@@ -1,5 +1,5 @@
 ---
-title: "在 Roo Code 里使用阿里云百炼 Coding Plan"
+title: 在 Roo Code 里使用阿里云百炼 Coding Plan
 date: 2026-05-01 17:46:00
 tags:
   - Roo Code

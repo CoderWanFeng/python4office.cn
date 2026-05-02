@@ -1,5 +1,5 @@
 ---
-title: "在 OpenClaw 里使用 MiniMax M2.7"
+title: 在 OpenClaw 里使用 MiniMax M2.7
 date: 2026-05-01 17:00:00
 tags:
   - OpenClaw

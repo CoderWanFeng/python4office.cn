@@ -1,5 +1,5 @@
 ---
-title: "在 Roo Code 里使用 MiniMax M2.7"
+title: 在 Roo Code 里使用 MiniMax M2.7
 date: 2026-05-01 17:18:00
 tags:
   - Roo Code
