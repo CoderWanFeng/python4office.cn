@@ -57,9 +57,10 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 
 <!-- more -->
 
+![免费群](https://raw.atomgit.com/user-images/assets/5027920/bf67bf0c-4a4d-421d-9602-35097f5ed085/4d3ad4ea0e9b1e61c0f3f9807fef8a06.jpg '4d3ad4ea0e9b1e61c0f3f9807fef8a06.jpg')
 
 
-> AI 学习交流群：[点我加入](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)
+> 我会答疑的 付费 AI 学习交流群（9元，广告勿扰）：[点我加入](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)
 
 
 ## AI 学习交流
