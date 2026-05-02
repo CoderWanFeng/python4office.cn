@@ -197,11 +197,16 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 ## 相关阅读
 
-- [0门槛的AI编程，让人人都能成为六边形战士](https://mp.weixin.qq.com/s/Cx5KZsAchtiXsJP7OvY1ZQ)
-- [记录第一次去西南大学分享AI编程，我竟有些感动](https://mp.weixin.qq.com/s/QkpVGHGRzmUdZK59ftgyiw)
-- [年轻人只想要退休，是多么悲哀的事](https://mp.weixin.qq.com/s/J3il8mIYyeKsh5GHepkLBA)
-- [群里禁止讨论免费AI](https://mp.weixin.qq.com/s/NC0FSz29_DeOY2p3GL48wA)
-- [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
+- [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
+- [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
+- [用AI 做 副业 的  3个思路](https://mp.weixin.qq.com/s/kGmRRZ_LMUgLaS7AQkcSnw)
+- [说件事：我的群里，禁止讨论免费AI](https://mp.weixin.qq.com/s/NC0FSz29_DeOY2p3GL48wA)
+- [高考后上大学，普通人别选AI专业](https://mp.weixin.qq.com/s/AtgtbGpaueW58olyO7sDrw)
+
+---
+
+*作者：程序员晚枫，全网40万+粉丝，6年Python开发经验，python-office 开源项目作者。*
 
 ---
 
