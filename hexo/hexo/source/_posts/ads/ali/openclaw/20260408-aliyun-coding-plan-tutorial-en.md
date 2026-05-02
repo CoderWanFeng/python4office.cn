@@ -198,7 +198,7 @@ The choice is in your hands.
 
 ## 🎁 Bonus Time
 
-I'll send you a **"Alibaba Cloud Coding Plan Configuration Template"**:
+I'll send you a "**Alibaba Cloud Coding Plan Configuration Template**":
 - Qwen Code configuration template
 - Cursor configuration template
 - VS Code configuration template
@@ -216,7 +216,7 @@ I'll send you a **"Alibaba Cloud Coding Plan Configuration Template"**:
     </a>   
 </p>
 
-**"30 Lectures · AI Programming Training Camp"** — Master AI programming practice from 0 to 1.
+"**30 Lectures · AI Programming Training Camp**" — Master AI programming practice from 0 to 1.
 
 ---
 

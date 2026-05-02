@@ -66,7 +66,7 @@ Hello everyone, this is Programmer Wanfeng.
 
 Recently in the [AI Programming Exchange Group](https://mp.weixin.qq.com/s/Z3WhrmYeavrCw_FOXgiDPA), a question was asked repeatedly:
 
-> **"Wanfeng, I need a free AI model."**
+> "**Wanfeng, I need a free AI model.**"
 
 
 

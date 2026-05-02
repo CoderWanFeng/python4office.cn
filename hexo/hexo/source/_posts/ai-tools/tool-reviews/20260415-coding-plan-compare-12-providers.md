@@ -66,7 +66,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 最近在[AI编程交流群](https://mp.weixin.qq.com/s/Z3WhrmYeavrCw_FOXgiDPA)里，有个问题被反复问到：
 
-> **"晚枫，我需要一个免费的 AI 模型。"**
+> "**晚枫，我需要一个免费的 AI 模型。**"
 
 
 

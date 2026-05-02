@@ -207,7 +207,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 靠的是作品本身。
 
-**"Let the work speak for itself."**
+"**Let the work speak for itself.**"
 
 让作品自己说话。
 

@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 大家好，这里是程序员晚枫，正在all in AI编程实战。
 
-你肯定听过这句话：**"Python的多线程是假的。"**
+你肯定听过这句话："**Python的多线程是假的。**"
 
 真的是这样吗？为什么Java能多线程加速，Python不行？
 

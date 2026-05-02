@@ -163,7 +163,7 @@ The choice is in your hands.
 
 ## 🎁 Bonus Time
 
-I'll send you a **"Domestic AI Programming Tool Selection Guide"**:
+I'll send you a "**Domestic AI Programming Tool Selection Guide**":
 - Detailed comparison between Alibaba Cloud Coding Plan and Volcano Engine
 - Installation and configuration tutorials for each tool
 - Selection decision tree
@@ -180,7 +180,7 @@ I'll send you a **"Domestic AI Programming Tool Selection Guide"**:
     </a>   
 </p>
 
-**"30 Lectures · AI Programming Training Camp"** —— Master AI programming practice from 0 to 1.
+"**30 Lectures · AI Programming Training Camp**" —— Master AI programming practice from 0 to 1.
 
 ---
 

@@ -316,7 +316,7 @@ The choice is in your hands.
 
 ## 🎁 Bonus Time
 
-I'll send you a **"Tongyi Qianwen Programming Tips Manual"**:
+I'll send you a "**Tongyi Qianwen Programming Tips Manual**":
 - Quick reference table for applicable scenarios of each model
 - Prompt optimization tips
 - Practical code examples
@@ -333,7 +333,7 @@ I'll send you a **"Tongyi Qianwen Programming Tips Manual"**:
     </a>   
 </p>
 
-**"30 Lectures · AI Programming Training Camp"** — Master AI programming practice from 0 to 1.
+"**30 Lectures · AI Programming Training Camp**" — Master AI programming practice from 0 to 1.
 
 ---
 

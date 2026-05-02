@@ -255,13 +255,13 @@ DeepSeek是中国公司做的开源大模型，震惊了全世界：
 
 ### DeepSeek让老外震惊的事
 
-> **"DeepSeek训练只花了600万美元"**
+> "**DeepSeek训练只花了600万美元**"
 > 比OpenAI的训练成本低了几十倍
 
-> **"DeepSeek开源后ChatGPT用户减少"**
+> "**DeepSeek开源后ChatGPT用户减少**"
 > 免费的力量
 
-> **"DeepSeek被美国限制使用"**
+> "**DeepSeek被美国限制使用**"
 > 太强了，开始被"卡脖子"
 
 ---

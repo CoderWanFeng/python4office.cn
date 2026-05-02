@@ -228,7 +228,7 @@ The choice is in your hands.
 
 ## 🎁 Bonus Time
 
-I'll send you a **"AI Programming Tool Money Saving Manual"**:
+I'll send you a "**AI Programming Tool Money Saving Manual**":
 - Summary of discount activities on each platform
 - List of free resources for students
 - Optimal team subscription plan
@@ -245,7 +245,7 @@ I'll send you a **"AI Programming Tool Money Saving Manual"**:
     </a>   
 </p>
 
-**"30 Lectures · AI Programming Training Camp"** —— Master AI programming practice from 0 to 1.
+"**30 Lectures · AI Programming Training Camp**" —— Master AI programming practice from 0 to 1.
 
 ---
 

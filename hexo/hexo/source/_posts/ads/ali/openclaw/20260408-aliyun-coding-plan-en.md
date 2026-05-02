@@ -158,7 +158,7 @@ AI is a lever, not an opponent.
 
 ## 🎁 Bonus Time
 
-I'll send you a **"Alibaba Cloud AI Tool Usage Guide"**:
+I'll send you a "**Alibaba Cloud AI Tool Usage Guide**":
 - Bailian platform beginner tutorial
 - Tongyi Qianwen programming tips
 - API access code examples
@@ -175,7 +175,7 @@ I'll send you a **"Alibaba Cloud AI Tool Usage Guide"**:
     </a>   
 </p>
 
-**"30 Lectures · AI Programming Training Camp"** — Master AI programming practice from 0 to 1.
+"**30 Lectures · AI Programming Training Camp**" — Master AI programming practice from 0 to 1.
 
 ---
 

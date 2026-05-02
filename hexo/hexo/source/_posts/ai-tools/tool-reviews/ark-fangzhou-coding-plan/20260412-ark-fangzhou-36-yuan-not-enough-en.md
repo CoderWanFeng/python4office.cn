@@ -79,7 +79,7 @@ Way better than those tools that only let you use one model.
 
 ### End of Week
 
-**"Your monthly quota has been exhausted."**
+"**Your monthly quota has been exhausted.**"
 
 Huh?
 

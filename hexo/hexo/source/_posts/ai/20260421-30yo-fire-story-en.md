@@ -97,7 +97,7 @@ She came to Beijing to find me, and we ate a bowl of noodles for 12 yuan.
 
 We had nothing then, but we felt the future was full of hope.
 
-**"You had nothing back then, but you were so motivated every day. I don't know why you became like this now, thinking that losing your job means everything is over."**
+"**You had nothing back then, but you were so motivated every day. I don't know why you became like this now, thinking that losing your job means everything is over.**"
 
 She said: "It's not that you don't have ability. You've been in your comfort zone for too long and forgot how awesome you are."
 

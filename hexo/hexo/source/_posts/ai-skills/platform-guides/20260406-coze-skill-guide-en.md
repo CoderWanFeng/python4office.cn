@@ -55,7 +55,7 @@ Visit: https://www.coze.cn
 
 ### Step 2: Enter Skill Store
 1. Log in (supports Douyin/Feishu/Phone login)
-2. Click **"Skill Store"** in the top navigation bar
+2. Click "**Skill Store**" in the top navigation bar
 3. Enter Skill marketplace
 
 ### Step 3: Browse Skill Categories
@@ -81,7 +81,7 @@ Skill Store currently has several categories:
 
 **Step 2: One-click install**
 1. Click Skill card to enter detail page
-2. Click **"Install"** button
+2. Click "**Install**" button
 3. Wait for installation to complete (usually a few seconds)
 
 **Step 3: Start using**

@@ -214,16 +214,16 @@ Claude 3 Opus（最强）
 
 ## 新闻里经常看到
 
-> **"Claude用户破1亿"**
+> "**Claude用户破1亿**"
 > → AI助手竞争加剧
 
-> **"亚马逊投资Anthropic 40亿美元"**
+> "**亚马逊投资Anthropic 40亿美元**"
 > → AI安全公司获巨头投资
 
-> **"Claude 3超越GPT-4？"**
+> "**Claude 3超越GPT-4？**"
 > → 各大模型benchmark对比
 
-> **"Claude写的小说获文学奖"**
+> "**Claude写的小说获文学奖**"
 > → AI创作能力再次引发讨论
 
 ## Claude背后的理念
