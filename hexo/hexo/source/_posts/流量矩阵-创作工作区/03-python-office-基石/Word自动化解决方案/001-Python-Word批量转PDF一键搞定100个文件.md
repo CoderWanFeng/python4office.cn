@@ -1,4 +1,4 @@
-﻿---
+---
 title: Python Word批量转PDF，一键搞定100个文件
 date: 2026-04-16 17:02:00
 tags: [Python, Word, PDF, 批量转换]
@@ -6,8 +6,6 @@ keywords: [python word转pdf, python批量转换word, python docx转pdf]
 description: 使用Python批量将Word文档转换为PDF，一键搞定100个文件，附完整代码下载。
 categories: [Word自动化解决方案]
 ---
-
-# Python Word批量转PDF，一键搞定100个文件
 
 > **核心价值：** 实战代码 + 批量处理 + 格式转换  
 > **目标用户：** 需要批量转换文档格式的职场人  
