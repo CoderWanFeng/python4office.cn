@@ -5,6 +5,7 @@ tags: 原创课程
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
 感谢您付费购买《50讲Python自动化办公》，下面是课程的配套资料 + 专用答疑群，课程持续更新中。
 
@@ -25,24 +26,31 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 - 链接：https://pan.quark.cn/s/f8be0735110e
 - 提取码：GBzf
 
+# 赠送的2套课
+
+这是赠送的课程：
+1. ocr自动化：https://pan.quark.cn/s/6a293e6a4b99#/list/share
+2. pdf自动化：https://pan.quark.cn/s/053d27c5f39b
+
 
 # 答疑群
 
-因为群二维码经常失效，所以庆直接+我微信，备注：50讲，我来邀请你。
+因为群二维码经常失效，所以直接+我微信，备注：50讲，我来邀请你。
 我的微信：[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)
 
 ![](https://cos.python-office.com/wechat/wechat.jpg)
+
 # 读者福利
 
 ## AI编程
 
-2025年底，我更新了一套全新的课程：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，大家对编程、AI感兴趣，一定要来看看。
+2025年底，我更新了一套全新的课程：[给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)，大家对编程、AI感兴趣，一定要来看看。
 
 > 购买了50讲自动化办公的朋友，不论下面的海报价格是多少，大家长期都是149加入！！扫码下图加我，备注：老用户
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw'>
+    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" />
     </a>   
 </p>
@@ -66,8 +74,8 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

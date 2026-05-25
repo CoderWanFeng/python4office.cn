@@ -5,6 +5,7 @@ tags: 自媒体
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 做短视频的第4个月，最近终于看到了一点希望：周六在快手发了[一条视频](https://v.kuaishou.com/rAJqR0)，2天获得了10w+播放。
 
 之前也做过一些十几万、几十万播放的视频教程，但1、2天的时间迅速达到10w+播放，这是第一次。
@@ -14,6 +15,10 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 今天给大家分享一下，这一次我找到了哪些播放10w+的秘诀？按照重要程度排序。
 
 <!-- more -->
+
+![第一次10w+播放，我发现了3个流量密码，原来成功才是成功之母](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![第一次10w+播放，我发现了3个流量密码，原来成功才是成功之母](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## 1、短期内可以粗糙，但长期要对别人有用
 
 我是2019年开始做自媒体，今年开始做短视频。说实话，我的内容一直都不精美（画质、排版），在这个美颜恨不得开到10级的自媒体圈子里，我觉得我依然可以活下来的重要原因是：长远来看，有用比好看重要。
@@ -72,13 +77,13 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

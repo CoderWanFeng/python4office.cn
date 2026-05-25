@@ -8,6 +8,11 @@ description: DeepSeek最新发布的AI办公助手实测，普通人用它处理
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
+![刚刚！DeepSeek发布最强办公助手，普通人用它效率提升10倍](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![刚刚！DeepSeek发布最强办公助手，普通人用它效率提升10倍](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
+
 # 刚刚！DeepSeek发布最强办公助手，普通人用它效率提升10倍
 
 > **阅读时间：** 8分钟  
@@ -296,7 +301,7 @@ DeepSeek办公助手刚发布，内测阶段门槛低、福利多。
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 - [批量识别发票自动保存到Excel中](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 **END**
 
@@ -305,7 +310,7 @@ DeepSeek办公助手刚发布，内测阶段门槛低、福利多。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

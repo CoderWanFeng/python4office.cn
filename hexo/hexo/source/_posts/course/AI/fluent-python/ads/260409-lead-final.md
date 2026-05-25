@@ -5,7 +5,11 @@ tags: [python, 流畅的 Python, Python 进阶, 程序员晚枫]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![自以为 Python 还行，其实底层这套逻辑从来没打通过](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > 大家好，我是程序员晚枫，在实战 AI 项目的同时，也在帮一部分开发者系统地提升 Python 底层能力。
 
@@ -35,9 +39,11 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 实战项目不深入讲
 - Google 搜出来的全是碎片答案
 
-《流畅的 Python（第2版）》专门填补这个空白。它讲的不是"怎么用 Python 写代码"，而是 **"Python 为什么这样设计"**。
+《流畅的 Python（第2版）》专门填补这个空白。它讲的不是"怎么用 Python 写代码"，而是 "**Python 为什么这样设计**"。
 
 三个问题，说明这个差距具体在哪里：
+
+![自以为Python还行](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 ---
 
@@ -131,6 +137,8 @@ Flask 的路由装饰器、Django 的 ORM 字段、asyncio 的事件循环……
 **第三，面试不怕追问。**
 面试官问深一层，不是因为他们刻意刁难，而是他们想确认你是真的理解了这个机制，而不是只背了结论。
 
+![自以为Python还行](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
 ---
 
 ## 免费送你一份《Python 进阶知识点速查表》
@@ -195,8 +203,8 @@ Flask 的路由装饰器、Django 的 ORM 字段、asyncio 的事件循环……
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 

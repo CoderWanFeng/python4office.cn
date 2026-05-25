@@ -8,13 +8,18 @@ categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程）](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![白菜价！3.9 元/月开通讯飞星火 Coding Plan 语音编程（图文教程）](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **3.9元/月体验讯飞语音编程** 👉 **[点击立即开通](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+> 💡 **3.9元/月体验讯飞语音编程** 👉 **[点击立即开通](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 大家好，这里是程序员晚枫。
 
@@ -44,7 +49,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 ### 第一步：访问讯飞官网
 
-**👉 [点击访问讯飞星火 Coding Plan 开通页面](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+**👉 [点击访问讯飞星火 Coding Plan 开通页面](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 ### 第二步：手机号注册
 
@@ -79,7 +84,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 - ✅ 优先响应通道
 - ✅ 更多高级语音指令
 
-**👉 [点击选择套餐并开通](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+**👉 [点击选择套餐并开通](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 ## 四、完成支付
 
@@ -148,16 +153,25 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 相关阅读
 
-- [💰 讯飞星火 Coding Plan 价格详解：3.9元/月到底值不值？](https://www.python4office.cn/ads/xunfei/20260423-iflytek-spark-coding-plan-price/)
-- [🔥 讯飞星火 vs 火山方舟 vs 阿里云百炼，谁更适合你？](https://www.python4office.cn/ads/xunfei/20260422-iflytek-spark-coding-plan-who-should-use/)
-- [📊 AI 编程工具横向对比，选对工具效率翻倍](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
-- [💰 程序员省钱攻略：这些 AI 工具免费用](https://www.python4office.cn/20260421-developer-save-money-guide/)
+- [休了个婚假，结果骨折了](https://mp.weixin.qq.com/s/FWCF7ZhAiJVngjiID4HVXQ)
+- [国产AI最大的优点：问什么都是标准答案](https://mp.weixin.qq.com/s/Ni9ZN0bpDEygDZmOAkr-tQ)
+- [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
+- [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
+- [HR看简历只花6秒，我用AI让我的简历过了第一关](https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ)
+- [我用AI做数字人播报，老板问"你什么时候请的主播？"](https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw)
 
 ---
 
-> 📢 **3.9 元开通讯飞语音编程** 👉 **[点击立即开始](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+> 📢 **3.9 元开通讯飞语音编程** 👉 **[点击立即开始](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 ---
 
@@ -169,8 +183,8 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 

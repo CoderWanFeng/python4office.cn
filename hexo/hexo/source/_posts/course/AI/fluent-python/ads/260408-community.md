@@ -5,7 +5,11 @@ tags: [python, 流畅的Python, 共读营, 学习社群, 程序员晚枫]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![找到想认真学Python的人，和他们一起把这本书读完](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > 澶у濂斤紝鎴戞槸姝ｅ湪瀹炴垬鍚勭 AI 椤圭洰鐨勭▼搴忓憳鏅氭灚銆?
 
@@ -31,6 +35,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 鐭ヨ瘑鍙槸"鐪嬭繃"锛屼笉鐢ㄤ笉璁ㄨ涓嶈緭鍑猴紝灏变細寰堝揩閬楀繕銆傜嫭鑷涔犵己涔忓弽棣堬紝寰堝涓滆タ"鐪嬫噦浜?浣嗘病鏈夌湡姝ｅ唴鍖栥€?
 
+![找到想认真学Python的人](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+
+
 ---
 
 ## 涓€璧疯涔︼紝杩欎欢浜嬭涓ラ噸浣庝及浜?
@@ -40,6 +47,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 閭ｆ鐩存挱锛屾垜浠湪鎷嗚В涔﹂噷鍏充簬瑁呴グ鍣ㄧ殑涓€娈典唬鐮併€傛湁涓湅鍙嬭"鎴戜竴鐩翠互涓?`@` 鍙槸璇硶绯?锛岀劧鍚庢垜浠粠杩欎釜闂鍑哄彂锛屾妸闂寘銆乣functools.wraps`銆佸甫鍙傛暟鐨勮楗板櫒涓€璺亰涓嬪幓銆?
 
 閭ｄ竴涓皬鏃讹紝澶у瀛︾殑姣旂嫭鑷椃澶磋涓€鍛ㄦ洿鎵庡疄銆傝繖灏辨槸**鍏辫鐨勫姏閲?*鈥斺€旀湁浜洪櫔鐫€浣犳€濊€冿紝姣旇嚜宸辩‖鍟冩湁鏁堝緱澶氥€?
+
+![找到想认真学Python的人](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
 
 ---
 
@@ -101,8 +111,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 

@@ -1,18 +1,23 @@
-﻿---
-
-title: "WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的"
+---
+title: WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的
 date: 2026-04-15 00:00:00
 categories:
-  - AI工具评测
+- AI工具评测
 tags:
-  - AI工具
-  - WorkBuddy
-  - 腾讯云
-  - AI专家
-  - 产品评测
-description: "WorkBuddy 上线专家模式，每个 AI 专家都有名字。单必成是销售教练，关德宽是项目管理专家。这命名…我服了"
-
+- AI工具
+- WorkBuddy
+- 腾讯云
+- AI专家
+- 产品评测
+description: WorkBuddy 上线专家模式，每个 AI 专家都有名字。单必成是销售教练，关德宽是项目管理专家。这命名…我服了
+cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 ---
+
+
+![WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+![WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+
+
 
 
 # WorkBuddy 上线专家模式，给 AI 起名字这件事，他们是认真的
@@ -190,7 +195,7 @@ WorkBuddy 专家模式，亮点不是模型多强。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

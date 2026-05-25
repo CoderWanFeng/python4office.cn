@@ -6,6 +6,7 @@ categories: [AI Skills, Platform Guide]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <p align="center">
     <a target="_blank" href='https://www.coze.cn/skills'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
@@ -13,6 +14,9 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 </p>
 
 <!-- more -->
+
+![Coze Skill Store Complete Guide: Zero-Code Install Office Skills](https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop)
+
 
 Hello everyone, I'm Programmer Wanfeng,实战 various AI projects.
 
@@ -51,7 +55,7 @@ Visit: https://www.coze.cn
 
 ### Step 2: Enter Skill Store
 1. Log in (supports Douyin/Feishu/Phone login)
-2. Click **"Skill Store"** in the top navigation bar
+2. Click "**Skill Store**" in the top navigation bar
 3. Enter Skill marketplace
 
 ### Step 3: Browse Skill Categories
@@ -77,7 +81,7 @@ Skill Store currently has several categories:
 
 **Step 2: One-click install**
 1. Click Skill card to enter detail page
-2. Click **"Install"** button
+2. Click "**Install**" button
 3. Wait for installation to complete (usually a few seconds)
 
 **Step 3: Start using**
@@ -105,7 +109,7 @@ Based on my actual testing, these Skills are most worth installing:
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

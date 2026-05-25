@@ -8,13 +8,18 @@ categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![3.9 元/月的讯飞星火 vs 36 元/月的火山方舟：谁更值得买？](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![3.9 元/月的讯飞星火 vs 36 元/月的火山方舟：谁更值得买？](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **3.9元/月体验讯飞星火** 👉 **[点击了解详情](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+> 💡 **3.9元/月体验讯飞星火** 👉 **[点击了解详情](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 大家好，这里是程序员晚枫。
 
@@ -106,7 +111,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 - 讯飞用于日常语音编程
 - 火山用于复杂代码生成
 
-**👉 [点击了解讯飞星火 Coding Plan 3.9元起](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+**👉 [点击了解讯飞星火 Coding Plan 3.9元起](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 ## 五、总结对比表
 
@@ -122,6 +127,13 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 相关阅读
 
 - [💰 讯飞星火 Coding Plan 价格出炉：低至 3.9 元/月](https://www.python4office.cn/ads/xunfei/20260423-iflytek-spark-coding-plan-price/)
@@ -131,7 +143,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 ---
 
-> 📢 **3.9 元/月的讯飞星火 Coding Plan** 👉 **[点击立即体验](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+> 📢 **3.9 元/月的讯飞星火 Coding Plan** 👉 **[点击立即体验](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 ---
 
@@ -143,8 +155,8 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 

@@ -1,22 +1,27 @@
 ---
-title: "用 Trae 做了一个爬虫：真实记录全过程"
+title: 用 Trae 做了一个爬虫：真实记录全过程
 date: 2026-04-12 00:00:00
 categories:
-  - AI工具评测
+- AI工具评测
 tags:
-  - Trae
-  - Python自动化
-  - AI编程
-  - Python爬虫
-  - AI工具
-  - 爬虫
-  - 实战
-description: "用 Trae AI 编程做了一个爬虫，记录全过程和真实感受"
+- Trae
+- Python自动化
+- AI编程
+- Python爬虫
+- AI工具
+- 爬虫
+- 实战
+description: 用 Trae AI 编程做了一个爬虫，记录全过程和真实感受
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 
+
 <!-- more -->
+
+![用 Trae 做了一个爬虫：真实记录全过程](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![用 Trae 做了一个爬虫：真实记录全过程](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+
 # 用 Trae 做了一个爬虫：真实记录全过程
 
 ## 先说结论
@@ -246,7 +251,7 @@ AI 再次响应，给出了批量爬取的版本。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

@@ -1,5 +1,4 @@
 ---
-
 title: 什么是AI克隆声音？
 date: 2026-04-16 17:30:00
 author: 程序员晚枫
@@ -16,9 +15,13 @@ tags:
 - 语音合成
 order: 27
 description: 什么是AI克隆声音？程序员晚枫用通俗语言解释，AI是怎么复制你声音的，以及怎么防诈骗。
-
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![什么是AI克隆声音？](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![什么是AI克隆声音？](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 # 什么是AI克隆声音？
@@ -168,16 +171,16 @@ AI都回答不了只有真人才知道的事
 
 ## 新闻里经常看到
 
-> **"AI克隆声音诈骗金额超亿元"**
+> "**AI克隆声音诈骗金额超亿元**"
 > → 声音诈骗成新型犯罪
 
-> **"ElevenLabs发布声音克隆技术"**
+> "**ElevenLabs发布声音克隆技术**"
 > → AI克隆声音工具大爆发
 
-> **"美国大选出现AI克隆声音假新闻"**
+> "**美国大选出现AI克隆声音假新闻**"
 > → 名人声音被AI伪造
 
-> **"我国出台AI合成声音管理规定"**
+> "**我国出台AI合成声音管理规定**"
 > → 法律开始规范AI声音
 
 ## 为什么重要？
@@ -348,6 +351,7 @@ AI克隆声音把"声音验证"这件事彻底打破了。
 ---
 
 ## 相关阅读
+- [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 
@@ -356,6 +360,6 @@ AI克隆声音把"声音验证"这件事彻底打破了。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

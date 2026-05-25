@@ -1,5 +1,4 @@
 ---
-
 title: 华为没有 Coding Plan？字节火山方舟可能是性价比最高的选择
 keywords: [华为 Coding Plan, 火山方舟, 字节跳动, 性价比, 程序员晚枫]
 description: 华为暂时没有 Coding Plan？程序员晚枫推荐字节火山方舟，36元/月，可能是性价比最高的选择！
@@ -10,7 +9,12 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
+
 <!-- more -->
+
+![华为没有 Coding Plan？字节火山方舟可能是性价比最高的选择](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![华为没有 Coding Plan？字节火山方舟可能是性价比最高的选择](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >
@@ -111,6 +115,13 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 相关阅读
 
 - [🔥 火山方舟 Coding Plan：可能是性价比最高的选择](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-save-money/)
@@ -142,4 +153,11 @@ Want to learn AI programming systematically? Check out **CoderWanFeng's AI Progr
 👉 Want to try **MiniMax Token Plan**? [Click here for 10% off](https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link)
 
 💡 **Pay-per-use pricing — super cost-effective!** Think of it like a farmers market: buy a ticket, and all the veggies are free. Pay based on actual usage, no limits, no monthly fees. Perfect for developers!
+---
 
+## 🎓 AI 编程实战课程
+
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)

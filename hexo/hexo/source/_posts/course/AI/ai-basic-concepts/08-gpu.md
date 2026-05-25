@@ -1,5 +1,4 @@
 ---
-
 title: 为什么AI需要那么贵的显卡？揭秘GPU
 date: 2026-04-16 17:01:00
 author: 程序员晚枫
@@ -13,9 +12,13 @@ tags:
 - 显卡
 order: 8
 description: 新闻总说GPU短缺、显卡涨价，到底是怎么回事？程序员晚枫用大白话揭秘GPU，让你看懂为什么AI离不开这块"昂贵的心脏"！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![为什么AI需要那么贵的显卡？揭秘GPU](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![为什么AI需要那么贵的显卡？揭秘GPU](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 > **作者：程序员晚枫**
@@ -217,7 +220,7 @@ vs 买一张4090 = 15000元
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

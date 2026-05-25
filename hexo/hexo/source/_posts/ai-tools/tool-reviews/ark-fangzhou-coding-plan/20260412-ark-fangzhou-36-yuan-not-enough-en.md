@@ -1,25 +1,30 @@
-﻿---
-
+---
 title: "Ark Coding Plan Says Unlimited Tools, But 36 Yuan Really Isn't Enough..."
 date: 2026-04-12 00:00:00
 categories:
-  - AI Tools Review
+- AI Tools Review
 tags:
-  - 大模型
-  - AI编程
-  - 火山方舟
-  - 字节
-  - Coding Plan
-  - Volcano Ark
-  - Ark Coding Plan
-  - Rant
-  - AI Coding
+- 大模型
+- AI编程
+- 火山方舟
+- 字节
+- Coding Plan
+- Volcano Ark
+- Ark Coding Plan
+- Rant
+- AI Coding
 description: "Ark Coding Plan supports so many models, Doubao, GLM, DeepSeek, Kimi, MiniMax... but 36 yuan per month, I can't last a week"
-
+cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 ---
 
 
+
+
 <!-- more -->
+
+![Ark Coding Plan Says Unlimited Tools, But 36 Yuan Really Isn't Enough...](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Ark Coding Plan Says Unlimited Tools, But 36 Yuan Really Isn't Enough...](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 # Ark Coding Plan Says Unlimited Tools, But 36 Yuan Really Isn't Enough...
 
 ## TL;DR
@@ -74,7 +79,7 @@ Way better than those tools that only let you use one model.
 
 ### End of Week
 
-**"Your monthly quota has been exhausted."**
+"**Your monthly quota has been exhausted.**"
 
 Huh?
 

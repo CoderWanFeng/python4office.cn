@@ -1,15 +1,19 @@
-﻿---
-
+---
 title: Python定时打开世界杯直播，还有小姐姐语音提醒哦~不错过每一场世界杯比赛
 date: 2022-11-20 00:37:16
 tags: [Python, AI编程]
-
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
 
 
 
+
+
 <!-- more -->
+
+![Python定时打开世界杯直播，还有小姐姐语音提醒哦~不错过每一场世界杯比赛](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
 卡塔尔世界杯今晚0点就要开幕了，为了防止大家沉迷工作，忘记看球，小编用50行Python代码写了一个**定时提醒你看球的小程序**，还有**小姐姐语音提醒**哟~🎇
 
 ## 1、效果展示 + 源码下载
@@ -70,13 +74,13 @@ def play_song(song):
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

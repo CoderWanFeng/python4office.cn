@@ -1,22 +1,27 @@
-﻿---
-
-title: "方舟 Coding Plan 说工具不限，但36块真的不够用..."
+---
+title: 方舟 Coding Plan 说工具不限，但36块真的不够用...
 date: 2026-04-12 00:00:00
 categories:
-  - AI工具评测
+- AI工具评测
 tags:
-  - 大模型
-  - Coding Plan
-  - AI编程
-  - 火山方舟
-  - 方舟 Coding Plan
-  - 吐槽
-description: "方舟 Coding Plan 支持那么多模型，Doubao、GLM、DeepSeek、Kimi、MiniMax...但36块一个月，根本不够用啊"
-
+- 大模型
+- Coding Plan
+- AI编程
+- 火山方舟
+- 方舟 Coding Plan
+- 吐槽
+description: 方舟 Coding Plan 支持那么多模型，Doubao、GLM、DeepSeek、Kimi、MiniMax...但36块一个月，根本不够用啊
+cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 ---
 
 
+
+
 <!-- more -->
+
+![方舟 Coding Plan 说工具不限，但36块真的不够用...](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![方舟 Coding Plan 说工具不限，但36块真的不够用...](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # 方舟 Coding Plan 说工具不限，但36块真的不够用...
 
 ## 先说结论
@@ -71,7 +76,7 @@ description: "方舟 Coding Plan 支持那么多模型，Doubao、GLM、DeepSeek
 
 ### 一周结束
 
-**"您的本月配额已用完。"**
+"**您的本月配额已用完。**"
 
 啊？
 
@@ -283,8 +288,8 @@ MiniMax 用 5 次
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 

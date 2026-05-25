@@ -1,12 +1,16 @@
 ---
-title: "20 Platform Review! Which Platform is Best for Programmers to Write Articles and Earn Money?"
+title: 20 Platform Review! Which Platform is Best for Programmers to Write Articles and Earn Money?
 date: 2024-05-25 14:25:46
 tags: 原创文章
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
 
+
 <!-- more -->
+
+![20 Platform Review! Which Platform is Best for Programmers to Write Articles and Earn Money?](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 I've been doing self-media for 5 years, accumulating 300k+ followers across all platforms, and used dozens of platforms: [85 Self-Media Platforms and Monetization Guide (Strongly Recommended)](https://mp.weixin.qq.com/s/vG7AnDJ50KF-CbuserHPkA)
 
 Today I'm sharing from a programmer's perspective which platforms are suitable for programmers to write.
@@ -72,17 +76,17 @@ My account name on all platforms is programmer Wan Feng, been updating for 5 yea
 
 ## Related Reading
 
-- [30讲 · AI Programming Training Camp for Beginners](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [30讲 · AI Programming Training Camp for Beginners](https://r7up9.xetslk.com/s/1uP5YW)
 
 
-Programmer Wan Feng focuses on AI programming training,小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。
+Programmer Wan Feng focuses on AI programming training,小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)就能上手做AI项目。
 
 
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

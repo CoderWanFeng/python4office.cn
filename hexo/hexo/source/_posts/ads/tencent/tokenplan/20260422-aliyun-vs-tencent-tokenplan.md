@@ -1,24 +1,29 @@
-﻿---
-
-title: "【硬核对比】阿里云 Coding Plan vs 腾讯云 Token Plan，选错亏几千！"
+---
+title: 【硬核对比】阿里云 Coding Plan vs 腾讯云 Token Plan，选错亏几千！
 date: 2026-04-22 16:50:00
 tags:
-  - 大模型
-  - Token Plan
-  - AI编程
-  - 腾讯云
-  - Coding Plan
-  - 阿里云
-  - Claude Code
-  - Cursor
+- 大模型
+- Token Plan
+- AI编程
+- 腾讯云
+- Coding Plan
+- 阿里云
+- Claude Code
+- Cursor
 categories: AI工具
-
+cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
 ---
+
+
 
 
 > 最近阿里云和腾讯云都推出了 AI 编程订阅套餐，但很多同学不知道怎么选。今天我就从**价格、模型、功能**三个维度做个硬核对比，看完你就知道该选哪个了。
 
 <!-- more -->
+
+![【硬核对比】阿里云 Coding Plan vs 腾讯云 Token Plan，选错亏几千！](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![【硬核对比】阿里云 Coding Plan vs 腾讯云 Token Plan，选错亏几千！](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 ## 一、先说结论
 
@@ -102,7 +107,7 @@ categories: AI工具
 - 你更习惯用**千问模型**做开发
 - 你想要阿里云的一站式生态
 
-👉 [点击查看阿里云 Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)
+👉 [点击查看阿里云 Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)
 
 ### 选腾讯云 Token Plan，如果：
 
@@ -158,14 +163,21 @@ A：腾讯云 Lite 套餐 39 元/月，学生也能承受，性价比最高。
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 相关阅读
 
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
-- [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
-- [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
-- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)
+- [休了个婚假，结果骨折了](https://mp.weixin.qq.com/s/FWCF7ZhAiJVngjiID4HVXQ)
+- [国产AI最大的优点：问什么都是标准答案](https://mp.weixin.qq.com/s/Ni9ZN0bpDEygDZmOAkr-tQ)
+- [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
+- [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://r7up9.xetslk.com/s/1uP5YW)
+- [HR看简历只花6秒，我用AI让我的简历过了第一关](https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ)
 
 ---
 
@@ -173,8 +185,8 @@ A：腾讯云 Lite 套餐 39 元/月，学生也能承受，性价比最高。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 

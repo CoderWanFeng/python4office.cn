@@ -1,5 +1,4 @@
 ---
-
 title: 什么是深度学习？让AI从"玩具"变成"超能力"的技术
 date: 2026-04-16 17:03:00
 author: 程序员晚枫
@@ -13,9 +12,13 @@ tags:
 - Deep Learning
 order: 10
 description: 为什么AI突然变强了？程序员晚枫用大白话揭秘深度学习，让你理解让AI从"玩具"变成"超能力"的关键技术！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![什么是深度学习？让AI从"玩具"变成"超能力"的技术](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是深度学习？让AI从"玩具"变成"超能力"的技术](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 
 
 > **作者：程序员晚枫**
@@ -221,7 +224,7 @@ model = AutoModelForSequenceClassification.from_pretrained('bert-base-chinese')
 
 - ✅ 为什么叫"深度"学习？——层数多，1层→100层
 - ✅ 为什么AI突然变强了？——数据+算力+算法三个条件终于凑齐了
-- �怎么入门？——先跑项目，用预训练模型，蹭免费GPU
+- 🎯 怎么入门？——先跑项目，用预训练模型，蹭免费GPU
 
 **评论区聊聊：你用过的哪些AI产品背后是深度学习？最让你惊讶的是哪个？**
 
@@ -251,7 +254,7 @@ model = AutoModelForSequenceClassification.from_pretrained('bert-base-chinese')
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

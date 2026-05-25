@@ -5,6 +5,7 @@ tags: 福利
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
 ![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
 
@@ -33,7 +34,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 | 课程链接                                                                    | 配套文档&代码&软件                                                | 读者交流群                                              |
 |-------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
 | [50讲 · Python + 自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)                 | [打开](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)                     | [加入](https://www.python4office.cn/wechat-group/)        |
-| [10讲 · Python + 微信机器人](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw) | [打开](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw) | [加入](https://www.python4office.cn/wechat-group/)        |
+| [10讲 · Python + 微信机器人](https://r7up9.xetslk.com/s/1uP5YW) | [打开](https://r7up9.xetslk.com/s/1uP5YW) | [加入](https://www.python4office.cn/wechat-group/)        |
 | [30讲 · Python + 数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)         | [打开](https://mp.weixin.qq.com/s/n5b-C4ZhkhfZmlCTvepM4A)   | [加入](https://www.python4office.cn/wechat-group/)        |
 | [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)             | [打开](https://www.python-office.com/course-002/5-poocr/5-poocr.html)                  | [加入](https://www.python4office.cn/wechat-group/)        |
 | [100讲 · Python + 人工智能](https://www.bilibili.com/video/BV1rU4y1u7og/)    | [打开](https://mp.weixin.qq.com/s/P52GVQEJ1bVAN5vPM_t3Jg)                   | [加入](https://mp.weixin.qq.com/s/CadAaJUTUlXmTxJAjFUfPQ)        |
@@ -76,8 +77,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

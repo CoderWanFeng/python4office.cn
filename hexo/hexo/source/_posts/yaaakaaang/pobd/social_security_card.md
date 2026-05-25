@@ -7,7 +7,11 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 
+
 <!-- more -->
+
+![用AI自动识别社保卡，让数据处理更高效！](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 <span style="font-size:20px;"><span style="color:#66a3e0;">在上次分享的发票识别工具之后，许多用户反馈希望能够扩展功能，支持其他类型证件的识别，比如社保卡。社保卡作为重要的个人信息载体，其识别和处理同样是一项繁琐的任务。为了满足这一需求，我开发了一个基于AI的自动识别社保卡工具，可以将社保卡信息自动识别并保存为Excel文件，进一步提升数据处理的效率。
  </span></span>
  
@@ -44,13 +48,13 @@ pobd.ocr2excel.social_security_card(img_path=input_file,output_excel_path=output
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

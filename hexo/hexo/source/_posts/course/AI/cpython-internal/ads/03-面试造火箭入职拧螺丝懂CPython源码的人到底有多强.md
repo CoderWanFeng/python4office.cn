@@ -5,9 +5,14 @@ tags: [Python进阶, CPython, 面试, 职场]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
+![面试造火箭入职拧螺丝？懂CPython源码的人到底有多强](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![面试造火箭入职拧螺丝？懂CPython源码的人到底有多强](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
+
 大家好，这里是程序员晚枫，正在all in AI编程实战。
 
-经常有人问我：**"学CPython源码有什么用？我又不去做Python核心开发。"**
+经常有人问我："**学CPython源码有什么用？我又不去做Python核心开发。**"
 
 我的回答是：**你不需要去做，但你需要懂。**
 
@@ -68,14 +73,14 @@ dis.dis("a = a + [5]") # BINARY_ADD + STORE_NAME
 
 ---
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲·AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)就能上手做AI项目。
 
 
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

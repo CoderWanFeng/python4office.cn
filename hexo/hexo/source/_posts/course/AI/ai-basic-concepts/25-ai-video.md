@@ -1,5 +1,4 @@
 ---
-
 title: 什么是AI视频？一句话生成视频
 date: 2026-04-16 17:24:00
 author: 程序员晚枫
@@ -15,9 +14,13 @@ tags:
 - 视频生成
 order: 25
 description: 为什么Sora这么火？程序员晚枫用大白话揭秘AI视频，让你了解文字生成视频的魔法！
-
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![什么是AI视频？一句话生成视频](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是AI视频？一句话生成视频](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
+
 
 
 > **作者：程序员晚枫**
@@ -494,6 +497,7 @@ AI视频工作流（2025年标准）：
 ---
 
 ## 相关阅读
+- [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 
@@ -502,6 +506,6 @@ AI视频工作流（2025年标准）：
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

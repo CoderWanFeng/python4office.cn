@@ -1,13 +1,18 @@
 ---
-title: "AI副业入门！5个普通人可以做的方向，看完你就知道怎么开始了"
+title: AI副业入门！5个普通人可以做的方向，看完你就知道怎么开始了
 date: 2026-04-22 00:00:00
 tags: ["ai副业", "ai编程", "副业变现"]
 categories: ["AI副业变现"]
-description: "AI副业入门：5个普通人可以做的方向，AI代写、AI设计、AI培训、AI开发Skill、AI数字人，看完你就知道怎么开始了。"
+description: AI副业入门：5个普通人可以做的方向，AI代写、AI设计、AI培训、AI开发Skill、AI数字人，看完你就知道怎么开始了。
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![AI副业入门！5个普通人可以做的方向，看完你就知道怎么开始了](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop)
+![AI副业入门！5个普通人可以做的方向，看完你就知道怎么开始了](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 兄弟们！！！
 
@@ -181,10 +186,17 @@ AI给了普通人很多机会。
 *更多AI编程内容，欢迎访问我的网站：https://www.python4office.cn/
 
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

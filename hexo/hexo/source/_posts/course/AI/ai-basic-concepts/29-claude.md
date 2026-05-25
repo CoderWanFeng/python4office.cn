@@ -1,5 +1,4 @@
 ---
-
 title: 什么是Claude？
 date: 2026-04-16 17:32:00
 author: 程序员晚枫
@@ -17,9 +16,14 @@ tags:
 - 大模型
 order: 29
 description: 什么是Claude？程序员晚枫用通俗语言解释，Anthropic出品的AI助手和ChatGPT有什么区别。
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![什么是Claude？](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+![什么是Claude？](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
+
 
 
 # 什么是Claude？
@@ -210,16 +214,16 @@ Claude 3 Opus（最强）
 
 ## 新闻里经常看到
 
-> **"Claude用户破1亿"**
+> "**Claude用户破1亿**"
 > → AI助手竞争加剧
 
-> **"亚马逊投资Anthropic 40亿美元"**
+> "**亚马逊投资Anthropic 40亿美元**"
 > → AI安全公司获巨头投资
 
-> **"Claude 3超越GPT-4？"**
+> "**Claude 3超越GPT-4？**"
 > → 各大模型benchmark对比
 
-> **"Claude写的小说获文学奖"**
+> "**Claude写的小说获文学奖**"
 > → AI创作能力再次引发讨论
 
 ## Claude背后的理念
@@ -411,6 +415,6 @@ Claude的核心技术：Constitutional AI（宪法AI）
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

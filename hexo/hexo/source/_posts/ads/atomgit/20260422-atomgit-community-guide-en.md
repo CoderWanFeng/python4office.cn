@@ -1,13 +1,18 @@
 ---
-title: "AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~"
+title: AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~
 date: 2026-04-22 00:00:00
 tags: ["atomgit", "ai programming", "community"]
 categories: ["AI Tools"]
-description: "AtomGit AI Programming Community Entry Guide! Step-by-step to join~"
+description: AtomGit AI Programming Community Entry Guide! Step-by-step to join~
 cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![AtomGit AI Programming Community Entry Guide! Step-by-Step to Join~](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 Brothers!!!
 
@@ -116,10 +121,17 @@ You're also welcome to join my "30 Lectures · AI Programming Bootcamp" co-creat
 👉 [Click to view "30 Lectures · AI Programming Bootcamp" details](https://www.python4office.cn/course/ai-related/posts-people/ads/260209-499/)
 
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

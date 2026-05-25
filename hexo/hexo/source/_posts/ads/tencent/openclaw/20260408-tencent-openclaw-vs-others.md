@@ -4,11 +4,12 @@ keywords: 程序员晚枫, 腾讯云OpenClaw, AI助手方案对比, 选型指南
 description: 程序员晚枫对比5款AI助手方案：腾讯云OpenClaw、自己搭建、SaaS服务等，分享选型思路和成本分析，4月10日郑州龙虾课交流。
 date: 2026-04-08 23:45:00
 sidebar:
-  - toc
+- toc
 hide:
-  - toc
+- toc
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
@@ -19,6 +20,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 最近想给业务搭个AI助手，调研了市面上5种方案。今天分享对比过程和最终选择，**4月10日郑州龙虾课**，现场聊聊选型那些坑。
 
 <!-- more -->
+
+![对比了5款AI助手方案后，我选择了腾讯云OpenClaw｜4月10日郑州分享选型心得](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+![对比了5款AI助手方案后，我选择了腾讯云OpenClaw｜4月10日郑州分享选型心得](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 ## 我的需求背景
 
@@ -253,11 +258,18 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 *本文部分链接为推广链接，点击购买我会获得少量佣金，用于支持原创内容创作。*
 
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

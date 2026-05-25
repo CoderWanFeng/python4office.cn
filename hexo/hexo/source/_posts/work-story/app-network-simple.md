@@ -5,7 +5,11 @@ tags: 1对1咨询
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![开发功能简单的联网APP，学习计划](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 # 1、整体思路
 
 开发一个形式上能通过专业认可的app，实现工作中的简单任务，必须联网。
@@ -26,7 +30,7 @@ https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA
 
 ## 3、django：
 【免费版】https://www.bilibili.com/video/BV1NL41157ph
-【付费版】https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw
+【付费版】https://r7up9.xetslk.com/s/1uP5YW
 
 ## 4、pyinstaller：
 
@@ -40,13 +44,13 @@ https://pyinstaller.org/en/stable/
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

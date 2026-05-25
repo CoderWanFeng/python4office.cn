@@ -5,7 +5,11 @@ tags: [python, 流畅的 Python, Python 进阶, 程序员晚枫]
 cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![这本书在我床头放了7年，我终于决定把它读透](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > 大家好，我是程序员晚枫。
 
@@ -31,6 +35,8 @@ cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=
 
 这种感觉很奇妙——书没变，是你变了。
 
+![这本书在我床头放了7年](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+
 ---
 
 ## 第2版来了，我反而没看了
@@ -48,6 +54,8 @@ cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=
 我相信很多人有过同样的感受——买了一本好书，知道自己应该读，但就是一直没读。
 
 不是书不好，是自己没有一个"逼自己坐下来"的契机。
+
+![这本书在我床头放了7年](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 ---
 
@@ -154,8 +162,8 @@ cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 

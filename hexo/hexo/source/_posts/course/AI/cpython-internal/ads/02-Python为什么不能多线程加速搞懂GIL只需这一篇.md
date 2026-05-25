@@ -5,9 +5,14 @@ tags: [Python进阶, GIL, 并发, 多线程]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
+![Python为什么不能多线程加速？搞懂GIL只需这一篇](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python为什么不能多线程加速？搞懂GIL只需这一篇](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
+
 大家好，这里是程序员晚枫，正在all in AI编程实战。
 
-你肯定听过这句话：**"Python的多线程是假的。"**
+你肯定听过这句话："**Python的多线程是假的。**"
 
 真的是这样吗？为什么Java能多线程加速，Python不行？
 
@@ -83,14 +88,14 @@ GIL只是CPython的冰山一角。在我的《CPython设计与实现》课程里
 
 ---
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲·AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)就能上手做AI项目。
 
 
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

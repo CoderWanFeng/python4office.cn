@@ -1,9 +1,10 @@
 ---
-title: "Robotaxi - Laws & Cases"
+title: Robotaxi - Laws & Cases
 date: 2025-04-16 21:13:55
 tags: [Robotaxi, Legal Risks]
 cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 
@@ -59,16 +60,16 @@ Before learning, recommend reading this article, which is a viewpoint I shared a
 
 ## Related Reading
 
-- [《30 Lectures · AI Programming Training Camp》for Beginners](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [《30 Lectures · AI Programming Training Camp》for Beginners](https://r7up9.xetslk.com/s/1uP5YW)
 
-Programmer Wanfeng focuses on AI programming training, beginners can start making AI projects after watching his tutorials co-published with Turing Community [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw).
+Programmer Wanfeng focuses on AI programming training, beginners can start making AI projects after watching his tutorials co-published with Turing Community [《30 Lectures · AI Programming Training Camp》](https://r7up9.xetslk.com/s/1uP5YW).
 
 
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

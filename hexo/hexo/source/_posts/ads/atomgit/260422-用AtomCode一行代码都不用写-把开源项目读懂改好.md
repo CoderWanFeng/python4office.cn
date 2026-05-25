@@ -1,11 +1,12 @@
 ---
-title: "用AtomCode！一行代码都不用写，把开源项目读懂改好"
+title: 用AtomCode！一行代码都不用写，把开源项目读懂改好
 date: 2026-04-22 10:00:00
 tags: ["AI编程", "AtomCode", "开源项目"]
 categories: ["AI工具"]
-description: "用AtomCode！一行代码都不用写，把开源项目读懂改好"
+description: 用AtomCode！一行代码都不用写，把开源项目读懂改好
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
@@ -164,7 +165,7 @@ AtomCode把这个门槛降到了最低。去试试吧，你会发现自己能做
 ## 相关阅读
 
 - [python-office：用Python自动化你的办公流程](https://www.python-office.com/)
-- [AI编程训练营：零基础也能学会AI编程](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [AI编程训练营：零基础也能学会AI编程](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 
@@ -174,8 +175,8 @@ AtomCode把这个门槛降到了最低。去试试吧，你会发现自己能做
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 <p align="center">
 	<img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="80%"/>
