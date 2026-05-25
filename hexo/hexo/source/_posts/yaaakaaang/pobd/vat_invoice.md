@@ -5,7 +5,11 @@ tags: [pobd]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![告别手动录入！AI自动识别发票](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 <span style="font-size:20px;"><span style="color:#66a3e0;">最近有朋友向我吐槽："每天对着几十张发票手动录入系统，眼睛都快看花了，还总担心数字打错。" 这种重复性高、容错率低的工作，确实让财务和行政人员苦不堪言。作为程序员，我深知这类场景完全可以通过技术手段优化。 </span></span>
 
 #  一、解决方案：AI+OCR智能发票处理
@@ -47,13 +51,13 @@ input_file 就是你存放增值税发票的目录， output_file 是生成excel
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

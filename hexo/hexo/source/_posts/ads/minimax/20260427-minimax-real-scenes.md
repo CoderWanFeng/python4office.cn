@@ -8,7 +8,12 @@ categories: [AI编程, 使用体验]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![MiniMax 26元/月，这些真实场景我用了一年，真香！](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![MiniMax 26元/月，这些真实场景我用了一年，真香！](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >
@@ -137,6 +142,13 @@ MiniMax 是我**使用频率最高、性价比最高**的 AI 编程工具。
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 相关阅读
 
 - [💰 程序员省钱攻略：这些 AI 工具免费用](https://www.python4office.cn/20260421-developer-save-money-guide/)
@@ -151,3 +163,11 @@ MiniMax 是我**使用频率最高、性价比最高**的 AI 编程工具。
 ---
 
 *作者：程序员晚枫，全网同名，专注 AI 工具测评与 Python 自动化办公教学。*
+---
+
+## 🎓 AI 编程实战课程
+
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)

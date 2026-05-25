@@ -1,3 +1,10 @@
+---
+title: AI 工具评测
+date: 2026-01-01 10:00:00
+categories: [AI工具]
+tags: [工具评测]
+---
+
 # AI 工具评测
 
 > 「科技不高冷，AI很好用」—— 程序员视角的真实 AI 工具评测
@@ -28,17 +35,21 @@ ai-tools/
 
 ```markdown
 ---
-title: "工具名称 | 真实评测"
+title: 工具名称 | 真实评测
 date: YYYY-MM-DD
 categories:
   - AI工具评测
 tags:
   - 工具类型
   - 使用场景
-description: "一句话说明这个工具是干嘛的"
+description: 一句话说明这个工具是干嘛的
 ---
 
 <!-- more -->
+
+![README.md](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![README.md](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 # 工具名称：真实评测
 
 ## 基本信息
@@ -91,7 +102,7 @@ description: "一句话说明这个工具是干嘛的"
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

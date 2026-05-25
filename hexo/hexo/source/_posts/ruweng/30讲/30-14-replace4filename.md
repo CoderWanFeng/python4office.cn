@@ -1,9 +1,10 @@
 ---
-title: "Python批量重命名：支持正则替换、序号递增、日期格式，文件管理必备" 
+title: Python批量重命名：支持正则替换、序号递增、日期格式，文件管理必备
 date: 2025-08-22 00:00:00
 tags: [星河计划]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 
 <p align="center" id='进群-banner-AI'>
@@ -33,7 +34,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 	</a>	
 </p>
 <p align="center" name="atomgit">
-	<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
+	<a href="https://r7up9.xetslk.com/s/1uP5YW">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -92,8 +93,8 @@ office.file.replace4filename(path=r'./test_files/30-14-replace4filename',
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

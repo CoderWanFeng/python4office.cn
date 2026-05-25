@@ -1,26 +1,31 @@
-﻿---
-
+---
 title: 我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用
 keywords: 程序员晚枫, AI导航网站, AI工具合集, AI工具导航, python-office, AI编程, AI效率工具, 免费AI工具
 description: 程序员晚枫全新发布AI导航网站，收录100+精选AI工具，涵盖编程、设计、办公、学习等多个领域。零代码基础也能快速上手，一站式解决AI工具查找难题。
 date: 2026-04-11 11:00:00
 tags:
-  - Python
-  - AI编程
-  - 程序员晚枫
-  - AI导航
-  - AI工具
-  - 效率工具
-  - python-office
-categories: 
-  - AI工具推荐
-  - 项目分享
+- Python
+- AI编程
+- 程序员晚枫
+- AI导航
+- AI工具
+- 效率工具
+- python-office
+categories:
+- AI工具推荐
+- 项目分享
 author: 程序员晚枫
-
+cover: https://images.unsplash.com/photo-1432888?w=800&h=400&fit=crop
 ---
 
 
+
+
 <!-- more -->
+
+![我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![我又做了一个AI导航网站！半天上线，收录100+工具，普通人也能直接用](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 > **本文关键词**：程序员晚枫、AI导航、AI工具合集、效率工具、python-office
@@ -197,21 +202,28 @@ AI时代，工具就是生产力。
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 相关阅读
 
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
-- [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
-- [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
-- [小白10分钟搞定！OpenClaw下载和安装教程，无脑点击开通](https://mp.weixin.qq.com/s/mT_MKixwcY6HTMhT_69Imw)
+- [休了个婚假，结果骨折了](https://mp.weixin.qq.com/s/FWCF7ZhAiJVngjiID4HVXQ)
+- [国产AI最大的优点：问什么都是标准答案](https://mp.weixin.qq.com/s/Ni9ZN0bpDEygDZmOAkr-tQ)
+- [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
+- [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://r7up9.xetslk.com/s/1uP5YW)
+- [HR看简历只花6秒，我用AI让我的简历过了第一关](https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ)
 
 
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

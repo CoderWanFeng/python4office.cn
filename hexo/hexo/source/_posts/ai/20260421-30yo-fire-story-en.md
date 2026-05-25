@@ -8,6 +8,11 @@ description: A real record of a 30-year-old programmer after being laid off. Wha
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
+![At 30, I Was Laid Off: That Night, I Finally Understood Something](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![At 30, I Was Laid Off: That Night, I Finally Understood Something](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
+
 # At 30, I Was Laid Off: That Night, I Finally Understood Something
 
 > **Reading Time:** 6 minutes
@@ -92,7 +97,7 @@ She came to Beijing to find me, and we ate a bowl of noodles for 12 yuan.
 
 We had nothing then, but we felt the future was full of hope.
 
-**"You had nothing back then, but you were so motivated every day. I don't know why you became like this now, thinking that losing your job means everything is over."**
+"**You had nothing back then, but you were so motivated every day. I don't know why you became like this now, thinking that losing your job means everything is over.**"
 
 She said: "It's not that you don't have ability. You've been in your comfort zone for too long and forgot how awesome you are."
 
@@ -205,7 +210,7 @@ Work is just one source of income, not all of it. Learn to build multiple income
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

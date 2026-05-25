@@ -5,6 +5,7 @@ tags: [python, 流畅的Python, 共读营, Python进阶, 程序员晚枫]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
 
 > 大家好，我是程序员晚枫。
@@ -48,6 +49,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ✅ **配套练习**
 读完不等于学会，每周还有配套练习帮你把知识内化。
 
+![流畅的Python共读营正式开营](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+
 ---
 
 ## 20周内容安排
@@ -76,6 +79,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 想系统提升Python水平，从会用走到精通的。
 
 ⚠️ **如果你只是想找一份速成教程，那不适合你。**
+
+![流畅的Python共读营正式开营](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 ---
 
@@ -149,7 +154,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

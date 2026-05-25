@@ -1,11 +1,15 @@
 ---
 title: 鸿蒙ArkUI开发|文件路径管理好帮手pathlib
-date: 2025-07-05 23:46:00 
+date: 2025-07-05 23:46:00
 tags: [鸿蒙开发,pathlib,文件管理]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![鸿蒙ArkUI开发|文件路径管理好帮手pathlib](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ![image.png](https://raw.atomgit.com/user-images/assets/5027920/5e8c4bf3-f19b-42c0-a06c-5ca0191bfc7f/image.png)
 # 前言
 在鸿蒙开发中,避免不了对沙盒中的文件进行操作.最近遇到的一个问题是,将一个目录下的所有文件和文件夹全部删除,但是系统提供的fs对象只能删除一个空目录,对于非空目录进行处理,就会比较棘手.
@@ -106,13 +110,13 @@ const files = Path.files()
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

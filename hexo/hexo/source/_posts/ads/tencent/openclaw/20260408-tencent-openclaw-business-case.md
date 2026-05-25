@@ -4,11 +4,12 @@ keywords: 程序员晚枫, 腾讯云OpenClaw, AI助手业务场景, 客服机器
 description: 程序员晚枫分享：3个真实的腾讯云OpenClaw业务应用案例，智能客服、社群运营助手、内部知识库问答，4月10日郑州龙虾课现场拆解。
 date: 2026-04-08 23:40:00
 sidebar:
-  - toc
+- toc
 hide:
-  - toc
+- toc
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
@@ -21,6 +22,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 **4月10日郑州龙虾课**，我会现场拆解这些案例的实现细节，手把手教你搭建自己的业务助手。
 
 <!-- more -->
+
+![我用腾讯云OpenClaw做了3个业务助手，4月10日郑州分享实战经验](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+![我用腾讯云OpenClaw做了3个业务助手，4月10日郑州分享实战经验](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 ## 案例一：智能客服助手
 
@@ -205,11 +210,18 @@ AI不是万能的，但在特定场景下，它能极大提升效率。关键是
 *本文部分链接为推广链接，点击购买我会获得少量佣金，用于支持原创内容创作。*
 
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

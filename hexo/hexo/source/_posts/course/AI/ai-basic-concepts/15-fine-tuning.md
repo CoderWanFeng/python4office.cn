@@ -1,5 +1,4 @@
 ---
-
 title: 什么是微调？让通用AI变成你的"专属专家"
 date: 2026-04-16 17:14:00
 author: 程序员晚枫
@@ -14,9 +13,13 @@ tags:
 - 定制AI
 order: 15
 description: 如何让AI更懂你的业务？程序员晚枫用大白话揭秘微调技术，让你了解如何定制专属AI！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![什么是微调？让通用AI变成你的"专属专家"](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是微调？让通用AI变成你的"专属专家"](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 
 
 > **作者：程序员晚枫**
@@ -515,6 +518,6 @@ LoRA微调：
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

@@ -1,19 +1,26 @@
 ---
-title: Alibaba Cloud Bailian Coding Plan API Tutorial: How Programmers Can Access Tongyi Qianwen Large Model
+
+title: "Alibaba Cloud Bailian Coding Plan API Tutorial: How Programmers Can Access Tongyi Qianwen Large Model"
 tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, API Tutorial, AI Programming]
 categories: [AI Programming, Tutorial]
 date: 2026-04-23 20:00:00
-description: Programmer Wanfeng teaches you: Alibaba Cloud Bailian Coding Plan API access tutorial, 3 steps to access Tongyi Qianwen large model, with code examples.
+description: "Programmer Wanfeng teaches you: Alibaba Cloud Bailian Coding Plan API access tutorial, 3 steps to access Tongyi Qianwen large model, with code examples."
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
+
 ---
 
+
 <!-- more -->
+
+![Alibaba Cloud Bailian Coding Plan API Tutorial: How Programmers Can Access Tongyi Qianwen Large Model](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![Alibaba Cloud Bailian Coding Plan API Tutorial: How Programmers Can Access Tongyi Qianwen Large Model](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **Author: Programmer Wanfeng | AI Programming Evangelist | Focus on AI Tool Evaluation and Teaching**
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to access Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to access Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -24,7 +31,7 @@ Today I bring you the **Alibaba Cloud Bailian API access tutorial**, teaching yo
 ### 1. Activate the service
 
 First, make sure you have activated Alibaba Cloud Bailian Coding Plan:
-**👉 [Click to activate](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to activate](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
 
 ### 2. Get API-KEY
 
@@ -147,7 +154,7 @@ It is recommended to use asynchronous calls in production environments to avoid 
 
 For the same or similar prompts, you can cache results to reduce API calls.
 
-**👉 [Click to get Alibaba Cloud Bailian API-KEY](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to get Alibaba Cloud Bailian API-KEY](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
 
 ---
 
@@ -160,13 +167,20 @@ For the same or similar prompts, you can cache results to reduce API calls.
 
 ---
 
-> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to activate now](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to activate now](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
 
 ---
 
 *Author: Programmer Wanfeng, same name across platforms, focusing on AI tool evaluation and Python automated office teaching.*
 
 ---
+
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
 
 ## 🎓 AI Programming Course
 
@@ -182,4 +196,11 @@ Want to learn AI programming systematically? Check out **CoderWanFeng's AI Progr
 👉 Want to try **MiniMax Token Plan**? [Click here for 10% off](https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link)
 
 💡 **Pay-per-use pricing — super cost-effective!** Think of it like a farmers market: buy a ticket, and all the veggies are free. Pay based on actual usage, no limits, no monthly fees. Perfect for developers!
+---
 
+## 🎓 AI 编程实战课程
+
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)

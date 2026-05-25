@@ -7,9 +7,10 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 
+
 ![](https://www.python-office.com/api/img-cdn/python-office/you-get/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)。
 
 本周**知识星球：Python读者圈**里的同学，给我提了一个问题：
 > B站的课程很好，但是上班没有网，也不想用B站的视频缓存功能。**怎么把B站的视频下载下来，存到百度网盘里看？**
@@ -68,13 +69,13 @@ pip install -i https://mirrors.aliyun.com/pypi/simple python-office -U
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

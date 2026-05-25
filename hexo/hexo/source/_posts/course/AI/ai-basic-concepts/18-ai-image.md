@@ -1,5 +1,4 @@
 ---
-
 title: 什么是AI画图？文字生成图片的魔法
 date: 2026-04-16 17:17:00
 author: 程序员晚枫
@@ -16,9 +15,13 @@ tags:
 - Stable Diffusion
 order: 18
 description: 为什么AI能画画？程序员晚枫用大白话揭秘AI画图技术，让你了解文字生成图片的魔法！
-
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![什么是AI画图？文字生成图片的魔法](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![什么是AI画图？文字生成图片的魔法](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 > **作者：程序员晚枫**
@@ -539,6 +542,6 @@ AI画图 → AI视频 → 无缝衔接：
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

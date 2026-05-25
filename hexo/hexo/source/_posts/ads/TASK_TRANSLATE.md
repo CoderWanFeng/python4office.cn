@@ -1,4 +1,11 @@
-# 批量翻译任务说明
+---
+title: 批量翻译任务说明
+date: 2026-04-23 10:00:00
+categories: [翻译任务]
+tags: [批量翻译, Python]
+---
+
+![封面](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## 目标
 将当前目录下的中文 Markdown 文件批量翻译为英文，生成 `-en.md` 后缀的英文版本。
@@ -215,11 +222,18 @@ pkill -f batch_translate.py
 /Users/wanfeng/code/opc-website/python4office.cn/hexo/hexo/source/_posts/ads/卖书/xi/7-11.md
 
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

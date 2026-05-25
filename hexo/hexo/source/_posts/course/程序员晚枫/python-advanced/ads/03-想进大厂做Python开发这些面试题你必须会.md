@@ -6,6 +6,11 @@ categories: Python进阶
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
+![想进大厂做Python开发？这些面试题你必须会](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![想进大厂做Python开发？这些面试题你必须会](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
+
 ## 大厂Python面试，到底在考什么？
 
 我帮不少学员做过Python面试辅导，也自己也参加过不少面试。
@@ -172,7 +177,7 @@ gen_exp = (x*x for x in range(1000000))
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

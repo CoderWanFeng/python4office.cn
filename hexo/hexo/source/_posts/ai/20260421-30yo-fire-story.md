@@ -1,5 +1,5 @@
 ---
-title: "30岁，我被裁员了：那一夜，我终于想明白了一件事"
+title: 30岁，我被裁员了：那一夜，我终于想明白了一件事
 date: 2026-04-21 14:43:00
 tags: [裁员, 职场, 30岁, 人生感悟]
 categories: [成长故事]
@@ -7,6 +7,11 @@ keywords: [30岁裁员, 职场危机, 程序员被裁, 人生感悟]
 description: 一个30岁程序员被裁员后的真实记录，那一夜他想了什么，后来又做了什么。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![30岁，我被裁员了：那一夜，我终于想明白了一件事](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop)
+![30岁，我被裁员了：那一夜，我终于想明白了一件事](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 # 30岁，我被裁员了：那一夜，我终于想明白了一件事
 
@@ -92,7 +97,7 @@ HR说话的时候，眼神刻意回避我。
 
 那时候我们什么都没有，但觉得未来充满希望。
 
-**"你那时候什么都没有，但你每天都特别有干劲。我不知道为什么你变成现在这样，觉得没工作就完蛋了。"**
+"**你那时候什么都没有，但你每天都特别有干劲。我不知道为什么你变成现在这样，觉得没工作就完蛋了。**"
 
 她说："你不是没有能力，你是太长时间待在舒适区，忘了自己有多厉害。"
 
@@ -228,7 +233,7 @@ HR说话的时候，眼神刻意回避我。
 
 那晚老婆说的那句话，我一直记得：
 
-**"你不是没有能力，你是太长时间待在舒适区，忘了自己有多厉害。"**
+"**你不是没有能力，你是太长时间待在舒适区，忘了自己有多厉害。**"
 
 我想把这句话，送给所有正在经历职场焦虑的人。
 
@@ -254,8 +259,8 @@ HR说话的时候，眼神刻意回避我。
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [别再用人力硬扛任务了！普通人也能落地的全场景 AI 实战营来了](https://mp.weixin.qq.com/s/KuyuljSXInUFavCz7iL5Yw)
-- [我用AI卖了600本书，单日收入2400+](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
+- [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
+- [休了个婚假，结果骨折了](https://mp.weixin.qq.com/s/FWCF7ZhAiJVngjiID4HVXQ)
 
 **END**
 
@@ -264,7 +269,7 @@ HR说话的时候，眼神刻意回避我。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

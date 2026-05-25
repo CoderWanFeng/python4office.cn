@@ -1,10 +1,11 @@
-﻿---
-
+---
 title: "533-Page PDF: Python 3 Programmer's Guide (Second Edition)"
 date: 2022-12-10 04:33:56
 tags: [Python自动化办公, Python, PDF自动化, AI编程]
-
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
+
+
 
 
 <p align="center" id='进群-banner-AI'>
@@ -20,7 +21,7 @@ tags: [Python自动化办公, Python, PDF自动化, AI编程]
     <a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
     <img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
     </a>
-<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
+<a href="https://r7up9.xetslk.com/s/1uP5YW">
   <img src="https://img.shields.io/badge/Learn-AI%20Programming-red" alt="AI编程">
 </a>
     <a href="https://www.python4office.cn/wechat-group/">
@@ -67,7 +68,7 @@ tags: [Python自动化办公, Python, PDF自动化, AI编程]
 </p>
 
 <p align="center" id='10讲机器人-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw'>
+    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg" width="100%"/>
     </a>
 </p>
@@ -126,14 +127,14 @@ tags: [Python自动化办公, Python, PDF自动化, AI编程]
     </a>
 </p>
 
-Programmer Wan Feng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial ["30 Lectures · AI Programming Training Camp"](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw) created with Turing Community.
+Programmer Wan Feng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial ["30 Lectures · AI Programming Training Camp"](https://r7up9.xetslk.com/s/1uP5YW) created with Turing Community.
 
 
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

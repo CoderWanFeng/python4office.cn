@@ -5,10 +5,15 @@ tags: 广告
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![国内10大云服务器厂商，你用过几个？](https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800)
+![国内10大云服务器厂商，你用过几个？](https://images.unsplash.com/photo-160257088?w=800&h=400&fit=crop)
+
 AI又帮我赚钱了！
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，小红书也叫这个名。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)，小红书也叫这个名。
 
 做编程博主4年了，一直在尝试各种利用技术赚钱的路子。用上AI之后，试错成本大大降低，成功概率大大提高！
 
@@ -52,15 +57,16 @@ AI又帮我赚钱了！
 加群方法，关注公众号：Python自动化办公社区，在后台发送命令：**0816**，即可24小时自动进群~
 
 ## 相关阅读
+- [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

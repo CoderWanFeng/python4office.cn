@@ -1,23 +1,30 @@
-﻿---
-
+---
 title: 2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径
 date: 2026-04-21 15:00:00
 author: 程序员晚枫
 categories:
 - AI
 - 基础概念
-tags: [Python, AI编程]
-- AI入门
-- AI基础
-- 大模型
-- GPT
-- AI概念
-- AI学习路径
-- AI零基础
+tags:
+  - Python
+  - AI编程
+  - AI入门
+  - AI基础
+  - 大模型
+  - GPT
+  - AI概念
+  - AI学习路径
+  - AI零基础
 order: 0
 description: 2026年AI入门必读！程序员晚枫用大白话整理29个AI核心概念，附三阶段学习路径。收藏这篇，看新闻不再懵。
-
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
+
+
+![2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
+
 
 
 # 2026年AI入门必读：29个核心概念一文搞懂，附推荐学习路径
@@ -240,6 +247,6 @@ A：会。AI发展快，新概念持续加更。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

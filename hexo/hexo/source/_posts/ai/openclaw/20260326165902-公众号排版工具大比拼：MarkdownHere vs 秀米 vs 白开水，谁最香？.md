@@ -6,7 +6,12 @@ categories: 工具评测
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![公众号排版工具大比拼：MarkdownHere vs 秀米 vs 白开水，谁最香？](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![公众号排版工具大比拼：MarkdownHere vs 秀米 vs 白开水，谁最香？](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 大家好，我是正在实战各种 AI 项目的程序员晚枫。
 
 ## 🤔 为什么要做这个对比？
@@ -219,7 +224,7 @@ MarkdownHere 或白开水工具都可以。
 - PyPI: `pip install openclaw`
 
 ### AI 编程学习入口
-- 课程目录：https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw/
+- 课程目录：https://r7up9.xetslk.com/s/1uP5YW/
 - 《流畅的 Python》20 讲：https://python4office.cn/course/AI/fluent-python/README/
 - CPython 设计与实现：https://python4office.cn/course/AI/cpython-internal/README/
 
@@ -240,7 +245,7 @@ MarkdownHere 或白开水工具都可以。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

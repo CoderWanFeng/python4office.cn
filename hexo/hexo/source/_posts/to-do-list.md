@@ -1,13 +1,18 @@
 ---
-title: "程序员晚枫2022年学习计划 | 待办事项清单(持续更新)"
+title: 程序员晚枫2022年学习计划 | 待办事项清单(持续更新)
 date: 2022-01-24 21:15:48
 tags: ["学习计划", "程序员成长", "Python学习", "待办清单", "2022计划"]
 categories: ["学习方法"]
-description: "程序员晚枫2022年学习计划清单，包含Python、Flask、Celery、Git等技术学习目标。附个人成长路线规划和执行记录。"
+description: 程序员晚枫2022年学习计划清单，包含Python、Flask、Celery、Git等技术学习目标。附个人成长路线规划和执行记录。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![程序员晚枫2022年学习计划 | 待办事项清单(持续更新)](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+![程序员晚枫2022年学习计划 | 待办事项清单(持续更新)](https://images.unsplash.com/photo-146092589?w=800&h=400&fit=crop)
+
 # 程序员晚枫2022年学习计划 | 待办事项清单(持续更新)
 
 > 本文记录我的个人学习计划和待办事项，持续更新中。
@@ -132,7 +137,7 @@ server {
 
 - [刻意练习比1万小时更重要](https://www.python4office.cn/tobeu/)
 - [程序员学习方法论](https://www.python4office.cn/)
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [《30讲·AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 
@@ -143,7 +148,7 @@ server {
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

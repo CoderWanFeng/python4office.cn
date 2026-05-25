@@ -1,9 +1,20 @@
+---
+title: AtomGit AI龙虾挑战赛·重庆站 文章规划
+date: 2026-04-01 10:00:00
+categories: [活动]
+tags: [AtomGit, AI编程, 比赛]
+---
+
 本文件夹为「AtomGit AI龙虾挑战赛·重庆站」系列宣传文章
 
 ## 文章规划
 
 | 序号 | 文件名 | 主题 | 目的 |
-|------|--------|------|------|
+|------
+
+![README.md](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![README.md](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+|--------|------|------|
 | 01 | 01-从月薪3000到副业过万：一个法学生转行的血泪经验.md | 个人故事/成长经历 | 情感共鸣，建立信任 |
 | 02 | 02-Python-AI-Agent-2026年普通人的搞钱新机会.md | 热点蹭文 | 吸引眼球，引出比赛 |
 | 03 | 03-AtomGit-OpenClaw-2026年最强AI编程组合.md | 工具介绍 | 介绍参赛工具链 |
@@ -28,7 +39,7 @@
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

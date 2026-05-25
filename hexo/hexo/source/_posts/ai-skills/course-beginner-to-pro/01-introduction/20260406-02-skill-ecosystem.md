@@ -1,12 +1,16 @@
 ---
-title: "第2讲：Skill 生态全景图：平台、开发者、用户"
+title: 第2讲：Skill 生态全景图：平台、开发者、用户
 date: 2026-04-06 11:30:00
 tags: ["AI Skill", "生态", "平台对比"]
 categories: ["AI Skills 课程"]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![第2讲：Skill 生态全景图：平台、开发者、用户](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # 第2讲：Skill 生态全景图：平台、开发者、用户
 
 > 了解 Skill 生态的参与者，找到你的定位和机会。
@@ -280,7 +284,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

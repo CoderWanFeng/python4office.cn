@@ -6,7 +6,11 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
+
 <!-- more -->
+
+![20个平台评测！程序员适合在哪个平台写文章赚钱？](https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 做自媒体5年了，全网积累了30w+粉丝，用过几十个平台：[85个自媒体平台和变现大全（强烈推荐收藏）](https://mp.weixin.qq.com/s/vG7AnDJ50KF-CbuserHPkA)
 
 今天就站在程序员的角度，给大家分享一个哪些平台适合程序员写作？
@@ -72,13 +76,13 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

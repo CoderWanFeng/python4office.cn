@@ -1,10 +1,11 @@
-﻿---
-
+---
 title: Python一共有多少个版本？不同Python版本之间，究竟有什么区别？
 date: 2022-02-14 14:12:20
 tags: [Python, AI编程]
-
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
+
+
 
 很多同学学习Python的时候，都会遇到一个问题：
 
@@ -60,6 +61,10 @@ Python3和Python2，是兼容性非常低的一次大的版本升级。作为新
 
 <!-- more -->
 
+![Python一共有多少个版本？不同Python版本之间，究竟有什么区别？](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![Python一共有多少个版本？不同Python版本之间，究竟有什么区别？](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
+
 
 1. 通常情况
 
@@ -76,13 +81,13 @@ Python3和Python2，是兼容性非常低的一次大的版本升级。作为新
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

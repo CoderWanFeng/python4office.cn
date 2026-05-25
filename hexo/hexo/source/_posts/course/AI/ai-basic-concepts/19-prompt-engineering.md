@@ -1,5 +1,4 @@
 ---
-
 title: 什么是提示词工程？让AI听懂你的高级技巧
 date: 2026-04-16 17:18:00
 author: 程序员晚枫
@@ -14,9 +13,13 @@ tags:
 - 提示词工程
 order: 19
 description: 为什么同样的AI，别人用得那么溜？程序员晚枫用大白话揭秘提示词工程，让你掌握和AI高效沟通的秘诀！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![什么是提示词工程？让AI听懂你的高级技巧](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![什么是提示词工程？让AI听懂你的高级技巧](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 
 
 > **作者：程序员晚枫**
@@ -493,6 +496,6 @@ def filter_sales(input_file, output_file):
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

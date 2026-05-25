@@ -1,17 +1,18 @@
-﻿---
-
+---
 title: 数学不好，能学编程吗？
 date: 2022-08-16 16:06:37
 tags: [Python, AI编程]
-
+cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop
 ---
+
+
 
 
 
 
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/wenda/math-bad/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)，
 
 最近收到最多的问题，没有之一：
 >晚枫，我数学不好，能不能学编程？或者说很多复杂的数学问题呢，我根本就不懂，对我学编程有什么影响？
@@ -21,6 +22,9 @@ tags: [Python, AI编程]
 为什么呢？今天我们一起来分析一下~
 
 <!-- more -->
+
+![数学不好，能学编程吗？](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+
 
 ## 1、编程本身和数学的关系
 我们说两点，第一点，如果这时候有人来问你一个问题说，
@@ -74,13 +78,13 @@ tags: [Python, AI编程]
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

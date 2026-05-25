@@ -1,13 +1,18 @@
 ---
-title: "AI Agent落地案例（5个）！看完你就知道怎么用了"
+title: AI Agent落地案例（5个）！看完你就知道怎么用了
 date: 2026-04-22 00:00:00
 tags: ["ai agent", "ai编程", "openclaw", "coze"]
 categories: ["2026热点"]
-description: "AI Agent实际落地案例（5个），制造业、保险、银行、物流、电商，看完你就知道怎么用了。"
+description: AI Agent实际落地案例（5个），制造业、保险、银行、物流、电商，看完你就知道怎么用了。
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![AI Agent落地案例（5个）！看完你就知道怎么用了](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![AI Agent落地案例（5个）！看完你就知道怎么用了](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 
 等等！！
 
@@ -212,6 +217,6 @@ AI Agent不是PPT上的Demo。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

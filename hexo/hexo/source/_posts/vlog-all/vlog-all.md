@@ -6,7 +6,12 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
+
 <!-- more -->
+
+![程序员晚枫的VLOG · 合集](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
+![程序员晚枫的VLOG · 合集](https://images.unsplash.com/photo-153624047?w=800&h=400&fit=crop)
+
 - [【VLOG.01】重庆程序员的周末，从给女朋友做早餐开始](https://www.bilibili.com/video/BV1mz4y177j1/)
 - [【VLOG.02】重庆上班，来回通勤3个小时](https://www.bilibili.com/video/BV1PV4y1t7Jc/?t=80.570515&spm_id_from=333.1350.jump_directly&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)
 - [【VLOG.03】阿里云送的新年礼物，大家看看怎么样？](https://www.bilibili.com/video/BV1Uc411s7hj/?spm_id_from=333.999.0.0&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)
@@ -24,13 +29,13 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

@@ -1,20 +1,27 @@
 ---
-title: iFLYTEK Spark Coding Plan Prices Released: As Low As 3.9 yuan/month, Voice Programming at Dirt Cheap Prices!
+
+title: "iFLYTEK Spark Coding Plan Prices Released: As Low As 3.9 yuan/month, Voice Programming at Dirt Cheap Prices!"
 keywords: [iFLYTEK Spark Coding Plan price, How much is iFLYTEK Spark, Voice programming cheap, AI programming monthly fee]
-description: Tested by Programmer Wanfeng: iFLYTEK Spark Coding Plan starts at only 3.9 yuan/month, voice programming + domestic large model, prices have been slashed!
+description: "Tested by Programmer Wanfeng: iFLYTEK Spark Coding Plan starts at only 3.9 yuan/month, voice programming + domestic large model, prices have been slashed!"
 date: 2026-04-23 10:00:00
 tags: [iFLYTEK Spark, iFLYTEK Spark, Coding Plan price, voice programming, AI programming]
 categories: [AI programming, tool evaluation]
 cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
+
 ---
 
+
 <!-- more -->
+
+![iFLYTEK Spark Coding Plan Prices Released: As Low As 3.9 yuan/month, Voice Programming at Dirt Cheap Prices!](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![iFLYTEK Spark Coding Plan Prices Released: As Low As 3.9 yuan/month, Voice Programming at Dirt Cheap Prices!](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **Author: Programmer Wanfeng | AI Programming Evangelist | Focus on AI tool evaluation and teaching**
 >
 > Over 400k followers across the web, 6 years of Python development experience, author of the open source project python-office
 
-> 💡 **Experience iFLYTEK Spark Coding Plan for 3.9 yuan/month** 👉 **[Click to activate, take voice programming home](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+> 💡 **Experience iFLYTEK Spark Coding Plan for 3.9 yuan/month** 👉 **[Click to activate, take voice programming home](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -93,7 +100,7 @@ iFLYTEK occasionally offers annual subscription discount activities, which are c
 
 Spend 3.9 yuan to buy a monthly subscription first to experience it, and upgrade if you find it useful.
 
-**👉 [Click to view the latest price of iFLYTEK Spark Coding Plan](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+**👉 [Click to view the latest price of iFLYTEK Spark Coding Plan](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 ---
 
@@ -106,13 +113,20 @@ Spend 3.9 yuan to buy a monthly subscription first to experience it, and upgrade
 
 ---
 
-> 📢 **Experience iFLYTEK voice programming for 3.9 yuan/month** 👉 **[Click to activate now](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+> 📢 **Experience iFLYTEK voice programming for 3.9 yuan/month** 👉 **[Click to activate now](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 ---
 
 *Author: Programmer Wanfeng, same name across all platforms, focus on AI tool evaluation and Python office automation teaching.*
 
 ---
+
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
 
 ## 🎓 AI Programming Course
 
@@ -128,4 +142,11 @@ Want to learn AI programming systematically? Check out **CoderWanFeng's AI Progr
 👉 Want to try **MiniMax Token Plan**? [Click here for 10% off](https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link)
 
 💡 **Pay-per-use pricing — super cost-effective!** Think of it like a farmers market: buy a ticket, and all the veggies are free. Pay based on actual usage, no limits, no monthly fees. Perfect for developers!
+---
 
+## 🎓 AI 编程实战课程
+
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)

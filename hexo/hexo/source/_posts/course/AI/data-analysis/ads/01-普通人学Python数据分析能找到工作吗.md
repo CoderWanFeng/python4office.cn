@@ -6,6 +6,11 @@ categories: Python数据分析
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
+![普通人学Python数据分析，能找到工作吗？](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+![普通人学Python数据分析，能找到工作吗？](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
+
 # 普通人学Python数据分析，能找到工作吗？
 
 > 用真实学员数据告诉你，转行数据分析的成功率到底有多少
@@ -172,6 +177,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 ## 相关阅读
+- [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
 
 - [数据分析师30岁会被裁员？50岁还在做数据分析的大叔的故事](./02-数据分析师30岁会被裁员.md)
 - [Python数据分析到底要学哪些内容？附完整学习路线图](./03-Python数据分析到底要学哪些内容.md)
@@ -185,7 +191,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

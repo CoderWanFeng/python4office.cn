@@ -1,25 +1,30 @@
-﻿---
-
-title: "MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭"
+---
+title: MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭
 date: 2026-04-22 00:00:00
 categories:
-  - AI工具评测
+- AI工具评测
 tags:
-  - 大模型
-  - Token Plan
-  - AI编程
-  - MiniMax
-  - 腾讯云
-  - TOKEN Plan
-  - 学生党
-  - 省钱
-  - 优惠
-description: "学生党也能用得起的 AI 助手！29元/月，走链接9折，更便宜"
-
+- 大模型
+- Token Plan
+- AI编程
+- MiniMax
+- 腾讯云
+- TOKEN Plan
+- 学生党
+- 省钱
+- 优惠
+description: 学生党也能用得起的 AI 助手！29元/月，走链接9折，更便宜
+cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop
 ---
 
 
+
+
 <!-- more -->
+
+![MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+![MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 # MiniMax TOKEN Plan 学生党福利：29元/月就能用，9折优惠来袭
 
@@ -181,10 +186,24 @@ TOKEN Plan 已经是按次收费了，非常划算。
 > 📢 **学生党专属福利** 👉 **[点击领取 9 折优惠，只需 26 元/月](https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link)**
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI Programming Course
 
 Want to learn AI programming systematically? Check out **CoderWanFeng's AI Programming Course**!
 
 - 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **Free Preview**: [Watch the first 3 lessons on Bilibili for free](https://www.bilibili.com/cheese/play/ss982042944)
+---
 
+## 🎓 AI 编程实战课程
+
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)

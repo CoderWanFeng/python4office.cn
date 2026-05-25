@@ -1,13 +1,17 @@
 ---
-title: "武志红心理学课程合集 | 自我成长视频+配套心理测试(免费领取)"
+title: 武志红心理学课程合集 | 自我成长视频+配套心理测试(免费领取)
 date: 2022-01-12 22:11:09
 tags: ["武志红", "心理学", "自我成长", "心理测试", "原生家庭", "心理咨询"]
 categories: ["心理学课程"]
-description: "武志红心理学课程合集，包含《成为你自己》《超越原生家庭》等热门视频，以及配套的心理测试。发现自己，认识自己，成为更好的自己。"
+description: 武志红心理学课程合集，包含《成为你自己》《超越原生家庭》等热门视频，以及配套的心理测试。发现自己，认识自己，成为更好的自己。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![武志红心理学课程合集 | 自我成长视频+配套心理测试(免费领取)](https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # 武志红心理学课程合集 | 自我成长视频+配套心理测试(免费领取)
 
 > 发现自己，认识自己，成为更好的自己。
@@ -130,7 +134,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ### AI编程入门
 
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [《30讲·AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 - [Python自动化办公实战](https://www.python4office.cn/)
 
 ---
@@ -155,7 +159,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

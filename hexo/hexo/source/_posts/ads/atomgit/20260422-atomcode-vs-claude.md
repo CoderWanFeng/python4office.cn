@@ -1,13 +1,18 @@
 ---
-title: "AtomCode vs Claude Code！深度对比，看完就知道选哪个"
+title: AtomCode vs Claude Code！深度对比，看完就知道选哪个
 date: 2026-04-22 00:00:00
 tags: ["atomgit", "atomcode", "claude code", "ai编程"]
 categories: ["AI工具"]
-description: "AtomCode vs Claude Code对比！价格、功能、编程能力、开源、性价比，深度对比，看完就知道选哪个。"
+description: AtomCode vs Claude Code对比！价格、功能、编程能力、开源、性价比，深度对比，看完就知道选哪个。
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![AtomCode vs Claude Code！深度对比，看完就知道选哪个](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+![AtomCode vs Claude Code！深度对比，看完就知道选哪个](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 
 兄弟们！！！
 
@@ -111,11 +116,18 @@ AtomCode是纯Rust写的，50MB不到，秒级启动。
 👉 [点击查看《30讲·AI编程训练营》详情](https://www.python4office.cn/course/ai-related/posts-people/ads/260209-499/)
 
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

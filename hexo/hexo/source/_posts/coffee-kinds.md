@@ -1,13 +1,18 @@
 ---
-title: "咖啡种类大全 | 拿铁/卡布奇诺/摩卡的区别与做法(详解)"
+title: 咖啡种类大全 | 拿铁/卡布奇诺/摩卡的区别与做法(详解)
 date: 2022-02-21 10:42:38
-tags: ["咖啡", "咖啡种类", "拿铁", "卡布奇诺", "摩卡", "浓缩咖啡", "咖啡做法"]
-categories: ["生活百科"]
-description: "咖啡种类大全！详解拿铁、卡布奇诺、摩卡、美式等常见咖啡的区别和做法。附详细配方和制作技巧，在家也能做出专业咖啡馆的味道。"
+tags: [咖啡, 咖啡种类, 拿铁, 卡布奇诺, 摩卡, 浓缩咖啡, 咖啡做法]
+categories: [生活百科]
+description: 咖啡种类大全！详解拿铁、卡布奇诺、摩卡、美式等常见咖啡的区别和做法。附详细配方和制作技巧，在家也能做出专业咖啡馆的味道。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![咖啡种类大全 | 拿铁/卡布奇诺/摩卡的区别与做法(详解)](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+![咖啡种类大全 | 拿铁/卡布奇诺/摩卡的区别与做法(详解)](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 # 咖啡种类大全 | 拿铁/卡布奇诺/摩卡的区别与做法(详解)
 
 > 从尼泊尔旅居归来，爱上了自制咖啡的乐趣。本文详细介绍各种咖啡的特点和配方，在家也能做出咖啡馆级别的美味。
@@ -232,7 +237,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ## 延伸学习
 
 - [刻意练习比一万小时更重要](https://www.python4office.cn/tobeu/)
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [《30讲·AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 - [Python自动化办公实战](https://www.python4office.cn/)
 
 ---
@@ -248,7 +253,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

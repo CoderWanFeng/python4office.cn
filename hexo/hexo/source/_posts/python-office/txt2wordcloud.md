@@ -1,10 +1,11 @@
-﻿---
-
+---
 title: txt2wordcloud
 date: 2022-04-28 10:25:24
 tags: [Python自动化办公, Word自动化]
-
+cover: https://images.unsplash.com/photo-1456513?w=800&h=400&fit=crop
 ---
+
+
 
 
 
@@ -60,7 +61,7 @@ tags: [Python自动化办公, Word自动化]
 >Python官网发布了Python自动化办公的库：python-office，相关信息：[重磅！官网发布第三方库：python-office，为Python自动化办公而生](https://mp.weixin.qq.com/s/v2n0DTVTZUaw7QOnA0Zlow)
 >不需要自己写代码，直接调用写好的方法就行。
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)，专注于分享：Python自动化办公。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)，专注于分享：Python自动化办公。
 **这个系列教程[【python-office】功能文档](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2Nzg5MjgyNg==&action=getalbum&album_id=2371443069708992513&scene=173&from_msgid=2247496501&from_itemidx=1&count=3&nolastread=1#wechat_redirect)，用来逐一介绍python-office自动化办公的功能。**
 ## 1、功能介绍
 
@@ -110,13 +111,13 @@ python-office是pypi开源的第三方库，专为python自动化办公而生。
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

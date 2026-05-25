@@ -5,7 +5,12 @@ tags: [python-office, 自动化办公, AI编程, 程序员晚枫]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![Python自动化办公与AI编程完全指南](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+![Python自动化办公与AI编程完全指南](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+
 # Python自动化办公与AI编程完全指南
 
 ## 什么是python-office？

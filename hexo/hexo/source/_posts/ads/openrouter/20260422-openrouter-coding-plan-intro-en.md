@@ -1,5 +1,4 @@
 ---
-
 title: OpenRouter Coding Plan 来了！统一接口访问全球大模型，开发者必备工具
 keywords: [OpenRouter Coding Plan, OpenRouter AI, 统一接口, 全球大模型, 程序员晚枫]
 description: 程序员晚枫推荐：OpenRouter Coding Plan，统一接口访问全球大模型，一个 API 搞定所有主流模型。
@@ -10,7 +9,12 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ---
 
 
+
 <!-- more -->
+
+![OpenRouter Coding Plan 来了！统一接口访问全球大模型，开发者必备工具](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![OpenRouter Coding Plan 来了！统一接口访问全球大模型，开发者必备工具](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >
@@ -111,12 +115,24 @@ response = openai.ChatCompletion.create(
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 相关阅读
 
-- [🔥 字节火山方舟 Coding Plan，多模型随便用](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan/)
-- [🤖 阿里云百炼 Coding Plan，通义千问全系支持](https://www.python4office.cn/ads/aliyun/codingplan/20260410-aliyun-codingplan-intro/)
-- [📊 AI 编程工具横向对比，选对工具效率翻倍](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
-- [💰 程序员省钱攻略：这些 AI 工具免费用](https://www.python4office.cn/20260421-developer-save-money-guide/)
+
+
+- [休了个婚假，结果骨折了](https://mp.weixin.qq.com/s/FWCF7ZhAiJVngjiID4HVXQ)
+- [国产AI最大的优点：问什么都是标准答案](https://mp.weixin.qq.com/s/Ni9ZN0bpDEygDZmOAkr-tQ)
+- [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
+- [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
+- [HR看简历只花6秒，我用AI让我的简历过了第一关](https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ)
+- [我用AI做数字人播报，老板问"你什么时候请的主播？"](https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw)
+
 
 ---
 
@@ -142,4 +158,11 @@ Want to learn AI programming systematically? Check out **CoderWanFeng's AI Progr
 👉 Want to try **MiniMax Token Plan**? [Click here for 10% off](https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link)
 
 💡 **Pay-per-use pricing — super cost-effective!** Think of it like a farmers market: buy a ticket, and all the veggies are free. Pay based on actual usage, no limits, no monthly fees. Perfect for developers!
+---
 
+## 🎓 AI 编程实战课程
+
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)

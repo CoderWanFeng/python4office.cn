@@ -1,5 +1,4 @@
 ---
-
 title: 什么是开源大模型？免费的AI
 date: 2026-04-16 17:22:00
 author: 程序员晚枫
@@ -15,9 +14,13 @@ tags:
 - Llama
 order: 23
 description: 为什么DeepSeek火了？程序员晚枫用大白话揭秘开源大模型，让你了解免费用AI的新方式！
-
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
+
+![什么是开源大模型？免费的AI](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![什么是开源大模型？免费的AI](https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 
 > **作者：程序员晚枫**
@@ -252,13 +255,13 @@ DeepSeek是中国公司做的开源大模型，震惊了全世界：
 
 ### DeepSeek让老外震惊的事
 
-> **"DeepSeek训练只花了600万美元"**
+> "**DeepSeek训练只花了600万美元**"
 > 比OpenAI的训练成本低了几十倍
 
-> **"DeepSeek开源后ChatGPT用户减少"**
+> "**DeepSeek开源后ChatGPT用户减少**"
 > 免费的力量
 
-> **"DeepSeek被美国限制使用"**
+> "**DeepSeek被美国限制使用**"
 > 太强了，开始被"卡脖子"
 
 ---
@@ -534,6 +537,6 @@ DeepSeek是中国公司做的开源大模型，震惊了全世界：
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

@@ -6,6 +6,11 @@ categories: 推广文章
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
+![Python进阶首选：为什么每个程序员都应该精通Fluent Python](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+![Python进阶首选：为什么每个程序员都应该精通Fluent Python](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
+
 > 大家好，我是程序员晚枫。
 
 经常有粉丝问我：「晚枫哥，我学Python已经一年了，感觉语法都会了，但写代码时总是磕磕绊绊的别人的代码能看懂，但自己写的时候总是想不到好方法，怎么办？」
@@ -89,6 +94,8 @@ Fluent Python 是进阶内容，门槛稍高。
 
 Fluent Python 是加分项。
 
+![Python进阶首选](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+
 ---
 
 ## 这门课学什么？
@@ -162,6 +169,6 @@ Python不仅是门语言，更是一种思维方式。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

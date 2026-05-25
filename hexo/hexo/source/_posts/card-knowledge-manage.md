@@ -1,11 +1,12 @@
 ---
-title: "氢刻Heti卡片笔记工具 | 最好用的记忆卡片App(支持电脑手机)"
+title: 氢刻Heti卡片笔记工具 | 最好用的记忆卡片App(支持电脑手机)
 date: 2022-02-24 13:54:41
 tags: ["氢刻", "卡片笔记", "记忆工具", "Anki替代", "知识管理", "学习工具"]
 categories: ["效率工具"]
-description: "氢刻Heti - 全新的卡片式知识管理工具，支持记忆曲线复习、电脑手机多端同步。替代Anki的最佳选择，附详细使用教程。"
+description: 氢刻Heti - 全新的卡片式知识管理工具，支持记忆曲线复习、电脑手机多端同步。替代Anki的最佳选择，附详细使用教程。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
+
 
 <!-- more -->
 # 氢刻Heti卡片笔记工具 | 最好用的记忆卡片App(支持电脑手机)
@@ -199,7 +200,7 @@ Python语法、算法要点、技术名词
 ## 学习资源推荐
 
 ### Python学习
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [《30讲·AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 - [Python自动化办公实战](https://www.python4office.cn/)
 
 ### 效率工具
@@ -243,7 +244,7 @@ Python语法、算法要点、技术名词
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

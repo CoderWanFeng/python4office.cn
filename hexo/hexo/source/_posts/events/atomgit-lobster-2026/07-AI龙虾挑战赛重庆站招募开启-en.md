@@ -1,12 +1,17 @@
 ---
-title: "AI Lobster Challenge" Chongqing Station Recruitment Open!
+title: "AI Lobster Challenge Chongqing Station Recruitment Open"
 date: 2026-04-08 08:00:00
 tags: [Offline Event, AI Programming, Chongqing, AtomGit, OpenClaw]
-categories: Event
+categories: [Event]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+!["AI Lobster Challenge" Chongqing Station Recruitment Open!](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+!["AI Lobster Challenge" Chongqing Station Recruitment Open!](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 
 > Hello everyone, I'm Programmer Wanfeng.
 
@@ -104,7 +109,7 @@ Offline Chongqing special: Chongqing (offline practice, project display, live ro
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

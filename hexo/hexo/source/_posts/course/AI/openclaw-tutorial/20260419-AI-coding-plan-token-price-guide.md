@@ -5,8 +5,9 @@ tags: [AI编程, openclaw]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw'>
+    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>   
 </p>
@@ -24,7 +25,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
+<a href="https://r7up9.xetslk.com/s/1uP5YW">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -38,7 +39,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 我用AI编程快2年了，在AI编程课的交流群里，被问得最多的一个问题不是"怎么学AI编程"，而是：
 
-> **"晚枫，AI编程工具太多了，到底哪个便宜？哪个划算？Token去哪买最便宜？"**
+> "**晚枫，AI编程工具太多了，到底哪个便宜？哪个划算？Token去哪买最便宜？**"
 
 🎯 **这篇文章只做一件事：帮你找到最便宜、最适合你的AI编程方案。**
 
@@ -131,7 +132,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 🎁 **限时福利**：送《利用Python进行数据分析》实体书
 
-👉 **[点击了解详情](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
+👉 **[点击了解详情](https://r7up9.xetslk.com/s/1uP5YW)**
 
 ---
 
@@ -154,8 +155,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 

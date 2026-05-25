@@ -5,7 +5,11 @@ tags: [python, 流畅的 Python, 面试, Python 进阶, 程序员晚枫]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![背了三个月八股文，还是答不上这道题？面试官真正想考你的，根本不是背答案](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > 大家好，我是正在实战各种 AI 项目的程序员晚枫。
 
@@ -39,6 +43,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 《流畅的 Python（第2版）》，就是那本让面试官和候选人都绕不开的书——它正面回答了几乎所有高频面试考点，而且回答的方式，比任何题库都更透彻。
 
+![背了三个月八股文](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+
 ---
 
 ## 一道题，说明一切
@@ -70,6 +76,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 每周直播逐章精讲，结合面试场景告诉你"这段为什么重要"
 - 配套深度解读文章，帮你梳理、记忆、形成自己的笔记
 - 专属学习群，遇到卡点随时问，有人陪着你一起走
+
+![背了三个月八股文](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
 
 ---
 
@@ -129,8 +137,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 

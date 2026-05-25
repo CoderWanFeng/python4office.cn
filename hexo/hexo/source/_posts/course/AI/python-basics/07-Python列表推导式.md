@@ -1,11 +1,14 @@
-﻿---
+---
 title: Python列表推导式：我用一行代码替代了10行循环，效率翻倍
 date: 2026-02-28 17:26:00
 tags: [Python基础, 列表推导式, 编程技巧]
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
+
+
 <p align="center" id='扫码查看 AI 编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw'>
+    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>   
 </p>
@@ -23,7 +26,7 @@ tags: [Python基础, 列表推导式, 编程技巧]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
+<a href="https://r7up9.xetslk.com/s/1uP5YW">
   <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -560,7 +563,7 @@ large_files = [c for c in contents if c["lines"] > 100]
 
 🎁 **限时福利**：前100名送《Python编程从入门到实践》实体书
 
-👉 **[点击了解详情](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**
+👉 **[点击了解详情](https://r7up9.xetslk.com/s/1uP5YW)**
 
 ---
 
@@ -593,7 +596,7 @@ large_files = [c for c in contents if c["lines"] > 100]
 | 💬 专属答疑群 | 遇到问题有人带 |
 | 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
 
-👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
+👉 **[点击免费试学 AI 零基础实战营](https://www.bilibili.com/cheese/play/ss982042944)**
 
 ---
 
@@ -615,7 +618,7 @@ large_files = [c for c in contents if c["lines"] > 100]
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

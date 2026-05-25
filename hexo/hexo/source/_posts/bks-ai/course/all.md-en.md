@@ -1,11 +1,15 @@
 ---
-title: "White Water AI Community · Course Collection"
+title: White Water AI Community · Course Collection
 date: 2026-03-12 20:56:34
 tags: White Water AI Community
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![White Water AI Community · Course Collection](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 # 🌊 White Water AI Community
 
 > Making AI knowledge not too hot to handle
@@ -25,7 +29,7 @@ Contains two courses:
 
 2.｜Workflow Series
 Help you improve work efficiency, automate processes:
-- [30讲 · AI Programming Training Camp for Beginners](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [30讲 · AI Programming Training Camp for Beginners](https://r7up9.xetslk.com/s/1uP5YW)
   - 🎬 First 3 episodes can be previewed for free: [Click to preview first 3 episodes on Bilibili](https://www.bilibili.com/cheese/play/ss982042944)
 - Workflow book list account: Specifically for book list account project workflow setup
 - Workflow official account: Automation workflow for official account operations, suitable for friends who want to解放双手 and do less repetitive work.
@@ -33,7 +37,7 @@ Help you improve work efficiency, automate processes:
 
 3.｜AI Programming Series
 Practical, actionable skills:
-①[AI Programming: Beginner (Posts & Telecom Press): Systematically build foundation, suitable for zero foundation](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw?channel_id=1515397)
+①[AI Programming: Beginner (Posts & Telecom Press): Systematically build foundation, suitable for zero foundation](https://r7up9.xetslk.com/s/1uP5YW?channel_id=1515397)
 ②[AI Programming: Office Automation: Use AI + programming to handle Excel, files, spreadsheets, etc.](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 ③[AI Programming: Project Practice: Multiple real project cases, learn by doing](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 ④AI Programming: Personal Website: Use AI to quickly build your own personal website

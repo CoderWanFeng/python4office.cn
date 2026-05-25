@@ -6,14 +6,19 @@ date: 2026-04-22 18:25:00
 tags: [iFLYTEK Spark, iFLYTEK Spark, Coding Plan Tutorial, AI Programming Getting Started, Voice Programming]
 categories: [AI Programming, Tutorial]
 hreflang:
-  en: /20260422-iflytek-spark-coding-plan-tutorial/
-  zh: /20260422-iflytek-spark-coding-plan-tutorial/
+en: /20260422-iflytek-spark-coding-plan-tutorial/
+zh: /20260422-iflytek-spark-coding-plan-tutorial/
 canonical: /20260422-iflytek-spark-coding-plan-tutorial/
 translation: complete
 cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![iFLYTEK Spark Coding Plan Getting Started: From Registration to Voice Programming Practice (2026 Latest Version)](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![iFLYTEK Spark Coding Plan Getting Started: From Registration to Voice Programming Practice (2026 Latest Version)](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **Article Author: Programmer Wan Feng | AI Programming Evangelist | Focused on AI Tool Reviews and Teaching**
 >
@@ -42,7 +47,7 @@ Today I bring you the **hands-on getting started tutorial** for iFLYTEK Spark Co
 
 ### Step 1: Visit the Official Website
 
-**👉 [Click to view iFLYTEK Spark Coding Plan details](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+**👉 [Click to view iFLYTEK Spark Coding Plan details](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 Find the iFLYTEK Spark entry and click to enter.
 
@@ -149,10 +154,24 @@ Domestic access, no speed issues. Total latency from voice recognition to synthe
 💡 **Pay-per-use, very cost-effective!** Imagine going to a vegetable market—buy a ticket to get in, and the vegetables are all yours. Charged per use, no limit on quota, pay for what you use. Perfect for developers!
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI Programming Course
 
 Want to learn AI programming systematically? Check out **CoderWanFeng's AI Programming Course**!
 
 - 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **Free Preview**: [Watch the first 3 lessons on Bilibili for free](https://www.bilibili.com/cheese/play/ss982042944)
+---
 
+## 🎓 AI 编程实战课程
+
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)

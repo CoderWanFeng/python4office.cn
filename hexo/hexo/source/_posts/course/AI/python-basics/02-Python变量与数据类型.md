@@ -1,11 +1,14 @@
-﻿---
+---
 title: Python变量与数据类型：我用7大数据类型，处理所有业务场景
 date: 2026-02-28 19:55:00
 tags: [Python基础, 变量, 数据类型]
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
 
+
+
 <p align="center" id='扫码查看 AI 编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw'>
+    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>   
 </p>
@@ -23,7 +26,7 @@ tags: [Python基础, 变量, 数据类型]
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
+<a href="https://r7up9.xetslk.com/s/1uP5YW">
   <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -405,7 +408,7 @@ print("=" * 30)
 | 💬 专属答疑群 | 遇到问题有人带 |
 | 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
 
-👉 **[点击免费领取 Python 零基础实战营](https://appycyfaqcq1951.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/course_38vSeD9XU0XdsWnT6jLTaDeRxjT?channel_id=1515397)**
+👉 **[点击免费试学 AI 零基础实战营](https://www.bilibili.com/cheese/play/ss982042944)**
 
 
 ## 本讲小结
@@ -447,8 +450,8 @@ print("=" * 30)
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 

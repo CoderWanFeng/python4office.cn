@@ -1,13 +1,18 @@
 ---
-title: "阿里云Coding Plan教程！从注册到使用，看这一篇就够了"
+title: 阿里云Coding Plan教程！从注册到使用，看这一篇就够了
 date: 2026-04-22 00:00:00
 tags: ["阿里云", "coding plan", "ai编程", "教程"]
 categories: ["阿里云Coding Plan"]
-description: "阿里云Coding Plan实战教程：从注册到使用，看这一篇就够了。包含注册步骤、使用方法、注意事项。"
+description: 阿里云Coding Plan实战教程：从注册到使用，看这一篇就够了。包含注册步骤、使用方法、注意事项。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![阿里云Coding Plan教程！从注册到使用，看这一篇就够了](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![阿里云Coding Plan教程！从注册到使用，看这一篇就够了](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 兄弟们！！！
 
@@ -107,12 +112,19 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 

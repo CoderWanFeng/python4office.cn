@@ -8,7 +8,12 @@ categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![讯飞星火 Coding Plan 适合谁用？语音编程爱好者 vs 其他人群分析](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)
+![讯飞星火 Coding Plan 适合谁用？语音编程爱好者 vs 其他人群分析](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >
@@ -76,7 +81,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 **4. 追求综合平衡**
 → 看对比页面，选择最适合你的
 
-**👉 [点击查看讯飞星火 Coding Plan 详情](https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-D628AC34)**
+**👉 [点击查看讯飞星火 Coding Plan 详情](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
 ## 四、我的结论
 
@@ -97,6 +102,13 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 **不适合：纯键盘党、公共场合多、追求极致性价比的开发者。**
 
 ---
+
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
 
 ## 相关阅读
 
@@ -119,8 +131,8 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 

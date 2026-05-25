@@ -1,5 +1,5 @@
 ---
-title: "java-inter-resource"
+title: java-inter-resource
 date: 2021-12-07 21:09:19
 tags: java
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
@@ -7,7 +7,12 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 
+
 <!-- more -->
+
+![java-inter-resource](https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800)
+![java-inter-resource](https://images.unsplash.com/photo-155594996?w=800&h=400&fit=crop)
+
 # Table of Contents (Use Ctrl+F Wisely)
 
 **Note: No links means not written yet (Patiently wait for updates)**
@@ -85,7 +90,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

@@ -1,10 +1,11 @@
-﻿---
-
+---
 title: 好家伙，花了一个月时间，用Python写了个网易云！
 date: 2022-12-02 01:15:08
 tags: [Python, AI编程]
-
+cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop
 ---
+
+
 
 
 
@@ -29,7 +30,7 @@ tags: [Python, AI编程]
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
+<a href="https://r7up9.xetslk.com/s/1uP5YW">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -83,8 +84,8 @@ tags: [Python, AI编程]
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

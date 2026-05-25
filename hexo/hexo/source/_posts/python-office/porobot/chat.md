@@ -8,9 +8,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 
+
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/porobot/chat/cover.jpg?q-sign-algorithm=sha1&q-ak=AKIDrM1I6pqTnpZybbxSvZ804Vn2aHUVYKgUg6sAyccQbfIlOzoScUwG-k4bloRnQ-F3&q-sign-time=1688134241;1688137841&q-key-time=1688134241;1688137841&q-header-list=host&q-url-param-list=ci-process&q-signature=92a188ef94d8c28fddb58d0f6f76f58896c6413b&x-cos-security-token=CGcfrvPEyFcFuNlAwH6HiKRxfwFYu6ca8e1136aad872c83218ea42a3b17ed3cc39O0ObyjMjlprA4jUCJZPMjPCs2bq7219AsgEC6HiXy9effy8A3iuZNsmupr7qZk4iGhneYWh1tTXXCquOHzJgyYlFUIU-m9CzSikj9bH4vKcJSx6aeNRUImLSIxGa0L6KKDvwm-__dDuKRZjhqNDzRqhm2FP0owI4JpsTo828v4vFSDfzQaUUlDVgFKuOia&ci-process=originImage)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)。
 
 之前给大家免费分享了[【8讲】用Python制作一个微信机器人，1行代码人人可用](https://mp.weixin.qq.com/s/9aspEHdCiAdXK17AvHlu9Q)，很多人还想要**免费的智能聊天功能**。
 
@@ -74,13 +75,13 @@ print(porobot.normal.chat("你好，我是程序员晚枫"))
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

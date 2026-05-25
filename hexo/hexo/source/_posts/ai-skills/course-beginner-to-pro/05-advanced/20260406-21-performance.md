@@ -1,12 +1,16 @@
 ---
-title: "第21讲：性能优化与监控"
+title: 第21讲：性能优化与监控
 date: 2026-04-06 38:00:00
 tags: ["AI Skill", "进阶开发", "性能优化"]
 categories: ["AI Skills 课程"]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![第21讲：性能优化与监控](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
+
 # 第21讲：性能优化与监控
 
 > 掌握 Skill 的性能优化和监控技巧，确保 Skill 高效稳定运行。
@@ -297,7 +301,7 @@ class PerformanceMonitor:
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 

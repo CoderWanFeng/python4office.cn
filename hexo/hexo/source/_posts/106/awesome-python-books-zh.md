@@ -5,7 +5,12 @@ tags: 电子书
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![如果有人让你推荐 Python 经典书，请让他看这个列表](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&fit=crop)
+![如果有人让你推荐 Python 经典书，请让他看这个列表](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 好的技术书籍可以帮助我们快速地成长，大部分人或多或少地受益于经典的技术书籍。在[「Python图书馆」](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)微信公号后台，我们经常能收到让帮忙推荐书籍的消息。
 
 但是已经出版的Python图书鱼龙混杂，质量参差不齐。我用了一个周末的时间，参考了网上各大榜单和自己的学习经验、阅读体验，给大家整理了以下这个Python经典图书的列表。
@@ -126,16 +131,16 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 ## Other Awesome Lists
 - [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 - [给小白的《Python实现OCR自动批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [给小白的《6讲 · Python自动收发邮件》](https://www.python-office.com/course-002/poemail/poemail.html)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)
+- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 

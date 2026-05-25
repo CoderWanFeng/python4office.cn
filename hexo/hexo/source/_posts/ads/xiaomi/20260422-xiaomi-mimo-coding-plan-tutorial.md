@@ -8,7 +8,12 @@ categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![小米 MiMo Coding Plan 教程：小米生态开发实战（2026最新版）](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
+![小米 MiMo Coding Plan 教程：小米生态开发实战（2026最新版）](https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >
@@ -133,6 +138,13 @@ response = call_mimo(prompt)
 
 ---
 
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
+
 ## 相关阅读
 
 - [💡 一文读懂 Coding Plan：什么是 AI 编程订阅？](https://www.python-office.com/openclaw/coding-plan/)
@@ -150,12 +162,19 @@ response = call_mimo(prompt)
 
 ---
 
+
+
+## 🔥 小米Mimo Token Plan 专属优惠
+
+👉 **通过我的邀请链接注册，享受专属福利**：https://platform.xiaomimimo.com?ref=8QEVW6
+
+
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 
@@ -165,3 +184,4 @@ response = call_mimo(prompt)
 
 💡 **按次计费，非常划算！** 想象成去菜市场买菜——买张门票进去，菜随便拿。按使用次数收费，不限额度，用多少付多少，特别适合开发者！
 
+---

@@ -8,15 +8,20 @@ categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 
+
 <!-- more -->
+
+![阿里云百炼 vs 火山方舟：29 元 vs 36 元，价格差 7 元差在哪？](https://images.pexels.com/photos/7237415/pexels-photo-7237415.jpeg?auto=compress&cs=tinysrgb&w=800)
+![阿里云百炼 vs 火山方舟：29 元 vs 36 元，价格差 7 元差在哪？](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
 
-> 💡 **火山方舟 36元/月** 👉 **[点击了解详情](https://volcengine.com/L/wREW6vCIBBI)**
+> 💡 **火山方舟 36元/月** 👉 **[点击了解详情](https://volcengine.com/L/hZRFoiCAVDE/)**
 
 大家好，这里是程序员晚枫。
 
@@ -110,11 +115,18 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 | **tokens** | 80 万/月 | 200 万/月 |
 | **适合人群** | 阿里系开发者 | 追求多模型 |
 
-**👉 [点击开通信义千问](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击开通信义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
 
-**👉 [点击了解火山方舟](https://volcengine.com/L/wREW6vCIBBI)**
+**👉 [点击了解火山方舟](https://volcengine.com/L/hZRFoiCAVDE/)**
 
 ---
+
+
+<p align="center" id='进群-banner-AI'>
+ <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+ <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+ </a>
+</p>
 
 ## 相关阅读
 
@@ -125,7 +137,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
-> 📢 **科技不高冷，AI很好用** 👉 **[点击了解详情](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **科技不高冷，AI很好用** 👉 **[点击了解详情](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
 
 ---
 
@@ -137,8 +149,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://r7up9.xetslk.com/s/1uP5YW)
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
 
 ---
 
