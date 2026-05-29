@@ -69,7 +69,7 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 如果需要和我1对1交流AI or Python问题，可以＋我的微信：[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/) 或者 直接看下面的课程👇
 
 
-- [休了个婚假，结果骨折了](https://mp.weixin.qq.com/s/FWCF7ZhAiJVngjiID4HVXQ)
+- [我用AI开发软件，老板问我是不是偷偷招了个程序员](https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw)
 - [国产AI最大的优点：问什么都是标准答案](https://mp.weixin.qq.com/s/Ni9ZN0bpDEygDZmOAkr-tQ)
 - [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
 - [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
