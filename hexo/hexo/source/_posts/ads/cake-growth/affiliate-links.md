@@ -32,11 +32,11 @@ cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit
 | 14   | iSlide | https://www.islide.cc/landing?utm=cg&cgv=rpexy6vk90 | PPT模板下载平台 | 待补充 | 待补充 |
 | 15   | 沁言学术 (Qinyan AI) | https://app.qinyanai.com/?utm=cg&cgv=3mnz8w7no1 | AI写作与文献助手一站式平台 | 待补充 | 待补充 |
 | 16   | AiPy | https://www.aipyaipy.com/?referral=BJ5OOSP&utm=cg&cgv=59ng4ggnr2 | 超级AI智能体工厂 | 待补充 | 待补充 |
-| 17   | CodeFlying (码上飞) | https://www.codeflying.net/?utm=cg&cgv=20epp94ew1 | AI自动软件、小程序、APP应用开发平台 | 待补充 | 待补充 |
+| 17   | CodeFlying (码上飞) | https://www.codeflying.net/?utm=cg&cgv=20epp94ew1 | AI自动软件、小程序、APP应用开发平台 | https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw | 待补充 |
 | 18   | 01Agent | https://01agent.net/?utm=cg&cgv=rpexy6zk90 | AI图文创作智能体 | 待补充 | 待补充 |
 | 19   | JoyPix AI | https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx | AI图片生成平台 | 待补充 | 待补充 |
-| 20   | MiniMax Token Plan | https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link | AI语音/音乐/视频/图片生成，邀请好友享双重好礼 | 待补充 | 好友享9折+Builder权益，你赢返利+社区特权 |
-| 21   | 腾讯云token plan| https://cloud.tencent.com/act/cps/redirect?redirect=38159&cps_key=ca76be5a2293ba3906d6d5407aea15ee | 腾讯云产品推广，多种云产品优惠 | 待补充 | 腾讯云CPS返佣计划 |
+| 20   | MiniMax Token Plan | https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link | AI语音/音乐/视频/图片生成，邀请好友享双重好礼 |  | 好友享9折+Builder权益，你赢返利+社区特权 |
+| 21   | 腾讯云token plan| https://curl.qcloud.com/Z9TkzRuj | 腾讯云产品推广，多种云产品优惠 | 待补充 | 腾讯云CPS返佣计划 |
 | 22   | 图灵社区 - AI Python零基础实战营 | https://r7up9.xetslk.com/s/1uP5YW | AI Python零基础实战营，面向职场人/内容创作者/转行者 | 待补充 | 图灵社区AI编程课程 |
 
 ---

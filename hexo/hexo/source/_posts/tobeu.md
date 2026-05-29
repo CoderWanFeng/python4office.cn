@@ -189,7 +189,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 相关阅读
 
-- [休了个婚假，结果骨折了](https://mp.weixin.qq.com/s/FWCF7ZhAiJVngjiID4HVXQ)
+- [我用AI开发软件，老板问我是不是偷偷招了个程序员](https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw)
 - [国产AI最大的优点：问什么都是标准答案](https://mp.weixin.qq.com/s/Ni9ZN0bpDEygDZmOAkr-tQ)
 - [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://r7up9.xetslk.com/s/1uP5YW)
 - [《30讲·AI编程训练营》- 零基础入门AI编程](https://r7up9.xetslk.com/s/1uP5YW)
