@@ -1,24 +1,24 @@
 ---
-title: 01-我用AI做图，同事说我是不是偷偷学了PS
+title: "我用AI做图只花2分钟，同事以为我偷偷学了PS"
 date: 2026-05-21 00:19:00
 tags: ["公众号文章", "AI工具", "AI图片", "JoyPix AI"]
-categories: ["公众号文章", "Python自动化办公社区"]
+categories: ["公众号文章"]
 cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&auto=format&fit=crop
 ---
 
 > 大家好，我是程序员晚枫。
+>
+> 我有个同事，看了我发的公众号封面图，问我："晚枫，你是不是偷偷去学了PS？"
+>
+> 我说："没有，用AI做的。"
+>
+> 他不信。
+>
+> **"AI能做出这种图？"**
+>
+> 是的，而且只花了2分钟。今天我就把这件事，一次说清楚。
 
-我有个同事，看了我发的公众号封面图，问我：
-
-"晚枫，你是不是偷偷去学了PS？"
-
-我说："没有，用AI做的。"
-
-他不信。
-
-**"AI能做出这种图？"**
-
-是的，而且只花了2分钟。
+👉 [点击这里试试JoyPix AI：https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx](https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx)
 
 ---
 
@@ -36,7 +36,7 @@ cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&
 
 **每次都是用美图秀秀糊弄，或者找朋友帮忙。**
 
-我以前也是这样。
+我以前也是这样。每次有人让我做图，我心里就一个字：慌。
 
 直到我发现了一件事：
 
@@ -44,13 +44,18 @@ cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&
 
 ---
 
-## 我试了6款AI图片工具，这款最顺手
+## 我试了6款AI图片工具，只有1款能直接用
 
 上个月我帮公众号做配图，开始测试各种AI图片工具。
 
-Midjourney？能出图，但不适合做海报类图片。
-Stable Diffusion？能出图，但要调参数，太复杂。
-Canva？操作简单，但AI功能太弱。
+说实话，试了一圈，大部分都不行。
+
+| 工具 | 能出图吗 | 问题 |
+|------|---------|------|
+| Midjourney | 能 | 不适合做海报类图片，风格太艺术 |
+| Stable Diffusion | 能 | 要调参数，太复杂，普通人用不了 |
+| Canva | 能 | AI功能太弱，基本还是手动排版 |
+| DALL-E | 能 | 生成的图不够商用，风格偏欧美 |
 
 直到遇到**JoyPix AI**。
 
@@ -60,19 +65,27 @@ Canva？操作简单，但AI功能太弱。
 
 **不是那种一眼假的AI图，是真的能用的。**
 
+6款工具测下来，只有这一款让我觉得：**普通人也能直接上手。**
+
 ---
 
 ## 我用JoyPix AI做了什么？
 
-**1. 公众号封面图**
+### 公众号封面图
 
 以前做封面，要找模板、PS、调色...
+
+一套流程下来，少说1小时。
 
 现在用JoyPix AI，输入"程序员、AI、科技蓝"，直接出图。
 
 **以前1小时，现在5分钟。**
 
-**2. 朋友圈配图**
+说实话，我第一次用的时候，自己都愣了一下。
+
+这也太快了。
+
+### 朋友圈配图
 
 发朋友圈，想发点不一样的。
 
@@ -80,7 +93,9 @@ Canva？操作简单，但AI功能太弱。
 
 **朋友看完说："你这是哪里找的图？"**
 
-**3. 产品宣传图**
+我说AI做的，他又一次不信。
+
+### 产品宣传图
 
 帮朋友做产品推广，需要一张宣传图。
 
@@ -88,15 +103,41 @@ Canva？操作简单，但AI功能太弱。
 
 **他看完说："这比外包做的还好看。"**
 
+外包一张图少说500块，现在0成本。
+
 ---
 
-💬 **来评论区聊聊**
+## 为什么我推荐JoyPix AI？
 
-你做图用什么工具？有没有被"帮我做个图"支配的恐惧？评论区聊聊。
+说实话，推荐工具这件事，我一直很谨慎。
 
-如果你也想省时间，试试JoyPix AI。
+因为我知道，很多AI工具看着厉害，实际用起来根本不是那么回事。
 
-👉 [点击这里试试JoyPix AI：https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx](https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx)
+但JoyPix AI不一样，我用了3个理由说服自己：
+
+**1. 零门槛，会打字就能用**
+
+不需要学PS，不需要懂设计术语。
+
+你只需要用大白话描述你想要什么图，它就帮你做出来。
+
+**"科技感、蓝色、公众号封面"——就这么简单。**
+
+**2. 出图快，5秒搞定**
+
+以前做一张图，找模板半小时，调色半小时，导出5分钟。
+
+现在5秒钟，图就出来了。
+
+**省下来的时间，够你喝杯咖啡了。**
+
+**3. 可商用，不怕版权纠纷**
+
+这个很重要。
+
+很多AI生成的图是有版权的，不能商用。你辛辛苦苦做了一张图，结果因为版权问题不能用，白忙活。
+
+**JoyPix AI的图片是可以商用的，不用担心这个问题。**
 
 ---
 
@@ -112,6 +153,10 @@ Canva？操作简单，但AI功能太弱。
 
 你只需要会打字就行。
 
+那些花了几万块学PS的人，看到这个可能要哭了。
+
+嗯，那祝他们学得愉快。
+
 **2. 用对工具，事半功倍**
 
 以前我做个图，要找模板、要学PS、要调配色。
@@ -124,9 +169,11 @@ Canva？操作简单，但AI功能太弱。
 
 很多AI图是有版权的，不能商用。
 
-JoyPix AI的图片是可以商用的，这个很重要。
-
 **别因为一张图，惹上版权纠纷。**
+
+用之前一定要确认能不能商用，这个坑我替你踩过了。
+
+👉 [点击这里试试JoyPix AI：https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx](https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx)
 
 ---
 
@@ -144,28 +191,32 @@ JoyPix AI让我看到了一种可能性：**每个人都可以做出专业的图
 
 你只需要一个想法，然后让AI帮你实现。
 
-**就这么简单。**
+说到底，做图这件事，从来就不是比谁PS用得好。**是比谁的想法多。**
+
+工具已经准备好了，你的想法呢？
 
 ---
 
 ## 相关阅读
 
 - [我用AI开发软件，老板问我是不是偷偷招了个程序员](https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw)
-- [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
+- [我用AI做PPT，同事说你是PPT设计师吗](https://mp.weixin.qq.com/s/aLo7mW3BLnglwhSZCKoOow)
 - [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
 - [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
-- [比AI更可怕的是：你同事已经开始用AI工作了](https://mp.weixin.qq.com/s/__84ENDwkz2zVTdvKH5h4A)
-- [高考后上大学，普通人别选AI专业](https://mp.weixin.qq.com/s/AtgtbGpaueW58olyO7sDrw)
+- [HR看简历只花6秒，我用AI让我的简历过了第一关](https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ)
+- [我用AI做数字人播报，老板问"你什么时候请的主播？"](https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw)
+
+---
 
 💬 **来评论区聊聊**
 
-你用什么工具做图？有没有遇到"帮我做个图"的请求？评论区聊聊。
+你有没有被"帮我做个图"折磨过？评论区说说你的经历。
 
-还没试过的朋友，点下面的链接试试JoyPix AI。
+如果你也想省下做图的时间，不妨点下面的链接，试试JoyPix AI。
+
+一个人，也能做出专业的图。
 
 👉 [点击这里试试JoyPix AI：https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx](https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx)
-
----
 
 ---
 
