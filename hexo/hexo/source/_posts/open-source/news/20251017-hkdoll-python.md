@@ -101,7 +101,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 ## **关于作者**  
 
-我是程序员晚枫，985硕士
+我是程序员晚枫，AI 博主
 - 📝 [三十而立，没有遗憾](https://mp.weixin.qq.com/s/26jJWW3j9PxWISR1n3drfg)，Python中国讲师，全网粉丝40w+，专注自动化办公6年！
 
 > 我的课程实用性强，操作简单，轻松上手。这4套课一定能让你学有所得！ 
