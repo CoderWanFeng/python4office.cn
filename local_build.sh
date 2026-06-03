@@ -240,6 +240,57 @@ echo "- 总大小: ${PUBLIC_SIZE}"
 echo ""
 
 # ============================================
+# 步骤3.5: 推送 public/ 到 hexo-public 仓库
+# ============================================
+log_step "步骤3.5: 推送 public/ 到 hexo-public 仓库"
+echo "-------------------------------------------"
+
+# 保存当前目录（hexo/hexo），步骤 3.5 结束后要回到这里
+ORIG_CWD="$(pwd)"
+# 当前在 hexo/hexo 目录，用绝对路径定位 public/
+HEXO_PUBLIC_DIR="$ORIG_CWD/public"
+
+if [ ! -d "$HEXO_PUBLIC_DIR" ]; then
+    log_warning "public 目录不存在，跳过推送"
+else
+    pushd "$HEXO_PUBLIC_DIR" > /dev/null
+    
+    if ! git remote get-url deploy &>/dev/null; then
+        log_warning "deploy remote 不存在，跳过推送 public/"
+        log_warning "首次使用请运行: cd hexo/hexo/public && git remote add deploy https://gitcode.com/python4office/hexo-public.git"
+    else
+        # 清理 0 字节文件
+        log "清理 0 字节文件..."
+        find . -type f -size 0 -delete 2>/dev/null || true
+        
+        # 添加并提交
+        log "添加 public/ 更改..."
+        git add -A
+        
+        if ! git diff-index --quiet HEAD --; then
+            DEPLOY_MSG="build: $(date '+%Y-%m-%d %H:%M:%S')"
+            log "提交: $DEPLOY_MSG"
+            git commit -m "$DEPLOY_MSG"
+        else
+            log "public/ 没有变化，跳过提交"
+        fi
+        
+        # 推送到 deploy 仓库
+        log "推送到 deploy 仓库..."
+        if git push deploy main 2>&1; then
+            log_success "public/ 已推送到 hexo-public 仓库"
+        else
+            log_warning "推送 deploy 仓库失败（不影响主仓库提交）"
+        fi
+    fi
+    
+    # 回到 hexo/hexo 目录（pushd 的反向操作）
+    popd > /dev/null
+fi
+
+echo ""
+
+# ============================================
 # 步骤4: 执行 Git 提交
 # ============================================
 log_step "步骤4: 执行 Git 提交"
