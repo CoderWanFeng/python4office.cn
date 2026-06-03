@@ -56,7 +56,7 @@ cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&
 
 ### 你好呀，我是[程序员晚枫](https://www.python4office.cn/wechat-qrcode/)
 - 🐧 编程知识博主
-- 👨‍💻 我的经历，点击查看👉[985硕士，Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1mZ4y147we)
+- 👨‍💻 我的经历，点击查看👉[AI 博主，Python程序员，现定居重庆，就职于某上市航空公司](https://www.bilibili.com/video/BV1mZ4y147we)
 - 💬 我的微信，点击添加👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)
 - ⚡ 学习资料，点击领取👉[60套Python课程的合集](https://www.python4office.cn/vedio-course/)
 - 🎁 粉丝福利👉[我的短视频，欢迎3连](https://space.bilibili.com/1989702333)
