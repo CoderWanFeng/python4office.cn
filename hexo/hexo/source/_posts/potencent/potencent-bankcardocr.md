@@ -13,7 +13,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 ![](https://article-1300615378.cos.ap-nanjing.myqcloud.com/potencent%2FBankCardOCR%2Fcover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)，
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)，
 昨天我们学习了：[实战案例！用1行Python代码识别增值税发票，然后将数据自动录入系统](https://mp.weixin.qq.com/s/agsF8ttwxOiZyizsTKBxMQ)。
 
 今天我们继续学习Python自动化办公：每次有新员工入职，都要收集大量的工资卡信息，并且生成Excel文档，能不能用Python**准确、快速**地解决呢？
@@ -103,13 +103,13 @@ res_df.to_excel(r"./银行卡信息（程序员晚枫）.xlsx")
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

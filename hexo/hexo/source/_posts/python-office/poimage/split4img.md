@@ -7,10 +7,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)，这段时间给大家分享多个微信自动化的代码：
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)，这段时间给大家分享多个微信自动化的代码：
 
 - [用Python实现微信多开，1行代码免费用](https://mp.weixin.qq.com/s/qlubpfAytr_coV8GilG9RA)
-- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
 今天再给大家分享一个：**用Python发一个好看的朋友圈的代码。**
@@ -75,8 +75,8 @@ poimage.split4img(img_path=r"./imgs/icon2.jpg", output_path=r'D:\程序员晚枫
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

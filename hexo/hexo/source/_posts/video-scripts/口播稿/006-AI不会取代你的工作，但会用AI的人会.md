@@ -80,7 +80,7 @@ AI是工具，就像以前的计算器、电脑、挖掘机。
 **顺便说一句**
 如果你想学习怎么用AI提升工作效率，搞副业赚钱，我整理了一套系统的学习方法，不用懂代码，不用花大钱，跟着学完就能真正把AI用起来，少走弯路。
 
-有需要的可以看看👉 https://r7up9.xetslk.com/s/1uP5YW
+有需要的可以看看👉 https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw
 
 科技不高冷，AI很好用。
 我是晚枫，关注我，教你把AI用在实处。
@@ -106,4 +106,4 @@ AI是工具，就像以前的计算器、电脑、挖掘机。
 ## 🎓 AI 编程实战课程
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)

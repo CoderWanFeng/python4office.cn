@@ -46,7 +46,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 | Course Name | Episodes | Status | Suitable For | Link |
 |-------------|----------|--------|--------------|------|
-| 30讲·AI Programming Training Camp | 30 episodes | ✅ Completed | Complete beginners | [View](https://r7up9.xetslk.com/s/1uP5YW) |
+| 30讲·AI Programming Training Camp | 30 episodes | ✅ Completed | Complete beginners | [View](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) |
 | AI Prompt Writing Beginner | - | ⏳ To be developed | Want to learn prompt writing | - |
 | Complete AI Tool Usage Guide | - | ⏳ To be developed | Want to quickly master various AI tools | - |
 
@@ -61,6 +61,6 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 

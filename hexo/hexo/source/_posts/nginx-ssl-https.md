@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 ​
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)。
 之前给大家介绍了[如何通过DNS解析把自己的域名绑定到腾讯云服务器上](https://cloud.tencent.com/developer/article/2021770)，在使用的过程中我发现了一个问题：
 > <br/>域名的访问协议有http和https（更加安全）。
 > <br/>我现在有2个域名：python-office.com 和 python4office.cn，在不开启https的情况下，以<br/>① .cn为结尾的python4office.cn所有的浏览器都可以打开；
@@ -94,13 +94,13 @@ cp objs/nginx /usr/local/nginx/sbin/ngin
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

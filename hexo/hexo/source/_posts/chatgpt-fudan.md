@@ -38,7 +38,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://r7up9.xetslk.com/s/1uP5YW">
+<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -50,7 +50,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)，山东人在重庆。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)，山东人在重庆。
 
 - 最新视频👉[淄博烧烤，哪家最好吃？](https://www.bilibili.com/video/BV1sv4y1E76M/?spm_id_from=333.999.0.0&vd_source=f8208b6c3b1d83ce5daeb73662c4ad91)
 
@@ -69,7 +69,7 @@ MOSS 项目主页：https://txsun1997.github.io/blogs/moss.html
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。
 
 ---
 
@@ -83,5 +83,5 @@ MOSS 项目主页：https://txsun1997.github.io/blogs/moss.html
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

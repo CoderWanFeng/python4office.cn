@@ -165,7 +165,7 @@ Or 👉 [Join AI Programming Learning Communication Group](https://www.python4of
 ## Related Reading
 
 - [python-office: Automate your office workflow with Python](https://www.python-office.com/)
-- [AI Programming Bootcamp: Learn AI programming even with zero foundation](https://r7up9.xetslk.com/s/1uP5YW)
+- [AI Programming Bootcamp: Learn AI programming even with zero foundation](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
 
@@ -176,7 +176,7 @@ Or 👉 [Join AI Programming Learning Communication Group](https://www.python4of
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 <p align="center">
 	<img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="80%"/>

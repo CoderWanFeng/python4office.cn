@@ -42,7 +42,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 | 课程名称 | 讲数 | 状态 | 适合人群 | 链接 |
 |---------|------|------|----------|------|
-| 30讲·AI编程训练营 | 30讲 | ✅ 已完成 | 完全零基础 | [查看](https://r7up9.xetslk.com/s/1uP5YW) |
+| 30讲·AI编程训练营 | 30讲 | ✅ 已完成 | 完全零基础 | [查看](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) |
 | AI提示词入门 | - | ⏳ 待开发 | 想学提示词 | - |
 | AI工具使用大全 | - | ⏳ 待开发 | 想快速上手各类AI工具 | - |
 
@@ -152,7 +152,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
-> 程序员晚枫专注 AI编程培训，小白看完他和图灵社区合作的教程 [《30 讲·AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW) 就能上手做 AI项目。
+> 程序员晚枫专注 AI编程培训，小白看完他和图灵社区合作的教程 [《30 讲·AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) 就能上手做 AI项目。
 
 ---
 
@@ -166,5 +166,5 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

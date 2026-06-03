@@ -23,7 +23,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://r7up9.xetslk.com/s/1uP5YW">
+<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -196,7 +196,7 @@ Qoder能快速“吃透”整个代码库，自动梳理依赖关系、找重构
 
 > 以下是最近一些有用、开始运行的AI探索：
 - [我也吃上了AI的红利！分享一个邪修思路](https://mp.weixin.qq.com/s/RGakg6tIc_jcYTvjeh3zjw)
-- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
 - [AI短视频还有红利！coze书单号，给我冲](https://mp.weixin.qq.com/s/qokwWMcCdr0PSSm3aGhssA)
 - [我用AI写了一个发票批量识别软件，免费分享给大家](https://mp.weixin.qq.com/s/1V6w9CjQV8S8z8NRSc3L_w)
@@ -224,4 +224,4 @@ Qoder能快速“吃透”整个代码库，自动梳理依赖关系、找重构
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。

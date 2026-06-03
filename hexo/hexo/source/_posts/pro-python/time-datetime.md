@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&
 <!-- more -->
 ![](https://www.python-office.com/api/img-cdn/pro-python/time-datetime/cover.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)。Python学习服务：[点我查看](https://www.python4office.cn/wechat-group/)
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)。Python学习服务：[点我查看](https://www.python4office.cn/wechat-group/)
 
 在Python中，表示时间的格式一共有3种：时间戳、结构化时间、格式化时间，2个模块：time、datetime。
 
@@ -110,13 +110,13 @@ datetime.datetime.now() + datetime.timedelta(days=7)#格式化时间
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)
+- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

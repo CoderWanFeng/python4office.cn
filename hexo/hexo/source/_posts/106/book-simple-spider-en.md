@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=
     <a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
     <img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
     </a>
-<a href="https://r7up9.xetslk.com/s/1uP5YW">
+<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
   <img src="https://img.shields.io/badge/Learn-AI%20Programming-red" alt="AI编程">
 </a>
     <a href="https://www.python4office.cn/wechat-group/">
@@ -54,7 +54,7 @@ cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=
 </p>
 
 <p align="center" id='10讲机器人-banner'>
-    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg" width="100%"/>
     </a>
 </p>
@@ -113,7 +113,7 @@ cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=
     </a>
 </p>
 
-Programmer Wan Feng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial ["30 Lectures · AI Programming Training Camp"](https://r7up9.xetslk.com/s/1uP5YW) created with Turing Community.
+Programmer Wan Feng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial ["30 Lectures · AI Programming Training Camp"](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) created with Turing Community.
 
 
 ## 🎓 AI 编程实战课程
@@ -121,6 +121,6 @@ Programmer Wan Feng specializes in AI programming training. Beginners can start 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
