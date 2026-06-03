@@ -262,10 +262,10 @@ $100/月 门槛太高，除非你真的用得非常多，否则没必要。
 
 ## 相关阅读
 
-- [Trae 免费版 vs 付费版：功能差距有多大？实测告诉你](https://www.python4office.cn/openclaw/trae/free-vs-paid/)
+- [2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [Cursor 免费版 vs 付费版：和Trae对比后，我更推荐这个](https://www.python4office.cn/openclaw/cursor/free-vs-paid/)
 - [Windsurf 免费版 vs 付费版：性价比之王，真的便宜吗？](https://www.python4office.cn/openclaw/windsurf/free-vs-paid/)
-- [我用AI开发软件，老板问我是不是偷偷招了个程序员](https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw)
+- [2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [我用AI做PPT，同事说你是PPT设计师吗](https://mp.weixin.qq.com/s/aLo7mW3BLnglwhSZCKoOow)
 - [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
 
