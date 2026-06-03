@@ -38,7 +38,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://r7up9.xetslk.com/s/1uP5YW">
+<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -55,7 +55,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 | 项目                                                                                                                       | 介绍                                                                         | 源码                                          | 教程                                                                                                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | python-office  <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg" alt="github star"/>           | 自动化办公                                                                   | https://github.com/CoderWanFeng/python-office | [50讲自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA#%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84%E3%80%8A50%E8%AE%B2-%C2%B7-python%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E3%80%8B) |
-| PyOfficeRobot            <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg" alt="github star"/> | 微信机器人                                                                   | https://github.com/CoderWanFeng/PyOfficeRobot | [10讲微信机器人](https://r7up9.xetslk.com/s/1uP5YW)                                                                                                         |
+| PyOfficeRobot            <img src="https://img.shields.io/github/stars/CoderWanFeng/PyOfficeRobot.svg" alt="github star"/> | 微信机器人                                                                   | https://github.com/CoderWanFeng/PyOfficeRobot | [10讲微信机器人](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)                                                                                                         |
 | poocr    <img src="https://img.shields.io/github/stars/CoderWanFeng/poocr.svg" alt="github star"/>                         | 识别文字，例如：[发票批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html) | https://github.com/CoderWanFeng/poocr         | [5讲文字识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)                                                                                                                              |
 | popdf     <img src="https://img.shields.io/github/stars/CoderWanFeng/popdf.svg" alt="github star"/>                        | pdf处理                                                                      | https://githu.com/CoderWanFeng/popdf         | [10讲PDF自动化办公](https://www.python-office.com/course-002/10-popdf/10-popdf.html)                                                                                                                       |
 | poimage          <img src="https://img.shields.io/github/stars/CoderWanFeng/poimage.svg" alt="github star"/>               | 图片处理                                                                     | https://github.com/CoderWanFeng/poimage       |                                                                                                                                                                                                           |
@@ -103,8 +103,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

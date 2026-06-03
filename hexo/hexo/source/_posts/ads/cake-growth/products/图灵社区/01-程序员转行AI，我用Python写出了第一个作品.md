@@ -98,7 +98,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 如果你也想从零开始学Python和AI，试试图灵社区AI Python实战营。
 
-👉 [点击这里试试图灵社区：https://r7up9.xetslk.com/s/1uP5YW](https://r7up9.xetslk.com/s/1uP5YW)
+👉 [点击这里试试图灵社区：https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 ---
 
@@ -167,7 +167,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 还没试过的朋友，点下面的链接试试图灵社区AI Python实战营。
 
-👉 [点击这里试试图灵社区：https://r7up9.xetslk.com/s/1uP5YW](https://r7up9.xetslk.com/s/1uP5YW)
+👉 [点击这里试试图灵社区：https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 ---
 

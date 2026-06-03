@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://r7up9.xetslk.com/s/1uP5YW">
+<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
         <a href="https://www.python4office.cn/wechat-group/">
@@ -178,7 +178,7 @@ Excel用了二十年，每天加班到晚上十点，数据处理还是手动复
 
 **从最痛的那个点开始，你会发现AI真的香。**
 
-如果你不知道从哪开始，我整理了一套从零上手AI的方法，不用懂代码，跟着学就能真正把AI用起来，少走弯路。有需要的可以看看 👉 [用AI做副业的3个思路](https://r7up9.xetslk.com/s/1uP5YW)
+如果你不知道从哪开始，我整理了一套从零上手AI的方法，不用懂代码，跟着学就能真正把AI用起来，少走弯路。有需要的可以看看 👉 [用AI做副业的3个思路](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 
@@ -211,7 +211,7 @@ AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 
 如果你到现在还没用过AI工具，不用慌。我整理了一套系统的学习方法，不用懂代码，不用花大钱，跟着学完就能真正把AI用起来。
 
-有需要的可以看看 👉 [AI编程实战课](https://r7up9.xetslk.com/s/1uP5YW)
+有需要的可以看看 👉 [AI编程实战课](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 ---
 
@@ -225,4 +225,4 @@ AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)

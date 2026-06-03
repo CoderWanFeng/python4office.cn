@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 <!-- more -->
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)。
 
 2025年10月9日，当电商平台都在为双11预热时，快手突然扔下一颗技术炸弹——正式发布AI原生IDE编程工具CodeFlicker。这个以短视频和直播见长的互联网巨头，竟然跨界做起了程序员的"生产力工具"？消息一出，技术圈瞬间炸开锅："快手不务正业？""这是要跟GitHub Copilot正面刚？"
 
@@ -65,7 +65,7 @@ CodeFlicker的发布，暴露了快手的野望：不满足做内容平台，要
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" />
     </a>   
 </p>
@@ -101,8 +101,8 @@ CodeFlicker的发布，暴露了快手的野望：不满足做内容平台，要
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

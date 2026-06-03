@@ -94,13 +94,13 @@ X作为全球平台，想象空间更大：
 
 ### 🎯 课程体系
 
-**1. [AI自动化办公实战课](https://r7up9.xetslk.com/s/1uP5YW)**
+**1. [AI自动化办公实战课](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
 ✓ 30天从零到精通
 ✓ 10+实战项目
 ✓ 就业+接单双重指导
 ✓ 原价2999，早鸟价999
 
-**2. [OpenClaw从入门到精通](https://r7up9.xetslk.com/s/1uP5YW)**
+**2. [OpenClaw从入门到精通](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
 ✓ AI编程工具深度教学
 ✓ 商业项目案例解析
 ✓ 接单技巧分享
@@ -147,7 +147,7 @@ X作为全球平台，想象空间更大：
 
 **今天开始，三个月后，你可能是X生态的首批成功者。**
 
-> 👉 [立即学习AI编程](https://r7up9.xetslk.com/s/1uP5YW)
+> 👉 [立即学习AI编程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 > 👉 [访问我的网站](https://www.python-office.com/)
 > 👉 [加入交流群](/contact)
 

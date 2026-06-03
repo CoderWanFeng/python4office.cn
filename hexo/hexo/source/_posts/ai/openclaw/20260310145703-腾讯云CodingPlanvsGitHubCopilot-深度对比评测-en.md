@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 
 <!-- more -->
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>
 </p>
@@ -145,6 +145,6 @@ Includes two courses:
 
 Want to learn AI programming systematically? Check out **CoderWanFeng's AI Programming Course**!
 
-- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - 👉 **Free Preview**: [Watch the first 3 lessons on Bilibili for free](https://www.bilibili.com/cheese/play/ss982042944)
 

@@ -163,6 +163,6 @@ Change your strategy, 36 yuan/month, the time and energy saved is worth it.
 
 Want to learn AI programming systematically? Check out **CoderWanFeng's AI Programming Course**!
 
-- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - 👉 **Free Preview**: [Watch the first 3 lessons on Bilibili for free](https://www.bilibili.com/cheese/play/ss982042944)
 

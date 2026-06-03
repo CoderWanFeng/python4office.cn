@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>
 </p>
@@ -31,7 +31,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 		<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 	<img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 	</a>
-	<a href="https://r7up9.xetslk.com/s/1uP5YW">
+	<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
 	  <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 	</a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -43,7 +43,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://r7up9.xetslk.com/s/1uP5YW)。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)。
 
 ---
 
@@ -210,7 +210,7 @@ DeepSeek评价说：
 扫码添加好友，备注【AI编程】，就能锁定早鸟价名额！
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" />
     </a>
 </p>
@@ -240,4 +240,4 @@ DeepSeek评价说：
 有任何问题，欢迎联系我的微信👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。

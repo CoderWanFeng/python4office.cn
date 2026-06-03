@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://r7up9.xetslk.com/s/1uP5YW">
+<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
         <a href="https://www.python4office.cn/wechat-group/">
@@ -174,10 +174,10 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 ## 相关阅读
 
 - [我用AI开发软件，老板问我是不是偷偷招了个程序员](https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw)
-- [用AI 做 副业 的 3个思路](https://r7up9.xetslk.com/s/1uP5YW)
+- [用AI 做 副业 的 3个思路](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://r7up9.xetslk.com/s/1uP5YW)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [HR看简历只花6秒，我用AI让我的简历过了第一关](https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ)
 
 ---
@@ -186,7 +186,7 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 如果你想学习怎么用AI提升工作效率、搞副业赚钱，我整理了一套系统的学习方法。不用懂代码，不用花大钱，跟着学完就能真正把AI用起来，少走弯路。
 
-有需要的可以看看 👉 [AI编程实战课](https://r7up9.xetslk.com/s/1uP5YW)
+有需要的可以看看 👉 [AI编程实战课](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 ---
 
@@ -216,11 +216,11 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 **公众号**：晚枫AI学习笔记
 **声明**：本文原创，转载需联系授权
 
-程序员晚枫专注AI编程培训，通过[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)让小白也能上手做AI项目。
+程序员晚枫专注AI编程培训，通过[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)让小白也能上手做AI项目。
 
 ## 🎓 AI 编程实战课程
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)

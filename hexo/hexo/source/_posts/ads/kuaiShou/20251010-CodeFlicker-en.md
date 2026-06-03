@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-Hey everyone, this is 程序员晚枫 (Programmer Wanfeng), currently all in on [AI Programming Practice](https://r7up9.xetslk.com/s/1uP5YW).
+Hey everyone, this is 程序员晚枫 (Programmer Wanfeng), currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw).
 
 On October 9, 2025, while e-commerce platforms were warming up for Double 11, Kuaishou suddenly dropped a tech bomb — officially releasing CodeFlicker, an AI-native IDE programming tool. This internet giant, best known for short videos and live streaming, actually crossed over into developers' "productivity tools"? The moment news broke, the tech community exploded: "Kuaishou is going off-topic?" "Are they really going head-to-head with GitHub Copilot?"
 
@@ -66,7 +66,7 @@ After all, in an era where AI is reshaping everything, never underestimate a tec
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://r7up9.xetslk.com/s/1uP5YW'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" />
     </a>   
 </p>
@@ -93,7 +93,7 @@ After all, in an era where AI is reshaping everything, never underestimate a tec
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://r7up9.xetslk.com/s/1uP5YW)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。
 
 
 
@@ -108,6 +108,6 @@ After all, in an era where AI is reshaping everything, never underestimate a tec
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 

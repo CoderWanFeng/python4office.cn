@@ -565,7 +565,7 @@ nslookup openclaw.your-domain.com
 
 - [OpenClaw 部署教程](https://www.python-office.com/openclaw/deploy/)
 - [AI 编程学习入口](https://www.python-office.com/)
-- [程序员晚枫 AI 编程课](https://r7up9.xetslk.com/s/1uP5YW/)
+- [程序员晚枫 AI 编程课](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw/)
 
 ## 🔗 联系方式
 
@@ -590,6 +590,6 @@ nslookup openclaw.your-domain.com
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 

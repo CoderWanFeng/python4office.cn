@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 Ranking of cloud server providers - do you know which rank your service provider holds?
 
-Hello everyone, this is Programmer Wanfeng, currently all in on [AI Programming Practice](https://r7up9.xetslk.com/s/1uP5YW).
+Hello everyone, this is Programmer Wanfeng, currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw).
 
 Here are the top 10 cloud server providers in China:
 
@@ -50,10 +50,10 @@ The above is just a brief introduction. If you want to know more, you can join t
 
 ## Related Reading
 
-- [《30 Lectures · AI Programming Bootcamp》 for Beginners](https://r7up9.xetslk.com/s/1uP5YW)
+- [《30 Lectures · AI Programming Bootcamp》 for Beginners](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
-Programmer Wanfeng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial [《30 Lectures · AI Programming Bootcamp》](https://r7up9.xetslk.com/s/1uP5YW), a collaboration with Turing Community.
+Programmer Wanfeng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial [《30 Lectures · AI Programming Bootcamp》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw), a collaboration with Turing Community.
 
 
 ## 🎓 AI 编程实战课程
@@ -61,6 +61,6 @@ Programmer Wanfeng specializes in AI programming training. Beginners can start w
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/1uP5YW)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
