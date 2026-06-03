@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Want to understand various vendors' Coding Plan situation?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to understand various vendors' Coding Plan situation?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is programmer Wan Feng.
 
@@ -78,7 +78,7 @@ If you're a personal developer looking for AI programming subscription plans, th
 - Support: Multi-models like Doubao, DeepSeek, Kimi, MiniMax
 - Suitable for: Personal developers seeking value for money
 
-**👉 [Click to learn about Volcano Ark Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to learn about Volcano Ark Coding Plan](https://www.python-office.com/token)**
 
 ### 2. Alibaba Cloud Bailian — Complete Ecosystem
 

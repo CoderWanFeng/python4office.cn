@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -106,7 +106,7 @@ Kimi's product design is very friendly:
 
 200,000 character context window — reading entire projects is no longer a dream.
 
-**👉 [Click to View Moonshot Kimi Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to View Moonshot Kimi Coding Plan](https://www.python-office.com/token)**
 
 ---
 
@@ -119,7 +119,7 @@ Kimi's product design is very friendly:
 
 ---
 
-> 📢 **Want to compare all vendors' Coding Plans?** 👉 **[Click to View the Complete Comparison Table](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **Want to compare all vendors' Coding Plans?** 👉 **[Click to View the Complete Comparison Table](https://www.python-office.com/token)**
 
 ---
 

@@ -120,7 +120,7 @@ Copilot：136元/月
 - 邀请码使用教程
 - 常见问题解答
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

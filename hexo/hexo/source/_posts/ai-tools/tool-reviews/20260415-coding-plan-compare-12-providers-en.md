@@ -78,7 +78,7 @@ Each provider has one, some give API quota, some give computing power, some give
 
 I've compiled the Coding Plans from 12 mainstream cloud providers currently. Bookmark this article, won't get lost in selection.
 
-👉 **Summary Comparison Page (Maintained by Programmer Wanfeng): [12 Providers Coding Plan Comparison](https://www.python-office.com/openclaw/coding-plan/)**
+👉 **Summary Comparison Page (Maintained by Programmer Wanfeng): [12 Providers Coding Plan Comparison](https://www.python-office.com/token)**
 
 ---
 
@@ -98,7 +98,7 @@ Usually includes:
 
 ## 12 Providers Horizontal Comparison
 
-I've compiled a summary table, source: [python-office.com/openclaw/coding-plan/](https://www.python-office.com/openclaw/coding-plan/)
+I've compiled a summary table, source: [python-office.com/openclaw/coding-plan/](https://www.python-office.com/token)
 
 | # | Cloud Provider | Product Name | Personal Recommendation |
 |:---:|--------|----------|:----------:|

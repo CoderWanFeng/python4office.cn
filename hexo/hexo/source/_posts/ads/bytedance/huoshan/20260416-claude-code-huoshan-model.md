@@ -114,12 +114,12 @@ claude --version
 
 ### 第二步：获取火山方舟的 API Key
 
-1. 打开 [火山方舟 Coding Plan](https://www.python-office.com/openclaw/coding-plan/) 页面
+1. 打开 [火山方舟 Coding Plan](https://www.python-office.com/token) 页面
 2. 注册/登录火山引擎账号
 3. 进入【火山方舟控制台】→【API 密钥管理】
 4. 创建新的 API Key，复制保存
 
-👉 [点击这里快速获取 API Key](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击这里快速获取 API Key](https://www.python-office.com/token)
 
 ### 第三步：配置 Claude Code 使用自定义模型
 
@@ -244,7 +244,7 @@ export ANTHROPIC_MODEL="qwen-max"
 - 常见报错解决方案
 - 最佳实践 Tips
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

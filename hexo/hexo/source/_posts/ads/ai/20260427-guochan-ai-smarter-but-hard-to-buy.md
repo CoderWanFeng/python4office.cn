@@ -139,7 +139,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 ---
 
-> 📢 **想对比所有厂商 Coding Plan？** 👉 **[点击查看完整对比表](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **想对比所有厂商 Coding Plan？** 👉 **[点击查看完整对比表](https://www.python-office.com/token)**
 
 ---
 

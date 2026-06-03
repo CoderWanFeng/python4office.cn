@@ -447,7 +447,7 @@ def calculate_average(data):
 
 **收藏这个对比页，选型不迷路：**
 
-👉 [12家AI厂商Coding Plan对比汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家AI厂商Coding Plan对比汇总](https://www.python-office.com/token)
 
 **获取免费测试额度：**
 

@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -51,7 +51,7 @@ The Xiaomi ecosystem spans multiple domains, and MiMo's AI programming can serve
 
 ### Step 1: Visit the Official Page
 
-**👉 [Click to View Xiaomi MiMo Coding Plan Details](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to View Xiaomi MiMo Coding Plan Details](https://www.python-office.com/token)**
 
 ### Step 2: Get an API Key
 
@@ -140,14 +140,14 @@ Xiaomi's feature is ecosystem integration and value. I'd suggest trying it first
 
 ## Related Reading
 
-- [💡 Understanding Coding Plan in One Article: What Is an AI Programming Subscription?](https://www.python-office.com/openclaw/coding-plan/)
+- [💡 Understanding Coding Plan in One Article: What Is an AI Programming Subscription?](https://www.python-office.com/token)
 - [🔥 How to Use Volcano Ark Coding Plan? Detailed Tutorial](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-tutorial/)
 - [📊 AI Programming Tools Side-by-Side Comparison — Choose the Right Tool and Double Your Efficiency](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
 - [💰 Programmer's Money-Saving Guide: These AI Tools Are Free](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **More Coding Plan Comparisons**: 👉 **[View All Vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan Comparisons**: 👉 **[View All Vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

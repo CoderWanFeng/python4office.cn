@@ -144,7 +144,7 @@ Coding Plan是各大云厂商推出的**AI编程助手订阅服务**，通过预
 不要等价格涨了再后悔，现在就是最佳入手时机！
 
 👉 **点击获取Coding Plan专属通道**：
-**https://www.python-office.com/openclaw/coding-plan/**
+**https://www.python-office.com/token**
 
 通过上方链接，你可以：
 - 一站式对比阿里云、腾讯云、字节跳动等主流Coding Plan

@@ -124,7 +124,7 @@ AI编程工具是订阅制。
 
 邀请码：**GF2QJX3V**
 
-👉 [更多福利，点击领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [更多福利，点击领取](https://www.python-office.com/token)
 
 **链接要放得自然，不能太硬。**
 
@@ -235,7 +235,7 @@ AI工具更新快，文章也要跟着更新。
 - 佣金提升技巧
 - 常见问题解答
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

@@ -75,12 +75,12 @@ Claude Code = 工具壳（免费）
 
 #### 第一步：注册并领取免费额度
 
-1. 打开 [火山方舟 Coding Plan 页面](https://www.python-office.com/openclaw/coding-plan/)
+1. 打开 [火山方舟 Coding Plan 页面](https://www.python-office.com/token)
 2. 用手机号注册火山引擎账号
 3. 进入【控制台】→【方舟大模型】
 4. 新用户自动获得**免费体验额度**
 
-👉 **[点击这里快速注册并领取免费额度](https://www.python-office.com/openclaw/coding-plan/)**
+👉 **[点击这里快速注册并领取免费额度](https://www.python-office.com/token)**
 
 #### 第二步：创建 API Key
 
@@ -189,7 +189,7 @@ claude
 - 免费用完之后怎么续费最划算
 - 从免费过渡到付费的最佳时机
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

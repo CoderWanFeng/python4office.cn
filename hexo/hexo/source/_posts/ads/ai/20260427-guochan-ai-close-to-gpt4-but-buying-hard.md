@@ -163,7 +163,7 @@ DeepSeek-Coder 的解释：详细、准确、有时比GPT-4更懂中文语境
 
 ---
 
-> 📢 **想对比所有厂商 Coding Plan？** 👉 **[点击查看完整对比表](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **想对比所有厂商 Coding Plan？** 👉 **[点击查看完整对比表](https://www.python-office.com/token)**
 
 ---
 

@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically learn about various vendors' Coding Plans?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically learn about various vendors' Coding Plans?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is Programmer Wan Feng.
 
@@ -75,7 +75,7 @@ If you're working on large projects (lots of code, many files), Kimi's long cont
 
 ### Step 1: Visit the Official Page
 
-**👉 [Click to view Moonshot AI / Kimi Coding Plan details](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to view Moonshot AI / Kimi Coding Plan details](https://www.python-office.com/token)**
 
 Find the Moonshot/Kimi entry and learn about specific packages.
 
@@ -107,7 +107,7 @@ Choose the appropriate package based on your usage.
 
 ---
 
-> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

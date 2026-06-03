@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -74,7 +74,7 @@ If you're doing on-device AI development, MiMo may be better suited for you.
 
 ### Step 1: Visit the Official Page
 
-**👉 [Click to View Xiaomi MiMo Coding Plan Details](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to View Xiaomi MiMo Coding Plan Details](https://www.python-office.com/token)**
 
 Learn about MiMo's specific plans and usage methods.
 
@@ -106,7 +106,7 @@ Choose a plan that fits your usage volume.
 
 ---
 
-> 📢 **More Coding Plan Comparisons**: 👉 **[View All Vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan Comparisons**: 👉 **[View All Vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

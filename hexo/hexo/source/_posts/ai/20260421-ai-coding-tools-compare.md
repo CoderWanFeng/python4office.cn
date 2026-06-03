@@ -54,7 +54,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 ## 12家AI编程工具横向对比
 
-我整理了一个总表，来源：[12家 Coding Plan 对比](https://www.python-office.com/openclaw/coding-plan/)
+我整理了一个总表，来源：[12家 Coding Plan 对比](https://www.python-office.com/token)
 
 | 序号 | 工具 | 厂商 | 个人推荐度 | 适合场景 | 免费额度 |
 |------|------|------|-----------|---------|---------|
@@ -242,7 +242,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 **各平台Coding Plan薅羊毛步骤：**
 
 ```
-1. 打开 [12家 Coding Plan 对比页](https://www.python-office.com/openclaw/coding-plan/)
+1. 打开 [12家 Coding Plan 对比页](https://www.python-office.com/token)
 2. 找到你需要的厂商
 3. 点击"了解详情"，注册并领取额度
 4. 开始开发！
@@ -271,7 +271,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 **收藏这个对比表，选型不迷路：**
 
-👉 [12家AI编程工具对比+ Coding Plan汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家AI编程工具对比+ Coding Plan汇总](https://www.python-office.com/token)
 
 **获取免费额度：**
 

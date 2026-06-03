@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically learn about various vendors' Coding Plans?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically learn about various vendors' Coding Plans?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is Programmer Wan Feng.
 
@@ -86,7 +86,7 @@ Moonshot Kimi's core selling point is "128K ultra-long context," but is it suita
 → Check Volcano Ark or Alibaba Cloud Bailian
 
 **4. Want to Compare All Options**
-→ **👉 [Click to view all vendors' Coding Plan comparison](https://www.python-office.com/openclaw/coding-plan/)**
+→ **👉 [Click to view all vendors' Coding Plan comparison](https://www.python-office.com/token)**
 
 ## 4. Kimi's Best Use Cases
 
@@ -119,12 +119,12 @@ Shortcomings:
 
 - [🔥 Volcano Ark Coding Plan: Possibly the Best Value Choice](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-save-money/)
 - [🤖 Alibaba Cloud Bailian Coding Plan: Full Qwen Series Support](https://www.python4office.cn/ads/aliyun/codingplan/20260410-aliyun-codingplan-intro/)
-- [📊 Horizontal Comparison of All Coding Plans, One Chart to Understand Which to Choose](https://www.python-office.com/openclaw/coding-plan/)
+- [📊 Horizontal Comparison of All Coding Plans, One Chart to Understand Which to Choose](https://www.python-office.com/token)
 - [💰 Developer Tips: These AI Tools Are Free](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

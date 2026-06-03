@@ -177,7 +177,7 @@ ChatGPT Plus主要是聊天工具，Coding Plan是编程专用。
 - 配置避坑指南
 - 订阅选择建议
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)**
+👉 [点击免费领取](https://www.python-office.com/token)**
 
 ---
 

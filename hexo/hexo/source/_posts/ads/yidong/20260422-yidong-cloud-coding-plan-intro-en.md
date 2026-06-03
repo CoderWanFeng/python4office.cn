@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -68,7 +68,7 @@ Telecom operators doing AI services usually price affordably — great for indiv
 
 ### Step 1: Visit the Official Page
 
-**👉 [Click to View China Mobile Cloud Coding Plan Details](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to View China Mobile Cloud Coding Plan Details](https://www.python-office.com/token)**
 
 Find the China Mobile entry and learn about specific plans.
 
@@ -100,7 +100,7 @@ China Mobile's services are usually very stable for domestic access.
 
 ---
 
-> 📢 **More Coding Plan Comparisons**: 👉 **[View All Vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan Comparisons**: 👉 **[View All Vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

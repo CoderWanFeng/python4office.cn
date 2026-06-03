@@ -220,7 +220,7 @@ Claude Code支持自定义API，配置火山方舟的API信息后，即可使用
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
 
-👉 [点击免费领取《火山方舟FAQ速查表》](https://www.python-office.com/openclaw/coding-plan/)**
+👉 [点击免费领取《火山方舟FAQ速查表》](https://www.python-office.com/token)**
 
 ---
 

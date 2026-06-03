@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **想了解各大厂商 Coding Plan 情况？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **想了解各大厂商 Coding Plan 情况？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
 大家好，这里是程序员晚枫。
 
@@ -83,7 +83,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 如果华为的 AI 服务符合你的需求，可以通过以下方式了解：
 
-**👉 [点击查看所有厂商的 Coding Plan 和 AI 服务对比](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [点击查看所有厂商的 Coding Plan 和 AI 服务对比](https://www.python-office.com/token)**
 
 虽然华为没有 Coding Plan，但页面里有所有厂商的 AI 服务对比，总有一款适合你。
 
@@ -106,12 +106,12 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 - [🔥 火山方舟 Coding Plan：可能是性价比最高的选择](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan/)
 - [🤖 阿里云百炼 Coding Plan：通义千问全系支持](https://www.python4office.cn/ads/aliyun/codingplan/20260410-aliyun-codingplan-intro/)
-- [📊 各家 Coding Plan 横向对比，一图看懂选哪个](https://www.python-office.com/openclaw/coding-plan/)
+- [📊 各家 Coding Plan 横向对比，一图看懂选哪个](https://www.python-office.com/token)
 - [💰 程序员薅羊毛：这些 AI 工具免费用](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **找 Coding Plan**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **找 Coding Plan**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/token)**
 
 ---
 

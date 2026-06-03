@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -105,7 +105,7 @@ If you use PaddlePaddle, Baidu Cloud is the natural choice.
 
 Code capability is a necessity — Baidu is the best domestic solution.
 
-**👉 [Click to View Baidu Cloud Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to View Baidu Cloud Coding Plan](https://www.python-office.com/token)**
 
 ---
 
@@ -118,7 +118,7 @@ Code capability is a necessity — Baidu is the best domestic solution.
 
 ---
 
-> 📢 **Want to compare all vendors' Coding Plans?** 👉 **[Click to View the Complete Comparison Table](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **Want to compare all vendors' Coding Plans?** 👉 **[Click to View the Complete Comparison Table](https://www.python-office.com/token)**
 
 ---
 

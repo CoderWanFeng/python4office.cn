@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **想了解各大厂商 Coding Plan 情况？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **想了解各大厂商 Coding Plan 情况？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
 大家好，这里是程序员晚枫。
 
@@ -76,7 +76,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 支持：豆包、DeepSeek、Kimi、MiniMax 等多模型
 - 适合：追求性价比的个人开发者
 
-**👉 [点击了解火山方舟 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [点击了解火山方舟 Coding Plan](https://www.python-office.com/token)**
 
 ### 2. 阿里云百炼 — 生态完善
 
@@ -85,7 +85,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ### 3. 其他厂商
 
-还有很多厂商有 Coding Plan，**👉 [点击查看全部对比](https://www.python-office.com/openclaw/coding-plan/)**
+还有很多厂商有 Coding Plan，**👉 [点击查看全部对比](https://www.python-office.com/token)**
 
 ## 四、华为值得关注的 AI 方向
 
@@ -111,7 +111,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 | 替代方案有哪些？ | 火山方舟、阿里云百炼等 |
 | 华为 AI 适合谁？ | 企业用户、昇腾训练、鸿蒙开发 |
 
-**如果你是个人开发者，想找 AI 编程订阅方案：👉 [点击查看所有厂商的 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+**如果你是个人开发者，想找 AI 编程订阅方案：👉 [点击查看所有厂商的 Coding Plan](https://www.python-office.com/token)**
 
 ---
 
@@ -136,7 +136,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
-> 📢 **找 Coding Plan**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **找 Coding Plan**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/token)**
 
 ---
 

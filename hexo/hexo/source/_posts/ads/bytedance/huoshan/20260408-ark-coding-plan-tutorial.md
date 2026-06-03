@@ -207,7 +207,7 @@ AI是杠杆，不是对手。
 - JetBrains配置模板
 - 推荐模型参数设置
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

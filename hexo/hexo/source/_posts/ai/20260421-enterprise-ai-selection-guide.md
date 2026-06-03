@@ -303,7 +303,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 ### 步骤2：平台筛选
 
-[👉 点击查看12家厂商详细对比](https://www.python-office.com/openclaw/coding-plan/)
+[👉 点击查看12家厂商详细对比](https://www.python-office.com/token)
 
 ### 步骤3：POC测试
 
@@ -345,7 +345,7 @@ ROI提升：3-5倍
 
 **收藏这个对比页，选型不迷路：**
 
-👉 [12家AI厂商Coding Plan对比汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家AI厂商Coding Plan对比汇总](https://www.python-office.com/token)
 
 **获取企业专属方案：**
 

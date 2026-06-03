@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically understand Coding Plans from major vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically understand Coding Plans from major vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -81,7 +81,7 @@ Azure OpenAI is OpenAI service on Microsoft Azure cloud, which has top models li
 → Check Volcano Ark, 36 yuan/month cheaper
 
 **4. Want to compare all options**
-→ **👉 [Click to view all vendors' Coding Plan comparison](https://www.python-office.com/openclaw/coding-plan/)**
+→ **👉 [Click to view all vendors' Coding Plan comparison](https://www.python-office.com/token)**
 
 ## IV. When to Choose Azure OpenAI?
 
@@ -125,12 +125,12 @@ Limitations:
 
 - [🔥 Volcano Ark Coding Plan: Possibly the most cost-effective choice](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-save-money/)
 - [🤖 Alibaba Cloud Bailian Coding Plan: Full support for Tongyi Qianwen](https://www.python4office.cn/ads/aliyun/codingplan/20260410-aliyun-codingplan-intro/)
-- [📊 Horizontal comparison of all Coding Plans, understand which one to choose at a glance](https://www.python-office.com/openclaw/coding-plan/)
+- [📊 Horizontal comparison of all Coding Plans, understand which one to choose at a glance](https://www.python-office.com/token)
 - [💰 Programmer's money-saving guide: These AI tools are free to use](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **More Coding Plan comparisons**：👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**：👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

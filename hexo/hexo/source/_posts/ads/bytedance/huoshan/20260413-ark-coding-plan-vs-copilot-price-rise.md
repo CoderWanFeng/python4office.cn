@@ -206,7 +206,7 @@ Doubao、GLM这些国产模型，中文理解就好多了。
 - 配置模板（Cursor/VS Code/JetBrains）
 - 常见问题解答
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

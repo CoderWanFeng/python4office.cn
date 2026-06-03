@@ -90,13 +90,13 @@ claude --version
 
 ### 第二步：开通火山方舟 Coding Plan
 
-1. 打开 [火山方舟 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)
+1. 打开 [火山方舟 Coding Plan](https://www.python-office.com/token)
 2. 注册/登录火山引擎账号
 3. 选择 **Lite 版**（36元/月）
 
 > 💡 **新用户提示**：通过邀请码注册，首月还有额外优惠！
 
-👉 **[点击查看详情并注册](https://www.python-office.com/openclaw/coding-plan/)**
+👉 **[点击查看详情并注册](https://www.python-office.com/token)**
 
 ### 第三步：获取 API Key
 
@@ -233,7 +233,7 @@ DeepSeek-V3 和 Claude Sonnet 的差距很小。
 - Token 消耗优化技巧
 - 省钱 vs 体验的平衡点分析
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

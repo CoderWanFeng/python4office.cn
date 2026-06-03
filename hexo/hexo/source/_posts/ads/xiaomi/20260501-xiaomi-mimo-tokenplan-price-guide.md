@@ -17,7 +17,7 @@ cover: https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&aut
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
 大家好，这里是程序员晚枫。
 
@@ -187,7 +187,7 @@ Pro 和 Max 套餐可以团队共享使用，性价比更高。
 
 ---
 
-> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/token)**
 
 ---
 

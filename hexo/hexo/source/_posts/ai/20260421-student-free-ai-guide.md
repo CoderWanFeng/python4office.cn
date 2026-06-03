@@ -362,7 +362,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 **收藏这个汇总页，学习不迷路：**
 
-👉 [12家Coding Plan对比汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家Coding Plan对比汇总](https://www.python-office.com/token)
 
 **获取学生专属额度：**
 

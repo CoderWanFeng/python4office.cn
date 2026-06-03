@@ -31,7 +31,7 @@ GPT-4依然强，但不再是唯一选择。
 
 今天，我就用大白话告诉你：**2026年，各家大模型到底什么水平？适合什么人用？**
 
-👉 [12家AI大模型Coding Plan对比汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家AI大模型Coding Plan对比汇总](https://www.python-office.com/token)
 
 ---
 
@@ -333,7 +333,7 @@ GPT-4依然强，但不再是唯一选择。
 
 **收藏这个对比表，选型不迷路：**
 
-👉 [12家AI大模型Coding Plan对比汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家AI大模型Coding Plan对比汇总](https://www.python-office.com/token)
 
 ---
 

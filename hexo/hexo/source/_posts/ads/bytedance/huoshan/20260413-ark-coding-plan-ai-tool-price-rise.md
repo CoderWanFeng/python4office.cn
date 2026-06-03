@@ -208,7 +208,7 @@ Anthropic的API价格也在调整。
 - 火山方舟优惠活动汇总
 - 从Copilot/Claude迁移指南
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

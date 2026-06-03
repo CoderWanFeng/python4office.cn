@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
 大家好，这里是程序员晚枫。
 
@@ -127,14 +127,14 @@ AI：（语音）这段代码有 3 个问题...
 
 ## 相关阅读
 
-- [💡 一文读懂 Coding Plan：什么是 AI 编程订阅？](https://www.python-office.com/openclaw/coding-plan/)
+- [💡 一文读懂 Coding Plan：什么是 AI 编程订阅？](https://www.python-office.com/token)
 - [🔥 火山方舟 Coding Plan 怎么用？详细教程](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-tutorial/)
 - [📊 AI 编程工具横向对比，选对工具效率翻倍](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
 - [💰 程序员省钱攻略：这些 AI 工具免费用](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/token)**
 
 ---
 

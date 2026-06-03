@@ -226,7 +226,7 @@ AI是杠杆，不是对手。
 - 选择决策树
 - 免费试用资源
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 
