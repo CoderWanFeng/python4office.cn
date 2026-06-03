@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want to know about all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to know about all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -71,7 +71,7 @@ First, let's talk about why you should choose this subscription model:
 | Models | Doubao, DeepSeek, Kimi, MiniMax, etc. |
 | Best For | Value-conscious individual developers |
 
-**👉 [Click to Learn About Volcano Ark](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to Learn About Volcano Ark](https://www.python-office.com/token)**
 
 ### Option 2: Alibaba Cloud Bailian
 
@@ -83,7 +83,7 @@ First, let's talk about why you should choose this subscription model:
 
 ### Option 3: Other Vendors
 
-Many more choices — **👉 [Click to View All Comparisons](https://www.python-office.com/openclaw/coding-plan/)**
+Many more choices — **👉 [Click to View All Comparisons](https://www.python-office.com/token)**
 
 ## 4. Buying Decision Tree
 
@@ -112,7 +112,7 @@ Who are you?
 | Huawei's Value | ✅ Enterprise AI, AI training, Ascend compute |
 | Individual Developer's First Choice | ✅ Volcano Ark Coding Plan |
 
-**👉 [Click to View All Vendors' Coding Plan Comparisons](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to View All Vendors' Coding Plan Comparisons](https://www.python-office.com/token)**
 
 ---
 
@@ -120,12 +120,12 @@ Who are you?
 
 - [🔥 Volcano Ark Coding Plan: Possibly the Best Value Choice](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-save-money/)
 - [🤖 Alibaba Cloud Bailian Coding Plan: Full Tongyi Qianwen Support](https://www.python4office.cn/ads/aliyun/codingplan/20260410-aliyun-codingplan-intro/)
-- [📊 All Coding Plans Side-by-Side — One Chart to Understand Which to Choose](https://www.python-office.com/openclaw/coding-plan/)
+- [📊 All Coding Plans Side-by-Side — One Chart to Understand Which to Choose](https://www.python-office.com/token)
 - [💰 Programmer's Money-Saving Guide: These AI Tools Are Free](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **Find Coding Plan**: 👉 **[Click to View All Vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **Find Coding Plan**: 👉 **[Click to View All Vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

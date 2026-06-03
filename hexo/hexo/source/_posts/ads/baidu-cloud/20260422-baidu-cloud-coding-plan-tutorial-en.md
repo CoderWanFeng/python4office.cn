@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically understand Coding Plans from major vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically understand Coding Plans from major vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -29,7 +29,7 @@ Today I bring you a **practical tutorial** for Baidu Cloud Coding Plan, focusing
 
 ### Step 1: Get API Key
 
-1. Visit **👉 [Baidu Cloud Coding Plan details](https://www.python-office.com/openclaw/coding-plan/)**
+1. Visit **👉 [Baidu Cloud Coding Plan details](https://www.python-office.com/token)**
 2. Register Baidu Cloud account
 3. Enable Wenxin Yiyan API service
 4. Get API Key and Secret Key
@@ -123,14 +123,14 @@ Baidu Cloud service stability is in the first tier in China.
 
 ## Related Reading
 
-- [💡 A Comprehensive Guide to Coding Plan: What is AI Programming Subscription?](https://www.python-office.com/openclaw/coding-plan/)
+- [💡 A Comprehensive Guide to Coding Plan: What is AI Programming Subscription?](https://www.python-office.com/token)
 - [🔥 How to Use Volcano Ark Coding Plan? Detailed Tutorial](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-tutorial/)
 - [📊 Horizontal Comparison of AI Programming Tools, Choosing the Right Tool Doubles Efficiency](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
 - [💰 Programmer Money-Saving Guide: These AI Tools Are Free to Use](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **More Coding Plan comparisons**：👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**：👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

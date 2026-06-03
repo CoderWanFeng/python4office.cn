@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want to know about all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to know about all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -83,7 +83,7 @@ Ascend cloud service lets you use Ascend compute power without buying hardware.
 
 If Huawei's AI services match your needs, you can learn more through:
 
-**👉 [Click to View All Vendors' Coding Plans and AI Services Comparison](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to View All Vendors' Coding Plans and AI Services Comparison](https://www.python-office.com/token)**
 
 Although Huawei doesn't have Coding Plan, the page has all vendors' AI services comparison — there's always one right for you.
 
@@ -99,12 +99,12 @@ Although Huawei doesn't have Coding Plan, the page has all vendors' AI services 
 
 - [🔥 Volcano Ark Coding Plan: Possibly the Best Value Choice](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan/)
 - [🤖 Alibaba Cloud Bailian Coding Plan: Full Tongyi Qianwen Support](https://www.python4office.cn/ads/aliyun/codingplan/20260410-aliyun-codingplan-intro/)
-- [📊 All Coding Plans Side-by-Side — One Chart to Understand Which to Choose](https://www.python-office.com/openclaw/coding-plan/)
+- [📊 All Coding Plans Side-by-Side — One Chart to Understand Which to Choose](https://www.python-office.com/token)
 - [💰 Programmer's Money-Saving Guide: These AI Tools Are Free](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **Find Coding Plan**: 👉 **[Click to View All Vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **Find Coding Plan**: 👉 **[Click to View All Vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

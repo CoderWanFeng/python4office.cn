@@ -78,7 +78,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 ## 12家Coding Plan横向对比
 
-我整理了一个总表，来源：[python-office.com/openclaw/coding-plan/](https://www.python-office.com/openclaw/coding-plan/)
+我整理了一个总表，来源：[python-office.com/openclaw/coding-plan/](https://www.python-office.com/token)
 
 | 序号 | 云厂商 | 产品名称 | 适合创业团队 | 免费额度 |
 |------|--------|---------|-------------|---------|
@@ -316,7 +316,7 @@ AI模型：DeepSeek + 火山方舟（免费额度）
 
 **收藏这个汇总页，创业不迷路：**
 
-👉 [12家Coding Plan对比汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家Coding Plan对比汇总](https://www.python-office.com/token)
 
 **获取免费额度：**
 

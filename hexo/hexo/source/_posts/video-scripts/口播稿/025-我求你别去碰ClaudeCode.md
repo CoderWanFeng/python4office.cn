@@ -1,5 +1,5 @@
 ---
-title: 025：我求你别去碰Claude Code
+title: 我求你别去碰Claude Code
 date: 2026-05-22 23:52:00
 tags: ["Claude Code", "AI编程", "上瘾", "vibe coding"]
 categories: ["口播稿"]

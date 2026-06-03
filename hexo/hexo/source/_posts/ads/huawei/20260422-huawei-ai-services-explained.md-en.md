@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Want to understand various vendors' Coding Plan situation?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to understand various vendors' Coding Plan situation?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is programmer Wan Feng.
 
@@ -85,7 +85,7 @@ Ascend cloud services let you use Ascend computing without purchasing hardware.
 
 If Huawei's AI services meet your needs, learn through:
 
-**👉 [Click to view comparison of all vendors' Coding Plans and AI services](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to view comparison of all vendors' Coding Plans and AI services](https://www.python-office.com/token)**
 ---
 
 

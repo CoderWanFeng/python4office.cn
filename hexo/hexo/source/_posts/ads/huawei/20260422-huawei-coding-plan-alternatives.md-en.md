@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Want to understand various vendors' Coding Plan situation?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to understand various vendors' Coding Plan situation?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is programmer Wan Feng.
 
@@ -73,7 +73,7 @@ First, why choose the subscription model like Coding Plan:
 | Models | Doubao, DeepSeek, Kimi, MiniMax, etc. |
 | Suitable for | Value-for-money seeking personal developers |
 
-**👉 [Click to learn about Volcano Ark](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to learn about Volcano Ark](https://www.python-office.com/token)**
 
 ### Option 2: Alibaba Cloud Bailian
 
@@ -85,7 +85,7 @@ First, why choose the subscription model like Coding Plan:
 
 ### Option 3: Other Vendors
 
-There are many more choices, **👉 [Click to view full comparison](https://www.python-office.com/openclaw/coding-plan/)**
+There are many more choices, **👉 [Click to view full comparison](https://www.python-office.com/token)**
 ---
 
 

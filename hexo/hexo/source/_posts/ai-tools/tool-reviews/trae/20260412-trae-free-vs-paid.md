@@ -48,7 +48,7 @@ cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&
 
 但有些情况，确实值得花那$20。
 
-- 如果你觉得$20/月太贵，可以看看我整理的[国内AI编码套餐对比表](https://www.python-office.com/openclaw/coding-plan/)，最低只需要一杯奶茶钱就能用上类似功能。
+- 如果你觉得$20/月太贵，可以看看我整理的[国内AI编码套餐对比表](https://www.python-office.com/token)，最低只需要一杯奶茶钱就能用上类似功能。
 
 ---
 

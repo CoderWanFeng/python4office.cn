@@ -24,7 +24,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically learn about various vendors' Coding Plans?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically learn about various vendors' Coding Plans?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is Programmer Wan Feng.
 
@@ -127,14 +127,14 @@ Specific prices are based on the official website, but considering the convenien
 
 ## Related Reading
 
-- [💡 Understanding Coding Plans in One Article: What is AI Programming Subscription?](https://www.python-office.com/openclaw/coding-plan/)
+- [💡 Understanding Coding Plans in One Article: What is AI Programming Subscription?](https://www.python-office.com/token)
 - [🔥 How to Use Volcano Ark Coding Plan? Detailed Tutorial](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-tutorial/)
 - [📊 Horizontal Comparison of AI Programming Tools, Double Efficiency with the Right Tools](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
 - [💰 Developer's Money-Saving Guide: These AI Tools Are Free](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

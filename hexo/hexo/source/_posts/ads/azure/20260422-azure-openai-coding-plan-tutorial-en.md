@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically understand Coding Plans from major vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically understand Coding Plans from major vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -37,7 +37,7 @@ Today I bring you a **practical tutorial** for Azure OpenAI Coding Plan, teachin
 
 ### Step 1: Visit Official Website
 
-**👉 [Click to view Azure OpenAI Coding Plan details](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to view Azure OpenAI Coding Plan details](https://www.python-office.com/token)**
 
 ### Step 2: Apply for Access
 
@@ -176,14 +176,14 @@ Yes, Azure OpenAI data isn't used for model training, with enterprise-level secu
 
 ## Related Reading
 
-- [💡 A Comprehensive Guide to Coding Plan: What is AI Programming Subscription?](https://www.python-office.com/openclaw/coding-plan/)
+- [💡 A Comprehensive Guide to Coding Plan: What is AI Programming Subscription?](https://www.python-office.com/token)
 - [🔥 How to Use Volcano Ark Coding Plan? Detailed Tutorial](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-tutorial/)
 - [📊 Horizontal Comparison of AI Programming Tools, Choosing the Right Tool Doubles Efficiency](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
 - [💰 Programmer Money-Saving Guide: These AI Tools Are Free to Use](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **More Coding Plan comparisons**：👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**：👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

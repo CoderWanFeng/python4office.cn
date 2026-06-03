@@ -78,7 +78,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 我整理了目前主流的 12 家云厂商 Coding Plan，收藏这篇，选型不迷路。
 
-👉 **汇总对比页（程序员晚枫维护）：[12家 Coding Plan 对比](https://www.python-office.com/openclaw/coding-plan/)**
+👉 **汇总对比页（程序员晚枫维护）：[12家 Coding Plan 对比](https://www.python-office.com/token)**
 
 ---
 
@@ -98,7 +98,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 ## 12家横向对比
 
-我整理了一个总表，来源：[python-office.com/openclaw/coding-plan/](https://www.python-office.com/openclaw/coding-plan/)
+我整理了一个总表，来源：[python-office.com/openclaw/coding-plan/](https://www.python-office.com/token)
 
 | 序号 | 云厂商 | 产品名称 | 个人推荐度 |
 |:---:|--------|----------|:----------:|
@@ -279,7 +279,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 每次都要去各个官网找 Coding Plan，很麻烦。
 
-后来干脆整理了一个汇总页，放在 [python-office.com/openclaw/coding-plan/](https://www.python-office.com/openclaw/coding-plan/)。
+后来干脆整理了一个汇总页，放在 [python-office.com/openclaw/coding-plan/](https://www.python-office.com/token)。
 
 **需要的自取，不用谢。**
 
@@ -287,7 +287,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 ## 怎么薅羊毛？
 
-1. 打开 [12家 Coding Plan 对比页](https://www.python-office.com/openclaw/coding-plan/)
+1. 打开 [12家 Coding Plan 对比页](https://www.python-office.com/token)
 2. 找到你需要的厂商
 3. 点击"了解详情"，注册并领取额度
 4. 开始开发！
@@ -304,7 +304,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 **收藏这个对比页，选型不迷路：**
 
-👉 [12家 Coding Plan 对比](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家 Coding Plan 对比](https://www.python-office.com/token)
 
 ---
 

@@ -29,7 +29,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 **我整理了目前最值得薅的免费AI API，收藏这篇，选型不迷路。**
 
-👉 [12家AI平台Coding Plan汇总（程序员晚枫维护）](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家AI平台Coding Plan汇总（程序员晚枫维护）](https://www.python-office.com/token)
 
 ---
 
@@ -228,7 +228,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 ### 薅羊毛步骤
 
 ```
-1. 打开 [12家AI API Coding Plan汇总](https://www.python-office.com/openclaw/coding-plan/)
+1. 打开 [12家AI API Coding Plan汇总](https://www.python-office.com/token)
 2. 找到你需要的平台
 3. 点击"申请API"，注册账号
 4. 领取免费额度
@@ -322,7 +322,7 @@ print(response.choices[0].message.content)
 
 **收藏这个对比表，选型不迷路：**
 
-👉 [12家AI API Coding Plan汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家AI API Coding Plan汇总](https://www.python-office.com/token)
 
 **获取免费额度：**
 

@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically understand Coding Plans from various vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically understand Coding Plans from various vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is programmer Wan Feng.
 
@@ -37,7 +37,7 @@ Today brings you a **practical tutorial on Tencent Cloud Coding Plan**, hand-hol
 
 ### Step 1: Visit Official Website
 
-**👉 [Click to view Tencent Cloud Coding Plan details](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to view Tencent Cloud Coding Plan details](https://www.python-office.com/token)**
 
 Find Tencent Cloud entrance and go to Hunyuan large model page.
 
@@ -141,14 +141,14 @@ Domestic access, response speed is usually within 1-3 seconds.
 
 ## Related Reading
 
-- [💡 Understanding Coding Plan in One Article: What is AI Programming Subscription?](https://www.python-office.com/openclaw/coding-plan/)
+- [💡 Understanding Coding Plan in One Article: What is AI Programming Subscription?](https://www.python-office.com/token)
 - [🔥 How to use Volcano Ark Coding Plan? Detailed Tutorial](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-tutorial/)
 - [📊 AI Programming Tools Horizontal Comparison, choose right tool, double efficiency](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
 - [💰 Developer Money-Saving Guide: These AI tools are free to use](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
 大家好，这里是程序员晚枫。
 
@@ -29,7 +29,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 ### 第一步：获取 API Key
 
-1. 访问 **👉 [百度智能云 Coding Plan 详情](https://www.python-office.com/openclaw/coding-plan/)**
+1. 访问 **👉 [百度智能云 Coding Plan 详情](https://www.python-office.com/token)**
 2. 注册百度智能云账号
 3. 开通文心一言 API 服务
 4. 获取 API Key 和 Secret Key
@@ -130,14 +130,14 @@ print(result)
 
 ## 相关阅读
 
-- [💡 一文读懂 Coding Plan：什么是 AI 编程订阅？](https://www.python-office.com/openclaw/coding-plan/)
+- [💡 一文读懂 Coding Plan：什么是 AI 编程订阅？](https://www.python-office.com/token)
 - [🔥 火山方舟 Coding Plan 怎么用？详细教程](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-tutorial/)
 - [📊 AI 编程工具横向对比，选对工具效率翻倍](https://www.python4office.cn/20260421-ai-coding-tools-compare/)
 - [💰 程序员省钱攻略：这些 AI 工具免费用](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/token)**
 
 ---
 

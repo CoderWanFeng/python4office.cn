@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want a systematic overview of all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -68,7 +68,7 @@ Optimized for domestic developers' usage habits:
 
 ### Step 1: Visit the Official Page
 
-**👉 [Click to View JD Cloud Coding Plan Details](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to View JD Cloud Coding Plan Details](https://www.python-office.com/token)**
 
 The page has a comparison of all vendors' Coding Plans — you can understand the differences between JD Cloud and others at a glance, and choose the plan most suitable for you.
 
@@ -102,7 +102,7 @@ Want to learn more about AI programming tools? Recommended reading:
 
 ---
 
-> 📢 **More Coding Plan Comparisons**: 👉 **[View All Vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan Comparisons**: 👉 **[View All Vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

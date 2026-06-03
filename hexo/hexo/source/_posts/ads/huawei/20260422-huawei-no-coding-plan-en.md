@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years Python development experience, creator of python-office open-source project
 
-> 💡 **Want to know about all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to know about all vendors' Coding Plans?** 👉 **[Click to View Coding Plan Comparison Summary](https://www.python-office.com/token)**
 
 Hey everyone, this is 程序员晚枫 (Programmer Wanfeng).
 
@@ -76,7 +76,7 @@ If you're an individual developer looking for AI programming subscription soluti
 - Supports: Doubao, DeepSeek, Kimi, MiniMax and multiple models
 - Best for: Value-conscious individual developers
 
-**👉 [Click to Learn About Volcano Ark Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to Learn About Volcano Ark Coding Plan](https://www.python-office.com/token)**
 
 ### 2. Alibaba Cloud Bailian — Complete Ecosystem
 
@@ -85,7 +85,7 @@ If you're an individual developer looking for AI programming subscription soluti
 
 ### 3. Other Vendors
 
-Many vendors have Coding Plans — **👉 [Click to View All Comparisons](https://www.python-office.com/openclaw/coding-plan/)**
+Many vendors have Coding Plans — **👉 [Click to View All Comparisons](https://www.python-office.com/token)**
 
 ## 4. Huawei AI Directions Worth Following
 
@@ -111,7 +111,7 @@ For industry applications (weather, energy, healthcare, etc.), Pangu large model
 | What are the alternatives? | Volcano Ark, Alibaba Cloud Bailian, etc. |
 | Who is Huawei AI best for? | Enterprise users, Ascend training, HarmonyOS development |
 
-**If you're an individual developer looking for AI programming subscription solution: 👉 [Click to View All Vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+**If you're an individual developer looking for AI programming subscription solution: 👉 [Click to View All Vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 
@@ -124,7 +124,7 @@ For industry applications (weather, energy, healthcare, etc.), Pangu large model
 
 ---
 
-> 📢 **Find Coding Plan**: 👉 **[Click to View All Vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **Find Coding Plan**: 👉 **[Click to View All Vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

@@ -82,7 +82,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 12家Coding Plan横向对比
 
-我整理了一个总表，来源：[python-office.com/openclaw/coding-plan/](https://www.python-office.com/openclaw/coding-plan/)
+我整理了一个总表，来源：[python-office.com/openclaw/coding-plan/](https://www.python-office.com/token)
 
 | 序号 | 云厂商 | 产品名称 | 免费额度 | 个人推荐度 |
 |------|--------|---------|---------|-----------|
@@ -304,7 +304,7 @@ client = OpenAI(
 
 **收藏这个汇总页，省钱不迷路：**
 
-👉 [12家Coding Plan对比汇总](https://www.python-office.com/openclaw/coding-plan/)
+👉 [12家Coding Plan对比汇总](https://www.python-office.com/token)
 
 **获取免费额度：**
 

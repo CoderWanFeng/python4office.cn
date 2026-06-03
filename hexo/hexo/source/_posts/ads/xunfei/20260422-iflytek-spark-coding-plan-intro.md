@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
 大家好，这里是程序员晚枫。
 
@@ -120,7 +120,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 ---
 
-> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **更多 Coding Plan 对比**：👉 **[点击查看所有厂商的 Coding Plan](https://www.python-office.com/token)**
 
 ---
 

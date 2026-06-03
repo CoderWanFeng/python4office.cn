@@ -113,7 +113,7 @@ Cursor + 火山方舟Coding Plan，是目前性价比最高的AI编程组合。
 - 常见问题解决方案
 - 推荐模型参数
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

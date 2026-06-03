@@ -267,7 +267,7 @@ def calculate_bonus(salary, performance):
 - 模型选择建议
 - 工作流优化技巧
 
-👉 [点击免费领取](https://www.python-office.com/openclaw/coding-plan/)
+👉 [点击免费领取](https://www.python-office.com/token)
 
 ---
 

@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically understand Coding Plans from major vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically understand Coding Plans from major vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -82,7 +82,7 @@ For enterprises, data security is crucial:
 
 ### Step 1: Visit Official Page
 
-**👉 [Click to view Azure OpenAI Coding Plan details](https://www.python-office.com/openclaw/coding-plan/)**
+**👉 [Click to view Azure OpenAI Coding Plan details](https://www.python-office.com/token)**
 
 ### Step 2: Apply for Access
 
@@ -134,7 +134,7 @@ print(response.choices[0].message.content)
 
 ---
 
-> 📢 **More Coding Plan comparisons**：👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**：👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 

@@ -170,7 +170,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
 
-👉 [点击免费领取《火山方舟Coding Plan配置指南》](https://www.python-office.com/openclaw/coding-plan/)**
+👉 [点击免费领取《火山方舟Coding Plan配置指南》](https://www.python-office.com/token)**
 
 ---
 

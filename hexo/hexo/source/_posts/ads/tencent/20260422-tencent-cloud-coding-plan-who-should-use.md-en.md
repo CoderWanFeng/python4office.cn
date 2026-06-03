@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Want to systematically understand Coding Plans from various vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/openclaw/coding-plan/)**
+> 💡 **Want to systematically understand Coding Plans from various vendors?** 👉 **[Click to view Coding Plan comparison summary](https://www.python-office.com/token)**
 
 Hello everyone, this is programmer Wan Feng.
 
@@ -80,7 +80,7 @@ Tencent is in the first tier of domestic cloud vendors, and Hunyuan large model 
 → Check Volcano Ark, 36 yuan/month is cheaper
 
 **4. Want to compare all options**
-→ **👉 [Click to view all vendors' Coding Plan comparison](https://www.python-office.com/openclaw/coding-plan/)**
+→ **👉 [Click to view all vendors' Coding Plan comparison](https://www.python-office.com/token)**
 
 ## 4. My Conclusion
 
@@ -106,12 +106,12 @@ Shortcomings:
 
 - [🔥 Volcano Ark Coding Plan: Possibly the best value choice](https://www.python4office.cn/ads/bytedance/huoshan/20260408-ark-coding-plan-save-money/)
 - [🤖 Alibaba Cloud Bailian Coding Plan: Full Tongyi Qianwen support](https://www.python4office.cn/ads/aliyun/codingplan/20260410-aliyun-codingplan-intro/)
-- [📊 Various Coding Plans horizontal comparison, understand at a glance which to choose](https://www.python-office.com/openclaw/coding-plan/)
+- [📊 Various Coding Plans horizontal comparison, understand at a glance which to choose](https://www.python-office.com/token)
 - [💰 Developer羊毛: These AI tools are free to use](https://www.python4office.cn/20260421-developer-save-money-guide/)
 
 ---
 
-> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/openclaw/coding-plan/)**
+> 📢 **More Coding Plan comparisons**: 👉 **[Click to view all vendors' Coding Plans](https://www.python-office.com/token)**
 
 ---
 
