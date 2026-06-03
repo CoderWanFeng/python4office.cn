@@ -311,11 +311,12 @@ cover: https://images.unsplash.com/photo-1620712941548?q=80&w=1200&auto=format&f
 
 ## 相关阅读
 
-- [孙正义说AI浪潮是互联网的50倍，我信了](https://www.python4office.cn/ai/news/20260604-sun-zhengyi-ai-wave/)
-- [OpenAI演示"无APP手机"：所有界面实时生成，传统APP要消失了？](https://www.python4office.cn/ai/news/20260604-openai-agentic-os/)
 - [2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [我用AI做PPT，同事说你是PPT设计师吗](https://mp.weixin.qq.com/s/aLo7mW3BLnglwhSZCKoOow)
 - [设计师花3天做的图，我用 AI 15分钟搞定了](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
+- [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
+- [HR看简历只花6秒，我用AI让我的简历过了第一关](https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ)
+- [我用AI做数字人播报，老板问"你什么时候请的主播？"](https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw)
 
 ---
 
