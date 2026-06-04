@@ -255,6 +255,34 @@ if [ ! -d "$HEXO_PUBLIC_DIR" ]; then
 else
     pushd "$HEXO_PUBLIC_DIR" > /dev/null
     
+    # 🛡️ 自动恢复 .git（hexo clean 会把 public/ 整个删掉，包括 .git）
+    if [ ! -d ".git" ]; then
+        log_warning "public/.git 不存在（hexo clean 删了），自动初始化..."
+        git init -b main > /dev/null 2>&1
+        git remote add deploy https://atomgit.com/python4office/hexo-public.git 2>&1
+        
+        # 创建 .gitignore
+        cat > .gitignore << 'GITIGNORE_EOF'
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+
+# 日志
+*.log
+GITIGNORE_EOF
+        
+        # 跟远端同步
+        git fetch deploy > /dev/null 2>&1
+        git reset --hard deploy/main > /dev/null 2>&1
+        
+        log_success "public/ git 仓库已重建并同步到 deploy/main"
+    fi
+    
     if ! git remote get-url deploy &>/dev/null; then
         log_warning "deploy remote 不存在，跳过推送 public/"
         log_warning "首次使用请运行: cd hexo/hexo/public && git remote add deploy https://gitcode.com/python4office/hexo-public.git"
