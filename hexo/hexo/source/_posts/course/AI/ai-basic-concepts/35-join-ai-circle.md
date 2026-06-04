@@ -1,6 +1,7 @@
 ---
 title: "AI时代，你是一个人，还是一群人？"
 date: 2026-06-04 15:20:00
+permalink: course/AI/ai-basic-concepts/35-join-ai-circle/
 categories: ["公众号文章"]
 tags: ["AI编程", "付费社群", "程序员成长", "晚枫AI圈"]
 description: 学AI最怕一个人摸索，走弯路、踩坑、半途而废。程序员晚枫邀请你加入「晚枫AI圈」，一群人一起把AI真正用起来。
