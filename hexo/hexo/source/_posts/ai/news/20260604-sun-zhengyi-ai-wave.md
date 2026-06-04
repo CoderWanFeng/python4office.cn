@@ -46,6 +46,10 @@ cover: https://images.unsplash.com/photo-1640824906?q=80&w=1200&auto=format&fit=
 
 所以，当他说"AI浪潮是互联网的50倍"时，你不能不当回事。
 
+<p align="center">
+  <img src="https://picsum.photos/seed/masayoshi-son-track-record/1000/500" alt="孙正义的科技投资战绩" width="100%"/>
+</p>
+
 ---
 
 ## 二、为什么是50倍？他在说什么？
@@ -78,6 +82,10 @@ AI时代（2023-？），还在早期，但已经出现了：
 而这，还只是AI时代的"卖铲子的"（做芯片的）。
 
 **真正的AI应用，还没有完全爆发。**
+
+<p align="center">
+  <img src="https://picsum.photos/seed/ai-50x-internet-economy/1000/500" alt="AI 浪潮的财富规模" width="100%"/>
+</p>
 
 ---
 

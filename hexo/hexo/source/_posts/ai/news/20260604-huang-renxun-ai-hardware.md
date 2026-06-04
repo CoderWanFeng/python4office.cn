@@ -90,6 +90,10 @@ cover: https://images.unsplash.com/photo-1620712941548?q=80&w=1200&auto=format&f
 
 **你的人机协作伙伴，可能3年内就会变成人形机器人。**
 
+<p align="center">
+  <img src="https://picsum.photos/seed/humanoid-robot-h2/1000/500" alt="英伟达宇树人形机器人 H2+" width="100%"/>
+</p>
+
 ---
 
 ## 二、第二招：RTX Spark，专为AI Agent打造的PC芯片
@@ -234,6 +238,10 @@ cover: https://images.unsplash.com/photo-1620712941548?q=80&w=1200&auto=format&f
 **黄仁勋的Isaac GR00T系统，就是在给所有人形机器人提供"大脑"。**
 
 **5年内，你可能真的会在家里/公司里，看到人形机器人在干活。**
+
+<p align="center">
+  <img src="https://picsum.photos/seed/ai-physical-presence/1000/500" alt="AI 物理存在" width="100%"/>
+</p>
 
 ---
 
