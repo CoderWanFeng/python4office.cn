@@ -47,6 +47,10 @@ cover: https://picsum.photos/seed/openai-phone/1200/630
 
 **所有界面，都是AI实时生成的。**
 
+<p align="center">
+  <img src="https://picsum.photos/seed/openai-agent-demo/1000/500" alt="语音指令实时生成界面演示" width="100%"/>
+</p>
+
 ---
 
 ## 二、它是怎么做到的？
@@ -90,6 +94,10 @@ OpenAI给这套系统的核心设计理念起了个名字：
 
 > **简单任务（生成界面、展示结果）→ 手机本地搞定，快**
 > **复杂任务（推理、规划、调用API）→ 交给云端GPT，准**
+
+<p align="center">
+  <img src="https://picsum.photos/seed/agentic-os-architecture/1000/500" alt="端侧+云端协同架构" width="100%"/>
+</p>
 
 ---
 
@@ -193,6 +201,10 @@ OpenAI说："端侧本地模型处理敏感数据，云端只做推理。"
 **但端侧模型，就一定安全吗？**
 
 **这个问题，可能需要几年才能回答。**
+
+<p align="center">
+  <img src="https://picsum.photos/seed/ai-privacy-trust/1000/500" alt="AI 隐私与信任" width="100%"/>
+</p>
 
 ---
 
