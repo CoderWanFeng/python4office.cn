@@ -4,7 +4,7 @@ date: 2026-06-04 02:15:00
 tags: ["AI热点", "OpenAI", "AI Agent", "无APP手机"]
 categories: ["AI资讯"]
 description: "OpenAI Voice Hack Night上，团队演示了Agentic OS原型：手机不再安装App，所有界面实时生成，传统APP要消失了？"
-cover: https://images.unsplash.com/photo-167744894538?q=80&w=1200&auto=format&fit=crop
+cover: https://picsum.photos/seed/openai-phone/1200/630
 ---
 
 <p align="center" id='进群-banner-AI'>
@@ -335,7 +335,7 @@ OpenAI演示的"无APP手机"，让我想起2010年。
 
 顺便说一句，我的AI编程实战课……
 
-**前3讲可以试听，试听链接：https://www.bilibili.com/video/BV1xxxxxx/**
+**前3讲可以试听，试听链接：https://www.bilibili.com/cheese/play/ss982042944**
 
 **科技不高冷，AI很好用。**
 
@@ -347,5 +347,5 @@ OpenAI演示的"无APP手机"，让我想起2010年。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/video/BV1xxxxxx/)
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
