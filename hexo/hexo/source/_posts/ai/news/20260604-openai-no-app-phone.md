@@ -1,5 +1,5 @@
 ---
-title: OpenAI演示"无APP手机"：所有界面实时生成，传统APP要消失了？
+title: OpenAI演示《无APP手机》：所有界面实时生成，传统APP要消失了？
 date: 2026-06-04 02:15:00
 tags: ["AI热点", "OpenAI", "AI Agent", "无APP手机"]
 categories: ["AI资讯"]
