@@ -47,7 +47,6 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 
 ## 读者交流群
 
-
 你好，我是程序员晚枫。
 
 如需学习AI编程，点击直达👉[给小白的AI编程训练营](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
