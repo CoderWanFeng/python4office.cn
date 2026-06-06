@@ -148,7 +148,7 @@ By the way, **on April 12 I will participate in Tencent Cloud Community's "Lobst
 
 If you're also using Alibaba Cloud's AI products, welcome to come and communicate on site.
 
-👉 **[Click to register for Lobster Open Class](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)**
+👉 **[Click to register for Lobster Open Class](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)**
 
 AI is a lever, not an opponent.
 

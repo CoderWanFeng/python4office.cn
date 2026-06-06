@@ -155,7 +155,7 @@ By the way, **on April 12 I will participate in Tencent Cloud Community's "Lobst
 
 If you are still struggling with what to choose, welcome to come and chat face to face.
 
-👉 **[Click to register for Lobster Open Class](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)**
+👉 **[Click to register for Lobster Open Class](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)**
 
 The choice is in your hands.
 

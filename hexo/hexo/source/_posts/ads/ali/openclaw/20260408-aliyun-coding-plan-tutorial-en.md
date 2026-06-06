@@ -190,7 +190,7 @@ By the way, if you want to learn how to use AI tools more systematically, **on A
 
 Hands-on teaching on site is more intuitive than reading articles.
 
-👉 **Registration link: https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg**
+👉 **Registration link: https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q**
 
 The choice is in your hands.
 

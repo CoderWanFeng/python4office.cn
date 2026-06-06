@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 <a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
-    	<a href="https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg">
+    	<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
   <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
 </a>
 
@@ -60,7 +60,7 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 ![免费群](https://cos.python-office.com/group/free-group.jpg)
 
 
-> 我会答疑的 付费 AI 学习交流群（9元，广告勿扰）：[点我加入](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)
+> 我会答疑的 付费 AI 学习交流群（广告勿扰）：[点我加入](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
 
 
 ## AI 学习交流

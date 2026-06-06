@@ -220,7 +220,7 @@ AI is a lever, not an opponent.
 
 By the way, if you want to learn more systematically how to save money with AI tools and how to build a cost-effective AI workflow, **on April 12 I will participate in Tencent Cloud Community's "Lobster Open Class" in Zhengzhou**, sharing "AI Practice Guide for One-Person Companies" on site.
 
-👉 **[Click to register for Lobster Open Class](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)**
+👉 **[Click to register for Lobster Open Class](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)**
 
 The choice is in your hands.
 
