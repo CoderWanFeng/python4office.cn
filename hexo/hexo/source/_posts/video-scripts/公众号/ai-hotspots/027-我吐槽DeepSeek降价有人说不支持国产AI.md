@@ -6,6 +6,33 @@ categories: ["公众号文章"]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c5?q=80&w=1200&auto=format&fit=crop
 ---
 
+<p align="center" id='进群-banner-AI'>
+    <a target="_blank" href='https://www.python4office.cn/wechat-group/'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%"/>
+    </a>
+</p>
+
+<p align="center" name="atomgit">
+    <a target="_blank" href='https://github.com/CoderWanFeng/python-office'>
+    <img src="https://img.shields.io/github/stars/CoderWanFeng/python-office.svg?style=social" alt="github star"/>
+    </a>
+        <a target="_blank" href='https://gitee.com/CoderWanFeng//python-office/'>
+		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
+	</a>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
+		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='atomgit star'/>
+	</a>
+	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
+<img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
+</a>
+<a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
+  <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
+</a>
+        <a href="https://www.python4office.cn/wechat-group/">
+  <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
+</a>
+</p>
+
 <!-- more -->
 
 ![](https://images.unsplash.com/photo-1677442136019-235d647109c5?q=80&w=800&auto=format&fit=crop)
@@ -308,4 +335,4 @@ AI公司打价格战，看起来消费者赢了——
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫，关注我，带你用AI搞钱，不做AI的韭菜。
