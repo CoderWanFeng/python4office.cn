@@ -148,7 +148,7 @@ AI编程工具的竞赛，已经从"谁技术强"变成了"谁更懂用户"。
 
 如果你也在用阿里云的AI产品，欢迎来现场交流。
 
-👉 **[点击报名龙虾公开课](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)**
+👉 **[点击报名龙虾公开课](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)**
 
 AI是杠杆，不是对手。
 

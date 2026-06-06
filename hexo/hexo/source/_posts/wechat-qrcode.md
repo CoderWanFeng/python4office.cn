@@ -45,7 +45,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 添加好友，备注里请**说明来意**，否则不通过。
 
 - 商务合作，请添加微信号：aiwf365，这个号只聊付费合作。非合作，只需咨询/交流，请加入⬇️群后私信群主
-- 读者粉丝，请加入AI 学习交流群：[点我加入](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)
+- 读者粉丝，请加入AI 学习交流群：[点我加入](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
 
 
 # 2、AI编程

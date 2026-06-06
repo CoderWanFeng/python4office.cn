@@ -306,7 +306,7 @@ Speaking of this, let me insert a message.
 
 If you happen to be in Zhengzhou, welcome to come and communicate on site.
 
-👉 **Registration link: https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg**
+👉 **Registration link: https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q**
 
 AI is a lever, not an opponent.
 

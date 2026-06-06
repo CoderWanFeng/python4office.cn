@@ -306,7 +306,7 @@ def process_data(data):
 
 如果你正好在郑州，欢迎来现场交流。
 
-👉 **报名链接：https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg**
+👉 **报名链接：https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q**
 
 AI是杠杆，不是对手。
 

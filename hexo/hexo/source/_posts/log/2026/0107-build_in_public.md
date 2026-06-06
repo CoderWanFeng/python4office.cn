@@ -143,7 +143,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 我会把我的每一个项目、每一次分享，都同步到我的AI学习交流群，并且邀请有能力、有兴趣的朋友一起加入我的项目。
 
-想关注我的AI项目的朋友，欢迎加入我的👉[AI学习交流群 · 长期有效](https://mp.weixin.qq.com/s/XQhCrkbumDqtOZXuapMpVg)
+想关注我的AI项目的朋友，欢迎加入我的👉[AI学习交流群 · 长期有效](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
 
 ---
 
