@@ -1,5 +1,5 @@
 ---
-title: 我熬了一晚上，做了一个永久免费的语音输入工具
+title: 我熬了一晚上，用Trae做了一个永久免费的语音输入工具
 date: 2026-06-07 00:00:00
 tags: [AI工具, 语音输入, 开源项目, Tauri, macOS]
 categories: [AI工具]

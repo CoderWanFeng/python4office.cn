@@ -27,7 +27,7 @@ cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit
 | 9    | 音述 (Yinshu) | https://www.yinshu.me/?ad_channel=cakegrowth&utm=cg&cgv=qmno24zk29 | 全球最强中文AI音乐创作平台 | 待补充 | 待补充 |
 | 10   | SpeedAI | https://speedai.com/?utm=cg&cgv=3mnz8wjno1 | AI Humanizer & AI Detector | https://mp.weixin.qq.com/s/z0y3wByLzfI2JRMxAT2wpQ | 待补充 |
 | 11   | 讯飞星火AstronClaw | https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05 | Cloud-Native AI Agent | 待补充 | 待补充 |
-| 12   | 白日梦AI | https://aibrm.com/?utm=cg&cgv=59ng4gjnr2 | AI视频创作类AIGC创作平台 | 待补充 | 待补充 |
+| 12   | 白日梦AI | https://aibrm.com/?utm=cg&cgv=59ng4gjnr2 | AI视频创作类AIGC创作平台 | https://mp.weixin.qq.com/s/sTFFtZDt5cSZ7TOD6wCp6w | 待补充 |
 | 13   | AiPPT 插件 | https://www.aippt.cn/plugin?utm_type=CJDHZ&utm_source=cakegrowth&utm_page=home&utm_plan=dhzfx&utm_unit=c1&utm_keyword=40515276&utm=cg&cgv=20epp9dew1 | AI智能PPT制作软件 | https://mp.weixin.qq.com/s/aLo7mW3BLnglwhSZCKoOow | 待补充 |
 | 14   | iSlide | https://www.islide.cc/landing?utm=cg&cgv=rpexy6vk90 | PPT模板下载平台 | 待补充 | 待补充 |
 | 15   | 沁言学术 (Qinyan AI) | https://app.qinyanai.com/?utm=cg&cgv=3mnz8w7no1 | AI写作与文献助手一站式平台 | 待补充 | 待补充 |
