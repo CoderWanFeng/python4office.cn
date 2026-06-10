@@ -1,8 +1,6 @@
 ---
-layout: false
 title: AI热点新闻稿创作指南
 date: 2026-06-06 22:30:00
-type: "docs"
 ---
 
 # AI热点新闻稿创作指南（ai-hotspots 专用）

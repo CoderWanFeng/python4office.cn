@@ -1,8 +1,6 @@
 ---
-layout: false
 title: 004-瑞幸点单都被AI接管了，你还在手动加班？
 date: 2026-06-10 18:41:00
-type: "docs"
 tags:
   - 书单号
   - Skill
