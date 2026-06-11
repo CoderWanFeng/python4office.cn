@@ -115,7 +115,7 @@ WonderCV让我发现：**转行不是从零，是技能迁移**。
 - [HR看简历只花6秒，我用AI让我的简历过了第一关](https://www.python4office.cn/ads/cake-growth/products/超级简历WonderCV/01-HR看简历只花6秒-我用了AI让简历过了第一关/)
 - [简历石沉大海？AI帮你优化，HR主动找上门](https://www.python4office.cn/ads/cake-growth/products/超级简历WonderCV/02-简历石沉大海-AI帮你优化-HR主动找上门/)
 - [我用AI写简历，面试率从5%涨到30%](https://www.python4office.cn/ads/cake-growth/products/超级简历WonderCV/03-我用AI写简历-面试率从5-涨到30/)
-- [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 
 ---
 
