@@ -252,7 +252,7 @@ OpenAI就从一家AI公司，变成了**全球AI基础设施提供商**。
 - [GPT-5.5突然被禁了？OpenAI内部到底发生了什么](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
 - [DeepSeek免费豆包免费ChatGPT免费——AI公司到底在图什么](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
 - [阿里用AI重新创业：3800亿砸下去，吴泳铭说翻篇归零](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
-- [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 
 ---
 
