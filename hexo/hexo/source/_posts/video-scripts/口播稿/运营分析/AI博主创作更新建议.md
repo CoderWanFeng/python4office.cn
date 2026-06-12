@@ -1,3 +1,12 @@
+---
+title: AI 博主创作更新建议
+date: 2026-06-13 00:00:00
+tags: [创作建议, 内容运营, AI博主, 账号定位, B2B转型]
+categories: [口播稿, 运营分析]
+cover: https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=400&fit=crop
+description: AI 博主从大众科普转向 B2B 团队服务的创作策略、内容栏目、平台标题打法与 7 天更新安排
+---
+
 # AI 博主创作更新建议
 
 更新时间：2026-06-13
