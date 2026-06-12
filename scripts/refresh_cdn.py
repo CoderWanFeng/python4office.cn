@@ -31,9 +31,9 @@ except ImportError:
 
 def refresh_cdn_cache():
     """刷新CDN缓存"""
-    # 从环境变量获取腾讯云凭证
-    secret_id = os.getenv('SecretId')
-    secret_key = os.getenv('SecretKey')
+    # 从环境变量获取腾讯云凭证（腾讯云官方 SDK 默认读取的名字）
+    secret_id = os.getenv('TENCENTCLOUD_SECRET_ID')
+    secret_key = os.getenv('TENCENTCLOUD_SECRET_KEY')
 
     if not secret_id or not secret_key:
         print("错误: 请设置环境变量 SecretId 和 SecretKey")
@@ -76,17 +76,17 @@ def main():
     print()
 
     # 检查环境变量
-    secret_id = os.getenv('SecretId')
-    secret_key = os.getenv('SecretKey')
+    secret_id = os.getenv('TENCENTCLOUD_SECRET_ID')
+    secret_key = os.getenv('TENCENTCLOUD_SECRET_KEY')
 
     if not secret_id or not secret_key:
         print("环境变量检查:")
-        print(f"  SecretId: {'已设置' if secret_id else '未设置'}")
-        print(f"  SecretKey: {'已设置' if secret_key else '未设置'}")
+        print(f"  TENCENTCLOUD_SECRET_ID: {'已设置' if secret_id else '未设置'}")
+        print(f"  TENCENTCLOUD_SECRET_KEY: {'已设置' if secret_key else '未设置'}")
         print()
         print("请先设置环境变量:")
-        print("  export SecretId=你的SecretId")
-        print("  export SecretKey=你的SecretKey")
+        print("  export TENCENTCLOUD_SECRET_ID=你的SecretId")
+        print("  export TENCENTCLOUD_SECRET_KEY=你的SecretKey")
         sys.exit(1)
 
     print("环境变量检查通过")
