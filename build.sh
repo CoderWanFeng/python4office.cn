@@ -44,7 +44,7 @@ handle_error() {
 }
 
 PUBLIC_REPO="https://atomgit.com/python4office/hexo-public"
-PUBLIC_DIR="/opt/workplace/pro/python4office.cn/hexo-public"
+PUBLIC_DIR="/opt/workplace/pro/opc-website/python4office.cn/hexo-public"
 
 sync_public_repo() {
     log "开始同步 public 仓库..."
@@ -56,7 +56,7 @@ sync_public_repo() {
 
     cd "$PUBLIC_DIR"
 
-    git fetch origin
+    git fetch --prune origin
 
     if git rev-parse origin/main >/dev/null 2>&1; then
         BRANCH="main"
@@ -67,16 +67,16 @@ sync_public_repo() {
     fi
 
     git reset --hard "origin/$BRANCH"
-    git clean -fd
+    git clean -fdx
 
-    log_success "public 仓库已同步到 origin/$BRANCH"
+    log_success "public 仓库已强制同步到 origin/$BRANCH"
 }
 
 # 部署到Nginx目录
 deploy_to_nginx() {
     log "开始部署到Nginx目录..."
     
-    NGINX_DIR="/opt/website/python4office.cn"
+    NGINX_DIR="/opt/website/opc-website/python4office.cn"
     
     # 检查源目录
     if [ ! -d "$PUBLIC_DIR" ]; then
