@@ -49,6 +49,7 @@ cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit
 | 2    | 在云端快速部署 Hermes Agent | https://curl.qcloud.com/uk3GZ12l | 腾讯云运营活动优惠 | 待补充 | 待补充 |
 | 3    | 腾讯云运营活动 | https://curl.qcloud.com/ybVRQYMJ | 腾讯云产品推广，多种云产品优惠 | 待补充 | 腾讯云CPS返佣计划 |
 | 4    | Hermes Agent 在线部署 | https://curl.qcloud.com/ybVRQYMJ | 腾讯云Hermes Agent在线部署版本 | 待补充 | 待补充 |
+| 5    | 晚枫AI学习群（微信社群） | https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q | 程序员晚枫亲自带队的 AI 实战社群，300+ 人陪跑 | 待补充 | 微信生态（Tencent 系），主站点顶部条推广位 |
 
 ---
 

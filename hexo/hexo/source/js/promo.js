@@ -1,7 +1,7 @@
 /*
  * 全站推广脚本（4 种广告形式，B 端友好）
  *
- *   ① 顶部公告条      — 全站每页（7 天关闭记忆）
+ *   ① 顶部公告条      — 全站每页（强制常驻，不可关闭）
  *   ⑥ 文中段落广告    — 长文（每 5 段一条，最多 2 条）
  *   ② 文末 CTA 卡片   — 文章/独立页底部
  *
@@ -12,20 +12,18 @@
   'use strict';
 
   var PROMO = {
-    // ① 顶部公告条 → 微信文章
-    topUrl: 'https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q',
-    topText: '🚀 别一个人学AI | 晚枫300+人陪跑群',
-    topCta: '加入 →',
-    topStorageKey: 'promo_top_closed_at',
-    topCloseDays: 7,
+    // ① 顶部公告条 → 腾讯 WorkBuddy 邀请通道
+    topUrl: 'https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj',
+    topText: '🎁 腾讯 WorkBuddy 邀请通道 | 领 2000 积分',
+    topCta: '领取 →',
 
-    // ⑥ 文中段落广告 → Hermes Agent（AI Agent 工程化平台）
-    inlineUrl: 'https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj',
+    // ⑥ 文中段落广告 → 晚枫 AI 学习群
+    inlineUrl: 'https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q',
     inlineEvery: 5,
     inlineMax: 1,
     inlineMinParas: 5,
     inlineVariants: [
-      { icon: '🎁', text: '邀请体验 <strong>腾讯 WorkBuddy</strong>，<strong>我的专属通道</strong>点击立领 <strong>2000 积分</strong>，150+ AI 专家团一站搞定。', btn: '立即领取 →' }
+      { icon: '🎓', text: '别一个人学 AI！<strong>晚枫 300+ 人陪跑群</strong>，从入门到变现全程陪跑，扫码即进。', btn: '立即加入 →' }
     ],
 
     // ② 文末 CTA → 秒级部署 DeepSeek 版 Claude Code（腾讯云）
@@ -44,34 +42,18 @@
     ) && !document.querySelector('#article-container .post-content');
   }
 
-  // ===== ① 顶部公告条 =====
-  function shouldShowTopBar() {
-    try {
-      var closedAt = localStorage.getItem(PROMO.topStorageKey);
-      if (!closedAt) return true;
-      return (Date.now() - parseInt(closedAt, 10)) / 86400000 > PROMO.topCloseDays;
-    } catch (e) { return true; }
-  }
-
+  // ===== ① 顶部公告条（强制常驻，不可关闭） =====
   function renderTopBar() {
     if (document.querySelector('.promo-top-bar')) return;
-    if (!shouldShowTopBar()) return;
 
     var bar = document.createElement('div');
     bar.className = 'promo-top-bar';
     bar.innerHTML =
       '<span class="promo-text">' + PROMO.topText + '</span>' +
-      '<a class="promo-cta-link" href="' + PROMO.topUrl + '" target="_blank" rel="' + REL_ATTR + '">' + PROMO.topCta + '</a>' +
-      '<button type="button" class="promo-close" aria-label="关闭推广">×</button>';
+      '<a class="promo-cta-link" href="' + PROMO.topUrl + '" target="_blank" rel="' + REL_ATTR + '">' + PROMO.topCta + '</a>';
     document.body.insertBefore(bar, document.body.firstChild);
     document.body.classList.add('promo-top-active');
     bar.style.display = 'block';
-
-    bar.querySelector('.promo-close').addEventListener('click', function () {
-      bar.style.display = 'none';
-      document.body.classList.remove('promo-top-active');
-      try { localStorage.setItem(PROMO.topStorageKey, Date.now().toString()); } catch (e) {}
-    });
   }
 
   // ===== ⑥ 文中段落广告 =====
