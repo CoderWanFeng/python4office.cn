@@ -366,6 +366,8 @@ Google广告审核的不是你的Google账号，是**你的网站**。
 - [HR看简历只花6秒，我用AI让我的简历过了第一关](https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ)
 - [我用AI做数字人播报，老板问"你什么时候请的主持人？"](https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw)
 
+- 提高广告收入：https://firebase.google.com/docs/analytics/measure-ad-revenue?hl=zh-cn
+
 ---
 
 **科技不高冷，AI很好用。**

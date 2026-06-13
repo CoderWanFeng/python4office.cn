@@ -20,13 +20,12 @@
     topCloseDays: 7,
 
     // ⑥ 文中段落广告 → Hermes Agent（AI Agent 工程化平台）
-    inlineUrl: 'https://www.aliyun.com/solution/tech-solution/hermes-agent?scm=20140722.S_card@@%E6%8A%80%E6%9C%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88@@icms3028644.S_new~UND~card.ID_card@@%E6%8A%80%E6%9C%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88@@icms3028644-RL_Hermes-LOC_2024SPSearchCard-OR_ser-PAR1_0a06dfe917792881309255033e01ae-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&userCode=t6duaoe1',
+    inlineUrl: 'https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj',
     inlineEvery: 5,
-    inlineMax: 2,
+    inlineMax: 1,
     inlineMinParas: 5,
     inlineVariants: [
-      { icon: '🤖', text: '团队想搭 <strong>自进化 AI Agent</strong>？Hermes 开源可定制，越用越聪明，支持多端触达。', btn: '了解 Hermes →' },
-      { icon: '🧠', text: '<strong>Hermes Agent</strong>：自进化记忆 + 轻量架构，把 AI Agent 落地为可控、可评估的团队生产力。', btn: '查看方案 →' }
+      { icon: '🎁', text: '邀请体验 <strong>腾讯 WorkBuddy</strong>，<strong>我的专属通道</strong>点击立领 <strong>2000 积分</strong>，150+ AI 专家团一站搞定。', btn: '立即领取 →' }
     ],
 
     // ② 文末 CTA → 秒级部署 DeepSeek 版 Claude Code（腾讯云）
