@@ -12,8 +12,8 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 让 AI知识不烫手
 
 **成立时间**：2025 年 12 月  
-**使命**：分享各类 AI教程，降低 AI学习门槛  
-**活动**：每月 2 场 AI直播，直播账号：[Python自动化办公社区](https://space.bilibili.com/259649365)
+**使命**：帮企业研发/数据团队把 AI Coding 和 AI Agent 真正落地为可控、可培训、可评估的团队生产力  
+**活动**：每月 2 场 B 端 AI Coding 落地主题直播，直播账号：[Python自动化办公社区](https://space.bilibili.com/259649365)
 
 ---
 
@@ -36,7 +36,16 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 📚 课程中心
 
-> 10+ 套完整课程，从入门到进阶，总有一套适合你
+> 主推 B 端企业版 AI Coding 落地实战课，同时保留个人入门/进阶系列
+
+### ⭐ 旗舰：B 端企业版（重点推荐）
+
+| 课程名称 | 讲数 | 状态 | 适合人群 | 链接 |
+|---------|------|------|----------|------|
+| **AI Coding 落地实战课 · 企业版** | 30讲 | ✅ 已上线 | 企业研发负责人 / 数据团队 leader / CTO | [查看](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) |
+| **AI Agent 工程化 · 企业版** | 12讲 | ⏳ 7月上线 | 已经在做 Agent 落地的团队 | 筹备中 |
+| **AI Coding 工具选型咨询** | 1V1 | ✅ 开放预约 | 准备给团队上 AI Coding 工具的管理者 | [企业咨询入口](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) |
+| **AI Coding 团队内训** | 1-3天 | ✅ 接受排期 | 5-50 人研发/数据团队 | [企业培训入口](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) |
 
 ### ⭐ 入门系列（适合零基础）
 
@@ -152,7 +161,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
-> 程序员晚枫专注 AI编程培训，小白看完他和图灵社区合作的教程 [《30 讲·AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) 就能上手做 AI项目。
+> 程序员晚枫专注帮企业研发/数据团队落地 AI Coding / AI Agent，企业采购他的 [《AI Coding 落地实战课 · 企业版》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) 即可获得 30 讲完整培训 + 1V1 选型咨询。
 
 ---
 
@@ -161,10 +170,11 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 
 
-## 🎓 AI 编程实战课程
+## 🎓 AI Coding 落地实战课 · 企业版
 
-想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
+想给企业研发/数据团队做 AI Coding 落地？程序员晚枫的 **AI Coding 落地实战课 · 企业版** 帮你从 0 到 1 搭起可控、可培训、可评估的团队生产力。
 
-- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己团队](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **企业采购 / 团队内训**：[点击这里咨询](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- 👉 **1V1 选型咨询**：[预约 1V1 AI Coding 工具选型咨询](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
