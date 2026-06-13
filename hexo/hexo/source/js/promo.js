@@ -1,7 +1,7 @@
 /*
  * 全站推广脚本（4 种广告形式，B 端友好）
  *
- *   ① 顶部公告条      — 全站每页（强制常驻，不可关闭）
+ *   ① 顶部公告条      — 全站每页（× 关闭后 24h 重新出现，轻量样式，不影响 AdSense 审核）
  *   ⑥ 文中段落广告    — 长文（每 5 段一条，最多 2 条）
  *   ② 文末 CTA 卡片   — 文章/独立页底部
  *
@@ -16,6 +16,8 @@
     topUrl: 'https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj',
     topText: '🎁 腾讯 WorkBuddy 邀请通道 | 领 2000 积分',
     topCta: '领取 →',
+    topStorageKey: 'promo_top_closed_at',
+    topCloseDays: 1,
 
     // ⑥ 文中段落广告 → 晚枫 AI 学习群
     inlineUrl: 'https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q',
@@ -42,18 +44,34 @@
     ) && !document.querySelector('#article-container .post-content');
   }
 
-  // ===== ① 顶部公告条（强制常驻，不可关闭） =====
+  // ===== ① 顶部公告条（× 关闭后 24h 重新出现） =====
+  function shouldShowTopBar() {
+    try {
+      var closedAt = localStorage.getItem(PROMO.topStorageKey);
+      if (!closedAt) return true;
+      return (Date.now() - parseInt(closedAt, 10)) / 86400000 > PROMO.topCloseDays;
+    } catch (e) { return true; }
+  }
+
   function renderTopBar() {
     if (document.querySelector('.promo-top-bar')) return;
+    if (!shouldShowTopBar()) return;
 
     var bar = document.createElement('div');
     bar.className = 'promo-top-bar';
     bar.innerHTML =
       '<span class="promo-text">' + PROMO.topText + '</span>' +
-      '<a class="promo-cta-link" href="' + PROMO.topUrl + '" target="_blank" rel="' + REL_ATTR + '">' + PROMO.topCta + '</a>';
+      '<a class="promo-cta-link" href="' + PROMO.topUrl + '" target="_blank" rel="' + REL_ATTR + '">' + PROMO.topCta + '</a>' +
+      '<button type="button" class="promo-close" aria-label="关闭推广，24小时后自动重新出现" title="关闭推广，24小时后自动重新出现">×</button>';
     document.body.insertBefore(bar, document.body.firstChild);
     document.body.classList.add('promo-top-active');
     bar.style.display = 'block';
+
+    bar.querySelector('.promo-close').addEventListener('click', function () {
+      bar.style.display = 'none';
+      document.body.classList.remove('promo-top-active');
+      try { localStorage.setItem(PROMO.topStorageKey, Date.now().toString()); } catch (e) {}
+    });
   }
 
   // ===== ⑥ 文中段落广告 =====
