@@ -6,6 +6,8 @@ categories: ["公众号文章"]
 cover: https://picsum.photos/seed/google-adsense-tutorial/1200/630
 ---
 
+![我的网站收入](https://raw.atomgit.com/user-images/assets/5027920/b475d173-8570-46cf-aab5-ca71f8ffd9fc/image.png 'image.png')
+
 大家好，我是程序员晚枫。
 
 全网搜：**程序员晚枫**，都能找到我。
@@ -34,6 +36,9 @@ cover: https://picsum.photos/seed/google-adsense-tutorial/1200/630
 
 你只要有一个能访问的网站，按下面的步骤走，**最快3分钟就能提交申请**。
 
+> 想搭建个人网站的朋友，也可以加入我的个人网站搭建课程，我的微信：aiwf365
+> 免费试听链接🔗**https://pan.quark.cn/s/7528fe2b1aba**
+
 ---
 
 ## 先说结论：开通Google广告就5步
@@ -49,6 +54,8 @@ cover: https://picsum.photos/seed/google-adsense-tutorial/1200/630
 | **5. 展示广告** | 通过后挂上广告代码 | 5分钟 |
 
 下面我一个一个讲，按顺序做就行。
+
+![](https://raw.atomgit.com/user-images/assets/5027920/5d4f7b46-5024-4d81-98c2-327f1529939f/image.png 'image.png')
 
 ---
 
@@ -108,6 +115,8 @@ Google广告审核的不是你的Google账号，是**你的网站**。
 2. **收款人姓名要和身份证一致**（后面提现要用，别填昵称）。
 3. **地址要写真实地址**，谷歌后续会寄PIN码信件来验证。
 
+![](https://raw.atomgit.com/user-images/assets/5027920/93b40b9e-72cd-441a-8cf2-a285dcf35b0c/image.png 'image.png')
+
 ---
 
 ## 第三步：把验证代码贴到网站
@@ -117,6 +126,8 @@ Google广告审核的不是你的Google账号，是**你的网站**。
 ```html
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxx" crossorigin="anonymous"></script>
 ```
+
+![](https://raw.atomgit.com/user-images/assets/5027920/9f30f314-5fc6-41e0-ad61-44b84e732782/image.png 'image.png')
 
 你要做的事很简单：
 
@@ -172,6 +183,8 @@ Google广告审核的不是你的Google账号，是**你的网站**。
 
 通过之后，AdSense 后台会出现"**广告**"选项。
 
+![](https://raw.atomgit.com/user-images/assets/5027920/968f10a1-55f5-4790-ac6b-d0b1ae6919f8/image.png 'image.png')
+
 你有两种选择：
 
 ### 1. 自动广告（推荐新手）
@@ -208,6 +221,8 @@ Google广告审核的不是你的Google账号，是**你的网站**。
 
 账户余额超过100美元，下个月谷歌就会**自动打款**。
 
+![](https://raw.atomgit.com/user-images/assets/5027920/b94ec16f-26e4-4228-ac1f-294776ce9677/image.png 'image.png')
+
 打款方式：
 
 - **电汇到银行账户**（推荐，国内主流银行都支持）
@@ -220,6 +235,9 @@ Google广告审核的不是你的Google账号，是**你的网站**。
 - 老站收益普遍比新站好——所以**早开通，早开始累积**。
 
 所以这事的关键不是"什么时候能提现"，而是**今天就把广告位先挂上**。
+
+> 想搭建个人网站的朋友，也可以加入我的个人网站搭建课程，我的微信：aiwf365
+> 免费试听链接🔗**https://pan.quark.cn/s/7528fe2b1aba**
 
 ---
 
@@ -309,7 +327,7 @@ Google广告审核的不是你的Google账号，是**你的网站**。
 
 ---
 
-顺便说一句，我的**AI编程实战课**已经更新到第6期了。
+顺便说一句，我的**AI编程实战课**已经更新到第26期了。
 
 里面有我从0搭建网站、用AI做内容、自动变现的完整流程。
 
