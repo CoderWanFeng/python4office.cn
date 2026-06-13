@@ -12,10 +12,10 @@
   'use strict';
 
   var PROMO = {
-    // ① 顶部公告条 → GStack（AI Coding 工具套件）
-    topUrl: 'https://www.aliyun.com/solution/tech-solution/gstack?scm=20140722.M_11009943.P_102.MO_4509-ID_10998087-MID_10998087-CID_10998087-ST_14271-V_1&source=5176.29345612&userCode=t6duaoe1',
-    topText: '�️ GStack：Claude Code + 23 项技能 · 一人一支团队',
-    topCta: '立即试用 →',
+    // ① 顶部公告条 → 微信文章
+    topUrl: 'https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q',
+    topText: '🚀 别一个人学AI | 晚枫300+人陪跑群',
+    topCta: '加入 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 7,
 
