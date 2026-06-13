@@ -1,6 +1,6 @@
 ---
 title: "我用AI做了个网站，30天后靠Google广告赚了杯咖啡钱"
-date: 2026-06-11 14:30:00
+date: 2026-06-14 14:30:00
 tags: ["公众号文章", "AI变现", "Google广告", "个人网站", "副业"]
 categories: ["公众号文章"]
 cover: https://picsum.photos/seed/google-adsense-revenue/1200/630
