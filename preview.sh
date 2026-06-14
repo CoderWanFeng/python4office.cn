@@ -13,6 +13,20 @@ NC='\033[0m' # No Color
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_FILE="$SCRIPT_DIR/preview.log"
 
+# 检查并清理过大的旧日志（>5M 或 >7天）
+if [ -f "$LOG_FILE" ]; then
+    file_size=$(stat -f%z "$LOG_FILE" 2>/dev/null || echo 0)
+    file_mtime=$(stat -f%m "$LOG_FILE" 2>/dev/null || echo 0)
+    now=$(date +%s)
+    size_mb=$((file_size / 1024 / 1024))
+    age_days=$(( (now - file_mtime) / 86400 ))
+
+    if [ "$size_mb" -gt 5 ] || [ "$age_days" -gt 7 ]; then
+        echo -e "${YELLOW}旧日志清理: ${size_mb}M, ${age_days}天前 -> 删除${NC}"
+        rm "$LOG_FILE"
+    fi
+fi
+
 # 清空旧日志，重新开始记录
 > "$LOG_FILE"
 

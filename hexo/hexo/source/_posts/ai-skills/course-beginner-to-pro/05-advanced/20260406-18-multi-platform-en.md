@@ -1,5 +1,5 @@
 ---
-title: "Lecture 18: Multi-Platform Skill Adaptation and Migration"
+title: 'Lecture 18: Multi-Platform Skill Adaptation and Migration'
 date: 2026-04-06 35:00:00
 tags: ["AI Skill", "Advanced Development", "Multi-Platform"]
 categories: ["AI Skills Course"]

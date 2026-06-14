@@ -1,5 +1,5 @@
 ---
-title: "OpenAI Suddenly Drops a Perk: 6 Months of Pro for $0! The Open-Source Maintainer Application Guide"
+title: 'OpenAI Suddenly Drops a Perk: 6 Months of Pro for $0! The Open-Source Maintainer Application Guide'
 date: 2026-06-14 09:00:00
 tags: ["Public Account Article", "OpenAI", "ChatGPT Pro", "Open Source Perks", "AI Tools"]
 categories: ["Public Account Article"]

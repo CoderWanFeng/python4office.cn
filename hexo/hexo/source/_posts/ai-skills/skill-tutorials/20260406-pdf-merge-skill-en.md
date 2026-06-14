@@ -1,5 +1,5 @@
 ---
-title: "PDF Merge Split Skill Complete Tutorial: One-Click Process Hundreds of PDF Files"
+title: 'PDF Merge Split Skill Complete Tutorial: One-Click Process Hundreds of PDF Files'
 date: 2026-04-06 10:40:00
 tags: [PDF, Skill, Merge, Split, AI Office, Tutorial]
 categories: [AI Skills, Skill Tutorial]

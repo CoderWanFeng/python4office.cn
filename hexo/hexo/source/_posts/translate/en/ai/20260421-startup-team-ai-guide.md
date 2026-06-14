@@ -1,5 +1,5 @@
 ---
-title: "Startup Teams Must Read: How to Use Free AI Credits in 2026 to Rapidly Build Product Prototypes"
+title: 'Startup Teams Must Read: How to Use Free AI Credits in 2026 to Rapidly Build Product Prototypes'
 date: 2026-04-21 15:03:00
 tags: [Startup Team, AI Development, Coding Plan, Product Prototype, DeepSeek]
 categories: [AI Tools]

@@ -1,5 +1,5 @@
 ---
-title: "Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users"
+title: 'Lecture 2: Skill Ecosystem Panorama: Platforms, Developers, Users'
 date: 2026-04-06 11:30:00
 tags: ["AI Skill", "Ecosystem", "Platform Comparison"]
 categories: ["AI Skills Course"]

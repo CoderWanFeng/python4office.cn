@@ -1,5 +1,5 @@
 ---
-title: "用 MiniMax TOKEN Plan 养龙虾：7x24 赚钱神器实测"
+title: '用 MiniMax TOKEN Plan 养龙虾：7x24 赚钱神器实测'
 date: 2026-04-22 00:00:00
 categories:
 - AI工具评测

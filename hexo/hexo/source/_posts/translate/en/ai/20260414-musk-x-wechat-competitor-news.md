@@ -1,5 +1,5 @@
 ---
-title: "Musk Strikes! X App Targets WeChat — The Super App War of the AI Era Begins"
+title: 'Musk Strikes! X App Targets WeChat — The Super App War of the AI Era Begins'
 date: 2026-04-14 10:50:00
 author: Wanfeng
 tags:

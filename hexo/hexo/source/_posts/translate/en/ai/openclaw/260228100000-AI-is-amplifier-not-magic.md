@@ -1,5 +1,5 @@
 ---
-title: "Stop Fantasizing About AI Creating Something from Nothing: It Is Just an Amplifier of Your Business, Not a Money Tree"
+title: 'Stop Fantasizing About AI Creating Something from Nothing: It Is Just an Amplifier of Your Business, Not a Money Tree'
 date: 2026-02-28 10:00:00
 tags: [AI Programming]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop

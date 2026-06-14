@@ -1,5 +1,5 @@
 ---
-title: "OpenClaw Skill Installation and Management Guide: 1700+ Skills Await Your Exploration"
+title: 'OpenClaw Skill Installation and Management Guide: 1700+ Skills Await Your Exploration'
 date: 2026-04-06 10:32:00
 tags: [OpenClaw, Skill, AI Office, Tutorial, ClawHub]
 categories: [AI Skills, Platform Guide]

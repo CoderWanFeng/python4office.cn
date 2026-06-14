@@ -1,5 +1,5 @@
 ---
-title: "Lecture 9: OpenClaw Practice: Develop Data Processing Skill"
+title: 'Lecture 9: OpenClaw Practice: Develop Data Processing Skill'
 date: 2026-04-06 15:30:00
 tags: ["AI Skill", "OpenClaw", "Practice", "Data Processing"]
 categories: ["AI Skills Course"]

@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek Money Saving Tips! You Can Save Thousands a Year, Really Great"
+title: 'DeepSeek Money Saving Tips! You Can Save Thousands a Year, Really Great'
 date: 2026-04-22 00:00:00
 tags: ["deepseek", "money saving tips", "api"]
 categories: ["DeepSeek Practice"]

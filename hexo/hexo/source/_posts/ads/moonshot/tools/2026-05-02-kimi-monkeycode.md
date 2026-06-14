@@ -1,5 +1,5 @@
 ---
-title: "在 MonkeyCode 里使用 Kimi Coding Plan"
+title: '在 MonkeyCode 里使用 Kimi Coding Plan'
 date: 2026-05-02 23:28:00
 tags:
   - MonkeyCode

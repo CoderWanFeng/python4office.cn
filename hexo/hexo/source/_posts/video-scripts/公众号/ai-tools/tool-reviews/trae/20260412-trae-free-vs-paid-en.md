@@ -1,5 +1,5 @@
 ---
-title: "Trae Free vs Paid: How Big is the Feature Gap? Real Test Tells You"
+title: 'Trae Free vs Paid: How Big is the Feature Gap? Real Test Tells You'
 date: 2026-04-12 00:00:00
 categories:
 - AI Tools Review

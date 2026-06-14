@@ -1,5 +1,5 @@
 ---
-title: "ArkClaw at ¥40 a Month — It's Just Not Enough..."
+title: 'ArkClaw at ¥40 a Month — It's Just Not Enough...'
 date: 2026-04-12 00:00:00
 categories:
 - AI Tool Reviews

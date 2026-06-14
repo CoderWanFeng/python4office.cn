@@ -1,5 +1,5 @@
 ---
-title: "What Kind of 'Shrimp' Are You Raising? ArkClaw Zero-Barrier Out-of-the-Box Experience"
+title: 'What Kind of 'Shrimp' Are You Raising? ArkClaw Zero-Barrier Out-of-the-Box Experience'
 date: 2026-04-12 00:00:00
 categories:
 - AI Tool Reviews

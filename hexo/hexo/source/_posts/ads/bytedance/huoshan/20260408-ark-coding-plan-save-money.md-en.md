@@ -1,6 +1,6 @@
 ---
 
-title: "Volcano Ark Coding Plan Money-Saving Guide: How to Get 100 yuan Value from 36 yuan/month?"
+title: 'Volcano Ark Coding Plan Money-Saving Guide: How to Get 100 yuan Value from 36 yuan/month?'
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Save Money, AI Programming Money-Saving Tips, Coding Plan Discount, Programmer Money-Saving Guide
 description: "Programmer Wan Feng shares: Volcano Ark Coding Plan money-saving tips, get 100 yuan value from 36 yuan/month, AI programming cost control tips revealed."
 date: 2026-04-08 00:22:00

@@ -1,5 +1,5 @@
 ---
-title: "Huawei Doesn't Have Coding Plan? DeepSeek May Be the Value Champion"
+title: 'Huawei Doesn't Have Coding Plan? DeepSeek May Be the Value Champion'
 keywords: [Huawei Coding Plan, DeepSeek, Depth Seeking, Value for Money, Programmer Wan Feng]
 description: Huawei temporarily doesn't have Coding Plan? Programmer Wan Feng recommends DeepSeek, cheap price + strong effect, domestic AI value champion!
 date: 2026-04-22 23:20:00

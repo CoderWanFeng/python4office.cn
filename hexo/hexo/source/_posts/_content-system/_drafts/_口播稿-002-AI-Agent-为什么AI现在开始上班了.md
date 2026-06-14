@@ -1,9 +1,15 @@
 ---
-title: AI Agent：为什么AI现在开始"上班"了？
+title: AI Agent：为什么AI现在开始\“上班\”了？
 date: 2026-05-04
-tags: ["AI", "Agent", "趋势", "AI工具"]
-categories: ["口播稿", "AI趋势"]
-cover: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop"
+tags:
+- AI
+- Agent
+- 趋势
+- AI工具
+categories:
+- 口播稿
+- AI趋势
+cover: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop
 ---
 <!-- more -->
 

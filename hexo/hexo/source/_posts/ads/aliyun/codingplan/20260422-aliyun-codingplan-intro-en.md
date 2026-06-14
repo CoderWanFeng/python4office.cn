@@ -1,5 +1,5 @@
 ---
-title: "Alibaba Cloud Coding Plan is Here! Powered by Tongyi Qianwen, A New Choice for Programmers"
+title: 'Alibaba Cloud Coding Plan is Here! Powered by Tongyi Qianwen, A New Choice for Programmers'
 date: 2026-04-22 00:00:00
 tags: ["Alibaba Cloud", "coding plan", "ai programming", "Tongyi Qianwen"]
 categories: ["Alibaba Cloud Coding Plan"]

@@ -1,5 +1,5 @@
 ---
-title: "Lecture 8: OpenClaw Platform Deep Dive"
+title: 'Lecture 8: OpenClaw Platform Deep Dive'
 date: 2026-04-06 15:00:00
 tags: ["AI Skill", "OpenClaw", "Platform", "Open Source"]
 categories: ["AI Skills Course"]

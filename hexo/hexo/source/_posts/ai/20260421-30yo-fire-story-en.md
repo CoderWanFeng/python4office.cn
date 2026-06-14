@@ -1,5 +1,5 @@
 ---
-title: "At 30, I Was Laid Off: That Night, I Finally Understood Something"
+title: 'At 30, I Was Laid Off: That Night, I Finally Understood Something'
 date: 2026-04-21 14:43:00
 tags: [Layoff, Career, 30 Years Old, Life Reflections]
 categories: [Growth Story]

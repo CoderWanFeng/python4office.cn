@@ -1,5 +1,5 @@
 ---
-title: "Lecture 7: Coze Practice: Build Office Assistant Skill"
+title: 'Lecture 7: Coze Practice: Build Office Assistant Skill'
 date: 2026-04-06 14:30:00
 tags: ["AI Skill", "Coze", "Practice", "Office Assistant"]
 categories: ["AI Skills Course"]

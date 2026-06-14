@@ -1,5 +1,5 @@
 ---
-title: "Alibaba Cloud Bailian Coding Plan Getting Started Tutorial: Experience Tongyi Qianwen for 29 Yuan/Month (Detailed Guide with Images)"
+title: 'Alibaba Cloud Bailian Coding Plan Getting Started Tutorial: Experience Tongyi Qianwen for 29 Yuan/Month (Detailed Guide with Images)'
 tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, Coding Plan Tutorial, AI Programming Introduction]
 categories: [AI Programming, Tutorial]
 date: 2026-04-23 17:30:00

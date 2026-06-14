@@ -1,5 +1,5 @@
 ---
-title: "Lecture 3: Core Concepts of Skills: Intent, Action, Tool"
+title: 'Lecture 3: Core Concepts of Skills: Intent, Action, Tool'
 date: 2026-04-06 12:00:00
 tags: ["AI Skill", "Beginner", "Core Concepts"]
 categories: ["AI Skills Course"]

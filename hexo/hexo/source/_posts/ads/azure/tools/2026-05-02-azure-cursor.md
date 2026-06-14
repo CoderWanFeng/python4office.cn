@@ -1,5 +1,5 @@
 ---
-title: "在 Cursor 里使用 Azure OpenAI Coding Plan"
+title: '在 Cursor 里使用 Azure OpenAI Coding Plan'
 date: 2026-05-02 22:33:00
 tags:
   - Cursor

@@ -1,6 +1,6 @@
 ---
 
-title: "Alibaba Cloud Bailian Coding Plan Latest News: What New Features in 2026?"
+title: 'Alibaba Cloud Bailian Coding Plan Latest News: What New Features in 2026?'
 keywords: [Alibaba Cloud Bailian Update, Tongyi Qianwen New Features, AI Programming News, Programmer Wan Feng]
 description: "Programmer Wan Feng tracks: 2026 Alibaba Cloud Bailian Coding Plan new features summary, Tongyi Qianwen large model update content overview."
 date: 2026-04-23 21:00:00

@@ -1,6 +1,6 @@
 ---
 
-title: "Five Models Real Test on Volcano Ark Coding Plan: Doubao, GLM, DeepSeek, Kimi, MiniMax, Which is Strongest?"
+title: 'Five Models Real Test on Volcano Ark Coding Plan: Doubao, GLM, DeepSeek, Kimi, MiniMax, Which is Strongest?'
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Models Review, AI Programming Model Comparison, Doubao Code Capability, DeepSeek Programming Review
 description: "Programmer Wan Feng's real test: Five models comparison on Volcano Ark Coding Plan, Doubao, GLM, DeepSeek, Kimi, MiniMax, which is most suitable for programming?"
 date: 2026-04-08 00:24:00

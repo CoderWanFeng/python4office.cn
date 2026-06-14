@@ -1,5 +1,5 @@
 ---
-title: "X vs WeChat: Which Ecosystem Should AI Programmers Choose? In-Depth Analysis"
+title: 'X vs WeChat: Which Ecosystem Should AI Programmers Choose? In-Depth Analysis'
 date: 2026-04-14 11:00:00
 author: Wanfeng
 tags:

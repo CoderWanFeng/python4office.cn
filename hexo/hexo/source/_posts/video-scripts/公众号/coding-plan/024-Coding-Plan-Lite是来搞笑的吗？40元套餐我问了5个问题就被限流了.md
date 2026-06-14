@@ -1,5 +1,5 @@
 ---
-title: "Coding Plan Lite 是来搞笑的吗？40元套餐我问了5个问题就被限流了"
+title: 'Coding Plan Lite 是来搞笑的吗？40元套餐我问了5个问题就被限流了'
 date: 2026-06-12 12:00:00
 tags: [公众号文章, Coding Plan, 方舟 Coding Plan, AI编程, 火山方舟, 避坑]
 categories: [公众号文章]

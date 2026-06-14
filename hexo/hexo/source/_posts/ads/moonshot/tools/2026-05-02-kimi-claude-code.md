@@ -1,5 +1,5 @@
 ---
-title: "在 Claude Code 里使用 Kimi Coding Plan"
+title: '在 Claude Code 里使用 Kimi Coding Plan'
 date: 2026-05-02 23:16:00
 tags:
   - Claude Code

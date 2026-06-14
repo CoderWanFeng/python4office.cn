@@ -1,5 +1,5 @@
 ---
-title: "China Mobile Cloud Coding Plan Tutorial: Jiutian Large Model API Integration Practice (2026 Latest)"
+title: 'China Mobile Cloud Coding Plan Tutorial: Jiutian Large Model API Integration Practice (2026 Latest)'
 keywords: ["China Mobile Cloud Coding Plan Tutorial", "Jiutian LLM API", "AI Programming Tutorial", "程序员晚枫"]
 description: "Programmer Wanfeng's hands-on guide to China Mobile Cloud Coding Plan — Jiutian large model API integration practice tutorial."
 date: 2026-04-22 21:25:00

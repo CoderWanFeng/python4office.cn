@@ -1,5 +1,5 @@
 ---
-title: "The Complete 2026 AI Coding Tools Comparison: ChatGPT vs Claude vs DeepSeek vs Kimi (Must-Read for Developers)"
+title: 'The Complete 2026 AI Coding Tools Comparison: ChatGPT vs Claude vs DeepSeek vs Kimi (Must-Read for Developers)'
 date: 2026-04-21 14:45:00
 tags: ["AI Programming", "ChatGPT", "Claude", "DeepSeek", "Kimi", "Developer Tools"]
 categories: ["AI Tools"]

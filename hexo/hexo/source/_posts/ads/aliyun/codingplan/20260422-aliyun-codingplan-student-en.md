@@ -1,5 +1,5 @@
 ---
-title: "Alibaba Cloud Coding Plan Student Discounts! Money-Saving Guide, Must-Read for Students"
+title: 'Alibaba Cloud Coding Plan Student Discounts! Money-Saving Guide, Must-Read for Students'
 date: 2026-04-22 00:00:00
 tags: ["Alibaba Cloud", "coding plan", "student discounts"]
 categories: ["Alibaba Cloud Coding Plan"]

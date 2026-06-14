@@ -1,5 +1,5 @@
 ---
-title: "Student Blessing: Complete 2026 Free AI Development Resources (With Application Tutorial)"
+title: 'Student Blessing: Complete 2026 Free AI Development Resources (With Application Tutorial)'
 date: 2026-04-21 15:04:00
 tags: ["Student Free AI", "AI Learning Resources", "Coding Plan", "DeepSeek", "Student Discounts"]
 categories: ["AI Tools"]

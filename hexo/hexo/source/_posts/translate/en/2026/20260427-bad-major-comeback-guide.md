@@ -1,5 +1,5 @@
 ---
-title: "What If You Picked a Bad Major? In the AI Era, You Still Have a Comeback Opportunity"
+title: 'What If You Picked a Bad Major? In the AI Era, You Still Have a Comeback Opportunity'
 date: 2026-04-27 20:45:00
 tags: ["Major Selection", "Bad Major", "Regret", "AI Era", "Comeback", "College Entrance Exam"]
 categories: ["2026 Hot Topics"]

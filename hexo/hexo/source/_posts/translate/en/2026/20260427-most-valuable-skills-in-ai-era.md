@@ -1,5 +1,5 @@
 ---
-title: "AI Era: What Skills Are Most Valuable for Ordinary People? Not Programming, But This"
+title: 'AI Era: What Skills Are Most Valuable for Ordinary People? Not Programming, But This'
 date: 2026-04-27 20:25:00
 tags: ["AI Skills", "Learning AI", "College Major Selection", "Career Planning", "AI Era"]
 categories: ["2026 Hot Topics"]

@@ -1,6 +1,6 @@
 ---
 
-title: "Moonshot AI Kimi Coding Plan is Here! Long Context + Multi-Model, A New Force in Domestic AI Programming"
+title: 'Moonshot AI Kimi Coding Plan is Here! Long Context + Multi-Model, A New Force in Domestic AI Programming'
 keywords: [Moonshot AI Coding Plan, Kimi Coding Plan, Moonshot, AI Programming, Long Context, Programmer Wan Feng]
 description: "Programmer Wan Feng recommends: Moonshot AI Kimi Coding Plan, 128K ultra-long context window, a new force in domestic AI programming."
 date: 2026-04-22 19:00:00

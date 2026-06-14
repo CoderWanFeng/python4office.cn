@@ -1,5 +1,5 @@
 ---
-title: "在 Cursor 里使用 Kimi Coding Plan"
+title: '在 Cursor 里使用 Kimi Coding Plan'
 date: 2026-05-02 23:17:00
 tags:
   - Cursor

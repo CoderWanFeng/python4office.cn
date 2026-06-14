@@ -1,5 +1,5 @@
 ---
-title: "Lost! I Got Laid Off at 30, and the Myth of the High-Paid Programmer Is a Joke"
+title: 'Lost! I Got Laid Off at 30, and the Myth of the High-Paid Programmer Is a Joke'
 date: 2023-03-07 01:21:40
 tags: [Career]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop

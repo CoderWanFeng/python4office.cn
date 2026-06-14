@@ -1,5 +1,5 @@
 ---
-title: "Lecture 29: User Feedback and Iterative Optimization"
+title: 'Lecture 29: User Feedback and Iterative Optimization'
 date: 2026-04-06 46:00:00
 tags: ["AI Skill", "Deployment & Operations", "Data Analytics"]
 categories: ["AI Skills Course"]

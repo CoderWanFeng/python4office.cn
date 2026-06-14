@@ -1,5 +1,5 @@
 ---
-title: "108 Curated Python Libraries — A Reference Worth Bookmarking!"
+title: '108 Curated Python Libraries — A Reference Worth Bookmarking!'
 date: 2022-06-08 14:25:46
 tags: [Python Libraries]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop

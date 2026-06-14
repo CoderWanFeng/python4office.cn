@@ -1,5 +1,5 @@
 ---
-title: "在 Claude Code 里使用 DeepSeek Coding Plan"
+title: '在 Claude Code 里使用 DeepSeek Coding Plan'
 date: 2026-05-02 19:43:00
 tags:
   - Claude Code

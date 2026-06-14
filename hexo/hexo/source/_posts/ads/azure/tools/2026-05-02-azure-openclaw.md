@@ -1,5 +1,5 @@
 ---
-title: "在 OpenClaw 里使用 Azure OpenAI Coding Plan"
+title: '在 OpenClaw 里使用 Azure OpenAI Coding Plan'
 date: 2026-05-02 22:31:00
 tags:
   - OpenClaw

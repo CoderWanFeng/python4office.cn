@@ -1,5 +1,5 @@
 ---
-title: "AI Major vs Computer Science Major: How to Choose This Year? These 3 Points Make It Clear"
+title: 'AI Major vs Computer Science Major: How to Choose This Year? These 3 Points Make It Clear'
 date: 2026-04-27 20:30:00
 tags: ["College Major Selection", "AI Major", "Computer Science Major", "Application", "2026 Exam"]
 categories: ["2026 Hot Topics"]

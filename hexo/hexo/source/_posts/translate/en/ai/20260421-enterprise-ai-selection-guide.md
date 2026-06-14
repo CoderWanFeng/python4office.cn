@@ -1,5 +1,5 @@
 ---
-title: "Enterprise Selection Guide: 2026 AI Large Model Procurement Decision Handbook (With Cost Comparison)"
+title: 'Enterprise Selection Guide: 2026 AI Large Model Procurement Decision Handbook (With Cost Comparison)'
 date: 2026-04-21 15:05:00
 tags: ["Enterprise AI Selection", "AI Procurement", "Coding Plan Enterprise", "DeepSeek Enterprise", "AI Cost Comparison"]
 categories: ["AI Tools"]

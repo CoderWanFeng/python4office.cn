@@ -1,5 +1,5 @@
 ---
-title: "Just Now! DeepSeek Releases the Strongest Office Assistant — 10x Efficiency Boost for Regular Users"
+title: 'Just Now! DeepSeek Releases the Strongest Office Assistant — 10x Efficiency Boost for Regular Users'
 date: 2026-04-21 14:39:00
 tags: ["DeepSeek", "AI Office", "Efficiency Boost", "Artificial Intelligence"]
 categories: ["AI Tools"]

@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek Coding Plan is Here! Open Source + King of Cost Performance, The Wise Choice for Programmers"
+title: 'DeepSeek Coding Plan is Here! Open Source + King of Cost Performance, The Wise Choice for Programmers'
 date: 2026-04-22 19:20:00
 tags: ["deepseek", "coding plan", "ai programming", "open source large model"]
 categories: ["DeepSeek Practice"]

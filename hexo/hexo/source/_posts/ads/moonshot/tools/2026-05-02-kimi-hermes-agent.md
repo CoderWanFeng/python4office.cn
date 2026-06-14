@@ -1,5 +1,5 @@
 ---
-title: "在 Hermes Agent 里使用 Kimi Coding Plan"
+title: '在 Hermes Agent 里使用 Kimi Coding Plan'
 date: 2026-05-02 23:21:00
 tags:
   - Hermes Agent

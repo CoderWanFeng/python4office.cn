@@ -1,5 +1,5 @@
 ---
-title: "Lecture 23: Project Practice - Financial Intelligent Assistant Development Implementation"
+title: 'Lecture 23: Project Practice - Financial Intelligent Assistant Development Implementation'
 date: 2026-04-06 40:00:00
 tags: ["AI Skill", "Project Practice", "Finance"]
 categories: ["AI Skills Course"]

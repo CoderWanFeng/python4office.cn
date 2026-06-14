@@ -1,5 +1,5 @@
 ---
-title: "在 OpenClaw 里使用 Kimi Coding Plan"
+title: '在 OpenClaw 里使用 Kimi Coding Plan'
 date: 2026-05-02 23:15:00
 tags:
   - OpenClaw

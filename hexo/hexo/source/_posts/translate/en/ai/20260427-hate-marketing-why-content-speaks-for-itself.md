@@ -1,5 +1,5 @@
 ---
-title: "Why I'm Bad at Customer Service, and Hate Doing Marketing"
+title: 'Why I'm Bad at Customer Service, and Hate Doing Marketing'
 date: 2026-04-27 22:46:00
 tags: [Personal Growth, Creator Reflections, Self-media, Wanfeng the Programmer]
 categories: [Creator Reflections]

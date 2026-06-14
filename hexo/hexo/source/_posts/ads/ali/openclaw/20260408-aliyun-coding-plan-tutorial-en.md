@@ -1,5 +1,5 @@
 ---
-title: "Alibaba Cloud Coding Plan Usage Tutorial: Complete Guide from Subscription to Getting Started"
+title: 'Alibaba Cloud Coding Plan Usage Tutorial: Complete Guide from Subscription to Getting Started'
 date: 2026-04-08 00:41:00
 tags: [Alibaba Cloud CodingPlan tutorial, how to use Bailian CodingPlan, Tongyi Qianwen programming, Alibaba Cloud AI programming introduction, CodingPlan configuration]
 categories: [AI Programming, Tutorials]

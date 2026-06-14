@@ -1,5 +1,5 @@
 ---
-title: "033：ChatGPT正在变成超级App，但真正危险的不是功能多"
+title: '033：ChatGPT正在变成超级App，但真正危险的不是功能多'
 date: 2026-06-14 00:33:00
 categories:
   - 口播稿

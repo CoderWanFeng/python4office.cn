@@ -1,5 +1,5 @@
 ---
-title: "5 AI Keywords with Exploding Search Volume in 2026 - #2 Will Surprise You!"
+title: '5 AI Keywords with Exploding Search Volume in 2026 - #2 Will Surprise You!'
 date: 2026-04-10 02:40:00
 tags: ["AI", "DeepSeek", "AI Agent", "Doubao", "AI Side Hustle", "AI Office"]
 categories: ["AI Tools"]

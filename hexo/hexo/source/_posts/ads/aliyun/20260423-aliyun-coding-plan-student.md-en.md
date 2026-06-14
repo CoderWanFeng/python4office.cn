@@ -1,5 +1,5 @@
 ---
-title: "Alibaba Cloud Bailian Coding Plan Student Discount: From 29 yuan/month to 9.9 yuan, Exclusive Student Benefits!"
+title: 'Alibaba Cloud Bailian Coding Plan Student Discount: From 29 yuan/month to 9.9 yuan, Exclusive Student Benefits!'
 keywords: [Alibaba Cloud Bailian Student Discount, Tongyi Qianwen Student, AI Programming Student, Programmer Wan Feng]
 description: Student benefits! Alibaba Cloud Bailian Coding Plan student exclusive discount, from 29 yuan/month to 9.9 yuan, Tongyi Qianwen at bargain price!
 date: 2026-04-23 19:00:00

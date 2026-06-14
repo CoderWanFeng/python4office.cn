@@ -1,5 +1,5 @@
 ---
-title: "Huawei Doesn't Have Coding Plan? Don't Worry, Let's Look at Alibaba Cloud Bailian First"
+title: 'Huawei Doesn't Have Coding Plan? Don't Worry, Let's Look at Alibaba Cloud Bailian First'
 keywords: [Huawei Coding Plan, Alibaba Cloud Bailian, Tongyi Qianwen, Domestic AI Comparison, Programmer Wan Feng]
 description: Huawei temporarily doesn't have Coding Plan? Don't panic! Programmer Wan Feng recommends Alibaba Cloud Bailian, full Tongyi Qianwen support, also a top choice for domestic large models.
 date: 2026-04-22 22:30:00

@@ -1,5 +1,5 @@
 ---
-title: "GPT-4o、DeepSeek、Qwen到底选谁？3分钟搞懂GPT到底是什么"
+title: 'GPT-4o、DeepSeek、Qwen到底选谁？3分钟搞懂GPT到底是什么'
 date: 2026-04-16 16:57:00
 categories: ["公众号文章"]
 tags: ["AI编程", "AI工具", "ChatGPT", "大模型"]

@@ -1,5 +1,5 @@
 ---
-title: "AI Lobster Challenge Chongqing Station Recruitment Open"
+title: 'AI Lobster Challenge Chongqing Station Recruitment Open'
 date: 2026-04-08 08:00:00
 tags: [Offline Event, AI Programming, Chongqing, AtomGit, OpenClaw]
 categories: [Event]

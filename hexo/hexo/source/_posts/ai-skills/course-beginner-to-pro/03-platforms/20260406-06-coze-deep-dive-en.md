@@ -1,5 +1,5 @@
 ---
-title: "Lecture 6: Coze Platform Deep Dive"
+title: 'Lecture 6: Coze Platform Deep Dive'
 date: 2026-04-06 14:00:00
 tags: ["AI Skill", "Coze", "Platform"]
 categories: ["AI Skills Course"]

@@ -1,5 +1,5 @@
 ---
-title: "Codex 在国内用不了？换 WorkBuddy 3 天就能落地"
+title: 'Codex 在国内用不了？换 WorkBuddy 3 天就能落地'
 date: 2026-06-12 21:00:00
 categories:
 - AI工具评测

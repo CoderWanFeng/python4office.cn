@@ -1,5 +1,5 @@
 ---
-title: "我开通了Google广告，把申请到收款的全流程教给你"
+title: '我开通了Google广告，把申请到收款的全流程教给你'
 date: 2026-06-14 14:30:00
 tags: ["公众号文章", "Google AdSense", "AdSense开通教程", "个人网站", "副业教程"]
 categories: ["公众号文章"]

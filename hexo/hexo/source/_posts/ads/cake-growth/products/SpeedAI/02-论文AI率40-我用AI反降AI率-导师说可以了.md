@@ -1,5 +1,5 @@
 ---
-title: "02-论文AI率40%？我用AI反降AI率，导师说可以了"
+title: '02-论文AI率40%？我用AI反降AI率，导师说可以了'
 date: 2026-05-21 00:15:00
 tags: ["公众号文章", "AI工具", "AI降重", "SpeedAI"]
 categories: ["公众号文章", "Python自动化办公社区"]

@@ -1,5 +1,5 @@
 ---
-title: "Use AtomCode! No Code Needed, Understand and Modify Open Source Projects"
+title: 'Use AtomCode! No Code Needed, Understand and Modify Open Source Projects'
 date: 2026-04-22 10:00:00
 tags: ["AI Programming", "AtomCode", "Open Source Projects"]
 categories: ["AI Tools"]

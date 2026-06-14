@@ -1,5 +1,5 @@
 ---
-title: "Tencent Cloud Coding Plan Student Discount: From 49 yuan/month to 19 yuan, Students Can Afford It!"
+title: 'Tencent Cloud Coding Plan Student Discount: From 49 yuan/month to 19 yuan, Students Can Afford It!'
 keywords: [Tencent Cloud Coding Plan Student Discount, Tencent Hunyuan Student, AI Programming Student, 程序员晚枫]
 description: Student benefits! Tencent Cloud Coding Plan student exclusive discount, from 49 yuan/month to 19 yuan, Hunyuan large model at bargain price!
 date: 2026-04-23 14:00:00

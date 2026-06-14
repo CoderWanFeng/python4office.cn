@@ -1,5 +1,5 @@
 ---
-title: "在 Codex CLI 里使用 Kimi Coding Plan"
+title: '在 Codex CLI 里使用 Kimi Coding Plan'
 date: 2026-05-02 23:25:00
 tags:
   - Codex CLI

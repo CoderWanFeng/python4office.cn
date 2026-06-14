@@ -1,5 +1,5 @@
 ---
-title: "在 Grok CLI 里使用 Kimi Coding Plan"
+title: '在 Grok CLI 里使用 Kimi Coding Plan'
 date: 2026-05-02 23:24:00
 tags:
   - Grok CLI

@@ -1,5 +1,5 @@
 ---
-title: "在 OpenCode 里使用 DeepSeek Coding Plan"
+title: '在 OpenCode 里使用 DeepSeek Coding Plan'
 date: 2026-05-02 19:46:00
 tags:
   - OpenCode

@@ -1,5 +1,5 @@
 ---
-title: "在 Codex CLI 里使用智谱 GLM Coding Plan"
+title: '在 Codex CLI 里使用智谱 GLM Coding Plan'
 date: 2026-05-02 22:55:00
 tags:
   - Codex CLI

@@ -1,6 +1,6 @@
 ---
 
-title: "Tencent Cloud Coding Plan vs Volcano Ark: 49 yuan vs 36 yuan, Multi-Model or WeChat Ecosystem?"
+title: 'Tencent Cloud Coding Plan vs Volcano Ark: 49 yuan vs 36 yuan, Multi-Model or WeChat Ecosystem?'
 keywords: [Tencent Cloud vs Volcano Ark, Coding Plan Comparison, Tencent Hunyuan, 程序员晚枫]
 description: "Programmer Wan Feng compares: Tencent Cloud Coding Plan (49 yuan/month) vs Volcano Ark (36 yuan/month), unlimited multi-model vs WeChat ecosystem, which do you choose?"
 date: 2026-04-23 15:30:00

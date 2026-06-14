@@ -1,5 +1,5 @@
 ---
-title: "2026 College Entrance Exam Application Guide: How to Choose an AI Major? These 4 Directions Are Safest"
+title: '2026 College Entrance Exam Application Guide: How to Choose an AI Major? These 4 Directions Are Safest'
 date: 2026-04-27 20:00:00
 tags: ["College Entrance Exam", "AI Major", "Application", "Major Selection", "2026 Exam"]
 categories: ["2026 Hot Topics"]

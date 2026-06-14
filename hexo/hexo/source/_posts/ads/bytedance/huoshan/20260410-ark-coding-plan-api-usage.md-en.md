@@ -1,5 +1,5 @@
 ---
-title: "Volcano Ark Coding Plan API Call Details: Code Integration Practice"
+title: 'Volcano Ark Coding Plan API Call Details: Code Integration Practice'
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan API, AI Programming API Access, Code Call Examples, API Tutorial
 description: "Programmer Wan Feng explains: Volcano Ark Coding Plan API call practice, code integration examples, hand-holding you to use API to implement AI programming."
 date: 2026-04-10 00:05:00

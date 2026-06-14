@@ -1,5 +1,5 @@
 ---
-title: "AI Writing Monetization! From 0 to 1, You'll Know How to Start After Reading This"
+title: 'AI Writing Monetization! From 0 to 1, You'll Know How to Start After Reading This'
 date: 2026-04-22 00:00:00
 tags: ["AI Side Hustle", "AI Writing", "Side Hustle Monetization"]
 categories: ["AI Side Hustle Monetization"]

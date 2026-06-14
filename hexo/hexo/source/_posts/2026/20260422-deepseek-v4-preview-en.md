@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek V4 is Coming! 1M Context + Fully Open Source, Programmers Collectively Explode"
+title: 'DeepSeek V4 is Coming! 1M Context + Fully Open Source, Programmers Collectively Explode'
 date: 2026-04-22 00:00:00
 tags: ["deepseek", "ai programming", "LLM", "open source", "claude"]
 categories: ["2026 Hot Topics"]

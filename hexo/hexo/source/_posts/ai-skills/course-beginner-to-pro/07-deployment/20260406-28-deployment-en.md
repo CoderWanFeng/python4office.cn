@@ -1,5 +1,5 @@
 ---
-title: "Lecture 28: Skill Deployment and Publishing"
+title: 'Lecture 28: Skill Deployment and Publishing'
 date: 2026-04-06 45:00:00
 tags: ["AI Skill", "Deployment & Operations", "Publishing"]
 categories: ["AI Skills Course"]

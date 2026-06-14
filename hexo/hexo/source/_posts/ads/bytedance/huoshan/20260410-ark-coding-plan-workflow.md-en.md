@@ -1,6 +1,6 @@
 ---
 
-title: "My AI Programming Workflow: One Day of Volcano Ark Coding Plan Usage Record"
+title: 'My AI Programming Workflow: One Day of Volcano Ark Coding Plan Usage Record'
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan Workflow, AI Programming Workflow, Programmer Daily Life, AI Efficiency Practice
 description: "Programmer Wan Feng shares: My AI programming workflow, one day of Volcano Ark Coding Plan usage record, real programmer efficiency improvement practice sharing."
 date: 2026-04-10 00:09:00

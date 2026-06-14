@@ -1,5 +1,5 @@
 ---
-title: "iFLYTEK Spark Coding Plan is Here! Domestic Large Model + Voice Integration, A New Choice for AI Programming"
+title: 'iFLYTEK Spark Coding Plan is Here! Domestic Large Model + Voice Integration, A New Choice for AI Programming'
 keywords: [iFLYTEK Spark Coding Plan, iFLYTEK Spark, AI Programming, iFlytek, Programmer Wan Feng]
 description: "Programmer Wan Feng recommends: iFLYTEK Spark Coding Plan, voice + large model dual capability, a new choice for domestic AI programming."
 date: 2026-04-22 18:20:00

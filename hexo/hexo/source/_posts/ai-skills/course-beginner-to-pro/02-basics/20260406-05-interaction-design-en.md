@@ -1,5 +1,5 @@
 ---
-title: "Lecture 5: Skill Interaction Design: Making Conversations More Natural"
+title: 'Lecture 5: Skill Interaction Design: Making Conversations More Natural'
 date: 2026-04-06 14:00:00
 tags: ["AI Skill", "Interaction Design", "Prompt", "User Experience"]
 categories: ["AI Skills Course"]

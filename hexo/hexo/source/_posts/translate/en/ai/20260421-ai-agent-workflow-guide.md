@@ -1,5 +1,5 @@
 ---
-title: "The AI Agent Wave Is Here: 10 Essential AI Tools for Office Workers in 2026"
+title: 'The AI Agent Wave Is Here: 10 Essential AI Tools for Office Workers in 2026'
 date: 2026-04-21 14:40:00
 tags: ["AI Tools", "AI Agent", "Efficiency Boost", "Workplace Skills"]
 categories: ["AI Tools Recommended"]

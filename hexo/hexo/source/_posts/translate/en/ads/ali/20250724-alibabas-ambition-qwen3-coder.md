@@ -1,5 +1,5 @@
 ---
-title: "Open-Sourcing Qwen3-Coder Is a Top-Level AI Power Play — Alibaba's Ambition Is No Longer Hidden"
+title: 'Open-Sourcing Qwen3-Coder Is a Top-Level AI Power Play — Alibaba's Ambition Is No Longer Hidden'
 date: 2025-07-24 16:24:04
 tags: ["Large Model Industry"]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop

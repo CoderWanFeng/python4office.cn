@@ -1,6 +1,6 @@
 ---
 
-title: "For Python Developers: Volcano Ark Coding Plan Usage Guide"
+title: 'For Python Developers: Volcano Ark Coding Plan Usage Guide'
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan, Python AI Programming, AI Writing Python, Python Development Tool
 description: "Shared by Programmer Wan Feng (Python open source project author): Python developer exclusive Volcano Ark Coding Plan usage guide, best practices for AI-assisted Python development."
 date: 2026-04-10 00:03:00

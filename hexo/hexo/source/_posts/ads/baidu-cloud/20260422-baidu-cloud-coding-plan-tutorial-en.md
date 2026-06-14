@@ -1,5 +1,5 @@
 ---
-title: "Baidu Cloud Coding Plan Tutorial: Wenxin Yiyan Access + PaddlePaddle Development Practice (2026 Latest Version)"
+title: 'Baidu Cloud Coding Plan Tutorial: Wenxin Yiyan Access + PaddlePaddle Development Practice (2026 Latest Version)'
 keywords: [Baidu Cloud Coding Plan Tutorial, Wenxin Yiyan, PaddlePaddle, AI Programming Tutorial, Programmer Wanfeng]
 description: Programmer Wanfeng teaches you how to use Baidu Cloud Coding Plan, practical tutorial on Wenxin Yiyan access and PaddlePaddle development.
 date: 2026-04-22 20:05:00

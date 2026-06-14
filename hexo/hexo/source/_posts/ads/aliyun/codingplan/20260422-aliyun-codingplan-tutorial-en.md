@@ -1,5 +1,5 @@
 ---
-title: "Alibaba Cloud Coding Plan Tutorial! From Registration to Usage, This One Article is Enough"
+title: 'Alibaba Cloud Coding Plan Tutorial! From Registration to Usage, This One Article is Enough'
 date: 2026-04-22 00:00:00
 tags: ["Alibaba Cloud", "coding plan", "ai programming", "tutorial"]
 categories: ["Alibaba Cloud Coding Plan"]

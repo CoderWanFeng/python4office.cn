@@ -1,6 +1,6 @@
 ---
 
-title: "Volcano Ark Coding Plan + Cursor Configuration Guide: Build the Strongest AI Programming Environment"
+title: 'Volcano Ark Coding Plan + Cursor Configuration Guide: Build the Strongest AI Programming Environment'
 keywords: Programmer Wan Feng, Volcano Ark Coding Plan, Cursor Configuration Tutorial, AI Programming Environment Setup, Cursor Access Volcano Engine
 description: "Programmer Wan Feng hand-holds you: Volcano Ark Coding Plan + Cursor configuration guide, build the strongest AI programming environment, complete configuration in 5 minutes."
 date: 2026-04-10 00:01:00

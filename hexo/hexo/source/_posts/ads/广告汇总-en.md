@@ -1,7 +1,8 @@
 ---
 title: Summary of Advertisements I've Done
 date: 2025-07-18 00:24:04
-tags: [Advertisement]
+tags:
+- Advertisement
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
 

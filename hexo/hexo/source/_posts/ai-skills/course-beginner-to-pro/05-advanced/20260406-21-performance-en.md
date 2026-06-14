@@ -1,5 +1,5 @@
 ---
-title: "Lecture 21: Performance Optimization and Monitoring"
+title: 'Lecture 21: Performance Optimization and Monitoring'
 date: 2026-04-06 38:00:00
 tags: ["AI Skill", "Advanced Development", "Performance Optimization"]
 categories: ["AI Skills Course"]

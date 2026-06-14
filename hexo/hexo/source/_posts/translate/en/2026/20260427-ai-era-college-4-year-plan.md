@@ -1,5 +1,5 @@
 ---
-title: "AI Era College 4-Year Plan: What to Do Each Year? Keep This Guide"
+title: 'AI Era College 4-Year Plan: What to Do Each Year? Keep This Guide'
 date: 2026-04-27 20:50:00
 tags: ["College Planning", "AI Era", "College Entrance Exam", "4-Year College", "Academic Planning", "Career Planning"]
 categories: ["2026 Hot Topics"]

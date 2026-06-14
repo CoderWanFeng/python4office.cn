@@ -1,5 +1,5 @@
 ---
-title: "After GitHub Copilot Price Hike, Why I Switched to Volcano Ark"
+title: 'After GitHub Copilot Price Hike, Why I Switched to Volcano Ark'
 keywords: [Programmer Wan Feng, Copilot Price Hike, GitHub Copilot Subscription, Volcano Ark Coding Plan, AI Programming Tool Alternative]
 description: "Programmer Wan Feng's real experience: After Copilot's sudden price hike, why I chose Volcano Ark? Stable domestic access + multi-models + 36 yuan/month, truly fragrant."
 date: 2026-04-13 00:00:00

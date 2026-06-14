@@ -1,5 +1,5 @@
 ---
-title: "Claude Code 3-Day Hands-on: This AI Programmer Made Me Both Happy and Scared"
+title: 'Claude Code 3-Day Hands-on: This AI Programmer Made Me Both Happy and Scared'
 date: 2026-02-28 17:05:00
 tags: [Claude Code, AI Programming]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop

@@ -1,5 +1,5 @@
 ---
-title: "OpenAI突然发福利：6个月Pro限时0元！开源人申请攻略，一次说清"
+title: 'OpenAI突然发福利：6个月Pro限时0元！开源人申请攻略，一次说清'
 date: 2026-06-14 09:00:00
 tags: ["公众号文章", "OpenAI", "ChatGPT Pro", "开源福利", "AI工具"]
 categories: ["公众号文章"]

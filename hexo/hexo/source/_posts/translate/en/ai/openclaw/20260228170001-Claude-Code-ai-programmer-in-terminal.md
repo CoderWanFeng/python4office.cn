@@ -1,5 +1,5 @@
 ---
-title: "I Hired an AI Programmer in My Terminal. After 3 Days, I Was Alarmed."
+title: 'I Hired an AI Programmer in My Terminal. After 3 Days, I Was Alarmed.'
 date: 2026-02-28 17:00:00
 tags: [AI Programming]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop

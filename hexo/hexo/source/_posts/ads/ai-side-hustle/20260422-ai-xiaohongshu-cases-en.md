@@ -1,5 +1,5 @@
 ---
-title: "AI Xiaohongshu Content Creation! 3 Viral Directions, You'll Know How to Write After Reading This"
+title: 'AI Xiaohongshu Content Creation! 3 Viral Directions, You'll Know How to Write After Reading This'
 date: 2026-04-22 00:00:00
 tags: ["AI Side Hustle", "Xiaohongshu", "Side Hustle Monetization"]
 categories: ["AI Side Hustle Monetization"]

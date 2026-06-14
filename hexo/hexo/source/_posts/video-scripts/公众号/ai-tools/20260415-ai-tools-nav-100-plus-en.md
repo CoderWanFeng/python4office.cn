@@ -1,5 +1,5 @@
 ---
-title: "Most Complete AI Tools Navigation 2026: 100+ Free AI Software - ChatGPT, Midjourney, Cursor and More"
+title: 'Most Complete AI Tools Navigation 2026: 100+ Free AI Software - ChatGPT, Midjourney, Cursor and More'
 date: 2026-04-15 00:00:00
 categories:
 - AI Tools

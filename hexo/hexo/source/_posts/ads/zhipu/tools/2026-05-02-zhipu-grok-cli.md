@@ -1,5 +1,5 @@
 ---
-title: "在 Grok CLI 里使用智谱 GLM Coding Plan"
+title: '在 Grok CLI 里使用智谱 GLM Coding Plan'
 date: 2026-05-02 22:54:00
 tags:
   - Grok CLI

@@ -1,6 +1,6 @@
 ---
 
-title: "Alibaba Cloud Bailian Coding Plan API Tutorial: How Programmers Integrate Tongyi Qianwen Large Model"
+title: 'Alibaba Cloud Bailian Coding Plan API Tutorial: How Programmers Integrate Tongyi Qianwen Large Model'
 keywords: [Alibaba Cloud Bailian API, Tongyi Qianwen API, AI Programming Integration, Programmer Wan Feng]
 description: "Programmer Wan Feng teaches you: Alibaba Cloud Bailian Coding Plan API integration tutorial, integrate Tongyi Qianwen in 3 steps, with code examples."
 date: 2026-04-23 20:00:00

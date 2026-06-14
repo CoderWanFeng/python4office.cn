@@ -1,5 +1,5 @@
 ---
-title: "Jensen Huang Drops a Bombshell Again! Humanoid Robot + PC Chip, AI Hardware Has Completely Changed"
+title: 'Jensen Huang Drops a Bombshell Again! Humanoid Robot + PC Chip, AI Hardware Has Completely Changed'
 date: 2026-06-04 02:12:00
 tags: ["AI News", "Jensen Huang", "NVIDIA", "Humanoid Robot", "AI Hardware"]
 categories: ["AI News"]

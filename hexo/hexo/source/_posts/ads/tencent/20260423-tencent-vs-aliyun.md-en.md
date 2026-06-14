@@ -1,6 +1,6 @@
 ---
 
-title: "Tencent Cloud vs Alibaba Cloud Coding Plan: 49 yuan vs 29 yuan, Which is More Worth It?"
+title: 'Tencent Cloud vs Alibaba Cloud Coding Plan: 49 yuan vs 29 yuan, Which is More Worth It?'
 keywords: [Tencent Cloud vs Alibaba Cloud, Coding Plan Comparison, Tencent Hunyuan vs Tongyi Qianwen, 程序员晚枫]
 description: "Programmer Wan Feng's hardcore comparison: Tencent Cloud Coding Plan (49 yuan/month) vs Alibaba Cloud Bailian (29 yuan/month), WeChat ecosystem vs Alibaba ecosystem, how to choose?"
 date: 2026-04-23 13:30:00

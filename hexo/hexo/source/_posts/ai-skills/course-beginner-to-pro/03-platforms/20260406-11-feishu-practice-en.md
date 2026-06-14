@@ -1,5 +1,5 @@
 ---
-title: "Lecture 11: Feishu CLI Practice: Team Collaboration Skill"
+title: 'Lecture 11: Feishu CLI Practice: Team Collaboration Skill'
 date: 2026-04-06 16:30:00
 tags: ["AI Skill", "Feishu", "Practice", "Team Collaboration"]
 categories: ["AI Skills Course"]

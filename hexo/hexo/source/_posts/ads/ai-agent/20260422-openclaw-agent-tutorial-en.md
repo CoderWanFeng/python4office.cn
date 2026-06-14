@@ -1,5 +1,5 @@
 ---
-title: "OpenClaw Agent Practical Tutorial! Create Your First AI Agent from Scratch, Step-by-Step Guide"
+title: 'OpenClaw Agent Practical Tutorial! Create Your First AI Agent from Scratch, Step-by-Step Guide'
 date: 2026-04-22 00:00:00
 tags: ["openclaw", "ai agent", "ai programming"]
 categories: ["AI Agent Practice"]

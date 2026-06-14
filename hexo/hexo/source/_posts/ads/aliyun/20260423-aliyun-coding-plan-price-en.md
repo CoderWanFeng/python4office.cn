@@ -1,6 +1,6 @@
 ---
 
-title: "Alibaba Cloud Bailian Coding Plan Prices Released: Starting from 29 Yuan/Month, Take Tongyi Qianwen Home!"
+title: 'Alibaba Cloud Bailian Coding Plan Prices Released: Starting from 29 Yuan/Month, Take Tongyi Qianwen Home!'
 tags: [Alibaba Cloud, Bailian, Tongyi Qianwen, Coding Plan Price, AI Programming]
 categories: [AI Programming, Tool Evaluation]
 date: 2026-04-23 17:00:00

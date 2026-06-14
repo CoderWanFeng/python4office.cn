@@ -1,5 +1,5 @@
 ---
-title: "580-Page PDF: Python for Finance - Big Data Analysis"
+title: '580-Page PDF: Python for Finance - Big Data Analysis'
 date: 2022-11-04 23:30:27
 tags: ["E-book"]
 cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop

@@ -1,5 +1,5 @@
 ---
-title: "Deep Technical Comparison: DeepSeek-V3 vs GPT-4o vs Claude 3.5 — Who Is the Strongest Code Model?"
+title: 'Deep Technical Comparison: DeepSeek-V3 vs GPT-4o vs Claude 3.5 — Who Is the Strongest Code Model?'
 date: 2026-04-21 15:06:00
 tags: [Technical Comparison, DeepSeek-V3, GPT-4o, Claude 3.5, Code Models]
 categories: [AI Tools]

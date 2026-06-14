@@ -1,5 +1,5 @@
 ---
-title: Hermes是什么？和龙虾有啥区别？一个会"长大"的AI助手
+title: Hermes是什么？和龙虾有啥区别？一个会\“长大\”的AI助手
 date: 2026-04-22 17:58:00
 author: 程序员晚枫
 categories:

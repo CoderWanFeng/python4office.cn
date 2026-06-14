@@ -1,5 +1,5 @@
 ---
-title: "Lecture 4: Your First Skill: Hello World Practice"
+title: 'Lecture 4: Your First Skill: Hello World Practice'
 date: 2026-04-06 13:00:00
 tags: ["AI Skill", "Practice", "Coze", "Beginner"]
 categories: ["AI Skills Course"]

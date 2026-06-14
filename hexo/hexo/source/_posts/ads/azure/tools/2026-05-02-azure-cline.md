@@ -1,5 +1,5 @@
 ---
-title: "在 Cline 里使用 Azure OpenAI Coding Plan"
+title: '在 Cline 里使用 Azure OpenAI Coding Plan'
 date: 2026-05-02 22:38:00
 tags:
   - Cline

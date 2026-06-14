@@ -1,5 +1,5 @@
 ---
-title: "Lecture 1: What is AI Skill? Why You Must Learn It Now?"
+title: 'Lecture 1: What is AI Skill? Why You Must Learn It Now?'
 date: 2026-04-06 11:00:00
 tags: ["AI Skill", "Beginner", "Course"]
 categories: ["AI Skills Course"]

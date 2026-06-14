@@ -1,5 +1,5 @@
 ---
-title: "Moonshot Kimi Coding Plan Tutorial: How to Use 128K Context to Process Large Code Projects (2026 Edition)"
+title: 'Moonshot Kimi Coding Plan Tutorial: How to Use 128K Context to Process Large Code Projects (2026 Edition)'
 keywords: [Kimi Coding Plan Tutorial, Moonshot AI Getting Started, Long Context Code Analysis, Programmer Wan Feng]
 description: Programmer Wan Feng teaches you hands-on how to use Moonshot Kimi Coding Plan, how to leverage 128K ultra-long context to process large code projects.
 date: 2026-04-22 19:05:00

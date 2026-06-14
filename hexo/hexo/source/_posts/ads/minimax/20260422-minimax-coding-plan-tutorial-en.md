@@ -1,5 +1,5 @@
 ---
-title: "MiniMax Coding Plan Tutorial: Multimodal Programming + Hailuo Voice Integration (2026 Latest)"
+title: 'MiniMax Coding Plan Tutorial: Multimodal Programming + Hailuo Voice Integration (2026 Latest)'
 keywords: ["MiniMax Coding Plan Tutorial", "Multimodal Programming", "Hailuo Voice", "AI Programming Tutorial", "程序员晚枫"]
 description: "Programmer Wanfeng's hands-on guide to MiniMax Coding Plan — how to use its multimodal capabilities and Hailuo Voice integration for programming."
 date: 2026-04-22 19:45:00

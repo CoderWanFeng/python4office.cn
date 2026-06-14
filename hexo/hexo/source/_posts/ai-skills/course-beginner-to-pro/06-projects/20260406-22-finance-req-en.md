@@ -1,5 +1,5 @@
 ---
-title: "Lecture 22: Project Practice - Financial Intelligent Assistant Requirements Analysis"
+title: 'Lecture 22: Project Practice - Financial Intelligent Assistant Requirements Analysis'
 date: 2026-04-06 39:00:00
 tags: ["AI Skill", "Project Practice", "Finance"]
 categories: ["AI Skills Course"]

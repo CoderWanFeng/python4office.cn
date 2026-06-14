@@ -1,5 +1,5 @@
 ---
-title: "2026 AI Model Capability Comparison: GPT-4o, DeepSeek-V3, Claude 3.5, Kimi — Who Is Stronger?"
+title: '2026 AI Model Capability Comparison: GPT-4o, DeepSeek-V3, Claude 3.5, Kimi — Who Is Stronger?'
 date: 2026-04-21 14:47:00
 tags: [AI Models, GPT-4o, DeepSeek-V3, Claude 3.5, Kimi, Model Comparison]
 categories: [AI Tools]

@@ -1,5 +1,5 @@
 ---
-title: "AI时代，你是一个人，还是一群人？"
+title: 'AI时代，你是一个人，还是一群人？'
 date: 2026-06-04 15:20:00
 permalink: course/AI/ai-basic-concepts/35-join-ai-circle/
 categories: ["公众号文章"]
