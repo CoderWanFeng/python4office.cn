@@ -1,6 +1,6 @@
 ---
 title: "🧭 白开水AI导航 更新啦！2026-06-14"
-date: 2026-06-14 14:56:14
+date: 2026-06-14 15:06:06
 categories:
   - 项目更新
 tags:
@@ -57,4 +57,16 @@ description: "汇集全网优质AI工具的导航站"
 
 ---
 
-*本文由 Git 变动自动检测生成 · 2026-06-14 14:56*
+*本文由 Git 变动自动检测生成 · 2026-06-14 15:06*
+
+## 📚 相关阅读
+
+<!-- RELATED_READING_START -->
+
+
+- 📹 [晚枫和小明的Vlog · 最近一次更新](/project-updates/20260421011720-lm-vlog-update/)
+- 📚 [python-office教程站 · GitHub](https://github.com/CoderWanFeng/python-office.com)
+- 🌍 [数字游民签证大全 · GitHub](https://github.com/CoderWanFeng/how-to-digital-nomad)
+- 📝 [md2mp微信编辑器 · 最近一次更新](/project-updates/20260421011740-md2mp-update/)
+- 🏗️ [个人网站搭建指南 · GitHub](https://github.com/CoderWanFeng/how-to-opc)
+<!-- RELATED_READING_END -->
