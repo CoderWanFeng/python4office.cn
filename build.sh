@@ -44,7 +44,7 @@ handle_error() {
 }
 
 PUBLIC_REPO="https://atomgit.com/python4office/hexo-public"
-PUBLIC_DIR="/opt/workplace/pro/opc-website/python4office.cn/hexo-public"
+PUBLIC_DIR="/opt/workplace/cache/hexo-public"
 
 sync_public_repo() {
     log "开始同步 public 仓库..."
