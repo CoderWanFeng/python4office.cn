@@ -38,6 +38,7 @@ cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit
 | 20   | MiniMax Token Plan | https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link | AI语音/音乐/视频/图片生成，邀请好友享双重好礼 |  | 好友享9折+Builder权益，你赢返利+社区特权 |
 | 21   | 腾讯云token plan| https://curl.qcloud.com/Z9TkzRuj | 腾讯云产品推广，多种云产品优惠 | 待补充 | 腾讯云CPS返佣计划 |
 | 22   | 图灵社区 - AI Python零基础实战营 | https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw | AI Python零基础实战营，面向职场人/内容创作者/转行者 | 待补充 | 图灵社区AI编程课程 |
+| 23   | B 站精品课 (晚枫AI实战课程 ep2342243) | https://www.bilibili.com/cheese/play/ep2342243 | AI编程 + 自动化办公 + AI工具三合一系统讲解 | 免费试听 | 主站点文中段落广告位 (ep2342243) |
 
 ---
 

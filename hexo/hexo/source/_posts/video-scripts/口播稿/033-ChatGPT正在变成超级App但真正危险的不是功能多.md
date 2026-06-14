@@ -1,3 +1,14 @@
+---
+title: "033：ChatGPT正在变成超级App，但真正危险的不是功能多"
+date: 2026-06-14 00:33:00
+categories:
+  - 口播稿
+tags:
+  - ChatGPT
+  - OpenAI
+  - 口播稿
+---
+
 # 033：ChatGPT正在变成超级App，但真正危险的不是功能多
 
 > 关键词：ChatGPT | 超级App | OpenAI | Codex | Apps SDK | AI入口
@@ -126,4 +137,3 @@ ChatGPT 和豆包哪个好用？
 | 默认不带货 | 无课程/产品引流 | ✅ |
 | 无医疗/法律敏感内容 | 无 | ✅ |
 | 无敏感词 | 无 | ✅ |
-

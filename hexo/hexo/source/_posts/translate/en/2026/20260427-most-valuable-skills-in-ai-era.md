@@ -1,9 +1,9 @@
 ---
-title: AI Era: What Skills Are Most Valuable for Ordinary People? Not Programming, But This
+title: "AI Era: What Skills Are Most Valuable for Ordinary People? Not Programming, But This"
 date: 2026-04-27 20:25:00
 tags: ["AI Skills", "Learning AI", "College Major Selection", "Career Planning", "AI Era"]
 categories: ["2026 Hot Topics"]
-description: In the AI era, what skills are most valuable? Many think it's programming, but it's not. This article tells you the answer.
+description: "In the AI era, what skills are most valuable? Many think it's programming, but it's not. This article tells you the answer."
 keywords: ["What to learn in AI era", "AI skills", "What ordinary people should learn", "College major selection", "Skill planning"]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 translation:

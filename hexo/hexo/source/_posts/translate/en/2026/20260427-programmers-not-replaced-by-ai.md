@@ -1,5 +1,5 @@
 ---
-title: Will AI Replace Programmers? Don't Be Absurd! The Truth: Every Industry Needs Programmers
+title: "Will AI Replace Programmers? Don't Be Absurd! The Truth: Every Industry Needs Programmers"
 date: 2026-04-27 20:15:00
 tags: ["Programmer", "AI Replacing Programmers", "Learning Programming", "College Major Selection", "AI Myths"]
 categories: ["2026 Hot Topics"]

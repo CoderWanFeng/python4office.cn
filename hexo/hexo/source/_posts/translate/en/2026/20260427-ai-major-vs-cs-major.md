@@ -1,9 +1,9 @@
 ---
-title: AI Major vs Computer Science Major: How to Choose This Year? These 3 Points Make It Clear
+title: "AI Major vs Computer Science Major: How to Choose This Year? These 3 Points Make It Clear"
 date: 2026-04-27 20:30:00
 tags: ["College Major Selection", "AI Major", "Computer Science Major", "Application", "2026 Exam"]
 categories: ["2026 Hot Topics"]
-description: What's the difference between AI major and Computer Science major? How to choose for this year's college entrance exam? This article analyzes curriculum, employment direction, and salary levels to help you decide.
+description: "What's the difference between AI major and Computer Science major? How to choose for this year's college entrance exam? This article analyzes curriculum, employment direction, and salary levels to help you decide."
 keywords: ["AI major vs CS major", "College major selection", "Computer science vs artificial intelligence", "2026 college entrance exam application"]
 cover: https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800
 translation:

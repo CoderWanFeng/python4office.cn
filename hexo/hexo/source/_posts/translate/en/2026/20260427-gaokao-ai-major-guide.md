@@ -1,9 +1,9 @@
 ---
-title: 2026 College Entrance Exam Application Guide: How to Choose an AI Major? These 4 Directions Are Safest
+title: "2026 College Entrance Exam Application Guide: How to Choose an AI Major? These 4 Directions Are Safest"
 date: 2026-04-27 20:00:00
 tags: ["College Entrance Exam", "AI Major", "Application", "Major Selection", "2026 Exam"]
 categories: ["2026 Hot Topics"]
-description: How to fill out your 2026 college entrance exam application? Which AI-related majors are worth applying for? This guide covers city, school, and major dimensions to help you make the optimal choice.
+description: "How to fill out your 2026 college entrance exam application? Which AI-related majors are worth applying for? This guide covers city, school, and major dimensions to help you make the optimal choice."
 keywords: ["2026 college application", "AI major selection", "How to choose a college major", "City vs school for college entrance"]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 translation:

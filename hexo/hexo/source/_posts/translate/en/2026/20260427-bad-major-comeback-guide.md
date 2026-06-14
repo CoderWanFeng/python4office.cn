@@ -1,9 +1,9 @@
 ---
-title: What If You Picked a Bad Major? In the AI Era, You Still Have a Comeback Opportunity
+title: "What If You Picked a Bad Major? In the AI Era, You Still Have a Comeback Opportunity"
 date: 2026-04-27 20:45:00
 tags: ["Major Selection", "Bad Major", "Regret", "AI Era", "Comeback", "College Entrance Exam"]
 categories: ["2026 Hot Topics"]
-description: Stuck in a major you don't like? Worried you won't find a good job after graduation? The AI era tells you: choosing the wrong major isn't the end; you still have many comeback opportunities.
+description: "Stuck in a major you don't like? Worried you won't find a good job after graduation? The AI era tells you: choosing the wrong major isn't the end; you still have many comeback opportunities."
 keywords: ["What if you picked a bad major", "Regret choosing major", "Switch majors", "AI era comeback", "College entrance exam application"]
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop
 translation:

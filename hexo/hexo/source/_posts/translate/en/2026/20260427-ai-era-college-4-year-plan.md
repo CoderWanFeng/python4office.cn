@@ -1,9 +1,9 @@
 ---
-title: AI Era College 4-Year Plan: What to Do Each Year? Keep This Guide
+title: "AI Era College 4-Year Plan: What to Do Each Year? Keep This Guide"
 date: 2026-04-27 20:50:00
 tags: ["College Planning", "AI Era", "College Entrance Exam", "4-Year College", "Academic Planning", "Career Planning"]
 categories: ["2026 Hot Topics"]
-description: How should you spend your 4 years in college to avoid being left behind in the AI era? This guide from freshman to senior year helps you make the most of college and prepare for the future.
+description: "How should you spend your 4 years in college to avoid being left behind in the AI era? This guide from freshman to senior year helps you make the most of college and prepare for the future."
 keywords: ["4-year college plan", "College planning", "AI era college student", "Freshman to senior year plan", "College entrance exam planning"]
 cover: https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800
 translation:

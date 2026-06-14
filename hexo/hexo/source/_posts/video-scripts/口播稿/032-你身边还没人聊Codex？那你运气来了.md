@@ -1,3 +1,14 @@
+---
+title: "032：你身边还没人聊Codex？那你运气来了"
+date: 2026-06-14 00:32:00
+categories:
+  - 口播稿
+tags:
+  - Codex
+  - OpenAI
+  - 口播稿
+---
+
 # 032：你身边还没人聊Codex？那你运气来了
 
 > 关键词：Codex | OpenAI | 黄仁勋 | AI编程 | 普通人机会

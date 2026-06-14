@@ -19,13 +19,13 @@
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
 
-    // ⑥ 文中段落广告 → 晚枫 AI 学习群
-    inlineUrl: 'https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q',
+    // ⑥ 文中段落广告 → B 站课程
+    inlineUrl: 'https://www.bilibili.com/cheese/play/ep2342243',
     inlineEvery: 5,
     inlineMax: 1,
     inlineMinParas: 5,
     inlineVariants: [
-      { icon: '🎓', text: '别一个人学 AI！<strong>晚枫 300+ 人陪跑群</strong>，从入门到变现全程陪跑，扫码即进。', btn: '立即加入 →' }
+      { icon: '🎬', text: 'B 站免费试听课：<strong>AI 编程 + 自动化办公 + AI 工具</strong>三合一，从零到一系统讲解。', btn: '立即试听 →' }
     ],
 
     // ② 文末 CTA → 秒级部署 DeepSeek 版 Claude Code（腾讯云）
