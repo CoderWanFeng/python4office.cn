@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&
 
 大家好，我是程序员晚枫。
 
-上次我们讲了 [Hyperframes 入门](https://www.python4office.cn/course/AI/ai-skills/platform-guides/20260615-hyperframes-quickstart/)——2 分钟出第一个 MP4。
+上次我们讲了 [Hyperframes 入门](https://www.python4office.cn/course/AI/ai-skills/video-editing-skills/20260615-hyperframes-quickstart/)——2 分钟出第一个 MP4。
 
 这次来**深挖**一个问题：
 
