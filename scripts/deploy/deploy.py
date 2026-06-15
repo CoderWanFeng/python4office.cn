@@ -36,7 +36,9 @@ except ImportError:
     pass
 
 # ---------- 配置 ----------
-REPO_ROOT = Path(__file__).resolve().parent
+SCRIPT_DIR = Path(__file__).resolve().parent
+# scripts/deploy/deploy.py -> 项目根
+REPO_ROOT = SCRIPT_DIR.parent.parent
 
 DEFAULT_HEXO_DIR = REPO_ROOT / "hexo" / "hexo"
 DEFAULT_PUBLIC_DIR = DEFAULT_HEXO_DIR / "public"
