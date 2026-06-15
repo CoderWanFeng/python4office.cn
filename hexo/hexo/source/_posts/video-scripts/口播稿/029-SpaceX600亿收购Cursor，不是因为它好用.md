@@ -35,7 +35,15 @@ categories: [口播稿, 合集1-AI热点大白话]
 - 第二行（📝文案）：不只火箭
 - 😐人物表情：冷静、严肃、像在拆一笔大账
 - 🤳人物动作：一手指向 SpaceX 字样，一手压住 Cursor 标识，表示“重点在后面”
-- 🏷️品牌展现：画面左侧放 SpaceX / SPCX 字样，右侧放 Cursor 标识，中间用金色大字写“工作入口”
+- 🏷️品牌展现：画面左侧放 SpaceX / SPCX 字样，右侧放 Cursor 标识，中间用金色大字写"工作入口"
+
+### 视频版
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1ynJp6dEHx&page=1&autoplay=0" width="100%" height="450" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+> 视频链接：[https://www.bilibili.com/video/BV1ynJp6dEHx/](https://www.bilibili.com/video/BV1ynJp6dEHx/)
+
+---
 
 ### 口播正文
 

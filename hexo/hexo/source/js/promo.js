@@ -25,7 +25,7 @@
     inlineMax: 1,
     inlineMinParas: 5,
     inlineVariants: [
-      { icon: '🎬', text: 'B 站免费试听课：<strong>AI 编程 + 自动化办公 + AI 工具</strong>三合一，从零到一系统讲解。', btn: '立即试听 →' }
+      { icon: '🎬', text: '<strong>0 基础也能学</strong>：让 AI 帮你做表、写文档、回邮件。', btn: '立即试听 →' }
     ],
 
     // ② 文末 CTA → 秒级部署 DeepSeek 版 Claude Code（腾讯云）

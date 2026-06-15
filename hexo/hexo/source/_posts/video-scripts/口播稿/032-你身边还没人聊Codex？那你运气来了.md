@@ -33,6 +33,14 @@ tags:
 - 情绪：兴奋+紧迫（"这是一个窗口期，你赶上了"）
 - 动作：身体前倾，手指镜头
 
+### 视频版
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1yNEM62ESp&page=1&autoplay=0" width="100%" height="450" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+> 视频链接：[https://www.bilibili.com/video/BV1yNEM62ESp/](https://www.bilibili.com/video/BV1yNEM62ESp/)
+
+---
+
 ### 口播正文
 
 Codex这个东西，别再观望了。

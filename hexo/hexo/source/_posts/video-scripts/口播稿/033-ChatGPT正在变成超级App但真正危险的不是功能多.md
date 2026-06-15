@@ -35,6 +35,14 @@ tags:
 - 情绪：警觉+笃定（“这不是多一个功能，是换一种工作方式”）
 - 动作：身体前倾，食指轻点桌面
 
+### 视频版
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1XRJL6JELc&page=1&autoplay=0" width="100%" height="450" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+> 视频链接：[https://www.bilibili.com/video/BV1XRJL6JELc/](https://www.bilibili.com/video/BV1XRJL6JELc/)
+
+---
+
 ### 口播正文
 
 ChatGPT 正在变成超级 App。

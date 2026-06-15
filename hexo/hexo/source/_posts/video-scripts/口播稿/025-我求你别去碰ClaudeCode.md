@@ -22,6 +22,14 @@ categories: ["口播稿"]
 - **情绪**：严肃警告 + 神秘感
 - **动作**：身体前倾，压低声音，像说秘密
 
+### 视频版
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1Pc7X6NEMX&page=1&autoplay=0" width="100%" height="450" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+> 视频链接：[https://www.bilibili.com/video/BV1Pc7X6NEMX/](https://www.bilibili.com/video/BV1Pc7X6NEMX/)
+
+---
+
 ### 口播正文
 
 真的，碰到Claude Code，
