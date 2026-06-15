@@ -42,7 +42,7 @@ echo -e "${CYAN}========================================${NC}"
 echo ""
 
 # 进入 Hexo 目录
-cd "$SCRIPT_DIR/hexo/hexo" || exit 1
+cd "$SCRIPT_DIR/../hexo/hexo" || exit 1
 
 # 检查并安装依赖
 if [ ! -d "node_modules" ]; then

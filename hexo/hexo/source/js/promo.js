@@ -14,8 +14,8 @@
   var PROMO = {
     // ① 顶部公告条 → 腾讯 WorkBuddy 邀请通道
     topUrl: 'https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj',
-    topText: '🎁 腾讯 WorkBuddy 邀请通道 | 领 2000 积分',
-    topCta: '领取 →',
+    topText: '🎁 国产 CodeX AI 办公助手 | 写方案/PPT/分析 一次搞定',
+    topCta: '免费领取 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
 
@@ -25,14 +25,14 @@
     inlineMax: 1,
     inlineMinParas: 5,
     inlineVariants: [
-      { icon: '🎬', text: '<strong>0 基础也能学</strong>：让 AI 帮你做表、写文档、回邮件。', btn: '立即试听 →' }
+      { icon: '🎬', text: '<strong>0 基础也能学</strong>：让 AI + 自动化办公 帮你做表、写文档、回邮件。', btn: '免费试听 →' }
     ],
 
-    // ② 文末 CTA → 秒级部署 DeepSeek 版 Claude Code（腾讯云）
-    footerUrl: 'https://curl.qcloud.com/I4IFQqEG',
-    footerTitle: '🚀 1 分钟部署 DeepSeek 版 Claude Code',
-    footerDesc: '腾讯云官方镜像，秒级开通，国内直连，团队可统一管理账号、配额与日志。',
-    footerBtn: '立即开通 →'
+    // ② 文末 CTA → LibTV（视频创作工具，cakegrowth 返佣）
+    footerUrl: 'https://www.liblib.tv/?sourceid=005902&utm=cg&cgv=9omkl4jn4d',
+    footerTitle: '想做视频号 / 抖音 / 小红书？',
+    footerDesc: 'AI 帮你一键生成，不用学剪辑，免费试用 3 次。',
+    footerBtn: '免费试用 →'
   };
 
   var REL_ATTR = 'nofollow sponsored noopener';

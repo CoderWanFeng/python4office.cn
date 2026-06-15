@@ -5,6 +5,12 @@ Hexo 构建产物一键部署脚本
 默认流程:
   1. 在本地执行 `hexo generate` 生成 public/
   2. 用 rsync 把 public/ 同步到远程服务器的目标目录
+  3. 调起 refresh_cdn.py 刷新腾讯云 CDN 缓存
+
+输出原则（默认安静模式）:
+  - 只打印每个阶段做了什么、结果对不对
+  - 失败时打印错误末尾
+  - 不打印 hexo 构建过程、不打印 rsync 文件级进度
 
 环境变量:
   TENCENT_SERVER_HOST    必填，服务器 host (IP 或域名)
@@ -16,16 +22,19 @@ Hexo 构建产物一键部署脚本
   SKIP_BUILD=true        跳过构建，使用现有 public/
   SKIP_CDN_REFRESH=true  跳过部署后的 CDN 刷新
   DRY_RUN=true           只打印 rsync 命令不实际执行
+  DEPLOY_VERBOSE=true    显示每个子进程的完整命令（调试用）
   HEXO_DIR               可选，默认 <repo>/hexo/hexo
 """
 
 from __future__ import annotations
 
+import contextlib
 import os
 import shlex
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -56,7 +65,10 @@ SKIP_COMPRESS_EXTS = ",".join([
     "pdf",
 ])
 
-# ---------- 颜色 ----------
+# 调试模式：显示子进程完整命令
+VERBOSE = os.environ.get("DEPLOY_VERBOSE", "").lower() in ("1", "true", "yes")
+
+# ---------- 日志 ----------
 USE_COLOR = sys.stdout.isatty()
 RESET = "\033[0m" if USE_COLOR else ""
 RED = "\033[0;31m" if USE_COLOR else ""
@@ -65,21 +77,71 @@ YELLOW = "\033[1;33m" if USE_COLOR else ""
 BLUE = "\033[0;34m" if USE_COLOR else ""
 BOLD = "\033[1m" if USE_COLOR else ""
 
+# 脚本启动时间（用于统计总耗时）
+SCRIPT_START = time.monotonic()
+
+
+def _ts() -> str:
+    return datetime.now().strftime("%H:%M:%S")
+
+
+def _elapsed() -> str:
+    """脚本启动至今耗时，例如 '12.3s'。"""
+    return f"{time.monotonic() - SCRIPT_START:.1f}s"
+
 
 def log(msg: str) -> None:
-    print(f"{BLUE}[{datetime.now().strftime('%H:%M:%S')}]{RESET} {msg}")
+    """普通信息，写到 stdout。"""
+    print(f"{BLUE}[{_ts()}]{RESET} {msg}")
 
 
 def ok(msg: str) -> None:
+    """成功标记，写到 stdout。"""
     print(f"{GREEN}✓{RESET} {msg}")
 
 
 def warn(msg: str) -> None:
-    print(f"{YELLOW}⚠{RESET} {msg}")
+    """警告（不致命），写到 stderr。"""
+    print(f"{YELLOW}⚠{RESET} {msg}", file=sys.stderr)
 
 
 def err(msg: str) -> None:
+    """错误，写到 stderr。"""
     print(f"{RED}✗{RESET} {msg}", file=sys.stderr)
+
+
+def title(text: str) -> None:
+    """脚本级别的总标题。"""
+    print()
+    print(f"{BOLD}========== {text} =========={RESET}")
+
+
+def footer(text: str) -> None:
+    """脚本级别的总结尾，附带总耗时。"""
+    print()
+    print(f"{BOLD}========== {text} (总耗时 {_elapsed()}) =========={RESET}")
+
+
+def header(text: str) -> None:
+    """阶段标题。"""
+    print(f"{BOLD}── {text} ──{RESET}")
+
+
+@contextlib.contextmanager
+def step(name: str):
+    """阶段上下文管理器。失败时不打印"完成"消息。"""
+    log(f"开始 {name}...")
+    start = time.monotonic()
+    failed = False
+    try:
+        yield
+    except BaseException:
+        failed = True
+        raise
+    finally:
+        elapsed = time.monotonic() - start
+        if not failed:
+            ok(f"{name} 完成 ({elapsed:.1f}s)")
 
 
 def die(msg: str, code: int = 1) -> None:
@@ -145,39 +207,34 @@ def _stat_public(path: Path) -> tuple[int, str]:
 def _run_hexo_generate(cfg: dict) -> None:
     if not (cfg["hexo_dir"] / "node_modules").exists():
         die(f"hexo 未安装依赖: {cfg['hexo_dir']}（先执行 cd hexo/hexo && yarn install）")
-    log(f"开始构建: {cfg['hexo_dir']}")
-    cmd = [
+    cmd_list = [
         "node",
         "--max-old-space-size=8192",
         str(cfg["hexo_dir"] / "node_modules" / "hexo" / "bin" / "hexo"),
         "generate",
         "--draft",
     ]
-    run(cmd, cwd=cfg["hexo_dir"], label="hexo generate")
+    run(cmd_list, cwd=cfg["hexo_dir"], label="hexo generate")
 
 
 def step_build(cfg: dict) -> None:
     if cfg["skip_build"]:
         log("SKIP_BUILD=true，跳过本地构建")
-    else:
-        _run_hexo_generate(cfg)
+        return
+
+    _run_hexo_generate(cfg)
 
     if not cfg["public_dir"].is_dir():
         die(f"public 目录不存在: {cfg['public_dir']}")
 
     file_count, size = _stat_public(cfg["public_dir"])
-    ok(f"public 就绪: {file_count} 个文件，{size}")
+    log(f"public 就绪: {file_count} 个文件，{size}")
 
 
 def step_sync(cfg: dict) -> None:
-    ssh_target = f"{cfg['user']}@{cfg['host']}"
-
-    log(f"开始同步: {cfg['public_dir']} -> {ssh_target}:{cfg['remote_dir']}")
-
     rsync_cmd = [
         "rsync",
         "-az",
-        "--progress",
         "--delete",
         f"--skip-compress={SKIP_COMPRESS_EXTS}",
         "--exclude=.git",
@@ -185,20 +242,22 @@ def step_sync(cfg: dict) -> None:
         "-e",
         f"ssh -i {shlex.quote(str(cfg['ssh_key']))} -p {cfg['port']} -o StrictHostKeyChecking=accept-new",
         f"{shlex.quote(str(cfg['public_dir']) + '/')}",
-        f"{ssh_target}:{cfg['remote_dir']}/",
+        f"{cfg['user']}@{cfg['host']}:{cfg['remote_dir']}/",
     ]
 
-    print(f"{BLUE}[cmd]{RESET} {' '.join(shlex.quote(c) for c in rsync_cmd)}")
-
     if cfg["dry_run"]:
-        warn("DRY_RUN=true，未实际执行")
+        log("[DRY_RUN] 跳过实际同步")
+        log("将执行: " + " ".join(shlex.quote(c) for c in rsync_cmd))
         return
 
-    run(rsync_cmd, label="rsync")
+    run(rsync_cmd, label="rsync 同步")
 
 
 def step_refresh_cdn(cfg: dict) -> None:
-    """部署成功后调用 refresh_cdn.py 刷新腾讯云 CDN 缓存。"""
+    """部署成功后调用 refresh_cdn.py 刷新腾讯云 CDN 缓存。
+
+    CDN 刷新失败不影响整体部署（仅 warn）。
+    """
     if cfg.get("skip_cdn_refresh"):
         log("SKIP_CDN_REFRESH=true，跳过 CDN 刷新")
         return
@@ -208,38 +267,70 @@ def step_refresh_cdn(cfg: dict) -> None:
         warn(f"未找到 CDN 刷新脚本: {refresh_script}，跳过")
         return
 
-    log("开始刷新 CDN 缓存...")
-    cmd = [sys.executable, str(refresh_script)]
-    print(f"{BLUE}[cmd]{RESET} {' '.join(shlex.quote(c) for c in cmd)}")
-    result = subprocess.run(cmd)
+    cmd_list = [sys.executable, str(refresh_script)]
+    if VERBOSE:
+        log("执行: " + " ".join(shlex.quote(c) for c in cmd_list))
+
+    result = subprocess.run(
+        cmd_list,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.PIPE,
+        text=True,
+    )
     if result.returncode == 0:
         ok("CDN 缓存已刷新")
     else:
-        warn(f"CDN 刷新失败 (exit {result.returncode})，但部署已完成，忽略")
+        warn(f"CDN 刷新失败 (exit {result.returncode})")
+        for line in (result.stderr or "").strip().splitlines()[-15:]:
+            err(f"  {line}")
+        warn("CDN 刷新失败，但部署已完成，忽略")
 
 
-def run(cmd: list[str], cwd: Path | None = None, label: str = "") -> None:
-    printable = " ".join(shlex.quote(c) for c in cmd)
-    print(f"{BLUE}[cmd]{RESET} {printable}")
-    result = subprocess.run(cmd, cwd=str(cwd) if cwd else None)
+def run(args: list[str], cwd: Path | None = None, label: str = "") -> None:
+    """静默执行子命令。成功时静默，失败时 die 并显示 stderr 末尾。
+
+    设置 DEPLOY_VERBOSE=true 可在执行前看到完整命令。
+    """
+    if VERBOSE:
+        log("$ " + " ".join(shlex.quote(c) for c in args))
+
+    result = subprocess.run(
+        args,
+        cwd=str(cwd) if cwd else None,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.PIPE,
+        text=True,
+    )
+
     if result.returncode != 0:
-        die(f"{label or '命令'} 失败 (exit {result.returncode})")
+        err(f"{label or '命令'} 失败 (exit {result.returncode})")
+        for line in (result.stderr or "").strip().splitlines()[-15:]:
+            err(f"  {line}")
+        sys.exit(result.returncode)
 
 
 # ---------- 入口 ----------
 def main() -> int:
-    print(f"{BOLD}========== Hexo 一键部署 =========={RESET}")
+    title("Hexo 一键部署")
     require_tools()
     cfg = load_config()
 
     log(f"目标: {cfg['user']}@{cfg['host']}:{cfg['remote_dir']}")
     log(f"本地: {cfg['public_dir']}")
 
-    step_build(cfg)
-    step_sync(cfg)
+    header("Step 1/3  构建")
+    with step("hexo generate"):
+        step_build(cfg)
+
+    header("Step 2/3  同步")
+    with step("rsync 同步"):
+        step_sync(cfg)
+
+    header("Step 3/3  CDN 刷新")
+    log("开始 CDN 刷新...")
     step_refresh_cdn(cfg)
 
-    print(f"{BOLD}========== 部署完成 =========={RESET}")
+    footer("部署完成")
     ok(f"已部署到 {cfg['user']}@{cfg['host']}:{cfg['remote_dir']}")
     return 0
 
