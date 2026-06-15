@@ -1,0 +1,36 @@
+{{- $resource := "" -}}
+{{- $isUrlRemote := strings.HasPrefix .Src "http" -}}
+{{- $cacheRemote := .CacheRemote | default false -}}
+
+{{- if not $resource | and $isUrlRemote | and $cacheRemote -}}
+    {{- with try (resources.GetRemote .Src) -}}
+        {{- with .Err -}}
+            {{- warnf "%s" . -}}
+        {{- else with .Value -}}
+            {{- if .ResourceType | eq "image" -}}
+                {{- $resource = . -}}
+            {{- end -}}
+        {{- else -}}
+            {{- warnf "Unable to get resource %q" .Src -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if $resource -}}
+    {{- $optim := .OptimConfig | default dict -}}
+    {{- $width := $optim.width -}}
+    {{- $height := $optim.height -}}
+    <img src="{{ $resource.RelPermalink }}"
+         {{- with $width }} width="{{ . }}"{{ end }}
+         {{- with $height }} height="{{ . }}"{{ end }}
+         {{- with .Title }} title="{{ . }}"{{ end }}
+         {{- with .Alt }} alt="{{ . }}"{{ end }}
+         loading="lazy">
+{{- else -}}
+    <img src="{{ .Src }}"
+         {{- with .Width }} width="{{ . }}"{{ end }}
+         {{- with .Height }} height="{{ . }}"{{ end }}
+         {{- with .Title }} title="{{ . }}"{{ end }}
+         {{- with .Alt }} alt="{{ . }}"{{ end }}
+         loading="lazy">
+{{- end -}}
