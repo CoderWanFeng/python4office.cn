@@ -14,6 +14,7 @@ Hexo 构建产物一键部署脚本
   REMOTE_DIR             可选，默认 /opt/website/opc-website/python4office.cn
   LOCAL_PUBLIC_DIR       可选，默认 <repo>/hexo/hexo/public
   SKIP_BUILD=true        跳过构建，使用现有 public/
+  SKIP_CDN_REFRESH=true  跳过部署后的 CDN 刷新
   DRY_RUN=true           只打印 rsync 命令不实际执行
   HEXO_DIR               可选，默认 <repo>/hexo/hexo
 """
@@ -44,6 +45,16 @@ DEFAULT_HEXO_DIR = REPO_ROOT / "hexo" / "hexo"
 DEFAULT_PUBLIC_DIR = DEFAULT_HEXO_DIR / "public"
 DEFAULT_REMOTE_DIR = "/opt/website/opc-website/python4office.cn"
 DEFAULT_SSH_KEY = Path.home() / ".ssh" / "id_rsa"
+
+# 已经是压缩格式的文件类型，rsync 传输时不再二次压缩
+SKIP_COMPRESS_EXTS = ",".join([
+    "jpg", "jpeg", "png", "gif", "webp", "svg", "ico",
+    "zip", "gz", "tgz", "bz2", "7z", "rar",
+    "mp4", "mov", "webm", "mkv", "avi",
+    "mp3", "ogg", "flac",
+    "woff", "woff2", "ttf", "otf", "eot",
+    "pdf",
+])
 
 # ---------- 颜色 ----------
 USE_COLOR = sys.stdout.isatty()
@@ -104,6 +115,7 @@ def load_config() -> dict:
         ).expanduser()
         .resolve(),
         "skip_build": os.environ.get("SKIP_BUILD", "").lower() in ("1", "true", "yes"),
+        "skip_cdn_refresh": os.environ.get("SKIP_CDN_REFRESH", "").lower() in ("1", "true", "yes"),
         "dry_run": os.environ.get("DRY_RUN", "").lower() in ("1", "true", "yes"),
     }
 
@@ -113,29 +125,47 @@ def load_config() -> dict:
     return cfg
 
 
+# ---------- 辅助 ----------
+def _stat_public(path: Path) -> tuple[int, str]:
+    """单次遍历统计文件数和总大小，返回 (count, human_size)。"""
+    count = 0
+    total = 0
+    for p in path.rglob("*"):
+        if p.is_file():
+            count += 1
+            total += p.stat().st_size
+    for unit in ("B", "K", "M", "G"):
+        if total < 1024:
+            return count, f"{total:.1f}{unit}"
+        total /= 1024
+    return count, f"{total:.1f}T"
+
+
 # ---------- 步骤 ----------
+def _run_hexo_generate(cfg: dict) -> None:
+    if not (cfg["hexo_dir"] / "node_modules").exists():
+        die(f"hexo 未安装依赖: {cfg['hexo_dir']}（先执行 cd hexo/hexo && yarn install）")
+    log(f"开始构建: {cfg['hexo_dir']}")
+    cmd = [
+        "node",
+        "--max-old-space-size=8192",
+        str(cfg["hexo_dir"] / "node_modules" / "hexo" / "bin" / "hexo"),
+        "generate",
+        "--draft",
+    ]
+    run(cmd, cwd=cfg["hexo_dir"], label="hexo generate")
+
+
 def step_build(cfg: dict) -> None:
     if cfg["skip_build"]:
         log("SKIP_BUILD=true，跳过本地构建")
     else:
-        if not (cfg["hexo_dir"] / "node_modules").exists():
-            die(f"hexo 未安装依赖: {cfg['hexo_dir']}（先执行 cd hexo/hexo && yarn install）")
-
-        log(f"开始构建: {cfg['hexo_dir']}")
-        cmd = [
-            "node",
-            "--max-old-space-size=8192",
-            str(cfg["hexo_dir"] / "node_modules" / "hexo" / "bin" / "hexo"),
-            "generate",
-            "--draft",
-        ]
-        run(cmd, cwd=cfg["hexo_dir"], label="hexo generate")
+        _run_hexo_generate(cfg)
 
     if not cfg["public_dir"].is_dir():
         die(f"public 目录不存在: {cfg['public_dir']}")
 
-    file_count = sum(1 for _ in cfg["public_dir"].rglob("*") if _.is_file())
-    size = human_size(cfg["public_dir"])
+    file_count, size = _stat_public(cfg["public_dir"])
     ok(f"public 就绪: {file_count} 个文件，{size}")
 
 
@@ -147,7 +177,9 @@ def step_sync(cfg: dict) -> None:
     rsync_cmd = [
         "rsync",
         "-az",
+        "--progress",
         "--delete",
+        f"--skip-compress={SKIP_COMPRESS_EXTS}",
         "--exclude=.git",
         "--exclude=.DS_Store",
         "-e",
@@ -165,21 +197,33 @@ def step_sync(cfg: dict) -> None:
     run(rsync_cmd, label="rsync")
 
 
+def step_refresh_cdn(cfg: dict) -> None:
+    """部署成功后调用 refresh_cdn.py 刷新腾讯云 CDN 缓存。"""
+    if cfg.get("skip_cdn_refresh"):
+        log("SKIP_CDN_REFRESH=true，跳过 CDN 刷新")
+        return
+
+    refresh_script = SCRIPT_DIR / "refresh_cdn.py"
+    if not refresh_script.is_file():
+        warn(f"未找到 CDN 刷新脚本: {refresh_script}，跳过")
+        return
+
+    log("开始刷新 CDN 缓存...")
+    cmd = [sys.executable, str(refresh_script)]
+    print(f"{BLUE}[cmd]{RESET} {' '.join(shlex.quote(c) for c in cmd)}")
+    result = subprocess.run(cmd)
+    if result.returncode == 0:
+        ok("CDN 缓存已刷新")
+    else:
+        warn(f"CDN 刷新失败 (exit {result.returncode})，但部署已完成，忽略")
+
+
 def run(cmd: list[str], cwd: Path | None = None, label: str = "") -> None:
     printable = " ".join(shlex.quote(c) for c in cmd)
     print(f"{BLUE}[cmd]{RESET} {printable}")
     result = subprocess.run(cmd, cwd=str(cwd) if cwd else None)
     if result.returncode != 0:
         die(f"{label or '命令'} 失败 (exit {result.returncode})")
-
-
-def human_size(path: Path) -> str:
-    total = sum(p.stat().st_size for p in path.rglob("*") if p.is_file())
-    for unit in ("B", "K", "M", "G"):
-        if total < 1024:
-            return f"{total:.1f}{unit}"
-        total /= 1024
-    return f"{total:.1f}T"
 
 
 # ---------- 入口 ----------
@@ -193,6 +237,7 @@ def main() -> int:
 
     step_build(cfg)
     step_sync(cfg)
+    step_refresh_cdn(cfg)
 
     print(f"{BOLD}========== 部署完成 =========={RESET}")
     ok(f"已部署到 {cfg['user']}@{cfg['host']}:{cfg['remote_dir']}")
