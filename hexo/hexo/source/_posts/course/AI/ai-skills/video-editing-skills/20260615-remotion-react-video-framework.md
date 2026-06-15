@@ -241,14 +241,37 @@ AI 会自动：
 
 ## 七、实战场景
 
-| 场景 | 怎么做 |
-|---|---|
-| 📊 **数据可视化动画** | 传 JSON → 渲染柱状图/折线图动画 |
-| 📱 **个性化营销视频** | 1 模板 + 用户名/头像 → 批量生成 |
-| 📈 **股票/财经播报** | 抓 API → 自动生成每日复盘视频 |
-| 🎓 **教育内容** | 公式/图表自动动画化 |
-| 🎂 **节日贺卡** | 1 模板 → 几千人定制 |
-| 📺 **短视频矩阵** | 1 模板 + 100 主题 = 100 视频 |
+| 场景 | 怎么做 | 📺 真实案例 |
+|---|---|---|
+| 📊 **数据可视化动画** | 传 JSON → 渲染柱状图/折线图动画 | [AnimStats](https://www.remotion.dev/showcase) · [Electricity Maps](https://www.remotion.dev/showcase) · [MUX 视频统计](https://www.remotion.dev/showcase) |
+| 📱 **个性化营销视频** | 1 模板 + 用户名/头像 → 批量生成 | [GitHub Unwrapped](https://www.remotion.dev/showcase)（GitHub 年度回顾，**几百万用户定制**） |
+| 📈 **天气/财经播报** | 抓 API → 自动生成每日复盘视频 | [Hello Météo](https://www.remotion.dev/showcase)（天气日报）· [Electricity Maps](https://www.remotion.dev/showcase) |
+| 🎓 **教育内容** | 公式/图表自动动画化 | [Next.js 视频教程](https://www.remotion.dev/showcase)（Vercel 出品） |
+| 🎂 **节日贺卡 / 年度回顾** | 1 模板 → 几千人定制 | [GitHub Unwrapped](https://www.remotion.dev/showcase) |
+| 📺 **短视频矩阵 / 病毒视频** | 1 模板 + 100 主题 = 100 视频 | [Submagic](https://www.remotion.dev/showcase)（病毒短视频）· [Revid](https://www.remotion.dev/showcase)（社交叙事） |
+| 💻 **代码动画** | 检测代码变更 → 自动生成动画 | [Hackreels](https://www.remotion.dev/showcase)（代码动画神器） |
+| 🎵 **音乐可视化** | 不用学 3D，做高质量 MV | [Banger Show](https://www.remotion.dev/showcase) |
+| 🗺️ **旅行/地图动画** | 路径动画 + 水彩特效 | [Watercolor Map](https://www.remotion.dev/showcase) |
+| 🎤 **卡拉 OK 视频** | AI 去人声 + 自动同步歌词 | [MyKaraoke](https://www.remotion.dev/showcase) |
+| 🎥 **屏幕录制 / Demo** | 录屏 + 自动 mockup + 缩放 | [SuperMotion](https://www.remotion.dev/showcase) · [Vibrantsnap](https://www.remotion.dev/showcase) · [Remotion Recorder](https://www.remotion.dev/showcase) |
+| 🛒 **电商广告** | 自动生成商品广告视频 | [AdmoveAI](https://www.remotion.dev/showcase) |
+| 🎬 **HeyGen Video Agent** | 全 AI 生成（数字人 + 动画） | [HeyGen](https://www.remotion.dev/showcase)（用 Remotion 渲染） |
+
+> **怎么看效果**：点"📺 真实案例"链接 → 跳到 [Remotion Showcase](https://www.remotion.dev/showcase) → 找到对应卡片 → 点开看完整 motion。
+
+---
+
+## 七点五、🌟 推荐 5 个值得看的 Showcase
+
+如果只能看 5 个 Remotion 真实案例，强烈推荐：
+
+| # | 案例 | 看什么 |
+|---|---|---|
+| 1 | **[GitHub Unwrapped](https://www.remotion.dev/showcase)** | 年度活动 → 几百万用户定制视频，最知名的 Remotion 作品 |
+| 2 | **[HeyGen Video Agent](https://www.remotion.dev/showcase)** | 全 AI 生成（数字人 + 脚本 + 动画 + 剪辑），都用 Remotion 渲染 |
+| 3 | **[Hackreels](https://www.remotion.dev/showcase)** | 代码动画神器：自动检测代码改动 → 生成漂亮动画 |
+| 4 | **[Submagic](https://www.remotion.dev/showcase)** | 病毒短视频工具：字幕、B-roll、缩放、声效自动加 |
+| 5 | **[Watercolor Map](https://www.remotion.dev/showcase)** | 水彩风格旅行动画，给 vlog 加 b-roll 神器 |
 
 ---
 

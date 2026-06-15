@@ -47,6 +47,14 @@ cover: https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&
 
 **这不是个工具，是个完整的 AI 剪辑师**。
 
+📺 **看真实效果**（强烈推荐）：
+
+- 🎬 [**TikTok 15 秒官方 Demo**](https://www.tiktok.com/@browser_use/video/7639824093721758989)（**直接看效果！**）
+- 🌐 [Browser Use Box（VPS / Telegram 7×24 自动剪）](https://browser-use.com/bux)
+- 💻 [GitHub 官方仓库](https://github.com/browser-use/video-use)
+- 📖 [SKILL.md（生产规则 + 剪辑工艺）](https://github.com/browser-use/video-use/blob/main/SKILL.md)
+- 🐦 [browser-use 团队 Twitter（实时更新）](https://twitter.com/browser_use)
+
 ---
 
 ## 三、双层读取系统（核心创新）

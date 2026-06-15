@@ -61,6 +61,14 @@ cover: https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200&
 
 **19 分钟 → 几分钟人工确认 → 干净的视频。**
 
+📺 **真实效果链接**：
+- 📖 [官方 README "效果演示"段落](https://github.com/Ceeon/videocut-skills#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA)
+- 📷 [审核网页截图 + 流程图（仓库 docs/）](https://github.com/Ceeon/videocut-skills/tree/main)
+- 💬 [真实用户反馈（Issues）](https://github.com/Ceeon/videocut-skills/issues)
+- 🌟 [仓库 stars 趋势](https://star-history.com/#Ceeon/videocut-skills)
+
+> **作者也欢迎你把使用心得提到 Issues**——多看几条 Issue 就能感受真实使用场景。
+
 ---
 
 ## 四、5 个 Skill 一览
