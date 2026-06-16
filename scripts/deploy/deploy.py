@@ -241,7 +241,7 @@ def step_sync(cfg: dict) -> None:
         "--exclude=.DS_Store",
         "-e",
         f"ssh -i {shlex.quote(str(cfg['ssh_key']))} -p {cfg['port']} -o StrictHostKeyChecking=accept-new",
-        f"{shlex.quote(str(cfg['public_dir']) + '/')}",
+        f"{cfg['public_dir']}/",
         f"{cfg['user']}@{cfg['host']}:{cfg['remote_dir']}/",
     ]
 
