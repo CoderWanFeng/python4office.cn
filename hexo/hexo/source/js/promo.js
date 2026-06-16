@@ -12,10 +12,10 @@
   'use strict';
 
   var PROMO = {
-    // ① 顶部公告条 → 腾讯 WorkBuddy 邀请通道
-    topUrl: 'https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj',
-    topText: '🎁 国产 CodeX AI 办公助手 | 写方案/PPT/分析 一次搞定',
-    topCta: '免费领取 →',
+    // ① 顶部公告条 → CodeFlying
+    topUrl: 'https://codeflying.cgref.cn/s/20epp94ew1',
+    topText: '🎁 说中文，做应用 | 一句话自动生成 App / 海报 / AI 客服',
+    topCta: '立即体验 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
 
