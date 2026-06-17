@@ -1,5 +1,5 @@
 ---
-title: DeepSeek V4 Pro 打2.5折，腾讯阿里抢着投：现在入局，是好时机吗？
+title: DeepSeek V4 Pro 突然2.5折！腾讯阿里同时抢投，普通人薅羊毛的最后窗口？
 date: 2026-04-26 12:00:00
 tags: [DeepSeek, MiniMax, AI大模型, 程序员晚枫, 腾讯, 阿里]
 keywords: [DeepSeek V4 Pro, 2.5折, 腾讯阿里, 国内AI价格战, AI大模型降价, 普通人的AI机会]
@@ -36,6 +36,13 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 <!-- more -->
 
 > **科技不高冷，AI很好用** | 我是程序员晚枫，全网 40 万+ 粉丝
+
+---
+
+> 📖 **看本文之前，建议先读这篇**：
+> 👉 [《大厂 Coding Plan 价格被我扒光了！买贵的人都在偷偷看这个》](https://www.python-office.com/openclaw/coding-plan/)
+>
+> 想看完整的大厂 AI Coding Plan + Token 价格对比、隐藏购买渠道、避坑提醒？这份持续更新的价格汇总表全整理好了。建议先收藏，再回来看 DeepSeek 这次的 2.5 折值不值得冲。
 
 ---
 
@@ -166,9 +173,9 @@ AI 工具是用来解决问题的，不是用来比价的。
 
 ## 相关阅读
 
+- [各大厂商 Coding Plan 横向对比，一张图看懂选哪个](https://www.python-office.com/token)
 - [腾讯混元3 Preview 发布：三个月推倒重建，这次有点不一样](https://www.python4office.cn/ads/tencent/260425-腾讯混元3-Preview发布-三个月推倒重建-这次有点不一样/)
 - [AI编程工具很强大，但99%的人死在了这三道门槛上](https://www.python4office.cn/ads/atomgit/260422-AI编程工具很强大-但99%的人死在了这三道门槛上/)
-- [各大厂商 Coding Plan 横向对比，一张图看懂选哪个](https://www.python-office.com/token)
 
 <p align="center">
 	<img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="80%"/>
