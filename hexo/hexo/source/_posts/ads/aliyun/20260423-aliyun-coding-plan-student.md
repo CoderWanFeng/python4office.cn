@@ -3,7 +3,7 @@ title: 阿里云百炼 Coding Plan 学生优惠：29 元/月降到 9.9 元，学
 keywords: [阿里云百炼 学生优惠, 通义千问 学生, AI编程 学生, 程序员晚枫]
 description: 学生党福利！阿里云百炼 Coding Plan 学生专属优惠，29元/月降到9.9元，通义千问白菜价！
 date: 2026-04-23 19:00:00
-tags: [阿里云, 百炼, 通义千问, 学生优惠, AI编程]
+tags: []
 categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---

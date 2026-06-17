@@ -1,7 +1,7 @@
 ---
 title: DeepSeek Coding Plan 全解析：开源 + 1/70 价格，程序员的真香选择
 date: 2026-04-22 19:20:00
-tags: ["deepseek", "coding plan", "AI编程", "开源大模型", "程序员晚枫"]
+tags: ["DeepSeek", "Coding Plan", "AI编程", "开源大模型", "程序员晚枫"]
 categories: ["DeepSeek实战"]
 keywords: [DeepSeek Coding Plan, 开源大模型, Coding Plan对比, AI编程工具, 程序员工具]
 description: DeepSeek Coding Plan 全解析：开源 + 1/70 价格 + 国产最强代码能力。一张表告诉你它值不值得选。

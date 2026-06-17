@@ -1,7 +1,7 @@
 ---
 title: 我算过了，用Agent Plan比单独买API省了80%的钱
 date: 2026-06-17 16:50:00
-tags: ["公众号文章", "AI工具", "大模型", "成本对比", "火山引擎"]
+tags: ["公众号文章", "AI工具", "大模型", "成本对比", "Volcengine"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1554224155-8d865d21d8a978d?q=80&w=1200&auto=format&fit=crop
 ---

@@ -2,7 +2,7 @@
 title: 批量翻译任务说明
 date: 2026-04-23 10:00:00
 categories: [翻译任务]
-tags: [批量翻译, Python]
+tags: []
 ---
 
 ![封面](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)

@@ -1,7 +1,7 @@
 ---
 title: 想体验最新DeepSeek大模型？用火山引擎9.9元就能体验
 date: 2026-06-17 14:50:00
-tags: ["公众号文章", "AI工具", "大模型", "DeepSeek", "火山引擎"]
+tags: ["公众号文章", "AI工具", "大模型", "DeepSeek", "Volcengine"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&auto=format&fit=crop
 ---

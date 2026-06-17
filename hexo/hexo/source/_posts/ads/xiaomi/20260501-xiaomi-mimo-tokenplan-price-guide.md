@@ -3,7 +3,7 @@ title: 小米 MiMo Token Plan 价格对比：四个套餐怎么选最划算？
 keywords: [小米 Token Plan, MiMo 价格, Coding Plan 对比, 小米大模型, 程序员晚枫]
 description: 小米 MiMo Token Plan 四档套餐价格对比：Lite、Standard、Pro、Max，帮你选最适合自己的。
 date: 2026-05-01 10:30:00
-tags: [小米, MiMo, Token Plan, AI编程, 价格对比]
+tags: []
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop
 ---

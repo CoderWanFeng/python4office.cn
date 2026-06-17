@@ -1,7 +1,7 @@
 ---
 title: 火山引擎方舟Agent Plan又升级了，MiniMax-M3和GLM-5.2都加了，还是9.9元起
 date: 2026-06-17 16:30:00
-tags: ["公众号文章", "AI工具", "大模型", "火山引擎", "MiniMax", "GLM"]
+tags: ["公众号文章", "AI工具", "大模型", "Volcengine", "MiniMax", "GLM"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1677442136019-255b49e663f8?q=80&w=1200&auto=format&fit=crop
 ---

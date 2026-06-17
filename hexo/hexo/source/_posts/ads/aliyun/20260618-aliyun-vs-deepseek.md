@@ -3,7 +3,7 @@ title: 我用通义千问和 DeepSeek 各一周，发现一件很讽刺的事
 keywords: [通义千问, DeepSeek, Qwen, 国产大模型, 阿里云百炼, AI编程, 程序员晚枫]
 description: 我把通义千问和 DeepSeek 各用了一周，跑了两个真实项目。这篇只说我看到的真相，不替你下结论。
 date: 2026-06-18 09:00:00
-tags: [通义千问, DeepSeek, 阿里云百炼, 国产大模型, AI编程, 程序员晚枫]
+tags: []
 categories: [AI工具测评, 国产大模型]
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---

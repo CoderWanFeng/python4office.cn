@@ -3,7 +3,7 @@ title: 我用讯飞星火和 DeepSeek 各一周，发现一件很打脸的事
 keywords: [讯飞星火, DeepSeek, Spark, 国产大模型, 科大讯飞, AI编程, 程序员晚枫]
 description: 我把讯飞星火和 DeepSeek 各用了一周，跑了一个 ASR 后处理脚本、一个 WebSocket 断连 bug、一个让两个模型互相评估代码的任务。这篇只说我看到的真相，不替你下结论。
 date: 2026-06-18 13:00:00
-tags: [讯飞星火, DeepSeek, 国产大模型, 科大讯飞, AI编程, 程序员晚枫]
+tags: []
 categories: [AI工具测评, 国产大模型]
 cover: https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200
 ---

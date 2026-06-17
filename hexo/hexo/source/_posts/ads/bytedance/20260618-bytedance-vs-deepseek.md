@@ -3,7 +3,7 @@ title: 我用豆包和 DeepSeek 各一周，发现一件挺打脸的事
 keywords: [豆包, DeepSeek, Doubao, 字节方舟, 国产大模型, AI编程, 程序员晚枫]
 description: 我把豆包和 DeepSeek 各用了一周，跑了一个短视频脚本生成器、一个 React 重渲染 bug 修复。这篇只说我看到的真相，不替你下结论。
 date: 2026-06-18 14:00:00
-tags: [豆包, DeepSeek, 字节方舟, 国产大模型, AI编程, 程序员晚枫]
+tags: []
 categories: [AI工具测评, 国产大模型]
 cover: https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&auto=format&fit=crop
 ---

@@ -1,7 +1,7 @@
 ---
 title: DeepSeek 一年省几千的 5 个狠招！第 3 个 90% 的人不知道
 date: 2026-04-22 00:00:00
-tags: ["deepseek", "api", "省钱技巧", "程序员晚枫", "AI工具"]
+tags: ["DeepSeek", "API", "省钱技巧", "程序员晚枫", "AI工具"]
 categories: ["DeepSeek实战"]
 keywords: [DeepSeek省钱, DeepSeek API技巧, Token优化, AI编程成本, Coding Plan]
 description: DeepSeek 已经是 GPT-4 的 1/70 价，但多数人还在"裸用"。5 个实战技巧 + 一张选型表，帮你把月账单砍 30%-80%。

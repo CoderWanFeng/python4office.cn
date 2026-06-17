@@ -1,7 +1,7 @@
 ---
 title: 我算过了，这样用DeepSeek比直接买API省80%
 date: 2026-06-17 15:30:00
-tags: ["公众号文章", "AI工具", "大模型", "DeepSeek", "火山引擎", "省钱"]
+tags: ["公众号文章", "AI工具", "大模型", "DeepSeek", "Volcengine", "省钱"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1200&auto=format&fit=crop
 ---

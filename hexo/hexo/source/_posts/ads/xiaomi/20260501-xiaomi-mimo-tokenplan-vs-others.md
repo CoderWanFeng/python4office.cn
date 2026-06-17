@@ -3,7 +3,7 @@ title: 小米 MiMo vs 火山 vs 智谱：2026年Coding Plan哪家强？
 keywords: [小米 vs 火山, Coding Plan 对比, 智谱GLM, MiMo, 程序员晚枫]
 description: 小米 MiMo、火山方舟、智谱GLM 三家Coding Plan横向对比：价格、性能、功能，帮你做选择。
 date: 2026-05-01 11:00:00
-tags: [小米, MiMo, 火山方舟, 智谱GLM, Coding Plan 对比]
+tags: []
 categories: [AI编程, 工具测评]
 cover: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop
 ---

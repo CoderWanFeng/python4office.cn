@@ -3,7 +3,7 @@ title: 我用小米MiMo和DeepSeek各一周，发现一件很意外的事
 keywords: [小米MiMo, DeepSeek, 国产大模型, 小米云, AI编程, 程序员晚枫]
 description: 我把小米 MiMo 和 DeepSeek 各用了一周，跑了三个真实任务。这篇只说我看到的真相，不替你下结论。
 date: 2026-06-18 15:00:00
-tags: [小米MiMo, DeepSeek, 国产大模型, 小米云, AI编程, 程序员晚枫]
+tags: []
 categories: [AI工具测评, 国产大模型]
 cover: https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800
 ---

@@ -3,7 +3,7 @@ title: 腾讯云 Coding Plan 教程：混元大模型 API 接入实战（2026最
 keywords: [腾讯云 Coding Plan 教程, 腾讯混元 API, AI编程教程, 程序员晚枫]
 description: 程序员晚枫手把手教你用腾讯云 Coding Plan，腾讯混元大模型 API 接入实战教程。
 date: 2026-04-22 21:05:00
-tags: [腾讯云, 腾讯混元, Coding Plan 教程, API 接入]
+tags: []
 categories: [AI编程, 教程]
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---

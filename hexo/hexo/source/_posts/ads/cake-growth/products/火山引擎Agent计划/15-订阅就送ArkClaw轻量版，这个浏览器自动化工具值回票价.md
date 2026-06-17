@@ -1,7 +1,7 @@
 ---
 title: 订阅就送ArkClaw轻量版，这个浏览器自动化工具值回票价
 date: 2026-06-17 17:10:00
-tags: ["公众号文章", "AI工具", "ArkClaw", "浏览器自动化", "火山引擎"]
+tags: ["公众号文章", "AI工具", "ArkClaw", "浏览器自动化", "Volcengine"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1461749280686-df2bbd007771?q=80&w=1200&auto=format&fit=crop
 ---

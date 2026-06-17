@@ -1,7 +1,7 @@
 ---
 title: DeepSeek Coding Plan 教程：API + 本地部署 2 种玩法，手把手带你跑通
 date: 2026-04-22 19:25:00
-tags: ["deepseek", "coding plan教程", "api调用", "本地部署", "Ollama", "开源"]
+tags: ["DeepSeek", "coding plan教程", "api调用", "本地部署", "Ollama", "开源"]
 categories: ["DeepSeek实战"]
 keywords: [DeepSeek Coding Plan教程, API调用, 本地部署, Ollama, DeepSeek Coder, 开源]
 description: DeepSeek Coding Plan 2 种玩法实测：API 调用 5 分钟上手，本地部署 0 API 费用。含可直接复制的 Python 代码和硬件清单。

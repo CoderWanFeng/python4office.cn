@@ -1,7 +1,7 @@
 ---
 title: DeepSeek V4 Pro 突然2.5折！腾讯阿里同时抢投，普通人薅羊毛的最后窗口？
 date: 2026-04-26 12:00:00
-tags: [DeepSeek, MiniMax, AI大模型, 程序员晚枫, 腾讯, 阿里]
+tags: []
 keywords: [DeepSeek V4 Pro, 2.5折, 腾讯阿里, 国内AI价格战, AI大模型降价, 普通人的AI机会]
 description: DeepSeek V4 Pro 限时 2.5 折，腾讯阿里争相投资。本文给出一份价格对比 + 一张选型表，帮你判断这个时间点该不该入手、值不值得切。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop

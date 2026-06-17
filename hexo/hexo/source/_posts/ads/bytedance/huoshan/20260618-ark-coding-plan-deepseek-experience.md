@@ -1,7 +1,7 @@
 ---
 title: 火山方舟 Coding Plan 一键体验 DeepSeek 最新大模型！36 元起，6 大模型随便切
 date: 2026-06-18 18:00:00
-tags: [DeepSeek最新模型, 火山方舟Coding Plan, 体验DeepSeek, AI编程, 字节火山引擎, 程序员晚枫]
+tags: []
 categories: [AI编程, 工具测评]
 keywords: 火山方舟Coding Plan, DeepSeek最新模型, 体验DeepSeek, DeepSeek V3.2, AI编程订阅, 豆包代码模型, 字节跳动AI
 description: 想体验 DeepSeek 最新大模型？火山方舟 Coding Plan 36 元起，1 个订阅同时用 Doubao / DeepSeek / Kimi / GLM-4 等 6 大模型，附专属推广链接 + 邀请码。

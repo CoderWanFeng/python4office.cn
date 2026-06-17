@@ -1,7 +1,7 @@
 ---
 title: DeepSeek API 全网最细教程！5 步从注册到第一个调用，附 Python 代码
 date: 2026-04-22 00:00:00
-tags: ["deepseek", "api", "AI编程", "程序员晚枫", "入门教程"]
+tags: ["DeepSeek", "API", "AI编程", "程序员晚枫", "入门教程"]
 categories: ["DeepSeek实战"]
 keywords: [DeepSeek API, DeepSeek 教程, API注册, API Key, Python调用]
 description: DeepSeek API 5 步上手：从注册、获取 Key、Python 调用、价格说明到避坑提醒，附可直接复制的代码。

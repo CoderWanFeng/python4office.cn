@@ -1,7 +1,7 @@
 ---
 title: TRAE 接入 DeepSeek Coding Plan 实战：5 分钟配置，AI 编程成本砍半
 date: 2026-05-02 19:45:00
-tags: ["TRAE", "DeepSeek", "Coding Plan", "字节跳动", "AI编程", "程序员晚枫"]
+tags: ["Trae", "DeepSeek", "Coding Plan", "Bytedance", "AI编程", "程序员晚枫"]
 categories: ["AI编程工具配置"]
 keywords: [TRAE, DeepSeek Coding Plan, 字节AI编辑器, 国内AI编程, 模型替换]
 description: 在 TRAE（字节跳动出的 AI 代码编辑器）里接入 DeepSeek Coding Plan 完整教程：5 分钟配置步骤 + 4 个常见问题。

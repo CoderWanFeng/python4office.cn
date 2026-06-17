@@ -3,7 +3,7 @@ title: 我用华为盘古和 DeepSeek 各一周，发现一件很意外的事
 keywords: [华为盘古, DeepSeek, Pangu, 华为云, 国产大模型, AI编程, 程序员晚枫]
 description: 我把华为盘古和 DeepSeek 各用了一周，跑了一个 Nginx 日志脚本和一个 Java 老年代内存泄漏修复。这篇只说我看到的真相，不替你下结论。
 date: 2026-06-18 12:00:00
-tags: [华为盘古, DeepSeek, 华为云, 国产大模型, AI编程, 程序员晚枫]
+tags: []
 categories: [AI工具测评, 国产大模型]
 cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop
 ---

@@ -3,7 +3,7 @@ title: 我用腾讯混元和 DeepSeek 各一周，发现一件挺讽刺的事
 keywords: [腾讯混元, DeepSeek, hunyuan, 国产大模型, 腾讯云, AI编程, 程序员晚枫]
 description: 我把腾讯混元和 DeepSeek 各用了一周，跑了三个真实任务。这篇只说我看到的真相，不替你下结论。
 date: 2026-06-18 11:00:00
-tags: [腾讯混元, DeepSeek, 腾讯云, 国产大模型, AI编程, 程序员晚枫]
+tags: []
 categories: [AI工具测评, 国产大模型]
 cover: https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800
 ---
