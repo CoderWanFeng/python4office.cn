@@ -1,7 +1,7 @@
 ---
 title: MiniMax M3 发布！1M上下文+原生多模态，这才是真正的Coding神器
 date: 2026-06-02 00:15:00
-tags: ["MiniMax", "AI模型", "M3", "Token Plan", "编程工具"]
+tags: ["MiniMax", "大模型", "M3", "Token Plan", "编程"]
 categories: ["AI工具"]
 cover: https://images.unsplash.com/photo-1677442136019-4526a9c9373a?q=80&w=1200&auto=format&fit=crop
 ---

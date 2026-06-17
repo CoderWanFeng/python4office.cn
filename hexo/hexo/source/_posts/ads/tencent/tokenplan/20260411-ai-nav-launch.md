@@ -123,7 +123,7 @@ const aiTools = [
     description: "OpenAI出品的AI对话工具",
     url: "https://chat.openai.com",
     isFree: "部分免费",
-    tags: ["对话", "写作", "编程"]
+    tags: ["对话", "AI写作", "编程"]
   },
   // ... 100+ 条数据
 ]

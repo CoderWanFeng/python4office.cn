@@ -1,7 +1,7 @@
 ---
 title: 阿里云Coding Plan教程！从注册到使用，看这一篇就够了
 date: 2026-04-22 00:00:00
-tags: ["Aliyun", "Coding Plan", "AI编程", "教程"]
+tags: ["Aliyun", "Coding Plan", "AI编程", "入门教程"]
 categories: ["阿里云Coding Plan"]
 description: 阿里云Coding Plan实战教程：从注册到使用，看这一篇就够了。包含注册步骤、使用方法、注意事项。
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop

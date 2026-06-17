@@ -1,7 +1,7 @@
 ---
 title: 作为一个开发者，我为什么放弃了开源Agent框架，选择了火山引擎Agent Plan
 date: 2026-06-17 17:20:00
-tags: ["公众号文章", "AI工具", "开发者", "Agent框架", "Volcengine"]
+tags: ["公众号文章", "AI工具", "AI编程", "AI Agent", "Volcengine"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1461749280684-df2bbd007771?q=80&w=1200&auto=format&fit=crop
 ---

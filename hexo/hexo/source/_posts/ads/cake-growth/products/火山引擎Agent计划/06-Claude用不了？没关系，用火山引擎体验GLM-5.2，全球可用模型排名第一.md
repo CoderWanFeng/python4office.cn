@@ -1,7 +1,7 @@
 ---
 title: Claude用不了？没关系，用火山引擎体验GLM-5.2，全球可用模型排名第一
 date: 2026-06-17 15:20:00
-tags: ["公众号文章", "AI工具", "大模型", "GLM", "智谱", "Volcengine"]
+tags: ["公众号文章", "AI工具", "大模型", "GLM", "Zhipu", "Volcengine"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1677442116098-4521e8c0b5a3?q=80&w=1200&auto=format&fit=crop
 ---

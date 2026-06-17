@@ -1,7 +1,7 @@
 ---
 title: AI最大的信息差，就是这些好工具你根本不知道
 date: 2026-05-24 20:00:00
-tags: ["公众号文章", "AI工具", "信息差", "Cake Growth系列"]
+tags: ["公众号文章", "AI工具", "Cake Growth系列"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&auto=format&fit=crop
 ---

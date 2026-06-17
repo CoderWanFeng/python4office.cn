@@ -1,7 +1,7 @@
 ---
 title: 04-我用AI做测评题，老板说我是HR专家
 date: 2026-05-21 00:46:00
-tags: ["公众号文章", "AI工具", "AI测评", "阿里云SBTI"]
+tags: ["公众号文章", "AI工具", "阿里云SBTI"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop
 ---

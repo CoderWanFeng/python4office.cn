@@ -1,7 +1,7 @@
 ---
 title: DeepSeek 办公自动化 10 大狠招！第 5 个能让你提前 2 小时下班
 date: 2026-04-22 00:00:00
-tags: ["DeepSeek", "AI办公", "自动化办公", "程序员晚枫", "效率工具"]
+tags: ["DeepSeek", "AI工具", "自动化办公", "程序员晚枫"]
 categories: ["DeepSeek实战"]
 keywords: [DeepSeek办公, AI自动化, Excel批量, Word生成, PPT生成, 邮件群发]
 description: DeepSeek 不只写代码，还能让办公效率翻 5-20 倍。10 个实战案例覆盖 Excel/Word/PPT/PDF/邮件/可视化/文案，含可直接复制的 Python 代码。

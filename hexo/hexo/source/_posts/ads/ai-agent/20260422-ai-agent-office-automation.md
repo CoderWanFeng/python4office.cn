@@ -1,7 +1,7 @@
 ---
 title: AI Agent办公自动化！5个场景，看完你就知道怎么用了
 date: 2026-04-22 00:00:00
-tags: ["AI Agent", "ai办公", "自动化办公"]
+tags: ["AI Agent", "AI办公", "自动化办公"]
 categories: ["AI Agent实战"]
 description: AI Agent办公自动化案例：5个场景，邮件处理、日程管理、文档整理、数据分析、客户服务，看完你就知道怎么用了。
 cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&auto=format&fit=crop

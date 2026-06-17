@@ -1,7 +1,7 @@
 ---
 title: 昨天还在用Claude写代码，今天就被封了？别急，用火山引擎体验GLM-5.2
 date: 2026-06-17 15:45:00
-tags: ["公众号文章", "AI工具", "大模型", "GLM", "Claude", "Volcengine"]
+tags: ["公众号文章", "AI工具", "大模型", "GLM", "Claude Code", "Volcengine"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1555099962-4199c3d93d57?q=80&w=1200&auto=format&fit=crop
 ---

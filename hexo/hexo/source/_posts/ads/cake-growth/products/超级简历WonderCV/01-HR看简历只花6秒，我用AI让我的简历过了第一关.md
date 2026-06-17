@@ -1,7 +1,7 @@
 ---
 title: 01-HR看简历只花6秒，我用AI让我的简历过了第一关
 date: 2026-05-20 23:10:00
-tags: ["公众号文章", "AI工具", "AI简历", "超级简历"]
+tags: ["公众号文章", "AI工具", "AI简历", "超级简历WonderCV"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1586282391129-76a6df230234?q=80&w=1200&auto=format&fit=crop
 ---

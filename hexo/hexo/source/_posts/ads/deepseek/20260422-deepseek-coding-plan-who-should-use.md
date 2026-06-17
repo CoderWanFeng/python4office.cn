@@ -1,7 +1,7 @@
 ---
 title: DeepSeek Coding Plan 适合谁？5 类人闭眼入，3 类人赶紧跑
 date: 2026-04-22 19:30:00
-tags: ["DeepSeek", "coding plan选购", "开源", "性价比", "程序员晚枫"]
+tags: ["DeepSeek", "Coding Plan 选购", "开源", "AI工具", "程序员晚枫"]
 categories: ["DeepSeek实战"]
 keywords: [DeepSeek Coding Plan, 选购指南, 开源大模型, AI编程工具, 适合人群]
 description: DeepSeek Coding Plan 适合谁？本文给出 5 类闭眼入人群 + 3 类赶紧跑人群 + API / 本地部署 2 种方式选择图。

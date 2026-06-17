@@ -1,7 +1,7 @@
 ---
 title: DeepSeek 把 Cursor 砍半价！2026 年 AI 编程工具大洗牌，3 类人先抢红利
 date: 2026-06-18 12:00:00
-tags: ["DeepSeek", "AI编程", "Cursor", "行业分析", "程序员晚枫", "大模型价格战"]
+tags: ["DeepSeek", "AI编程", "Cursor", "AI工具", "程序员晚枫", "大模型价格战"]
 categories: ["AI行业观察"]
 keywords: [DeepSeek V4 Pro, AI编程工具, Cursor 降价, 大模型价格战, 程序员红利, 模型可换]
 description: DeepSeek 一己之力把 API 价格砍到 1 元起，2026 年 AI 编程工具大洗牌已经开始。本文拆解洗牌前后的格局变化 + 3 类人该抢的红利。

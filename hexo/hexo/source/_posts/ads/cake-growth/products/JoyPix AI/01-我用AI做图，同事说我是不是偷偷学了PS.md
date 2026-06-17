@@ -1,7 +1,7 @@
 ---
 title: '我用AI做图只花2分钟，同事以为我偷偷学了PS'
 date: 2026-05-21 00:19:00
-tags: ["公众号文章", "AI工具", "AI图片", "JoyPix AI"]
+tags: ["公众号文章", "AI工具", "JoyPix AI"]
 categories: ["公众号文章"]
 cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&auto=format&fit=crop
 ---

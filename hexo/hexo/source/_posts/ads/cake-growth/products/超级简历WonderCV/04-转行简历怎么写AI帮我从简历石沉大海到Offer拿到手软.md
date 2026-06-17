@@ -1,7 +1,7 @@
 ---
 title: 04-转行简历怎么写？AI帮我从简历石沉大海到Offer拿到手软
 date: 2026-05-26 00:26:00
-tags: ["公众号文章", "AI工具", "简历优化", "WonderCV"]
+tags: ["公众号文章", "AI工具", "简历优化", "超级简历WonderCV"]
 categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop
 ---

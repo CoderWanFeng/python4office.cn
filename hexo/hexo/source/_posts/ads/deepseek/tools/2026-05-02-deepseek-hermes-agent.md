@@ -1,7 +1,7 @@
 ---
 title: Hermes Agent 接入 DeepSeek Coding Plan 实战：5 分钟配置，AI 编程成本砍半
 date: 2026-05-02 19:48:00
-tags: ["Hermes Agent", "DeepSeek", "Coding Plan", "智能体", "AI编程", "程序员晚枫"]
+tags: ["Hermes Agent", "DeepSeek", "Coding Plan", "AI Agent", "AI编程", "程序员晚枫"]
 categories: ["AI编程工具配置"]
 keywords: [Hermes Agent, DeepSeek Coding Plan, 智能体编程, AI Agent, 模型替换]
 description: 在 Hermes Agent（智能体编程工具）里接入 DeepSeek Coding Plan 完整教程：5 分钟配置步骤 + 4 个常见问题。
