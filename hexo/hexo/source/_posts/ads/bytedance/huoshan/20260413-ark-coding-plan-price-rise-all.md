@@ -21,6 +21,9 @@ cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&
 
 今天这篇文章，我帮你梳理清楚这场涨价风暴，以及如何用最低成本继续使用AI编程工具。
 
+
+> 🚀 **想体验 DeepSeek 最新大模型？**
+> 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
 <!-- more -->
 
 ![为什么最近程序员的AI编程工具都在集体涨价？](https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=crop)

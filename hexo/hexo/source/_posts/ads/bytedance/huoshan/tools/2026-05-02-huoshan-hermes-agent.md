@@ -44,6 +44,9 @@ Hermes Agent 是一个专注于自动化任务和工作流的 AI 助手，可以
 
 👉 **专属优惠通道**：[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
 
+> 🚀 **想体验 DeepSeek 最新大模型？**
+> 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
+
 开通后，获取你的 AppID 和 SecretKey。
 
 ---

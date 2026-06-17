@@ -1,5 +1,5 @@
 ---
-title: 'OpenAI Demos the 'App-less Phone': Are All Interfaces Generated in Real Time?'
+title: "OpenAI Demos the 'App-less Phone': Are All Interfaces Generated in Real Time?"
 date: 2026-06-04 02:15:00
 tags: ["AI News", "OpenAI", "AI Agent", "App-less Phone"]
 categories: ["AI News"]

@@ -1,5 +1,5 @@
 ---
-title: '423-Page PDF: Python Programming Beginner's Guide'
+title: "423-Page PDF: Python Programming Beginner's Guide"
 date: 2022-12-10 04:26:43
 tags: ["E-book"]
 cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=format&fit=crop

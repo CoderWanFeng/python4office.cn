@@ -1,5 +1,5 @@
 ---
-title: 'DeepSeek Coding Plan Tutorial: API Call + Local Deployment, 2 Ways to Play - Can't Learn Both? I'll Beat You'
+title: "DeepSeek Coding Plan Tutorial: API Call + Local Deployment, 2 Ways to Play - Can't Learn Both? I'll Beat You"
 date: 2026-04-22 19:25:00
 tags: ["deepseek", "coding plan tutorial", "api call", "local deployment", "open source"]
 categories: ["DeepSeek Practice"]

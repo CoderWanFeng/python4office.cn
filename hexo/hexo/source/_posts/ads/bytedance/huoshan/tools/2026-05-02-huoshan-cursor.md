@@ -44,6 +44,9 @@ Cursor 是基于 AI 的代码编辑器，支持代码补全、错误检测和智
 
 👉 **专属优惠通道**：[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
 
+> 🚀 **想体验 DeepSeek 最新大模型？**
+> 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
+
 开通后，获取你的 AppID 和 SecretKey。
 
 ---

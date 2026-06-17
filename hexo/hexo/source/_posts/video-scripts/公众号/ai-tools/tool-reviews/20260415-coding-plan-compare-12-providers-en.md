@@ -1,5 +1,5 @@
 ---
-title: '2026 Coding Plan Comparison of 12 Cloud Providers: Developer's Guide to Getting Freebies'
+title: "2026 Coding Plan Comparison of 12 Cloud Providers: Developer's Guide to Getting Freebies"
 date: 2026-04-15 00:00:00
 categories:
 - AI Tools

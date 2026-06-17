@@ -27,6 +27,9 @@ cover: https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&
 
 今天说点得罪人的话。
 
+
+> 🚀 **想体验 DeepSeek 最新大模型？**
+> 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
 <!-- more -->
 
 ![2026年了，为什么GitHub Copilot反而越来越难用了？](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)

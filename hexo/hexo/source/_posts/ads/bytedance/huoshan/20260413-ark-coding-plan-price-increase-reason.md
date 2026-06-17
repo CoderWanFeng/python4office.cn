@@ -26,6 +26,9 @@ Claude涨价、Copilot涨价、Cursor涨价——程序员们正在经历一场"
 
 这篇文章，我帮你分析这背后的原因，以及**如何在涨价潮中继续用上好工具**。
 
+
+> 🚀 **想体验 DeepSeek 最新大模型？**
+> 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
 <!-- more -->
 
 ![为什么Claude和Copilot越来越贵？国内程序员的应对策略](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)

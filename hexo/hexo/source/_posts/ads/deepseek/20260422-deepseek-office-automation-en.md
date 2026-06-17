@@ -1,5 +1,5 @@
 ---
-title: 'DeepSeek Office Automation! 10 Practical Cases, You'll Learn How to Use It After Reading'
+title: "DeepSeek Office Automation! 10 Practical Cases, You'll Learn How to Use It After Reading"
 date: 2026-04-22 00:00:00
 tags: ["deepseek", "ai office", "office automation"]
 categories: ["DeepSeek Practice"]

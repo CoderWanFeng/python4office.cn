@@ -1,5 +1,5 @@
 ---
-title: 'AI Side Hustle for Beginners! 5 Directions Ordinary People Can Do, You'll Know How to Start After Reading This'
+title: "AI Side Hustle for Beginners! 5 Directions Ordinary People Can Do, You'll Know How to Start After Reading This"
 date: 2026-04-22 00:00:00
 tags: ["AI Side Hustle", "AI Programming", "Side Hustle Monetization"]
 categories: ["AI Side Hustle Monetization"]

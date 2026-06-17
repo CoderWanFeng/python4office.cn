@@ -1,5 +1,5 @@
 ---
-title: 'DeepSeek vs Claude Code, Which is Better? You'll Know After Reading This'
+title: "DeepSeek vs Claude Code, Which is Better? You'll Know After Reading This"
 date: 2026-04-22 00:00:00
 tags: ["deepseek", "claude code", "ai programming", "code model"]
 categories: ["2026 Hot Topics"]

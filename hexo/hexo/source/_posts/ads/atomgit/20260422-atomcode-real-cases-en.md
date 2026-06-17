@@ -1,5 +1,5 @@
 ---
-title: 'AtomCode Real Cases! 5 Real Scenarios, You'll Know How to Use It After Reading'
+title: "AtomCode Real Cases! 5 Real Scenarios, You'll Know How to Use It After Reading"
 date: 2026-04-22 00:00:00
 tags: ["atomgit", "atomcode", "ai programming"]
 categories: ["AI Tools"]
