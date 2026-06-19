@@ -69,6 +69,12 @@ function run() {
   const publicDir = hexo.public_dir;
   hexo.log.info('[precompress] 扫描 %s ...', publicDir);
 
+  // 防御：clean 后或 generate 失败时，public 目录可能不存在
+  if (!FS.existsSync(publicDir)) {
+    hexo.log.warn('[precompress] public 目录不存在，跳过预压缩（可能 generate 出错）');
+    return;
+  }
+
   const allFiles = walk(publicDir);
   const targets = allFiles.filter(shouldProcess);
   hexo.log.info('[precompress] walk 找到 %d 个文件，待压缩 %d 个', allFiles.length, targets.length);

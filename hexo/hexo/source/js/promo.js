@@ -12,9 +12,9 @@
   'use strict';
 
   var PROMO = {
-    // ① 顶部公告条 → CodeFlying
-    topUrl: 'https://codeflying.cgref.cn/s/20epp94ew1',
-    topText: '🎁 说中文，做应用 | 一句话自动生成 App / 海报 / AI 客服',
+    // ① 顶部公告条 → 即梦（视频生成）
+    topUrl: 'https://seko.cgref.cn/s/rpe3l6xe05',
+    topText: '🎬 AI灵感成片 | 世界杯视频一键生成，免费体验',
     topCta: '立即体验 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
