@@ -262,11 +262,11 @@ $100/月 门槛太高，除非你真的用得非常多，否则没必要。
 
 ## 相关阅读
 
-- [2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [Cursor 免费版 vs 付费版：和Trae对比后，我更推荐这个](https://www.python4office.cn/openclaw/cursor/free-vs-paid/)
 - [Windsurf 免费版 vs 付费版：性价比之王，真的便宜吗？](https://www.python4office.cn/openclaw/windsurf/free-vs-paid/)
-- [2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
-- [我用AI做PPT，同事说你是PPT设计师吗](https://mp.weixin.qq.com/s/aLo7mW3BLnglwhSZCKoOow)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 
 ---

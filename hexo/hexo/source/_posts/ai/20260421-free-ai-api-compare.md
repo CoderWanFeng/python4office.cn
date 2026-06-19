@@ -334,7 +334,7 @@ print(response.choices[0].message.content)
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
-- [2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 **END**
 

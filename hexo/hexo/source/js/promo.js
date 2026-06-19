@@ -14,13 +14,13 @@
   var PROMO = {
     // ① 顶部公告条 → 即梦（视频生成）
     topUrl: 'https://seko.cgref.cn/s/rpe3l6xe05',
-    topText: '🎬 AI灵感成片 | 世界杯视频一键生成，免费体验',
+    topText: '⚽️ AI灵感成片 | 世界杯视频一键生成，免费体验',
     topCta: '立即体验 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
 
     // ⑥ 文中段落广告 → B 站课程
-    inlineUrl: 'https://www.bilibili.com/cheese/play/ep2342243',
+    inlineUrl: 'https://pan.quark.cn/s/8f7886f79569',
     inlineEvery: 5,
     inlineMax: 1,
     inlineMinParas: 5,
