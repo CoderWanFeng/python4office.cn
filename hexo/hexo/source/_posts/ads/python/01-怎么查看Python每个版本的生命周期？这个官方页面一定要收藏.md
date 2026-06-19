@@ -7,6 +7,9 @@ description: "Python版本那么多，哪些还能用、哪些已经停更、哪
 cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
 ---
 
+<img width="907" height="588" alt="250d20c018ead11ce54b4d6e86433f13" src="https://github.com/user-attachments/assets/bb6312de-7fe7-4f8d-8644-77c12742561b" />
+
+
 大家好，我是程序员晚枫。
 
 今天一个粉丝问我：
