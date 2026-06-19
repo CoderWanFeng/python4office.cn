@@ -475,7 +475,7 @@ cover: https://images.unsplash.com/photo-XXX?q=80&w=1200&auto=format&fit=crop
 
 欢迎加入我的 **AI 课程**：
 
-🎓 [程序员晚枫 · AI 课程（B 站）：https://www.bilibili.com/cheese/play/ss982042944](https://www.bilibili.com/cheese/play/ss982042944)
+🎓 [程序员晚枫 · AI 课程（B 站）：https://pan.quark.cn/s/8f7886f79569](https://pan.quark.cn/s/8f7886f79569)
 ```
 
 ---

@@ -149,7 +149,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 课程链接再放一次：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 ## 🎬 免费试听
-前3讲可以免费试听：[点击去B站免费试听前3讲](https://www.bilibili.com/cheese/play/ss982042944)
+前3讲可以免费试听：[点击去网盘下载，免费试听前3讲](https://pan.quark.cn/s/8f7886f79569)
 
 
 

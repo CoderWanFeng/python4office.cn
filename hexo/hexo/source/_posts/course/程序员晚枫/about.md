@@ -158,7 +158,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 **2. AI Coding 落地实战课 · 企业版**（30 讲）
 
-- 👉 **免费试看**：[B 站前 3 讲](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **免费试看**：[B 站前 3 讲](https://pan.quark.cn/s/8f7886f79569)
 - 👉 **企业采购 / 个人报名**：[点击这里咨询](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 **3. 1V1 企业咨询**：选型 / 试点 / 培训 / 流程改造，按项目收费

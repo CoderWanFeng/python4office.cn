@@ -249,7 +249,7 @@ TOKEN Plan解决了CODING Plan的最大痛点——**套餐束缚**。
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/8f7886f79569)
 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 ---

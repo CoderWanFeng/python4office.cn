@@ -357,7 +357,7 @@ edit these into a launch video
 
 欢迎加入我的 **AI 课程**——视频教学 + 实战项目 + 跟着做就上手：
 
-🎓 [程序员晚枫 · AI 课程（B 站）：https://www.bilibili.com/cheese/play/ss982042944](https://www.bilibili.com/cheese/play/ss982042944)
+🎓 [程序员晚枫 · AI 课程（B 站）：https://pan.quark.cn/s/8f7886f79569](https://pan.quark.cn/s/8f7886f79569)
 
 课程内容覆盖 Codex 插件、HyperFrames / Remotion / HeyGen / videocut-skills / video-use 等热门工具的实战用法，**从入门到精通**。
 

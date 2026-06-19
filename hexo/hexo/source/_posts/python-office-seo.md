@@ -60,7 +60,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 ### 推荐课程
 - 《30讲 · AI编程训练营》
-  - 🎬 前3讲可以免费试听：[点击去B站免费试听前3讲](https://www.bilibili.com/cheese/play/ss982042944)
+  - 🎬 前3讲可以免费试听：[点击去网盘下载，免费试听前3讲](https://pan.quark.cn/s/8f7886f79569)
 - 《Python自动化办公实战》
 - 《AI在办公领域的应用》
 

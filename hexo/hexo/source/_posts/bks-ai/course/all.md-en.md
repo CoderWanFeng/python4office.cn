@@ -30,7 +30,7 @@ Contains two courses:
 2.｜Workflow Series
 Help you improve work efficiency, automate processes:
 - [30讲 · AI Programming Training Camp for Beginners](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
-  - 🎬 First 3 episodes can be previewed for free: [Click to preview first 3 episodes on Bilibili](https://www.bilibili.com/cheese/play/ss982042944)
+  - 🎬 First 3 episodes can be previewed for free: [Click to preview first 3 episodes on Bilibili](https://pan.quark.cn/s/8f7886f79569)
 - Workflow book list account: Specifically for book list account project workflow setup
 - Workflow official account: Automation workflow for official account operations, suitable for friends who want to解放双手 and do less repetitive work.
 

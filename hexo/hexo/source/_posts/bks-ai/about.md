@@ -174,7 +174,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 想给企业研发/数据团队做 AI Coding 落地？程序员晚枫的 **AI Coding 落地实战课 · 企业版** 帮你从 0 到 1 搭起可控、可培训、可评估的团队生产力。
 
-- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己团队](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己团队](https://pan.quark.cn/s/8f7886f79569)
 - 👉 **企业采购 / 团队内训**：[点击这里咨询](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - 👉 **1V1 选型咨询**：[预约 1V1 AI Coding 工具选型咨询](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 

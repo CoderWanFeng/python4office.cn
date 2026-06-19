@@ -86,7 +86,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 - 点击左侧的扩展图标（或使用快捷键 Ctrl/command+Shift+X）。
 - 在搜索框中输入 Cline，找到对应的插件并点击 安装。
 
-前3讲可以试听，试听链接：https://www.bilibili.com/cheese/play/ss982042944
+前3讲可以试听，试听链接：https://pan.quark.cn/s/8f7886f79569
 
 
 ![install](https://raw.atomgit.com/user-images/assets/5027920/6e622b45-2fd5-4c26-bae9-d88b3852be29/image.png)

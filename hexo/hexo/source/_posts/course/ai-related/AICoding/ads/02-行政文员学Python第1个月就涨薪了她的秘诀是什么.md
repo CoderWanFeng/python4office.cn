@@ -75,7 +75,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 ## 30讲课程帮你什么
 
-前3讲可以试听，试听链接：https://www.bilibili.com/cheese/play/ss982042944
+前3讲可以试听，试听链接：https://pan.quark.cn/s/8f7886f79569
 
 
 这门课专门为零基础设计：

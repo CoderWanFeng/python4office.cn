@@ -337,7 +337,7 @@ https://platform.minimaxi.com/subscribe/token-plan
 - 🌐 MiniMax Token Plan 官方原始链接：https://platform.minimaxi.com/subscribe/token-plan
 - 🌐 MiniMax 官网：https://www.minimaxi.com
 - 📖 [MiniMax M3 深度评测：我目前唯一一个不心疼用的大模型](https://www.python4office.cn/video-scripts/公众号/ai-tools/tool-reviews/minimax/20260616-minimax-m3-token-plan/)
-- 🎓 [程序员晚枫 · AI 编程实战课（B 站）：https://www.bilibili.com/cheese/play/ss982042944](https://www.bilibili.com/cheese/play/ss982042944)
+- 🎓 [程序员晚枫 · AI 编程实战课（B 站）：https://pan.quark.cn/s/8f7886f79569](https://pan.quark.cn/s/8f7886f79569)
 
 ---
 

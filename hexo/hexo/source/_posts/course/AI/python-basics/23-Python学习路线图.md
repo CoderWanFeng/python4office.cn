@@ -608,7 +608,7 @@ for title in titles:
 | 💬 专属答疑群 | 遇到问题有人带 |
 | 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
 
-👉 **[点击免费试学 AI 零基础实战营](https://www.bilibili.com/cheese/play/ss982042944)**
+👉 **[点击免费试学 AI 零基础实战营](https://pan.quark.cn/s/8f7886f79569)**
 
 
 *PS：23篇文章，从Hello World到独立做项目。你已经迈出了成为Python开发者的重要一步。继续前进！🚀*
@@ -618,7 +618,7 @@ for title in titles:
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **免费试看**：[B站免费试看前3讲，先看看适不适合自己](https://www.bilibili.com/cheese/play/ss982042944)
+- 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/8f7886f79569)
 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 
