@@ -70,11 +70,66 @@ fi
 log "${YELLOW}正在启动 Hexo 服务器...${NC}"
 log "${YELLOW}热加载已启用 - 修改文件后会自动重新生成${NC}"
 log ""
-log "${GREEN}网站地址: http://localhost:4000${NC}"
-log "${YELLOW}按 Ctrl+C 停止服务器${NC}"
-log ""
 log "${CYAN}========================================${NC}"
 log ""
 
-# 启动带监视功能的服务器
-yarn run server --watch --debug >> "$LOG_FILE" 2>&1
+# 自动杀掉占用 4000 端口的旧 hexo 进程
+if command -v lsof >/dev/null 2>&1; then
+  old_pid=$(/usr/sbin/lsof -nP -iTCP:4000 -sTCP:LISTEN -t 2>/dev/null | head -1)
+  if [ -n "$old_pid" ]; then
+    log "${YELLOW}发现端口 4000 被占用（PID $old_pid），自动清理...${NC}"
+    kill "$old_pid" 2>/dev/null
+    sleep 1
+    if /usr/sbin/lsof -nP -iTCP:4000 -sTCP:LISTEN >/dev/null 2>&1; then
+      kill -9 "$old_pid" 2>/dev/null
+      sleep 1
+    fi
+  fi
+fi
+
+# 后台启动 server
+yarn run server --watch --debug >> "$LOG_FILE" 2>&1 &
+SERVER_PID=$!
+
+# Ctrl+C 时一起清理
+cleanup_server() {
+  if kill -0 "$SERVER_PID" 2>/dev/null; then
+    kill -TERM "$SERVER_PID" 2>/dev/null
+    sleep 1
+    kill -KILL "$SERVER_PID" 2>/dev/null
+  fi
+}
+trap cleanup_server INT TERM EXIT
+
+# 轮询端口 4000 是否就绪
+log "${YELLOW}等待服务器就绪...${NC}"
+SERVER_READY=0
+for i in $(seq 1 180); do
+  if /usr/sbin/lsof -nP -iTCP:4000 -sTCP:LISTEN >/dev/null 2>&1; then
+    SERVER_READY=1
+    log "${GREEN}✓ Hexo 服务器已就绪（${i} 秒）${NC}"
+    log ""
+    log "${GREEN}网站地址: http://localhost:4000${NC}"
+    log "${YELLOW}按 Ctrl+C 停止服务器${NC}"
+    log ""
+    log "${CYAN}========================================${NC}"
+    log ""
+    break
+  fi
+  if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+    log "${RED}✗ Hexo 服务器启动失败${NC}"
+    log "${YELLOW}preview.log 末尾：${NC}"
+    /usr/bin/tail -15 "$LOG_FILE" 2>/dev/null
+    exit 1
+  fi
+  sleep 1
+done
+
+if [ "$SERVER_READY" -ne 1 ]; then
+  log "${RED}✗ Hexo 服务器 180 秒内未就绪${NC}"
+  kill -KILL "$SERVER_PID" 2>/dev/null
+  exit 1
+fi
+
+# 让 server 跑前台（Ctrl+C 由 trap 处理）
+wait "$SERVER_PID"
