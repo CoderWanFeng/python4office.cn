@@ -1,5 +1,5 @@
 ---
-name: ai-hotspot-tracker
+name: ai-hot
 description: 抓取 AIHOT（卡兹克维护的 AI 热点监控平台）每日精选与日报，按 Python 办公自动化 / AI 工具 / 教程创作 的相关性过滤整理。当用户想"今天 AI 圈有什么新东西"、"最近 Python AI 有什么动态"、"帮我写篇 AI 教程选题"、"AI 日报"等场景时使用。
 version: 1.0.0
 author: python4office.cn
@@ -38,11 +38,12 @@ tags: [ai-news, content-creation, ai-tools, python-automation]
 - **认证**：❌ 不需要 API Key，公开匿名
 - **限流**：默认足够日常使用，正式生产请先观察稳定性
 - **时区**：所有时间戳为 UTC，输出给用户时需转 `Asia/Shanghai`
+- **必需 Header**：浏览器 User-Agent（否则 nginx 直接 403），脚本已内置
 
 ### 主要端点
 
 ```http
-GET /api/public/items?mode=selected&since=2026-06-17T00:00:00Z&category=模型
+GET /api/public/items?mode=selected&since=2026-06-17T00:00:00Z&category=ai-models
 GET /api/public/items?mode=all&q=Python+AI
 GET /api/public/daily
 GET /api/public/daily/{YYYY-MM-DD}
@@ -53,8 +54,9 @@ GET /api/public/dailies?take=30
 |---|---|---|
 | `mode` | 否 | `selected`（精选，默认）/ `all`（全量） |
 | `since` | 否 | ISO-8601 时间戳，过滤该时间之后 |
-| `category` | 否 | `模型` / `产品` / `行业` / `论文` / `技巧` |
-| `q` | 否 | 关键词搜索（服务端 ILIKE，不要本地 grep） |
+| `category` | 否 | **英文枚举**：`ai-models` / `ai-products` / `industry` / `paper` / `tip` |
+| `q` | 否 | 关键词搜索（空格用 `+`，服务端 ILIKE） |
+| `cursor` | 否 | 分页 cursor（从上次响应的 `nextCursor` 拿） |
 | `take` | 否 | `/dailies` 专用，返回最近 N 天日报列表 |
 
 ---

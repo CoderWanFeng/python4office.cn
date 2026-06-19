@@ -10,10 +10,11 @@ fetch_aihot.py — AIHOT API 命令行调用脚本
 用法：
     python3 fetch_aihot.py daily
     python3 fetch_aihot.py daily --date 2026-06-17
-    python3 fetch_aihot.py items --mode selected --since 24h
-    python3 fetch_aihot.py items --category 模型 --since 7d
+    python3 fetch_aihot.py items --since 24h
+    python3 fetch_aihot.py items --category ai-models --since 7d
     python3 fetch_aihot.py items --q "Python 自动化"
     python3 fetch_aihot.py dailies --take 30
+    python3 fetch_aihot.py items --cursor <token>   # 翻页
 """
 
 import argparse
@@ -22,40 +23,51 @@ import sys
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
-from typing import Any
+from typing import Any, Dict, Optional
 
 BASE_URL = "https://aihot.virxact.com"
 
-# 输出美化（关掉就传 --no-color）
+# 必须用浏览器 UA，否则 nginx 会直接 403
+DEFAULT_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+}
+
+# 实际 API 用的英文分类枚举
+CATEGORIES_EN = ["ai-models", "ai-products", "industry", "paper", "tip"]
+CATEGORIES_ZH = {
+    "ai-models": "模型",
+    "ai-products": "产品",
+    "industry": "行业",
+    "paper": "论文",
+    "tip": "技巧",
+}
+
 USE_COLOR = sys.stdout.isatty()
 
 
 def c(code: str, text: str) -> str:
-    """简单 ANSI 颜色"""
     if not USE_COLOR:
         return text
     return f"\033[{code}m{text}\033[0m"
 
 
-def http_get(path: str, params: dict | None = None, timeout: int = 15) -> dict:
-    """发起 GET 请求并返回 JSON"""
+def http_get(path: str, params: Optional[Dict[str, Any]] = None, timeout: int = 20) -> Dict[str, Any]:
     if params:
-        # 关键词里的空格用 +（API 文档明确说明）
         qs = urllib.parse.urlencode(params, quote_via=urllib.parse.quote_plus)
         url = f"{BASE_URL}{path}?{qs}"
     else:
         url = f"{BASE_URL}{path}"
-
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "ai-hotspot-tracker/1.0 (+python4office.cn)"},
-    )
+    req = urllib.request.Request(url, headers=DEFAULT_HEADERS)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
 def parse_since(since: str) -> str:
-    """把自然语言时长转 ISO-8601 时间戳（默认 UTC）"""
+    """自然语言时长 → ISO-8601（UTC）"""
     now = datetime.now(timezone.utc)
     if since.endswith("h"):
         delta = timedelta(hours=int(since[:-1]))
@@ -64,13 +76,12 @@ def parse_since(since: str) -> str:
     elif since.endswith("w"):
         delta = timedelta(weeks=int(since[:-1]))
     else:
-        # 当成 ISO-8601 原样返回
         return since
     return (now - delta).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def fmt_time(iso: str) -> str:
-    """UTC → Asia/Shanghai (UTC+8) 友好显示"""
+    """UTC → Asia/Shanghai 友好显示"""
     try:
         dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
         sh = dt.astimezone(timezone(timedelta(hours=8)))
@@ -79,21 +90,35 @@ def fmt_time(iso: str) -> str:
         return iso
 
 
-def render_item(item: dict, idx: int) -> str:
-    """单条热点的卡片化输出"""
-    title = item.get("title", "（无标题）")
-    summary = item.get("summary") or item.get("description", "")
+def render_item(item: Dict[str, Any], idx: int) -> str:
+    """渲染单条热点（适配实际字段，daily 端点可能缺部分字段）"""
+    title = item.get("title") or "（无标题）"
+    summary = item.get("summary") or ""
     url = item.get("url", "")
-    category = item.get("category", "")
-    published = fmt_time(item.get("published_at", ""))
+    cat_en = item.get("category", "")
+    cat_zh = CATEGORIES_ZH.get(cat_en, cat_en) if cat_en else ""
+    source = item.get("source", "")
+    published_at = item.get("publishedAt") or item.get("generatedAt")
+    published = fmt_time(published_at) if published_at else ""
+    score = item.get("score")
+    score_str = f"  💯{score}" if score is not None else ""
 
     lines = [
-        f"{c('1;36', f'[{idx}]')} {c('1;33', title)}",
+        f"{c('1;36', f'[{idx}]')} {c('1;33', title)}{score_str}",
     ]
-    if category:
-        lines.append(f"    🏷️  {c('35', category)}  🕐 {published}")
+
+    # 第二行：元信息（只显示有的字段）
+    meta_parts = []
+    if cat_zh:
+        meta_parts.append(f"🏷️  {c('35', cat_zh)}")
+    if published:
+        meta_parts.append(f"🕐 {published}")
+    if source:
+        meta_parts.append(f"📡 {source}")
+    if meta_parts:
+        lines.append("    " + "  ".join(meta_parts))
+
     if summary:
-        # 截断过长摘要
         sm = summary[:200] + ("..." if len(summary) > 200 else "")
         lines.append(f"    {sm}")
     if url:
@@ -108,19 +133,33 @@ def cmd_daily(args):
     else:
         path = "/api/public/daily"
     data = http_get(path)
-    print(c("1;32", f"📰 AI 日报 — {data.get('date', args.date or '今日')}"))
+
+    date = data.get("date", args.date or "今日")
+    print(c("1;32", f"📰 AI 日报 — {date}"))
     print("=" * 60)
-    # 假设返回结构: {"date":..., "sections": [...]} 或扁平 items
-    items = data.get("items") or data.get("sections") or []
-    for i, item in enumerate(items, 1):
-        print(render_item(item, i))
-        print()
-    if not items:
-        print(c("33", "（今天还没有日报，可以试试 selected 端点）"))
+    print(f"  生成时间：{fmt_time(data.get('generatedAt', ''))}  "
+          f"窗口：{fmt_time(data.get('windowStart', ''))} ~ {fmt_time(data.get('windowEnd', ''))}")
+    print()
+
+    # 真实结构: sections: [{label, items: [...]}]
+    sections = data.get("sections") or []
+    idx = 0
+    for sec in sections:
+        label = sec.get("label", "")
+        items = sec.get("items", [])
+        if items:
+            print(c("1;35", f"### {label}（{len(items)} 条）"))
+            for item in items:
+                idx += 1
+                print(render_item(item, idx))
+                print()
+
+    if not sections:
+        print(c("33", "（今天还没有日报，可以试试 items 端点）"))
 
 
 def cmd_items(args):
-    """拉精选/全量条目"""
+    """拉条目（精选/全量）"""
     params = {}
     if args.mode:
         params["mode"] = args.mode
@@ -130,32 +169,43 @@ def cmd_items(args):
         params["since"] = parse_since(args.since)
     if args.q:
         params["q"] = args.q
+    if args.cursor:
+        params["cursor"] = args.cursor
 
     data = http_get("/api/public/items", params)
-    items = data.get("items") or data
-    print(c("1;32", f"🔥 AIHOT 条目（{len(items)} 条）"))
+    items = data.get("items") or []
+    has_next = data.get("hasNext", False)
+    next_cursor = data.get("nextCursor")
+
+    print(c("1;32", f"🔥 AIHOT 条目（{len(items)} 条，本页；总池：{data.get('count', '?')}）"))
     print("=" * 60)
     for i, item in enumerate(items[: args.limit], 1):
         print(render_item(item, i))
         print()
 
+    if has_next and next_cursor and not args.no_next_hint:
+        print(c("36", f"👉 还有更多，翻页命令："))
+        print(f"   python3 fetch_aihot.py items --cursor {next_cursor}")
+
 
 def cmd_dailies(args):
-    """列出最近 N 天日报（用于发现哪些日期有日报）"""
+    """列出最近 N 天日报"""
     data = http_get("/api/public/dailies", {"take": args.take})
     items = data.get("items") or data
     print(c("1;32", f"📅 可用日报列表（最近 {len(items)} 天）"))
     print("=" * 60)
     for d in items:
         if isinstance(d, dict):
-            print(f"  • {d.get('date', d)}")
+            date = d.get("date", "")
+            lead = d.get("leadTitle", "")
+            print(f"  • {c('33', date)}  {lead}")
         else:
             print(f"  • {d}")
 
 
 def main():
     ap = argparse.ArgumentParser(
-        description="AIHOT API 命令行调用（python4office.cn 定制 Skill 配套脚本）",
+        description="AIHOT API 命令行调用（python4office.cn 定制 Skill 配套）",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -168,10 +218,13 @@ def main():
     # items
     p_items = sub.add_parser("items", help="拉精选/全量条目")
     p_items.add_argument("--mode", choices=["selected", "all"], default="selected")
-    p_items.add_argument("--category", choices=["模型", "产品", "行业", "论文", "技巧"])
+    p_items.add_argument("--category", choices=CATEGORIES_EN,
+                        help="分类：ai-models / ai-products / industry / paper / tip")
     p_items.add_argument("--since", help="时间窗：24h / 7d / 2w，或 ISO-8601")
     p_items.add_argument("--q", help="关键词搜索")
-    p_items.add_argument("--limit", type=int, default=20, help="最多展示多少条（默认 20）")
+    p_items.add_argument("--cursor", help="分页 cursor（接上次 nextCursor）")
+    p_items.add_argument("--limit", type=int, default=20)
+    p_items.add_argument("--no-next-hint", action="store_true")
     p_items.set_defaults(func=cmd_items)
 
     # dailies
@@ -184,6 +237,8 @@ def main():
         args.func(args)
     except urllib.error.HTTPError as e:
         print(c("1;31", f"❌ HTTP {e.code}: {e.reason}"), file=sys.stderr)
+        if e.code == 403:
+            print(c("33", "   （403 通常是 User-Agent 被拒，检查 DEFAULT_HEADERS）"), file=sys.stderr)
         sys.exit(1)
     except urllib.error.URLError as e:
         print(c("1;31", f"❌ 网络错误: {e.reason}"), file=sys.stderr)
