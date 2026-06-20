@@ -1,5 +1,5 @@
 ---
-title: 2026年6月20日 AI 热点：CodeGen自动写测试、阿里开源向量库、Agent记忆层有了工业级方案
+title: AI写代码还会自动测试？Salesforce CodeGen这次玩真的
 date: 2026-06-20 03:37:00
 tags: ["AI热点", "CodeGen", "向量数据库", "Agent记忆", "AI资讯"]
 categories: ["AI资讯"]
@@ -282,4 +282,4 @@ Elastic 的方案是：
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/8f7886f79569)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)
