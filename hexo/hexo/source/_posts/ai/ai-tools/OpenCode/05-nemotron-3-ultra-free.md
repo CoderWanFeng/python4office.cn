@@ -1,6 +1,6 @@
 ---
 title: OpenCode Zen 白嫖指南（五）：Nemotron 3 Ultra Free 数学算法硬核担当
-date: 2026-06-26 13:45:00
+date: 2026-06-22 13:45:00
 categories:
 - AI工具
 - OpenCode

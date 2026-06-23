@@ -1,6 +1,6 @@
 ---
 title: OpenCode Zen 白嫖指南（三）：DeepSeek V4 Flash Free 免费模型天花板
-date: 2026-06-26 13:00:00
+date: 2026-06-22 13:00:00
 categories:
 - AI工具
 - OpenCode

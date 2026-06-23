@@ -1,6 +1,6 @@
 ---
 title: OpenCode Zen 白嫖指南（四）：Big Pickle Free 代码理解与重构专家
-date: 2026-06-26 13:30:00
+date: 2026-06-22 13:30:00
 categories:
 - AI工具
 - OpenCode

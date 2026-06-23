@@ -1,6 +1,6 @@
 ---
 title: OpenCode Zen 白嫖指南：North Mini Code Free 使用教程
-date: 2026-06-26 12:00:00
+date: 2026-06-22 12:00:00
 categories:
 - AI工具
 - OpenCode

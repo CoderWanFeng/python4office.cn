@@ -1,6 +1,6 @@
 ---
 title: OpenCode Zen 白嫖指南（二）：MiMo V2.5 Free 多模态编程神器
-date: 2026-06-26 12:30:00
+date: 2026-06-22 12:30:00
 categories:
 - AI工具
 - OpenCode
