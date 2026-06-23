@@ -73,7 +73,7 @@
 | 字段 | 值 |
 |---|---|
 | 启用日期 | 启用日期不详（项目一直保留，未曾替换） |
-| 链接 | `https://www.liblib.tv/?sourceid=005902&utm=cg&cgv=9omkl4jn4d` |
+| 链接 | `https://libtv.cgref.cn/s/9omkl4jn4d` |
 | 标题 | `想做视频号 / 抖音 / 小红书？` |
 | 描述 | `AI 帮你一键生成，不用学剪辑，免费试用 3 次。` |
 | CTA | `免费试用 →` |

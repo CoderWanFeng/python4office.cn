@@ -165,7 +165,7 @@ DeepSeek、豆包现在也一样。
 ## 相关阅读
 
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
-- [一整套持续更新的AI资料包 + 实战陪跑](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
 - [用AI做副业的3个思路](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)

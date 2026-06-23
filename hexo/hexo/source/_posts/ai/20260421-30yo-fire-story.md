@@ -259,7 +259,7 @@ HR说话的时候，眼神刻意回避我。
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [一整套持续更新的AI资料包 + 实战陪跑](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 
 **END**

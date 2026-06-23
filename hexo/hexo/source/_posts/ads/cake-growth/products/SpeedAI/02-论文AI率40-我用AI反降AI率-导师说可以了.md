@@ -145,7 +145,7 @@ SpeedAI让我看到了一种可能性：**AI率不是问题，问题是你有没
 
 - [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
-- [一整套持续更新的AI资料包 + 实战陪跑](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
 - [比AI更可怕的是：你同事已经开始用AI工作了](https://mp.weixin.qq.com/s/__84ENDwkz2zVTdvKH5h4A)

@@ -16,9 +16,9 @@ cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit
 
 | 序号 | 产品/服务名称 | 推广链接 | 描述 | 推文 | 备注 |
 |------|--------------|---------|------|---------|------|
-| 1    | LiblibAI (哩布哩布AI) | https://www.liblib.art/?souceid=005904&utm=cg&cgv=2znrw0okr7 | 中国领先的AI创作平台 | https://mp.weixin.qq.com/s/qFIj0am4B6WmIIhIq14ScQ | 待补充 |
-| 2    | 星流 (Xingliu) | https://www.xingliu.art/?souceid=005903&utm=cg&cgv=1zn5oxmeqm | 新一代设计Agent | https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg | 待补充 |
-| 3    | LibTV | https://www.liblib.tv/?sourceid=005902&utm=cg&cgv=9omkl4jn4d | 专业视频创作工具 | 待补充 | 待补充 |
+| 1    | LiblibAI (哩布哩布AI) | https://liblib.cgref.cn/s/2znrw0okr7 | 中国领先的AI创作平台 | https://mp.weixin.qq.com/s/qFIj0am4B6WmIIhIq14ScQ | 待补充 |
+| 2    | 星流 (Xingliu) | https://xingliu.cgref.cn/s/1zn5oxmeqm | 新一代设计Agent | https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg | 待补充 |
+| 3    | LibTV | https://libtv.cgref.cn/s/9omkl4jn4d | 专业视频创作工具 | 待补充 | 待补充 |
 | 4    | 墨刀AI (Modao AI) | https://modao.cc/feature/ai?utm_channel=wl&utm_source=referrals&utm_keyword=cakegrowth&utm=cg&cgv=5ln1qj3erw | 激发无限创造力 | 待补充 | 待补充 |
 | 5    | 超级简历WonderCV | https://www.wondercv.com/?utm=cg&cgv=zdkjoy9e1r | AI智能简历制作工具 | https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ | 待补充 |
 | 6    | UP简历 | https://upcv.tech/?utm=cg&cgv=9we2rzwkgo | AI简历生成在线制作工具 | 待补充 | 待补充 |

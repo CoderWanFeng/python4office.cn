@@ -86,8 +86,8 @@ cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&
 
 **覆盖了你能想到的所有场景：**
 
-- 想做海报？有AI设计工具 👉 [星流： https://www.xingliu.art/?souceid=005903&utm=cg&cgv=1zn5oxmeqm](https://www.xingliu.art/?souceid=005903&utm=cg&cgv=1zn5oxmeqm)
-- 想做视频？有AI视频工具 👉 [LibTV： https://www.liblib.tv/?sourceid=005902&utm=cg&cgv=9omkl4jn4d](https://www.liblib.tv/?sourceid=005902&utm=cg&cgv=9omkl4jn4d)
+- 想做海报？有AI设计工具 👉 [星流： https://xingliu.cgref.cn/s/1zn5oxmeqm](https://xingliu.cgref.cn/s/1zn5oxmeqm)
+- 想做视频？有AI视频工具 👉 [LibTV： https://libtv.cgref.cn/s/9omkl4jn4d](https://libtv.cgref.cn/s/9omkl4jn4d)
 - 想做PPT？有AI演示工具 👉 [AiPPT： https://www.aippt.cn/plugin?utm_type=CJDHZ&utm_source=cakegrowth&utm_page=home&utm_plan=dhzfx&utm_unit=c1&utm_keyword=40515276&utm=cg&cgv=20epp9dew1](https://www.aippt.cn/plugin?utm_type=CJDHZ&utm_source=cakegrowth&utm_page=home&utm_plan=dhzfx&utm_unit=c1&utm_keyword=40515276&utm=cg&cgv=20epp9dew1)
 - 想写简历？有AI简历工具 👉 [超级简历WonderCV： https://www.wondercv.com/?utm=cg&cgv=zdkjoy9e1r](https://www.wondercv.com/?utm=cg&cgv=zdkjoy9e1r)
 - 想学编程？有AI编程助手 👉 [图灵社区AI Python实战营： https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
@@ -127,7 +127,7 @@ AI这东西，**不是你不够聪明，而是你不知道有哪些好工具。*
 
 - [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
-- [一整套持续更新的AI资料包 + 实战陪跑](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT Plus 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)

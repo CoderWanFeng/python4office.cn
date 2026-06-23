@@ -341,7 +341,7 @@ OpenAI演示的"无APP手机"，让我想起2010年。
 - [黄仁勋又放大招！人形机器人+PC芯片，AI硬件彻底变天](https://www.python4office.cn/ai/news/20260604-huang-renxun-ai-hardware/)
 - [我用AI开发软件，老板问我是不是偷偷招了个程序员](https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
-- [一整套持续更新的AI资料包 + 实战陪跑](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 
 ---
 

@@ -29,7 +29,7 @@
     ],
 
     // ② 文末 CTA → LibTV（视频创作工具，cakegrowth 返佣）
-    footerUrl: 'https://www.liblib.tv/?sourceid=005902&utm=cg&cgv=9omkl4jn4d',
+    footerUrl: 'https://libtv.cgref.cn/s/9omkl4jn4d',
     footerTitle: '想做视频号 / 抖音 / 小红书？',
     footerDesc: 'AI 帮你一键生成，不用学剪辑，免费试用 3 次。',
     footerBtn: '免费试用 →'
