@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
+<a href="https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
         <a href="https://www.python4office.cn/wechat-group/">
@@ -178,7 +178,7 @@ Excel用了二十年，每天加班到晚上十点，数据处理还是手动复
 
 **从最痛的那个点开始，你会发现AI真的香。**
 
-如果你不知道从哪开始，我整理了一套从零上手AI的方法，不用懂代码，跟着学就能真正把AI用起来，少走弯路。有需要的可以看看 👉 [用AI做副业的3个思路](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+如果你不知道从哪开始，我整理了一套从零上手AI的方法，不用懂代码，跟着学就能真正把AI用起来，少走弯路。有需要的可以看看 👉 [用AI做副业的3个思路](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 
@@ -198,7 +198,7 @@ AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 
 ## 相关阅读
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
@@ -211,7 +211,7 @@ AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 
 如果你到现在还没用过AI工具，不用慌。我整理了一套系统的学习方法，不用懂代码，不用花大钱，跟着学完就能真正把AI用起来。
 
-有需要的可以看看 👉 [AI编程实战课](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+有需要的可以看看 👉 [AI编程实战课](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 ---
 

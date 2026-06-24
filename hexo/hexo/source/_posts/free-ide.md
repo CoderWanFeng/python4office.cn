@@ -208,7 +208,7 @@ File → New Project → 选择Pure Python
 - 内容详实：从原理到实践全覆盖
 - 特色内容：BAT合作资源、大厂AI福利
 
-👉 [立即了解课程详情](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+👉 [立即了解课程详情](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 ---
 

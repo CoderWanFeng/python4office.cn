@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
-Hello everyone, this is Programmer Wanfeng, currently fully dedicated to [AI Programming Practice](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw).
+Hello everyone, this is Programmer Wanfeng, currently fully dedicated to [AI Programming Practice](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA).
 
 Today's article might offend the client...
 
@@ -28,7 +28,7 @@ But they all have a common problem: they're too large!
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" />
     </a>   
 </p>
@@ -54,7 +54,7 @@ But they all have a common problem: they're too large!
 
 
 
-Programmer Wanfeng focuses on AI programming training. Beginners can start doing AI projects after reading the tutorial ["30 Lectures · AI Programming Training Camp"](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) that he collaborated with Turing Community.
+Programmer Wanfeng focuses on AI programming training. Beginners can start doing AI projects after reading the tutorial ["30 Lectures · AI Programming Training Camp"](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) that he collaborated with Turing Community.
 
 
 

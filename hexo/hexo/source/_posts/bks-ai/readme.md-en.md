@@ -46,7 +46,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 | Course Name | Episodes | Status | Suitable For | Link |
 |-------------|----------|--------|--------------|------|
-| 30讲·AI Programming Training Camp | 30 episodes | ✅ Completed | Complete beginners | [View](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) |
+| 30讲·AI Programming Training Camp | 30 episodes | ✅ Completed | Complete beginners | [View](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) |
 | AI Prompt Writing Beginner | - | ⏳ To be developed | Want to learn prompt writing | - |
 | Complete AI Tool Usage Guide | - | ⏳ To be developed | Want to quickly master various AI tools | - |
 

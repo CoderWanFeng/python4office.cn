@@ -98,7 +98,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 如果你也想从零开始学Python和AI，试试图灵社区AI Python实战营。
 
-👉 [点击这里试试图灵社区：https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+👉 [点击这里试试图灵社区：https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 ---
 
@@ -154,7 +154,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 ## 相关阅读
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
@@ -167,7 +167,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 还没试过的朋友，点下面的链接试试图灵社区AI Python实战营。
 
-👉 [点击这里试试图灵社区：https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+👉 [点击这里试试图灵社区：https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 ---
 

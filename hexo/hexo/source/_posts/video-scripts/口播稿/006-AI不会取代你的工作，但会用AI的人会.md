@@ -80,7 +80,7 @@ AI是工具，就像以前的计算器、电脑、挖掘机。
 **顺便说一句**
 如果你想学习怎么用AI提升工作效率，搞副业赚钱，我整理了一套系统的学习方法，不用懂代码，不用花大钱，跟着学完就能真正把AI用起来，少走弯路。
 
-有需要的可以看看👉 https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw
+有需要的可以看看👉 https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA
 
 科技不高冷，AI很好用。
 我是晚枫，关注我，教你把AI用在实处。

@@ -151,7 +151,7 @@ cover: https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&auto=for
 
 想看完整课程介绍、试看章节、或者直接报名：
 
-👉 [晚枫老师的 AI Python 零基础实战营](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+👉 [晚枫老师的 AI Python 零基础实战营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 群里会有：
 

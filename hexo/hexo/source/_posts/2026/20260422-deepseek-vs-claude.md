@@ -139,7 +139,7 @@ V4最大的亮点：**100万Token上下文**。
 
 👉 [点击查看训练营详情](https://www.python4office.cn/course/ai-related/posts-people/ads/260209-499/)
 
-课程链接：https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw
+课程链接：https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA
 
 ---
 

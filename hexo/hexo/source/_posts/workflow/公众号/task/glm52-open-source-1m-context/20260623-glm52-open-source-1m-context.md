@@ -131,7 +131,7 @@ GLM-5.2 能引起这么大轰动，关键就在它的 **100 万上下文窗口**
 
 ## 相关阅读
 
-- [2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [🖊️ 想做视频号 / 抖音 / 小红书？AI 帮你一键生成，不用学剪辑，免费试用 3 次](https://libtv.cgref.cn/s/9omkl4jn4d)
 - [🎁 国产 CodeX AI 办公助手 | 写方案/PPT/分析 一次搞定](https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)

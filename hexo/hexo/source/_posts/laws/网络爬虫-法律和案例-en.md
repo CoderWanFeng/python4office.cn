@@ -60,9 +60,9 @@ Before learning, recommend reading this article, which is a viewpoint I shared a
 
 ## Related Reading
 
-- [《30 Lectures · AI Programming Training Camp》for Beginners](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [《30 Lectures · AI Programming Training Camp》for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
-Programmer Wanfeng focuses on AI programming training, beginners can start making AI projects after watching his tutorials co-published with Turing Community [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw).
+Programmer Wanfeng focuses on AI programming training, beginners can start making AI projects after watching his tutorials co-published with Turing Community [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA).
 
 
 ## 🎓 AI 编程实战课程

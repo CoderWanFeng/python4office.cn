@@ -155,7 +155,7 @@ Now is the best time!
 
 **Limited Time Special: ¥49**
 
-👉 **[Start Learning Now →](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
+👉 **[Start Learning Now →](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
 ---
 

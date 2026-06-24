@@ -34,7 +34,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 	</a>
 </p>
 <p align="center" name="atomgit">
-	<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
+	<a href="https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA">
   <img src="https://img.shields.io/badge/Learn-AI%20Programming-red" alt="AI Programming">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -92,7 +92,7 @@ Also welcome developers with technical skills to enrich this project together:
 
 
 
-CoderWanFeng focuses on AI programming training. Beginners can start making AI projects after watching his tutorial [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) collaborated with Turing Community.
+CoderWanFeng focuses on AI programming training. Beginners can start making AI projects after watching his tutorial [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) collaborated with Turing Community.
 
 
 ## 🎓 AI 编程实战课程

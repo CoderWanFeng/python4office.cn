@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 <p align="center" id='扫码查看 AI 编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>   
 </p>
@@ -25,7 +25,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
+<a href="https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA">
   <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
@@ -700,7 +700,7 @@ print(d1)  # {'a': 1, 'b': 20, 'c': 3}
 
 🎁 **限时福利**：送《Python编程从入门到实践》实体书
 
-👉 **[点击了解详情](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
+👉 **[点击了解详情](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
 ---
 

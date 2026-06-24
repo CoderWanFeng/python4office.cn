@@ -125,7 +125,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 相关阅读
 
-- [《30讲·AI编程训练营》- 零基础入门AI编程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [《30讲·AI编程训练营》- 零基础入门AI编程](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [Python自动化办公：从入门到实战](https://www.python4office.cn/)
 - [程序员晚枫个人博客](https://www.python4office.cn/)
 

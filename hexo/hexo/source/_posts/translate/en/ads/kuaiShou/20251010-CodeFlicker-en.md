@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-Hey everyone, this is 程序员晚枫 (Programmer Wanfeng), currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw).
+Hey everyone, this is 程序员晚枫 (Programmer Wanfeng), currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA).
 
 On October 9, 2025, while e-commerce platforms were warming up for Double 11, Kuaishou suddenly dropped a tech bomb — officially releasing CodeFlicker, an AI-native IDE programming tool. This internet giant, best known for short videos and live streaming, actually crossed over into developers' "productivity tools"? The moment news broke, the tech community exploded: "Kuaishou is going off-topic?" "Are they really going head-to-head with GitHub Copilot?"
 
@@ -66,7 +66,7 @@ After all, in an era where AI is reshaping everything, never underestimate a tec
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" />
     </a>   
 </p>
@@ -93,7 +93,7 @@ After all, in an era where AI is reshaping everything, never underestimate a tec
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
 
 
 

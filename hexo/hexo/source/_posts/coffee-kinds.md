@@ -237,7 +237,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ## 延伸学习
 
 - [刻意练习比一万小时更重要](https://www.python4office.cn/tobeu/)
-- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [Python自动化办公实战](https://www.python4office.cn/)
 
 ---

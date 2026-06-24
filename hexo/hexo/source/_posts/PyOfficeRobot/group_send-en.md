@@ -70,10 +70,10 @@ If you have any questions using the code, feel free to exchange ideas with me in
 
 ## Related Reading
 
-- [《30 Lessons · AI Programming Training Camp》for Beginners](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [《30 Lessons · AI Programming Training Camp》for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
-Programmer Wanfeng focuses on AI programming training. Beginners can start making AI projects after watching his tutorial [《30 Lessons · AI Programming Training Camp》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) co-produced with Turing Community.
+Programmer Wanfeng focuses on AI programming training. Beginners can start making AI projects after watching his tutorial [《30 Lessons · AI Programming Training Camp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) co-produced with Turing Community.
 
 
 ## 🎓 AI 编程实战课程

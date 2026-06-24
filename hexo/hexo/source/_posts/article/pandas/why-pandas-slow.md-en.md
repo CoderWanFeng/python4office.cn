@@ -19,10 +19,10 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## Related Reading
 
-- [30讲 · AI Programming Training Camp for Beginners](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [30讲 · AI Programming Training Camp for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
-Programmer Wan Feng focuses on AI programming training, 小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)就能上手做AI项目。
+Programmer Wan Feng focuses on AI programming training, 小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
 
 
 ## 🎓 AI 编程实战课程

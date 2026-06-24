@@ -13,7 +13,7 @@ translation:
 
 # Lost! I Got Laid Off at 30, and the Myth of the High-Paid Programmer Is a Joke
 
-Hello, this is Wanfeng, the programmer. I'm going all in on [AI programming in practice](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw). Today's article is a reader submission. Here we go. 👇
+Hello, this is Wanfeng, the programmer. I'm going all in on [AI programming in practice](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA). Today's article is a reader submission. Here we go. 👇
 
 ---
 

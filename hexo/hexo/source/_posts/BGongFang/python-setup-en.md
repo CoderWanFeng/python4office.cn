@@ -38,7 +38,7 @@ Next is the code editor. Installing Python is only the first step. Without an ed
 If installing Python wasn't enough, you can learn from these beginner courses, all practical case studies suitable for newcomers:
 
 - [50 Lessons · Python + Office Automation](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B)
-- [10 Lessons · Python + WeChat Bot](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [10 Lessons · Python + WeChat Bot](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [30 Lessons · Python + Data Analysis](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [5 Lessons · Python + OCR Batch Recognition](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [100 Lessons · Python + Artificial Intelligence](https://www.bilibili.com/video/BV1rU4y1u7og/)
@@ -62,7 +62,7 @@ Scan the QR code below to join the group chat. 👇
 
 
 <p align="center" id='10讲机器人-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%A1%E5%BD%93.jpg" width="100%"/>
     </a>
 </p>
@@ -90,7 +90,7 @@ Scan the QR code below to join the group chat. 👇
 </p>
 
 
-Programmer Wanfeng focuses on AI programming training. Beginners can start making AI projects after watching his tutorial [《30 Lessons · AI Programming Training Camp》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw) co-produced with Turing Community.
+Programmer Wanfeng focuses on AI programming training. Beginners can start making AI projects after watching his tutorial [《30 Lessons · AI Programming Training Camp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) co-produced with Turing Community.
 
 
 ## 🎓 AI 编程实战课程

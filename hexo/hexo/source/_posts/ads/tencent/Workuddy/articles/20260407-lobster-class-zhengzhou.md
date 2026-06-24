@@ -180,7 +180,7 @@ AI是杠杆，不是对手。
 ## 📚 想系统学习AI编程？
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
     <img src="https://raw.gitcode.com/user-images/assets/5027920/1f021b1e-f401-4afa-bfa5-f1f289d351a7/599.jpg" width="80%"/>
     </a>   
 </p>

@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
+<a href="https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
         <a href="https://www.python4office.cn/wechat-group/">
@@ -249,9 +249,9 @@ Windsurf 有一个独家功能叫 **Cascade**。
 
 ## 相关阅读
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [Cursor 免费版 vs 付费版：和Trae对比后，我更推荐这个](https://www.python4office.cn/openclaw/cursor/free-vs-paid/)
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)

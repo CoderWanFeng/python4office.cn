@@ -29,7 +29,7 @@ Contains two courses:
 
 2.｜Workflow Series
 Help you improve work efficiency, automate processes:
-- [30讲 · AI Programming Training Camp for Beginners](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [30讲 · AI Programming Training Camp for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
   - 🎬 First 3 episodes can be previewed for free: [Click to preview first 3 episodes on Bilibili](https://pan.quark.cn/s/8f7886f79569)
 - Workflow book list account: Specifically for book list account project workflow setup
 - Workflow official account: Automation workflow for official account operations, suitable for friends who want to解放双手 and do less repetitive work.
@@ -37,7 +37,7 @@ Help you improve work efficiency, automate processes:
 
 3.｜AI Programming Series
 Practical, actionable skills:
-①[AI Programming: Beginner (Posts & Telecom Press): Systematically build foundation, suitable for zero foundation](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw?channel_id=1515397)
+①[AI Programming: Beginner (Posts & Telecom Press): Systematically build foundation, suitable for zero foundation](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA?channel_id=1515397)
 ②[AI Programming: Office Automation: Use AI + programming to handle Excel, files, spreadsheets, etc.](https://mp.weixin.qq.com/s/BXWg_LXreNCI-UlrckZrTw)
 ③[AI Programming: Project Practice: Multiple real project cases, learn by doing](https://mp.weixin.qq.com/s/b6fpU-oXSo8qKP_Nc8w0Zg)
 ④AI Programming: Personal Website: Use AI to quickly build your own personal website

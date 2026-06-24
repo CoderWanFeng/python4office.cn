@@ -165,7 +165,7 @@ Or 👉 [Join AI Programming Learning Communication Group](https://www.python4of
 ## Related Reading
 
 - [python-office: Automate your office workflow with Python](https://www.python-office.com/)
-- [AI Programming Bootcamp: Learn AI programming even with zero foundation](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [AI Programming Bootcamp: Learn AI programming even with zero foundation](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 

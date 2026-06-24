@@ -165,7 +165,7 @@ AtomCode把这个门槛降到了最低。去试试吧，你会发现自己能做
 ## 相关阅读
 
 - [python-office：用Python自动化你的办公流程](https://www.python-office.com/)
-- [AI编程训练营：零基础也能学会AI编程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [AI编程训练营：零基础也能学会AI编程](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 

@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 📢 **Link First**: 👉 **[Click to learn about Alibaba Cloud Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&source=5176.29345612&userCode=t6duaoe1)**
 
-> 💡 **Want to systematically learn AI programming?** 👉 **[Click to learn AI Programming Training Camp](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
+> 💡 **Want to systematically learn AI programming?** 👉 **[Click to learn AI Programming Training Camp](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
 Hello everyone, this is programmer Wan Feng.
 
@@ -119,13 +119,13 @@ All three products support mainstream tools:
 
 Want to learn AI programming systematically? Check out **CoderWanFeng's AI Programming Course**!
 
-- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - 👉 **Free Preview**: [Watch the first 3 lessons on Bilibili for free](https://pan.quark.cn/s/8f7886f79569)
 ---
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/8f7886f79569)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)

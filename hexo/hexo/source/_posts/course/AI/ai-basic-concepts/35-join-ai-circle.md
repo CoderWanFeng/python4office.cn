@@ -88,7 +88,7 @@ AI这么好用，别让它只停留在「收藏夹里吃灰」的阶段。
 
 ### 图书和课程合作
 
-- **人民邮电出版社·图灵编辑部**：[2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- **人民邮电出版社·图灵编辑部**：[2026 年学习编程，你需要的不是更多教程](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 ### 媒体采访
 

@@ -155,7 +155,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 **限时特惠价：¥49**
 
-👉 **[点击立即学习 →](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**
+👉 **[点击立即学习 →](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
 ---
 

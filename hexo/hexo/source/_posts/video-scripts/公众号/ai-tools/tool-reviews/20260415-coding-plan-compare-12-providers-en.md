@@ -31,7 +31,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 
 
 <p align="center" id='扫码查看 AI 编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>
 </p>
@@ -49,7 +49,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
+<a href="https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA">
   <img src="https://img.shields.io/badge/Learn-AI Programming-red" alt="AI 编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -110,6 +110,6 @@ I've compiled a summary table, source: [python-office.com/openclaw/coding-plan/]
 
 Want to learn AI programming systematically? Check out **CoderWanFeng's AI Programming Course**!
 
-- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - 👉 **Free Preview**: [Watch the first 3 lessons on Bilibili for free](https://pan.quark.cn/s/8f7886f79569)
 

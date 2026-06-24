@@ -21,7 +21,7 @@ AI编程是指利用人工智能技术和Python编程，开发智能应用和解
 
 ## 程序员晚枫的AI编程课程
 
-- [《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
   - 🎬 前3讲可以免费试听：[点击去网盘下载，免费试听前3讲](https://pan.quark.cn/s/8f7886f79569)
 - [AI在办公领域的应用](https://www.python4office.cn/)
 - [Python与人工智能](https://www.python4office.cn/)

@@ -38,7 +38,7 @@ Python安装包
 如果安装完了还不过瘾，大家可以学习以下入门课程，都是适合小白的实用案例课：
 
 - [50讲 · Python + 自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B)
-- [10讲 · Python + 微信机器人](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [10讲 · Python + 微信机器人](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [30讲 · Python + 数据分析](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [5讲 · Python + OCR批量识别](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [100讲 · Python + 人工智能](https://www.bilibili.com/video/BV1rU4y1u7og/)
@@ -62,7 +62,7 @@ Python安装包
 
 
 <p align="center" id='10讲机器人-banner'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
     <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg" width="100%"/>
     </a>   
 </p>
@@ -92,7 +92,7 @@ Python安装包
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/8f7886f79569)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)

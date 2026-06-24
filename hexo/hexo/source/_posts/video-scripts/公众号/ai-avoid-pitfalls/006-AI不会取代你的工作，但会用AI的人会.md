@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
+<a href="https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA">
   <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
 </a>
         <a href="https://www.python4office.cn/wechat-group/">
@@ -173,11 +173,11 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 ## 相关阅读
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
-- [用AI 做 副业 的 3个思路](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [用AI 做 副业 的 3个思路](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
 
 ---
@@ -186,7 +186,7 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 如果你想学习怎么用AI提升工作效率、搞副业赚钱，我整理了一套系统的学习方法。不用懂代码，不用花大钱，跟着学完就能真正把AI用起来，少走弯路。
 
-有需要的可以看看 👉 [AI编程实战课](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+有需要的可以看看 👉 [AI编程实战课](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 ---
 
@@ -197,7 +197,7 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 ## 相关阅读
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
@@ -216,7 +216,7 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 **公众号**：晚枫AI学习笔记
 **声明**：本文原创，转载需联系授权
 
-程序员晚枫专注AI编程培训，通过[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)让小白也能上手做AI项目。
+程序员晚枫专注AI编程培训，通过[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)让小白也能上手做AI项目。
 
 ## 🎓 AI 编程实战课程
 

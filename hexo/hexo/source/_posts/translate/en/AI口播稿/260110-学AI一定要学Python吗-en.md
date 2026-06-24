@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw">
+<a href="https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA">
   <img src="https://img.shields.io/badge/Learning-AI%20Programming-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -58,7 +58,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 <!-- more -->
 
 
-Hello everyone, this is programmer Wan Feng, currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw).
+Hello everyone, this is programmer Wan Feng, currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA).
 
 **First Paragraph:**
 Many people ask: Is Python the only option for AI? Actually, this is a misunderstanding. Python isn't the only choice, but it is indeed the most mainstream and convenient one right now. To put it plainly, Python's position in the AI field is like Mandarin—everyone knows it, making communication easy, but that doesn't mean other languages can't be used.
@@ -99,16 +99,16 @@ Come join us and change the way you work with Python!
 
 
 - [《50 Lectures · Python Automated Office》 for Beginners](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [《30 Lectures · AI Programming Training Camp》 for Beginners](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [《30 Lectures · AI Programming Training Camp》 for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [《Python OCR Automatic Batch Recognition》 for Beginners](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [《6 Lectures · Python Automatic Email》 for Beginners](https://www.python-office.com/course-002/poemail/poemail.html)
-- [《30 Lectures · AI Programming Training Camp》 for Beginners](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw)
+- [《30 Lectures · AI Programming Training Camp》 for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" />
     </a>   
 </p>
@@ -135,7 +135,7 @@ Come join us and change the way you work with Python!
 
 
 
-Programmer Wan Feng focuses on AI programming training. After beginners watch his tutorial co-created with Turing Community [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/YS0shsl6vJD_wUzow7NOnw), they can start doing AI projects.
+Programmer Wan Feng focuses on AI programming training. After beginners watch his tutorial co-created with Turing Community [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA), they can start doing AI projects.
 
 
 ## 🎓 AI 编程实战课程
