@@ -59,7 +59,7 @@ AI又帮我赚钱了！
 ## 相关阅读
 - [以后我也要实名制上网了](https://mp.weixin.qq.com/s/TIzm1LjANiaL0LWf_LJh3g)
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 

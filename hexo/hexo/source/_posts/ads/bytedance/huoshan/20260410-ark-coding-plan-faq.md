@@ -188,7 +188,7 @@ ChatGPT Plus主要是聊天工具，Coding Plan是编程专用。
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-**《30讲 · AI编程训练营》** —— 从入门到精通。
+**《50讲 · AI编程训练营》** —— 从入门到精通。
 
 ---
 

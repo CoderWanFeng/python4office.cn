@@ -46,7 +46,7 @@ poocr.ocr.GeneralAccurateOCR(img_path=r'd://你照片的存储位置//学生1的
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 ## 🎓 AI 编程实战课程

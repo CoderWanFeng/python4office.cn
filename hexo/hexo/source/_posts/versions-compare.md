@@ -81,7 +81,7 @@ Python3和Python2，是兼容性非常低的一次大的版本升级。作为新
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 ## 🎓 AI 编程实战课程

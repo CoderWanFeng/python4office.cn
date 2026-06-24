@@ -68,7 +68,7 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 

@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 2.｜工作流系列 
 帮你提高做事效率、自动化流程： 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
   - 🎬 前3讲可以免费试听：[点击去网盘下载，免费试听前3讲](https://pan.quark.cn/s/8f7886f79569)
 - 工作流书单号：专门针对书单号项目的流程搭建
 - 工作流公众号：针对公众号运营的自动化工作流，适合想解放双手、少做重复工作的朋友。

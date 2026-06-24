@@ -146,7 +146,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 如果想知道更多AI编程的进阶技巧（比如怎么让AI贴合你的编码风格、怎么校验AI生成代码的安全性），可以去看看我的《AI编程实战课》，里面全是能直接落地的干货，帮你彻底把AI变成“编程外挂”～
 
-课程链接再放一次：[给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+课程链接再放一次：[给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 ## 🎬 免费试听
 前3讲可以免费试听：[点击去网盘下载，免费试听前3讲](https://pan.quark.cn/s/8f7886f79569)
@@ -159,4 +159,4 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 有任何问题，欢迎联系我的微信👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。

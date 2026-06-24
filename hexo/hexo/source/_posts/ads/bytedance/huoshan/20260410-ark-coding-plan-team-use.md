@@ -112,7 +112,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-**《30讲 · AI编程训练营》** —— 团队AI编程最佳实践。
+**《50讲 · AI编程训练营》** —— 团队AI编程最佳实践。
 
 ---
 

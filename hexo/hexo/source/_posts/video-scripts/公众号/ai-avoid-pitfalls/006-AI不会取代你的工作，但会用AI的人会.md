@@ -216,7 +216,7 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 **公众号**：晚枫AI学习笔记
 **声明**：本文原创，转载需联系授权
 
-程序员晚枫专注AI编程培训，通过[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)让小白也能上手做AI项目。
+程序员晚枫专注AI编程培训，通过[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)让小白也能上手做AI项目。
 
 ## 🎓 AI 编程实战课程
 

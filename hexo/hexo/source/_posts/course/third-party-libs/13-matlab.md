@@ -194,7 +194,7 @@ Matplotlib 是一个功能强大的绘图库，通过简单的代码可以生成
 
 ## 相关阅读
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 ## 🎓 AI 编程实战课程

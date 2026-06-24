@@ -58,7 +58,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## AI课程
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UzehPjEgEpcdI_rnnIg4YA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/UzehPjEgEpcdI_rnnIg4YA)
 - [给小白的《30讲 · Python自动化办公》](https://www.bilibili.com/cheese/play/ss616647427?csource=private_space_class_null&spm_id_from=333.1387.0.0)
 
 

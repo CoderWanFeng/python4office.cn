@@ -90,7 +90,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1000&
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 ## 🎓 AI 编程实战课程

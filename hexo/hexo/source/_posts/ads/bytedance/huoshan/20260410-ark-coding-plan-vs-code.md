@@ -142,7 +142,7 @@ VS Code + 火山方舟Coding Plan，是目前性价比最高的AI编程方案。
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-**《30讲 · AI编程训练营》** —— VS Code AI编程最佳实践。
+**《50讲 · AI编程训练营》** —— VS Code AI编程最佳实践。
 
 ---
 

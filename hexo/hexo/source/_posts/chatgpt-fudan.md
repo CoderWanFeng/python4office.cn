@@ -69,7 +69,7 @@ MOSS 项目主页：https://txsun1997.github.io/blogs/moss.html
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
 
 ---
 

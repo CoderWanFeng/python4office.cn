@@ -124,7 +124,7 @@ Cursor + 火山方舟Coding Plan，是目前性价比最高的AI编程组合。
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-**《30讲 · AI编程训练营》** —— 从0到1掌握AI编程实战。
+**《50讲 · AI编程训练营》** —— 从0到1掌握AI编程实战。
 
 ---
 

@@ -65,7 +65,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - [更新了！微信机器人接入阿里大模型了](https://mp.weixin.qq.com/s/F_DCyPYLNwy7-fU-oN1cOQ)
 - [给小白的《50讲 · Python自动化办公》（完结）](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [重磅！公众号接入阿里大模型了！](https://mp.weixin.qq.com/s/dzzZ6iG0ooE2mQUC4YEj6w)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 ## AI交流群
 
@@ -75,7 +75,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ![](https://cos.python-office.com/group/ai-group.jpg)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
 
 ---
 

@@ -211,7 +211,7 @@ AI生成的代码都要 review，确保：
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-**《30讲 · AI编程训练营》** —— 打造你的AI编程工作流。
+**《50讲 · AI编程训练营》** —— 打造你的AI编程工作流。
 
 ---
 

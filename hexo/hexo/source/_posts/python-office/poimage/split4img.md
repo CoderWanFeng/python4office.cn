@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)，这段时间给大家分享多个微信自动化的代码：
 
 - [用Python实现微信多开，1行代码免费用](https://mp.weixin.qq.com/s/qlubpfAytr_coV8GilG9RA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 今天再给大家分享一个：**用Python发一个好看的朋友圈的代码。**

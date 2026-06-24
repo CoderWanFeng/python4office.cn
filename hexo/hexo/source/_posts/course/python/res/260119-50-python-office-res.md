@@ -199,7 +199,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 - [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
 - [AI短视频还有红利！coze书单号，给我冲](https://mp.weixin.qq.com/s/qokwWMcCdr0PSSm3aGhssA)
 - [我用AI写了一个发票批量识别软件，免费分享给大家](https://mp.weixin.qq.com/s/1V6w9CjQV8S8z8NRSc3L_w)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 ## 🎓 AI 编程实战课程

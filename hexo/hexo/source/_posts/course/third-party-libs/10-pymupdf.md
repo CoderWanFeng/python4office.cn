@@ -138,7 +138,7 @@ doc.save("encrypted.pdf")
 ## 相关课程
 
 - [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [给小白的《5讲 · Python实现发票批量识别》](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 
 

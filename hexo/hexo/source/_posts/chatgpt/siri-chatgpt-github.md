@@ -54,7 +54,7 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 点我直达👉[https://www.python4office.cn/wechat-group/](https://www.python4office.cn/wechat-group/)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
 
 ---
 

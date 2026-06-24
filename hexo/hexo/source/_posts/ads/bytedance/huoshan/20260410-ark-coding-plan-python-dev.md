@@ -159,7 +159,7 @@ Python + 火山方舟Coding Plan，开发效率提升明显。
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-**《30讲 · AI编程训练营》** —— Python开发者专属AI编程课。
+**《50讲 · AI编程训练营》** —— Python开发者专属AI编程课。
 
 ---
 

@@ -284,7 +284,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 📝 [三十而立，没有遗憾](https://mp.weixin.qq.com/s/26jJWW3j9PxWISR1n3drfg)
 - [给小白的《15讲 · Python入门课》](https://mp.weixin.qq.com/s/ZxJZimZYSvtBSK80tpZbNQ)
 - [给小白的《50讲 · Python自动化办公》](https://mp.weixin.qq.com/s/lOx4cAp9AllsCrhsUqVn8g)
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [给小白的《5讲 · Python实现文字批量识别》](https://mp.weixin.qq.com/s/pGim7ifpgLwYUJ9a-FHvaw)
 - [给小白的《6讲 · Python自动收发邮件》](https://mp.weixin.qq.com/s/AeTkloNri7gpk25m50VmTA)
 - [给小白的《30讲 · Python + Excel数据分析》](https://www.python-office.com/course-002/30-Excel/30-Excel.html)

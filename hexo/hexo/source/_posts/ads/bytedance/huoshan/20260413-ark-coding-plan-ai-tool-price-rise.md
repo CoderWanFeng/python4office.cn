@@ -219,7 +219,7 @@ Anthropic的API价格也在调整。
 
 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-**《30讲 · AI编程训练营》** —— 从0到1掌握AI编程实战。
+**《50讲 · AI编程训练营》** —— 从0到1掌握AI编程实战。
 
 ---
 

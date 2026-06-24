@@ -107,7 +107,7 @@ AI不是让你变成“技术大神”，而是让你用最低成本解决工作
 别再让AI躺在你的收藏夹里吃灰了，点击课程链接[30讲·AI编程训练营](https://mp.weixin.qq.com/s?__biz=MzUzNTc5NjA4NQ==&mid=2247504529&idx=1&sn=856c1ae8ae3a807ac67ed7d855b72e87&scene=21&poc_token=HNHQcWmj2pMjQ5XuwsH9JD2DKrFWLK1J23agfg7v)，绑定你的工作场景，让AI真正成为你的“效率帮手”！
 
 ## 相关阅读
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [数据分析从入门到精通，30讲Python+Excel搞定](https://mp.weixin.qq.com/s/p6MTu8512uzbM2_9vQFWPA)
 - [告别加班！50讲Python自动化办公，让你从职场小白变效率达人](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 - [我的百度数字人，24小时直播中。。。](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)

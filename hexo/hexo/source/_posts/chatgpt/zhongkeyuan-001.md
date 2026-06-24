@@ -80,7 +80,7 @@ input区域 输入 ./crazy_functions/test_project/python/dqn ， 然后点击 "[
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 
 ## 🎓 AI 编程实战课程

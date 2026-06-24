@@ -115,7 +115,7 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 
 - [我也吃上了AI的红利！分享一个邪修思路](https://mp.weixin.qq.com/s/RGakg6tIc_jcYTvjeh3zjw)
 
-- [给小白的《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 
 - [花了一个月终于搞定了！公开我的 AI 自动发文智能体，小白也能用](https://mp.weixin.qq.com/s/96CYtR9IFpGNJwOVzPDx4Q)
 
@@ -163,7 +163,7 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《30讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
 
 ---
 
