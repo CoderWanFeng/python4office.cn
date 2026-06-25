@@ -23,7 +23,7 @@ AI助理：https://volcengine.cgref.cn/s/omklvl7n4d
 
 AI写剧本：https://wawawriter.com/app/?utm_source=aiweb96
 
-AI生成短剧：https://www.updream.cn/?bsource=xinyan_04
+AI生成短剧：https://www.updream.cn/?bsource=xinyan_as
 
 AI创作：https://liblib.cgref.cn/s/2znrw0okr7
 

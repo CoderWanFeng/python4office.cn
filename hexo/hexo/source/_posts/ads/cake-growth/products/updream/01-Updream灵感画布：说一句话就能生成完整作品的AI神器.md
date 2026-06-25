@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1200&aut
 
 ---
 
-> 👉 **专属福利链接**：https://www.updream.cn/?bsource=xinyan_04
+> 👉 **专属福利链接**：https://www.updream.cn/?bsource=xinyan_as
 
 ---
 
@@ -214,7 +214,7 @@ Updream：角色 + 场景 + 道具 + 提示词 ✅
 
 ### 第 1 步：进入专属福利链接
 
-👉 https://www.updream.cn/?bsource=xinyan_04
+👉 https://www.updream.cn/?bsource=xinyan_as
 
 ### 第 2 步：注册账号
 
