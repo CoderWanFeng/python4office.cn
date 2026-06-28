@@ -133,7 +133,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ## 六、怎么订阅？
 
 ### 阿里云Coding Plan
-👉 **https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1**
+👉 **https://www.aliyun.com/minisite/goods?userCode=t6duaoe1**
 
 ### 火山方舟Coding Plan
 👉 **https://volcengine.com/L/hZRFoiCAVDE//**

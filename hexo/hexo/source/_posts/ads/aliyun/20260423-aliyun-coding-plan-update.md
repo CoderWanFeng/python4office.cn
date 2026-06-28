@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 大家好，这里是程序员晚枫。
 
@@ -111,7 +111,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 学生价：9.9 元/月（原价 29 元）
 - 认证即享优惠
 
-**👉 [点击查看最新活动](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击查看最新活动](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ## 六、即将上线
 
@@ -150,7 +150,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - ✅ 功能增加（代码审查、多模态）
 - ✅ tokens 额度提升
 
-**👉 [点击开通信义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击开通信义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
@@ -170,7 +170,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
-> 📢 **科技不高冷，AI很好用** 👉 **[点击立即体验](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **科技不高冷，AI很好用** 👉 **[点击立即体验](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

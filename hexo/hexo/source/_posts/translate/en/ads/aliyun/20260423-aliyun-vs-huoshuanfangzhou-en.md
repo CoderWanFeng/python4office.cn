@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 > 💡 **Volcano Ark 36 yuan/month** 👉 **[Click to learn more](https://volcengine.com/L/hZRFoiCAVDE/)**
 
@@ -116,7 +116,7 @@ Volcano Ark crushes Alibaba Cloud in terms of model quantity.
 | **tokens** | 800,000/month | 2,000,000/month |
 | **Suitable Crowd** | Alibaba ecosystem developers | Those pursuing multiple models |
 
-**👉 [Click to activate Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to activate Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 **👉 [Click to learn about Volcano Ark](https://volcengine.com/L/hZRFoiCAVDE/)**
 
@@ -131,7 +131,7 @@ Volcano Ark crushes Alibaba Cloud in terms of model quantity.
 
 ---
 
-> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to learn more](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to learn more](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

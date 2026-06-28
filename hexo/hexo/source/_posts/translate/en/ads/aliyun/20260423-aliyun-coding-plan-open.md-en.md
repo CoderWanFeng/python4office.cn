@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 💡 **Technology is not high-cold, AI is very easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **Technology is not high-cold, AI is very easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 Hello everyone, this is programmer Wan Feng.
 
@@ -43,7 +43,7 @@ Today brings you **Alibaba Cloud Bailian Coding Plan hand-hold getting started t
 
 ### Step 1: Visit Activation Page
 
-**👉 [Click to access Alibaba Cloud Bailian Coding Plan activation page](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to access Alibaba Cloud Bailian Coding Plan activation page](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ### Step 2: Choose a Package
 

@@ -23,7 +23,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **Technology is not high-cold, AI is very easy to use** 👉 **[Click to experience Tencent Hunyuan](https://curl.qcloud.com/Z9TkzRuj)**
 
-> 💡 **Alibaba Cloud 29 yuan/month** 👉 **[Click for details](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **Alibaba Cloud 29 yuan/month** 👉 **[Click for details](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 Hello everyone, this is programmer Wan Feng.
 

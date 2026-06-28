@@ -41,7 +41,7 @@ Zed 是一个高性能的代码编辑器，支持 AI 辅助编程和实时协作
 
 ### Step 1：获取阿里云百炼 API Key
 
-👉 **专属9折优惠通道**：[https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1](https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1)
+👉 **专属9折优惠通道**：[https://www.aliyun.com/minisite/goods?userCode=t6duaoe1](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 开通后，在百炼控制台复制你的 API Key。
 
@@ -77,7 +77,7 @@ Zed 是一个高性能的代码编辑器，支持 AI 辅助编程和实时协作
 
 阿里云百炼 Coding Plan 按量计费，29元/月起，用多少付多少。
 
-👉 **专属9折优惠**：[https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1](https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1)
+👉 **专属7.5折优惠**：[https://www.aliyun.com/minisite/goods?userCode=t6duaoe1](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 ---
 

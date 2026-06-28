@@ -107,7 +107,7 @@ cover: https://images.unsplash.com/photo-1677443994799-97b6aae1?w=800&h=400&fit=
 - 你更习惯用**千问模型**做开发
 - 你想要阿里云的一站式生态
 
-👉 [点击查看阿里云 Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)
+👉 [点击查看阿里云 Coding Plan](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 ### 选腾讯云 Token Plan，如果：
 

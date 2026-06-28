@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -101,7 +101,7 @@ Apply in Alibaba Cloud console - Expenses - Invoice Management.
 - ❌ You are a WeChat developer (choose Tencent Cloud)
 - ❌ You pursue multiple models (choose Volcano Ark)
 
-**👉 [Click to view Alibaba Cloud Bailian Coding Plan details](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to view Alibaba Cloud Bailian Coding Plan details](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
@@ -114,7 +114,7 @@ Apply in Alibaba Cloud console - Expenses - Invoice Management.
 
 ---
 
-> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to activate now](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to activate now](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to access Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to access Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -31,7 +31,7 @@ Today I bring you the **Alibaba Cloud Bailian API access tutorial**, teaching yo
 ### 1. Activate the service
 
 First, make sure you have activated Alibaba Cloud Bailian Coding Plan:
-**👉 [Click to activate](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to activate](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ### 2. Get API-KEY
 
@@ -154,7 +154,7 @@ It is recommended to use asynchronous calls in production environments to avoid 
 
 For the same or similar prompts, you can cache results to reduce API calls.
 
-**👉 [Click to get Alibaba Cloud Bailian API-KEY](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to get Alibaba Cloud Bailian API-KEY](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
@@ -167,7 +167,7 @@ For the same or similar prompts, you can cache results to reduce API calls.
 
 ---
 
-> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to activate now](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to activate now](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

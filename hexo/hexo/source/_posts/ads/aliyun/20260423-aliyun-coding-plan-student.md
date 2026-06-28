@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 大家好，这里是程序员晚枫。
 
@@ -53,7 +53,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ### 第一步：访问学生专区
 
-**👉 [点击访问阿里云学生优惠页面](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击访问阿里云学生优惠页面](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ### 第二步：完成学生认证
 
@@ -108,7 +108,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 数据库免费使用
 - AI 能力优惠
 
-**👉 [点击申请阿里云学生优惠](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击申请阿里云学生优惠](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
@@ -128,7 +128,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
-> 📢 **科技不高冷，AI很好用** 👉 **[点击立即申请](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **科技不高冷，AI很好用** 👉 **[点击立即申请](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

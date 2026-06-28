@@ -133,7 +133,7 @@ Reason: Ecosystem integration, one-stop service.
 ## 6. How to subscribe?
 
 ### Alibaba Cloud Coding Plan
-👉 **https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1**
+👉 **https://www.aliyun.com/minisite/goods?userCode=t6duaoe1**
 
 ### Volcano Engine Coding Plan
 👉 **https://volcengine.com/L/hZRFoiCAVDE//**

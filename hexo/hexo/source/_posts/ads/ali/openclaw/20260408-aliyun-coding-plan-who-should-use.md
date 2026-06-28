@@ -177,7 +177,7 @@ https://bailian.console.aliyun.com/
 
 ## 五、怎么订阅？
 
-**订阅链接**：https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1
+**订阅链接**：https://www.aliyun.com/minisite/goods?userCode=t6duaoe1
 
 ## 六、写在最后
 

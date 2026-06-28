@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 大家好，这里是程序员晚枫。
 
@@ -88,7 +88,7 @@ if len(messages) > 20:
 - 节省：19.1 元/月
 - 认证：在阿里云学生专区申请
 
-**👉 [点击了解学生优惠](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击了解学生优惠](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ## 五、年费更便宜
 
@@ -126,7 +126,7 @@ if len(messages) > 20:
 
 用好这些技巧，29 元/月绝对值！
 
-**👉 [点击开始使用阿里云百炼 Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击开始使用阿里云百炼 Coding Plan](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
@@ -146,7 +146,7 @@ if len(messages) > 20:
 
 ---
 
-> 📢 **科技不高冷，AI很好用** 👉 **[点击立即开通](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **科技不高冷，AI很好用** 👉 **[点击立即开通](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

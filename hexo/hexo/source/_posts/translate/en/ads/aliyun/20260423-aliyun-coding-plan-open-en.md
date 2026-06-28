@@ -18,7 +18,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -42,7 +42,7 @@ Today I bring you the **step-by-step getting started tutorial for Alibaba Cloud 
 
 ### Step 1: Visit the activation page
 
-**👉 [Click to visit Alibaba Cloud Bailian Coding Plan activation page](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to visit Alibaba Cloud Bailian Coding Plan activation page](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ### Step 2: Select a package
 
@@ -128,7 +128,7 @@ You can upgrade to a higher package or wait for the next month's reset.
 
 **No!** Alibaba Cloud is a domestic service with fast access speed in China.
 
-**👉 [Click to start using Alibaba Cloud Bailian Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to start using Alibaba Cloud Bailian Coding Plan](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
@@ -141,7 +141,7 @@ You can upgrade to a higher package or wait for the next month's reset.
 
 ---
 
-> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to start now](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to start now](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

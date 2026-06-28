@@ -288,7 +288,7 @@ Reason: Fast speed, low cost, sufficient for daily use.
 ## 5. How to experience?
 
 ### Alibaba Cloud Coding Plan
-👉 **[Click to subscribe to Alibaba Cloud Coding Plan](https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1)**
+👉 **[Click to subscribe to Alibaba Cloud Coding Plan](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 One subscription, unlimited use of the entire Tongyi Qianwen series.
 

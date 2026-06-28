@@ -18,7 +18,7 @@ Bought Alibaba Cloud Coding Plan but don't know how to use it? Today's tutorial 
 ## 1. Subscribe to Coding Plan
 
 ### Step 1: Open the subscription page
-Visit: [Alibaba Cloud Coding Plan Subscription Page](https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1)
+Visit: [Alibaba Cloud Coding Plan Subscription Page](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 ### Step 2: Choose a plan
 - Pay-as-you-go: Suitable for light usage

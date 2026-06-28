@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 400,000+ followers across platforms, 6 years of Python development experience, author of open source project python-office
 
-> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -112,7 +112,7 @@ Advanced and enterprise versions have price reductions!
 - Student price: 9.9 yuan/month (original price 29 yuan)
 - Discount upon certification
 
-**👉 [Click to view latest activities](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to view latest activities](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ## VI. Coming Soon
 
@@ -151,7 +151,7 @@ Changes to Alibaba Cloud Bailian Coding Plan in 2026:
 - ✅ Feature additions (code review, multimodal)
 - ✅ Token limit increases
 
-**👉 [Click to activate Tongyi Qianwen](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [Click to activate Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
@@ -164,7 +164,7 @@ Changes to Alibaba Cloud Bailian Coding Plan in 2026:
 
 ---
 
-> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience now](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience now](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

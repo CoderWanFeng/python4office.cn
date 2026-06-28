@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 > 💡 **火山方舟 36元/月** 👉 **[点击了解详情](https://volcengine.com/L/hZRFoiCAVDE/)**
 
@@ -115,7 +115,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 | **tokens** | 80 万/月 | 200 万/月 |
 | **适合人群** | 阿里系开发者 | 追求多模型 |
 
-**👉 [点击开通信义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击开通信义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 **👉 [点击了解火山方舟](https://volcengine.com/L/hZRFoiCAVDE/)**
 
@@ -137,7 +137,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ---
 
-> 📢 **科技不高冷，AI很好用** 👉 **[点击了解详情](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **科技不高冷，AI很好用** 👉 **[点击了解详情](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

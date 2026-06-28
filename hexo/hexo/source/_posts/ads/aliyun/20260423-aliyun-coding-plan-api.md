@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 💡 **科技不高冷，AI很好用** 👉 **[点击接入通义千问](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **科技不高冷，AI很好用** 👉 **[点击接入通义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 大家好，这里是程序员晚枫。
 
@@ -30,7 +30,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ### 1. 开通服务
 
 先确保你已经开通了阿里云百炼 Coding Plan：
-**👉 [点击开通](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击开通](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ### 2. 获取 API-KEY
 
@@ -153,7 +153,7 @@ except Exception as e:
 
 对于相同或相似的 prompt，可以缓存结果减少 API 调用。
 
-**👉 [点击获取阿里云百炼 API-KEY](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击获取阿里云百炼 API-KEY](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
@@ -173,7 +173,7 @@ except Exception as e:
 
 ---
 
-> 📢 **科技不高冷，AI很好用** 👉 **[点击立即开通](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 📢 **科技不高冷，AI很好用** 👉 **[点击立即开通](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 

@@ -98,7 +98,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ## 四、怎么订阅？
 
 ### 订阅链接
-👉 **https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1**
+👉 **https://www.aliyun.com/minisite/goods?userCode=t6duaoe1**
 
 ### 使用步骤
 

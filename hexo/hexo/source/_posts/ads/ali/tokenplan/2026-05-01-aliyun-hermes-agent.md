@@ -41,7 +41,7 @@ Hermes Agent 是一个专注于自动化任务和工作流的 AI 助手，可以
 
 ### Step 1：获取阿里云百炼 API Key
 
-👉 **专属9折优惠通道**：[https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1](https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1)
+👉 **专属9折优惠通道**：[https://www.aliyun.com/minisite/goods?userCode=t6duaoe1](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 开通后，在百炼控制台复制你的 API Key。
 
@@ -77,7 +77,7 @@ Hermes Agent 是一个专注于自动化任务和工作流的 AI 助手，可以
 
 阿里云百炼 Coding Plan 按量计费，29元/月起，用多少付多少。
 
-👉 **专属9折优惠**：[https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1](https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1)
+👉 **专属7.5折优惠**：[https://www.aliyun.com/minisite/goods?userCode=t6duaoe1](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 ---
 

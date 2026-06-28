@@ -98,7 +98,7 @@ Alibaba Cloud's enterprise services are mature, making team procurement more con
 ## 4. How to subscribe?
 
 ### Subscription link
-👉 **https://www.aliyun.com/benefit/scene/codingplan?userCode=t6duaoe1**
+👉 **https://www.aliyun.com/minisite/goods?userCode=t6duaoe1**
 
 ### Usage steps
 

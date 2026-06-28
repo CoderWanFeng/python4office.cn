@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **科技不高冷，AI很好用** 👉 **[点击体验腾讯混元](https://curl.qcloud.com/Z9TkzRuj)**
 
-> 💡 **阿里云 29元/月** 👉 **[点击了解详情](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+> 💡 **阿里云 29元/月** 👉 **[点击了解详情](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 大家好，这里是程序员晚枫。
 
@@ -115,7 +115,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 **👉 [点击开通讯腾云 Coding Plan](https://curl.qcloud.com/Z9TkzRuj)**
 
-**👉 [点击开通阿里云百炼](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=t6duaoe1)**
+**👉 [点击开通阿里云百炼](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
 ---
 
