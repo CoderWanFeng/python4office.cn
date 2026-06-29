@@ -1,7 +1,7 @@
 ---
 title: AI编程工具价格集体上涨？程序员省钱必看攻略
 keywords: 程序员晚枫, AI编程工具涨价, Copilot涨价, Claude涨价, 省钱攻略, 火山方舟Coding Plan
-description: 程序员晚枫提醒：AI编程工具集体涨价，Copilot、Claude都在涨！省钱必看的国产替代方案，低至36元/月。
+description: 程序员晚枫提醒：AI编程工具集体涨价，Copilot、Claude都在涨！省钱必看的国产替代方案，低至9.4元/月。
 date: 2026-04-13 00:00:00
 tags: []
 categories: [AI编程, 省钱攻略]
@@ -200,7 +200,7 @@ Anthropic的API价格也在调整。
 
 邀请码：**GF2QJX3V**
 
-现在订阅享**9折优惠，低至36元/月**。
+现在订阅享**9折优惠，低至9.4元/月**。
 
 ---
 

@@ -43,7 +43,7 @@ OpenClaw 是一个强大的AI编程助手，支持多模型切换、插件扩展
 
 如果你还没有阿里云百炼，先去开通：
 
-👉 **专属9折优惠通道**：[https://www.aliyun.com/minisite/goods?userCode=t6duaoe1](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
+👉 **专属7.5折优惠通道**：[https://www.aliyun.com/minisite/goods?userCode=t6duaoe1](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 开通后，在百炼控制台复制你的 API Key。
 

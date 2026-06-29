@@ -41,7 +41,7 @@ OpenCode 是一个轻量级的 AI 代码编辑器，支持代码补全和智能�
 
 ### Step 1：获取阿里云百炼 API Key
 
-👉 **专属9折优惠通道**：[https://www.aliyun.com/minisite/goods?userCode=t6duaoe1](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
+👉 **专属7.5折优惠通道**：[https://www.aliyun.com/minisite/goods?userCode=t6duaoe1](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 开通后，在百炼控制台复制你的 API Key。
 

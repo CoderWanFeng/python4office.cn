@@ -1,5 +1,5 @@
 ---
-title: 字节火山方舟 Coding Plan 来了！9折订阅，低至36元，多模型随心用
+title: 字节火山方舟 Coding Plan 来了！9折订阅，低至9.4元，多模型随心用
 keywords: 程序员晚枫, 火山方舟Coding Plan, AI编程工具, 字节跳动AI, 豆包代码模型, DeepSeek编程, 国产AI编程
 description: 程序员晚枫推荐：字节火山方舟Coding Plan，36元/月起，支持豆包、DeepSeek、Kimi等多模型，AI编程性价比之选。
 date: 2026-04-08 00:15:00
@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-![字节火山方舟 Coding Plan 来了！9折订阅，低至36元，多模型随心用](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
+![字节火山方舟 Coding Plan 来了！9折订阅，低至9.4元，多模型随心用](https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop)
 
 > **本文作者：程序员晚枫 | AI编程布道者 | 专注AI工具测评与教学**
 > 
@@ -80,7 +80,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ### 3. 价格真香
 
-现在订阅，**9折优惠，低至36元**。
+现在订阅，**9折优惠，低至9.4元**。
 
 而且**订阅越多越划算**：
 - 个人开发者：月付无压力
@@ -156,7 +156,7 @@ AI 是杠杆，不是对手。
 
 我不是天赋异禀，我只是赶上了 AI 这波红利。
 
-**现在订阅，9折低至36元，订阅越多越划算。**
+**现在订阅，9折低至9.4元，订阅越多越划算。**
 
 说到这儿，插播一个消息。
 

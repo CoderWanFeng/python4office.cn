@@ -259,7 +259,7 @@ def calculate_bonus(salary, performance):
 
 邀请码：**GF2QJX3V**
 
-现在订阅享**9折优惠，低至36元/月**。
+现在订阅享**9折优惠，低至9.4元/月**。
 
 ---
 

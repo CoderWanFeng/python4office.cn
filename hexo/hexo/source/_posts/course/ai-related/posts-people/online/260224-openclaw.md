@@ -69,7 +69,7 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 
 在跟着我操作之前，先去扫码下图→注册好阿里云账号后→把我的专属9折优惠券领了！
 
-- 我的专属优惠券：[点我直达](https://www.aliyun.com/minisite/goods?userCode=yrx1wczg)
+- 我的专属优惠券：[点我直达](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)
 
 
 ![9折优惠](https://raw.atomgit.com/user-images/assets/5027920/6c063161-0a47-49be-8ee7-f0a8b84e80c3/image.png)
