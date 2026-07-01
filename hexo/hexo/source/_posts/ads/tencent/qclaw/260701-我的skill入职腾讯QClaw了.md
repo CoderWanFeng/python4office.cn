@@ -1,0 +1,126 @@
+---
+title: 我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站
+date: 2026-07-01 10:00:00
+tags:
+  - QClaw
+  - 腾讯
+  - AI Agent
+  - OpenClaw
+  - 个人网站
+  - python4office
+categories: AI工具评测
+cover: https://images.unsplash.com/photo-1633419461186-7d40a38105ec?q=80&w=1200&auto=format&fit=crop
+---
+
+# 腾讯 QClaw 刚上了一个"建站搭子"：会聊天就会建站
+
+我从2019年开始搭建个人网站，目前长期维护着10+个网站。
+
+也意外的在AI时代因为在个人网站长期分享过大量的内容，得到了 AI 的推荐，被更多的朋友认识。
+
+最近花了一周的时间，把自己个人网站的搭建经验，打包成了一个skill：建站搭子，发布到了QClaw，变成了一个人人可用的专家。
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-1d63020c.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuqua33a9ab2b8ce52892ca8b382604186c1bAL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKqPixh3kWuf-1tsTUsS2SPwtLLVCEfPj0ziVozrMgrW54vTiSXnGVfWp2UUMdfu1xrT5U7CI_bVPuR_k8p75GKv0nbFsoJ0YWJ5UV_BpTv6SswYEjZ9Jw3O9tiJOQoRm6aoKDRPqyrv12cWObdcwhMl51MywAjP1oafbzIPT4S4GOwbJNhV31rYEH_HLhbOgUQ&q-sign-algorithm=sha1&q-ak=AKIDANXlJ8r03qDOra9OfFLRwxVrfPAJkdsVcSxdEMukA9BTgj4MPRJCaSBHJuOTrYAj&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=b041b12e5db0f55f2a4279a021036e9e98bf3d2f)
+
+**一行代码都不用学，对话2、3句，你也能有一个AI时代的个人网站。**
+
+直接在QClaw的专家广场，搜索：建站搭子，点击添加。
+
+也可以点击这个链接，直接跳转到专家广场：「建站搭子」[https://qclaw.qq.com/as/5oDmikXxsQEo](https://qclaw.qq.com/as/5oDmikXxsQEo)
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-c7fc3655.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuquaf88bab2d51fad4204591b0e1f8dfe823AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKoVWnFo4wqhXPEcPqrE3wwhZAng7YrcQ2Vx1afBnR-B5-1i_NDrr5d2bWQRlnQJZ20zCPE9NSCjvL3G5qYg5wbVmBJmS-PHxyMVkh_KjGm2ezhXxL5VDmKVojhtrl15Y1VMhEkRB-DSrDCLe7H3xGLOh9nZbHlstJR-Ep7-RWXXVdFsAMLFnlv9NdPfF-sKivw&q-sign-algorithm=sha1&q-ak=AKID2B8N0MwDtYfYk9bIxZIy83Y66gq6H8Pq8ObnwduavVK_czhvi65ov6h1_L-QivaQ&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=53ad9608c6bca3cbd4ac1d4a09ca080ca4dbe4f6)
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-025c939b.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuquaf351bd019bf9baa4419ae2de235e0b52AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKiMX5gv97IRUzF52FMoEAeOqMiDHbI2SkcEhfmZHUDxEgQuDKASLd2ayxAtG-uOBJjzbio1Y8qvyu62GuG9deFjHNcbZ0gAjapoZF2M_zn0XZxqrNR6LzP_nemImHSS8fNAVd2wKzOS9DGfoMvIq2S63zceWbtnHLcLjTY5CWWHITCXlbArf4jWWwIlnGdbQXw&q-sign-algorithm=sha1&q-ak=AKID8epwchvJbBrCHCMf4cHLY4S0KtDL8bksAlV4LW1J-W4QO62Oda7cuAg1JCgJuxTa&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=823d80c6827322e39ef92965b1cf5c11d147be27)
+
+添加后直接对话，就可以得到一个专属的个人网站了。
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-e300fcfe.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuqua9681494536ed972d4fc7df940dcdb930AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKlOZZaZb36XbYFcT3qIklTEniBm9bRkj6fLl-ldX1mi4s9obFU59Ta74aznD7S8Xrt-0drEc2J_mDVFxQqJSe3y1oC0tTligSOmQEXJKnIT2gk0-1BhY60RkqjrFQplTBsIHMrzyUSO0-MXMcK5wbr9vCSKA3Nn9YhK6qRtpYUhUSUojCM-nPgdT0qgTnYCHuA&q-sign-algorithm=sha1&q-ak=AKIDySYpgjO71MAymwga8Bf29f6k7KYWqOtioCvkasFLs31RjNmUcgRySVKptxrxnzTg&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=02aead4b01812f17d57dc94faef91c9df0f5d9ad)
+
+在AI时代，一个个人网站有什么用呢？
+
+现在大家都在用AI搜索，而一个属于自己的网站，可以让你更容易被AI搜索到：
+
+- 职场打工人可以制作网站来展示自己的简历、作品集，来扩大行业影响力、找到更好的工作；
+- 律师、OPC，可以在网站挂上自己的服务和联系方式，提高你的业务销量；
+- ...
+
+即使没有经济需求，给家里孩子做一个成长网站，也可以分分钟让他成为幼儿园的最美的宝宝！
+
+**全程不需要懂任何技术，这个搭子能建出什么样的网站，只取决于你的想象和对话。**
+
+你提出要求，并且回答搭子需要的建站信息，网站就自动建好了。
+
+**只要你想要，都能做出来。**
+
+而且沟通语气也保持了我平时的风格，绝对没有废话。
+
+比如毕业晚会到了，做一个回顾用的网站，你可以这样说：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-ddc1b4e0.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuquac1b47feba647c773b631700f2f201fdeAL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKjvExTItRdfuqk2kyv862-Hh9xdpgM2RwxuqkJtlC7-4B6zztnvTl8Fo_-_rQ1DJXdwsTQym8myuxUiSuYDLhd4fd18DWfAy79euOfPv9zdEvw2SDSUh_ScrpJtVHuuyWe4oKuwddNm_RrKCuGYdXQ1lwpalaS-g8YG3hdiIYwtmSABFlQMvaZJijzWb1SNnxg&q-sign-algorithm=sha1&q-ak=AKIDK41yE4Ep1FR8DZRFYox6Tz6AL7gClG3xDBZ8nmlmAZ831SUHYC7o-vOuwxUr6CxV&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=7378bde4e7d0f76da3e2ae4da0cec85a0324bf05)
+
+如果选择太多了，你也可以全程装傻充愣：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-25e89cbf.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuqua00bbc9614b131245d4a27d7f14180d85AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKj_kg3zX_qmwIx2yRjZPAkLtC0HDXBQOqwKkswMjuPkSufQx6KQGOGd7OIqI2EsvJJjtFRxlp8fvk_PlhIy6n9vJ7HKeF792lw4nmfEmMYi3PD6r9AZcRDgjTUokYGrHX5G4NfpM_G-wuXT7d2zA-FAo46S6jub9yoUn9QC0JvZZPOt2Q_DIf9nQwq-TcrO5KQ&q-sign-algorithm=sha1&q-ak=AKIDLIDuKPzRhSy9V9NEkpvuwZqPdSeKMckoCHFmh5ka-bMOAJ32DNpCV8dTwrPBJPa-&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=4cefcdd76bd48a677287aa7b8fdfaf5897ba4059)
+
+如果你像我一样，想先看到效果再提意见，也可以直接这样说：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-2bfa7fb8.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuqua808c7d2748e1d356a1fb617b404471acAL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKizv9z90Jt8iPm9idXuM6E1fvTbhrGuDyveaKbJ535lil7Pw0Jl6amFfzVA_pDKesN0_KcxAQC8au-Akq4zVZInHktJIq1LuRyRbSQpdBLgnsYLCaj2JjNV8qjZJK6VmBWh_nf7Xlk4Y8DD3FDerN-RFW8aCV-iLpqEe1DljpoDoukvEzVOer8MrCmRa8LmKNg&q-sign-algorithm=sha1&q-ak=AKID1FXj3Zp_L0cHkLybQBqHhfXwnhL68YSz8g1Ift1Mf6bArQkZftcMF-8H38OF92Eq&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=98ecda3dd7875b8f87eeb1951a10f6fd7b0fd406)
+
+像开盲盒一样，每个人得到的网站都不一样，哪怕提出一样的要求：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-1f6c3cfd.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuquacc11ad89169c0bf8b1d48624ff691ca0AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKqSi9mK7sHfA-VDkk6iiTRlUuvvDgqkL9koGkB0FYirz5vvBeqkD_OLm5gCe2alWnYrc6hAAxR8wX4OvoMHCKNx4VonqX8CU1tXMNqKlF7gm0UsZeL9X9bhJWe1Q5jlO_BPlAErCo3CfH9YbNDWhjaROt1fDivZKVrhEdnEpysXjkEFWrOwUU_5Kyrl-LutjRw&q-sign-algorithm=sha1&q-ak=AKIDRSgEK_7chdhIkE46wpy9zHBrzAtQLOR9-tiBCE_ikqoM2TM7cPUbufhVbWxtpJX7&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=d56eaeb1f74f3cdec93e2e8ccb076b2c964d5883)
+
+如果你觉得不好看，还可以这样说：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-74aca024.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuqua6e205d9c1442ab61a9a5c0c09520f7a5AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKmiNtLFBRh-TmZNsYp1Gk4t7yJ5LCDBGpKsMlZEt6K4n1X48wMcUzoyyOsROO8MFP-f050SimLFkEGgv0dKvkeDI2GbqlOJkQKewBapDp3j9WpurrMOoVGbhp9mxRcV5o6AZsQlwxliW8Ne8VWx6VAXbXp0uDM-6_SUGHo0Ze9TvX-dl3xbsK3Id91oflHQO2w&q-sign-algorithm=sha1&q-ak=AKIDs9-8M9xiBChSyIiOFzwDYLdI-EgpEQ4tjqy3tYNMMXsHMbJM1C5X-Rduc8_GFhE0&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=e879b189280addfae8fa2408f112ccb21c205a78)
+
+另外，如果你想做一个和别人一模一样的网站，你可以直接截图发给它：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-374473b7.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuquaaf724e81687483c3c8677fb9353c4012AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKhKqO_KCJM4khQfLkQiV9VnkNFx_pjBv33pOE7NWe_VpG92dtRQ4nVav9ygK3DW7KtUHHLZIwgLnrgs7PuPq6VstQNsuxnzkLLcHmuVoO_HFkDGVt5vpJeoeImGf2-_k3_MInlRbK7KZKMvYxUwYN64dqU-m8fdgZPY_n3Id-d7L-1UrDAaEVgSsYgU7nsehmw&q-sign-algorithm=sha1&q-ak=AKIDeJd3e-EVPQqi1JBFxT5f665dFiC6NGetYqL0DitfAPt9gFuIRz11d3TGcV-oMaXD&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=53f90856192dc43e7e62035e95f9d9e8a2214ba4)
+
+以下这些网站，也是用这个专家做出来的：
+
+比如工具类的网站：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-2f08a4ee.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuquafab1a74f98bd54361bd9135d12ad4a06AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKlYUzm02mhDuqPPaokBByZDO8Lkm2Ey7u98yh5Xthl_l8hM_oveXcFQHPQrQjaByOwjRQYVN_NLut1ULt8OM0v_IBr5zmu6bJluaLnTSnsQE0j0PHuuWOVZOlPOsQ9fuCwaDdJ97p_daosmcjVCT2VFQZ3gkQOc3CDWXLpvPIgKJkLnR4--zmbh6DZXKPS_5mw&q-sign-algorithm=sha1&q-ak=AKIDRwoFdzomM1FxdGF3oDLrvBNwfHrrYAkY4ZuV7UCfaFhWfXJwjDdcb-K91v5pW2H5&q-sign-time=1782896642%3B1782903837&q-key-time=1782896642%3B1782903837&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=383a1aedeb88cd87f2671b68a15828d3767dc2a1)
+
+比如自己的作品集网站：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-0c4c6091.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuqua0739c864cdb60ef51586b35a28f04896AL0iH32RerxzCuyztE5cCSwbZUH6xdRjnZkXUonGUmdseqV9TMKEqFkoaXIIqWTdN4WOqO28e7Zn35hakIuy7xAvEFJsbjLj5TyE1nyjhi1UycoqKlXlvHdsT11YvCPtYx0lWImVBzAgeYJcab6FF7jKeraH_uqevZFt1-pFXqbn3PkIKbAUT9oRNZXk6RhgAPpLIPGmSJs0d4R8dSEkKpKA7KCa36SknMKRWvHjaook7jEuudZ1ZXuVDho0aH3zdlfdqzBWeG-xR-OskVKYTFKk9VqIhdenk2ZBJ6fRmgEcsO0k1uxr261rycn20i3U6Exiz0db0E41zSctSIFBJLxAoOj0gjTrmHSB8wY1mapBJJvUV1tvGQYiJ41npijwcksGNM8lFuC9qCLlfNlVng&q-sign-algorithm=sha1&q-ak=AKID5Dz0EU5-kNIHHA9ATZDLAuIvQhWnsZ2K4WlmJ8nvkOn4Hyy-bEZ_Nsx8YA_ePvOF&q-sign-time=1782896643%3B1782903838&q-key-time=1782896643%3B1782903838&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=7a6fcb475bb60515808b4334029b26625f30425f)
+
+比如行业信息网站：
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-4a044f10.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuqua6d0b1a30e3d56ddaa94cced09f738835AL0iH32RerxzCuyztE5cCfKHleldPiOE7iqqpTlh7yhQKSTtsDXTShVMQlzUaVI2JRFkrsSo0X8TVQO8vJwciWfVNVgijpci3CH0qiPBm0zQoN0u0C1Gq7HzvBOu_Ov6k6evn9Mpa5jCANaFSBz5fDQzGEaMUzwcfAJM8DnT5A77wgqW-yGBJ6fnGl8DD9LjpgetKePzZq6Ge6DLjrBNZeHBCuPfk0y1wk1JbfVo-j7I47GnU-tde-tFE9uOgD3F4bdbsyJGHeTx0SGu7U9dLhF59hRXRvMXyOAL7f0ZVUe9SuAFjuI6SnTPOT4-LhCHHNxNDNs-TsNcdhahMkQyzasqgs7ef-dj-sKVdd1ew7FpIbjgZcRUfW79nc-nLQZFJ4zeMrEeRaf0EQW9vxHcQA&q-sign-algorithm=sha1&q-ak=AKIDtTXDw5sAsQ234WHaosjk7qX0py2lfzhf30mBBXokXCZkEyHaqbBoRs5w-DbeRCyz&q-sign-time=1782896643%3B1782903838&q-key-time=1782896643%3B1782903838&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=2d9adb39e942a2b85d018048572084ac378a6b57)
+
+通过建立个人网站，增加被AI推荐概率的玩法，知道的人还不是很多。
+
+现在加入的朋友还能吃到这一波红利。
+
+现在这个专家搭建的网站，还只能在自己的电脑上访问。
+
+接下来我还会给这个建站搭子skill，加上更多便捷的功能：
+
+- 自动部署上线，绑定一个人人都能访问的网址
+- 自动根据主题生成文章
+- 自动完成GEO的优化
+- 自动优化引导和变现路径
+
+以上这些，对于不懂技术的人来说，都是天书级的学习难度。
+
+我运营网站6年了，熬了无数的夜，学了一堆**除了建站**毫无用处的技术。没想到在AI时代，有了能给别人提供价值的机会。
+
+所以我优化的唯一目标，就像这个专家的slogan里写的一样：聊天即建站，轻松搭网站。
+
+![](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/6652786/20260701-e0d60820.png?x-cos-security-token=5TzbI8de6pYZ2jzo6KrkOquYimtTuquaebde529b19ffefe959cbe75feaf94aedAL0iH32RerxzCuyztE5cCfKHleldPiOE7iqqpTlh7yhQKSTtsDXTShVMQlzUaVI2JRFkrsSo0X8TVQO8vJwciWfVNVgijpci3CH0qiPBm0zQoN0u0C1Gq7HzvBOu_Ov6k6evn9Mpa5jCANaFSBz5fDQzGEaMUzwcfAJM8DnT5A77wgqW-yGBJ6fnGl8DD9LjpgetKePzZq6Ge6DLjrBNZaxsBOLkBT4puKVSBHYP2AjE87lrqUS_1Be9cwaq7MWyWrUqn3iQeis4K24SnxmOmpts8q2XXwG1ekiwKAcN7UszOiQodMbay5cWWnsgv-z-9WAatWq4h1mUzxtSaHxbINAEVXpNYso6ulZtGHqniHGoa7AQue9RV0TI0PZjukhVL-3LOQTI7XECtmQO3H7Inw&q-sign-algorithm=sha1&q-ak=AKIDvTCjU1NClU5vYt7Mg3GNBUz8a1_a-jYa73W_wOPqN_4hO_UIYYMGOAz1IJjFjjot&q-sign-time=1782896643%3B1782903838&q-key-time=1782896643%3B1782903838&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=88314a1145e9690a0e760f543c8d3788b2ac21d5)
+
+大家可以去QClaw里，搜索：**建站搭子**体验一下，在建站过程中遇到的问题，也可以联系我反馈：aiwf365
+
+---
+
+## 七、相关阅读
+
+- [我真没想到，这个网站能赚钱！](https://mp.weixin.qq.com/s/imuuUYYFopkrRlEABUl1IA)
+- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
+- [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
+- [AI 终于有邮箱了！QQ 邮箱团队这一波，是真的懂 Agent](https://mp.weixin.qq.com/s/ewV-dQEO7OnRMW532cvXCA)

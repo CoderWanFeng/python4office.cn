@@ -204,7 +204,7 @@ OpenAI 的“第三阶段”，听起来很宏大。
 
 - [500万人周活、知识工作者暴增3倍，Codex不再只是程序员工具了](https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw)
 - [Copilot涨价26倍，29美元变750——AI免费时代结束了](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
-- [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/scAleVOwH6kDLPuQT4BNlA)
+- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
 
 ---
 
