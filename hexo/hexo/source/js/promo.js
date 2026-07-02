@@ -12,9 +12,9 @@
   'use strict';
 
   var PROMO = {
-    // ① 顶部公告条 → 即梦（视频生成）
-    topUrl: 'https://seko.cgref.cn/s/rpe3l6xe05',
-    topText: '⚽️ AI灵感成片 | 世界杯视频一键生成，免费体验',
+    // ① 顶部公告条 → 建站搭子（腾讯QClaw）
+    topUrl: 'https://mp.weixin.qq.com/s/phJOGkXHwvaB36onsiqthQ',
+    topText: '🔥 建站搭子入职腾讯 | 对话2句，轻松建个人网站',
     topCta: '立即体验 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
