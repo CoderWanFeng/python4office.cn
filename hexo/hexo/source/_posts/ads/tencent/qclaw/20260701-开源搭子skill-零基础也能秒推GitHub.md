@@ -2,7 +2,6 @@
 title: 我做了个「开源搭子」skill：零基础也能秒推 GitHub，国内自动切镜像
 date: 2026-07-01 16:00:00
 tags:
-  - QClaw
   - 开源
   - GitHub
   - AtomGit
@@ -13,9 +12,9 @@ categories: AI工具评测
 cover: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1200&auto=format&fit=crop
 ---
 
-> 兄弟们，我又被"自己用得很爽"的东西感动到了，所以今天再发一个 skill。
+> 兄弟们，我又被"自己用得很爽"的东西感动到了，所以今天发一个 skill。
 >
-> 上一个 skill 是"建站搭子"（让零基础用户动动嘴就能建站），今天这个叫"**开源搭子**"——让零基础用户**动动嘴就能把项目推到 GitHub**，或者把网上的开源项目**拉下来装好依赖跑起来**。
+> 上一篇[「建站搭子」](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)是让你动动嘴就能建站；今天这个叫"**开源搭子**"——让零基础用户**动动嘴就能把项目推到 GitHub**，或者把网上的开源项目**拉下来装好依赖跑起来**。
 
 <!-- more -->
 
@@ -24,6 +23,12 @@ cover: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1200&
 > **不会 git、没配过 SSH、不知道 GitHub / Gitee / AtomGit 该选哪个——这些都没关系。**
 >
 > 你只需要告诉我 3 句话：「我想发布」或「我想拉项目」、「项目路径」、「平台」，剩下的我帮你搞定。
+
+📦 **开源仓库地址**（包含完整 SKILL.md 和 5 份 reference 文档）：
+
+> 👉 **https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper**
+
+Star 一下 ⭐、Clone 一下，跑起来就是你自己的"开源搭子"。
 
 ---
 
@@ -45,6 +50,8 @@ cover: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1200&
 **这些"小障碍" 阻挡了 90% 的新手开始开源。**
 
 所以我做了 `opensource-housekeeper` skill，全程**对话式引导**，让 AI 当你的"开源陪练"。
+
+📦 仓库：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper
 
 ---
 
@@ -144,28 +151,46 @@ Gitee 2022 年起推公共仓库要身份证 + 人脸，这个 skill **在用户
 
 ## 四、怎么用这个 skill？
 
-在 QClaw 的专家广场，搜索：**开源搭子**，点击添加。
+**最快的方式：**
 
-直接对话就可以：
+```bash
+# 1. 克隆仓库
+git clone https://github.com/CoderWanFeng/wanfeng-skills.git
+
+# 2. 切换到 skill 目录
+cd wanfeng-skills/skills/opensource-housekeeper
+
+# 3. 打开 SKILL.md 看你想跑的流程
+# - 主线 A（发布）：从 SKILL.md 第 32 行开始
+# - 主线 B（拉取）：从 SKILL.md 第 506 行开始
+```
+
+或者**直接看仓库的 SKILL.md**：
+
+> 👉 https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper
+
+### 实战对话示例
+
+发布场景：
 
 ```
 ✅ 用户：「我想把我的 python 工具推到 GitHub」
-✅ 我：「好。你有 GitHub 账号吗？」
+✅ AI：「好。你有 GitHub 账号吗？」
 ✅ 用户：「有，已经建了仓库」
-✅ 我：「把 SSH 地址发我，我帮你推」
+✅ AI：「把 SSH 地址发我，我帮你推」
 ```
 
-或者：
+拉取场景：
 
 ```
 ✅ 用户：「我想跑一下 llama.cpp」
-✅ 我：「好。我先探测一下网络，看 GitHub 能不能直连」
+✅ AI：「好。我先探测一下网络，看 GitHub 能不能直连」
    （3 秒后）
-✅ 我：「GitHub 在你这 5KB/s，太慢。我切到 ghfast.top 镜像，你 OK 吗？」
+✅ AI：「GitHub 在你这 5KB/s，太慢。我切到 ghfast.top 镜像，你 OK 吗？」
 ✅ 用户：「OK」
-✅ 我：「拉好了，检测到是 C++ 项目，需要先装 cmake、gcc。装吗？」
+✅ AI：「拉好了，检测到是 C++ 项目，需要先装 cmake、gcc。装吗？」
 ✅ 用户：「装」
-✅ 我：「好，编译要 5 分钟，先去喝杯水……」
+✅ AI：「好，编译要 5 分钟，先去喝杯水……」
 ```
 
 ---
@@ -181,7 +206,7 @@ Gitee 2022 年起推公共仓库要身份证 + 人脸，这个 skill **在用户
 
 ---
 
-## 六、和我上一个 skill「建站搭子」怎么配合？
+## 六、和我的「建站搭子」怎么配合？
 
 我做的两个 skill 正好是**前后衔接**：
 
@@ -199,6 +224,8 @@ Gitee 2022 年起推公共仓库要身份证 + 人脸，这个 skill **在用户
 
 这就是我之前那篇《日入 1000，我把个人网站开源了》的**完整工具链**。
 
+📦 整套 skill 都在这里：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper
+
 ---
 
 ## 七、为什么开源这件事，对每个开发者都很重要？
@@ -213,7 +240,7 @@ Gitee 2022 年起推公共仓库要身份证 + 人脸，这个 skill **在用户
 
 所以——
 
-> 👉 **去 QClaw 专家广场搜「开源搭子」，加上去，30 秒后开始你的第一次 push。**
+> 👉 **去 https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper 克隆一下，30 秒后开始你的第一次 push。**
 
 哪怕你这次推的是"我的第一个 hello world"，**也比"还没开始"强 100 倍**。
 
@@ -225,7 +252,7 @@ Gitee 2022 年起推公共仓库要身份证 + 人脸，这个 skill **在用户
 A：可以不用。这个 skill 主要面向**完全不会 git**的人。如果你已经熟 GitHub Desktop，直接用就行。
 
 **Q：这个 skill 收不收钱？**
-A：在 QClaw 专家广场添加，**限时免费**。
+A：完全免费。仓库地址：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper
 
 **Q：我能用这个 skill 推公司代码吗？**
 A：可以，但注意**公司代码默认不是你的**，先确认权限。
@@ -233,8 +260,11 @@ A：可以，但注意**公司代码默认不是你的**，先确认权限。
 **Q：推完 Gitee 要实名怎么办？**
 A：直接换 AtomGit（**国产、不需要实名**、国内访问最快），本 skill 会自动推荐。
 
+**Q：怎么给这个 skill 提建议？**
+A：去 GitHub 提 Issue 或 PR：https://github.com/CoderWanFeng/wanfeng-skills/issues
+
 ---
 
-**如果大家用了觉得有用，欢迎去 QClaw 给我点个 Star。**
+**如果觉得有用，欢迎去 GitHub 给我点个 Star ⭐。**
 **有问题评论区留言，我一个个看。**
 **我是晚枫，祝你玩得开心。**
