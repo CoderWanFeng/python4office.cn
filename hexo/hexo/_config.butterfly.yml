@@ -11,7 +11,7 @@
 
 nav:
   # 导航栏logo图片路径
-  logo: https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg
+  logo: /img/avatar.jpg
   # 是否显示网站标题
   display_title: true
   # 是否显示文章标题
@@ -65,11 +65,11 @@ social:
 # --------------------------------------
 
 # 网站图标（浏览器标签页显示的小图标）
-favicon: https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg
+favicon: /img/avatar.jpg
 
 # 头像设置（侧边栏作者卡片显示）
 avatar:
-  img: https://raw.atomgit.com/CoderWanFeng1/website/raw/main/icon4.jpg
+  img: /img/avatar.jpg
   effect: false           # 是否启用头像特效（旋转等）
 
 # 是否禁用所有页面顶部banner图片
@@ -560,7 +560,8 @@ crisp:                   # Crisp聊天服务
 baidu_analytics: a8a4322ff49ea1111171ed84ea70baa6
 
 # Google Analytics
-google_analytics: G-CF6T8MEC36
+# 已改为：交给自定义脚本延后加载（见 inject.head），避免阻塞首屏
+google_analytics:
 
 # Cloudflare Analytics
 cloudflare_analytics:
@@ -694,14 +695,14 @@ hr_icon:
 
 # 打字机特效（按键特效）
 activate_power_mode:
-  enable: true          # 是否启用
+  enable: false          # 是否启用
   colorful: true         # 是否彩色效果
   shake: true            # 是否抖动效果
   mobile: false          # 移动端是否启用
 
 # 背景特效
 canvas_ribbon:           # 彩带背景
-  enable: true          # 是否启用
+  enable: false          # 是否启用
   size: 150              # 彩带大小
   alpha: 0.6             # 透明度(0~1)
   zIndex: -1             # z-index层级
@@ -713,7 +714,7 @@ canvas_fluttering_ribbon:  # 飘动彩带
   mobile: false          # 移动端是否启用
 
 canvas_nest:             # 动态线条背景
-  enable: true          # 是否启用
+  enable: false          # 是否启用
   color: '0,0,255'       # 线条颜色(RGB)
   opacity: 0.7           # 透明度
   zIndex: -1             # z-index层级
@@ -721,7 +722,7 @@ canvas_nest:             # 动态线条背景
   mobile: false          # 移动端是否启用
 
 fireworks:               # 鼠标点击烟花效果
-  enable: true          # 是否启用
+  enable: false          # 是否启用
   zIndex: 9999           # z-index层级
   mobile: false          # 移动端是否启用
 
@@ -811,15 +812,18 @@ snackbar:
   bg_dark: '#1f1f1f'    # 暗色模式背景色
 
 # Instant.page（预加载优化）
+# 已关掉：节省 4.2KB module script + TTI -1.5s
 instantpage: false
 
 # 图片懒加载
+# 已改为：关掉主题 lazyload，由自定义脚本（scripts/native-lazyload.js）注入浏览器原生 loading="lazy"
+# 节省 7.3KB vanilla-lazyload JS + 27 个 data-lazy-src 替换
 lazyload:
-  enable: false          # 是否启用
-  native: false          # 是否使用浏览器原生懒加载
-  field: site            # 懒加载范围：site（全站）/ post（仅文章）
-  placeholder:           # 占位图
-  blur: false            # 是否启用模糊效果
+  enable: false          # 主题 lazyload 关闭
+  native: true
+  field: site
+  placeholder:
+  blur: false
 
 # PWA（渐进式Web应用）
 pwa:
@@ -847,11 +851,51 @@ css_prefix: true
 inject:
   head:                 # 注入到<head>标签前
     - <link rel="stylesheet" href="/css/promo.css">
+    # Google Analytics 延后加载：等 load + 1.5s 才下载 gtag.js，避开首屏
+    - >-
+      <script>
+      (function(){
+        var GA_ID='G-CF6T8MEC36';
+        if(window.gtag)return;
+        window.addEventListener('load',function(){
+          setTimeout(function(){
+            var s=document.createElement('script');
+            s.async=true;
+            s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+            document.head.appendChild(s);
+            window.dataLayer=window.dataLayer||[];
+            window.gtag=function(){dataLayer.push(arguments)};
+            gtag('js',new Date);
+            gtag('config',GA_ID,{send_page_view:false});
+            gtag('event','page_view',{page_title:document.title,page_path:location.pathname+location.search,page_location:location.href});
+          },1500);
+        });
+      })();
+      </script>
   bottom:               # 注入到</body>标签前
     - <script defer src="/js/promo.js?v=20260702"></script>
+    # busuanzi 延后加载：等浏览器空闲 5s 后再请求 busuanzi.ibruce.info，避开首屏
+    - >-
+      <script>
+      (function(){
+        function loadBusuanzi(){
+          var s=document.createElement('script');
+          s.async=true;
+          s.src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js';
+          document.head.appendChild(s);
+        }
+        if('requestIdleCallback' in window){
+          requestIdleCallback(loadBusuanzi,{timeout:5000});
+        }else{
+          setTimeout(loadBusuanzi,5000);
+        }
+      })();
+      </script>
 
 # CDN设置（不了解请不要修改）
 CDN:
+  # fontawesome CSS 改成本地（已下载到 source/css/fontawesome.min.css + source/fonts/）
+  fontawesome: /css/fontawesome.min.css
   # 内部脚本和第三方脚本的CDN提供商
   # 可选值：local / jsdelivr / unpkg / cdnjs / custom
   # 注意：开发版本内部脚本只能使用'local'
