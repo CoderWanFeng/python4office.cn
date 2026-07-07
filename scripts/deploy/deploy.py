@@ -21,6 +21,7 @@ Hexo 构建产物一键部署脚本
   LOCAL_PUBLIC_DIR       可选，默认 <repo>/hexo/hexo/public
   SKIP_BUILD=true        跳过构建，使用现有 public/
   SKIP_CDN_REFRESH=true  跳过部署后的 CDN 刷新
+  SKIP_INDEXNOW=true     跳过部署后的 IndexNow 提交
   DRY_RUN=true           只打印 rsync 命令不实际执行
   DEPLOY_VERBOSE=true    显示每个子进程的完整命令（调试用）
   HEXO_DIR               可选，默认 <repo>/hexo/hexo
@@ -178,6 +179,7 @@ def load_config() -> dict:
         .resolve(),
         "skip_build": os.environ.get("SKIP_BUILD", "").lower() in ("1", "true", "yes"),
         "skip_cdn_refresh": os.environ.get("SKIP_CDN_REFRESH", "").lower() in ("1", "true", "yes"),
+        "skip_indexnow": os.environ.get("SKIP_INDEXNOW", "").lower() in ("1", "true", "yes"),
         "dry_run": os.environ.get("DRY_RUN", "").lower() in ("1", "true", "yes"),
     }
 
@@ -286,6 +288,52 @@ def step_refresh_cdn(cfg: dict) -> None:
         warn("CDN 刷新失败，但部署已完成，忽略")
 
 
+def step_indexnow(cfg: dict) -> None:
+    """部署成功后调用 IndexNow 通知 Bing/Yandex 收录新页面。
+
+    失败不影响整体部署（仅 warn）。
+    """
+    if cfg.get("skip_indexnow"):
+        log("SKIP_INDEXNOW=true，跳过 IndexNow 提交")
+        return
+
+    submit_script = REPO_ROOT / "scripts" / "indexnow-submit.js"
+    if not submit_script.is_file():
+        warn(f"未找到 IndexNow 提交脚本: {submit_script}，跳过")
+        return
+
+    # node 命令必须在 PATH 上（macOS 自带 /usr/bin/node，但 brew 安装可能在 /opt/homebrew）
+    node_bin = shutil.which("node")
+    if not node_bin:
+        warn("未找到 node，跳过 IndexNow 提交（需先安装 Node.js）")
+        return
+
+    # 默认只提交最近 7 天更新的 URL，避免全量推送
+    cmd_list = [node_bin, str(submit_script), "--recent", "7"]
+    if VERBOSE:
+        log("执行: " + " ".join(shlex.quote(c) for c in cmd_list))
+
+    result = subprocess.run(
+        cmd_list,
+        cwd=str(REPO_ROOT),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        timeout=60,
+    )
+    if result.returncode == 0:
+        ok("IndexNow 提交成功")
+        # 打印最后一行关键信息（状态码）
+        last = (result.stdout or "").strip().splitlines()[-1] if result.stdout else ""
+        if last:
+            log(f"  {last}")
+    else:
+        warn(f"IndexNow 提交失败 (exit {result.returncode})")
+        for line in (result.stderr or "").strip().splitlines()[-10:]:
+            err(f"  {line}")
+        warn("IndexNow 提交失败，但部署已完成，忽略")
+
+
 def run(args: list[str], cwd: Path | None = None, label: str = "") -> None:
     """静默执行子命令。成功时静默，失败时 die 并显示 stderr 末尾。
 
@@ -318,17 +366,21 @@ def main() -> int:
     log(f"目标: {cfg['user']}@{cfg['host']}:{cfg['remote_dir']}")
     log(f"本地: {cfg['public_dir']}")
 
-    header("Step 1/3  构建")
+    header("Step 1/4  构建")
     with step("hexo generate"):
         step_build(cfg)
 
-    header("Step 2/3  同步")
+    header("Step 2/4  同步")
     with step("rsync 同步"):
         step_sync(cfg)
 
-    header("Step 3/3  CDN 刷新")
+    header("Step 3/4  CDN 刷新")
     log("开始 CDN 刷新...")
     step_refresh_cdn(cfg)
+
+    header("Step 4/4  IndexNow 提交")
+    log("开始 IndexNow 提交...")
+    step_indexnow(cfg)
 
     footer("部署完成")
     ok(f"已部署到 {cfg['user']}@{cfg['host']}:{cfg['remote_dir']}")
