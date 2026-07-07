@@ -77,9 +77,7 @@ cover: https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&
 
 | 学员昵称 | 项目名 | 平台 | 项目地址 | 一句话简介 | 提交时间 |
 |----------|--------|------|----------|-----------|----------|
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+| Vivien | CRM System（客户管理系统） | GitHub | https://github.com/vivienzhou66-web/crm-system | 基于 React + Node.js 的销售 CRM，支持客户管理、商机跟踪、活动记录与数据报表 | 2026-07-07 |
 
 ---
 
