@@ -173,8 +173,8 @@ Firefox 选择云端，本质上是"用 100 毫秒的网络延迟，换 5 倍的
 
 ## 相关阅读
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
-- [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT Plus 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [论文被查出AI率40%？我用AI反降AI率，导师直接过了](https://mp.weixin.qq.com/s/z0y3wByLzfI2JRMxAT2wpQ)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)

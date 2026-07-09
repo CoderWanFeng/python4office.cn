@@ -318,10 +318,10 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 ## 相关阅读
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
-- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
+- [PPT 制作神器！Claude Code 审美直接封神](https://mp.weixin.qq.com/s/obGJ2cSLieX2K7ryOdMFpw)
+- [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/RhE4lEpCV3qWT12wy2qMsg)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
-- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
+- [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
 
 ---

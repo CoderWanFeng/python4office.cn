@@ -68,12 +68,12 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 如果需要和我1对1交流AI or Python问题，可以＋我的微信：[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/) 或者 直接看下面的课程👇
 
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
-- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
-- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
-- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
+- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
+- [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
+- [PPT 制作神器！Claude Code 审美直接封神](https://mp.weixin.qq.com/s/obGJ2cSLieX2K7ryOdMFpw)
+- [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/RhE4lEpCV3qWT12wy2qMsg)
 
 
 ## 🎓 AI 编程实战课程

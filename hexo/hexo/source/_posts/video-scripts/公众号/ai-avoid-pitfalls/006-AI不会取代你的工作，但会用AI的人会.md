@@ -173,12 +173,12 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 ## 相关阅读
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [用AI 做 副业 的 3个思路](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
-- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
+- [PPT 制作神器！Claude Code 审美直接封神](https://mp.weixin.qq.com/s/obGJ2cSLieX2K7ryOdMFpw)
+- [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/RhE4lEpCV3qWT12wy2qMsg)
 
 ---
 
@@ -197,12 +197,12 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 ## 相关阅读
 
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
-- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
-- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
-- [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT Plus 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
+- [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
+- [日入 1000 后，我把个人网站开源了：拿走代码，你也能跑](https://mp.weixin.qq.com/s/imuuUYYFopkrRlEABUl1IA)
+- [PPT 制作神器！Claude Code 审美直接封神](https://mp.weixin.qq.com/s/obGJ2cSLieX2K7ryOdMFpw)
 
 ---
 

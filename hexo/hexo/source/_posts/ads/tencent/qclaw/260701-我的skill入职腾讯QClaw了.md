@@ -120,7 +120,7 @@ cover: https://images.unsplash.com/photo-1633419461186-7d40a38105ec?q=80&w=1200&
 ## 七、相关阅读
 
 - [我真没想到，这个网站能赚钱！](https://mp.weixin.qq.com/s/imuuUYYFopkrRlEABUl1IA)
-- [学会AI编程，人人都是六边形战士](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://mp.weixin.qq.com/s/Bk6d9bbSh5kSEd9i9dAahw)
 - [AI 终于有邮箱了！QQ 邮箱团队这一波，是真的懂 Agent](https://mp.weixin.qq.com/s/ewV-dQEO7OnRMW532cvXCA)
