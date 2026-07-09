@@ -258,13 +258,14 @@ def step_sync(cfg: dict) -> None:
 def step_refresh_cdn(cfg: dict) -> None:
     """部署成功后调用 refresh_cdn.py 刷新腾讯云 CDN 缓存。
 
-    CDN 刷新失败不影响整体部署（仅 warn）。
+    CDN 刷新失败不影响整体部署（仅 warn）；失败时打印 stdout/stderr 便于排查。
+    失败也返回 OK 让流程继续，但输出"需手动重试"提示，避免用户认为已生效。
     """
     if cfg.get("skip_cdn_refresh"):
         log("SKIP_CDN_REFRESH=true，跳过 CDN 刷新")
         return
 
-    refresh_script = SCRIPT_DIR / "refresh_cdn.py"
+    refresh_script = SCRIPT_DIR.parent / "cdn" / "purge_static_assets.py"
     if not refresh_script.is_file():
         warn(f"未找到 CDN 刷新脚本: {refresh_script}，跳过")
         return
@@ -275,17 +276,22 @@ def step_refresh_cdn(cfg: dict) -> None:
 
     result = subprocess.run(
         cmd_list,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.PIPE,
+        stdout=subprocess.PIPE,  # 改为 PIPE，失败时能看到输出
+        stderr=subprocess.STDOUT,
         text=True,
     )
     if result.returncode == 0:
         ok("CDN 缓存已刷新")
     else:
         warn(f"CDN 刷新失败 (exit {result.returncode})")
-        for line in (result.stderr or "").strip().splitlines()[-15:]:
+        # 全部打印 stdout+stderr（限制 30 行避免刷屏）
+        out = (result.stdout or "").strip().splitlines()[-30:]
+        for line in out:
             err(f"  {line}")
-        warn("CDN 刷新失败，但部署已完成，忽略")
+        warn("CDN 刷新失败，但部署已完成")
+        warn("⚠  重要：CDN 仍会返回旧缓存，请手动重试：")
+        warn("   python3 scripts/cdn/purge_static_assets.py")
+        warn("（或 SKIP_CDN_REFRESH=true 跳过此步骤）")
 
 
 def step_indexnow(cfg: dict) -> None:
