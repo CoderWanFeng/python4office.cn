@@ -78,6 +78,7 @@ cover: https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&
 
 | 学员昵称 | 项目名 | 平台 | 项目地址 | 一句话简介 | 提交时间 |
 |----------|--------|------|----------|-----------|----------|
+| Leninbeckor | Audit Analysis Tool（审计分析工具集） | GitHub | https://github.com/Leninbeckor/audit_analysis_tool | 基于 Python 的项目审计全流程自动化分析工具，覆盖序时账处理、台账合规分析、经营指标计算到审计报告生成 | 2026-07-14 |
 | Vivien | CRM System（客户管理系统） | GitHub | https://github.com/vivienzhou66-web/crm-system | 基于 React + Node.js 的销售 CRM，支持客户管理、商机跟踪、活动记录与数据报表 | 2026-07-07 |
 
 ---
