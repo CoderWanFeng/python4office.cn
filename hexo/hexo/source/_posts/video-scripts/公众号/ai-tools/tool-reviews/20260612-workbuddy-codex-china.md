@@ -283,7 +283,7 @@ AI 编程工具好不好，不看宣传页。
 
 我的邀请链接在这里：
 
-[点击注册 WorkBuddy（邀请码已内置）](https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj)
+[点击注册 WorkBuddy（邀请码已内置）](https://www.codebuddy.cn/events/invite?inviteCode=ic1tpbrj2x)
 
 官网：
 

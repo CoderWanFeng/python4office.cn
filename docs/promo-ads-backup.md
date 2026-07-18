@@ -60,7 +60,7 @@
 
 | 字段 | 值 |
 |---|---|
-| 链接 | `https://www.codebuddy.cn/events/invite?inviteCode=bflfcx96gj` |
+| 链接 | `https://www.codebuddy.cn/events/invite?inviteCode=ic1tpbrj2x` |
 | 文案 | `🎁 国产 CodeX AI 办公助手 \| 写方案/PPT/分析 一次搞定` |
 | CTA | `免费领取 →` |
 | 备注 | 腾讯 WorkBuddy（CodeBuddy）邀请通道。 |
