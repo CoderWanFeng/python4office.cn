@@ -30,7 +30,7 @@ Cursor、Trae、Cline、Roo Code、Kilo Code...各种新名字层出不穷。很
 **Trae**
 - 字节跳动2025年推出的AI IDE
 - 集成火山方舟的模型
-- 国内直接用，不用翻墙
+- 国内直接用，不用翻Q
 
 **Cline**
 - VS Code插件，不是独立IDE
@@ -85,7 +85,7 @@ Cursor、Trae、Cline、Roo Code、Kilo Code...各种新名字层出不穷。很
 
 | 工具 | 网络要求 | 稳定性 |
 |------|---------|--------|
-| Cursor | 需翻墙 | ⭐⭐⭐ |
+| Cursor | 需翻Q | ⭐⭐⭐ |
 | Trae | 国内直连 | ⭐⭐⭐⭐⭐ |
 | Cline | 取决于API | ⭐⭐⭐⭐ |
 | Roo Code | 取决于API | ⭐⭐⭐⭐ |
@@ -108,7 +108,7 @@ Cursor、Trae、Cline、Roo Code、Kilo Code...各种新名字层出不穷。很
 
 → **选Cursor**
 
-代码能力天花板，多文件理解能力强，能处理复杂项目。**翻墙麻烦点，但能力最强。**
+代码能力天花板，多文件理解能力强，能处理复杂项目。**翻Q麻烦点，但能力最强。**
 
 ### 你是极客/省钱党
 

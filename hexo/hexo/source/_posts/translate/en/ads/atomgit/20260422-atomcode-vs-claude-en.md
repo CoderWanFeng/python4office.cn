@@ -87,7 +87,7 @@ AtomCode is written in pure Rust, less than 50MB, starts in seconds.
 | **Cost performance** | AtomCode ✅ | Free open source, 75+ models |
 | **Enterprise-level security** | Claude | Data security guaranteed |
 | **Flexible switching** | AtomCode ✅ | 75+ models to choose from |
-| **Domestic use** | AtomCode ✅ | Domestic direct connection, no need to翻墙 |
+| **Domestic use** | AtomCode ✅ | Domestic direct connection, no need to翻Q |
 
 ---
 

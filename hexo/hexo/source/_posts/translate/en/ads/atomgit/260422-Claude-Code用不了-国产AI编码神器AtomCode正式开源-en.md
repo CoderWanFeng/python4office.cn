@@ -54,7 +54,7 @@ Is it good? Really good. I use it to maintain the python-office project, help me
 - Pay-per-use, easy to overspend
 - Every time there's a problem, you have to start over
 
-I've always wanted to ask: **Is there a domestic, stable, no-need-to-翻墙 alternative?**
+I've always wanted to ask: **Is there a domestic, stable, no-need-to-翻Q alternative?**
 
 On April 18th, I found the answer in **Beijing**.
 
@@ -87,7 +87,7 @@ I went to the scene and used it for a week after coming back, let me share my re
 | Open source | ❌ Closed source | ✅ MIT open source |
 | Domestic models | ❌ Not supported | ✅ DeepSeek/Qwen/ZhiPu GLM |
 | Token cost | 💰 Pay-per-use | 🆓 Free for a long time |
-| Network | ⚠️ Need 翻墙 | ✅ Domestic direct connection |
+| Network | ⚠️ Need 翻Q | ✅ Domestic direct connection |
 | Package size | Relatively large | < 50MB |
 | Startup speed | Average | Second-level |
 
@@ -147,7 +147,7 @@ Supports macOS, Linux, Windows, just enter `atomcode` in the terminal to use.
 
 I'm not saying AtomCode has completely surpassed Claude Code.
 
-But for domestic developers, it solves the most core problems: **stable, free, no need to翻墙, supports domestic models.**
+But for domestic developers, it solves the most core problems: **stable, free, no need to翻Q, supports domestic models.**
 
 These three points are more important to me than "strongest performance".
 
