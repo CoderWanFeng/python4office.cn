@@ -20,6 +20,8 @@ cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc3b?q=80&w=1200&aut
 
 换句话说：你付了 14.84 美元，实际只拿到 5 块多的服务。
 
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260720174026239.png)
+
 问题来了：**这些帮你"翻Q用 AI"的中转站，到底怎么运作？为什么能神不知鬼不觉地把模型换掉，你还一点都察觉不到？**
 
 > 稳定靠谱的中转站：https://ai.ahzm.top/sign-up?aff=wanfeng
@@ -30,7 +32,7 @@ cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc3b?q=80&w=1200&aut
 
 先说说中转站为什么突然遍地都是。不是它多厉害，而是普通人想直接用海外 AI，处处是坑：
 
-- **想用 OpenAI**：2024 年 6 月起，大陆 IP 直接被封。
+- **想用 OpenAI**：2024 年 7 月起，大陆 IP 直接被封<sup>[17]</sup>。
 - **想付钱**：得要 Visa/Mastercard，还要海外账单地址验证，大多数人卡在这一步。
 - **接口乱成一锅粥**：大模型从十几个暴涨到数百个，每家的接口格式、计费方式都不一样。
 
@@ -176,6 +178,7 @@ docker run --name one-api -d --restart always \
 14. 云TTS, 2026, [https://www.yuntts.com?p=836/](https://www.yuntts.com?p=836/)
 15. CSDN, 2026, [https://blog.csdn.net/lotusxyhf/article/details/162575549](https://blog.csdn.net/lotusxyhf/article/details/162575549)
 16. 网易, 2026, [https://www.163.com/game/article/DK3UFFO400318PFH_mobile.html](https://www.163.com/game/article/DK3UFFO400318PFH_mobile.html)
+17. 路透社, 2024, [https://www.reuters.com/technology/artificial-intelligence/openai-cut-access-tools-developers-china-other-regions-chinese-state-media-says-2024-06-25/](https://www.reuters.com/technology/artificial-intelligence/openai-cut-access-tools-developers-china-other-regions-chinese-state-media-says-2024-06-25/)
 
 ---
 
