@@ -567,7 +567,8 @@ google_analytics:
 cloudflare_analytics:
 
 # Microsoft Clarity（热图分析）
-microsoft_clarity: x8iw23vrnz
+# 已移除：c.clarity.ms 在国内不稳定，实测卡死 5.5 秒拖慢整页（2026-07-22 性能诊断）
+microsoft_clarity:
 
 # Umami Analytics（隐私友好型统计）
 umami_analytics:
@@ -851,27 +852,7 @@ css_prefix: true
 inject:
   head:                 # 注入到<head>标签前
     - <link rel="stylesheet" href="/css/promo.css">
-    # Google Analytics 延后加载：等 load + 1.5s 才下载 gtag.js，避开首屏
-    - >-
-      <script>
-      (function(){
-        var GA_ID='G-CF6T8MEC36';
-        if(window.gtag)return;
-        window.addEventListener('load',function(){
-          setTimeout(function(){
-            var s=document.createElement('script');
-            s.async=true;
-            s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
-            document.head.appendChild(s);
-            window.dataLayer=window.dataLayer||[];
-            window.gtag=function(){dataLayer.push(arguments)};
-            gtag('js',new Date);
-            gtag('config',GA_ID,{send_page_view:false});
-            gtag('event','page_view',{page_title:document.title,page_path:location.pathname+location.search,page_location:location.href});
-          },1500);
-        });
-      })();
-      </script>
+    # Google Analytics 已移除：googletagmanager 在国内被墙，统计失真且拖慢加载（2026-07-22 性能诊断）
   bottom:               # 注入到</body>标签前
     - <script defer src="/js/promo.js?v=20260702"></script>
     # busuanzi 延后加载：等浏览器空闲 5s 后再请求 busuanzi.ibruce.info，避开首屏
