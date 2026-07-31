@@ -12,10 +12,10 @@
   'use strict';
 
   var PROMO = {
-    // ① 顶部公告条 → 建站搭子（腾讯QClaw）
-    topUrl: 'https://mp.weixin.qq.com/s/phJOGkXHwvaB36onsiqthQ',
-    topText: '🔥 建站搭子入职腾讯 | 对话2句，轻松建个人网站',
-    topCta: '立即体验 →',
+    // ① 顶部公告条 → Loomy（讯飞AI工作搭子）
+    topUrl: 'https://loomy.cgref.cn/s/j7n6gjje1g',
+    topText: '🤖 Loomy工作搭子 | AI替你整理、写内容、看数据，本地运行更安全',
+    topCta: '免费下载 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
 
