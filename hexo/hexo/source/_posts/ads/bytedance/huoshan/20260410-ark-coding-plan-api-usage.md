@@ -13,7 +13,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/hZRFoiCAVDE//)**
+> 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 > 🚀 **想体验 DeepSeek 最新大模型？**
 > 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ## 获取API凭证
 
 ### 1. 订阅Coding Plan
-👉 **[点击订阅](https://volcengine.com/L/hZRFoiCAVDE//)**
+👉 **[点击订阅](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 ### 2. 创建API Key
 - 登录火山引擎控制台
@@ -197,7 +197,7 @@ API调用让火山方舟Coding Plan的应用场景大大扩展。
 
 不只是IDE插件，还能集成到各种系统里。
 
-👉 **[点击订阅](https://volcengine.com/L/hZRFoiCAVDE//)**
+👉 **[点击订阅](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 ---
 

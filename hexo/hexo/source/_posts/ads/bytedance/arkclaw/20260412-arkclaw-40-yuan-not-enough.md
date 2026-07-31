@@ -304,7 +304,7 @@ AI 答："好的，这是修改后的代码"
 
 如果你像我一样是重度用户，要么加钱上高级套餐，要么搭配其他免费工具。
 
-👉 [用我的邀请码，首月 26 块](https://volcengine.com/L/t1UumzV3x84/)
+👉 [用我的邀请码，首月 26 块](https://volcengine.cgref.cn/s/omklvl7n4d)
 邀请码：**GF2QJX3V**
 
 省下的钱，可以再买杯奶茶安慰自己。

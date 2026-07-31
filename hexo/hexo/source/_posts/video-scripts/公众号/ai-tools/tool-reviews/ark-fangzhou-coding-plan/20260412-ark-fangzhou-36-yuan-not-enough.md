@@ -225,7 +225,7 @@ MiniMax 用 5 次
 
 ### 方案 4：用邀请码薅羊毛
 
-👉 [我的邀请码：GF2QJX3V](https://volcengine.com/L/1lTiVtozrm4/)
+👉 [我的邀请码：GF2QJX3V](https://volcengine.cgref.cn/s/omklvl7n4d)
 首月 9 折，省一点是一点。
 
 ---
@@ -267,7 +267,7 @@ MiniMax 用 5 次
 
 如果你像我一样是重度用户，要么加钱，要么搭配免费工具。
 
-👉 [用邀请码订阅，首月 9 折](https://volcengine.com/L/1lTiVtozrm4/)
+👉 [用邀请码订阅，首月 9 折](https://volcengine.cgref.cn/s/omklvl7n4d)
 邀请码：**GF2QJX3V**
 
 省下的钱，给自己加个鸡腿。

@@ -42,7 +42,7 @@ OpenClaw 是一个跨平台的 AI 编程助手，支持多模型切换、插件�
 
 如果你还没有火山方舟 Coding Plan，先去开通：
 
-👉 **专属优惠通道**：[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
+👉 **专属优惠通道**：[点我直达](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 > 🚀 **想体验 DeepSeek 最新大模型？**
 > 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
@@ -127,7 +127,7 @@ OpenClaw 支持 OpenAI 兼容的 API 接口，火山方舟提供的接口完全�
 
 火山方舟 Coding Plan 按量计费，用多少付多少。
 
-👉 **专属优惠通道**：[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
+👉 **专属优惠通道**：[点我直达](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 ---
 

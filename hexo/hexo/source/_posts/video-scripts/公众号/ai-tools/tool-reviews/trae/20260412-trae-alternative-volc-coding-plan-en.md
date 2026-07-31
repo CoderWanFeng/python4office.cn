@@ -126,7 +126,7 @@ Volcano Ark is under ByteDance, servers are in China, response is fast, no VPN n
 
 👇 Click here for subscription page:
 
-👉 [Volcano Ark Coding Plan Subscription](https://volcengine.com/L/5fDpm0hheW8/)
+👉 [Volcano Ark Coding Plan Subscription](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 🎁 Enter referral code when subscribing: **GF2QJX3V**, may have extra discounts.
 

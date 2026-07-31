@@ -201,7 +201,7 @@ cover: https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&
 
 ## 怎么开 Coding Plan？
 
-👉 [火山引擎方舟 Coding Plan 入口： https://volcengine.com/L/2HMtL2kdrUA/](https://volcengine.com/L/2HMtL2kdrUA/)
+👉 [火山引擎方舟 Coding Plan 入口： https://volcengine.cgref.cn/s/omklvl7n4d](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 **邀请码：GF2QJX3V**（新用户有 9.5 折优惠）
 

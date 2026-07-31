@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 📢 **Link First**: 👉 **[Click to subscribe Volcano Ark Coding Plan](https://volcengine.com/L/hZRFoiCAVDE//)**
+> 📢 **Link First**: 👉 **[Click to subscribe Volcano Ark Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 > Invitation Code: **GF2QJX3V** (may have extra benefits)
 

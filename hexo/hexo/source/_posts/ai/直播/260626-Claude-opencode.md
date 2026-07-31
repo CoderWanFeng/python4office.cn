@@ -43,7 +43,7 @@ npm install -g @anthropic-ai/claude-code
 - [阿里云大模型](https://help.aliyun.com/zh/model-studio/claude-code?scm=20140722.H_2949529._.OR_help-T_cn~zh-V_1&source=5176.29345612&userCode=t6duaoe1)
 - [腾讯云大模型](https://curl.qcloud.com/VKPNg7bb)
 
-我直播里，是以[火山AI大模型](https://volcengine.com/L/yJQuaxEAtM8)的配置举例：
+我直播里，是以[火山AI大模型](https://volcengine.cgref.cn/s/omklvl7n4d)的配置举例：
 
 ```json
 {

@@ -142,7 +142,7 @@ Lite 40 块不是"试水价"，是"残废价"。
 
 如果你也想用方舟 Coding Plan，这是我整理的最快入口：
 
-👉 [立即订阅方舟 Coding Plan（邀请码已内置）](https://volcengine.com/L/dWNr-zmkHro/)
+👉 [立即订阅方舟 Coding Plan（邀请码已内置）](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 **邀请码：GF2QJX3V**
 

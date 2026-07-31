@@ -125,7 +125,7 @@ Trae 目前支持的模型比较有限，Coding Plan 一口气支持 5 个主流
 
 👇 戳这里直达订阅页面：
 
-👉 [火山方舟 Coding Plan 订阅入口](https://volcengine.com/L/5fDpm0hheW8/)
+👉 [火山方舟 Coding Plan 订阅入口](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 🎁 订阅时填入邀请码：**GF2QJX3V**，可能有额外优惠。
 

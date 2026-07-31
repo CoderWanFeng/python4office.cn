@@ -51,7 +51,7 @@ Simply put: **Everyone wins.**
 
 **GF2QJX3V**
 
-👉 [Click here to use my invite code directly](https://volcengine.com/L/t1UumzV3x84/)
+👉 [Click here to use my invite code directly](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 ---
 
@@ -59,7 +59,7 @@ Simply put: **Everyone wins.**
 
 ### Step 1: Click the Invite Link
 
-👉 [https://volcengine.com/L/t1UumzV3x84/](https://volcengine.com/L/t1UumzV3x84/)
+👉 [https://volcengine.cgref.cn/s/omklvl7n4d](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 This step is critical — you need to enter via the invite link to enjoy the discount.
 

@@ -253,7 +253,7 @@ say_hello()
 
 ## 怎么开始？
 
-👉 [立即订阅：点击这里](https://volcengine.com/L/t1UumzV3x84/)
+👉 [立即订阅：点击这里](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 邀请码：**GF2QJX3V**
 

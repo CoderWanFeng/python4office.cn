@@ -152,7 +152,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 | 你的需求 | 推荐产品 | 链接 |
 |:---|:---|:---|
 | 最低试错成本 | 阿里云Coding Plan | [点击了解](https://www.aliyun.com/benefit/scene/codingplan?scm=20140722.S_card@@%E6%B4%BB%E5%8A%A8@@4220167._.ID_card@@%E6%B4%BB%E5%8A%A8@@4220167-RL_codingplan-LOC_2024SPSearchCard-OR_ser-PAR1_2127e66a17744276040951204d0c48-V_4-RE_new13-P0_0-P1_0&source=5176.29345612&source=5176.29345612&userCode=t6duaoe1) |
-| 极致性价比 | 火山方舟Coding Plan | [点击了解](https://volcengine.com/L/hZRFoiCAVDE//) |
+| 极致性价比 | 火山方舟Coding Plan | [点击了解](https://volcengine.cgref.cn/s/omklvl7n4d) |
 | 完全灵活 | 腾讯云TOKEN Plan | [点击了解](https://curl.qcloud.com/Z9TkzRuj) |
 
 ---

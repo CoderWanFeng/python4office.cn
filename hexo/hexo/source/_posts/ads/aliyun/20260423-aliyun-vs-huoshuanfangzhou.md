@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
-> 💡 **火山方舟 36元/月** 👉 **[点击了解详情](https://volcengine.com/L/hZRFoiCAVDE/)**
+> 💡 **火山方舟 36元/月** 👉 **[点击了解详情](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 大家好，这里是程序员晚枫。
 
@@ -117,7 +117,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 **👉 [点击开通信义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
-**👉 [点击了解火山方舟](https://volcengine.com/L/hZRFoiCAVDE/)**
+**👉 [点击了解火山方舟](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 ---
 

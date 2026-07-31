@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **Technology isn't高冷, AI is easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
-> 💡 **Volcano Ark 36 yuan/month** 👉 **[Click to learn more](https://volcengine.com/L/hZRFoiCAVDE/)**
+> 💡 **Volcano Ark 36 yuan/month** 👉 **[Click to learn more](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 Hello everyone, this is Programmer Wanfeng.
 
@@ -118,7 +118,7 @@ Volcano Ark crushes Alibaba Cloud in terms of model quantity.
 
 **👉 [Click to activate Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
-**👉 [Click to learn about Volcano Ark](https://volcengine.com/L/hZRFoiCAVDE/)**
+**👉 [Click to learn about Volcano Ark](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 ---
 

@@ -42,7 +42,7 @@ Droid 是一个专注于轻量级代码生成的 AI 工具，帮助开发者快�
 
 ### Step 1：开通火山方舟 Coding Plan
 
-👉 **专属优惠通道**：[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
+👉 **专属优惠通道**：[点我直达](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 > 🚀 **想体验 DeepSeek 最新大模型？**
 > 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
@@ -81,7 +81,7 @@ Droid 是一个专注于轻量级代码生成的 AI 工具，帮助开发者快�
 
 火山方舟 Coding Plan 按量计费，用多少付多少。
 
-👉 **专属优惠通道**：[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
+👉 **专属优惠通道**：[点我直达](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 ---
 

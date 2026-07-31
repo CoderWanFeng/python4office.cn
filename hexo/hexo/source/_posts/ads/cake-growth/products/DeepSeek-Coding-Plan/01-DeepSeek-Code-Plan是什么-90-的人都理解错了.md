@@ -99,7 +99,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ### 步骤 1：注册账号
 
 去火山引擎方舟 Coding Plan 页面：
-👉 [火山引擎方舟 Coding Plan： https://volcengine.com/L/2HMtL2kdrUA/](https://volcengine.com/L/2HMtL2kdrUA/)
+👉 [火山引擎方舟 Coding Plan： https://volcengine.cgref.cn/s/omklvl7n4d](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 （邀请码：GF2QJX3V，新人有折扣）
 

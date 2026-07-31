@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit
 | 4    | 墨刀AI (Modao AI) | https://modao.cc/feature/ai?utm_channel=wl&utm_source=referrals&utm_keyword=cakegrowth&utm=cg&cgv=5ln1qj3erw | 激发无限创造力 | 待补充 | 待补充 |
 | 5    | 超级简历WonderCV | https://www.wondercv.com/?utm=cg&cgv=zdkjoy9e1r | AI智能简历制作工具 | https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ | 待补充 |
 | 6    | UP简历 | https://upcv.tech/?utm=cg&cgv=9we2rzwkgo | AI简历生成在线制作工具 | 待补充 | 待补充 |
-| 7    | 火山引擎Agent计划 | https://volcengine.com/L/hZRFoiCAVDE/ | 火山引擎Agent计划 | 待补充 | 待补充 |
+| 7    | 火山引擎Agent计划 | https://volcengine.cgref.cn/s/omklvl7n4d | 火山引擎Agent计划 | 待补充 | 待补充 |
 | 8    | 讯飞智作 | https://www.xfzhizuo.cn/?utm=cg&cgv=l41ev8dkv8 | AI虚拟数字人视频制作-文字转视频-数字分身定制 | https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw | 待补充 |
 | 9    | 音述 (Yinshu) | https://www.yinshu.me/?ad_channel=cakegrowth&utm=cg&cgv=qmno24zk29 | 全球最强中文AI音乐创作平台 | 待补充 | 待补充 |
 | 10   | SpeedAI | https://speedai.com/?utm=cg&cgv=3mnz8wjno1 | AI Humanizer & AI Detector | https://mp.weixin.qq.com/s/z0y3wByLzfI2JRMxAT2wpQ | 待补充 |

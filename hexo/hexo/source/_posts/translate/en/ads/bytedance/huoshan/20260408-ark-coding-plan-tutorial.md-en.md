@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 📢 **Link First**: 👉 **[Click to subscribe to Volcano Ark Coding Plan](https://volcengine.com/L/hZRFoiCAVDE//)**
+> 📢 **Link First**: 👉 **[Click to subscribe to Volcano Ark Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 > Invitation Code: **GF2QJX3V**
 
@@ -33,7 +33,7 @@ Bought Volcano Ark Coding Plan but don't know how to use it? Today's tutorial ha
 ## 1. Subscribe to Coding Plan
 
 ### Step 1: Open Subscription Page
-Visit: https://volcengine.com/L/hZRFoiCAVDE//
+Visit: https://volcengine.cgref.cn/s/omklvl7n4d
 
 ### Step 2: Use Invitation Code
 Fill in invitation code: **GF2QJX3V**

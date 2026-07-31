@@ -50,7 +50,7 @@ cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 
 **GF2QJX3V**
 
-👉 [点击这里直接用我的邀请码](https://volcengine.com/L/t1UumzV3x84/)
+👉 [点击这里直接用我的邀请码](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 ---
 
@@ -58,7 +58,7 @@ cover: https://images.unsplash.com/photo-161160569?w=800&h=400&fit=crop
 
 ### 第一步：点击邀请链接
 
-👉 [https://volcengine.com/L/t1UumzV3x84/](https://volcengine.com/L/t1UumzV3x84/)
+👉 [https://volcengine.cgref.cn/s/omklvl7n4d](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 这一步很关键，要用邀请链接进入，才能享受优惠。
 
@@ -178,7 +178,7 @@ A：一般是一个新用户用一次。重复使用可能无效。
 2. **首月 26 元** —— 真的很划算
 3. **用完告诉我** —— 你的使用体验怎么样？
 
-👉 [立即订阅，用我的邀请码](https://volcengine.com/L/t1UumzV3x84/)
+👉 [立即订阅，用我的邀请码](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 邀请码：**GF2QJX3V**
 

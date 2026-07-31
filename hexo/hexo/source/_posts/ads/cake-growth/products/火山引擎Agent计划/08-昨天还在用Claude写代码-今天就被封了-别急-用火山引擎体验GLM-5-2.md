@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1555099962-4199c3d93d57?q=80&w=1200&aut
 
 **不想看长篇大论？直接体验：**
 
-👉 [点击这里订阅火山引擎方舟Coding Plan：https://volcengine.com/L/2HMtL2kdrUA/](https://volcengine.com/L/2HMtL2kdrUA/)
+👉 [点击这里订阅火山引擎方舟Coding Plan：https://volcengine.cgref.cn/s/omklvl7n4d](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 💡 现在订阅叠加9.5折，低至9.4元，订阅时输入邀请码 **GF2QJX3V**
    支持GLM-5.2、MiniMax-M3、DeepSeek-V4、Doubao-Seed-2.0、Kimi-K2.6等模型
@@ -259,7 +259,7 @@ GLM-5.2今天刚发布，
 
 如果你也想换个永远不会被封的模型，
 
-👉 [点击这里订阅火山引擎方舟Coding Plan：https://volcengine.com/L/2HMtL2kdrUA/](https://volcengine.com/L/2HMtL2kdrUA/)
+👉 [点击这里订阅火山引擎方舟Coding Plan：https://volcengine.cgref.cn/s/omklvl7n4d](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 💡 订阅时输入邀请码 **GF2QJX3V** 享受优惠
 

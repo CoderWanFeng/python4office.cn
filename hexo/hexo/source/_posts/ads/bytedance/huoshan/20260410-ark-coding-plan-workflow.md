@@ -13,7 +13,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-> 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.com/L/hZRFoiCAVDE//)**
+> 📢 **先上链接**：👉 **[点击订阅火山方舟Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 > 🚀 **想体验 DeepSeek 最新大模型？**
 > 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
@@ -203,7 +203,7 @@ AI生成的代码都要 review，确保：
 
 36元/月，每天省2小时，这投资太值了。
 
-👉 **[点击订阅](https://volcengine.com/L/hZRFoiCAVDE//)**
+👉 **[点击订阅](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 ---
 

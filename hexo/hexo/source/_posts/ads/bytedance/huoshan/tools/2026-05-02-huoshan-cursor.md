@@ -42,7 +42,7 @@ Cursor 是基于 AI 的代码编辑器，支持代码补全、错误检测和智
 
 ### Step 1：开通火山方舟 Coding Plan
 
-👉 **专属优惠通道**：[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
+👉 **专属优惠通道**：[点我直达](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 > 🚀 **想体验 DeepSeek 最新大模型？**
 > 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。
@@ -109,7 +109,7 @@ Cursor 的 AI 补全结合豆包的中文理解能力，可以更准确地补全
 
 火山方舟 Coding Plan 按量计费，用多少付多少。
 
-👉 **专属优惠通道**：[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
+👉 **专属优惠通道**：[点我直达](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 ---
 

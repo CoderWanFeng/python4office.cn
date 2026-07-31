@@ -310,7 +310,7 @@ AI 编程工具确实能大幅提升效率，但它不应该成为你的经济�
 
 ---
 
-👉 想体验 **火山方舟 Coding Plan**？[点我直达](https://volcengine.com/L/hZRFoiCAVDE/)
+👉 想体验 **火山方舟 Coding Plan**？[点我直达](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 > 🚀 **想体验 DeepSeek 最新大模型？**
 > 👉 [字节火山方舟 Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d) — 1 个订阅 6 大模型，DeepSeek-V3.2 + 豆包 + Kimi + GLM-4 自由切换。

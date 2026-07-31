@@ -136,7 +136,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 👉 **https://www.aliyun.com/minisite/goods?userCode=t6duaoe1**
 
 ### 火山方舟Coding Plan
-👉 **https://volcengine.com/L/hZRFoiCAVDE//**
+👉 **https://volcengine.cgref.cn/s/omklvl7n4d**
 邀请码：**GF2QJX3V**
 
 ## 七、写在最后

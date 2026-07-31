@@ -23,7 +23,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **Technology is not high-cold, AI is very easy to use** 👉 **[Click to experience Tongyi Qianwen](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
-> 💡 **Volcano Ark 36 yuan/month** 👉 **[Click for details](https://volcengine.com/L/hZRFoiCAVDE/)**
+> 💡 **Volcano Ark 36 yuan/month** 👉 **[Click for details](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 Hello everyone, this is programmer Wan Feng.
 

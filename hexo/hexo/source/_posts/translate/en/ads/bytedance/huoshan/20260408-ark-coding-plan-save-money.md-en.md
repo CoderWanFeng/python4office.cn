@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 400k+ followers across platforms, 6 years Python development experience, author of open source project python-office
 
-> 📢 **Link First**: 👉 **[Click to subscribe to Volcano Ark Coding Plan](https://volcengine.com/L/hZRFoiCAVDE//)**
+> 📢 **Link First**: 👉 **[Click to subscribe to Volcano Ark Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 > Invitation Code: **GF2QJX3V**
 
@@ -43,7 +43,7 @@ Subscribe to Volcano Ark Coding Plan now to enjoy **10% off**.
 - Annual subscription even better: 36×12=432 yuan
 
 ### Subscription Link
-👉 [Click to subscribe to Volcano Ark Coding Plan](https://volcengine.com/L/hZRFoiCAVDE//)
+👉 [Click to subscribe to Volcano Ark Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 ### Invitation Code Benefits
 Use invitation code: **GF2QJX3V**

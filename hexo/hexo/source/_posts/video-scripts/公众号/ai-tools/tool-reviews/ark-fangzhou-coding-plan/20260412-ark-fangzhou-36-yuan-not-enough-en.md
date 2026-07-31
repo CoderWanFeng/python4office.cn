@@ -228,7 +228,7 @@ But the problem is:
 
 ### Solution 4: Use Referral Codes for Benefits
 
-👉 [My referral code: GF2QJX3V](https://volcengine.com/L/1lTiVtozrm4/)
+👉 [My referral code: GF2QJX3V](https://volcengine.cgref.cn/s/omklvl7n4d)
 First month 10% off, save what you can.
 
 ---
@@ -270,7 +270,7 @@ If you're a light user, 36 yuan is sufficient.
 
 If you're a heavy user like me, either pay more or pair with free tools.
 
-👉 [Subscribe with referral code, first month 10% off](https://volcengine.com/L/1lTiVtozrm4/)
+👉 [Subscribe with referral code, first month 10% off](https://volcengine.cgref.cn/s/omklvl7n4d)
 Referral code: **GF2QJX3V**
 
 Save the money and treat yourself to a better meal.

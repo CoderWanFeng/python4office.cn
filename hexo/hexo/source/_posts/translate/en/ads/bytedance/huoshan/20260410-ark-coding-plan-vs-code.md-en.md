@@ -15,7 +15,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 > 400k+ followers across platforms, 6 years Python development experience, open source project python-office author
 
-> 📢 **Link First**: 👉 **[Click to subscribe Volcano Coding Plan](https://volcengine.com/L/hZRFoiCAVDE//)**
+> 📢 **Link First**: 👉 **[Click to subscribe Volcano Coding Plan](https://volcengine.cgref.cn/s/omklvl7n4d)**
 
 > Invitation Code: **GF2QJX3V**
 
@@ -53,7 +53,7 @@ Today hand-holding you through configuration.
 
 ### Step 2: Subscribe to Volcano Coding Plan
 
-👉 [Click to subscribe](https://volcengine.com/L/hZRFoiCAVDE//)
+👉 [Click to subscribe](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 Get API Key.
 ---

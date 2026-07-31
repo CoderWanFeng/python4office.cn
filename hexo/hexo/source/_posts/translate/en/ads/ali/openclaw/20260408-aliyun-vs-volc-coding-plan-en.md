@@ -136,7 +136,7 @@ Reason: Ecosystem integration, one-stop service.
 👉 **https://www.aliyun.com/minisite/goods?userCode=t6duaoe1**
 
 ### Volcano Engine Coding Plan
-👉 **https://volcengine.com/L/hZRFoiCAVDE//**
+👉 **https://volcengine.cgref.cn/s/omklvl7n4d**
 Invitation code: **GF2QJX3V**
 
 ## 7. Final thoughts

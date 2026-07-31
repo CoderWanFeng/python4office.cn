@@ -173,7 +173,7 @@ def read_excel(path):
 
 **首月订购低至 26 元**，用邀请码还有折上折。
 
-👉 [立即订阅：点击这里](https://volcengine.com/L/t1UumzV3x84/)
+👉 [立即订阅：点击这里](https://volcengine.cgref.cn/s/omklvl7n4d)
 
 邀请码：**GF2QJX3V**
 
