@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1611162600?w=1200&auto=format&fit=crop
 
 # Firefox 摇一摇手机，AI 帮你 3 句话读懂 5000 单词英文长文（免费默认开启）
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近我看到一件挺"反常"的事——
 

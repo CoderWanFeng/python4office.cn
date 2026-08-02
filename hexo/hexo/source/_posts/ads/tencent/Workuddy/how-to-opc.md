@@ -16,7 +16,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 发布链接🔗https://mp.weixin.qq.com/s/6qbuz_SitlIRL_ZrjHfy-Q
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 先放官网直达链接：https://www.python-office.com/how-to-opc
 

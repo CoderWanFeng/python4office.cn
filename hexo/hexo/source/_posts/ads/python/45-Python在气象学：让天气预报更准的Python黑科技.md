@@ -7,7 +7,7 @@ description: "Python 在气象学的应用：让天气预报更准的 Python 黑
 cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **天气预报越来越准，背后有 Python 的功劳。**
 

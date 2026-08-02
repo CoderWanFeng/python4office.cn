@@ -7,7 +7,7 @@ description: "Trae免费版能用吗？付费值不值？本文用一张表+3个
 cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 后台被问得最多的问题，最近是同一个：**"Trae 免费和付费到底有啥区别？"**
 
@@ -196,4 +196,4 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

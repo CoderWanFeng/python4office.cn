@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 国内Coding Plan市场越来越热闹了：**阿里云Coding Plan**、火山方舟Coding Plan、腾讯云TOKEN Plan，到底选哪个？
 
@@ -172,7 +172,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 **关于作者**
 
-程序员晚枫，6年Python开发经验，5年技术自媒体创作，全网40万+粉丝。
+程序员晚枫（Wayne Liu），6年Python开发经验，5年技术自媒体创作，全网40万+粉丝。
 
 专注AI编程工具测评与教学，帮你用最低成本掌握最先进的开发工具。
 

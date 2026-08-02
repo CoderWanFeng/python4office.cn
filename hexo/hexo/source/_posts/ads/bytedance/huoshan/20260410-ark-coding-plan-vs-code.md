@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 > 
 > 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 不想花钱Cursor？VS Code + 火山方舟Coding Plan是最佳免费方案。
 
@@ -146,7 +146,7 @@ VS Code + 火山方舟Coding Plan，是目前性价比最高的AI编程方案。
 
 ---
 
-程序员晚枫，专注AI编程培训，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1611162600?w=1200&auto=format&fit=crop
 
 # 微信"小微"灰度内测：一个AI智能体走进10亿人的聊天框
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今天早上刷到一个让我挺意外的消息——微信正在灰度内测一个叫"小微"的 AI 助手。
 

@@ -6,7 +6,7 @@ categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 我有个同事，每次开会做PPT，都要花一整天。
 
@@ -106,4 +106,4 @@ AiPPT帮你自动排版，自动配色，自动生成图表，**你只需要输�
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

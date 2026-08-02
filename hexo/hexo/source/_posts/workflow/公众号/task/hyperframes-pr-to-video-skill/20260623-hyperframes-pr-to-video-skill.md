@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1611162600?w=1200&auto=format&fit=crop
 
 # HyperFrames推出pr-to-video技能，AI自动把PR变成讲解视频
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近我看到一个让我特别兴奋的消息：HyperFrames推出了pr-to-video技能。你给它一个GitHub PR链接，它自己去读代码变更，自己写脚本，自己生成讲解视频。整个过程不需要你动手。
 

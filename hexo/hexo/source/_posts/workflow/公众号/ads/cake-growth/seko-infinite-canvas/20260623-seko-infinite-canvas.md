@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1611162600?w=1200&auto=format&fit=crop
 
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 前两天我刷到一个让我挺震撼的工具——**商汤的 Seko**。
 

@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ![Python + AI Agent = 2026年普通人的搞钱新机会](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 最近几个月，我发现一个很明显的趋势：
 

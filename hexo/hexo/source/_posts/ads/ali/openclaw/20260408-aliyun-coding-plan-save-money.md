@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ![阿里云Coding Plan省钱攻略：怎么用出最大价值？](https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop)
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 阿里云Coding Plan功能强大，但怎么用才能省钱？
 
@@ -265,7 +265,7 @@ AI是杠杆，不是对手。
 
 ---
 
-程序员晚枫，专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

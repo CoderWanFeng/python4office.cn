@@ -204,7 +204,7 @@ AI是这个时代给程序员最好的礼物。用好了，它能帮你提前10�
 
 ---
 
-程序员晚枫，专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 
 ## 🎓 AI 编程实战课程

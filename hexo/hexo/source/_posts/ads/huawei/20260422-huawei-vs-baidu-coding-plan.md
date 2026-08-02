@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 > 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 华为没有 Coding Plan，但百度有。
 

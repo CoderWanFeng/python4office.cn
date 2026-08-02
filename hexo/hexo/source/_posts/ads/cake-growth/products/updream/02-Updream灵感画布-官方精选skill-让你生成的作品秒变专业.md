@@ -6,7 +6,7 @@ categories: [AI工具评测]
 cover: https://cdn.pixabay.com/photo/2024/05/19/05/59/ai-generated-8771581_1280.jpg
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 画 AI 短剧分镜这件事，我以前觉得是专业团队的活——直到我无意中刷到 Updream 的"官方精选 skill"商店，里面 5.0k 次使用次数的"AI 短剧资产设计师"摆在那儿，免费用。
 
@@ -288,4 +288,4 @@ A 24-year-old Chinese heroine in traditional Hanfu costume...
 👉 [点我领 Updream 官方精选 skill 库： https://updream.cgref.cn/s/qyk4zr8n87](https://updream.cgref.cn/s/qyk4zr8n87)
 
 **科技不高冷，AI 很好用。**
-我是晚枫，关注我，带你一起玩 AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩 AI！

@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 最近几年，国产大模型赛道杀出了一匹黑马——**月之暗面（Moonshot AI）**，旗下的 Kimi 以「长上下文」闻名，现在也推出了 Coding Plan。
 

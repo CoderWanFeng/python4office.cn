@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=
 ![这本书在我床头放了7年，我终于决定把它读透](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 ---
 

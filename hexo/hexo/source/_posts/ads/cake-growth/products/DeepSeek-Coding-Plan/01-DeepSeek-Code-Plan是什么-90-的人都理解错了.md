@@ -7,7 +7,7 @@ description: "DeepSeek Code Plan不是会员，是AI编程订阅服务。本文�
 cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 公众号后台最常被问的问题，Top 3 里一定有这一条：
 
@@ -196,4 +196,4 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

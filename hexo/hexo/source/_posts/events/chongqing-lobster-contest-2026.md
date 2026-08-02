@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1579208578152-875549830880?q=80&w=1200&
 
 <!-- more -->
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 养虾达人比拼来袭！AtomGit AI龙虾挑战赛重庆站招募开启！
 

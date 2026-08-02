@@ -6,7 +6,7 @@ categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1200&auto=format&fit=crop
 ---
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 我有个朋友，研究生快毕业了，论文提交前查了一下AI率。
 
@@ -164,4 +164,4 @@ SpeedAI让我看到了一种可能性：**AI率不是问题，问题是你有没
 
 **科技不高冷，AI很好用。**
 
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

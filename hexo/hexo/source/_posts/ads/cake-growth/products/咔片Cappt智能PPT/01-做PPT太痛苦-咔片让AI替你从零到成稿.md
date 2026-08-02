@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 
 > 👉 不想加班做PPT？咔片Cappt智能PPT帮你搞定，[点这里立即体验：https://cappt.cgref.cn/s/59ngwy5er2](https://cappt.cgref.cn/s/59ngwy5er2)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 上周，一个做销售的朋友跟我吐槽：
 
@@ -197,4 +197,4 @@ AI不是只能生成PPT，还能帮你**优化文案**：
 顺便说一句，我的AI编程实战课...
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 ![AtomGit + OpenClaw = 2026年最强AI编程组合](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 最近有很多粉丝问我：「晚枫哥，我想学 AI 编程，但不知道用什么工具，有什么推荐吗？」
 

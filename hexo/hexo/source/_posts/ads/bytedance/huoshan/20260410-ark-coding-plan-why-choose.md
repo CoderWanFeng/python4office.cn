@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 用火山方舟Coding Plan已经3个月了，今天想真诚分享一下：为什么我选择它，以及它给我带来了什么改变。
 
@@ -161,7 +161,7 @@ AI帮我审查代码，发现了很多自己没注意到的问题。
 
 ---
 
-程序员晚枫，专注AI编程培训，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

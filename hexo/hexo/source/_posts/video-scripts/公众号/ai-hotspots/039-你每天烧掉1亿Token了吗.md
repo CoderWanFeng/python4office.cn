@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 先问你一个问题：
 
@@ -322,7 +322,7 @@ https://platform.minimaxi.com/subscribe/token-plan
 而 MiniMax M3，是目前**最值得大规模燃烧 Token**的选择。
 
 **科技不高冷，AI 很好用。**
-我是晚枫，关注我，带你一起玩 AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩 AI！
 
 💬 **来评论区聊聊**
 

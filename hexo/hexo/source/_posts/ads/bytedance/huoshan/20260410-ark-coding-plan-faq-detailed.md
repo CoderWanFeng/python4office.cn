@@ -27,7 +27,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 > 
 > 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 整理了我被问得最多的**火山方舟Coding Plan常见问题**，一次性解答清楚。
 
@@ -229,7 +229,7 @@ Claude Code支持自定义API，配置火山方舟的API信息后，即可使用
 
 **关于作者**
 
-程序员晚枫，6年Python开发经验，5年技术自媒体创作，全网40万+粉丝。
+程序员晚枫（Wayne Liu），6年Python开发经验，5年技术自媒体创作，全网40万+粉丝。
 
 专注AI编程工具测评与教学，帮你用最低成本掌握最先进的开发工具。
 

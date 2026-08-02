@@ -7,7 +7,7 @@ description: "2026 年 Python IDE 编辑器完整对比：VS Code vs PyCharm vs 
 cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **学 Python，第一件事不是学语法。**
 
@@ -465,7 +465,7 @@ Git 提交
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 
 ## 🎓 AI 编程实战课程

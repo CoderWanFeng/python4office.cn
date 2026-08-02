@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 最近，字节跳动旗下的火山引擎推出了**方舟 Coding Plan**，一站式解决开发者的 AI 编程需求。
 
@@ -209,7 +209,7 @@ AI 是杠杆，不是对手。
 
 ---
 
-程序员晚枫，专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

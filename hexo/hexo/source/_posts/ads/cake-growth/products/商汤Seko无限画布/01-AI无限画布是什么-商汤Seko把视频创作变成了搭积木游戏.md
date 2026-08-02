@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&
 
 > 👉 不想看长篇大论？直接体验商汤Seko无限画布：[点击这里试试Seko：https://seko.cgref.cn/s/rpe3l6xe05](https://seko.cgref.cn/s/rpe3l6xe05)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今天聊一个让我眼前一亮的工具：**商汤Seko无限画布**。
 
@@ -138,4 +138,4 @@ AI会自动帮你：
 顺便说一句，我的AI编程实战课...
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

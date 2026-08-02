@@ -7,7 +7,7 @@ description: "京东Coding Plan 3个月深度使用报告：价格、速度、�
 cover: https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 上个月有读者留言："晚枫，京东 Coding Plan 你用过吗？值不值得买？"
 
@@ -194,4 +194,4 @@ cover: https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&aut
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

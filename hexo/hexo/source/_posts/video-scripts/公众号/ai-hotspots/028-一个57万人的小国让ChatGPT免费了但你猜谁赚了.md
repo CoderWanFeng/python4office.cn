@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1555421689-491a97ff2040?w=1200&h=400&fi
 
 ![](https://raw.atomgit.com/user-images/assets/5027920/55837ce4-9233-49d2-8bcd-3e6502cdab14/image.png)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近有一条新闻，很多人可能刷到了，但没当回事——
 
@@ -241,7 +241,7 @@ OpenAI就从一家AI公司，变成了**全球AI基础设施提供商**。
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ---
 

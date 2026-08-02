@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 > 🎬 本文根据口播稿第 025 期改编：[我求你别去碰Claude Code](/video-scripts/口播稿/025-我求你别去碰Claude Code/)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 我要跟你说一件很严肃的事。
 

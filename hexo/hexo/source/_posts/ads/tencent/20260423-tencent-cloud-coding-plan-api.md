@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **科技不高冷，AI很好用** 👉 **[点击体验腾讯混元](https://curl.qcloud.com/Z9TkzRuj)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 今天给大家带来**腾讯云 Coding Plan API 接入教程**，手把手教你把腾讯混元接入到自己的项目中。
 

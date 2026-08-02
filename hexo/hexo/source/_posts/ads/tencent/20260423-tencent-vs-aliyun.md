@@ -23,7 +23,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **阿里云 29元/月** 👉 **[点击了解详情](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 今天来一个硬核对比：**腾讯云 Coding Plan（49元/月）vs 阿里云百炼（29元/月）**。
 

@@ -318,7 +318,7 @@ AI 编程工具确实能大幅提升效率，但它不应该成为你的经济�
 
 ## 关于作者
 
-程序员晚枫，开源项目 [python-office](https://www.python-office.com/) 作者，专注 AI 编程工具测评与省钱攻略。
+程序员晚枫（Wayne Liu），开源项目 [python-office](https://www.python-office.com/) 作者，专注 AI 编程工具测评与省钱攻略。
 
 > "能省的钱，为什么要多花？"
 

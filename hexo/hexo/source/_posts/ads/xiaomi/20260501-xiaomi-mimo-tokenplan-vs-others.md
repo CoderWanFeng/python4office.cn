@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&
 
 > 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 最近各大厂商都在推Coding Plan，很多朋友问我：**小米、火山、智谱，这三家该怎么选？**
 

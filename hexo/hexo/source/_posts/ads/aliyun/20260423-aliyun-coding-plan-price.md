@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **科技不高冷，AI很好用** 👉 **[点击体验通义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 阿里云百炼 Coding Plan 的价格终于出炉了！今天来给大家详细拆解一下阿里云的定价策略。
 

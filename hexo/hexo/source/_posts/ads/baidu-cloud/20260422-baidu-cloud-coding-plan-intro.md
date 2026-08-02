@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 > 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 说起国内 AI 大模型，**百度**绝对是老资格了。文心一言发布至今，已经有了相当的积累。现在，百度智能云也推出了 Coding Plan，给开发者带来了新的选择。
 

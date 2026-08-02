@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **科技不高冷，AI很好用** 👉 **[点击体验腾讯混元](https://curl.qcloud.com/Z9TkzRuj)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 今天分享一些**腾讯云 Coding Plan 省钱攻略**，49 元/月怎么用最划算。
 

@@ -7,7 +7,7 @@ description: "QoderWork 首月 0 元优惠，走阿里云这个链接，Quest �
 cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **Cursor 一年 1680 块？**太贵**。**
 
@@ -480,7 +480,7 @@ Qoder：分分钟完成
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ## 🎓 AI 编程实战课程
 

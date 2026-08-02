@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1611162600?w=1200&auto=format&fit=crop
 
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近我刷到一个让我挺意外的消息——Netflix 的一个工程师，开源了一个叫 Headroom 的工具。
 

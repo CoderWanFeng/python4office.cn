@@ -15,7 +15,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=400&fi
 
 ![WorkBuddy国产Codex](https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=compress&cs=tinysrgb&w=800)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近我试了一个国产 AI 编程工具：**WorkBuddy**。
 
@@ -316,7 +316,7 @@ AI 编程工具现在已经过了“看起来很酷”的阶段。
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ---
 

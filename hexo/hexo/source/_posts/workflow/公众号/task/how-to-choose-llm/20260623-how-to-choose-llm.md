@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1611162600?w=1200&auto=format&fit=crop
 
 # 这么多大模型，我应该选哪个？8年AI老兵给你的选型框架
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近被问最多的问题就是：「晚枫，市面上这么多大模型，GPT-4、Claude、Gemini、DeepSeek、豆包、通义、文心、Llama……我到底应该选哪个？」
 

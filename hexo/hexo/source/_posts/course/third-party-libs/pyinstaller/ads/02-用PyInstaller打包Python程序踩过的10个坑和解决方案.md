@@ -13,7 +13,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 ## 写在前面
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 在维护python-office开源项目的过程中，我帮很多用户解决过PyInstaller打包的问题。说实话，PyInstaller虽然好用，但坑是真的不少。
 

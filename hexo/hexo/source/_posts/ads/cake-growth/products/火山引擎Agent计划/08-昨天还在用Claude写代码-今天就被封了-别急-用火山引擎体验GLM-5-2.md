@@ -6,7 +6,7 @@ categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1555099962-4199c3d93d57?q=80&w=1200&auto=format&fit=crop
 ---
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 **不想看长篇大论？直接体验：**
 
@@ -267,4 +267,4 @@ GLM-5.2今天刚发布，
 
 **科技不高冷，AI很好用。**
 
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&auto=
 
 > 💥 **🔥 coding plan + token plan + 国内外价格对比，9 大云厂商 1 张图曝光 DeepSeek 真实排名！** 👉 **[点我立即查看](https://www.python-office.com/token/)**
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近一周我用豆包（Doubao，跑在字节火山方舟上）做了一件挺打脸的事。
 

@@ -17,7 +17,7 @@ cover: https://images.unsplash.com/photo-1618401471353-b98afee55b0b?q=80&w=1200&
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 最近AI Agent越来越火，很多朋友开始自己写Skills，但我发现：**很多人的设计思路有问题，导致Skills不可复用、难以维护、性能差！**
 

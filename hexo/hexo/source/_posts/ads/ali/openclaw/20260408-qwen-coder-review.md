@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 ![通义千问代码能力实测：Qwen3-Coder系列到底有多强？](https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800)
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 阿里云Coding Plan最大的卖点之一，就是**通义千问系列的代码能力**。
 
@@ -353,7 +353,7 @@ AI是杠杆，不是对手。
 
 ---
 
-程序员晚枫，专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

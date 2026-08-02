@@ -15,7 +15,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近不少朋友问我：**腾讯云OpenClaw到底怎么部署？**
 
@@ -212,7 +212,7 @@ OpenClaw的部署并不复杂，腾讯云的一键部署大大降低了门槛。
 
 ## 作者简介
 
-程序员晚枫，GitHub开源项目python-office作者，AI编程布道者。
+程序员晚枫（Wayne Liu），GitHub开源项目python-office作者，AI编程布道者。
 
 - 公众号：程序员晚枫
 - B站：程序员晚枫

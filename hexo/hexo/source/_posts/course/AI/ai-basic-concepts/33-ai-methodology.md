@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 同样用AI，差距为什么这么大？
 

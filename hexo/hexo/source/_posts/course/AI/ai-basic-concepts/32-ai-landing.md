@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 上个月给一家公司做了场AI编程培训，我问了台下30个开发一个问题：**"你们有多少人装了AI编程工具？"**
 

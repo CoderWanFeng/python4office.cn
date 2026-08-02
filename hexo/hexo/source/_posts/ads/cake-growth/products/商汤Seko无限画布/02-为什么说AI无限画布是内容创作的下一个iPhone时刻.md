@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&
 
 > 👉 提前感受未来创作：商汤Seko无限画布，[点这里立即体验：https://seko.cgref.cn/s/rpe3l6xe05](https://seko.cgref.cn/s/rpe3l6xe05)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 你有没有想过，为什么iPhone能颠覆手机行业？
 
@@ -179,4 +179,4 @@ iPhone做到了，Seko也在做到。
 顺便说一句，我的AI编程实战课...
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

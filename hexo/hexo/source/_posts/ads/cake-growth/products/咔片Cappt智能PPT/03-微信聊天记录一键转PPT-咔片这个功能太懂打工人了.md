@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 
 > 👉 把微信对话变PPT：咔片Cappt智能PPT，[点这里立即体验：https://cappt.cgref.cn/s/59ngwy5er2](https://cappt.cgref.cn/s/59ngwy5er2)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今天聊一个我最近发现的功能，用完之后直呼"太懂打工人了"。
 
@@ -211,4 +211,4 @@ AI时代，打工人最值钱的能力，不是"会用AI"，而是"**懂得把�
 顺便说一句，我的AI编程实战课...
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

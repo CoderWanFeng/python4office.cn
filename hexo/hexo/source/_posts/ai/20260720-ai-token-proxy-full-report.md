@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc3b?q=80&w=1200&aut
 
 # 我查了一圈AI中转站，发现近一半在偷偷换模型
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近我看到一篇德国 CISPA 信息安全中心的论文，看完后背发凉。
 

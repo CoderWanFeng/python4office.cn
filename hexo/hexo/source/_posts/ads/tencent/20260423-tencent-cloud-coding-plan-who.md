@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **科技不高冷，AI很好用** 👉 **[点击体验腾讯混元](https://curl.qcloud.com/Z9TkzRuj)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 腾讯云 Coding Plan 来了，但到底适不适合你？今天来深度分析一下。
 

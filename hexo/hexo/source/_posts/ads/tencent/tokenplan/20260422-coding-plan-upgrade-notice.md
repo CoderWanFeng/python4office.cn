@@ -184,7 +184,7 @@ Coding Plan 时代可选模型有限，Token Plan 现在聚合了国内最顶级
 
 ## 关于作者
 
-程序员晚枫，开源项目 [python-office](https://www.python-office.com/) 作者，专注 AI 编程工具测评与分享。
+程序员晚枫（Wayne Liu），开源项目 [python-office](https://www.python-office.com/) 作者，专注 AI 编程工具测评与分享。
 
 ---
 

@@ -297,7 +297,7 @@ Claude Code 是个好工具，不应该因为价格把人挡在门外。
 
 ## 关于作者
 
-程序员晚枫，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），开源项目 [python-office](https://www.python-office.com/) 作者。
 
 > "好工具不应该只属于付得起的人。"
 

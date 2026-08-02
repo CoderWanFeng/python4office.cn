@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1522202176988-66273ba76963?q=80&w=1200&
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近我一直在写AI基础概念、AI实战方法论，也在拆真实落地场景。
 

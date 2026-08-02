@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&aut
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今年AI编程工具彻底爆发了。
 
@@ -185,4 +185,4 @@ Cursor写复杂代码，Trae写简单任务，省掉Cursor的订阅费。
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

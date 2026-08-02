@@ -15,7 +15,7 @@ cover: https://images.unsplash.com/photo-1620712941548?q=80&w=1200&auto=format&f
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 6月1日，中国台北。
 
@@ -334,7 +334,7 @@ cover: https://images.unsplash.com/photo-1620712941548?q=80&w=1200&auto=format&f
 
 **科技不高冷，AI很好用。**
 
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ---
 

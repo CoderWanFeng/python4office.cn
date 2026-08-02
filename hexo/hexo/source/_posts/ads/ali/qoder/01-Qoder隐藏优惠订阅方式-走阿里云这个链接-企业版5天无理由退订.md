@@ -7,7 +7,7 @@ description: "Qoder（原通义灵码）隐藏优惠订阅方式：走阿里云�
 cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **Cursor 太贵？Claude Code 动不动要 100 块？**
 
@@ -458,7 +458,7 @@ def calculate_fibonacci(n):
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ## 🎓 AI 编程实战课程
 

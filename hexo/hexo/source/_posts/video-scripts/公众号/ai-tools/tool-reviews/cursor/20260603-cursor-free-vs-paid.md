@@ -36,7 +36,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 之前写了 Trae 的免费版 vs 付费版对比，后台好多朋友催我："晚枫，Cursor 的呢？Cursor 免费版到底够不够用？"
 
@@ -284,7 +284,7 @@ Claude Opus 是目前最强的代码模型之一，在复杂代码重构、架�
 
 **科技不高冷，AI很好用。**
 
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ---
 

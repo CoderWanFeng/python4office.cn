@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 你一定见过这两个词：ChatGPT 和 GPT。
 
@@ -194,7 +194,7 @@ DeepSeek 和 Qwen 的中文效果已经接近 GPT-4o，价格只有十分之一�
 顺便说一句，我的AI编程实战课...
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ---
 

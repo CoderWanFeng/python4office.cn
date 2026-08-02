@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&auto=for
 
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 昨天晚上，我在「**晚枫老师的 AI Python 零基础实战营**」的微信群里，看到一段对话。
 

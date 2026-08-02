@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 买了火山方舟Coding Plan不知道怎么用？今天这篇教程手把手教你，从订阅到上手，完整流程一次讲清楚。
 
@@ -242,7 +242,7 @@ AI是杠杆，不是对手。
 
 ---
 
-程序员晚枫，专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

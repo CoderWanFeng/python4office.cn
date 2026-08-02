@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 > 💡 **想一站式对比选购各厂商 Coding Plan？** 👉 **[点击这里，10多家厂商一目了然](https://www.python-office.com/token/)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 今天想吐槽一件事：**国产AI越来越聪明了，但我想用的时候却用不起。**
 

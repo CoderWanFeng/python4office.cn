@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 火山方舟Coding Plan不只是IDE插件，还能直接调用API集成到你的项目里。
 
@@ -209,7 +209,7 @@ API调用让火山方舟Coding Plan的应用场景大大扩展。
 
 ---
 
-程序员晚枫，专注AI编程培训，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

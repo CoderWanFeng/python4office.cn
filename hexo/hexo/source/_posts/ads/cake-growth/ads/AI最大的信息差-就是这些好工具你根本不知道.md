@@ -6,7 +6,7 @@ categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&auto=format&fit=crop
 ---
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 最近有个事让我特别感慨。
 
@@ -147,4 +147,4 @@ https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUzNTc5NjA4NQ==&action=getalbum&a
 
 **科技不高冷，AI很好用。**
 
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

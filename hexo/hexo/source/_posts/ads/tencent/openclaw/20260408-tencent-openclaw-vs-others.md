@@ -15,7 +15,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近想给业务搭个AI助手，调研了市面上5种方案。今天分享对比过程和最终选择，**4月10日郑州龙虾课**，现场聊聊选型那些坑。
 
@@ -247,7 +247,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ## 作者简介
 
-程序员晚枫，GitHub开源项目python-office作者，AI编程布道者。专注于技术选型和落地实践。
+程序员晚枫（Wayne Liu），GitHub开源项目python-office作者，AI编程布道者。专注于技术选型和落地实践。
 
 - 公众号：程序员晚枫
 - B站：程序员晚枫

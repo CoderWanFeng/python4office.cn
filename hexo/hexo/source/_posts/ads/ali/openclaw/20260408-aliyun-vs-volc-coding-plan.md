@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ![阿里云Coding Plan vs 火山方舟Coding Plan：国产AI编程工具怎么选？](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=400&fit=crop)
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 最近国产AI编程工具扎堆上线，很多粉丝问我：**阿里云Coding Plan和火山方舟Coding Plan到底选哪个？**
 
@@ -200,7 +200,7 @@ AI是杠杆，不是对手。
 
 ---
 
-程序员晚枫，专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，法学硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

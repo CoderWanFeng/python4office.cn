@@ -139,7 +139,7 @@ Copilot：136元/月
 
 ## 关于作者
 
-程序员晚枫，开源项目 [python-office](https://www.python-office.com/) 作者，专注AI编程工具测评与分享。
+程序员晚枫（Wayne Liu），开源项目 [python-office](https://www.python-office.com/) 作者，专注AI编程工具测评与分享。
 
 ---
 

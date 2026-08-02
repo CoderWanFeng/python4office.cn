@@ -36,7 +36,7 @@ cover: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 后台有朋友问我："晚枫，Cursor 和 Windsurf 你都用过，到底哪个更好？"
 
@@ -264,7 +264,7 @@ Windsurf 有一个独家功能叫 **Cascade**。
 
 **科技不高冷，AI很好用。**
 
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ---
 

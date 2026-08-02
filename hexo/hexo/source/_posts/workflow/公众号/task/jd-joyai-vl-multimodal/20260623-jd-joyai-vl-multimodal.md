@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1611162600?w=1200&auto=format&fit=crop
 
 # 京东开源JoyAI-VL：能"边看边说"的多模态AI，企业能直接用吗？
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 京东昨天开源了一个多模态 AI 模型，叫 JoyAI-VL-Interaction。最大的特点是「边看边说」——你给它一个摄像头，它能像人一样实时描述画面里发生的事。
 

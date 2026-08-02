@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&
 
 # 苹果闭源、安卓开源，AI大模型该选哪边？
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近有读者问我一个问题：**ChatGPT 和 DeepSeek 到底用哪个？** 他说网上有人说闭源的好，有人说开源的香，看了一圈反而更懵了。
 
@@ -109,7 +109,7 @@ AI 大模型的核心，是一个叫**「模型权重」**的东西。你可以�
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
 

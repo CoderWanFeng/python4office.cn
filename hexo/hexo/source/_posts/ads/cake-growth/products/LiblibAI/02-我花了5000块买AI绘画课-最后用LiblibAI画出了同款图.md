@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&
 
 ![](https://raw.atomgit.com/user-images/assets/5027920/a7224682-f48d-441a-bba0-db2d45afca09/image.png 'image.png')
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 我有个朋友，花了500块买了一个AI绘画课。
 
@@ -174,4 +174,4 @@ LiblibAI让我看到了一种可能性：**AI绘画不需要门槛、不需要�
 
 **科技不高冷，AI很好用。**
 
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

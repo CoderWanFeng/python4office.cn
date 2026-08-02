@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 > 💡 **3.9元/月体验讯飞星火** 👉 **[点击了解详情](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 今天来一个硬核对比：**讯飞星火 Coding Plan（3.9元/月）vs 火山方舟 Coding Plan（36元/月）**。
 

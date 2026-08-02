@@ -6,7 +6,7 @@ categories: ["公众号文章", "Python自动化办公社区"]
 cover: https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop
 ---
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 想转行，但简历不知道怎么写。
 
@@ -120,5 +120,5 @@ WonderCV让我发现：**转行不是从零，是技能迁移**。
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 </parameter>

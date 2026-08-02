@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 > 💡 **科技不高冷，AI很好用** 👉 **[点击接入通义千问](https://www.aliyun.com/minisite/goods?userCode=t6duaoe1)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 今天给大家带来**阿里云百炼 API 接入教程**，手把手教你把通义千问接入到自己的项目中。
 

@@ -43,7 +43,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 > 原文链接：https://mp.weixin.qq.com/s/r1TOcVuTU3uuOCFVO_d8jg
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 先说个事实：Claude Code 是开源的，它当然能用。
 

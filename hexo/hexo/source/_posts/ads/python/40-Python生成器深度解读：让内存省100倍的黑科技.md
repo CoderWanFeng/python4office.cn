@@ -7,7 +7,7 @@ description: "Python 生成器深度解读：yield、生成器表达式、async 
 cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **生成器是 Python 的"黑科技"。**
 
@@ -544,7 +544,7 @@ def pipeline():
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 
 ## 🎓 AI 编程实战课程

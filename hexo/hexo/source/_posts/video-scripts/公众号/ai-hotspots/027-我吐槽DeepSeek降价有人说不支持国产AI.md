@@ -41,7 +41,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c5?q=80&w=1200&
 
 
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 昨天我吐槽了 DeepSeek 降价的内卷套路，评论区直接炸了。
 

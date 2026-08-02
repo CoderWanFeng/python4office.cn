@@ -15,7 +15,7 @@ cover: https://picsum.photos/seed/aihot-20260621/1200/630
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今天把 AIHOT 全量数据拉了一遍，**共 50 条**，按时间顺序整理在这里。后面带 ★ 的是 AIHOT 官方精选条目。
 
@@ -556,7 +556,7 @@ AIHOT 永久页：https://aihot.virxact.com/items/cmqnfxilt004jsl7kgl2ipy4p
 
 **科技不高冷，AI 很好用。**
 
-我是晚枫，关注我，带你一起玩 AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩 AI！
 
 ---
 

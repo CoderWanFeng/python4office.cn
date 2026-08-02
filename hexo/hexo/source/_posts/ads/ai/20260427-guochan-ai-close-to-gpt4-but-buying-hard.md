@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 > 💡 **想一站式对比选购各厂商 Coding Plan？** 👉 **[点击这里，10多家厂商一目了然](https://www.python-office.com/token/)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 我最近做了一件事：**把国产AI和GPT-4的代码能力做了横向对比**。
 

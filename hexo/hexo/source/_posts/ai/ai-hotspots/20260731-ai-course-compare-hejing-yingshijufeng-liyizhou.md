@@ -6,7 +6,7 @@ categories: [公众号文章]
 cover: https://cdn.pixabay.com/photo/2024/02/16/20/10/ai-generated-8577445_1280.jpg
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近AI圈同时发生了两件很有意思的事，放在一起看特别讽刺。
 
@@ -187,7 +187,7 @@ AI是放大器，不是印钞机。你本身有能力，AI能让你的能力放�
 对了，李博杰这本书你打算先读哪一章？是先看Agent基础，还是直接跑94个实验中的某一个？评论区聊聊。
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
 

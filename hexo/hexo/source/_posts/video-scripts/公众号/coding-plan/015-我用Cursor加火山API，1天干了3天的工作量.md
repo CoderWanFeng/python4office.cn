@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 说实话，这个标题一点都不夸张。
 
@@ -170,4 +170,4 @@ Cursor默认用的是OpenAI的GPT-4，但有两个问题：
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

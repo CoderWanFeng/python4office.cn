@@ -6,7 +6,7 @@ categories: [AI Skills, 平台攻略]
 cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近Kimi K3实在是太火了，让我这种不关注大模型的榜单的人，都不得不注意到它。
 
@@ -214,6 +214,6 @@ hyperframes render .
 
 ---
 
-**我是晚枫。**
+**我是晚枫（Wayne Liu）。**
 **科技不高冷，AI很好用。**
 **关注我，带你一起玩AI！**

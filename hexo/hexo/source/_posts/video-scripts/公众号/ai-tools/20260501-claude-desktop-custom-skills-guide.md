@@ -17,7 +17,7 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 >
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 Claude Desktop 推出有一段时间了，很多朋友都在用，但我发现：**大部分人都只用它基础的对话功能，完全不知道还有自定义 Skills 这个利器！**
 

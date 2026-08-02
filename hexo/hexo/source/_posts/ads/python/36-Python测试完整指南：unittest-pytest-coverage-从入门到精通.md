@@ -7,7 +7,7 @@ description: "Python 测试完整指南：unittest vs pytest vs coverage 完整�
 cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **写代码不测试 = 给自己挖坑。**
 
@@ -560,7 +560,7 @@ script:
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 
 ## 🎓 AI 编程实战课程

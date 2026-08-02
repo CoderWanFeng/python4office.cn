@@ -6,7 +6,7 @@ categories: [公众号文章]
 cover: https://cdn.pixabay.com/photo/2018/09/27/09/22/artificial-intelligence-3706562_1280.jpg
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近一个月，阿里在 AI 这边的动作，快得有点不像话。
 
@@ -160,7 +160,7 @@ Qoder 是阿里 AI 编程产品的牌子，圈子相对小；千问是阿里 AI 
 你更希望 AI 先替你干哪件活？做表格、写周报，还是整理文件？评论区聊聊。
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
 

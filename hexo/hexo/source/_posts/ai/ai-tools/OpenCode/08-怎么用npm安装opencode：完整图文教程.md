@@ -7,7 +7,7 @@ description: "零基础教程：用 npm 安装 OpenCode（开源 AI 编程助手
 cover: https://images.unsplash.com/photo-1629654297299-c8506221a04b?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **今天这篇教程，专门写给完全没接触过 npm 的小白。**
 
@@ -555,4 +555,4 @@ OpenCode 官方提供了 4 种安装方式：
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

@@ -7,7 +7,7 @@ description: "Updream 灵感画布——说一句话就能生成完整作品，A
 cover: https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **想做 AI 短剧，但不知道提示词怎么写？**
 
@@ -415,7 +415,7 @@ Updream：角色 + 场景 + 道具 + 提示词 ✅
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ## 🎓 AI 编程实战课程
 

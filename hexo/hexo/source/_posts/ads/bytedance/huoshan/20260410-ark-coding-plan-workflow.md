@@ -22,7 +22,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 很多人问我：火山方舟Coding Plan到底怎么用？
 
@@ -215,7 +215,7 @@ AI生成的代码都要 review，确保：
 
 ---
 
-程序员晚枫，专注AI编程培训，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 ---
 

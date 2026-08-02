@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1655720828018-edd2daec9349?q=80&w=1200&
 
 > 💥 **🔥 coding plan + token plan + 国内外价格对比，9 大云厂商 1 张图曝光 DeepSeek 真实排名！** 👉 **[点我立即查看](https://www.python-office.com/token/)**
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近我把文心一言（ERNIE，跑在百度智能云千帆上）和 DeepSeek 都用了一周。
 

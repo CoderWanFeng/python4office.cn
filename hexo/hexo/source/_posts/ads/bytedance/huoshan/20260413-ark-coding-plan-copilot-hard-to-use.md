@@ -177,7 +177,7 @@ GitHub Copilot 涨价到 136元/月（个人版）后，很多用户的感受是
 
 ## 关于作者
 
-程序员晚枫，开源项目 [python-office](https://www.python-office.com/) 作者，专注AI编程工具测评。
+程序员晚枫（Wayne Liu），开源项目 [python-office](https://www.python-office.com/) 作者，专注AI编程工具测评。
 
 ---
 

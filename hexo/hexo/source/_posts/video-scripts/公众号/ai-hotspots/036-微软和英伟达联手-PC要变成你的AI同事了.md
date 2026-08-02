@@ -6,7 +6,7 @@ categories: [公众号文章, AI热点大白话]
 cover: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近微软和英伟达一起放了个大招：
 
@@ -221,7 +221,7 @@ cover: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400
 而是能让你每天少花时间、少重复劳动、少掉头发的电脑。
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 💬 **来评论区聊聊**
 

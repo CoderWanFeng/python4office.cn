@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 > 💡 **3.9元/月体验讯飞语音编程** 👉 **[点击立即开通](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 3.9 元能干什么？买一杯奶茶？吃一顿早餐？
 

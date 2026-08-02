@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1677442136019-4526a9c9373a?q=80&w=1200&
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今天有个大消息要跟你们分享——**MiniMax M3 正式发布了！**
 

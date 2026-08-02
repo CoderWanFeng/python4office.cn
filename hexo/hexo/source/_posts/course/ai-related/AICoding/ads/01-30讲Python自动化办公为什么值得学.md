@@ -15,7 +15,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 > 同样是每天处理Excel，别人花3小时，你用Python只需要5分钟。这就是差距。
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今天不聊技术，聊聊为什么你应该学Python自动化办公。
 

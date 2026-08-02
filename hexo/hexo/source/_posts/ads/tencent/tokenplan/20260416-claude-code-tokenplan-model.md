@@ -321,7 +321,7 @@ Claude Code 确实是个好工具，但因为网络限制，很多国内开发�
 
 ## 关于作者
 
-程序员晚枫，开源项目 [python-office](https://www.python-office.com/) 作者，专注 AI 编程工具测评与分享。
+程序员晚枫（Wayne Liu），开源项目 [python-office](https://www.python-office.com/) 作者，专注 AI 编程工具测评与分享。
 
 ---
 

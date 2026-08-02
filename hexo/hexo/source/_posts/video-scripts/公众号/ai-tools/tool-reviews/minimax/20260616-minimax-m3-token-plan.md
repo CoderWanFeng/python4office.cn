@@ -17,7 +17,7 @@ cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&
 ---
 
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今天必须聊一下 **MiniMax M3**——目前为止，我**唯一一个用起来不心疼**的大模型。
 
@@ -272,7 +272,7 @@ https://platform.minimaxi.com/subscribe/token-plan
 MiniMax 市值超百度不是偶然。**用脚投票的开发者越来越多**。
 
 **科技不高冷，AI 很好用。**
-我是晚枫，关注我，带你一起玩 AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩 AI！
 
 💬 **来评论区聊聊**
 

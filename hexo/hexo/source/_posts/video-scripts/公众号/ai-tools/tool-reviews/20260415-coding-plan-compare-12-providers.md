@@ -62,7 +62,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 # 2026年12家云厂商 Coding Plan 对比：开发者薅羊毛指南
 
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 最近在[AI编程交流群](https://mp.weixin.qq.com/s/Z3WhrmYeavrCw_FOXgiDPA)里，有个问题被反复问到：
 

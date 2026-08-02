@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 <!-- more -->
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 今天分享一个好消息：**Claude Code现在可以免费用！**
 

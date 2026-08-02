@@ -6,7 +6,7 @@ categories: [AI Skills, 平台攻略]
 cover: https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 用 Hyperframes 做视频，很多人第一步就走错了——
 

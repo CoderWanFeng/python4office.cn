@@ -13,7 +13,7 @@ description: "OpenAI Codex for Open Source 申请攻略：6个月ChatGPT Pro限�
 
 ![OpenAI Codex for OSS 申请攻略](https://raw.atomgit.com/user-images/assets/5027920/2f670846-4546-4451-bce1-e79769204b74/image.png 'image.png')
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 这两天 OpenAI 悄悄上了一个新页面，看完我直接坐直了：
 
@@ -296,4 +296,4 @@ description: "OpenAI Codex for Open Source 申请攻略：6个月ChatGPT Pro限�
 顺便说一句，我的AI编程实战课...
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

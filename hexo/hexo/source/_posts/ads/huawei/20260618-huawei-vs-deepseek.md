@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=for
 
 > 💥 **🔥 coding plan + token plan + 国内外价格对比，9 大云厂商 1 张图曝光 DeepSeek 真实排名！** 👉 **[点我立即查看](https://www.python-office.com/token/)**
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近我把华为盘古和 DeepSeek 都用了一周。
 

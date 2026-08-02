@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=1200&aut
 
 <!-- more -->
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 有人跟我说："有了AI，代码随时能重新生成，还要Git干嘛？"
 

@@ -7,7 +7,7 @@ description: "Qoder 个人专业版（Pro）每月仅 59 元，含 2,000 Credits
 cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop
 ---
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 **Cursor 一个月 100 块？**太贵了**。**
 
@@ -486,7 +486,7 @@ Qoder：跨文件修改 + 不破坏现有调用
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ## 🎓 AI 编程实战课程
 

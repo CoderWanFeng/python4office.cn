@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&
 
 > 👉 抓住流量风口：商汤Seko无限画布，[点这里立即体验：https://seko.cgref.cn/s/rpe3l6xe05](https://seko.cgref.cn/s/rpe3l6xe05)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 这周最大的热点是什么？
 
@@ -210,4 +210,4 @@ Seko存在的意义，就是**把你脑子里那1个能成的想法，帮你做�
 顺便说一句，我的AI编程实战课...
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

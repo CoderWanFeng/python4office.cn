@@ -177,7 +177,7 @@ DeepSeek 在代码场景的能力是有目共睹的：
 
 ## 关于作者
 
-程序员晚枫，开源项目 [python-office](https://www.python-office.com/) 作者，专注 AI 编程工具测评与分享。
+程序员晚枫（Wayne Liu），开源项目 [python-office](https://www.python-office.com/) 作者，专注 AI 编程工具测评与分享。
 
 ---
 

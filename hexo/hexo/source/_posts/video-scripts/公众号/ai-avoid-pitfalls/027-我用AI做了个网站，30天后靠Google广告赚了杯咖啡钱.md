@@ -8,7 +8,7 @@ cover: https://picsum.photos/seed/google-adsense-tutorial/1200/630
 
 ![我的网站收入](https://raw.atomgit.com/user-images/assets/5027920/b475d173-8570-46cf-aab5-ca71f8ffd9fc/image.png 'image.png')
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 全网搜：**程序员晚枫**，都能找到我。
 
@@ -371,4 +371,4 @@ Google广告审核的不是你的Google账号，是**你的网站**。
 ---
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！

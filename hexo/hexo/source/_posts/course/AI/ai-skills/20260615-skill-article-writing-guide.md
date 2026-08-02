@@ -51,7 +51,7 @@ cover: https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&
 
 **标准开头**：
 ```
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 今天给大家介绍一个 [让我眼前一亮 / 让我兴奋] 的工具——**XXX**。
 
@@ -247,7 +247,7 @@ XXX = **[一句话定位]**。
 不是"剪映替代品"，是"**视频创作的新姿势**"。
 
 **科技不高冷，AI 很好用。**
-我是晚枫，关注我，带你一起玩 AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩 AI！
 
 💬 **来评论区聊聊**
 
@@ -532,7 +532,7 @@ cover: https://images.unsplash.com/photo-XXX?q=80&w=1200&auto=format&fit=crop
 ---
 
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 [钩子 + 一句话定位]
 
@@ -607,7 +607,7 @@ cover: https://images.unsplash.com/photo-XXX?q=80&w=1200&auto=format&fit=crop
 [3-5 个 bullet 点重申价值]
 
 **科技不高冷，AI 很好用。**
-我是晚枫，关注我，带你一起玩 AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩 AI！
 
 💬 **来评论区聊聊**
 

@@ -21,7 +21,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1200&
 
 > 💡 **3.9元/月体验讯飞星火 Coding Plan** 👉 **[点击开通，语音编程带回家](https://maas.xfyun.cn/modelSquare?ch=MaaS-CG-zs01)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 没想到讯飞星火 Coding Plan 的价格这么便宜！今天来给大家详细拆解一下讯飞星火的定价。
 

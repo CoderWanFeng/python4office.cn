@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&
 ---
 
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 上次我们讲了 [Hyperframes 入门](https://www.python4office.cn/course/AI/ai-skills/video-editing-skills/20260615-hyperframes-quickstart/)——2 分钟出第一个 MP4。
 
@@ -529,7 +529,7 @@ npx hyperframes init my-video --example <name>
 不是"剪映替代品"，是"**结构化的视频创作框架**"。
 
 **科技不高冷，AI 很好用。**
-我是晚枫，关注我，带你一起玩 AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩 AI！
 
 💬 **来评论区聊聊**
 

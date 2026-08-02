@@ -11,7 +11,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ![Python进阶首选：为什么每个程序员都应该精通Fluent Python](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 
-> 大家好，我是程序员晚枫。
+> 大家好，我是程序员晚枫（Wayne Liu）。
 
 经常有粉丝问我：「晚枫哥，我学Python已经一年了，感觉语法都会了，但写代码时总是磕磕绊绊的别人的代码能看懂，但自己写的时候总是想不到好方法，怎么办？」
 

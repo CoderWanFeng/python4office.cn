@@ -109,7 +109,7 @@ cover: https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_1280.jpg
 这本书你会先读哪一章？是先看基础，还是直接跑实验？评论区聊聊。
 
 **科技不高冷，AI很好用。**
-我是晚枫，关注我，带你一起玩AI！
+我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 ![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
 

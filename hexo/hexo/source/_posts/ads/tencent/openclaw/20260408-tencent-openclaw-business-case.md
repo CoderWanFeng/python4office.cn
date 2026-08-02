@@ -15,7 +15,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 全网40万+粉丝，6年Python开发经验，开源项目python-office作者
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 过去一个月，我用腾讯云OpenClaw搭建了3个业务助手，今天分享真实的落地案例。
 
@@ -199,7 +199,7 @@ AI不是万能的，但在特定场景下，它能极大提升效率。关键是
 
 ## 作者简介
 
-程序员晚枫，GitHub开源项目python-office作者，AI编程布道者。专注于AI工具落地实践，帮助开发者提升效率。
+程序员晚枫（Wayne Liu），GitHub开源项目python-office作者，AI编程布道者。专注于AI工具落地实践，帮助开发者提升效率。
 
 - 公众号：程序员晚枫
 - B站：程序员晚枫

@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&aut
 
 > 💡 **想系统了解各大厂商 Coding Plan？** 👉 **[点击查看 Coding Plan 对比汇总](https://www.python-office.com/token)**
 
-大家好，这里是程序员晚枫。
+大家好，这里是程序员晚枫（Wayne Liu）。
 
 小米的 MiMo Token Plan 发布也有几天了，很多朋友问我：**四个套餐怎么选最划算？**
 

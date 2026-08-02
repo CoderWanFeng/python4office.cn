@@ -274,7 +274,7 @@ DeepSeek的MoE架构，让我看到了国产AI的希望。
 
 ---
 
-程序员晚枫，专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
+程序员晚枫（Wayne Liu），专注AI编程培训，法律硕士转行的Python程序员，开源项目 [python-office](https://www.python-office.com/) 作者。
 
 
 ## 🎓 AI 编程实战课程

@@ -14,7 +14,7 @@ cover: https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200
 
 ![](https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800)
 
-大家好，我是程序员晚枫。
+大家好，我是程序员晚枫（Wayne Liu）。
 
 最近折腾博客，突然发现——我那个Hexo主题用了好几年了，越看越像穿了3年的格子衫，虽然还能穿，但总觉得差点意思。
 
