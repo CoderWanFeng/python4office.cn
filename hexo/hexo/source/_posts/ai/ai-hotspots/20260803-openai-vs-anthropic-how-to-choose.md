@@ -1,10 +1,12 @@
 ---
-title: OpenAI和Anthropic打了5年-普通人到底该选谁
+title: 9650亿美元，Anthropic反超OpenAI
 date: 2026-08-03 22:22:00
 tags: [公众号文章, OpenAI, Anthropic, ChatGPT, Claude]
 categories: [公众号文章]
-cover: https://cdn.pixabay.com/photo/2017/05/10/19/29/robot-2301646_1280.jpg
+cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260803-openai-anthropic-generated-cover.png
 ---
+
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260803-openai-anthropic-generated-cover.png)
 
 大家好，我是程序员晚枫。
 
@@ -12,11 +14,24 @@ cover: https://cdn.pixabay.com/photo/2017/05/10/19/29/robot-2301646_1280.jpg
 
 越看越觉得，网上天天争“ChatGPT 和 Claude 谁更强”，其实问错了问题。
 
-**这两家公司真正的区别，不是考试谁多得两分，而是它们从一开始，就想把 AI 做成两种不同的东西。**
+> **这两家公司真正的区别，不是考试谁多得两分，而是它们从一开始，就想把 AI 做成两种不同的东西。**
 
 一个想让 AI 尽快走进每个人的生活；另一个更在意 AI 进入公司以后，能不能稳稳当当地干活。
 
 这才是普通人选择时最该看懂的地方。
+
+---
+
+**两个月，AI 老大换人了。**
+
+就在我整理资料的时候，估值这件事刚好把两家公司的不同摆到了台面上。
+
+- **2026 年 3 月底**：OpenAI 完成 1220 亿美元融资，官方估值达到 **8520 亿美元**；
+- **2026 年 5 月底**：Anthropic 完成 650 亿美元 H 轮融资，估值冲到 **9650 亿美元**。
+
+短短两个月，Anthropic 正式反超 OpenAI，成为全球估值最高的私营 AI 公司。
+
+老大换了，但两家公司在 AI 上想做的，仍然不是同一件事。
 
 ---
 
@@ -28,6 +43,15 @@ OpenAI 大家都熟：ChatGPT、图片生成、语音对话、视频生成，还
 
 Anthropic 的 Claude 则更像一家“精品工作室”。它没有急着把所有功能都摆上货架，而是把长文阅读、写作、复杂任务和企业使用做得更深。
 
+| 你关心的事 | OpenAI | Anthropic |
+|-----------|--------|-----------|
+| 产品感觉 | AI 大商场 | 精品工作室 |
+| 主要优势 | 功能多、入口广 | 长文、复杂工作 |
+| 核心用户 | 普通用户为主 | 企业客户为主 |
+| 安全思路 | 先加速再升级刹车 | 先定规则再加速 |
+
+### 一个踩油门，一个先看刹车
+
 这不是谁先进、谁落后的问题，而是两家公司出生时就带着不同的性格。
 
 Anthropic 的创始团队里，有多位 OpenAI 前员工。他们离开的一个重要原因，就是认为 AI 跑得越来越快时，安全不能只在后面追。
@@ -38,7 +62,7 @@ Anthropic 的创始团队里，有多位 OpenAI 前员工。他们离开的一�
 
 跑得太快，容易让人担心失控；管得太严，又可能出现另一种尴尬：你只是想让 AI 帮忙切个菜，它先给你写了一份厨房风险告知书。
 
-但从结果看，两家的优势也越来越清楚：**OpenAI 赢在功能广、用户多、产品入口丰富；Anthropic 赢在复杂工作、企业可靠性和安全透明度。**
+> **OpenAI 赢在功能广、用户多、产品入口丰富；Anthropic 赢在复杂工作、企业可靠性和安全透明度。**
 
 ---
 
@@ -50,17 +74,29 @@ Anthropic 的创始团队里，有多位 OpenAI 前员工。他们离开的一�
 
 打个比方，一个孩子读完了整座图书馆，只能说明他知道得多。但遇到有人问危险问题时该不该回答，拿不准时要不要承认，面对不同意见能不能保持分寸，这些都要靠后面的教育。
 
+### OpenAI：请很多老师一起打分
+
 OpenAI 常用的方法，可以理解成“请很多老师给答案打分”。哪个回答更有帮助、更安全，老师就选哪个，AI 再从大量选择中慢慢摸出规矩。
 
 好处是灵活。现实里的问题很少非黑即白，AI 能根据上下文做判断。
 
 难点也很明显：这些规矩散在海量评分里，外人很难一眼看清它到底学到了什么。
 
+![OpenAI Preparedness Framework 官方文件](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260803-openai-preparedness-framework.png)
+
+*图片来源：[OpenAI Preparedness Framework](https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf)*
+
+### Anthropic：先给AI一部公开校规
+
 Anthropic 的方法更像“先给一部公开的校规”。AI 回答后，先对照规则自我检查，再修改不合适的部分，最后从这些修改里学习。
 
 好处是规则更容易看见、检查和调整；代价是模型有时会过分谨慎，把正常请求也挡在门外。
 
-**所以你感受到的“AI 性格”，不是玄学，而是不同教育方法留下的痕迹。**
+![Anthropic Constitutional AI 官方研究文件](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260803-anthropic-constitutional-ai.png)
+
+*图片来源：[Anthropic Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)*
+
+> **所以你感受到的“AI 性格”，不是玄学，而是不同教育方法留下的痕迹。**
 
 这也解释了为什么企业尤其在意这件事。
 
@@ -76,9 +112,17 @@ Anthropic 的方法更像“先给一部公开的校规”。AI 回答后，先�
 
 榜单像学生月考，今天你第一，明天我第一。普通人要解决的却是每天真实的问题，不是替两家公司的粉丝团争冠军。
 
-如果你希望一个 AI 什么都能搭把手，既能聊天、找资料，又想体验图片、语音等功能，**优先看 ChatGPT**。它更像综合型选手，入口多，学习成本也相对低。
+### 想要一个全能入口：选ChatGPT
 
-如果你经常处理长资料、反复修改文字，或者希望 AI 在复杂任务里更克制、更愿意说明不确定性，**可以重点试试 Claude**。它的长处不是热闹，而是坐下来把一件事做深。
+ChatGPT 更像综合型选手。聊天、找资料、图片、语音等功能都在一个入口里，学习成本也相对低。
+
+### 经常处理长资料：试试Claude
+
+如果你经常处理长资料、反复修改文字，或者希望 AI 在复杂任务里更克制、更愿意说明不确定性，**可以重点试试 Claude**。
+
+它的长处不是热闹，而是坐下来把一件事做深。
+
+### 代表公司采购：先问4个问题
 
 如果你代表公司做选择，那就不要只看一次演示有多惊艳，而要连续问四件事：
 
@@ -89,9 +133,15 @@ Anthropic 的方法更像“先给一部公开的校规”。AI 回答后，先�
 
 这四个问题，比“哪个模型领先 3 个百分点”实用得多。
 
+| 你的主要需求 | 更值得先试 |
+|-------------|-----------|
+| 日常综合使用 | ChatGPT |
+| 长文与复杂工作 | Claude |
+| 企业正式采购 | 两家都实测 |
+
 而且别急着站队。今天适合 ChatGPT 的任务，明天可能 Claude 做得更顺；严肃工作用一个，日常创意用另一个，也完全正常。
 
-**AI 工具不是婚姻登记，不需要选了一个就对另一个忠贞不渝。**
+> **AI 工具不是婚姻登记，不需要选了一个就对另一个忠贞不渝。**
 
 真正聪明的用法，是先拿同一件真实任务分别试一遍，再看谁让你少返工、少操心，而不是谁在发布会上掌声更响。
 
@@ -101,7 +151,9 @@ OpenAI 和 Anthropic 的竞争，表面上是在比模型，背后其实是在�
 
 一个把“能力”推到更广的地方，一个把“可靠”挖到更深的地方。
 
-我不觉得这两条路线最后只能活一条。恰恰相反，**我们既需要有人大胆往前跑，也需要有人不断提醒：方向盘还在人手里吗？**
+我不觉得这两条路线最后只能活一条。
+
+> **我们既需要有人大胆往前跑，也需要有人不断提醒：方向盘还在人手里吗？**
 
 对普通人来说，最好的工具从来不是新闻里赢的那一个，而是那个能稳定帮你把事情做完、又不让你提心吊胆的工具。
 
@@ -120,7 +172,10 @@ ChatGPT 和 Claude，你现在更常用哪一个？如果只能留一个，你�
 
 ## 参考链接
 
-- [OpenAI：About](https://openai.com/about/)
-- [Anthropic：Company](https://www.anthropic.com/company)
-- [Anthropic：Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)
-- [OpenAI：Preparedness Framework](https://openai.com/index/updating-our-preparedness-framework/)
+- [Anthropic：官方媒体素材包：https://www.anthropic.com/press-kit](https://www.anthropic.com/press-kit)
+- [Anthropic：650 亿美元 H 轮融资，估值 9650 亿美元：https://www.anthropic.com/news/series-h](https://www.anthropic.com/news/series-h)
+- [OpenAI：1220 亿美元融资，估值 8520 亿美元：https://openai.com/index/accelerating-the-next-phase-ai/](https://openai.com/index/accelerating-the-next-phase-ai/)
+- [OpenAI：About：https://openai.com/about/](https://openai.com/about/)
+- [Anthropic：Company：https://www.anthropic.com/company](https://www.anthropic.com/company)
+- [Anthropic：Constitutional AI：https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)
+- [OpenAI：Preparedness Framework：https://openai.com/index/updating-our-preparedness-framework/](https://openai.com/index/updating-our-preparedness-framework/)
