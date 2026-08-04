@@ -1,5 +1,5 @@
 ---
-title: OpenAI 官方：Codex 9 个高效习惯，用对才不焦虑
+title: "别再把Codex当聊天机器人了：OpenAI官方9条最佳实践"
 date: 2026-08-04 15:00:00
 tags: [公众号文章, Codex, 最佳实践, OpenAI, 官方文档翻译, AI编程, Agent]
 categories: [公众号文章, AI工具实战]
@@ -18,7 +18,9 @@ description: "OpenAI 官方《Codex 最佳实践》中文翻译：把 Codex 当�
 
 一个有用的心智模型：先为任务准备好正确的上下文，用 `AGENTS.md` 沉淀长期有效的指引，把 Codex 配置成贴合你工作流的样子，通过 MCP 接入外部系统，把重复性的工作固化成技能，再把稳定的工作流自动化。
 
-## 第一步：上下文与提示词
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260804225310901.png)
+
+## 强烈建议：上下文与提示词
 
 即便你的提示词不够完美，Codex 本身已经强到能直接派上用场。你常常只需把难题丢给它、几乎不做额外配置，就能拿到不错的结果。清晰的 [提示词（prompting）](https://learn.chatgpt.com/docs/prompting) 不是拿到价值的必要条件，但它确实能让结果更可靠——尤其是在大型代码库或高风险任务里。
 
@@ -40,7 +42,7 @@ description: "OpenAI 官方《Codex 最佳实践》中文翻译：把 Codex 当�
 - **Extra High（超高）：** 用于漫长、自主性强、重度推理的任务
 
 想要更快地提供上下文，可以在 ChatGPT 桌面端里用语音听写功能，直接说出你希望 Codex 做什么，而不是打字。
-
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260804225515199.png)
 ## 复杂任务先规划
 
 如果任务很复杂、含糊不清，或者很难描述清楚，就让 Codex 在动手写代码之前先规划。
@@ -70,6 +72,8 @@ description: "OpenAI 官方《Codex 最佳实践》中文翻译：把 Codex 当�
 
 CLI 里的 `/init` 斜杠命令，是在当前目录快速生成一份 `AGENTS.md` 起手的命令。它是很好的起点，但你应当编辑生成的结果，使其贴合你团队真实的构建、测试、审查和发布代码的流程。
 
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260804225636467.png)
+
 你可以在不同层级创建 `AGENTS.md`：放在 `~/.codex` 的全局 `AGENTS.md` 用于个人默认配置，仓库级文件用于共享标准，子目录里更具体的文件用于局部规则。如果存在离当前目录更近的更具体文件，则以该文件的指引为准。
 
 保持实用。一份简短而准确的 `AGENTS.md`，胜过塞满模糊规则的长文件。先从基础开始，只有在发现重复的失误后，才追加新规则。
@@ -81,6 +85,10 @@ CLI 里的 `/init` 斜杠命令，是在当前目录快速生成一份 `AGENTS.m
 ## 配置 Codex 以保持一致性
 
 配置是让 Codex 在不同会话和不同界面上行为更一致的主要手段之一。例如，你可以为模型选择、推理强度、沙箱模式、审批策略、配置文件和 MCP 设置定义默认值。
+
+![开发者通过 Codex 配置和管理开发工具](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/codex_devtools.jpeg)
+
+*图片来源：[Pexels](https://www.pexels.com/photo/developer-reviewing-code-on-tablet-in-office-36598855/)*
 
 一个不错的起始模式是：
 
@@ -103,6 +111,10 @@ Codex 自带运行级沙箱（operating level sandboxing），有两个关键开
 不要止步于「让 Codex 改个东西」。该让它建测试时就建测试、跑相关的检查、确认结果，并在你接受之前审查工作成果。
 
 Codex 可以帮你跑完这一整套循环——但前提是它知道「好」长什么样。这个指引可以来自提示词，也可以来自 `AGENTS.md`。
+
+![AI 辅助代码调试与审查](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/codex_debug.jpeg)
+
+*图片来源：[Pexels](https://www.pexels.com/photo/ai-assisted-code-debugging-on-screen-display-34804018/)*
 
 它可以包括：
 
@@ -146,7 +158,10 @@ Codex 同时支持 STDIO 和 Streamable HTTP 服务器，并支持 OAuth。
 
 只在工具能打通真实工作流时才添加。不要一开始就接入你使用的每一个工具。先从一两个能明显消除你经常做的人工循环的工具开始，再逐步扩展。
 
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260804225554443.png)
+
 ## 把可重复的工作固化成技能
+
 
 一旦某个工作流变得可重复，就别再依赖长提示词或反复的来回拉扯。用一个 [技能（skill）](https://learn.chatgpt.com/docs/build-skills) 把指令、上下文和支持逻辑打包进一份 `SKILL.md` 文件，让 Codex 始终如一地应用。技能在 CLI、IDE 扩展和 ChatGPT 桌面端都通用。
 
@@ -169,6 +184,7 @@ Codex 同时支持 STDIO 和 Streamable HTTP 服务器，并支持 OAuth。
 
 个人技能存放在 `$HOME/.agents/skills`，团队共享技能可以签入仓库内的 `.agents/skills`。这对新成员 onboarding 尤其有帮助。
 
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260804225712534.png)
 ## 用定时任务处理重复工作
 
 一旦某个工作流稳定了，你就可以让 Codex 在后台替你定时运行它。在 ChatGPT 桌面端，[定时任务（scheduled tasks）](https://learn.chatgpt.com/docs/automations) 让你为周期性工作选择项目、提示词、节奏和执行环境。
@@ -219,3 +235,9 @@ ChatGPT 桌面端允许你置顶（pin）对话并创建 worktree。如果你用
 - 在任务手动执行还不稳时，就把它排期成定时任务
 - 把 Codex 当成需要一步步盯着的东西，而不是让它和你的工作并行
 - 整个项目只用一条对话，而不是「一个连贯结果对应一条对话」。这会让上下文臃肿，长期结果变差
+
+## 相关阅读
+
+- [OpenAI 内部分享：不懂技术怎么用好 AI？附 CodeX 官方教程](https://mp.weixin.qq.com/s/x8dvcdf1aUIGhuI_YvzlpA)
+- [Codex 换皮肤攻略，0 基础 3 分钟搞定](https://mp.weixin.qq.com/s/G598Htnb4k2cVyLnWGQPSw)
+- [一共 600 美元！免费使用 6 个月 CodeX Pro](https://mp.weixin.qq.com/s/TVNl4jjJvO-kfOw1sk2Qsg)
