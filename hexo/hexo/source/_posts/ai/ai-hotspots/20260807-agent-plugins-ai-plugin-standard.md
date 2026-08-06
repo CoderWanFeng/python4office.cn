@@ -14,9 +14,9 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/agent-plugi
 
 大家好，我是程序员晚枫。
 
-昨晚睡前，我顺手打开一个OpenAI的Y2B主页看看有没有更新。
+睡前我顺手打开OpenAI的主页看看有没有更新，结果还真有重磅消息。
 
-没有新模型，没有跑分，没有“再见了某某行业”。页面只说了一件事：给 AI 智能体的插件，规定一种大家都能看懂的包装方式。
+没有新模型，没有跑分，没有“再见了某某行业”。页面只说了一件事：给 AI 智能体的插件（**Agent Plugins**），规定一种大家都能看懂的包装方式。
 
 ![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/e6b968502347b01b8164c6253c0c388d.png)
 
@@ -32,9 +32,9 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/agent-plugi
 
 ---
 
-## 这不是插件商店，而是一张通用说明书
+## 一个插件就可以在所有 AI 智能体上用
 
-事情是这样的。
+你是不是也有这种烦恼？
 
 现在每家 AI 智能体都有自己的插件体系。Codex、Cursor、GitHub Copilot、Kiro，看起来都能安装技能、连接外部服务，但目录放哪里、配置怎么写、哪些部分能被识别，并不完全相同。
 
@@ -47,6 +47,8 @@ Agent Plugins 想做的事情很克制：**先规定一个插件最小应该长�
 每个插件都要有一张“身份证”，告诉客户端它叫什么、采用哪个版本；里面可以放教 AI 怎么做事的技能，也可以放连接外部工具和数据的 MCP 服务。某一家产品想增加自己的独有能力，也可以放进单独的扩展区，其他产品看不懂就忽略，不影响公共部分。
 
 官网把这叫作“可移植的最低标准”。我觉得这个词特别准确。
+
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260807010347720.png)
 
 它没有要求所有产品长得一样，也不管每家商店怎么安装、怎么收费、怎么弹权限提醒。它只负责让大家收到同一个包裹时，至少知道标签在哪、说明书在哪、工具放在哪。
 
@@ -85,6 +87,8 @@ Agent Plugins 想做的事情很克制：**先规定一个插件最小应该长�
 
 这个设计的“啊哈时刻”就在这里：**标准没有试图统一所有 AI 的大脑，它先统一大脑随身携带的经验和工具。**
 
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260807010433787.png)
+
 模型今天用 Codex，明天换 Cursor，后天团队决定使用 GitHub Copilot。如果技能和工具可以跟着走，用户积累下来的就不再只是某个平台里的几段聊天记录，而是一套能搬家的工作能力。
 
 说真的，这比“某个榜单又高了两分”更值得关注。
@@ -111,6 +115,8 @@ Agent Plugins 想做的事情很克制：**先规定一个插件最小应该长�
 
 你喜欢哪个 AI，可以继续用哪个。你的能力包，不必被一起扣在里面。
 
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260807010554039.png)
+
 ---
 
 ## 先别急着喊大一统，它还缺最难的一半
@@ -130,6 +136,8 @@ Agent Plugins 1.0.0 目前只统一两类公共组件：Skills 和 MCP 服务。
 - 企业如何统一审核、放行、禁用和审计插件。
 
 这几件事可不是边角料。
+
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260807010809012.png)
 
 插件既能教 AI 做事，又可能让它连接文件、账号和外部服务。一个来路不明的插件，危险的地方不在于“回答错一道题”，而在于它可能拿着你给的钥匙，认真执行了一份有问题的说明书。
 
@@ -160,17 +168,19 @@ Agent Plugins 1.0.0 目前只统一两类公共组件：Skills 和 MCP 服务。
 
 ![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
 
+
+### 参考链接
+
+- [Agent Plugins 官方网站：https://agent-plugins.org/](https://agent-plugins.org/)
+- [Agent Plugins 1.0.0 完整规范：https://agent-plugins.org/specification](https://agent-plugins.org/specification)
+- [Agent Plugins 兼容客户端名单：https://agent-plugins.org/compatible-clients](https://agent-plugins.org/compatible-clients)
+- [Agent Plugins 项目治理章程：https://github.com/agentplugins/agent-plugins-spec/blob/main/GOVERNANCE.md](https://github.com/agentplugins/agent-plugins-spec/blob/main/GOVERNANCE.md)
+- [Agent Plugins 未来考虑事项：https://github.com/agentplugins/agent-plugins-spec/blob/main/FUTURE_CONSIDERATIONS.md](https://github.com/agentplugins/agent-plugins-spec/blob/main/FUTURE_CONSIDERATIONS.md)
+- [Agent Plugins 规范源码仓库：https://github.com/agentplugins/agent-plugins-spec](https://github.com/agentplugins/agent-plugins-spec)
+
+
 ## 相关阅读
 
 - [Codex入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [OpenAI内部分享：不懂技术怎么用好AI？附Codex官方教程](https://mp.weixin.qq.com/s/x8dvcdf1aUIGhuI_YvzlpA)
-- [别再把Codex当聊天机器人了：OpenAI官方9条最佳实践](/ai/ai-tools/codex/01-best-practices-zh-中文翻译/)
-
-## 参考链接
-
-- [Agent Plugins官方网站](https://agent-plugins.org/)
-- [Agent Plugins 1.0.0完整规范](https://agent-plugins.org/specification)
-- [Agent Plugins兼容客户端名单](https://agent-plugins.org/compatible-clients)
-- [Agent Plugins项目治理章程](https://github.com/agentplugins/agent-plugins-spec/blob/main/GOVERNANCE.md)
-- [Agent Plugins未来考虑事项](https://github.com/agentplugins/agent-plugins-spec/blob/main/FUTURE_CONSIDERATIONS.md)
-- [Agent Plugins规范源码仓库](https://github.com/agentplugins/agent-plugins-spec)
+- [OpenCode入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/RoqlepeGRzDNOiDJkg7jKw)
