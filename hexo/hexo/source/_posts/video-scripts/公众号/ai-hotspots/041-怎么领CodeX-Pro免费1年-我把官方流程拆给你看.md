@@ -29,6 +29,16 @@ cover: https://cdn.pixabay.com/photo/2018/05/04/04/55/technology-3375035_1280.jp
 
 ## 二、怎么领？
 
+如果想看更直观的申请演示，我专门录了一期 5 分钟视频，把整个流程录屏给你看：
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV19PG36pEpN&page=1&autoplay=0" 
+        scrolling="no" 
+        frameborder="no" 
+        allowfullscreen="true" 
+        width="100%" 
+        height="500">
+</iframe>
+
 官方的入口其实藏得不深，但很多人一上来就找错了地方。
 
 下面就按顺序，照着做就行。

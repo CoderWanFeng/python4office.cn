@@ -44,6 +44,15 @@ cover: https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1200&
 ## 3 步用 OpenCode 免费跑 DeepSeek-V4-Flash
 
 
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1skuA6CEDL&page=1&autoplay=0" 
+        scrolling="no" 
+        frameborder="no" 
+        allowfullscreen="true" 
+        width="100%" 
+        height="500">
+</iframe>
+
 下面是 3 步上手流程：
 
 ### 第 1 步：安装 OpenCode
