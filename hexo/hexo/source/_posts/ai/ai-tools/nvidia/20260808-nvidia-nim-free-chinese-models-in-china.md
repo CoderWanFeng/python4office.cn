@@ -12,6 +12,14 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/nvidia-nim-
 
 周六又发了一个“英伟达开放 60 多个免费大模型”的视频被转发了几千次。⬇️
 
+<iframe src="//player.bilibili.com/player.html?bvid=BV17tuu6EEec&page=1&autoplay=0" 
+        scrolling="no" 
+        frameborder="no" 
+        allowfullscreen="true" 
+        width="100%" 
+        height="500">
+</iframe>
+
 听起来像是黄仁勋突然改行做慈善：GLM、MiniMax、Qwen，以及一堆国外模型，统统不要钱。
 
 但我重新打开 NVIDIA Build 模型目录核对后，发现这件事真正值得关注的地方，并不是“60 多个模型全部免费”。
