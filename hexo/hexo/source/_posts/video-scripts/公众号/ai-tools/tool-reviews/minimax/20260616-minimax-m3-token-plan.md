@@ -287,7 +287,7 @@ MiniMax 市值超百度不是偶然。**用脚投票的开发者越来越多**�
 - �🌐 MiniMax Token Plan 官方原始链接：https://platform.minimaxi.com/subscribe/token-plan
 - 🌐 MiniMax 官网：https://www.minimaxi.com
 - 📖 MiniMax 开发者文档：https://platform.minimaxi.com/document
-- 🎓 [程序员晚枫 · AI 编程实战课（B 站）：https://pan.quark.cn/s/8f7886f79569](https://pan.quark.cn/s/8f7886f79569)
+- 🎓 [程序员晚枫 · AI 编程实战课（B 站）：https://pan.quark.cn/s/3252b0c315f7](https://pan.quark.cn/s/3252b0c315f7)
 
 ---
 

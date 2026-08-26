@@ -20,7 +20,7 @@
     topCloseDays: 1,
 
     // ⑥ 文中段落广告 → B 站课程
-    inlineUrl: 'https://pan.quark.cn/s/8f7886f79569',
+    inlineUrl: 'https://pan.quark.cn/s/3252b0c315f7',
     inlineEvery: 5,
     inlineMax: 1,
     inlineMinParas: 5,

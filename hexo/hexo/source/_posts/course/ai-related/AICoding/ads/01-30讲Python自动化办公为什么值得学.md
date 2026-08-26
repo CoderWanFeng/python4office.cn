@@ -70,7 +70,7 @@ office.file.replace4filename(r'./文件夹', '旧名字', '新名字')
 
 ## 30讲课程讲什么
 
-前3讲可以试听，试听链接：https://pan.quark.cn/s/8f7886f79569
+前3讲可以试听，试听链接：https://pan.quark.cn/s/3252b0c315f7
 
 
 ### 第1部分：基础入门（5讲）

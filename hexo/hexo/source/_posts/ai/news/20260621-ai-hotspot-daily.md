@@ -552,7 +552,7 @@ AIHOT 永久页：https://aihot.virxact.com/items/cmqnfxilt004jsl7kgl2ipy4p
 
 顺便说一句，我的 AI 编程实战课……
 
-**前3讲可以试听，试听链接：https://pan.quark.cn/s/8f7886f79569**
+**前3讲可以试听，试听链接：https://pan.quark.cn/s/3252b0c315f7**
 
 **科技不高冷，AI 很好用。**
 
@@ -564,5 +564,5 @@ AIHOT 永久页：https://aihot.virxact.com/items/cmqnfxilt004jsl7kgl2ipy4p
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/8f7886f79569)
+- 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)

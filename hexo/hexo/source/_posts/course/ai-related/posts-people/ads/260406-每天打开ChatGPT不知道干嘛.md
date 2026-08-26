@@ -93,7 +93,7 @@ AI工具装了十几个，ChatGPT、Claude、Midjourney、文心一言，全注�
 
 ## 怎么学？
 
-前3讲可以试听，试听链接：https://pan.quark.cn/s/8f7886f79569
+前3讲可以试听，试听链接：https://pan.quark.cn/s/3252b0c315f7
 
 
 如果你想系统学，我推荐这个课：

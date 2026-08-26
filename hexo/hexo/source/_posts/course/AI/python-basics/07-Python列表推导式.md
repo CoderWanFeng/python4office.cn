@@ -596,7 +596,7 @@ large_files = [c for c in contents if c["lines"] > 100]
 | 💬 专属答疑群 | 遇到问题有人带 |
 | 🎁 实体书赠送 | 优秀学员送《Python编程从入门到实践》 |
 
-👉 **[点击免费试学 AI 零基础实战营](https://pan.quark.cn/s/8f7886f79569)**
+👉 **[点击免费试学 AI 零基础实战营](https://pan.quark.cn/s/3252b0c315f7)**
 
 ---
 
@@ -618,7 +618,7 @@ large_files = [c for c in contents if c["lines"] > 100]
 
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
-- 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/8f7886f79569)
+- 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)
 
 

@@ -179,4 +179,4 @@ A：加入答疑群，有任何问题都可以在群里提问。另外支持30�
 程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw)**，让小白也能用AI做出实际项目。
 
 - 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
-- 👉 **免费试看**：[B站免费试看前3讲](https://pan.quark.cn/s/8f7886f79569)
+- 👉 **免费试看**：[B站免费试看前3讲](https://pan.quark.cn/s/3252b0c315f7)

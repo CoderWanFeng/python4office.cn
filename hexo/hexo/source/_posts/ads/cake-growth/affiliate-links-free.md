@@ -61,7 +61,7 @@ AI token：https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&so
 
 AI编程课：https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA
 
-AI办公课：https://pan.quark.cn/s/8f7886f79569
+AI办公课：https://pan.quark.cn/s/3252b0c315f7
 
 AI Claude：https://curl.qcloud.com/I4IFQqEG
 
