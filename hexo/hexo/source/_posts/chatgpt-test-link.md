@@ -17,7 +17,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1000&
 
 <p align="center" id='25个学习资源-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/-mlsV7PFc27JElOTCskMsg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fpy-25-source.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/py-25-source.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -125,7 +125,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1000&
 
 ![](https://cos.python-office.com/ads/fuli/all-1.jpg)
 
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg)
 
 ## 相关阅读
 

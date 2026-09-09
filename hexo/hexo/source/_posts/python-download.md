@@ -20,13 +20,13 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&
 
 <p align="center" id='100本电子书-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/ebook.jpg" width="100%"/>
     </a>   
 </p>
 
 <p align="center" id='30讲自动化办公-banner'>
     <a target="_blank" href='https://www.python-office.com/video/video.html'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -84,7 +84,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&
     - [官网发布：python-office库 | 专为Python自动化办公而生，一行代码提高办公效率](https://www.bilibili.com/video/BV1pT4y1k7FH/)
 
 
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg)
 
 <p align="center" id='进群-banner-AI'>
     <a target="_blank" href='https://www.python4office.cn/wechat-group/'>

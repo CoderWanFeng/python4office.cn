@@ -90,7 +90,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <p align="center" id='1w副业-banner'>
     <a target="_blank" href='http://t.cn/A6KiaiqK'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F1w-pro.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/1w-pro.jpg" width="100%"/>
     </a>   
 </p>
 

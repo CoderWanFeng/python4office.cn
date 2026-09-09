@@ -40,7 +40,7 @@ cover: https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1200&
 
 <p align="center" id='100本电子书-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/6bM_3tROqdY_2WbBShzqyw'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Febook.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/ebook.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -48,14 +48,14 @@ cover: https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1200&
 
 <p align="center" id='11个软件-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/w9ITodQR3kzSXc4t1H92nw'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fsoft-11.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/soft-11.jpg" width="100%"/>
     </a>   
 </p>
 
 
 <p align="center" id='25个学习资源-banner'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/-mlsV7PFc27JElOTCskMsg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fpy-25-source.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/py-25-source.jpg" width="100%"/>
     </a>   
 </p>
 

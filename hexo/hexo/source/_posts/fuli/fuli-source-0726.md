@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <!-- more -->
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg)
 
 
 你好，我是程序员晚枫（B站/知乎/小红书/抖音，都叫这个名字）。
@@ -24,7 +24,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 - 🎁7个ChatGPT网站：[点我直达](https://mp.weixin.qq.com/s/-dtUCic75tRi8Vp_x31m3A)
 
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/course/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg)
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg)
 
 # 2、原创课程
 

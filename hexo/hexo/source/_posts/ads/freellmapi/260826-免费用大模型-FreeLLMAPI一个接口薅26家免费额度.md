@@ -1,5 +1,5 @@
 ---
-title: 一个接口薅尽26家免费额度，但免费GPT-5我先泼盆冷水
+title: GitHub 2万星的开源神器：一个接口薅26家免费额度，但其中88个模型来路不明
 date: 2026-08-26 01:05:00
 tags: [公众号文章, 免费大模型, FreeLLMAPI, 免费AI, API]
 categories: [公众号文章]
@@ -140,9 +140,8 @@ FreeLLMAPI 把前者做得非常漂亮：一个接口、自动切换、本地托
 
 ## 相关阅读
 
-- [一个 Key 白嫖 20 个大模型，OpenRouter 太狠了](../openrouter/260812-免费用大模型-OpenRouter一个Key白嫖20个模型.md)
-- [Ollama Cloud：本地命令直接上云，DeepSeek 免费跑](../ollama/260812-免费用大模型-Ollama-Cloud本地命令直接上云.md)
-- [别花钱买大模型了，GitHub上原版直接下载](../免费大模型系列/260813-别花钱买大模型了-GitHub上原版直接下载.md)
-- [免费大模型系列 · 总索引](../免费大模型系列/免费大模型系列总索引.md)
+- [AI 圈公开的秘密：DeepSeek V4 Flash 可以免费用](https://mp.weixin.qq.com/s/KNTw9mCUcTMzcPIwNkgPVg)
+- [英伟达"掀桌子"了：国产大模型免费用，智谱、MiniMax、LLaMA...](https://mp.weixin.qq.com/s/bD0U2NvMzbSgtaRK2OWAcQ)
+- [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
 
 ![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)

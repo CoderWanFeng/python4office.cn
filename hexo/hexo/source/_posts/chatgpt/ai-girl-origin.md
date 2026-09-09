@@ -72,7 +72,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <p align="center" id='滴滴-banner'>
     <a target="_blank" href='https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/%E7%A6%8F%E5%88%A9/%E6%BB%B4%E6%BB%B4.jpg'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads/didi-gao.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/didi-gao.jpg" width="100%"/>
     </a>   
 </p>
 

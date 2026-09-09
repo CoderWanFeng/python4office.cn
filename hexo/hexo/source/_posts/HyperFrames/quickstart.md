@@ -600,6 +600,6 @@ HyperFrames 是 Apache 2.0 开源协议，可商用，无单帧 / 单 render 计
 
 <p align="center" id='30讲自动化办公-banner'>
     <a target="_blank" href='https://www.python-office.com/video/video.html'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg" width="100%"/>
     </a>
 </p>

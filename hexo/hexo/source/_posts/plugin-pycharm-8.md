@@ -18,7 +18,7 @@ cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&
 
 <p align="center" id='外卖-banner'>
     <a target="_blank" href='https://kzurl19.cn/7CAHjq'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -44,19 +44,19 @@ cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&
 
 <p align="center" id='52讲爬虫-banner'>
     <a target="_blank" href='http://gk.link/a/11FsN'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/52%E8%AE%B2%E7%88%AC%E8%99%AB.jpg" width="100%"/>
     </a>   
 </p>
 
 <p align="center" id='0基础数据分析-banner'>
     <a target="_blank" href='http://gk.link/a/10EfJ'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2Fpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.jpg" width="100%"/>
     </a>   
 </p>
 
 <p align="center" id='django网站-banner'>
     <a target="_blank" href='https://www.bilibili.com/video/BV1zi4y1t7YU'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2FPython%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/Python%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91.jpg" width="100%"/>
     </a>   
 </p>
 

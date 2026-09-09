@@ -50,7 +50,7 @@ Python自动化办公除了可以帮助我们更好的工作，也有很多趣�
 
 
 
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5/auto-work.jpg)
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg)
 
 ![](https://ads-1300615378.cos.ap-guangzhou.myqcloud.com/alipay/hong-3.jpg)
 

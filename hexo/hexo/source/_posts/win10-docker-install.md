@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-160257088?w=800&h=400&fit=crop
 
 <p align="center" id='外卖-banner'>
     <a target="_blank" href='https://kzurl19.cn/7CAHjq'>
-    <img src="https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/ads%2F%E8%81%94%E7%9B%9F%E5%B9%BF%E5%91%8A%2F%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
+    <img src="https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/%E5%A4%96%E5%8D%96-1040-100.jpg" width="100%"/>
     </a>   
 </p>
 
@@ -68,7 +68,7 @@ docker是分层生成的
 
 ![](https://cos.python-office.com/ads/fuli/all-1.jpg)
 
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg)
 
 ## 相关阅读
 

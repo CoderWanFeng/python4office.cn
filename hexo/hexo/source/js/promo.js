@@ -12,10 +12,10 @@
   'use strict';
 
   var PROMO = {
-    // ① 顶部公告条 → Loomy（讯飞AI工作搭子）
-    topUrl: 'https://loomy.cgref.cn/s/j7n6gjje1g',
-    topText: '🤖 Loomy工作搭子 | AI替你整理、写内容、看数据，本地运行更安全',
-    topCta: '免费下载 →',
+    // ① 顶部公告条 → updream（AI视频创作助手）
+    topUrl: 'https://updream.cgref.cn/s/qyk4zr8n87',
+    topText: '🎬 updream | 对话式AI短剧工作台，新人免费5000积分',
+    topCta: '免费领取 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
 

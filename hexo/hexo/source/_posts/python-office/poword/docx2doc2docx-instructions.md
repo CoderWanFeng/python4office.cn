@@ -16,7 +16,7 @@ cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&
 
 ![](https://cos.python-office.com/ads/fuli/all-1.jpg)
 
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg)
 
 ## 相关阅读
 

@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 - 生成自己邮箱的授权码，不会的朋友可以打开这个网址看教程👉[https://www.python4office.cn/log/2023/12/poemail/1219-email002/](https://www.python4office.cn/log/2023/12/poemail/1219-email002/?utm_id=0)
 - 安装好：Python和PyCharm，没安装的朋友，可以去看给《小白的50讲Python自动化办公》，前3讲👇[扫码下图，直达安装的视频教程](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
-![](https://website-python-1300615378.cos.ap-nanjing.myqcloud.com/%E5%BC%95%E5%AF%BC%E8%B6%85%E9%93%BE%E6%8E%A5%2Fauto-work.jpg)
+![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/auto-work.jpg)
 
 ## 2、上代码
 
