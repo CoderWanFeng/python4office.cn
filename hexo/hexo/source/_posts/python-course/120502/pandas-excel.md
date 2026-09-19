@@ -31,7 +31,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ## 1对1技术咨询
 
 > ⭐今年我推出了1对1答疑的Python学习指导，如果需要可以扫码下图加我好友👇
-![](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+![](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
 
 ## 相关阅读

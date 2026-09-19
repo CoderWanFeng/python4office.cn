@@ -50,7 +50,7 @@ cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
 > ⭐今年我推出了陪你学习1年的Python学习服务，如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+![](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
 
 ## 相关阅读

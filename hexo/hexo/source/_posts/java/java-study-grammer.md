@@ -253,7 +253,7 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
-    <img src="https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png" width="300" height='400'/>
+    <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" width="300" height='400'/>
     </a>   
 </p>
 

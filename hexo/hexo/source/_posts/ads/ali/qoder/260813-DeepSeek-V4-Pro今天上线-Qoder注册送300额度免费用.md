@@ -133,4 +133,5 @@ Qoder送的 300 credits，相当于给你一个零成本试驾的机会。试完
 - [Kimi K3和DeepSeek V4 Flash，价格相差40倍](https://mp.weixin.qq.com/s/Ag_qbhR0TXxrmQOtS9UGPg)
 - [以前用 GLM-5.2 花钱买，现在每天 100 个名额免费抢](https://mp.weixin.qq.com/s/H144Ocw5TrNLROG-Ost21A)
 
-![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)

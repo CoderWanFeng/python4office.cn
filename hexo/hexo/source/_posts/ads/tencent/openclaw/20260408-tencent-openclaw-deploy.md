@@ -231,7 +231,7 @@ AI助手已经不再是科幻电影里的场景，而是**每个人都能拥有�
 - 提示词工程技巧
 - 完整项目案例
 
-![AI编程训练营](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+![AI编程训练营](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
 👉 **了解课程详情，请添加微信：aiwf365**
 

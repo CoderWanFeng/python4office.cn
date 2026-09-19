@@ -17,7 +17,7 @@ cover: https://images.unsplash.com/photo-1655636044795-5cc862885966?q=80&w=1000&
 > ⭐今年我推出了陪你学习1年的Python学习服务：👇
 
 如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+![](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
 ## 2、Python + 大数据开发
 

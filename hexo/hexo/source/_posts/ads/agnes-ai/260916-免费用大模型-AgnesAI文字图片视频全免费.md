@@ -124,4 +124,4 @@ Agnes AI 背后是新加坡的 Sapiens AI 公司，创始团队来自南洋理�
 - [英伟达"掀桌子"了：国产大模型免费用，智谱、MiniMax、LLaMA...](https://mp.weixin.qq.com/s/bD0U2NvMzbSgtaRK2OWAcQ)
 - [2026年最值得装的AI神器：开源免费，连接所有大模型](https://mp.weixin.qq.com/s/e5qz5U-2R14qGy88tMD1DA)
 
-![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)

@@ -108,7 +108,8 @@ Ollama 的聪明之处在于：**它让本地和云端用同一套命令。** �
 
 ---
 
-![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
 ## 相关阅读
 

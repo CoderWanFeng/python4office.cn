@@ -282,4 +282,4 @@ AI时代，从来没有一夜暴富的神话，只有一步一个脚印的机会
 
 
 
-![点击加入](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)

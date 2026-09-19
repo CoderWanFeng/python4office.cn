@@ -166,6 +166,7 @@ print(outputs[0]["generated_text"][-1])
 - [AI 圈公开的秘密：DeepSeek V4 Flash 可以免费用](https://mp.weixin.qq.com/s/KNTw9mCUcTMzcPIwNkgPVg)
 - [别再乱选大模型了！小白也能看懂的「好坏判断指南」，3分钟避坑](https://mp.weixin.qq.com/s/uPAJewJ-YeRnESEAAwLlkw)
 
-![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
 ![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/gpt-oss-free-cover.jpg)

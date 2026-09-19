@@ -107,7 +107,8 @@ Skills 的本质，就是一个文件夹里放一份说明文件，用大白话�
 - Agent Skills 技术介绍：https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
 - 前端设计 Skills 最佳实践：https://claude.com/blog/improving-frontend-design-through-skills
 
-![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
 ## 相关阅读
 

@@ -166,7 +166,8 @@ Agent Plugins 1.0.0 目前只统一两类公共组件：Skills 和 MCP 服务。
 **科技不高冷，AI很好用。**
 我是晚枫，关注我，带你一起玩AI！
 
-![AI 实战课](https://raw.atomgit.com/user-images/assets/5027920/643070fe-42e2-48ab-933d-148e85f059e4/527bb1299e6e9c65811d7ce15ebeb284.png)
+
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
 
 ### 参考链接
