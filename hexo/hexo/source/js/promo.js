@@ -12,10 +12,10 @@
   'use strict';
 
   var PROMO = {
-    // ① 顶部公告条 → updream（AI视频创作助手）
-    topUrl: 'https://updream.cgref.cn/s/qyk4zr8n87',
-    topText: '🎬 updream | 对话式AI短剧工作台，新人免费5000积分',
-    topCta: '免费领取 →',
+    // ① 顶部公告条 → 公众号文章：DeepSeek 免费用
+    topUrl: 'https://mp.weixin.qq.com/s/tI3W13T1-MvYbSYn3vAQGA',
+    topText: '🎁 DeepSeek 免费用｜薅羊毛攻略，0 成本上手',
+    topCta: '免费查看 →',
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
 
