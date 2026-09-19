@@ -164,7 +164,7 @@ AI是这个时代给程序员最好的礼物。用好了，它能帮你提前10�
 如果你觉得这篇文章对你有帮助，想更深入地学习AI编程实战，推荐你看看我和图灵社区合作的课程：
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" width="80%"/>
     </a>   
 </p>

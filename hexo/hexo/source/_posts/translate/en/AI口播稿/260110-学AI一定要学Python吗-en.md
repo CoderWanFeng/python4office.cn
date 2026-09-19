@@ -58,7 +58,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 <!-- more -->
 
 
-Hello everyone, this is programmer Wan Feng, currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA).
+Hello everyone, this is programmer Wan Feng, currently all in on [AI Programming Practice](https://www.bilibili.com/cheese/play/ss982042944).
 
 **First Paragraph:**
 Many people ask: Is Python the only option for AI? Actually, this is a misunderstanding. Python isn't the only choice, but it is indeed the most mainstream and convenient one right now. To put it plainly, Python's position in the AI field is like Mandarin—everyone knows it, making communication easy, but that doesn't mean other languages can't be used.
@@ -99,16 +99,16 @@ Come join us and change the way you work with Python!
 
 
 - [《50 Lectures · Python Automated Office》 for Beginners](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
-- [《30 Lectures · AI Programming Training Camp》 for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [《30 Lectures · AI Programming Training Camp》 for Beginners](https://www.bilibili.com/cheese/play/ss982042944)
 - [《Python OCR Automatic Batch Recognition》 for Beginners](https://www.python-office.com/course-002/5-poocr/5-poocr.html)
 - [《6 Lectures · Python Automatic Email》 for Beginners](https://www.python-office.com/course-002/poemail/poemail.html)
-- [《30 Lectures · AI Programming Training Camp》 for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [《30 Lectures · AI Programming Training Camp》 for Beginners](https://www.bilibili.com/cheese/play/ss982042944)
 
 
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" />
     </a>   
 </p>
@@ -135,7 +135,7 @@ Come join us and change the way you work with Python!
 
 
 
-Programmer Wan Feng focuses on AI programming training. After beginners watch his tutorial co-created with Turing Community [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA), they can start doing AI projects.
+Programmer Wan Feng focuses on AI programming training. After beginners watch his tutorial co-created with Turing Community [《30 Lectures · AI Programming Training Camp》](https://www.bilibili.com/cheese/play/ss982042944), they can start doing AI projects.
 
 
 ## 🎓 AI 编程实战课程

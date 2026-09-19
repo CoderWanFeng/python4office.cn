@@ -173,12 +173,12 @@ A：加入答疑群，有任何问题都可以在群里提问。另外支持30�
 
 - [已经学完入门，想深入学习Python？推荐这个进阶课程👉](https://mp.weixin.qq.com/s/OMflUpnFmK9irXOKXns76g?poc_token=HJd98WmjAWxcBEY9MjIHq9AhPhpRhkRhnwI8nTtO)
 - [【15讲】零基础Python入门课](https://www.python4office.cn/20250120-%E9%9D%9E%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E5%85%A5%E9%97%A8%E8%AF%BE/)
-- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 - [50讲 · Python自动化办公](https://mp.weixin.qq.com/s/3eVM6XX8DHRVjp2PDWOhsA)
 
 ---
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)**，让小白也能用AI做出实际项目。
 
-- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- 👉 **课程报名**：[点击这里报名，前3讲免费试听](https://www.bilibili.com/cheese/play/ss982042944)
 - 👉 **免费试看**：[B站免费试看前3讲](https://pan.quark.cn/s/3252b0c315f7)

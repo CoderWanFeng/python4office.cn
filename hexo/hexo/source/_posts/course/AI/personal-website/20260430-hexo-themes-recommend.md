@@ -130,4 +130,4 @@ Yun这个主题，就像它的名字一样——轻、快、可爱。界面简�
 
 - [最全AI Coding Plan和Token购买攻略：大厂价格一站汇总](https://www.python4office.cn/ai-tools/tool-reviews/20260415-coding-plan-compare-12-providers/)
 - [刘润开始劝大家学AI编程，但我已经放弃了](https://mp.weixin.qq.com/s/iyzIiPyiL1t-5s93E9sw4A)
-- [给小白的《30讲·AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《30讲·AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)

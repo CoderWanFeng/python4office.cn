@@ -24,7 +24,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 > 
 > 邀请码：**GF2QJX3V**（可能有额外福利）
 > 
-> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
+> 💡 **想系统学习AI编程？** 👉 **[点击了解AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)**
 
 大家好，这里是程序员晚枫（Wayne Liu）。
 
@@ -184,7 +184,7 @@ AI 是杠杆，不是对手。
 ## 📚 想系统学习AI编程？
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" width="80%"/>
     </a>   
 </p>
@@ -222,7 +222,7 @@ AI 是杠杆，不是对手。
 
 ## 相关阅读
 
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)

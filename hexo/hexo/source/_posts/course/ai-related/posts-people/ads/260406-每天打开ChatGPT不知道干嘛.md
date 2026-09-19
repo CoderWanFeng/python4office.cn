@@ -108,9 +108,9 @@ AI工具装了十几个，ChatGPT、Claude、Midjourney、文心一言，全注�
 
 先听听看，看适不适合自己：
 
-👉 [免费试听，看完再决定](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+👉 [免费试听，看完再决定](https://www.bilibili.com/cheese/play/ss982042944)
 
-👉 [查看课程详情](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+👉 [查看课程详情](https://www.bilibili.com/cheese/play/ss982042944)
 
 ---
 

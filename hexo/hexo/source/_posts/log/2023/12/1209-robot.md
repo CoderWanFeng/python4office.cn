@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&
 <!-- more -->
 ![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/10%E8%AE%B2%E6%9C%BA%E5%99%A8%E4%BA%BA-%E6%A8%AA.jpg)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)，只给小白分享有用的**自动化办公**代码。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，只给小白分享有用的**自动化办公**代码。
 
 上次给大家分享了：[Python终于可以操作Office了](https://mp.weixin.qq.com/s/wwzGFIn-282FufnX9oNC7A)，发现大家很喜欢。
 
@@ -62,9 +62,9 @@ PyOfficeRobot.chat.send_message(who='程序员晚枫', message='你好，我是�
 
 ---
 
-以上所有机器人的功能，我都加入了原创课程:[给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)，都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
+以上所有机器人的功能，我都加入了原创课程:[给小白的《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)，都是1行Python代码就能实现的，适合纯小白的课程，需要可以加入学习哟~
 
-- 加入学习👉[给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- 加入学习👉[给小白的《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 大家学习 或 使用代码过程中，有任何问题，都可以加入读者群交流哟~👇
 
@@ -77,7 +77,7 @@ PyOfficeRobot.chat.send_message(who='程序员晚枫', message='你好，我是�
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)

@@ -7,7 +7,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>   
 </p>
@@ -36,7 +36,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 <!-- more -->
 
-大家好，这里是程序员晚枫，正在 all in [AI编程实战](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) 🤖
+大家好，这里是程序员晚枫，正在 all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944) 🤖
 
 刚才刷到了马斯克的动态，他说本地部署openclaw简直是离谱它妈给离谱开门：离谱到家了！
 
@@ -82,7 +82,7 @@ openclaw非常火，但是部署在自己电脑上，等于给了它管理员的
 ![操作手册和视频](https://raw.atomgit.com/user-images/assets/5027920/032d00e7-dc6d-4bcd-ab82-8fb44036d937/image.png)
 
 
-> 本教程仅限加入我[AI编程实战训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)朋友领取，还没加入课程的朋友，可以继续往下看，加一下课程。
+> 本教程仅限加入我[AI编程实战训练营](https://www.bilibili.com/cheese/play/ss982042944)朋友领取，还没加入课程的朋友，可以继续往下看，加一下课程。
 
 前3讲可以试听，试听链接：https://pan.quark.cn/s/3252b0c315f7
 
@@ -150,12 +150,12 @@ AI时代，优质的AI编程课层出不穷，但**扎实的入门基础，才�
 
 有任何问题，欢迎联系我的微信👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。
 
 
 ## 拓展阅读
 
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)

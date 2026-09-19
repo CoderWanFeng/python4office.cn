@@ -59,13 +59,13 @@ X应用将整合Grok的最新AI能力，不再是简单的社交媒体，而是�
 
 ### 🔥 推荐学习资源
 
-**1. [AI自动化办公实战课](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
+**1. [AI自动化办公实战课](https://www.bilibili.com/cheese/play/ss982042944)**
 - 30天从零到精通
 - Excel/Word/PDF自动化
 - 实战项目练手
 - 就业指导
 
-**2. [AI编程速成计划](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
+**2. [AI编程速成计划](https://www.bilibili.com/cheese/play/ss982042944)**
 - 零基础友好
 - OpenClaw工具实战
 - 10+商业项目案例
@@ -111,8 +111,8 @@ X应用将整合Grok的最新AI能力，不再是简单的社交媒体，而是�
 ---
 
 **相关推荐**:
-- [零基础学AI编程：30天速成计划](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
-- [OpenClaw使用教程：从入门到精通](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [零基础学AI编程：30天速成计划](https://www.bilibili.com/cheese/play/ss982042944)
+- [OpenClaw使用教程：从入门到精通](https://www.bilibili.com/cheese/play/ss982042944)
 - [2026年AI趋势：这3个方向最赚钱](/ai/openclaw/20260228171302-2026年AI趋势-这3个方向最赚钱.md)
 
 **点赞·收藏·转发，让更多朋友抓住这次机会！**

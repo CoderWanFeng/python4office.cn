@@ -398,7 +398,7 @@ RAG是目前最实用的企业AI应用方案之一。
 ## 📚 想系统学习AI编程？
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" width="80%"/>
     </a>   
 </p>

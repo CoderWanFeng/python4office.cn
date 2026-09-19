@@ -165,7 +165,7 @@ AtomCode用Rust做到了一个很难做到的事：**把AI编程工具的体验�
 ## 相关阅读
 
 - [python-office：用Python自动化你的办公流程](https://www.python-office.com/)
-- [AI编程训练营：零基础也能学会AI编程](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [AI编程训练营：零基础也能学会AI编程](https://www.bilibili.com/cheese/play/ss982042944)
 
 
 

@@ -175,7 +175,7 @@ There are still two days left for the conference. Can't find the route or welfar
 
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" />
     </a>   
 </p>
@@ -199,7 +199,7 @@ There are still two days left for the conference. Can't find the route or welfar
 
 
 
-Programmer Wanfeng focuses on AI programming training. Beginners can start doing AI projects after reading the tutorial ["30 Lectures · AI Programming Training Camp"](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) that he collaborated with Turing Community.
+Programmer Wanfeng focuses on AI programming training. Beginners can start doing AI projects after reading the tutorial ["30 Lectures · AI Programming Training Camp"](https://www.bilibili.com/cheese/play/ss982042944) that he collaborated with Turing Community.
 
 
 ## 🎓 AI 编程实战课程

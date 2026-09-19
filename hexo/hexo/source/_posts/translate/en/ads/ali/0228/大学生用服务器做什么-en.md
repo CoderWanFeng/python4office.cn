@@ -26,10 +26,10 @@ As Asia's largest cloud service provider, Alibaba Cloud's confidence in lowering
 
 ## Related Reading
 
-- ["30 Lectures · AI Programming Bootcamp" for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- ["30 Lectures · AI Programming Bootcamp" for Beginners](https://www.bilibili.com/cheese/play/ss982042944)
 
 
-Programmer Wanfeng focuses on AI programming training. Beginners can start working on AI projects after reading his tutorial "30 Lectures · AI Programming Bootcamp" (https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA), which he co-created with Turing Community.
+Programmer Wanfeng focuses on AI programming training. Beginners can start working on AI projects after reading his tutorial "30 Lectures · AI Programming Bootcamp" (https://www.bilibili.com/cheese/play/ss982042944), which he co-created with Turing Community.
 
 
 

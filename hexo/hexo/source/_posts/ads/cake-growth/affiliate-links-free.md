@@ -59,7 +59,7 @@ AI token：https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&so
 
 腾讯云：https://curl.qcloud.com/Z9TkzRuj
 
-AI编程课：https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA
+AI编程课：https://www.bilibili.com/cheese/play/ss982042944
 
 AI办公课：https://pan.quark.cn/s/3252b0c315f7
 

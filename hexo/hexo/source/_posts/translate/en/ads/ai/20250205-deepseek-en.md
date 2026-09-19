@@ -19,10 +19,10 @@ To get the complete DeepSeek deployment resources, please add my WeChat with the
 
 ## Related Reading
 
-- [《30 Lectures · AI Programming Bootcamp》 for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [《30 Lectures · AI Programming Bootcamp》 for Beginners](https://www.bilibili.com/cheese/play/ss982042944)
 
 
-Programmer Wanfeng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial [《30 Lectures · AI Programming Bootcamp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA), a collaboration with Turing Community.
+Programmer Wanfeng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial [《30 Lectures · AI Programming Bootcamp》](https://www.bilibili.com/cheese/play/ss982042944), a collaboration with Turing Community.
 
 
 

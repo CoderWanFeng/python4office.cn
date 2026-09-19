@@ -8,7 +8,7 @@ cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&
 
 
 <p align="center" id='扫码查看 AI 编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>   
 </p>
@@ -563,7 +563,7 @@ large_files = [c for c in contents if c["lines"] > 100]
 
 🎁 **限时福利**：前100名送《Python编程从入门到实践》实体书
 
-👉 **[点击了解详情](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
+👉 **[点击了解详情](https://www.bilibili.com/cheese/play/ss982042944)**
 
 ---
 

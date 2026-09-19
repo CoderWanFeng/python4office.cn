@@ -148,13 +148,13 @@ X生态处于快速变化期，AI程序员可以：
 
 ### 针对"双线并行"策略
 
-**1. [AI自动化办公课程](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
+**1. [AI自动化办公课程](https://www.bilibili.com/cheese/play/ss982042944)**
 ✓ 微信小程序开发基础
 ✓ AI能力接入实战
 ✓ 商业化变现技巧
 ✓ 适合新手到进阶
 
-**2. [OpenClaw深度课程](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**
+**2. [OpenClaw深度课程](https://www.bilibili.com/cheese/play/ss982042944)**
 ✓ AI编程全流程
 ✓ X生态适配策略
 ✓ 高级AI应用开发
@@ -204,7 +204,7 @@ X vs 微信，不是二选一的问题。
 
 **今天学AI编程，明天就是X生态的先行者。**
 
-> 🔥 [立即开始学习](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+> 🔥 [立即开始学习](https://www.bilibili.com/cheese/play/ss982042944)
 > 📖 [深度技术文章](https://www.python-office.com/)
 > 💬 [加入开发者社区](/contact)
 

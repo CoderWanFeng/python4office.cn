@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 ![用Python实现微信多开，1行代码搞定](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)，小破站也叫这个名字。
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，小破站也叫这个名字。
 
 今天给大家分享一个实用功能：微信多开。
 
@@ -48,7 +48,7 @@ Python可以替代你很多日常办公中的工作，但是学会Python不容�
 
 我是一个程序员，利用业余时间，专门为非程序员整理了10个微信机器人的代码，都是1行代码就可以用的。
 
-方便大家快速入门Python，大家可以点击课程进行学习：[给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)。
+方便大家快速入门Python，大家可以点击课程进行学习：[给小白的《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)。
 
 这套课程主要教给你Python自动化办公应该怎么用，而不是给你讲深奥的Python编程理论。
 
@@ -61,7 +61,7 @@ Python可以替代你很多日常办公中的工作，但是学会Python不容�
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)

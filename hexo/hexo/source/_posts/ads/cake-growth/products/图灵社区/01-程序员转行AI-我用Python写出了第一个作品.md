@@ -98,7 +98,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 如果你也想从零开始学Python和AI，试试图灵社区AI Python实战营。
 
-👉 [点击这里试试图灵社区：https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+👉 [点击这里试试图灵社区：https://www.bilibili.com/cheese/play/ss982042944](https://www.bilibili.com/cheese/play/ss982042944)
 
 ---
 
@@ -154,7 +154,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 ## 相关阅读
 
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 - [人在曼谷旅游，AI在帮我赚钱](https://mp.weixin.qq.com/s/KLXXEoxMu9uayJTLXStIzw)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
@@ -167,7 +167,7 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 
 还没试过的朋友，点下面的链接试试图灵社区AI Python实战营。
 
-👉 [点击这里试试图灵社区：https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+👉 [点击这里试试图灵社区：https://www.bilibili.com/cheese/play/ss982042944](https://www.bilibili.com/cheese/play/ss982042944)
 
 ---
 

@@ -126,7 +126,7 @@ response = openai.ChatCompletion.create(
 
 
 
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
@@ -148,7 +148,7 @@ response = openai.ChatCompletion.create(
 
 Want to learn AI programming systematically? Check out **CoderWanFeng's AI Programming Course**!
 
-- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- 👉 **Enroll Now**: [Click here to sign up — first 3 lessons are free](https://www.bilibili.com/cheese/play/ss982042944)
 - 👉 **Free Preview**: [Watch the first 3 lessons on Bilibili for free](https://pan.quark.cn/s/3252b0c315f7)
 
 ---
@@ -162,7 +162,7 @@ Want to learn AI programming systematically? Check out **CoderWanFeng's AI Progr
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)

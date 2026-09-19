@@ -178,7 +178,7 @@ Excel用了二十年，每天加班到晚上十点，数据处理还是手动复
 
 **从最痛的那个点开始，你会发现AI真的香。**
 
-如果你不知道从哪开始，我整理了一套从零上手AI的方法，不用懂代码，跟着学就能真正把AI用起来，少走弯路。有需要的可以看看 👉 [用AI做副业的3个思路](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+如果你不知道从哪开始，我整理了一套从零上手AI的方法，不用懂代码，跟着学就能真正把AI用起来，少走弯路。有需要的可以看看 👉 [用AI做副业的3个思路](https://www.bilibili.com/cheese/play/ss982042944)
 
 AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 
@@ -198,7 +198,7 @@ AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 
 ## 相关阅读
 
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
@@ -211,7 +211,7 @@ AI工具买了，钱花了，账号注册了，然后呢？放在那里落灰。
 
 如果你到现在还没用过AI工具，不用慌。我整理了一套系统的学习方法，不用懂代码，不用花大钱，跟着学完就能真正把AI用起来。
 
-有需要的可以看看 👉 [AI编程实战课](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+有需要的可以看看 👉 [AI编程实战课](https://www.bilibili.com/cheese/play/ss982042944)
 
 ---
 

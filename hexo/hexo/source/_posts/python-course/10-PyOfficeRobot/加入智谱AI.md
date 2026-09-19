@@ -5,7 +5,7 @@ tags: 微信机器人
 ---
 
 
-去年国庆发布了一套0基础使用微信机器人的课程：[给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)，在课程的末尾留了一个悬念：未来会加入更多免费的GPT智能回复的大模型。
+去年国庆发布了一套0基础使用微信机器人的课程：[给小白的《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)，在课程的末尾留了一个悬念：未来会加入更多免费的GPT智能回复的大模型。
 
 <!-- more -->
 
@@ -22,7 +22,7 @@ tags: 微信机器人
 
 在接下来的智能聊天操作之前，你需要学习完我们已经发布的课程，一共就30分钟，课程所有的视频 + 代码 + 文档 + 答疑群，都在下面这个链接里，点击领取，👇
 
-- ⭐[给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- ⭐[给小白的《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 ## 4个大模型
 
@@ -45,7 +45,7 @@ PyOfficeRobot.chat.chat_by_zhipu(who='程序员晚枫', key="你的智谱大模�
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)

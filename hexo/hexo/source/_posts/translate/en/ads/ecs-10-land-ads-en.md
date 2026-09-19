@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 Ranking of cloud server providers - do you know which rank your service provider holds?
 
-Hello everyone, this is Programmer Wanfeng, currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA).
+Hello everyone, this is Programmer Wanfeng, currently all in on [AI Programming Practice](https://www.bilibili.com/cheese/play/ss982042944).
 
 Here are the top 10 cloud server providers in China:
 
@@ -50,10 +50,10 @@ The above is just a brief introduction. If you want to know more, you can join t
 
 ## Related Reading
 
-- [《30 Lectures · AI Programming Bootcamp》 for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [《30 Lectures · AI Programming Bootcamp》 for Beginners](https://www.bilibili.com/cheese/play/ss982042944)
 
 
-Programmer Wanfeng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial [《30 Lectures · AI Programming Bootcamp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA), a collaboration with Turing Community.
+Programmer Wanfeng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial [《30 Lectures · AI Programming Bootcamp》](https://www.bilibili.com/cheese/play/ss982042944), a collaboration with Turing Community.
 
 
 ## 🎓 AI 编程实战课程

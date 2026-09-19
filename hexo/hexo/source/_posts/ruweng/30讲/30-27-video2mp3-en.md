@@ -88,7 +88,7 @@ Also welcome developers with technical skills to enrich this project together:
 
 
 
-CoderWanFeng focuses on AI programming training. Beginners can start making AI projects after watching his tutorial [《30 Lectures · AI Programming Training Camp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) collaborated with Turing Community.
+CoderWanFeng focuses on AI programming training. Beginners can start making AI projects after watching his tutorial [《30 Lectures · AI Programming Training Camp》](https://www.bilibili.com/cheese/play/ss982042944) collaborated with Turing Community.
 
 
 ## 🎓 AI 编程实战课程

@@ -46,7 +46,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 ![原文地址](https://raw.atomgit.com/user-images/assets/5027920/b3420dcf-7ffc-4d7b-8388-1589ccf3f772/image.png)
 
 
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA) 🤖
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944) 🤖
 
 ---
 
@@ -109,7 +109,7 @@ Ivan早就说过，我们总"通过后视镜驶向未来"，早期电话像电�
 
 **AI时代的机会，不会留给停在2023年的人**。
 
-点击课程👉[30讲·AI编程训练营](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)，一起用AI编程解锁创作力，抓住这个"智力白菜价、机会无限量"的时代！
+点击课程👉[30讲·AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)，一起用AI编程解锁创作力，抓住这个"智力白菜价、机会无限量"的时代！
 
 ---
 
@@ -124,7 +124,7 @@ Ivan早就说过，我们总"通过后视镜驶向未来"，早期电话像电�
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)

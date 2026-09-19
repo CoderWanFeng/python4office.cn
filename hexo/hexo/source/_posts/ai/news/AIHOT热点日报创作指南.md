@@ -320,7 +320,7 @@ GLM-5.2 开源、开放权重，编码能力强到 Vercel CEO 主动发推称"�
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲](https://pan.quark.cn/s/3252b0c315f7)
-- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://www.bilibili.com/cheese/play/ss982042944)
 ```
 
 ---

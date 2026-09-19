@@ -173,8 +173,8 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 ## 相关阅读
 
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
-- [用AI 做 副业 的 3个思路](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
+- [用AI 做 副业 的 3个思路](https://www.bilibili.com/cheese/play/ss982042944)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [副业收入是工资的10倍，上班真的耽误赚钱](https://mp.weixin.qq.com/s/tCCOrtxPwn_s_ShBvfS-HQ)
 - [PPT 制作神器！Claude Code 审美直接封神](https://mp.weixin.qq.com/s/obGJ2cSLieX2K7ryOdMFpw)
@@ -186,7 +186,7 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 如果你想学习怎么用AI提升工作效率、搞副业赚钱，我整理了一套系统的学习方法。不用懂代码，不用花大钱，跟着学完就能真正把AI用起来，少走弯路。
 
-有需要的可以看看 👉 [AI编程实战课](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+有需要的可以看看 👉 [AI编程实战课](https://www.bilibili.com/cheese/play/ss982042944)
 
 ---
 
@@ -197,7 +197,7 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 
 ## 相关阅读
 
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 - [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
@@ -216,7 +216,7 @@ AI发展太快了，你今天学的技巧，可能下个月就过时了。如果
 **公众号**：晚枫AI学习笔记
 **声明**：本文原创，转载需联系授权
 
-程序员晚枫专注AI编程培训，通过[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)让小白也能上手做AI项目。
+程序员晚枫专注AI编程培训，通过[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)让小白也能上手做AI项目。
 
 ## 🎓 AI 编程实战课程
 

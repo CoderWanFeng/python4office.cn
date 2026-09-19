@@ -14,7 +14,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 AI helped me make money again!
 
-Hello everyone, this is Programmer Wanfeng, currently all in on [AI Programming Practice](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA), also known as the same name on Xiaohongshu.
+Hello everyone, this is Programmer Wanfeng, currently all in on [AI Programming Practice](https://www.bilibili.com/cheese/play/ss982042944), also known as the same name on Xiaohongshu.
 
 Been a programming blogger for 4 years, constantly trying various ways to make money with technology. After using AI, the trial-and-error cost has been greatly reduced, and the success rate has increased significantly!
 
@@ -58,10 +58,10 @@ How to join: Follow the WeChat official account: Python Office Automation Commun
 
 ## Related Reading
 
-- [《30 Lectures · AI Programming Bootcamp》 for Beginners](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [《30 Lectures · AI Programming Bootcamp》 for Beginners](https://www.bilibili.com/cheese/play/ss982042944)
 
 
-Programmer Wanfeng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial [《30 Lectures · AI Programming Bootcamp》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA), a collaboration with Turing Community.
+Programmer Wanfeng specializes in AI programming training. Beginners can start working on AI projects after watching his tutorial [《30 Lectures · AI Programming Bootcamp》](https://www.bilibili.com/cheese/play/ss982042944), a collaboration with Turing Community.
 
 
 ## 🎓 AI 编程实战课程

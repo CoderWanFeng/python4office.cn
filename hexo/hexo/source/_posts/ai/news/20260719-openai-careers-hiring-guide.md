@@ -141,7 +141,7 @@ OpenAI 这波扩招，信号意义远大于「一家公司招人」：
 ## 相关阅读
 
 - [2026年最值得考的5个AI认证：考完真能帮你拿到offer](https://www.python4office.cn/ai/news/20260719-5-ai-certifications-for-jobs/)
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
 
 ---

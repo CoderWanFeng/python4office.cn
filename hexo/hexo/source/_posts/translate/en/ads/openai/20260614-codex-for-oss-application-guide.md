@@ -281,7 +281,7 @@ What open-source project do you maintain? How are you planning to use Codex? **S
 
 ## Related Reading
 
-- [2026: Learning Programming — You Don't Need More Tutorials](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [2026: Learning Programming — You Don't Need More Tutorials](https://www.bilibili.com/cheese/play/ss982042944)
 - [I Made a PPT with AI — My Colleague Asked If I Was a PPT Designer](https://mp.weixin.qq.com/s/aLo7mW3BLnglwhSZCKoOow)
 - [Designers Take 3 Days to Make a Graphic — I Did It in 15 Minutes with AI](https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg)
 - [Codex Beginner's Guide — From Zero to Hands-On, All in One Article](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)

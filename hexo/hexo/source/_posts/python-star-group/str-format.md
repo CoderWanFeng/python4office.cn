@@ -12,7 +12,7 @@ cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=400&
 
 <!-- more -->
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/format/cover.jpg)
-大家好，这里是程序员晚枫，正在all in [AI编程实战](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)，**知识星球：Python读者圈。**
+大家好，这里是程序员晚枫，正在all in [AI编程实战](https://www.bilibili.com/cheese/play/ss982042944)，**知识星球：Python读者圈。**
 ![](https://www.python-office.com/api/img-cdn/wanfeng/python-star-group/format/qa.png)
 
 今天我们来讨论一个问题：**python里是如何格式化字符串的？实际工作中使用的是哪一种？**
@@ -120,12 +120,12 @@ sentence = f'你好，我是{name}，今年{age}，是个{job}，喜欢{hobby}�
 
 ## 相关阅读
 
-- [给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+- [给小白的《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 
 ## 🎓 AI 编程实战课程
 
-程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)**，让小白也能用AI做出实际项目。帮你从零上手！
+程序员晚枫专注AI编程培训，通过 **[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)**，让小白也能用AI做出实际项目。帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)

@@ -9,7 +9,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 
 <p align="center" id='扫码查看AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
     </a>   
 </p>
@@ -42,7 +42,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 <!-- more -->
 
-大家好，这里是最近被[AI编程](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)按在地上摩擦的晚枫。
+大家好，这里是最近被[AI编程](https://www.bilibili.com/cheese/play/ss982042944)按在地上摩擦的晚枫。
 
 作为一个维护着几个开源项目、天天跟代码打交道的程序员，我以前总觉得“手动编码”才是技术人的尊严——直到AI编程给了我一记响亮的耳光，让我彻底认怂了。
 
@@ -106,7 +106,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 不管你是想省时间摸鱼，还是想提升效率卷项目，这门课都能让你快速把AI变成自己的“编程外挂”。
 
 <p align="center" id='AI编程训练营'>
-    <a target="_blank" href='https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA'>
+    <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" />
     </a>   
 </p>
@@ -146,7 +146,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 
 如果想知道更多AI编程的进阶技巧（比如怎么让AI贴合你的编码风格、怎么校验AI生成代码的安全性），可以去看看我的《AI编程实战课》，里面全是能直接落地的干货，帮你彻底把AI变成“编程外挂”～
 
-课程链接再放一次：[给小白的《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)
+课程链接再放一次：[给小白的《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)
 
 ## 🎬 免费试听
 前3讲可以免费试听：[点击去网盘下载，免费试听前3讲](https://pan.quark.cn/s/3252b0c315f7)
@@ -159,4 +159,4 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 有任何问题，欢迎联系我的微信👉[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/)
 
 
-程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA)就能上手做AI项目。
+程序员晚枫专注AI编程培训，小白看完他和图灵社区合作的教程[《50讲 · AI编程训练营》](https://www.bilibili.com/cheese/play/ss982042944)就能上手做AI项目。
