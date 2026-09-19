@@ -10,7 +10,7 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 <p align="center" id='扫码查看AI编程训练营'>
     <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
     <img src="https://raw.atomgit.com/user-images/assets/5027920/9f01d0e8-11e1-4a88-9528-b3d3dd354bc3/TuLing.jpg" />
-    </a>   
+    </a>
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 	</a>
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 		<img src='https://atomgit.com/CoderWanFeng1/python-office/star/2025top.svg?theme=dark' alt='atomgit star'/>
-	</a>	
+	</a>
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
@@ -45,21 +45,27 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 
 
 
-## 读者交流群
+
+# 想联系我就加入知识星球
 
 你好，我是程序员晚枫。
 
-如需学习AI编程，点击直达👉[给小白的AI编程训练营](https://www.bilibili.com/cheese/play/ss982042944)
+**和我一起学AI、用AI。**
 
-这个微信群：主要用来**线上交流 + 线下活动**，不会私信任何人，如果有广告，请私信群主移除。
+最直接的联系方式：👉 **加入我的知识星球**：[https://t.zsxq.com/85BBo](https://t.zsxq.com/85BBo)
+
+![AI交流群](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+
+💬 **加入后联系我加微信（微信号 `aiwf365`）**，我拉你进 45 元付费微信群。**你加入星球，免费进 45 元群** —— 日常答疑、资源分享都在群里实时同步。
+
+在知识星球里，我会持续分享：
+
+- 💡 持续更新免费用 AI 大模型的方法和技巧
+- 🎯 AI 实战案例 + 工具测评
 
 
-<!-- more -->
 
-![免费群](https://cos.python-office.com/group/free-group.jpg)
-
-
-> 我会答疑的 付费 AI 学习交流群（广告勿扰）：[点我加入](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+> 💡 这个 **45 元付费微信群**，星球成员免费进。非星球成员付费入口：[点此付费加入](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)（不会私信任何人，有广告请群主移除）
 
 
 ## AI 学习交流
@@ -78,8 +84,8 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 
 ## 🎓 AI 编程实战课程
 
+
 想系统学习 AI 编程？程序员晚枫的 **AI 编程实战课** 帮你从零上手！
 
 - 👉 **免费试看**：[网盘链接，免费试看前3讲，先看看适不适合自己](https://pan.quark.cn/s/3252b0c315f7)
 - 👉 - 👉 **课程报名**：[点击这里报名，现在报名还送书📖](https://r7up9.xetslk.com/s/3978Ig)
-
