@@ -19,13 +19,13 @@
     topStorageKey: 'promo_top_closed_at',
     topCloseDays: 1,
 
-    // ⑥ 文中段落广告 → B 站课程
-    inlineUrl: 'https://pan.quark.cn/s/3252b0c315f7',
+    // ⑥ 文中段落广告 → 知识星球
+    inlineUrl: 'https://t.zsxq.com/85BBo',
     inlineEvery: 5,
     inlineMax: 1,
     inlineMinParas: 5,
     inlineVariants: [
-      { icon: '🎬', text: '<strong>0 基础也能学</strong>：让 AI + 自动化办公 帮你做表、写文档、回邮件。', btn: '免费试听 →' }
+      { icon: '🤖', text: '<strong>免费用 AI 大模型</strong>：我把薅过的免费方法都整理在这，帮你省订阅费。', btn: '免费加入 →' }
     ],
 
     // ② 文末 CTA → LibTV（视频创作工具，cakegrowth 返佣）

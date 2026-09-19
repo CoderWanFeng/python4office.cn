@@ -26,7 +26,7 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c5?q=80&w=1200&
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
 <a href="https://mp.weixin.qq.com/s/8p2eviFUmYa1V0pswmDRmw">
-  <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
+  <img src="https://img.shields.io/badge/AI-免费用-red" alt="AI编程">
 </a>
         <a href="https://www.python4office.cn/wechat-group/">
   <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">

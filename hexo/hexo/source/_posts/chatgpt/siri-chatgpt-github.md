@@ -35,8 +35,8 @@ cover: https://images.unsplash.com/photo-1618401479379-e8fd5e49a025?q=80&w=1200&
 	</a>	
 </p>
 <p align="center" name="atomgit">
-	<a href="https://mp.weixin.qq.com/s/VXmJjQwsQlY-2IHjA3OAYA">
-  <img src="https://img.shields.io/badge/学习-AI编程-red" alt="AI编程">
+	<a href="https://t.zsxq.com/85BBo">
+  <img src="https://img.shields.io/badge/AI-免费用-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
   <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
