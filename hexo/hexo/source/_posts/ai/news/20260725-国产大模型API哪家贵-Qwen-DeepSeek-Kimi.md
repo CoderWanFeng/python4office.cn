@@ -133,7 +133,7 @@ GPT-5.6 Luna的价格降低80%，Kimi K3发布并且登顶子榜的榜一，Qwen
 
 最后附一个通过WorkBuddy免费用K3的方法：
 
-- 下载WorkBuddy，免费领取Token：https://www.workbuddy.cn/events/invite?inviteCode=ic1tpbrj2x
+- 下载WorkBuddy，免费领取Token：https://www.workbuddy.cn/events/invite?inviteCode=flmcbaugkh
 - 选择模型列表里提供的K3，不需要额外充值，消耗免费送的积分就可以。还可以选择完全免费的Hy3。
 
 ![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20260803151748844.png)
