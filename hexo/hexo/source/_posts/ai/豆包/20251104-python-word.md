@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://t.zsxq.com/85BBo">
+<a href="https://buzbuzz.com/invite/umg58z2x2pjk">
   <img src="https://img.shields.io/badge/AI-免费用-red" alt="AI编程">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">

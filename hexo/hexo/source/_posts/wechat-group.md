@@ -34,7 +34,7 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://t.zsxq.com/85BBo">
+<a href="https://buzbuzz.com/invite/umg58z2x2pjk">
   <img src="https://img.shields.io/badge/AI-免费用-red" alt="AI编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
@@ -52,7 +52,7 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 
 **和我一起学AI、用AI。**
 
-最直接的联系方式：👉 **加入我的知识星球**：[https://t.zsxq.com/85BBo](https://t.zsxq.com/85BBo)
+最直接的联系方式：👉 **加入我的知识星球**：[https://buzbuzz.com/invite/umg58z2x2pjk](https://buzbuzz.com/invite/umg58z2x2pjk)
 
 ![AI交流群](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
 
