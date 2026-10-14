@@ -8,6 +8,12 @@ description: 对标 Anthropic Claude Frontier Academy 的 residency 模型，从
 ---
 
 
+<p align="center" id='FDE-读者群-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%" alt="加入AI学习交流群，第一时间获取FDE课程更新"/>
+    </a>   
+</p>
+
 
 ![FDE 前沿部署工程师实战课](https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&fit=crop)
 ![FDE 前沿部署工程师实战课](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800)
@@ -133,7 +139,7 @@ description: 对标 Anthropic Claude Frontier Academy 的 residency 模型，从
 ## 🎯 学完你能拿到什么
 
 - ✅ 1 套生产级 LLM / RAG / Agent 项目代码（GitHub 作品集）
-- ✅ 1 套客户交付物模板包（业务画像 / 选型 ADR / 周报 / Playbook）
+- ✅ 1 套客户交付物方法论（业务画像 / 选型 ADR / 周报 / Playbook 都有标准章节）
 - ✅ 1 张能力雷达图，知道自己下一步补哪个能力
 - ✅ 1 份 FDE 求职简历模板 + 面试场景题集
 - ✅ 🥉 / 🥈 徽章认证（对应 Bronze / Silver 等级）
@@ -145,7 +151,7 @@ description: 对标 Anthropic Claude Frontier Academy 的 residency 模型，从
 | 资源类型 | 链接 | 说明 |
 |---|---|---|
 | 🌐 Frontier Academy 官方页面 | https://claude.com/programs/frontier-academy | 对标课程原始出处 |
-| 💬 学习群 | `python-office`（文末二维码） | 交流答疑 |
+| 💬 学习群 | `aiwf365`（文末二维码） | 交流答疑 |
 | 📦 课程代码 | 待补 GitHub 仓库 | 学员作品集示例 |
 | 📹 视频讲解 | 待补 B 站链接 | 4 天 Bootcamp 录播 |
 
@@ -158,6 +164,7 @@ description: 对标 Anthropic Claude Frontier Academy 的 residency 模型，从
 | 联系方式 | 入口 |
 |---|---|
 | 📱 微信 | `aiwf365`（扫码加好友，备注"FDE"） |
+| 💬 **AI 学习交流群** | [点我扫码加入 →](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q) |
 | 🌐 个人网站 | https://python4office.cn/ |
 
 <p align="center">

@@ -7,6 +7,12 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
+<p align="center" id='FDE-读者群-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%" alt="加入AI学习交流群，第一时间获取FDE课程更新"/>
+    </a>   
+</p>
+
 
 ![阶段三 · 能力分级与徽章体系](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop)
 
@@ -239,26 +245,6 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 ---
 
-## 📚 提交物模板库
-
-所有提交物对应模板见 `hexo/hexo/source/_posts/course/AI/fde/templates/`：
-
-```
-templates/
-├── 客户业务画像模板.md
-├── Stakeholder-Map模板.md
-├── ADR模板.md
-├── 5页技术方案PPT模板.md
-├── 评估报告模板.md
-├── 红队测试报告模板.md
-├── 安全审查报告模板.md
-├── SLO报告模板.md
-├── 业务方周报模板.md
-└── Playbook模板.md
-```
-
----
-
 ## ➡️ 下一步
 
 ### 你的下一步（按当前等级）
@@ -298,6 +284,7 @@ templates/
 | 联系方式 | 入口 |
 |---|---|
 | 📱 微信 | `aiwf365`（扫码加好友，备注"FDE"） |
+| 💬 **AI 学习交流群** | [点我扫码加入 →](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q) |
 | 🌐 个人网站 | https://python4office.cn/ |
 
 <p align="center">

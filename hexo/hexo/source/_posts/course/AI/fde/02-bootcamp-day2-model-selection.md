@@ -7,6 +7,12 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 ---
 
 
+<p align="center" id='FDE-读者群-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%" alt="加入AI学习交流群，第一时间获取FDE课程更新"/>
+    </a>   
+</p>
+
 
 ![Day 2 · 前沿模型与部署形态](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop)
 
@@ -236,6 +242,7 @@ curl http://localhost:8000/v1/chat/completions \
 | 联系方式 | 入口 |
 |---|---|
 | 📱 微信 | `aiwf365`（扫码加好友，备注"FDE"） |
+| 💬 **AI 学习交流群** | [点我扫码加入 →](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q) |
 | 🌐 个人网站 | https://python4office.cn/ |
 
 <p align="center">

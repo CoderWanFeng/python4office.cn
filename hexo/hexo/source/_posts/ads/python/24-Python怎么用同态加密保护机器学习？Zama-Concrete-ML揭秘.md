@@ -3,7 +3,7 @@ title: "Python 怎么用同态加密保护机器学习？Zama Concrete ML 揭秘
 date: 2026-06-20 17:46:55
 tags: ["Python", "同态加密", "FHE", "Zama", "AI工具", "公众号文章"]
 categories: ["公众号文章"]
-description: "Python 怎么用同态加密（FHE）保护机器学习？Zama Concrete ML 完整揭秘，让数据"加密状态"下做 ML"
+description: 'Python 怎么用同态加密（FHE）保护机器学习？Zama Concrete ML 完整揭秘，让数据在加密状态下做 ML'
 cover: https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop
 ---
 

@@ -1,3 +1,11 @@
+---
+title: AIHOT 热点日报创作指南
+date: 2026-10-14 12:00:00
+tags: [AIHOT, 创作指南, 工作流]
+categories: [创作指南]
+published: false
+---
+
 # AIHOT 热点日报创作指南
 
 > 本指南记录如何使用 `ai-hotspot-tracker` Skill 搜索 AI 热点，并把它写成 python4office.cn 的日报文章。

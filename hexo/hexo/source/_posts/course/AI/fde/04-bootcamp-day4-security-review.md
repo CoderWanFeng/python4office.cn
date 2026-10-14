@@ -7,6 +7,12 @@ cover: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&aut
 ---
 
 
+<p align="center" id='FDE-读者群-banner'>
+    <a target="_blank" href='https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q'>
+    <img src="https://raw.atomgit.com/user-images/assets/5027920/87fc1ca4-1a6c-47b8-b234-3e323a1aa827/aiq.jpg" width="100%" alt="加入AI学习交流群，第一时间获取FDE课程更新"/>
+    </a>   
+</p>
+
 
 ![Day 4 · 安全、合规与红队演练](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop)
 
@@ -378,6 +384,7 @@ def run_agent_safe(user_query: str, user_role: str = "employee"):
 | 联系方式 | 入口 |
 |---|---|
 | 📱 微信 | `aiwf365`（扫码加好友，备注"FDE"） |
+| 💬 **AI 学习交流群** | [点我扫码加入 →](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q) |
 | 🌐 个人网站 | https://python4office.cn/ |
 
 <p align="center">
