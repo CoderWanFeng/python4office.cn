@@ -37,8 +37,8 @@ cover: https://images.unsplash.com/photo-1517077304055-8e7232e8e848?w=800&h=400&
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-<a href="https://buzbuzz.com/invite/umg58z2x2pjk">
-  <img src="https://img.shields.io/badge/AI-免费用-red" alt="AI编程">
+<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
+  <img src="https://img.shields.io/badge/AI-学习AI-red" alt="实战">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
   <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">

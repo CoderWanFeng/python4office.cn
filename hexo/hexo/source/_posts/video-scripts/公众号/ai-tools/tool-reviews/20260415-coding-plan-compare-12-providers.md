@@ -49,7 +49,7 @@ cover: https://images.unsplash.com/photo-155849494?w=800&h=400&fit=crop
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://buzbuzz.com/invite/umg58z2x2pjk">
+<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
   <img src="https://img.shields.io/badge/学习-AI 编程-red" alt="AI 编程">
 </a>
     	<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">

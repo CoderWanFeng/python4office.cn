@@ -20,7 +20,7 @@
     topCloseDays: 1,
 
     // ⑥ 文中段落广告 → 知识星球
-    inlineUrl: 'https://buzbuzz.com/invite/umg58z2x2pjk',
+    inlineUrl: 'https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q',
     inlineEvery: 5,
     inlineMax: 1,
     inlineMinParas: 5,
