@@ -274,7 +274,7 @@ Claude Opus 是目前最强的代码模型之一，在复杂代码重构、架�
 - [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/RhE4lEpCV3qWT12wy2qMsg)
 - [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
-- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
+- [7 年前 我写下的梦想，今天一看全都实现了](https://mp.weixin.qq.com/s/rwp02LwBTob4d9XQ03Tr2w)
 
 ---
 

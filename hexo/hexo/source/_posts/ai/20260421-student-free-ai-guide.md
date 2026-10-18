@@ -373,8 +373,8 @@ cover: https://images.unsplash.com/photo-1677442136019-235d647109c6?q=80&w=1200&
 **往期推荐：**
 
 - [好险！差点被裁，多亏我学了AI](https://mp.weixin.qq.com/s/Jr1bGTob2SU2TTX6q-b2hA)
-- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
-- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
+- [7 年前 我写下的梦想，今天一看全都实现了](https://mp.weixin.qq.com/s/rwp02LwBTob4d9XQ03Tr2w)
+- [7 年前 我写下的梦想，今天一看全都实现了](https://mp.weixin.qq.com/s/rwp02LwBTob4d9XQ03Tr2w)
 
 **END**
 

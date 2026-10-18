@@ -202,7 +202,7 @@ AI生成的方案，95分和100分之间的差距，往往就在最后那几轮�
 
 ## 相关阅读
 
-- [我的建站搭子skill，入职腾讯QClaw了！动动嘴就能建网站](https://mp.weixin.qq.com/s/XEe9yMpseRvMizhWcbnEoA)
+- [7 年前 我写下的梦想，今天一看全都实现了](https://mp.weixin.qq.com/s/rwp02LwBTob4d9XQ03Tr2w)
 - [PPT制作神器！Claude Code审美直接封神](https://mp.weixin.qq.com/s/obGJ2cSLieX2K7ryOdMFpw)
 - [日入1000后，我把个人网站开源了：拿走代码，你也能跑](https://mp.weixin.qq.com/s/imuuUYYFopkrRlEABUl1IA)
 
