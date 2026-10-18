@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&
 
 | 上一模块 | 本模块位置 | 下一模块 |
 |---|---|---|
-| [模块 2 · 解决方案设计](./06-residency-module2-solution-design) | **模块 3 / 共 8 模块（第 5-7 周）** | [模块 4 · 企业系统集成](./08-residency-module4-enterprise-integration) |
+| [模块 2 · 解决方案设计](/course/AI/fde/06-residency-module2-solution-design/) | **模块 3 / 共 8 模块（第 5-7 周）** | [模块 4 · 企业系统集成](/course/AI/fde/08-residency-module4-enterprise-integration/) |
 
 ---
 
@@ -350,7 +350,7 @@ llm = ChatOpenAI(model="gpt-4o")
 - [ ] mentor 1v1 review 通过（第 7 周末）
 
 ### 下一步行动
-1. [ ] 进入 [模块 4 · 企业系统集成（第 8 周）](./08-residency-module4-enterprise-integration)
+1. [ ] 进入 [模块 4 · 企业系统集成（第 8 周）](/course/AI/fde/08-residency-module4-enterprise-integration/)
 2. [ ] 把 RAG + Agent 接到客户的 OA / CRM / 飞书
 3. [ ] 处理客户的数据合规要求
 
@@ -362,7 +362,7 @@ llm = ChatOpenAI(model="gpt-4o")
 - 你将学到：Webhook / 中间表 / iPaaS 三种对接模式 + SSO / SAML 集成
 - 实战任务：跑通 1 次端到端集成（客户系统 → AI 服务）
 
-👉 [继续阅读模块 4](./08-residency-module4-enterprise-integration)
+👉 [继续阅读模块 4](/course/AI/fde/08-residency-module4-enterprise-integration/)
 
 ---
 

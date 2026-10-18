@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&aut
 
 | 上一节 | 本节位置 | 下一节 |
 |---|---|---|
-| [Day 3 · Agent 构建实战](./03-bootcamp-day3-agent-build) | **Day 4 / 共 4 天（最后一天）** | [阶段二 · 12 周 Residency 入口](./05-residency-module1-customer-embedding) |
+| [Day 3 · Agent 构建实战](/course/AI/fde/03-bootcamp-day3-agent-build/) | **Day 4 / 共 4 天（最后一天）** | [阶段二 · 12 周 Residency 入口](/course/AI/fde/05-residency-module1-customer-embedding/) |
 
 ---
 
@@ -361,7 +361,7 @@ def run_agent_safe(user_query: str, user_role: str = "employee"):
 3. [ ] 把红队发现的问题用任务 3 的 Guardrails 补上
 4. [ ] 输出 1 份《安全审查报告 v1.0》
 5. [ ] 提交 Bootcamp 4 天成果，解锁 🥉 Bronze 徽章
-6. [ ] 进入 [阶段二 · 12 周 Residency](./05-residency-module1-customer-embedding)
+6. [ ] 进入 [阶段二 · 12 周 Residency](/course/AI/fde/05-residency-module1-customer-embedding/)
 
 ---
 
@@ -373,7 +373,7 @@ def run_agent_safe(user_query: str, user_role: str = "employee"):
 - 你将学到：客户业务画像、Stakeholder Map、关键决策链识别
 - 实战任务：交付《客户业务画像 v1.0》
 
-👉 [进入 Residency](./05-residency-module1-customer-embedding)
+👉 [进入 Residency](/course/AI/fde/05-residency-module1-customer-embedding/)
 
 ---
 

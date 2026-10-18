@@ -59,10 +59,10 @@ description: 对标 Anthropic Claude Frontier Academy 的 residency 模型，从
 
 | 天 | 主题 | 实操评估 |
 |---|---|---|
-| **Day 1** | [FDE 角色与高能动性](./01-bootcamp-day1-high-agency) | 1 次模拟客户访谈 + Stakeholder Map |
-| **Day 2** | [前沿模型与部署形态](./02-bootcamp-day2-model-selection) | 决策矩阵 + 1 份 ADR |
-| **Day 3** | [Agent 系统构建实战](./03-bootcamp-day3-agent-build) | 限定时间内搭 1 个可用的 Agent Demo |
-| **Day 4** | [安全、合规与红队演练](./04-bootcamp-day4-security-review) | 安全自审 + 红队演练 |
+| **Day 1** | [FDE 角色与高能动性](/course/AI/fde/01-bootcamp-day1-high-agency/) | 1 次模拟客户访谈 + Stakeholder Map |
+| **Day 2** | [前沿模型与部署形态](/course/AI/fde/02-bootcamp-day2-model-selection/) | 决策矩阵 + 1 份 ADR |
+| **Day 3** | [Agent 系统构建实战](/course/AI/fde/03-bootcamp-day3-agent-build/) | 限定时间内搭 1 个可用的 Agent Demo |
+| **Day 4** | [安全、合规与红队演练](/course/AI/fde/04-bootcamp-day4-security-review/) | 安全自审 + 红队演练 |
 
 > 集训通过 → 解锁 🥉 Bronze · Bootcamp Pass Badge → 进入 Residency
 
@@ -72,14 +72,14 @@ description: 对标 Anthropic Claude Frontier Academy 的 residency 模型，从
 
 | 周 | 主题 | 交付物 |
 |---|---|---|
-| **1-2** | [模块 1 · 客户嵌入与业务翻译](./05-residency-module1-customer-embedding) | 《客户业务画像 v1.0》+ Stakeholder Map |
-| **3-4** | [模块 2 · 解决方案设计与 ADR](./06-residency-module2-solution-design) | 5 页技术方案 PPT + ADR v1.0 |
-| **5-7** | [模块 3 · LLM 生产化工程（核心）](./07-residency-module3-llm-engineering) | 1 个可演示的 RAG + Agent 系统（覆盖 50 个真实问题） |
-| **8** | [模块 4 · 企业系统集成](./08-residency-module4-enterprise-integration) | 端到端集成跑通（客户系统 → AI 服务） |
-| **9** | [模块 5 · 私有化部署与基础设施](./09-residency-module5-private-deployment) | 部署到客户测试环境并跑通 |
-| **10** | [模块 7 · 安全审查与合规闭环（贯穿全程）](./10-residency-module7-security-compliance) | 《安全审查报告 v1.0》+ 红队测试记录 |
-| **11** | [模块 6 · 可观测性与稳定性](./11-residency-module6-observability) | 1 份 SLO 报告 + 1 次混沌演练记录 |
-| **12** | [模块 8 · 业务指标与交付艺术](./12-residency-module8-business-metrics) | 1 份业务方周报 + 1 个 Playbook 文档 |
+| **1-2** | [模块 1 · 客户嵌入与业务翻译](/course/AI/fde/05-residency-module1-customer-embedding/) | 《客户业务画像 v1.0》+ Stakeholder Map |
+| **3-4** | [模块 2 · 解决方案设计与 ADR](/course/AI/fde/06-residency-module2-solution-design/) | 5 页技术方案 PPT + ADR v1.0 |
+| **5-7** | [模块 3 · LLM 生产化工程（核心）](/course/AI/fde/07-residency-module3-llm-engineering/) | 1 个可演示的 RAG + Agent 系统（覆盖 50 个真实问题） |
+| **8** | [模块 4 · 企业系统集成](/course/AI/fde/08-residency-module4-enterprise-integration/) | 端到端集成跑通（客户系统 → AI 服务） |
+| **9** | [模块 5 · 私有化部署与基础设施](/course/AI/fde/09-residency-module5-private-deployment/) | 部署到客户测试环境并跑通 |
+| **10** | [模块 7 · 安全审查与合规闭环（贯穿全程）](/course/AI/fde/10-residency-module7-security-compliance/) | 《安全审查报告 v1.0》+ 红队测试记录 |
+| **11** | [模块 6 · 可观测性与稳定性](/course/AI/fde/11-residency-module6-observability/) | 1 份 SLO 报告 + 1 次混沌演练记录 |
+| **12** | [模块 8 · 业务指标与交付艺术](/course/AI/fde/12-residency-module8-business-metrics/) | 1 份业务方周报 + 1 个 Playbook 文档 |
 
 > 驻场通过 → 解锁 🥈 Silver · Residency Pass Badge → 获得 "Frontier Deployed Engineer - Junior" 认证
 
@@ -87,7 +87,7 @@ description: 对标 Anthropic Claude Frontier Academy 的 residency 模型，从
 
 ### 阶段三 · 能力分级与徽章体系
 
-详细标准见 [13-badges-and-certification.md](./13-badges-and-certification)
+详细标准见 [13-badges-and-certification.md](/course/AI/fde/13-badges-and-certification/)
 
 | 徽章 | 等级 | 能力要求 | 对应身份 |
 |---|---|---|---|

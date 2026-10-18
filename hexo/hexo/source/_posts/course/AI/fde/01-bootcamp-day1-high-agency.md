@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&aut
 
 | 上一节 | 本节位置 | 下一节 |
 |---|---|---|
-| [README · 课程总览](./00-fde-overview) | **Day 1 / 共 4 天** | [Day 2 · 模型与部署形态](./02-bootcamp-day2-model-selection) |
+| [README · 课程总览](/course/AI/fde/2026-10-14-fde-overview/) | **Day 1 / 共 4 天** | [Day 2 · 模型与部署形态](/course/AI/fde/02-bootcamp-day2-model-selection/) |
 
 **本节在课程体系中的位置：**
 ```
@@ -233,7 +233,7 @@ Bootcamp 4 天集训
 1. [ ] 找一个朋友做 1 次 30 分钟角色扮演访谈
 2. [ ] 把访谈结果画成 Stakeholder Map
 3. [ ] 输出 1 份《客户业务画像 v0.1》
-4. [ ] 进入 [Day 2 · 前沿模型与部署形态](./02-bootcamp-day2-model-selection)
+4. [ ] 进入 [Day 2 · 前沿模型与部署形态](/course/AI/fde/02-bootcamp-day2-model-selection/)
 
 ---
 
@@ -252,7 +252,7 @@ Bootcamp 4 天集训
 - 你将学到：闭源旗舰 / 开源自托管 / 私有化 三种部署形态的选型逻辑
 - 实战任务：用决策矩阵 + ADR 说服 CTO
 
-👉 [继续阅读 Day 2](./02-bootcamp-day2-model-selection)
+👉 [继续阅读 Day 2](/course/AI/fde/02-bootcamp-day2-model-selection/)
 
 ---
 

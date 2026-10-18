@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&
 
 | 上一节 | 本节位置 | 下一节 |
 |---|---|---|
-| [Day 2 · 模型与部署形态](./02-bootcamp-day2-model-selection) | **Day 3 / 共 4 天** | [Day 4 · 安全与红队演练](./04-bootcamp-day4-security-review) |
+| [Day 2 · 模型与部署形态](/course/AI/fde/02-bootcamp-day2-model-selection/) | **Day 3 / 共 4 天** | [Day 4 · 安全与红队演练](/course/AI/fde/04-bootcamp-day4-security-review/) |
 
 ---
 
@@ -371,7 +371,7 @@ print(run_agent("查日历、发邮件、提交工单三件事一起做：先看
 1. [ ] 用任务 1-4 的模板搭 1 个自己的 Agent Demo
 2. [ ] 跑 1 次 Ragas 评估，记录失败 case
 3. [ ] 把 Agent 接入 LangSmith，看 trace
-4. [ ] 进入 [Day 4 · 安全与红队演练](./04-bootcamp-day4-security-review)
+4. [ ] 进入 [Day 4 · 安全与红队演练](/course/AI/fde/04-bootcamp-day4-security-review/)
 
 ---
 
@@ -381,7 +381,7 @@ print(run_agent("查日历、发邮件、提交工单三件事一起做：先看
 - 你将学到：提示词注入防护、数据脱敏、Guardrails、红队测试
 - 实战任务：对 Day 3 的 Agent 做 1 次完整安全自审 + 红队演练
 
-👉 [继续阅读 Day 4](./04-bootcamp-day4-security-review)
+👉 [继续阅读 Day 4](/course/AI/fde/04-bootcamp-day4-security-review/)
 
 ---
 

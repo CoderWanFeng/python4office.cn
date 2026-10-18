@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?q=80&w=1200&
 
 | 上一节 | 本模块位置 | 下一模块 |
 |---|---|---|
-| [Day 4 · 安全与红队演练](./04-bootcamp-day4-security-review) | **模块 1 / 共 8 模块（第 1-2 周）** | [模块 2 · 解决方案设计与 ADR](./06-residency-module2-solution-design) |
+| [Day 4 · 安全与红队演练](/course/AI/fde/04-bootcamp-day4-security-review/) | **模块 1 / 共 8 模块（第 1-2 周）** | [模块 2 · 解决方案设计与 ADR](/course/AI/fde/06-residency-module2-solution-design/) |
 
 ---
 
@@ -234,7 +234,7 @@ cover: https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?q=80&w=1200&
 - [ ] mentor 1v1 review 通过（第 2 周末）
 
 ### 下一步行动
-1. [ ] 进入 [模块 2 · 解决方案设计与 ADR（第 3-4 周）](./06-residency-module2-solution-design)
+1. [ ] 进入 [模块 2 · 解决方案设计与 ADR（第 3-4 周）](/course/AI/fde/06-residency-module2-solution-design/)
 2. [ ] 准备技术方案 v0.1
 3. [ ] 跟决策人对齐方案方向
 
@@ -246,7 +246,7 @@ cover: https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?q=80&w=1200&
 - 你将学到：C4 Model 画系统视图、写出能说服 CTO 的 ADR
 - 实战任务：5 页技术方案 PPT + ADR v1.0
 
-👉 [继续阅读模块 2](./06-residency-module2-solution-design)
+👉 [继续阅读模块 2](/course/AI/fde/06-residency-module2-solution-design/)
 
 ---
 

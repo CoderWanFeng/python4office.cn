@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&aut
 
 | 上一模块 | 本模块位置 | 下一模块 |
 |---|---|---|
-| [模块 5 · 私有化部署](./09-residency-module5-private-deployment) | **模块 7 / 共 8 模块（第 10 周）** | [模块 6 · 可观测性](./11-residency-module6-observability) |
+| [模块 5 · 私有化部署](/course/AI/fde/09-residency-module5-private-deployment/) | **模块 7 / 共 8 模块（第 10 周）** | [模块 6 · 可观测性](/course/AI/fde/11-residency-module6-observability/) |
 
 > **注意**：模块 7 编号排在 7 是因为它是**贯穿全程**的安全审查，前面每个模块都要把安全检查做掉，第 10 周做总体验收。
 
@@ -419,7 +419,7 @@ def audit_log(user_id, action, details):
 - [ ] mentor 1v1 review 通过
 
 ### 下一步行动
-1. [ ] 进入 [模块 6 · 可观测性与稳定性（第 11 周）](./11-residency-module6-observability)
+1. [ ] 进入 [模块 6 · 可观测性与稳定性（第 11 周）](/course/AI/fde/11-residency-module6-observability/)
 2. [ ] 给整套服务接 Prometheus + Grafana
 3. [ ] 做 1 次混沌演练
 
@@ -431,7 +431,7 @@ def audit_log(user_id, action, details):
 - 你将学到：LLM 链路追踪、Metrics / Logs / Trace、混沌演练
 - 实战任务：1 份 SLO 报告 + 1 次混沌演练记录
 
-👉 [继续阅读模块 6](./11-residency-module6-observability)
+👉 [继续阅读模块 6](/course/AI/fde/11-residency-module6-observability/)
 
 ---
 

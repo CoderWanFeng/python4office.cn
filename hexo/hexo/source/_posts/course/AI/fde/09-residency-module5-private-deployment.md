@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&aut
 
 | 上一模块 | 本模块位置 | 下一模块 |
 |---|---|---|
-| [模块 4 · 企业系统集成](./08-residency-module4-enterprise-integration) | **模块 5 / 共 8 模块（第 9 周）** | [模块 7 · 安全审查与合规](./10-residency-module7-security-compliance) |
+| [模块 4 · 企业系统集成](/course/AI/fde/08-residency-module4-enterprise-integration/) | **模块 5 / 共 8 模块（第 9 周）** | [模块 7 · 安全审查与合规](/course/AI/fde/10-residency-module7-security-compliance/) |
 
 ---
 
@@ -376,7 +376,7 @@ tar -xzf /models/qwen3-72b.tar.gz -C /opt/models/
 - [ ] 1 份《离线部署手册》
 
 ### 下一步行动
-1. [ ] 进入 [模块 7 · 安全审查与合规（第 10 周）](./10-residency-module7-security-compliance)
+1. [ ] 进入 [模块 7 · 安全审查与合规（第 10 周）](/course/AI/fde/10-residency-module7-security-compliance/)
 2. [ ] 给整套服务补安全审查
 3. [ ] 输出 1 份《安全审查报告 v1.0》
 
@@ -388,7 +388,7 @@ tar -xzf /models/qwen3-72b.tar.gz -C /opt/models/
 - 你将学到：提示词注入防护、数据脱敏、Guardrails、红队测试
 - 实战任务：1 份《安全审查报告 v1.0》+ 1 次红队测试记录
 
-👉 [继续阅读模块 7](./10-residency-module7-security-compliance)
+👉 [继续阅读模块 7](/course/AI/fde/10-residency-module7-security-compliance/)
 
 ---
 

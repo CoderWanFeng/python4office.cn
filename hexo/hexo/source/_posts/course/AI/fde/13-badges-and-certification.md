@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 | 上一阶段 | 本阶段位置 |
 |---|---|
-| [模块 8 · 业务指标与交付艺术](./12-residency-module8-business-metrics) | **阶段三 · 徽章体系** |
+| [模块 8 · 业务指标与交付艺术](/course/AI/fde/12-residency-module8-business-metrics/) | **阶段三 · 徽章体系** |
 
 ---
 

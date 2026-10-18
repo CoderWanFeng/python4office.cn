@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&
 
 | 上一模块 | 本模块位置 | 下一阶段 |
 |---|---|---|
-| [模块 6 · 可观测性](./11-residency-module6-observability) | **模块 8 / 共 8 模块（第 12 周，最后一周）** | [阶段三 · 徽章认证](./13-badges-and-certification) |
+| [模块 6 · 可观测性](/course/AI/fde/11-residency-module6-observability/) | **模块 8 / 共 8 模块（第 12 周，最后一周）** | [阶段三 · 徽章认证](/course/AI/fde/13-badges-and-certification/) |
 
 ---
 
@@ -347,7 +347,7 @@ cover: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&
 - ✅ 获得 "Frontier Deployed Engineer - Junior" 认证
 
 ### 下一步行动
-1. [ ] 进入 [阶段三 · 徽章认证](./13-badges-and-certification)
+1. [ ] 进入 [阶段三 · 徽章认证](/course/AI/fde/13-badges-and-certification/)
 2. [ ] 申请 Silver 徽章
 3. [ ] 准备 Gold 阶段的路径（主导 ≥3 个生产项目 + 培养 ≥1 名 Junior FDE）
 
@@ -361,7 +361,7 @@ cover: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&
 🥈 **Silver · Residency Pass** ← 你在这里
 🥇 Gold · Deployment Lead
 
-👉 [进入阶段三](./13-badges-and-certification)
+👉 [进入阶段三](/course/AI/fde/13-badges-and-certification/)
 
 ---
 

@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&aut
 
 | 上一模块 | 本模块位置 | 下一模块 |
 |---|---|---|
-| [模块 3 · LLM 生产化工程](./07-residency-module3-llm-engineering) | **模块 4 / 共 8 模块（第 8 周）** | [模块 5 · 私有化部署](./09-residency-module5-private-deployment) |
+| [模块 3 · LLM 生产化工程](/course/AI/fde/07-residency-module3-llm-engineering/) | **模块 4 / 共 8 模块（第 8 周）** | [模块 5 · 私有化部署](/course/AI/fde/09-residency-module5-private-deployment/) |
 
 ---
 
@@ -248,7 +248,7 @@ async def chat(query: str, user=Depends(verify_token)):
 - [ ] 数据流向图（在 ADR 里更新）
 
 ### 下一步行动
-1. [ ] 进入 [模块 5 · 私有化部署（第 9 周）](./09-residency-module5-private-deployment)
+1. [ ] 进入 [模块 5 · 私有化部署（第 9 周）](/course/AI/fde/09-residency-module5-private-deployment/)
 2. [ ] 把整套服务打包 Docker
 3. [ ] 准备客户的 K8s 部署
 
@@ -260,7 +260,7 @@ async def chat(query: str, user=Depends(verify_token)):
 - 你将学到：Docker / Compose / K8s / Helm + 国产化
 - 实战任务：把模块 3-4 的系统部署到客户测试环境
 
-👉 [继续阅读模块 5](./09-residency-module5-private-deployment)
+👉 [继续阅读模块 5](/course/AI/fde/09-residency-module5-private-deployment/)
 
 ---
 

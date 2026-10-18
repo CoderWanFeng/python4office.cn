@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&
 
 | 上一模块 | 本模块位置 | 下一模块 |
 |---|---|---|
-| [模块 1 · 客户嵌入](./05-residency-module1-customer-embedding) | **模块 2 / 共 8 模块（第 3-4 周）** | [模块 3 · LLM 生产化工程](./07-residency-module3-llm-engineering) |
+| [模块 1 · 客户嵌入](/course/AI/fde/05-residency-module1-customer-embedding/) | **模块 2 / 共 8 模块（第 3-4 周）** | [模块 3 · LLM 生产化工程](/course/AI/fde/07-residency-module3-llm-engineering/) |
 
 ---
 
@@ -258,7 +258,7 @@ PPT-5 · 投入产出
 - [ ] CTO 评审通过 + 决策人确认方向
 
 ### 下一步行动
-1. [ ] 进入 [模块 3 · LLM 生产化工程（第 5-7 周）](./07-residency-module3-llm-engineering)
+1. [ ] 进入 [模块 3 · LLM 生产化工程（第 5-7 周）](/course/AI/fde/07-residency-module3-llm-engineering/)
 2. [ ] 启动 RAG / Agent 的实际开发
 3. [ ] 准备 50 题测试集
 
@@ -270,7 +270,7 @@ PPT-5 · 投入产出
 - 你将学到：Prompt 工程化、RAG 全套、Agent 工程、评估体系
 - 实战任务：1 个可演示的 RAG + Agent 系统（覆盖 50 个真实问题）
 
-👉 [继续阅读模块 3](./07-residency-module3-llm-engineering)
+👉 [继续阅读模块 3](/course/AI/fde/07-residency-module3-llm-engineering/)
 
 ---
 

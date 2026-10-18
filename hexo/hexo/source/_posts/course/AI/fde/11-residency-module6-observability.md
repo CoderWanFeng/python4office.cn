@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&aut
 
 | 上一模块 | 本模块位置 | 下一模块 |
 |---|---|---|
-| [模块 7 · 安全审查](./10-residency-module7-security-compliance) | **模块 6 / 共 8 模块（第 11 周）** | [模块 8 · 业务指标与交付](./12-residency-module8-business-metrics) |
+| [模块 7 · 安全审查](/course/AI/fde/10-residency-module7-security-compliance/) | **模块 6 / 共 8 模块（第 11 周）** | [模块 8 · 业务指标与交付](/course/AI/fde/12-residency-module8-business-metrics/) |
 
 ---
 
@@ -406,7 +406,7 @@ docker stop postgres
 - [ ] mentor 1v1 review 通过
 
 ### 下一步行动
-1. [ ] 进入 [模块 8 · 业务指标与交付艺术（第 12 周）](./12-residency-module8-business-metrics)
+1. [ ] 进入 [模块 8 · 业务指标与交付艺术（第 12 周）](/course/AI/fde/12-residency-module8-business-metrics/)
 2. [ ] 定义北极星指标
 3. [ ] 写最后 1 份客户周报
 4. [ ] 沉淀 1 个可复用的 Playbook
@@ -419,7 +419,7 @@ docker stop postgres
 - 你将学到：业务指标定义、运营节奏、Playbook 沉淀
 - 实战任务：1 份业务方周报 + 1 个 Playbook 文档
 
-👉 [继续阅读模块 8](./12-residency-module8-business-metrics)
+👉 [继续阅读模块 8](/course/AI/fde/12-residency-module8-business-metrics/)
 
 ---
 

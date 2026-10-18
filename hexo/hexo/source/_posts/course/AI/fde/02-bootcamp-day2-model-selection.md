@@ -37,7 +37,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 | 上一节 | 本节位置 | 下一节 |
 |---|---|---|
-| [Day 1 · 角色与高能动性](./01-bootcamp-day1-high-agency) | **Day 2 / 共 4 天** | [Day 3 · Agent 构建实战](./03-bootcamp-day3-agent-build) |
+| [Day 1 · 角色与高能动性](/course/AI/fde/01-bootcamp-day1-high-agency/) | **Day 2 / 共 4 天** | [Day 3 · Agent 构建实战](/course/AI/fde/03-bootcamp-day3-agent-build/) |
 
 ---
 
@@ -221,7 +221,7 @@ curl http://localhost:8000/v1/chat/completions \
 1. [ ] 拿任意 AI 项目做 1 张决策矩阵
 2. [ ] 输出 1 份 1 页 ADR
 3. [ ] 本地跑通 vLLM + 任意开源模型
-4. [ ] 进入 [Day 3 · Agent 构建实战](./03-bootcamp-day3-agent-build)
+4. [ ] 进入 [Day 3 · Agent 构建实战](/course/AI/fde/03-bootcamp-day3-agent-build/)
 
 ---
 
@@ -231,7 +231,7 @@ curl http://localhost:8000/v1/chat/completions \
 - 你将学到：Prompt 工程、RAG 全套、Agent 工具调用
 - 实战任务：限定时间内搭 1 个可用的 Agent Demo
 
-👉 [继续阅读 Day 3](./03-bootcamp-day3-agent-build)
+👉 [继续阅读 Day 3](/course/AI/fde/03-bootcamp-day3-agent-build/)
 
 ---
 
