@@ -67,7 +67,7 @@ AI Claude：https://curl.qcloud.com/I4IFQqEG
 
 AI Hermes：https://curl.qcloud.com/uk3GZ12l
 
-AI学习群：https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q
+AI学习群：https://python4office.cn/wechat-group/
 
 AI漫画：https://www.aliyun.com/solution/tech-solution/use-bailian-to-intelligently-create-comics?scm=20140722.M_11009928.P_102.MO_4509-ID_10964966-MID_10964966-CID_10964966-ST_14271-V_1&source=5176.29345612&userCode=t6duaoe1
 

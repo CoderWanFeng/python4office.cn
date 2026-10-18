@@ -19,7 +19,7 @@ cover: https://images.unsplash.com/photo-1544716278-ca5e3f4abd?q=80&w=1200&auto=
     <a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
     <img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
     </a>
-<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
+<a href="https://python4office.cn/wechat-group/">
   <img src="https://img.shields.io/badge/Learn-AI%20Programming-red" alt="AI编程">
 </a>
     <a href="https://www.python4office.cn/wechat-group/">

@@ -20,7 +20,7 @@
     topCloseDays: 1,
 
     // ⑥ 文中段落广告 → 知识星球
-    inlineUrl: 'https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q',
+    inlineUrl: 'https://python4office.cn/wechat-group/',
     inlineEvery: 5,
     inlineMax: 1,
     inlineMinParas: 5,

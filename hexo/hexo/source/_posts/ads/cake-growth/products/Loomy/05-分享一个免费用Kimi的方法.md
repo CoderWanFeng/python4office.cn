@@ -3,14 +3,14 @@ title: 05-分享一个免费用Kimi的方法
 date: 2026-10-13 22:41:00
 tags: ["公众号文章", "AI工具", "AI大模型", "Loomy", "Kimi"]
 categories: ["公众号文章", "Python自动化办公社区"]
-cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/loomy-kimi-cover.jpg
+cover: https://cdn.pixabay.com/photo/2024/03/20/11/44/ai-generated-8646658_1280.jpg
 ---
 
 大家好，我是程序员晚枫（Wayne Liu）。
 
-昨天有个朋友问我：晚枫，你说的这些国产大模型里，**哪个推理能力最强？**
+昨天有个朋友问我：晚枫，你说的这些大模型里，**哪个推理能力最强？**
 
-我想了想，给了他一个答案：我心里的国产最强是Qwen，但要论性价比是**Kimi。**
+我想了想，给了他一个答案：**Kimi。**
 
 这个模型有个特点：别的模型做不出来的题、搞不定的推理、绕不过去的逻辑，丢给Kimi，它经常能给你整明白。
 
@@ -254,7 +254,7 @@ Kimi这种级别的推理模型，放在别的平台，要么按月收费，要�
 
 - [用上OpenCode的5个免费大模型，省了我200刀ChatGPT年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
 - [一共600美元！免费使用6个月CodeX Pro](https://mp.weixin.qq.com/s/TVNl4jjJvO-kfOw1sk2Qsg)
-- [我为什么想当程序员呢？](https://mp.weixin.qq.com/s/9BDXVzwEQiRz5WNnqHTXqQ)
+- [比AI更可怕的是：你同事已经开始用AI工作了](https://mp.weixin.qq.com/s/f5fb9e08b39d1880924ce34a88bc8cb0)
 
 ---
 

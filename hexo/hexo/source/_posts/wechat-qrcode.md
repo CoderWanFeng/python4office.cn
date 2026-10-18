@@ -23,7 +23,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
+<a href="https://www.bilibili.com/cheese/play/ss982042944">
   <img src="https://img.shields.io/badge/AI-学习AI-red" alt="实战">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -45,7 +45,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 添加好友，备注里请**说明来意**，否则不通过。
 
 - 商务合作，请添加微信号：aiwf365，这个号只聊付费合作。非合作，只需咨询/交流，请加入⬇️群后私信群主
-- 读者粉丝，请加入AI 学习交流群：[点我加入](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+- 读者粉丝，请加入AI 学习交流群：[点我加入](https://python4office.cn/wechat-group/)
 
 
 # 2、AI编程

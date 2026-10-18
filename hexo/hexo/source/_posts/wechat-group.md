@@ -34,10 +34,10 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
+<a href="https://www.bilibili.com/cheese/play/ss982042944">
   <img src="https://img.shields.io/badge/AI-学习AI-red" alt="实战">
 </a>
-    	<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
+    	<a href="https://python4office.cn/wechat-group/">
   <img src="https://img.shields.io/badge/加入-AI交流群-brightgreen" alt="AI交流群">
 </a>
 
@@ -45,27 +45,23 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 
 
 
-
-# 想联系我就加入知识星球
+# 想联系我？加入 AI 免费交流群
 
 你好，我是程序员晚枫。
 
 **和我一起学AI、用AI。**
 
-最直接的联系方式：👉 **加入我的知识星球**：[https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+最直接的联系方式：👉 **扫码加入 AI 免费交流群**：
 
-![AI交流群](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![AI交流群](https://raw.atomgit.com/python4office/hexo-public/raw/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261018131720_125_520.jpg)
 
-💬 **加入后联系我加微信（微信号 `aiwf365`）**，我拉你进 45 元付费微信群。**你加入星球，免费进 45 元群** —— 日常答疑、资源分享都在群里实时同步。
-
-在知识星球里，我会持续分享：
+**群内持续分享：**
 
 - 💡 持续更新免费用 AI 大模型的方法和技巧
 - 🎯 AI 实战案例 + 工具测评
+- � AI 学习资源、行业资讯
 
-
-
-> 💡 这个 **45 元付费微信群**，星球成员免费进。非星球成员付费入口：[点此付费加入](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)（不会私信任何人，有广告请群主移除）
+> 群完全免费，欢迎所有对 AI 感兴趣的朋友加入。**入群后请勿发广告，违者移除。**
 
 
 ## AI 学习交流

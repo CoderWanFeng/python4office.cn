@@ -207,7 +207,7 @@ AI助手已经不再是科幻电影里的场景，而是**每个人都能拥有�
 
 现场手把手教学，比看文章更直观。
 
-👉 **[点击报名龙虾公开课](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)**
+👉 **[点击报名龙虾公开课](https://python4office.cn/wechat-group/)**
 
 选择权在你手里。
 

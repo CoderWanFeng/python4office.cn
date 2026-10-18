@@ -243,7 +243,7 @@ jdk、jre、jvm的关系：https://blog.csdn.net/qq_47183158/article/details/123
     	<a target="_blank" href='https://gitee.com/CoderWanFeng/python-office'>
 		<img src='https://gitee.com/CoderWanFeng//python-office/badge/star.svg?theme=dark' alt='gitee star'/>
 	</a>
-<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
+<a href="https://www.bilibili.com/cheese/play/ss982042944">
   <img src="https://img.shields.io/badge/AI-学习AI-red" alt="实战">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">

@@ -30,7 +30,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 	<a target="_blank" href='https://atomgit.com/CoderWanFeng1/python-office'>
 <img src="https://static.pepy.tech/badge/python-office" alt="PyPI Downloads">
 </a>
-<a href="https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q">
+<a href="https://www.bilibili.com/cheese/play/ss982042944">
   <img src="https://img.shields.io/badge/AI-学习AI-red" alt="实战">
 </a>
     	<a href="https://www.python4office.cn/wechat-group/">
@@ -143,7 +143,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 
 我会把我的每一个项目、每一次分享，都同步到我的AI学习交流群，并且邀请有能力、有兴趣的朋友一起加入我的项目。
 
-想关注我的AI项目的朋友，欢迎加入我的👉[AI学习交流群 · 长期有效](https://mp.weixin.qq.com/s/P_o6azd0AwuraLkQQg6t2Q)
+想关注我的AI项目的朋友，欢迎加入我的👉[AI学习交流群 · 长期有效](https://python4office.cn/wechat-group/)
 
 ---
 
