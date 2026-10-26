@@ -8,25 +8,29 @@ description: LibTV 打通 WorkBuddy 的完整实操教程：连好连接器、�
 cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/01-banner.png
 ---
 
-大家好，我是程序员晚枫。
+大家好，这里是程序员晚枫。
 
-最近我发现做AI视频的工方式，彻底变了。
+周末去参加了：[2026腾讯云西部架构师峰会](https://mp.weixin.qq.com/s/ay1riSpDkzuQiqjPjEM3eA)，我除了负责少年游这个会场的主持，还和很多技术大咖交流了最新的 AI 应用。
+
+尤其见世面的一点是，我发现做AI视频的工方式，彻底变了。
 
 以前做一条视频，要在好几个工具之间来回切换：找灵感一个工具、写脚本一个工具、生成画面又一个工具，素材导出导入，光是"搬运"就耗掉一半时间。
 
-现在，**LibTV 和 WorkBuddy 正式打通了**。
+现在完全可以在一个软件里点几下就搞定了，可用的软件有很多，那今天就给大家推荐这个最新官宣的消息：**LibTV 和 WorkBuddy 正式打通了**。
 
 ![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/01-banner.png)
 
 *图片来源：LibTV 官方公众号*
 
+大家最近有没有刷到这个李白、杜甫、项羽、刘邦等史前大V 在一起唱歌的视频？这个就是用LibTV做出来的。
+
 你可以在 WorkBuddy 里直接调用 LibTV 的专业创作工具、导演级 Skills，还能参考 LibTV 里的爆款作品。品牌视频、爆款素材、短剧制作，从剧本策划、分镜设计到视频生产，一条工作流走完。
 
-**你的工作上下文，也可以成为视频创作的起点。**
+**而你只需要提供一个创意，也可以成为视频创作的起点。**
 
 这篇文章，我就把「用 LibTV 在 WorkBuddy 里做视频」的完整教程写给你。
 
-先说清楚结构：**全文分两部分——准备工作和实操教程。你只需要先把准备工作做完，再往下按教程一步步操作，就能跑通。**
+**全文分两部分——准备工作和实操教程。你只需要先把准备工作做完，再往下按教程一步步操作，就能跑通。**
 
 ---
 
@@ -165,6 +169,8 @@ WorkBuddy 负责理解与规划，LibTV 随时接手创作，无需重新整理 
 
 ## 相关阅读
 
+- [免费用Seedance2.5做AI短剧，商汤Seko这波白嫖攻略收好](https://mp.weixin.qq.com/s/oEdTeiAcbQSTeu3OP-W1Fw)
+- [普通人做 AI 短剧：用这 6 个工具，从写剧本到成片](https://mp.weixin.qq.com/s/6anYB88_FXLswO4T_kvYjQ)
 - [我在WorkBuddy 的AI活动上，多次大喊"请说人话"](https://mp.weixin.qq.com/s/MQoI6EaGrIm9nSYeWe7pPg)
 - [想靠 AI 短剧赚钱？先把剧本写完：Laper 工作流实测](https://mp.weixin.qq.com/s/1IhE_DTvm20X5tGkwiSbWA)
 - [别花钱做视频了：MiniMax 开源 H3](https://mp.weixin.qq.com/s/KT3A2ec3Z2rgJ8vAsGGxgg)
