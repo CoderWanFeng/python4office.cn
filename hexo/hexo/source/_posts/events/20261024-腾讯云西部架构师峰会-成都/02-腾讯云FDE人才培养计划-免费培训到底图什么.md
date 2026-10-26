@@ -1,8 +1,10 @@
 ---
 title: 月薪 3 万的 FDE 岗位，腾讯免费培训教你入行，到底图什么？
 date: 2026-10-26 11:00:00
-tags: [线下活动, AI活动, FDE, 腾讯云, WorkBuddy, AI职业, 商业分析]
+tags: [线下活动, AI活动, FDE, 腾讯云, WorkBuddy, AI职业, 商业分析, 腾讯云架构师西部峰会]
 categories: [线下活动, AI活动]
+keywords: [腾讯云架构师西部峰会, WorkBuddy FDE人才培养计划, FDE精英班, 前沿部署工程师, 腾讯云认证, AI落地, 成都]
+description: 2026 腾讯云西部架构师峰会上，腾讯云发布 WorkBuddy FDE 人才培养计划与官方认证。拆解腾讯在图什么：图你的工作流、图你老板的订阅费、图行业标准的定义权，并给打工人三条建议。
 cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/fde-cover.png
 ---
 
@@ -16,6 +18,8 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/fde-cover.p
 先说结论：**这事是真的。**
 
 2026 年 10 月 24 日（正好是程序员节），腾讯云正式启动 **WorkBuddy FDE 人才培养计划**，首期精英班在**北京、深圳、成都**三城同步开班，当天已有 **105 家企业报名**。
+
+这次发布是在**首场成都市人工智能生态大会暨 2026 腾讯云西部架构师峰会**上做的，我也在现场，主持了其中一个面向孩子和家长的分会场。
 
 一个岗位，专门配一套培养计划 + 一套官方认证，还免费。
 
@@ -171,6 +175,6 @@ FDE，全称 **前沿部署工程师**（Forward Deployed Engineer）。
 ## 相关阅读
 
 - [Palantir 深度解读：把数据变成决策的"卖铲人"](https://www.python4office.cn/article/business/20261014-palantir-公司深度解读/)
-- [我在 1024 程序员节当主持，一个小孩上来讲了他做的 AI 游戏](01-我主持的少年游会场-孩子上台讲AI.md)
+- [我在腾讯云架构师西部峰会当主持，一个小孩上来讲了他做的 AI 游戏](01-我主持的少年游会场-孩子上台讲AI.md)
 - [免费用国外大模型：GPT-6、Grok、Gemini，一个按钮全搞定](https://www.python4office.cn/ads/workbuddy-intl/261010-免费用国外大模型-WorkBuddy国际版GPT和Gemini免费用/)
 - [智谱又发福利了：5 亿 Token 免费领，周一早上 9 点清零](https://www.python4office.cn/ads/zhipu/261024-智谱送5亿Token-1024程序员节免费领/)

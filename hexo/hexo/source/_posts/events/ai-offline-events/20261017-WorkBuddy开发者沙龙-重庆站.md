@@ -1,5 +1,5 @@
 ---
-title: 我在WorkBuddy AI活动上，多次大喊"请说人话"
+title: 我在WorkBuddy AI活动上，多次大喊请说人话
 date: 2026-10-17 18:00:00
 tags: ["AI活动", "线下活动", "重庆", "WorkBuddy", "腾讯云"]
 categories: ["线下活动", "AI活动"]
