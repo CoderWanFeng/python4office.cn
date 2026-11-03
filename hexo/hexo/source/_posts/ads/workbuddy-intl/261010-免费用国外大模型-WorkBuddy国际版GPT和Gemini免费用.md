@@ -138,7 +138,7 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/wb-ai-cover
 它们卷得越凶，我们白嫖得越爽。
 
 **科技不高冷，AI很好用。**
-我是晚枫，免费大模型只在这里讲。想免费用哪个模型，评论区报编号，我告诉你看第几期。
+我是晚枫，关注我，用上免费大模型。想免费用哪个模型，评论区报编号，我告诉你看第几期。
 
 > 👉 **还没下国际版？点这里用我的邀请链接下载**：[workbuddy.ai/invite?code=C2AAEF9G](https://workbuddy.ai/invite?code=C2AAEF9G)（新人有额外积分）
 
