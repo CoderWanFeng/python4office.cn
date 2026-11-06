@@ -20,6 +20,7 @@
  * 阈值：默认 3 篇。可通过环境变量 HEXO_NOINDEX_MIN_ARTICLES 调整（≥1 整数）。
  */
 
+const cheerio = require('cheerio');
 const NOINDEX_META = '<meta name="robots" content="noindex,follow">';
 const DEFAULT_MIN_ARTICLES = 3;
 
@@ -76,6 +77,78 @@ hexo.extend.filter.register(
   },
   10
 );
+
+function isNoindex(html) {
+  const head = String(html).match(/<head\b[^>]*>[\s\S]*?<\/head\s*>/i);
+  if (!head) return false;
+  const $ = cheerio.load(head[0]);
+  return $('meta').toArray().some(node => {
+    const name = ($(node).attr('name') || '').toLowerCase();
+    return /^(robots|googlebot|bingbot)$/.test(name) &&
+      /\b(noindex|none)\b/i.test($(node).attr('content') || '');
+  });
+}
+
+function sitemapRoute(url, siteUrl) {
+  try {
+    const parsed = new URL(url);
+    const base = new URL(siteUrl);
+    if (parsed.origin !== base.origin || !parsed.pathname.startsWith(base.pathname)) return null;
+    let name = decodeURIComponent(parsed.pathname.slice(base.pathname.length));
+    if (!name || name.endsWith('/')) name += 'index.html';
+    return name;
+  } catch (_) { return null; }
+}
+
+function readRoute(route, name) {
+  return new Promise((resolve, reject) => {
+    const chunks = [];
+    const stream = route.get(name);
+    if (!stream) return reject(new Error(`站点地图引用的本地路由不存在：${name}`));
+    stream.on('data', chunk => chunks.push(Buffer.from(chunk)))
+      .on('error', reject).on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
+  });
+}
+
+function cleanSitemap(xml, noindexUrls) {
+  const seen = new Set();
+  let duplicates = 0, excluded = 0;
+  const result = xml.replace(/<url\b[^>]*>[\s\S]*?<\/url\s*>/gi, block => {
+    const $ = cheerio.load(block, { xmlMode: true });
+    const url = $('url > loc').text().trim();
+    if (!url) return block;
+    if (seen.has(url)) { duplicates++; return ''; }
+    seen.add(url);
+    if (noindexUrls.has(url)) { excluded++; return ''; }
+    // 保留整个原始 XML 条目，不重编码 loc，不变更 lastmod。
+    return block;
+  });
+  return { xml: result, duplicates, excluded };
+}
+
+// 路由已建立后读取实际 HTML；仅替换 XML 路由内容，绝不删除页面路由。
+hexo.extend.filter.register('after_generate', async function () {
+  const routes = new Set(hexo.route.list());
+  const checked = new Map();
+  const paths = [hexo.config.sitemap && hexo.config.sitemap.path,
+    hexo.config.baidusitemap && hexo.config.baidusitemap.path].flat().filter(Boolean);
+  for (const name of new Set(paths)) {
+    if (!routes.has(name)) continue;
+    const xml = await readRoute(hexo.route, name);
+    const $ = cheerio.load(xml, { xmlMode: true });
+    const urls = new Set($('urlset > url > loc').toArray().map(node => $(node).text().trim()));
+    const noindexUrls = new Set();
+    for (const url of urls) {
+      const pagePath = sitemapRoute(url, hexo.config.url);
+      if (!pagePath || !routes.has(pagePath) || !/\.html?$/.test(pagePath)) continue;
+      if (!checked.has(pagePath)) checked.set(pagePath, isNoindex(await readRoute(hexo.route, pagePath)));
+      if (checked.get(pagePath)) noindexUrls.add(url);
+    }
+    const cleaned = cleanSitemap(xml, noindexUrls);
+    if (cleaned.xml !== xml) hexo.route.set(name, cleaned.xml);
+    hexo.log.info('[sitemap-cleanup] %s：去重 %d 条，排除 noindex %d 条', name, cleaned.duplicates, cleaned.excluded);
+  }
+}, 100);
 
 hexo.extend.filter.register('after_generate', function () {
   try {

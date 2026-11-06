@@ -7,7 +7,7 @@
 
 'use strict'
 
-const { stripHTML, escapeHTML, prettyUrls } = require('hexo-util')
+const { stripHTML, escapeHTML, unescapeHTML, prettyUrls } = require('hexo-util')
 const crypto = require('crypto')
 
 hexo.extend.helper.register('page_description', function () {
@@ -56,6 +56,46 @@ hexo.extend.helper.register('cloudTags', function (options = {}) {
 
 hexo.extend.helper.register('urlNoIndex', function () {
   return prettyUrls(this.url, { trailing_index: false, trailing_html: false })
+})
+
+// 仅输出文章实际元信息，地址复用现有 canonical，不推导或改写 slug。
+hexo.extend.helper.register('page_structured_data', function () {
+  const { page, config } = this
+  if (!page.__post) return ''
+  const canonical = this.urlNoIndex()
+  const headline = String(page.title || this._p('no_title'))
+  const configuredAuthor = page.author || config.author
+  const authorName = typeof configuredAuthor === 'string'
+    ? configuredAuthor : (configuredAuthor && configuredAuthor.name) || config.author
+  const article = {
+    '@type': 'BlogPosting',
+    '@id': canonical + '#article',
+    url: canonical,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    headline,
+    description: unescapeHTML(this.page_description() || ''),
+    author: { '@type': 'Person', name: String(authorName || '') }
+  }
+  for (const [field, date] of [['datePublished', page.date], ['dateModified', page.updated]]) {
+    if (date && typeof date.toISOString === 'function' && !isNaN(date.valueOf())) {
+      article[field] = date.toISOString()
+    }
+  }
+  if (typeof page.cover === 'string' && page.cover.trim()) {
+    article.image = this.full_url_for(page.cover)
+  }
+  // 仅使用已有首页和当前文章，避免为目录虚构页面。
+  const breadcrumb = {
+    '@type': 'BreadcrumbList',
+    '@id': canonical + '#breadcrumb',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: String(config.title), item: this.full_url_for('/') },
+      { '@type': 'ListItem', position: 2, name: headline, item: canonical }
+    ]
+  }
+  return JSON.stringify({ '@context': 'https://schema.org', '@graph': [article, breadcrumb] })
+    .replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026')
+    .replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029')
 })
 
 hexo.extend.helper.register('md5', function (path) {
