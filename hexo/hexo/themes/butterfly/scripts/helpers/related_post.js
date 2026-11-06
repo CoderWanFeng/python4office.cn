@@ -64,7 +64,7 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
         hexoConfig.root +
         relatedPosts[i].path +
         '" title="' +
-        relatedPosts[i].title +
+        escapeHTML(relatedPosts[i].title) +
         '">'
       result +=
         '<img class="cover" ' +
@@ -86,7 +86,7 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
           '</div>'
       }
       result +=
-        '<div class="title">' + relatedPosts[i].title + '</div>'
+        '<div class="title">' + escapeHTML(relatedPosts[i].title) + '</div>'
       result += '</div></a></div>'
     }
 
@@ -94,6 +94,15 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
     return result
   }
 })
+
+function escapeHTML (str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
 
 function isTagRelated (tagName, TBDtags) {
   let result = false
