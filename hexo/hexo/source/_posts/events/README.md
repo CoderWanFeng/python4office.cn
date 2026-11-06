@@ -64,6 +64,7 @@ events/
 
 | 时间 | 活动 | 地点 | 角色 |
 |------|------|------|------|
+| 2026-11-14 | [WorkBuddy 开发者沙龙·重庆站第二场（预告）](https://www.python4office.cn/events/ai-offline-events/20261114-WorkBuddy开发者沙龙-重庆站-第二场预告/) | 重庆 | 出品人 |
 | 2026-10-17 | [WorkBuddy 开发者沙龙·重庆站](https://www.python4office.cn/events/ai-offline-events/20261017-WorkBuddy开发者沙龙-重庆站/) | 重庆 | 主办 |
 | 2026-10-17 | [WorkBuddy 开发者沙龙·重庆站（现场回顾）](https://www.python4office.cn/events/ai-offline-events/20261017-WorkBuddy开发者沙龙-重庆站-现场回顾/) | 重庆 | 主办 |
 | 2026-09-12 | [腾讯云架构师成都同盟城市沙龙第74期·重庆站](https://www.python4office.cn/events/20260912-腾讯云架构师成都同盟-重庆/01-AI进工厂-不能只会聊/) | 重庆 | 出品人、主持人 |
@@ -72,6 +73,8 @@ events/
 | 2026-07-11 | [天府长岛OPC训练营（主题分享回顾）](https://www.python4office.cn/events/20260711-天府长岛OPC训练营-成都/01-选对模型少走弯路-主题分享回顾/) | 成都 | 主题讲者 |
 | 2026-04-08 | [AtomGit AI 龙虾挑战赛·重庆站](https://www.python4office.cn/events/chongqing-lobster-contest-2026/) | 重庆 | 主办 |
 | 2026-03-28 | [腾讯云社区龙虾公开课·重庆站（回顾）](https://www.python4office.cn/events/20260328-腾讯云社区龙虾公开课-重庆/01-办公实操与腾讯云合作起点/) | 重庆 | 办公方向实操演示 |
+
+<!-- 第二场重庆WorkBuddy沙龙另备合作回顾与邀请稿（按写作日归档）：[重庆第2场WorkBuddy沙龙，想请你来坐坐](ai-offline-events/20261107-重庆WorkBuddy第二场沙龙-合作回顾与邀请.md)。目前published:false，待最新海报、日期和报名入口确认后再发布并加入上方公开索引；已有议程型预告保留。 -->
 
 ### 三、系列活动（Series）
 

@@ -3,7 +3,7 @@ title: 我在WorkBuddy AI活动上，多次大喊请说人话
 date: 2026-10-17 18:00:00
 tags: ["AI活动", "线下活动", "重庆", "WorkBuddy", "腾讯云"]
 categories: ["线下活动", "AI活动"]
-cover: https://cdn.pixabay.com/photo/2024/02/28/07/42/ai-generated-8601575_1280.jpg
+cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/workbuddy-cq-cover.jpg
 ---
 
 本周六（10.17），我在重庆办了一场「AI 创意共创营」WorkBuddy 开发者沙龙。
