@@ -1,5 +1,5 @@
 ---
-title: WorkBuddy深圳站：AI放大执行力，放大不了认知带宽
+title: WorkBuddy开发者沙龙：AI放大执行力，放大不了认知带宽
 date: 2026-11-06 23:28:00
 tags: ["线下活动", "AI活动", "深圳", "WorkBuddy", "腾讯云"]
 categories: ["线下活动", "AI活动"]
