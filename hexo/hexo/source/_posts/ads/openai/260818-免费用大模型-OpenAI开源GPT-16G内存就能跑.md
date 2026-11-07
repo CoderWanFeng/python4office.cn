@@ -165,6 +165,8 @@ print(outputs[0]["generated_text"][-1])
 - [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
 - [AI 圈公开的秘密：DeepSeek V4 Flash 可以免费用](https://mp.weixin.qq.com/s/KNTw9mCUcTMzcPIwNkgPVg)
 - [别再乱选大模型了！小白也能看懂的「好坏判断指南」，3分钟避坑](https://mp.weixin.qq.com/s/uPAJewJ-YeRnESEAAwLlkw)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
+- [每月"白嫖"200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)
 
 
 ![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)

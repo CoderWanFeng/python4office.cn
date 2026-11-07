@@ -141,3 +141,4 @@ AI 给我一份方案，我不能只看它写得顺不顺；给我一段代码�
 
 - [我在 WorkBuddy 的 AI 活动上，多次大喊“请说人话”](https://mp.weixin.qq.com/s/MQoI6EaGrIm9nSYeWe7pPg)
 - [在 WorkBuddy 里做视频（作者经验分享）](https://mp.weixin.qq.com/s/lU49BY3FjMLeNVQoJRDu5A)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)

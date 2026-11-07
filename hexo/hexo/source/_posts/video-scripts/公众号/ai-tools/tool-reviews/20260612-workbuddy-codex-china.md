@@ -328,6 +328,7 @@ AI 编程工具现在已经过了“看起来很酷”的阶段。
 - [我求你别碰 Claude Code](https://mp.weixin.qq.com/s/yshOWQYjQSjdUiqH2VuPDg)
 - [7 年前 我写下的梦想，今天一看全都实现了](https://mp.weixin.qq.com/s/rwp02LwBTob4d9XQ03Tr2w)
 - [我用AI做数字人播报，老板问"你什么时候请的主持人？"](https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
 
 ---
 

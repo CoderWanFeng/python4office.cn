@@ -178,3 +178,4 @@ FDE，全称 **前沿部署工程师**（Forward Deployed Engineer）。
 - [我在腾讯云架构师西部峰会当主持，一个小孩上来讲了他做的 AI 游戏](01-我主持的少年游会场-孩子上台讲AI.md)
 - [免费用国外大模型：GPT-6、Grok、Gemini，一个按钮全搞定](https://www.python4office.cn/ads/workbuddy-intl/261010-免费用国外大模型-WorkBuddy国际版GPT和Gemini免费用/)
 - [智谱又发福利了：5 亿 Token 免费领，周一早上 9 点清零](https://www.python4office.cn/ads/zhipu/261024-智谱送5亿Token-1024程序员节免费领/)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)

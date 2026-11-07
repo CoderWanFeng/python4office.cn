@@ -194,4 +194,5 @@ WorkBuddy 本身就有很多面向企业开发的功能（WorkBuddy Enterprise �
 
 - [用上OpenCode的5个免费大模型，省了我200刀ChatGPT年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
 - [一共600美元！免费使用6个月CodeX Pro](https://mp.weixin.qq.com/s/TVNl4jjJvO-kfOw1sk2Qsg)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
 

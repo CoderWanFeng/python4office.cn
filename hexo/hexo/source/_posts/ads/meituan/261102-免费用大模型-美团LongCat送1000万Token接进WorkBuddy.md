@@ -250,3 +250,10 @@ LongCat 走的是 **OpenAI 兼容协议**，所以任何支持「自定义模型
 **科技不高冷，AI 很好用。**
 
 关注我，用上免费大模型。
+
+---
+
+## 相关阅读
+
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
+- [每月"白嫖"200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)

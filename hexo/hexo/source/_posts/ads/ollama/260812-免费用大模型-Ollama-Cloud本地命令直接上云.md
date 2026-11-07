@@ -116,6 +116,8 @@ Ollama 的聪明之处在于：**它让本地和云端用同一套命令。** �
 - [别怪我没提醒你：DeepSeek V4 Flash 可以免费用](../deepseek/260805-免费用DeepSeek-V4-Flash-6个渠道实测.md)
 - [以前用 GLM-5.2 花钱买，现在每天 100 个名额免费抢](../atomgit/260810-免费用GLM-5.2-AtomCode限时白嫖指南.md)
 - [一个 Key 白嫖 20 个大模型，OpenRouter 太狠了](../openrouter/260812-免费用大模型-OpenRouter一个Key白嫖20个模型.md)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
+- [每月"白嫖"200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)
 
 ## 参考链接
 

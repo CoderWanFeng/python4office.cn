@@ -4,7 +4,7 @@ permalink: events/ai-offline-events/20261114-WorkBuddy开发者沙龙-重庆站-
 date: 2026-11-07 00:03:50
 tags: ["线下活动", "AI活动", "重庆", "WorkBuddy", "腾讯云"]
 categories: ["线下活动", "AI活动"]
-cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/wbcq-20261114-cover.jpg
+cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/wbcq-20261114-final-poster.png
 ---
 
 大家好，我是程序员晚枫。
@@ -147,3 +147,4 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/wbcq-202611
 
 - [我在 WorkBuddy 的 AI 活动上，多次大喊“请说人话”](https://mp.weixin.qq.com/s/MQoI6EaGrIm9nSYeWe7pPg)
 - [在 WorkBuddy 里做视频（作者经验分享）](https://mp.weixin.qq.com/s/lU49BY3FjMLeNVQoJRDu5A)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)

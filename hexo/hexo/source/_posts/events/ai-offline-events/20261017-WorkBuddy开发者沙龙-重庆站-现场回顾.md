@@ -209,3 +209,4 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/wbcq-202610
 
 - [我在 WorkBuddy 的 AI 活动上，多次大喊“请说人话”](https://mp.weixin.qq.com/s/MQoI6EaGrIm9nSYeWe7pPg)
 - [在 WorkBuddy 里做视频，简单到 3 步就出片](https://mp.weixin.qq.com/s/lU49BY3FjMLeNVQoJRDu5A)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)

@@ -123,5 +123,7 @@ Agnes AI 背后是新加坡的 Sapiens AI 公司，创始团队来自南洋理�
 - [AI 圈公开的秘密：DeepSeek V4 Flash 可以免费用](https://mp.weixin.qq.com/s/KNTw9mCUcTMzcPIwNkgPVg)
 - [英伟达"掀桌子"了：国产大模型免费用，智谱、MiniMax、LLaMA...](https://mp.weixin.qq.com/s/bD0U2NvMzbSgtaRK2OWAcQ)
 - [2026年最值得装的AI神器：开源免费，连接所有大模型](https://mp.weixin.qq.com/s/e5qz5U-2R14qGy88tMD1DA)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
+- [每月"白嫖"200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)
 
 ![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)

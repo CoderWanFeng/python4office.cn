@@ -127,4 +127,6 @@ OpenCode 文档里有一句很坦诚的话：
 - [OpenCode 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/RoqlepeGRzDNOiDJkg7jKw)
 - [Codex 换皮肤攻略，0 基础 3 分钟搞定](https://mp.weixin.qq.com/s/G598Htnb4k2cVyLnWGQPSw)
 - [千问办公正式发布，AI办公迎来最强挑战者](https://mp.weixin.qq.com/s/f05PrU-u8TqxILFPBZ7t6A)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
+- [每月"白嫖"200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)
 
