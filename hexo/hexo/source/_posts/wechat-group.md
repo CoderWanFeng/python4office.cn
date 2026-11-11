@@ -59,7 +59,7 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 
 - 💡 持续更新免费用 AI 大模型的方法和技巧
 - 🎯 AI 实战案例 + 工具测评
-- � AI 学习资源、行业资讯
+- 📚 AI 学习资源、行业资讯
 
 > 群完全免费，欢迎所有对 AI 感兴趣的朋友加入。**入群后请勿发广告，违者移除。**
 
@@ -70,12 +70,10 @@ cover: https://images.unsplash.com/photo-1511707171731-15ed56c6f5a5?q=80&w=1200&
 如果需要和我1对1交流AI or Python问题，可以＋我的微信：[点我查看微信二维码](https://www.python4office.cn/wechat-qrcode/) 或者 直接看下面的课程👇
 
 
-- [学AI编程别瞎忙！3步走，从零基础到能做实战项目](https://www.bilibili.com/cheese/play/ss982042944)
-- [7 年前 我写下的梦想，今天一看全都实现了](https://mp.weixin.qq.com/s/rwp02LwBTob4d9XQ03Tr2w)
-- [Codex 入门指南，从零基础到实战，看这一篇就够了！](https://mp.weixin.qq.com/s/ilvNENMEiPy2uEYyDflvQA)
-- [用上 OpenCode 的5 个免费大模型，省了我 200 刀 ChatGPT 年费](https://mp.weixin.qq.com/s/0eL4-CvFDkqHmDYY0YrrwA)
-- [PPT 制作神器！Claude Code 审美直接封神](https://mp.weixin.qq.com/s/obGJ2cSLieX2K7ryOdMFpw)
-- [我开通了Google广告，把申请到收款的全流程教给你](https://mp.weixin.qq.com/s/RhE4lEpCV3qWT12wy2qMsg)
+- [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
+- [每月「白嫖」200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)
+- [别花钱做AI视频了：MiniMax 免费开源 H3，人人可用](https://mp.weixin.qq.com/s/cupxgLQVY5PdNBAYuPhJxA)
+- [美团放大招：LongCat 白送 1000 万 Token，5 分钟接进 WorkBuddy](https://mp.weixin.qq.com/s/sUH7QLI1KSFMlnDO6JKddw)
 
 
 ## 🎓 AI 编程实战课程
