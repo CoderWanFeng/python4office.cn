@@ -136,13 +136,13 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/cover-%E5%8
 
 用邀请链接注册，你和邀请人都能多拿一些积分：
 
-[WorkBuddy 邀请注册（邀请码 b1m7bevc9r7ma52y）](https://www.workbuddy.cn/events/invite?inviteCode=b1m7bevc9r7ma52y)
+[WorkBuddy 邀请注册（邀请码 b1m7bevc9r7ma52y）：https://www.workbuddy.cn/events/invite?inviteCode=b1m7bevc9r7ma52y](https://www.workbuddy.cn/events/invite?inviteCode=b1m7bevc9r7ma52y)
 
 积分全部用完时，WorkBuddy 的 AI 能力会暂停，下个发放周期自动恢复。
 
 **走 MiniMax：** 四件事缺一不可。
 
-1. **注册账号**（免费）：[platform.minimaxi.com](https://platform.minimaxi.com)，手机号注册并登录；
+1. **注册账号**（免费）：[platform.minimaxi.com：https://platform.minimaxi.com](https://platform.minimaxi.com)，手机号注册并登录；
 2. **实名认证**：账户管理 → 实名认证，身份证加人脸。个人认证当场就过，不用等审核；
 3. **充值余额**：账户管理 → 余额 → 充值，先充一笔够做两三条的；
 4. **创建 API Key**：账户管理 → 接口密钥 → 创建新的 API Key，复制出来。
@@ -238,7 +238,7 @@ TRACE 是 SkillHub 用来判断一个 Skill 到底好不好用的五维体系，
 
 > 这几条我认。费用数字在不同文件里确实有几处对不上，接下来的版本会把价格表收敛到一处，顺手补一个完整的示例配置文件。
 
-评测报告（作者本人可见）：[SkillHub 评测报告页](https://skillhub.cn/dashboard/evaluation/wanfeng-digital-human?namespace=user_bf8c5b73)
+评测报告（作者本人可见）：[SkillHub 评测报告页：https://skillhub.cn/dashboard/evaluation/wanfeng-digital-human?namespace=user_bf8c5b73](https://skillhub.cn/dashboard/evaluation/wanfeng-digital-human?namespace=user_bf8c5b73)
 
 ---
 
@@ -252,7 +252,7 @@ TRACE 是 SkillHub 用来判断一个 Skill 到底好不好用的五维体系，
 
 > **先别追求完美。拍一段正脸视频，写一句真心想说的话，把第一条做出来。**
 
-也可以直接访问 [「晚枫数字人」SkillHub 发布页](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-digital-human) 了解详情。
+也可以直接访问 [「晚枫数字人」SkillHub 发布页：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-digital-human](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-digital-human) 了解详情。
 
 想查看源码或了解具体实现，可以访问「晚枫数字人」GitHub 开源仓库：
 
@@ -266,7 +266,7 @@ https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/wanfeng-digital-
 
 它能把增值税发票照片、扫描件和 PDF 批量整理成固定表头的 Excel 台账，减少手工誊抄。
 
-👉 [晚枫票据管家 SkillHub 发布页](https://skillhub.cn/skills/user_bf8c5b73/poocr-vatinvoice2excel)
+👉 [晚枫票据管家 SkillHub 发布页：https://skillhub.cn/skills/user_bf8c5b73/poocr-vatinvoice2excel](https://skillhub.cn/skills/user_bf8c5b73/poocr-vatinvoice2excel)
 
 ![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/20261110-poocr-vatinvoice2excel-卡片拼接.png)
 

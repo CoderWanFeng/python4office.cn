@@ -16,9 +16,9 @@ cover: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&
 >
 > 我把「晚枫个人网站」Skill 发布到 SkillHub 了。你通过对话说明需求，它会依次确认网站类型、技术栈、基础信息和创建目录，再生成项目并打开本地预览。
 
-**SkillHub 发布页**：[晚枫个人网站](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder)
+**SkillHub 发布页**：[晚枫个人网站：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder)
 
-**GitHub 源码**：[personal-website-builder](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/personal-website-builder)
+**GitHub 源码**：[personal-website-builder：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/personal-website-builder](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/personal-website-builder)
 
 <!-- more -->
 
@@ -206,9 +206,9 @@ Skill 会识别你的需求，先确认它理解得对不对，再继续下一�
 
 如果你最近正好想做博客、知识库、AI 导航、作品集或简历站，可以试试这个 Skill：
 
-> **SkillHub**：[晚枫个人网站](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder)
+> **SkillHub**：[晚枫个人网站：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder)
 >
-> **GitHub**：[查看源码和项目文档](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/personal-website-builder)
+> **GitHub**：[查看源码和项目文档：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/personal-website-builder](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/personal-website-builder)
 
 使用过程中如果遇到问题，欢迎到 GitHub 提 Issue，也可以在文章下面留言。
 

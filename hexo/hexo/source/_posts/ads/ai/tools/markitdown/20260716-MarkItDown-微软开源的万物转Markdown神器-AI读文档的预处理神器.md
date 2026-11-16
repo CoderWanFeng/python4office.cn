@@ -14,7 +14,7 @@ categories: AI工具评测
 cover: https://images.unsplash.com/photo-1633419461186-7d40a38105ec?q=80&w=1200&auto=format&fit=crop
 ---
 
-> 把 PDF、PPT、Word、Excel、图片、音频、视频……**通通转成 Markdown**——这是微软开源的工具 [MarkItDown](https://github.com/microsoft/markitdown) 做的事。
+> 把 PDF、PPT、Word、Excel、图片、音频、视频……**通通转成 Markdown**——这是微软开源的工具 [MarkItDown：https://github.com/microsoft/markitdown](https://github.com/microsoft/markitdown) 做的事。
 >
 > 它是一个**为 AI 时代设计的文档解析工具**——把人类用的文件格式，转成 AI 最爱吃的 Markdown。
 
@@ -493,8 +493,8 @@ markitdown ~/Desktop/你的文件.pdf > ~/output.md
 
 ## 附录 · 关键链接
 
-- 📦 [MarkItDown GitHub](https://github.com/microsoft/markitdown)
-- 📖 [MarkItDown 官方文档](https://github.com/microsoft/markitdown/blob/main/README.md)
-- 🧩 [MarkItDown OCR 插件](https://github.com/microsoft/markitdown/tree/main/packages/markitdown-ocr)
-- ☁️ [Azure Content Understanding](https://learn.microsoft.com/azure/ai-services/content-understanding/)
-- 🧠 [同类工具 textract](https://github.com/deanmalmgren/textract)
+- 📦 [MarkItDown GitHub：https://github.com/microsoft/markitdown](https://github.com/microsoft/markitdown)
+- 📖 [MarkItDown 官方文档：https://github.com/microsoft/markitdown/blob/main/README.md](https://github.com/microsoft/markitdown/blob/main/README.md)
+- 🧩 [MarkItDown OCR 插件：https://github.com/microsoft/markitdown/tree/main/packages/markitdown-ocr](https://github.com/microsoft/markitdown/tree/main/packages/markitdown-ocr)
+- ☁️ [Azure Content Understanding：https://learn.microsoft.com/azure/ai-services/content-understanding/](https://learn.microsoft.com/azure/ai-services/content-understanding/)
+- 🧠 [同类工具 textract：https://github.com/deanmalmgren/textract](https://github.com/deanmalmgren/textract)

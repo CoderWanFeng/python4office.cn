@@ -18,9 +18,9 @@ cover: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&
 >
 > 所以我把「晚枫开源管家」Skill 发布到了 SkillHub：不需要先学编程，也不用先弄懂 Git，让 AI 用人话带你找到、安装并真正使用开源项目。
 
-**SkillHub 发布页**：[晚枫开源管家](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper)
+**SkillHub 发布页**：[晚枫开源管家：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper)
 
-**GitHub 源码**：[opensource-housekeeper](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper)
+**GitHub 源码**：[opensource-housekeeper：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper)
 
 <!-- more -->
 
@@ -181,7 +181,7 @@ cover: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&
 
 ### 第一步：安装 Skill
 
-打开 [SkillHub 发布页](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper)，或者在支持 Skill 安装的 AI 工具里发送：
+打开 [SkillHub 发布页：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper)，或者在支持 Skill 安装的 AI 工具里发送：
 
 ```text
 请根据 https://skillhub.cn/install/skillhub.md，安装 @user_bf8c5b73/wanfeng-opensource-housekeeper。
@@ -249,9 +249,9 @@ https://github.com/owner/repo
 
 如果你也有一个“看起来很厉害，但一直不知道怎么用”的开源项目，可以试试这个 Skill：
 
-> **SkillHub**：[晚枫开源管家](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper)
+> **SkillHub**：[晚枫开源管家：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-opensource-housekeeper)
 >
-> **GitHub**：[查看源码和参考文档](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper)
+> **GitHub**：[查看源码和参考文档：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/opensource-housekeeper)
 
 使用过程中如果遇到问题，欢迎到 GitHub 提 Issue，也可以在文章下面留言。
 

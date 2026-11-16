@@ -34,7 +34,7 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/wanfeng-mg-
 
 以前想做这种视频，只有两条路：花钱找人剪，或者自己下个软件学三天，最后剪出一条 15 秒的、和模板一模一样的"原创"。
 
-我用的 Skill 叫 `ai-free-video`，[开源在 GitHub 上](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/ai-free-video)。它把"做一条宣传视频"拆成四步：先核对事实素材，再选视觉风格，然后做一条无声样片，最后收反馈。
+我用的 Skill 叫 `ai-free-video`（现已更名为 `ai-style-video`），[开源在 GitHub 上](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/ai-style-video)。它把"做一条宣传视频"拆成四步：先核对事实素材，再选视觉风格，然后做一条无声样片，最后收反馈。
 
 我把这三句话的要求丢给模型之后，它做了四件事：
 
@@ -156,7 +156,7 @@ Skill 里有一条硬规则：**画面里的文字不能互相重叠，也不能
 
 - [Qoder 模型选择器官方文档：https://docs.qoder.com/zh/user-guide/chat/model-tier-selector](https://docs.qoder.com/zh/user-guide/chat/model-tier-selector)
 - [Qoder 官网：https://qoder.com/](https://qoder.com/)
-- [ai-free-video Skill 开源地址：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/ai-free-video](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/ai-free-video)
+- [ai-style-video Skill 开源地址（原名 ai-free-video）：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/ai-style-video](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/ai-style-video)
 
 资料说明：本文的两条样片由本人在 Qoder 中选择 Qwen4-Max-Preview 生成，画面均为程序化绘制，未使用他人素材；两条成片为无声 MP4，存放在本地工作目录。模型名称与 Credit 倍率以 Qoder 官方文档当时页面为准。
 

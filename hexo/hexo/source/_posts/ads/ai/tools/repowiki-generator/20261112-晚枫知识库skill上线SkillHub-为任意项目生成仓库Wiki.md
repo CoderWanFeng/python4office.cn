@@ -16,9 +16,9 @@ cover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&aut
 >
 > 我把「晚枫知识库」Skill 发布到 SkillHub 了。它会扫描并阅读本地代码项目，按项目的真实功能生成一整套结构化 Wiki，并附上 Mermaid 图、源码引用和元数据。
 
-**SkillHub 发布页**：[晚枫知识库](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-repowiki-generator)
+**SkillHub 发布页**：[晚枫知识库：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-repowiki-generator](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-repowiki-generator)
 
-**GitHub 源码**：[repowiki-generator](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/repowiki-generator)
+**GitHub 源码**：[repowiki-generator：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/repowiki-generator](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/repowiki-generator)
 
 <!-- more -->
 
@@ -213,9 +213,9 @@ AI 写项目文档，最容易出现的问题不是语句不通顺，而是**看
 
 如果你手上也有一个“代码一直在更新，文档一直没补上”的项目，可以试试这个 Skill：
 
-> **SkillHub**：[晚枫知识库](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-repowiki-generator)
+> **SkillHub**：[晚枫知识库：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-repowiki-generator](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-repowiki-generator)
 >
-> **GitHub**：[查看源码、格式规范和辅助脚本](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/repowiki-generator)
+> **GitHub**：[查看源码、格式规范和辅助脚本：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/repowiki-generator](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/repowiki-generator)
 
 使用过程中如果遇到问题，欢迎到 GitHub 提 Issue，也可以在文章下面留言。
 

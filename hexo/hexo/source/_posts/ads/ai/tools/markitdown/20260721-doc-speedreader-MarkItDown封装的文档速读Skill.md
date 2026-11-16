@@ -23,7 +23,9 @@ cover: https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1200&
 - 🎯 **AI 读得更准**：标题/表格/章节结构完整保留，不会把页眉页脚当正文、不会表格串行
 - 💰 **token 省一半**：Markdown 比原始文档干净 40-60%，AI 处理成本直接砍半
 
-> 📦 GitHub：[wanfeng-skills/skills/doc-speedreader](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/doc-speedreader)
+> 📦 GitHub：[wanfeng-skills/skills/doc-speedreader：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/doc-speedreader](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/doc-speedreader)
+
+> 🏪 SkillHub 发布页：[速读侠：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-doc-speedreader](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-doc-speedreader)
 
 灵感来自微软的开源项目：markitdown
 
@@ -189,13 +191,14 @@ AI 不用猜结构，直接按 Markdown 标题定位章节，按表格读数据�
 | 多媒体 | 图片 / 音频 | ⭐⭐⭐ | 默认不开 LLM 图描 |
 | 数据 | CSV / ZIP | ⭐⭐⭐ | ZIP 自动解包 |
 
-完整支持矩阵见仓库的 [reference/formats.md](https://github.com/CoderWanFeng/wanfeng-skills/blob/main/skills/doc-speedreader/reference/formats.md)。
+完整支持矩阵见仓库的 [reference/formats.md：https://github.com/CoderWanFeng/wanfeng-skills/blob/main/skills/doc-speedreader/reference/formats.md](https://github.com/CoderWanFeng/wanfeng-skills/blob/main/skills/doc-speedreader/reference/formats.md)。
 
 ---
 
 ## 八、相关链接
 
 - **Skill 仓库**：[https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/doc-speedreader](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/doc-speedreader)
+- **SkillHub 发布页**：[https://skillhub.cn/skills/user_bf8c5b73/wanfeng-doc-speedreader](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-doc-speedreader)
 - **MarkItDown 官方**：[https://github.com/microsoft/markitdown](https://github.com/microsoft/markitdown)
 
 ---

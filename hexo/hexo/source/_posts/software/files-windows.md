@@ -1,6 +1,6 @@
----
 title: 受够了微软的「下次一定」？让 Files 满足你对 Windows 文件管理器的期待
 date: 2022-02-15 09:42:09
+permalink: files-windows/
 tags: 黑科技导航
 cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop
 ---
