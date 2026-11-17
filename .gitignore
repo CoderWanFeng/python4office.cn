@@ -1,89 +1,88 @@
-**/node_modules/
+# ============================================================
+# python4office.cn — Git 忽略规则
+#
+# 分区：
+#   一  依赖与构建产物    任意层级
+#   二  顶层工作目录      仅仓库根（带前导斜杠锚定）
+#   三  Hexo 站点
+#   四  敏感配置与环境变量
+#   五  大文件与媒体资源  任意层级
+#   六  IDE / 编辑器
+#   七  日志与系统文件
+#   八  单文件忽略
+#
+# 约定一：裸目录名（无前导斜杠）会匹配任意层级，顶层目录一律写成
+#         /目录名/ 锚定仓库根，避免误伤 hexo/hexo/scripts/（站点构建插件）
+#         与 hexo/hexo/themes/butterfly/scripts/（主题本体）。
+# 约定二：gitignore 不支持行尾注释（# 会被当作路径的一部分），
+#         所有说明一律单独占行。
+# ============================================================
 
-# === 构建产物 ===
+# ---------- 一、依赖与构建产物（任意层级）----------
+# 前端依赖
+**/node_modules/
+# 打包产物
 **/dist/
 **/build/
+# 各框架构建目录
 **/.next/
 **/.nuxt/
 **/.parcel-cache/
 **/.turbo/
-**/.cache/
-**/.cache-loader/
 **/.docusaurus/
 **/.vuepress/dist/
-# === IDE / Editor configs ===
-.workbuddy/
-.qoder/
-.vscode/
-.idea/
-.cursor/
-.windsurf/
-.zed/
-.codeium/
-.obsidian/
-*.swp
-*.swo
-.DS_Store
-Thumbs.db
-# === Project specific ===
-datalog/
-.atomcode/
-preview.log
-# === Hexo 编译产物 ===
-.cache/
+**/.svelte-kit/
+**/.astro/
+# 缓存与临时目录
+**/.cache/
+**/.cache-loader/
 .tmp/
 .hexo/
 .deploy*/
-db.json
-*.log
-# Hexo 生成的 public/ 静态文件（248M+）不纳入版本管理
-# 部署时由 CI/CD 重新生成或从 COS 同步
+
+# ---------- 二、顶层工作目录（仅仓库根）----------
+# 临时脚本：部署 / CDN 优化 / SEO 巡检 / 绘图
+/scripts/
+# 内部写作素材库（写作指南、链接检查清单等）
+/guide/
+# 内容产出工作目录（预稿、预览稿）
+/output/
+# 脚本生成的配图工作目录
+/generated-images/
+# 数据日志
+/datalog/
+# 演讲逐字稿（对外发布前不入库）
+/docs/talks/*
+# 架构图 HTML / GIF（体积大且可再生成）
+/docs/graph/
+
+# ---------- 三、Hexo 站点 ----------
+# 编译产物 public/（248M+），部署时由 CI/CD 重新生成或从 COS 同步
 hexo/hexo/public/
-# === 敏感配置 ===
-.env
-.env.local
-_config.local.yml
-# === 日志 ===
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-nohup.out
-# === 统一标准：构建产物（追加于各项目）===
-# === Node.js / 构建产物 ===
-**/.svelte-kit/
-**/.astro/
-# === 环境变量 ===
-.env.*.local
-# === 系统 ===
-pnpm-debug.log*
-# === IDE ===
-server_deploy_auto.sh
-projects/ai-projects-planning/AI-PROJECTS-PLAN.md
-# === 口播稿工作目录 ===
+# Hexo 数据库缓存
+db.json
+# 内容源下的工作稿目录（正式文章仍入库）
 hexo/hexo/source/_posts/workflow/口播稿/
-# === 公众号代码工作目录 ===
 hexo/hexo/source/_posts/workflow/公众号/code/
 hexo/hexo/source/_posts/workflow/公众号/guide/
 hexo/hexo/source/_posts/workflow/选题.md
-scripts/cos/*
-scripts/skills/*
-.trae/*
-scripts/.env.example
-docs/talks/*
 hexo/hexo/source/_posts/ads/cake-growth/guide/
 hexo/hexo/source/_posts/ads/cake-growth/ads/imgs/
-docs/graph/
-# === 内容产出工作目录（公众号文章、素材、预览稿）===
-# 只忽略仓库根目录的 output/，不影响 hexo 源与 .trae-html-share-packages/output/
-/output/
-# === 所有 jpg 图片不纳入 Git ===
+
+# ---------- 四、敏感配置与环境变量（任意层级）----------
+.env
+.env.local
+.env.*.local
+_config.local.yml
+
+# ---------- 五、大文件与媒体资源（任意层级）----------
+# 图片
 **/*.jpg
 **/*.png
 **/*.JPG
 **/*.jpeg
 **/*.JPEG
-# === 所有 PPT 演示文稿不纳入 Git ===
-# 使用字符类 [Pp] 覆盖所有大小写组合，跨平台绝对稳妥
+# Office 文档：用字符类 [Pp] 覆盖所有大小写组合，跨平台绝对稳妥
 **/*.[Pp][Pp][Tt]
 **/*.[Pp][Pp][Tt][Xx]
 **/*.[Pp][Pp][Tt][Mm]
@@ -94,3 +93,34 @@ docs/graph/
 **/*.[Pp][Oo][Tt][Xx]
 **/*.[Pp][Oo][Tt][Mm]
 **/*.[Oo][Dd][Pp]
+
+# ---------- 六、IDE / 编辑器（任意层级）----------
+.workbuddy/
+.qoder/
+.vscode/
+.idea/
+.cursor/
+.windsurf/
+.zed/
+.codeium/
+.obsidian/
+.atomcode/
+# Trae 工作区数据
+.trae/*
+*.swp
+*.swo
+
+# ---------- 七、日志与系统文件（任意层级）----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+nohup.out
+preview.log
+.DS_Store
+Thumbs.db
+
+# ---------- 八、单文件忽略 ----------
+server_deploy_auto.sh
+projects/ai-projects-planning/AI-PROJECTS-PLAN.md

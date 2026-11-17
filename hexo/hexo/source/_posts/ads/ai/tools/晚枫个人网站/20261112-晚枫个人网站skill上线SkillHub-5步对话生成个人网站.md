@@ -38,7 +38,7 @@ cover: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&
 
 现在，它已经发布到 SkillHub：
 
-> https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder
+> [晚枫个人网站：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder)
 
 ## 一、这个 Skill 能做什么？
 
@@ -53,6 +53,10 @@ cover: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&
 | 个人简历站 | 单文件 HTML + CSS | 在线简历、个人介绍、打印为 PDF |
 | 自定义网站 | 根据需求推荐 | 博客加作品集、工具导航加博客等组合需求 |
 
+![晚枫个人网站 Skill 内置的 6 种网站类型](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/261117-site-skill-types.jpg)
+
+*图：晚枫个人网站 Skill 内置的 6 种网站类型 · 晚枫自制插图*
+
 你不需要先记住这些技术名词。
 
 如果你说“我想长期写文章”，它会推荐 Hexo；如果你说“我想整理一套教程”，它会推荐 VitePress；如果你只是想做一个作品展示页，它不会再给你套一个复杂框架。
@@ -62,6 +66,10 @@ cover: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&
 ## 二、从需求到预览，一共 5 个阶段
 
 这个 Skill 采用纯对话式引导，不弹窗，也不要求你填写一张很长的表单。
+
+![晚枫个人网站 Skill 的 5 步对话流程](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/261117-site-skill-steps.jpg)
+
+*图：晚枫个人网站 Skill 的 5 步对话流程 · 晚枫自制插图*
 
 ### 第 1 步：确认网站类型
 
@@ -213,3 +221,18 @@ Skill 会识别你的需求，先确认它理解得对不对，再继续下一�
 使用过程中如果遇到问题，欢迎到 GitHub 提 Issue，也可以在文章下面留言。
 
 科技不高冷，AI 很好用。我是晚枫，关注我，一起把 AI 真正用起来。
+
+---
+
+### 参考链接
+
+- [晚枫个人网站 · SkillHub 发布页：https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder](https://skillhub.cn/skills/user_bf8c5b73/wanfeng-personal-website-builder)
+- [晚枫个人网站 · GitHub 源码：https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/personal-website-builder](https://github.com/CoderWanFeng/wanfeng-skills/tree/main/skills/personal-website-builder)
+- [SkillHub 安装说明：https://skillhub.cn/install/skillhub.md](https://skillhub.cn/install/skillhub.md)
+- [wanfeng-skills 仓库首页（全部 Skill）：https://github.com/CoderWanFeng/wanfeng-skills](https://github.com/CoderWanFeng/wanfeng-skills)
+
+## 相关阅读
+
+- [腾讯 QClaw 刚上了一个「建站搭子」：聊天就能建网站](https://mp.weixin.qq.com/s/phJOGkXHwvaB36onsiqthQ)
+- [日入 1000 后，我把个人网站开源了，手把手带你实现](https://mp.weixin.qq.com/s/3azwYvNCFoCoinyBhmobZg)
+- [WorkBuddy 开发者沙龙重庆第二场：别「问」AI，去「派活」](https://mp.weixin.qq.com/s/ademgQIrsH0MqcX6YeHziQ)
