@@ -463,4 +463,4 @@ AI能帮你写代码、解决报错，但不能帮你拆解需求、制定规范
 
 
 
-![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

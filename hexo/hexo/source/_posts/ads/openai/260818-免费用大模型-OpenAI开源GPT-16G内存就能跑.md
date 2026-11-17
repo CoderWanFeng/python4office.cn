@@ -169,6 +169,6 @@ print(outputs[0]["generated_text"][-1])
 - [每月"白嫖"200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ![](https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/gpt-oss-free-cover.jpg)

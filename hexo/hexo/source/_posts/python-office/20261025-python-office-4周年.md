@@ -236,4 +236,4 @@ description: 将 PDF 文件转换为 Word 文档（.docx），支持单文件和
 
 ---
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

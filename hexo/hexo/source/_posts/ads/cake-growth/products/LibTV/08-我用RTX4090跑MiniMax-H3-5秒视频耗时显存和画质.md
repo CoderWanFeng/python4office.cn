@@ -144,4 +144,4 @@ MiniMax 开源的是 H3-Base，输出短边默认 768 像素、24 帧、最长 1
 **科技不高冷，AI很好用。**
 我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

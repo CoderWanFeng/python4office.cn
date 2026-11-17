@@ -170,7 +170,7 @@ Firefox 选择云端，本质上是"用 100 毫秒的网络延迟，换 5 倍的
 我是晚枫，关注我，每天带你玩一个 AI 新工具！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

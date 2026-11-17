@@ -167,4 +167,4 @@ Skill 里有一条硬规则：**画面里的文字不能互相重叠，也不能
 - [我用豆包工作，3 句话做了条自我介绍视频（附完整教程）](https://mp.weixin.qq.com/s/HwMcyujaH2PmZF9kwuHCtQ)
 - [我做了个「开源搭子」skill：零基础也能秒推 GitHub，国内自动切镜像](https://mp.weixin.qq.com/s/V1oSvUbruxXgAUN0uuClVQ)
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

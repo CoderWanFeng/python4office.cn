@@ -140,4 +140,4 @@ LibTV 这类平台本身就聚着 Seedance、可灵、Wan、MiniMax H3，配置�
 **科技不高冷，AI很好用。**
 我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

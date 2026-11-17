@@ -35,7 +35,7 @@ cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&
 - 🔥[开源中国推荐：python-office，一行命令实现自动化办公](https://www.bilibili.com/video/BV1pT4y1k7FH)
 
 > ⭐今年我推出了陪你学习1年的Python学习服务，如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 
 <p align="center" id='CodeMaster-banner'>

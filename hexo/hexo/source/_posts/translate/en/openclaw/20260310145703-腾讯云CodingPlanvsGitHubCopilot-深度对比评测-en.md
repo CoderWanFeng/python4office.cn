@@ -108,7 +108,7 @@ After three days of real testing, I finally chose Tencent Cloud Coding Plan, mai
 - [Python Programming: Beginner to Practice (3rd Edition)](https://u.jd.com/NGMHz3T)
 - [Excel+Python Quick Data Analysis and Processing](https://u.jd.com/N6MUwXO)
 
-![AI编程课程海报](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![AI编程课程海报](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 **Main Business**: AI Programming Training, Enterprise Internal Training, Technical Consulting
 

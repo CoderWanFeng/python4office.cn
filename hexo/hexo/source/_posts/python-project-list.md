@@ -74,7 +74,9 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 
 如果需要和晚枫1对1交流技术问题，可以扫码下图加好友👇
-![](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+
+![AI零基础入门课海报](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
+
 
 
 

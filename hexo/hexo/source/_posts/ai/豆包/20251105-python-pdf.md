@@ -181,7 +181,7 @@ pdfrw本身不擅长“原创”，但**却是ReportLab的“黄金搭档”！*
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
-    <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" />
+    <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png" />
     </a>   
 </p>
 
@@ -268,7 +268,7 @@ Q：有其他更高级的课程吗？
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
-    <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" />
+    <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png" />
     </a>   
 </p>
 

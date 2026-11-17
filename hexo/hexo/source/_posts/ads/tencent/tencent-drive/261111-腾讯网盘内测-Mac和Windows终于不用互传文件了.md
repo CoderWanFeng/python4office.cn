@@ -178,6 +178,6 @@ cover: https://raw.githubusercontent.com/CoderWanFeng/img-cdn/master/tencent-dri
 - [千问办公正式发布，AI办公迎来最强挑战者](https://mp.weixin.qq.com/s/f05PrU-u8TqxILFPBZ7t6A)
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 *微信扫码加入「免费用 AI」知识星球的入口。*

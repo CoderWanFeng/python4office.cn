@@ -163,7 +163,7 @@ Qoder 是阿里 AI 编程产品的牌子，圈子相对小；千问是阿里 AI 
 我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ---
 

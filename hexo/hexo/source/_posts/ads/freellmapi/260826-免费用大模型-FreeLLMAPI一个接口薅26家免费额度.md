@@ -147,4 +147,4 @@ FreeLLMAPI 把前者做得非常漂亮：一个接口、自动切换、本地托
 - [每月"白嫖"200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

@@ -120,7 +120,7 @@ AI 工具该用还得用，我自己每天都在用。但用之前知道它的�
 我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

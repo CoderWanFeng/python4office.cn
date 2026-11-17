@@ -184,6 +184,6 @@ MiniMax 这次开源的是 **H3-Base**，也就是生成画面和声音的主网
 **科技不高冷，AI很好用。**
 我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 <!-- 编辑备注（不显示给读者）：2026-11-09 新增 4 张官方截图——Hugging Face MiniMaxAI/MiniMax-H3 模型页、ComfyUI 官方 H3 教程模板区、LibTV 官网首页模型栏、Microsoft Store LibTV 应用页（描述原文："本应用可免费安装……免费使用可能受到每日 credits、生成次数、可用模型、导出能力、视频质量或其他功能限制的影响"）。ComfyUI 教程列出 5 个 video_minimax_h3_* 模板，T2V/I2V/R2V 需 ComfyUI 0.30.0+，Multiframe Reference 需 0.34.0+。封面 v3：背景 AI 生成（无品牌元素），屏幕人物为作者本人形象（参考 ai-digital-human/persona/demo4/reference），Logo 取自 liblib.tv 页面 SVG 与 minimax.io 官方白色横版 Logo；封面不写"不扣积分" -->

@@ -177,7 +177,7 @@ AI 模型不是一个字一个字读你的代码或日志的。它把文字切�
 **科技不高冷，AI 很好用。**
 我是晚枫，关注我，每天带你玩一个 AI 新工具！
 
-![](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

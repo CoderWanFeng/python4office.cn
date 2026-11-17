@@ -126,4 +126,4 @@ Agnes AI 背后是新加坡的 Sapiens AI 公司，创始团队来自南洋理�
 - [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
 - [每月"白嫖"200 美元？Qoder 国际版 Ultra 免费用，亲测有效](https://mp.weixin.qq.com/s/A28lNyRugQEJrZ5Plyq-TQ)
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

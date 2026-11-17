@@ -103,7 +103,7 @@ OpenRouter 的角色类似于「大模型界的携程」。它不自己训练模
 ---
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

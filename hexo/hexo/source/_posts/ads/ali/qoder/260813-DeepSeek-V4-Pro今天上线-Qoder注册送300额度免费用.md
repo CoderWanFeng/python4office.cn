@@ -134,4 +134,4 @@ Qoder送的 300 credits，相当于给你一个零成本试驾的机会。试完
 - [以前用 GLM-5.2 花钱买，现在每天 100 个名额免费抢](https://mp.weixin.qq.com/s/H144Ocw5TrNLROG-Ost21A)
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

@@ -239,4 +239,4 @@ AI 干的那部分，是普通人做不到、也不愿意做的：**它不会累
 - [腾讯Hy4：发布了是真的，免费用也是真的](https://mp.weixin.qq.com/s/y9ch3zNnVITPxdW_dnjKHA)
 - [免费领取 WorkBuddy 3万积分，教程来了！](https://mp.weixin.qq.com/s/hNQTFuzF0v34D1n2LvigPg)
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

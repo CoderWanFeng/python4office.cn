@@ -183,7 +183,7 @@ Questions during learning? Welcome to join the discussion group:
 
 👉 **[Join AI Programming Learning Group](https://www.python4office.cn/wechat-group/)**
 
-![Click to join](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![Click to join](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ---
 

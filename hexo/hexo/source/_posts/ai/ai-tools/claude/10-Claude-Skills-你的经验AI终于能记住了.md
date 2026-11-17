@@ -108,7 +108,7 @@ Skills 的本质，就是一个文件夹里放一份说明文件，用大白话�
 - 前端设计 Skills 最佳实践：https://claude.com/blog/improving-frontend-design-through-skills
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

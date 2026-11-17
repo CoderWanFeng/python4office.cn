@@ -163,7 +163,7 @@ NVIDIA 官方把免费 API 端点定位在学习、研究、开发和原型验�
 我是晚枫，关注我，带你一起玩AI！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 参考链接
 

@@ -528,7 +528,7 @@ Coze 使用有疑问？欢迎加入交流群：
 
 👉 **[加入AI编程学习交流群](https://www.python4office.cn/wechat-group/)**
 
-![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ---
 

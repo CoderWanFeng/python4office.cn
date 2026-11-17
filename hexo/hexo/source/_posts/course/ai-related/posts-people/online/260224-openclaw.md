@@ -118,7 +118,7 @@ AI时代，优质的AI编程课层出不穷，但**扎实的入门基础，才�
 别再犹豫！立即点击下方链接，锁定最后20个福利名额，开启你的AI编程入门之路！
 
 
-![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 
 

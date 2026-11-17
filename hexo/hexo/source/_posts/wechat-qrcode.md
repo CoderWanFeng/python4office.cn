@@ -50,7 +50,7 @@ cover: https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&
 
 # 2、AI编程
 
-![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 
 # 3、读者群

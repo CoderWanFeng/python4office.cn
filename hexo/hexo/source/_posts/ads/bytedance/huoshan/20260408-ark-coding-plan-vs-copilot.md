@@ -188,7 +188,7 @@ AI是杠杆，不是对手。
 
 <p align="center" id='AI编程训练营'>
     <a target="_blank" href='https://www.bilibili.com/cheese/play/ss982042944'>
-    <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg" width="80%"/>
+    <img src="https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png" width="80%"/>
     </a>   
 </p>
 

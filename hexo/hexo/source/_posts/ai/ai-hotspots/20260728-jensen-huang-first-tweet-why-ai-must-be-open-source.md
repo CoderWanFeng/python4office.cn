@@ -107,7 +107,7 @@ AI 也一样。Meta 把 Llama 开源后，有人拿它做客服，有人拿它�
 我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ---
 

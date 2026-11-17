@@ -195,4 +195,4 @@ AI会给你出一个比如「批量整理Excel里的客户数据」的案例，�
 
 
 
-![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

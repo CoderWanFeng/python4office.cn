@@ -163,4 +163,4 @@ LocalSend 这样的工具真正有意思的地方，不是「传得快」，而�
 - [我做了个「开源搭子」skill：零基础也能秒推 GitHub，国内自动切镜像](https://mp.weixin.qq.com/s/V1oSvUbruxXgAUN0uuClVQ)
 - [在 WorkBuddy 里做视频，简单到 3 步就出片](https://mp.weixin.qq.com/s/lU49BY3FjMLeNVQoJRDu5A)
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

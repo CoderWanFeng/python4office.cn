@@ -213,7 +213,7 @@ Seko 这种 AI 画布是"**给 AI 用的**"——每个节点是**AI 任务**（
 我是晚枫，关注我，每天带你玩一个 AI 新工具！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

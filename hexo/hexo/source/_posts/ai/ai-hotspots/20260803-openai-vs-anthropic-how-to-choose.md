@@ -163,7 +163,7 @@ ChatGPT 和 Claude，你现在更常用哪一个？如果只能留一个，你�
 我是晚枫，关注我，带你一起玩AI！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

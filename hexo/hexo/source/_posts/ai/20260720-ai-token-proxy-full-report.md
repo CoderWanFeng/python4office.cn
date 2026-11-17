@@ -148,7 +148,7 @@ docker run --name one-api -d --restart always \
 我是晚枫，关注我，每天带你玩一个 AI 新工具！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

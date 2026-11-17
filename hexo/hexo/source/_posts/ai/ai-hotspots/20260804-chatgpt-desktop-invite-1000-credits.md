@@ -125,7 +125,7 @@ OpenAI 官方说明指出，如果受邀者收到多个推荐邀请，通常只�
 我是晚枫，关注我，带你一起玩AI！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 

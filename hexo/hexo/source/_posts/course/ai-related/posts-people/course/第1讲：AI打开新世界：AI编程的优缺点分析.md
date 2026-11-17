@@ -282,4 +282,4 @@ AI时代，从来没有一夜暴富的神话，只有一步一个脚印的机会
 
 
 
-![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![点击加入](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)

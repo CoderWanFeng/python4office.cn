@@ -112,7 +112,7 @@ AI 大模型的核心，是一个叫**「模型权重」**的东西。你可以�
 我是晚枫（Wayne Liu），关注我，带你一起玩AI！
 
 
-![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/free-ai.jpg)
+![免费用AI](https://atomgit.com/api/v5/repos/python4office/hexo-public/raw/course/261117-ai-beginner-poster-v3.png)
 
 ## 相关阅读
 
