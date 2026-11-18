@@ -94,7 +94,7 @@ HR看一份简历，平均6秒。
 
 如果你也想让简历被HR看到，试试UP简历。
 
-👉 [点击这里试试UP简历：https://upcv.tech/?utm=cg&cgv=9we2rzwkgo](https://upcv.tech/?utm=cg&cgv=9we2rzwkgo)
+👉 [点击这里试试UP简历：https://upcv.cgref.cn/s/9we2rzwkgo](https://upcv.cgref.cn/s/9we2rzwkgo)
 
 ---
 
@@ -161,7 +161,7 @@ UP简历让我看到了一种可能性：**每个人都可以写出专业的简�
 
 还没试过的朋友，点下面的链接试试UP简历。
 
-👉 [点击这里试试UP简历：https://upcv.tech/?utm=cg&cgv=9we2rzwkgo](https://upcv.tech/?utm=cg&cgv=9we2rzwkgo)
+👉 [点击这里试试UP简历：https://upcv.cgref.cn/s/9we2rzwkgo](https://upcv.cgref.cn/s/9we2rzwkgo)
 
 ---
 

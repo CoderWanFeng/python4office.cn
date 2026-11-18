@@ -15,9 +15,9 @@ cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit
 
 AI视频：https://libtv.cgref.cn/s/9omkl4jn4d
 
-AI设计：https://xingliu.cgref.cn/s/1zn5oxmeqm
+AI设计：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission
 
-AI写软件：https://atoms.cgref.cn/s/qmnog4ze29
+AI写软件：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission
 
 AI助理：https://volcengine.cgref.cn/s/omklvl7n4d
 
@@ -25,13 +25,13 @@ AI写剧本：https://wawawriter.com/app/?utm_source=aiweb96
 
 AI生成短剧：https://www.updream.cn/?bsource=xinyan_as
 
-AI创作：https://liblib.cgref.cn/s/2znrw0okr7
+AI创作：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission
 
 AI原型：https://modao.cc/feature/ai?utm_channel=wl&utm_source=referrals&utm_keyword=cakegrowth&utm=cg&cgv=5ln1qj3erw
 
 AI简历：https://www.wondercv.com/?utm=cg&cgv=zdkjoy9e1r
 
-AI简历生成：https://upcv.tech/?utm=cg&cgv=9we2rzwkgo
+AI简历生成：https://upcv.cgref.cn/s/9we2rzwkgo
 
 AI数字人：https://www.xfzhizuo.cn/?utm=cg&cgv=l41ev8dkv8
 
@@ -39,7 +39,7 @@ AI音乐：https://www.yinshu.me/?ad_channel=cakegrowth&utm=cg&cgv=qmno24zk29
 
 AI降重：https://speedai.com/?utm=cg&cgv=3mnz8wjno1
 
-AI Agent：https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05
+AI Agent：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission
 
 AI动画：https://aibrm.com/?utm=cg&cgv=59ng4gjnr2
 
@@ -51,9 +51,9 @@ AI学术：https://app.qinyanai.com/?utm=cg&cgv=3mnz8w7no1
 
 AI智能体：https://www.aipyaipy.com/?referral=BJ5OOSP&utm=cg&cgv=59ng4ggnr2
 
-AI图文：https://01agent.net/?utm=cg&cgv=rpexy6zk90
+AI图文：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission
 
-AI生图：https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx
+AI生图：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission
 
 AI token：https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link
 

@@ -20,7 +20,7 @@ cover: https://cdn.pixabay.com/photo/2024/11/13/09/31/ai-generated-9201789_1280.
 
 ---
 
-👉 [点击这里试试Lovart： https://lovart.cgref.cn/s/p3kqm3peol](https://lovart.cgref.cn/s/p3kqm3peol)
+👉 [点击这里试试Lovart： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 
@@ -144,7 +144,7 @@ Lovart在你选定Logo之后，后续所有延展设计都自动对齐这个视�
 
 ---
 
-👉 [点击这里试试Lovart： https://lovart.cgref.cn/s/p3kqm3peol](https://lovart.cgref.cn/s/p3kqm3peol)
+👉 [点击这里试试Lovart： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 
@@ -196,7 +196,7 @@ AI生成的方案，95分和100分之间的差距，往往就在最后那几轮�
 
 一个人，也能做自己品牌的设计师。
 
-👉 [点击这里试试Lovart： https://lovart.cgref.cn/s/p3kqm3peol](https://lovart.cgref.cn/s/p3kqm3peol)
+👉 [点击这里试试Lovart： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 

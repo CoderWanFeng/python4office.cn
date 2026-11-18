@@ -78,8 +78,8 @@ npm install -g opencode-ai
 ## 4、更多免费AI工具
 
 - AI视频：https://libtv.cgref.cn/s/9omkl4jn4d
-- AI设计：https://xingliu.cgref.cn/s/1zn5oxmeqm
-- AI写软件：https://atoms.cgref.cn/s/qmnog4ze29
+- AI设计：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission
+- AI写软件：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission
 - AI助理：https://volcengine.cgref.cn/s/omklvl7n4d
 - AI写剧本：https://wawawriter.com/app/?utm_source=aiweb96
 - AI生成短剧：https://www.updream.cn/?bsource=xinyan_as

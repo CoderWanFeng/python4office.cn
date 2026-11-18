@@ -18,7 +18,7 @@ cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&
 >
 > 是的，而且只花了2分钟。今天我就把这件事，一次说清楚。
 
-👉 [点击这里试试JoyPix AI：https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx](https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx)
+👉 [点击这里试试JoyPix AI：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 
@@ -173,7 +173,7 @@ cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&
 
 用之前一定要确认能不能商用，这个坑我替你踩过了。
 
-👉 [点击这里试试JoyPix AI：https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx](https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx)
+👉 [点击这里试试JoyPix AI：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 
@@ -216,7 +216,7 @@ JoyPix AI让我看到了一种可能性：**每个人都可以做出专业的图
 
 一个人，也能做出专业的图。
 
-👉 [点击这里试试JoyPix AI：https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx](https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx)
+👉 [点击这里试试JoyPix AI：https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 

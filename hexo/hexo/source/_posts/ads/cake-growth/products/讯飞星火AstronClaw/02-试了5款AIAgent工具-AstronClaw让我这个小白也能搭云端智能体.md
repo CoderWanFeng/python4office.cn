@@ -14,7 +14,7 @@ cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&
 
 ---
 
-👉 [点击这里试试讯飞星火AstronClaw： https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05](https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05)
+👉 [点击这里试试讯飞星火AstronClaw： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 
@@ -110,7 +110,7 @@ Dify？开源但部署太复杂，劝退。
 
 ---
 
-👉 [点击这里试试讯飞星火AstronClaw： https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05](https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05)
+👉 [点击这里试试讯飞星火AstronClaw： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 
@@ -187,7 +187,7 @@ AI智能体这东西，说难也难，说简单也简单。
 
 说不定，你会发现自己也能搭智能体。
 
-👉 [点击这里试试讯飞星火AstronClaw： https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05](https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05)
+👉 [点击这里试试讯飞星火AstronClaw： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 

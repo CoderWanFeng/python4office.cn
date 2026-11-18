@@ -16,29 +16,25 @@ cover: https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit
 
 | 序号 | 产品/服务名称 | 推广链接 | 描述 | 推文 | 备注 |
 |------|--------------|---------|------|---------|------|
-| 1    | LiblibAI (哩布哩布AI) | https://liblib.cgref.cn/s/2znrw0okr7 | 中国领先的AI创作平台 | https://mp.weixin.qq.com/s/qFIj0am4B6WmIIhIq14ScQ | 待补充 |
-| 2    | 星流 (Xingliu) | https://xingliu.cgref.cn/s/1zn5oxmeqm | 新一代设计Agent | https://mp.weixin.qq.com/s/BQZUEFVCWhx8lLDaQsbRTg | 待补充 |
-| 3    | LibTV | https://libtv.cgref.cn/s/9omkl4jn4d | 专业视频创作工具 | 待补充 | 待补充 |
-| 4    | 墨刀AI (Modao AI) | https://modao.cc/feature/ai?utm_channel=wl&utm_source=referrals&utm_keyword=cakegrowth&utm=cg&cgv=5ln1qj3erw | 激发无限创造力 | 待补充 | 待补充 |
-| 5    | 超级简历WonderCV | https://www.wondercv.com/?utm=cg&cgv=zdkjoy9e1r | AI智能简历制作工具 | https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ | 待补充 |
-| 6    | UP简历 | https://upcv.tech/?utm=cg&cgv=9we2rzwkgo | AI简历生成在线制作工具 | 待补充 | 待补充 |
-| 7    | 火山引擎Agent计划 | https://volcengine.cgref.cn/s/omklvl7n4d | 火山引擎Agent计划 | 待补充 | 待补充 |
-| 8    | 讯飞智作 | https://www.xfzhizuo.cn/?utm=cg&cgv=l41ev8dkv8 | AI虚拟数字人视频制作-文字转视频-数字分身定制 | https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw | 待补充 |
-| 9    | 音述 (Yinshu) | https://www.yinshu.me/?ad_channel=cakegrowth&utm=cg&cgv=qmno24zk29 | 全球最强中文AI音乐创作平台 | 待补充 | 待补充 |
-| 10   | SpeedAI | https://speedai.com/?utm=cg&cgv=3mnz8wjno1 | AI Humanizer & AI Detector | https://mp.weixin.qq.com/s/z0y3wByLzfI2JRMxAT2wpQ | 待补充 |
-| 11   | 讯飞星火AstronClaw | https://agent.xfyun.cn/astron-claw?utm=cg&cgv=3rpe395e05 | Cloud-Native AI Agent | 待补充 | 待补充 |
-| 12   | 白日梦AI | https://aibrm.com/?utm=cg&cgv=59ng4gjnr2 | AI视频创作类AIGC创作平台 | https://mp.weixin.qq.com/s/sTFFtZDt5cSZ7TOD6wCp6w | 待补充 |
-| 13   | AiPPT 插件 | https://www.aippt.cn/plugin?utm_type=CJDHZ&utm_source=cakegrowth&utm_page=home&utm_plan=dhzfx&utm_unit=c1&utm_keyword=40515276&utm=cg&cgv=20epp9dew1 | AI智能PPT制作软件 | https://mp.weixin.qq.com/s/aLo7mW3BLnglwhSZCKoOow | 待补充 |
-| 14   | iSlide | https://www.islide.cc/landing?utm=cg&cgv=rpexy6vk90 | PPT模板下载平台 | 待补充 | 待补充 |
-| 15   | 沁言学术 (Qinyan AI) | https://app.qinyanai.com/?utm=cg&cgv=3mnz8w7no1 | AI写作与文献助手一站式平台 | 待补充 | 待补充 |
-| 16   | AiPy | https://www.aipyaipy.com/?referral=BJ5OOSP&utm=cg&cgv=59ng4ggnr2 | 超级AI智能体工厂 | 待补充 | 待补充 |
-| 17   | CodeFlying (码上飞) | https://www.codeflying.net/?utm=cg&cgv=20epp94ew1 | AI自动软件、小程序、APP应用开发平台 | https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw | 待补充 |
-| 18   | 01Agent | https://01agent.net/?utm=cg&cgv=rpexy6zk90 | AI图文创作智能体 | 待补充 | 待补充 |
-| 19   | JoyPix AI | https://www.joypix.ai/app/login/?utm=cg&cgv=4ony58oejx | AI图片生成平台 | 待补充 | 待补充 |
-| 20   | MiniMax Token Plan | https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link | AI语音/音乐/视频/图片生成，邀请好友享双重好礼 |  | 好友享9折+Builder权益，你赢返利+社区特权 |
-| 21   | 腾讯云token plan| https://curl.qcloud.com/Z9TkzRuj | 腾讯云产品推广，多种云产品优惠 | 待补充 | 腾讯云CPS返佣计划 |
-| 22   | 图灵社区 - AI Python零基础实战营 | https://www.bilibili.com/cheese/play/ss982042944 | AI Python零基础实战营，面向职场人/内容创作者/转行者 | 待补充 | 图灵社区AI编程课程 |
-| 23   | B 站精品课 (晚枫AI实战课程 ep2342243) | https://pan.quark.cn/s/3252b0c315f7 | AI编程 + 自动化办公 + AI工具三合一系统讲解 | 免费试听 | 主站点文中段落广告位 (ep2342243) |
+| 1    | LibTV | https://libtv.cgref.cn/s/9omkl4jn4d | 专业视频创作工具 | 待补充 | 待补充 |
+| 2    | 墨刀AI (Modao AI) | https://modao.cc/feature/ai?utm_channel=wl&utm_source=referrals&utm_keyword=cakegrowth&utm=cg&cgv=5ln1qj3erw | 激发无限创造力 | 待补充 | 待补充 |
+| 3    | 超级简历WonderCV | https://www.wondercv.com/?utm=cg&cgv=zdkjoy9e1r | AI智能简历制作工具 | https://mp.weixin.qq.com/s/XD8bk9Wf6p47HEoP8h84RQ | 待补充 |
+| 4    | UP简历 | https://upcv.cgref.cn/s/9we2rzwkgo | AI简历生成在线制作工具 | 待补充 | 待补充 |
+| 5    | 火山引擎Agent计划 | https://volcengine.cgref.cn/s/omklvl7n4d | 火山引擎Agent计划 | 待补充 | 待补充 |
+| 6    | 讯飞智作 | https://www.xfzhizuo.cn/?utm=cg&cgv=l41ev8dkv8 | AI虚拟数字人视频制作-文字转视频-数字分身定制 | https://mp.weixin.qq.com/s/7vngGHvX-HxIsUsQHGp1Dw | 待补充 |
+| 7    | 音述 (Yinshu) | https://www.yinshu.me/?ad_channel=cakegrowth&utm=cg&cgv=qmno24zk29 | 全球最强中文AI音乐创作平台 | 待补充 | 待补充 |
+| 8    | SpeedAI | https://speedai.com/?utm=cg&cgv=3mnz8wjno1 | AI Humanizer & AI Detector | https://mp.weixin.qq.com/s/z0y3wByLzfI2JRMxAT2wpQ | 待补充 |
+| 9    | 白日梦AI | https://aibrm.com/?utm=cg&cgv=59ng4gjnr2 | AI视频创作类AIGC创作平台 | https://mp.weixin.qq.com/s/sTFFtZDt5cSZ7TOD6wCp6w | 待补充 |
+| 10   | AiPPT 插件 | https://www.aippt.cn/plugin?utm_type=CJDHZ&utm_source=cakegrowth&utm_page=home&utm_plan=dhzfx&utm_unit=c1&utm_keyword=40515276&utm=cg&cgv=20epp9dew1 | AI智能PPT制作软件 | https://mp.weixin.qq.com/s/aLo7mW3BLnglwhSZCKoOow | 待补充 |
+| 11   | iSlide | https://www.islide.cc/landing?utm=cg&cgv=rpexy6vk90 | PPT模板下载平台 | 待补充 | 待补充 |
+| 12   | 沁言学术 (Qinyan AI) | https://app.qinyanai.com/?utm=cg&cgv=3mnz8w7no1 | AI写作与文献助手一站式平台 | 待补充 | 待补充 |
+| 13   | AiPy | https://www.aipyaipy.com/?referral=BJ5OOSP&utm=cg&cgv=59ng4ggnr2 | 超级AI智能体工厂 | 待补充 | 待补充 |
+| 14   | CodeFlying (码上飞) | https://www.codeflying.net/?utm=cg&cgv=20epp94ew1 | AI自动软件、小程序、APP应用开发平台 | https://mp.weixin.qq.com/s/59_OV_bJUcQ_-82eXg2IYw | 待补充 |
+| 15   | MiniMax Token Plan | https://platform.minimaxi.com/subscribe/token-plan?code=8T7rWtR7CZ&source=link | AI语音/音乐/视频/图片生成，邀请好友享双重好礼 |  | 好友享9折+Builder权益，你赢返利+社区特权 |
+| 16   | 腾讯云token plan| https://curl.qcloud.com/Z9TkzRuj | 腾讯云产品推广，多种云产品优惠 | 待补充 | 腾讯云CPS返佣计划 |
+| 17   | 图灵社区 - AI Python零基础实战营 | https://www.bilibili.com/cheese/play/ss982042944 | AI Python零基础实战营，面向职场人/内容创作者/转行者 | 待补充 | 图灵社区AI编程课程 |
+| 18   | B 站精品课 (晚枫AI实战课程 ep2342243) | https://pan.quark.cn/s/3252b0c315f7 | AI编程 + 自动化办公 + AI工具三合一系统讲解 | 免费试听 | 主站点文中段落广告位 (ep2342243) |
+| 19   | 创客贴 | https://chuangkit.cgref.cn/s/p3kq917nol | AI设计与模板平台 | 待补充 | 待补充 |
 
 ---
 

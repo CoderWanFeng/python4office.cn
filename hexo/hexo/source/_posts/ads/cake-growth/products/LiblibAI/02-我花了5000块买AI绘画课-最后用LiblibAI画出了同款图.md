@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1677442136019-4521e8c0b5a3?q=80&w=1200&
 
 ---
 
-👉 [点击这里试试LiblibAI： https://liblib.cgref.cn/s/2znrw0okr7](https://liblib.cgref.cn/s/2znrw0okr7)
+👉 [点击这里试试LiblibAI： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 
@@ -131,7 +131,7 @@ LiblibAI有社区，可以看到别人画的图和提示词。
 
 ---
 
-👉 [点击这里试试LiblibAI： https://liblib.cgref.cn/s/2znrw0okr7](https://liblib.cgref.cn/s/2znrw0okr7)
+👉 [点击这里试试LiblibAI： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ## 最后说句掏心窝子的
 
@@ -166,7 +166,7 @@ LiblibAI让我看到了一种可能性：**AI绘画不需要门槛、不需要�
 
 一个人，也能画出专业图。
 
-👉 [点击这里试试LiblibAI： https://liblib.cgref.cn/s/2znrw0okr7](https://liblib.cgref.cn/s/2znrw0okr7)
+👉 [点击这里试试LiblibAI： https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission](https://www.trae.cn/events/code-fission/M77GHAYSNF34?utm_source=copy_link&utm_medium=code_fission)
 
 ---
 
